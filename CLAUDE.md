@@ -35,7 +35,7 @@ Motyw live zmienia się dopiero po publikacji tej wersji roboczej w panelu (Skle
 - `assets/b2b.css` — style B2B, przekreślone niedostępne swatche, „load more”. Style nagłówka są w `{% style %}` w sections/header.liquid.
 - Nagłówek: `logo_position: top-left`, pole wyszukiwania inline (`section.settings.inline_search`), klasa `header--inline-search`.
 - Listing: 4 kolumny, ciągłe doładowywanie (skrypt na końcu sections/main-collection-product-grid.liquid).
-- Karta produktu (templates/product.json): title, sku, price, tekst „Cena netto — VAT naliczany w koszyku”, variant_picker (swatche), inventory, quantity, buy_buttons, description, zakładki Rozmiar/Skład/Kolor z metapól `custom.rozmiar`, `custom.sklad`, `custom.kolory`.
+- Karta produktu (templates/product.json): title, sku, price, tekst „Cena netto — VAT naliczany w koszyku”, variant_picker (swatche), inventory, quantity, buy_buttons, description (blok ma ustawienia `collapsible`/`show_intro`/`heading`/`icon`: pierwszy akapit widoczny, reszta w rozwijanej sekcji „Opis i specyfikacja”), zakładki Rozmiar/Skład/Kolor z metapól `custom.rozmiar`, `custom.sklad`, `custom.kolory`.
 - Tłumaczenia B2B: klucze `b2b.*` w locales/pl.json, en.default.json, de.json, fr.json.
 - Stopka bez „Powered by Shopify”. Jedna czcionka (DM Sans) w config/settings_data.json.
 
@@ -48,7 +48,7 @@ Motyw live zmienia się dopiero po publikacji tej wersji roboczej w panelu (Skle
 
 ## Skonfigurowane w panelu 04.09.2026
 - Strona `rejestracja` (tytuł „Rejestracja firmy”), bez szablonu — przypisać „rejestracja” po publikacji motywu.
-- Kolekcje: Nowości (auto, tag `nowosc`), Bestsellery (ręczna, pusta), Czapki reklamowe (ręczna, pusta), Wyprzedaż (auto, cena porównawcza > 0).
+- Kolekcje automatyczne po tagach produktu: Damska = `damskie`, Męska = `meskie`, Dla dzieci = `dzieci`, Premium = `premium`, Nowości = `nowosc`, Wyprzedaż = cena porównawcza > 0. Ręczne (klient dodaje produkty): Bestsellery, Czapki reklamowe, Private Label. Klient przy dodawaniu produktu wpisuje tagi — bez tagu produkt nie pojawi się w żadnej kategorii menu.
 - Menu główne podpięte pod kolekcje; menu stopki: Szukaj, Kontakt, Rejestracja firmy.
 - Feed XML produktów: `/collections/all?view=feed` (templates/collection.feed.liquid), ceny tylko gdy widoczne.
 - W sklepie jest zainstalowana aplikacja „SP Hide Price & Access” — dubluje ukrywanie cen z motywu; do decyzji klienta, czy zostaje.
