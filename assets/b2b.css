@@ -39,3 +39,13 @@
 .product__net-note{margin:.4rem 0 0;font-size:1.2rem;opacity:.75}
 /* load more */
 .load-more{display:flex;justify-content:center;margin:3rem 0 1rem}
+
+/* Hero: równe łamanie tytułu (bez sieroty w ostatniej linii) */
+.banner__heading {
+  text-wrap: balance;
+}
+
+/* Kafle kategorii bez zdjęcia: wysokość od treści, nie kwadrat */
+.collection-list .card--card.card--text > .card__content {
+  min-height: 12rem;
+}

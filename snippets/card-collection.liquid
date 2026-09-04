@@ -39,7 +39,6 @@
       {% if card_collection.featured_image %} card--media{% else %} card--text{% endif %}
       {% if card_style == 'card' %} color-{{ card_color_scheme }} gradient{% endif %}
       {% if extend_height %} card--extend-height{% endif %}
-      {% if card_collection.featured_image == nil and card_style == 'card' %} ratio{% endif %}
     "
     style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
   >
@@ -106,7 +105,7 @@
             </h3>
             {%- if card_collection.description != blank -%}
               <p class="card__caption">
-                {{- card_collection.description | strip_html | truncatewords: 12 -}}
+                {{- card_collection.description | strip_html | truncatewords: 20 -}}
                 <span class="icon-wrap">
                   {{- 'icon-arrow.svg' | inline_asset_content -}}
                 </span>
@@ -142,7 +141,7 @@
           </h3>
           {%- if card_collection.featured_image == null and card_collection.description != blank -%}
             <p class="card__caption">
-              {{- card_collection.description | strip_html | truncatewords: 12 -}}
+              {{- card_collection.description | strip_html | truncatewords: 20 -}}
               <span class="icon-wrap">
                 {{- 'icon-arrow.svg' | inline_asset_content -}}
               </span>

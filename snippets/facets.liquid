@@ -11,6 +11,16 @@
   Usage:
   {% render 'facets', results: collection, enable_filtering: true, enable_sorting: true, filter_type: 'vertical', paginate: paginate %}
 {% endcomment %}
+{%- liquid
+  assign b2b_access = true
+  if settings.b2b_hide_prices
+    if customer == nil
+      assign b2b_access = false
+    elsif settings.b2b_require_company and customer.b2b? != true
+      assign b2b_access = false
+    endif
+  endif
+-%}
 
 {{ 'component-show-more.css' | asset_url | stylesheet_tag }}
 {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}
@@ -78,6 +88,7 @@
                   </facet-remove>
                 </div>
                 {%- for filter in results.filters -%}
+{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
                   {%- for value in filter.active_values -%}
                     <facet-remove>
                       <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -115,6 +126,7 @@
             <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
             {% comment %} Filters for both horizontal and vertical filter {% endcomment %}
             {%- for filter in results.filters -%}
+{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
               {% liquid
                 assign total_active_values = total_active_values | plus: filter.active_values.size
                 assign presentation = filter.presentation | default: default_presentation
@@ -344,6 +356,7 @@
           {%- if filter_type == 'horizontal' -%}
             <div class="active-facets active-facets-desktop">
               {%- for filter in results.filters -%}
+{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
                 {%- for value in filter.active_values -%}
                   <facet-remove>
                     <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -405,6 +418,7 @@
                     aria-describedby="a11y-refresh-page-message"
                   >
                     {%- for option in results.sort_options -%}
+{%- if option.value contains 'price' and b2b_access == false -%}{%- continue -%}{%- endif -%}
                       <option
                         value="{{ option.value | escape }}"
                         {% if option.value == sort_by %}
@@ -514,6 +528,7 @@
             >
               {%- if enable_filtering -%}
                 {%- for filter in results.filters -%}
+{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
                   {% liquid
                     assign presentation = filter.presentation | default: default_presentation
                     if presentation == 'image'
@@ -738,6 +753,7 @@
                           aria-describedby="a11y-refresh-page-message"
                         >
                           {%- for option in results.sort_options -%}
+{%- if option.value contains 'price' and b2b_access == false -%}{%- continue -%}{%- endif -%}
                             <option
                               value="{{ option.value | escape }}"
                               {% if option.value == sort_by %}
@@ -789,6 +805,7 @@
 
   <div class="active-facets active-facets-mobile medium-hide large-up-hide">
     {%- for filter in results.filters -%}
+{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
       {%- for value in filter.active_values -%}
         <facet-remove>
           <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -845,6 +862,7 @@
                 aria-describedby="a11y-refresh-page-message"
               >
                 {%- for option in results.sort_options -%}
+{%- if option.value contains 'price' and b2b_access == false -%}{%- continue -%}{%- endif -%}
                   <option
                     value="{{ option.value | escape }}"
                     {% if option.value == sort_by %}
@@ -902,6 +920,7 @@
       <form id="FacetFiltersPillsForm" class="facets__form">
         <div class="active-facets active-facets-desktop">
           {%- for filter in results.filters -%}
+{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
             {%- for value in filter.active_values -%}
               <facet-remove>
                 <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">

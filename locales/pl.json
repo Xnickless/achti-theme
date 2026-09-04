@@ -269,7 +269,7 @@
     },
     "contact": {
       "form": {
-        "name": "Nazwa",
+        "name": "Imię i nazwisko",
         "email": "E-mail",
         "phone": "Numer telefonu",
         "comment": "Komentarz",
