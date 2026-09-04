@@ -29,8 +29,17 @@
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {%- liquid
+    assign b2b_access = true
+    if settings.b2b_hide_prices
+      if customer == nil
+        assign b2b_access = false
+      elsif settings.b2b_require_company and customer.b2b? != true
+        assign b2b_access = false
+      endif
+    endif
+
     assign has_social_icons = true
-    if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
+    if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank and settings.social_linkedin_link == blank
       assign has_social_icons = false
     endif
 
@@ -102,6 +111,11 @@
                       </ul>
                     {%- endif -%}
                   {%- when 'brand_information' -%}
+                    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+                      <filter id="achti-white-logo" color-interpolation-filters="sRGB">
+                        <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0.2126 0.7152 0.0722 0 0"/>
+                      </filter>
+                    </svg>
                     <div class="footer-block__brand-info">
                       {%- if settings.brand_image != blank -%}
                         {%- assign brand_image_height = settings.brand_image_width
@@ -170,6 +184,9 @@
               {%- if section.settings.newsletter_heading != blank -%}
                 <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
               {%- endif -%}
+              {%- if section.settings.newsletter_text != blank -%}
+                <p class="footer-block__newsletter-text">{{ section.settings.newsletter_text | escape }}</p>
+              {%- endif -%}
               {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
                 <div class="newsletter-form__field-wrapper">
@@ -233,6 +250,12 @@
                   </h3>
                 {%- endif -%}
               {%- endform -%}
+              {%- if section.settings.newsletter_note != blank -%}
+                <p class="footer-block__newsletter-note caption">
+                  <span class="svg-wrapper">{{ 'icon-padlock.svg' | inline_asset_content }}</span>
+                  <span>{{ section.settings.newsletter_note | escape }}</span>
+                </p>
+              {%- endif -%}
             </div>
           {%- endif -%}
 
@@ -256,7 +279,33 @@
       data-cascade
     {% endif %}
   >
-    <div class="footer__content-bottom-wrapper page-width">
+    <div class="footer__content-bottom-wrapper footer__content-bottom-wrapper--achti page-width">
+      {%- if section.settings.b2b_note_enable and b2b_access == false -%}
+        <div class="footer__b2b-note">
+          <span class="svg-wrapper">{{ 'icon-padlock.svg' | inline_asset_content }}</span>
+          <div>
+            {%- if section.settings.b2b_note_heading != blank -%}
+              <p class="footer__b2b-note-heading">{{ section.settings.b2b_note_heading | escape }}</p>
+            {%- endif -%}
+            {%- if section.settings.b2b_note_text != blank -%}
+              <p class="footer__b2b-note-text caption">{{ section.settings.b2b_note_text }}</p>
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.show_policy -%}
+        <ul class="policies list-unstyled caption">
+          {%- for policy in shop.policies -%}
+            {%- if policy != blank -%}
+              <li>
+                <small class="copyright__content"><a href="{{ policy.url }}">{{ policy.title | escape }}</a></small>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+
       <div class="footer__column footer__localization isolate">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <localization-form>
@@ -282,39 +331,22 @@
           </localization-form>
         {%- endif -%}
       </div>
-      <div class="footer__column footer__column--info">
-        {%- if section.settings.payment_enable -%}
-          <div class="footer__payment">
-            <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
-            <ul class="list list-payment" role="list">
-              {%- for type in shop.enabled_payment_types -%}
-                <li class="list-payment__item">
-                  {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
-                </li>
-              {%- endfor -%}
-            </ul>
-          </div>
-        {%- endif -%}
-      </div>
-    </div>
-    <div class="footer__content-bottom-wrapper page-width{% if section.settings.enable_country_selector == false and section.settings.enable_language_selector == false %} footer__content-bottom-wrapper--center{% endif %}">
-      <div class="footer__copyright caption">
-        <small class="copyright__content"
-          >&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}
-        </small>
-        {%- if section.settings.show_policy -%}
-          <ul class="policies list-unstyled">
-            {%- for policy in shop.policies -%}
-              {%- if policy != blank -%}
-                <li>
-                  <small class="copyright__content"
-                    ><a href="{{ policy.url }}">{{ policy.title | escape }}</a></small
-                  >
-                </li>
-              {%- endif -%}
+
+      {%- if section.settings.payment_enable -%}
+        <div class="footer__payment">
+          <span class="visually-hidden">{{ 'sections.footer.payment' | t }}</span>
+          <ul class="list list-payment" role="list">
+            {%- for type in shop.enabled_payment_types -%}
+              <li class="list-payment__item">
+                {{ type | payment_type_svg_tag: class: 'icon icon--full-color' }}
+              </li>
             {%- endfor -%}
           </ul>
-        {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="footer__copyright caption">
+        <small class="copyright__content">&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}</small>
       </div>
     </div>
   </div>
@@ -445,6 +477,38 @@
       "id": "newsletter_heading",
       "default": "t:sections.footer.settings.newsletter_heading.default",
       "label": "t:sections.footer.settings.newsletter_heading.label"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_text",
+      "label": "Tekst pod nagłówkiem newslettera"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_note",
+      "label": "Dopisek z kłódką (np. „Tylko dla klientów B2B”)"
+    },
+    {
+      "type": "header",
+      "content": "Notka B2B w dolnym pasku (dla gości)"
+    },
+    {
+      "type": "checkbox",
+      "id": "b2b_note_enable",
+      "default": true,
+      "label": "Pokaż notkę o cenach po zalogowaniu"
+    },
+    {
+      "type": "text",
+      "id": "b2b_note_heading",
+      "default": "Ceny dostępne po zalogowaniu",
+      "label": "Nagłówek notki"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "b2b_note_text",
+      "default": "Zarejestruj się lub zaloguj, aby zobaczyć ceny hurtowe.",
+      "label": "Tekst notki"
     },
     {
       "type": "header",

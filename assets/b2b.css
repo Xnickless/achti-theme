@@ -49,3 +49,161 @@
 .collection-list .card--card.card--text > .card__content {
   min-height: 12rem;
 }
+
+/* ===== Stopka wg projektu klienta (5 kolumn, notka B2B w dolnym pasku) ===== */
+.footer .footer-block__heading {
+  font-family: var(--font-body-family);
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 2.2rem;
+}
+.footer .footer-block--menu .list-menu__item--link {
+  padding: 0.55rem 0;
+  font-size: 1.4rem;
+}
+.footer .footer-block__brand-info {
+  text-align: left;
+}
+/* Czarne logo JPG na białym tle -> białe logo na przezroczystym (inwersja + jasność jako alfa) */
+.footer .footer-block__brand-info img {
+  filter: invert(1) url(#achti-white-logo);
+}
+.footer .footer-block__brand-info .rte {
+  max-width: 26rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+.footer .footer-block__brand-info .footer__list-social {
+  justify-content: flex-start;
+  margin-top: 1.6rem;
+  margin-left: -0.8rem;
+}
+.footer .footer-block__newsletter {
+  text-align: left;
+}
+.footer .footer-block__newsletter .footer__newsletter {
+  margin: 0;
+  max-width: 100%;
+}
+.footer .footer-block__newsletter-text {
+  margin: -0.8rem 0 1.6rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  max-width: 30rem;
+}
+.footer .footer-block__newsletter-note {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.2rem 0 0;
+  opacity: 0.8;
+}
+.footer .footer-block__newsletter-note .svg-wrapper,
+.footer .footer__b2b-note > .svg-wrapper {
+  width: 1.4rem;
+  height: 1.4rem;
+  flex: none;
+}
+@media screen and (min-width: 990px) {
+  .footer .footer__content-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 5rem;
+    padding-bottom: 5rem;
+  }
+  .footer .footer__content-top .footer__blocks-wrapper {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 0;
+  }
+  .footer .footer__content-top .footer__blocks-wrapper > .footer-block.grid__item {
+    width: auto;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer .footer-block--newsletter {
+    flex: 0 0 28rem;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+}
+.footer .footer__content-bottom-wrapper--achti {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem 3rem;
+}
+.footer .footer__b2b-note {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  max-width: 34rem;
+}
+.footer .footer__b2b-note > .svg-wrapper {
+  margin-top: 0.3rem;
+}
+.footer .footer__b2b-note p {
+  margin: 0;
+}
+.footer .footer__b2b-note-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.footer .footer__b2b-note-text {
+  opacity: 0.75;
+}
+.footer .footer__b2b-note-text a {
+  color: inherit;
+}
+.footer .footer__content-bottom-wrapper--achti .policies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 0;
+  margin: 0;
+}
+.footer .footer__content-bottom-wrapper--achti .policies li {
+  display: flex;
+  align-items: center;
+}
+.footer .footer__content-bottom-wrapper--achti .policies li::before {
+  content: none;
+}
+.footer .footer__content-bottom-wrapper--achti .policies li + li::before {
+  content: '•';
+  margin: 0 1.4rem;
+  opacity: 0.5;
+}
+.footer .footer__content-bottom-wrapper--achti .footer__localization {
+  padding: 0;
+}
+.footer .footer__content-bottom-wrapper--achti .footer__localization:empty {
+  display: none;
+}
+.footer .footer__content-bottom-wrapper--achti .footer__localization h2 {
+  display: none;
+}
+.footer .footer__content-bottom-wrapper--achti .footer__copyright {
+  margin: 0;
+  text-align: right;
+}
+@media screen and (max-width: 749px) {
+  .footer .footer__content-bottom-wrapper--achti {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2rem;
+  }
+  .footer .footer__content-bottom-wrapper--achti .footer__copyright {
+    text-align: left;
+  }
+}

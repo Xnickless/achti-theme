@@ -25,7 +25,8 @@
         "snapchat": "Snapchat",
         "youtube": "Youtube",
         "vimeo": "Vimeo",
-        "tiktok": "TikTok"
+        "tiktok": "TikTok",
+        "linkedin": "LinkedIn"
       }
     },
     "continue_shopping": "Kontynuuj zakupy",
@@ -58,7 +59,7 @@
     }
   },
   "newsletter": {
-    "label": "E-mail",
+    "label": "Twój e-mail",
     "success": "Dziękujemy za subskrypcję",
     "button_label": "Subskrybuj"
   },
