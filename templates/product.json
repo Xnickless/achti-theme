@@ -59,7 +59,7 @@
           "settings": {
             "heading": "Rozmiar",
             "icon": "ruler",
-            "content": "{{ product.metafields.custom.rozmiar }}",
+            "content": "{{ product.metafields.custom.rozmiar | metafield_tag }}",
             "page": ""
           }
         },
@@ -68,7 +68,7 @@
           "settings": {
             "heading": "Skład",
             "icon": "leaf",
-            "content": "{{ product.metafields.custom.sklad }}",
+            "content": "{{ product.metafields.custom.sklad | metafield_tag }}",
             "page": ""
           }
         },
@@ -77,7 +77,7 @@
           "settings": {
             "heading": "Kolor",
             "icon": "none",
-            "content": "{{ product.metafields.custom.kolory }}",
+            "content": "{{ product.metafields.custom.kolory | metafield_tag }}",
             "page": ""
           }
         }
