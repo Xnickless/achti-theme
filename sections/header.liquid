@@ -131,6 +131,11 @@
     .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-menu > .list-menu--inline { justify-content: center; flex-wrap: wrap; }
     .header--inline-search .header__inline-search { grid-area: inline-search; justify-self: center; width: 46rem; max-width: 100%; margin: 0 auto; }
     .header__menu-item { white-space: nowrap; }
+    /* Kompaktowy nagłówek po odsłonięciu przy scrollu w górę */
+    .header__heading-logo-wrapper { transition: width 0.2s ease; }
+    .shopify-section-header-sticky.scrolled-past-header .header--inline-search .header__inline-search { display: none; }
+    .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) { row-gap: 0.8rem; padding-top: 1rem; padding-bottom: 1rem; }
+    .shopify-section-header-sticky.scrolled-past-header .header--inline-search .header__heading-logo-wrapper { width: 62%; }
   }
 {%- endstyle -%}
 
