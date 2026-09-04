@@ -1,6 +1,12 @@
 # Achti B2B — motyw Shopify (Trade + modyfikacje B2B)
 
-Ten folder to repozytorium `Xnickless/achti-theme`, podpięte pod sklep Shopify `ccucsr-si.myshopify.com` (Sklep online → Motywy → motyw z GitHub, gałąź `main`). Każdy push na `main` trafia do sklepu automatycznie. Zmiany zrobione przez klienta w edytorze „Dostosuj” Shopify commituje z powrotem — **zawsze zaczynaj od `git pull`**.
+Ten folder to repozytorium `Xnickless/achti-theme` dla sklepu Shopify `ccucsr-si.myshopify.com`.
+
+**Wdrażanie (stan na 04.09.2026):** integracja GitHub → Shopify **nie działa** (sprawdzone: motyw live „Trade” #201190474070 to stockowy Trade z 8 lipca, żaden motyw nie dostaje pushy z `main`). Kod wdrażamy ręcznie do wersji roboczej:
+```
+shopify theme push --store ccucsr-si.myshopify.com --theme 206234878294   # „achti-trade-b2b-v4”, niepublikowany
+```
+Motyw live zmienia się dopiero po publikacji tej wersji roboczej w panelu (Sklep online → Motywy → Publikuj). Do czasu publikacji strona rejestracji nie ma przypisanego szablonu „rejestracja” (szablon jest tylko w wersji roboczej). Jeśli klient edytuje motyw w „Dostosuj”, zmiany są w Shopify, nie w repo — przed pracą `shopify theme pull --theme 206234878294 --only "templates/*.json" --only "sections/*-group.json" --only config/settings_data.json` i porównaj.
 
 ## Kontekst projektu
 - Klient: Adrian (marka Achti, polski producent czapek, kominów, kominiarek). Platforma hurtowa B2B: ceny tylko dla zaakceptowanych firm, rejestracja po NIP/VAT UE z ręczną akceptacją.
@@ -39,6 +45,13 @@ Ten folder to repozytorium `Xnickless/achti-theme`, podpięte pod sklep Shopify 
 - Nie zmieniaj plików JSON w `templates/` i `sections/*-group.json`, jeśli klient mógł je edytować w edytorze — najpierw `git pull` i sprawdź diff.
 - Teksty widoczne dla klienta: po polsku; nowe stringi zawsze dodawaj do wszystkich czterech plików locales.
 - Commity po polsku, krótko, np. `Nagłówek: pole wyszukiwania w jednej linii`.
+
+## Skonfigurowane w panelu 04.09.2026
+- Strona `rejestracja` (tytuł „Rejestracja firmy”), bez szablonu — przypisać „rejestracja” po publikacji motywu.
+- Kolekcje: Nowości (auto, tag `nowosc`), Bestsellery (ręczna, pusta), Czapki reklamowe (ręczna, pusta), Wyprzedaż (auto, cena porównawcza > 0).
+- Menu główne podpięte pod kolekcje; menu stopki: Szukaj, Kontakt, Rejestracja firmy.
+- Feed XML produktów: `/collections/all?view=feed` (templates/collection.feed.liquid), ceny tylko gdy widoczne.
+- W sklepie jest zainstalowana aplikacja „SP Hide Price & Access” — dubluje ukrywanie cen z motywu; do decyzji klienta, czy zostaje.
 
 ## Do zrobienia (stan na 04.09.2026)
 1. Weryfikacja w sklepie: nagłówek, karta produktu i katalog jako gość / jako firma B2B.

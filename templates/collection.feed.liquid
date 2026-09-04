@@ -1,0 +1,64 @@
+{%- comment -%}
+  Feed XML produktów (Baselinker / porównywarki / partnerzy).
+  Adres: /collections/all?view=feed  (albo dowolna kolekcja z ?view=feed)
+  Ceny są w feedzie tylko, gdy ceny nie są ukrywane dla gości (settings.b2b_hide_prices = false)
+  lub gdy feed pobiera zalogowana firma B2B.
+{%- endcomment -%}
+{%- layout none -%}
+{%- liquid
+  assign b2b_access = true
+  if settings.b2b_hide_prices
+    if customer == nil
+      assign b2b_access = false
+    elsif settings.b2b_require_company and customer.b2b? != true
+      assign b2b_access = false
+    endif
+  endif
+-%}
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+<channel>
+<title>{{ shop.name | escape }}</title>
+<link>{{ shop.url }}</link>
+<description>{{ shop.name | escape }} — feed produktów ({{ collection.title | escape }})</description>
+{%- paginate collection.products by 250 -%}
+{%- for product in collection.products -%}
+{%- for variant in product.variants -%}
+<item>
+<g:id>{{ variant.id }}</g:id>
+<g:item_group_id>{{ product.id }}</g:item_group_id>
+<title>{{ product.title | escape }}{% unless variant.title == 'Default Title' %} – {{ variant.title | escape }}{% endunless %}</title>
+<description>{{ product.description | strip_html | strip_newlines | truncate: 5000 | escape }}</description>
+<link>{{ shop.url }}{{ variant.url }}</link>
+{%- if variant.image -%}
+<g:image_link>{{ variant.image | image_url: width: 1200 | prepend: 'https:' }}</g:image_link>
+{%- elsif product.featured_image -%}
+<g:image_link>{{ product.featured_image | image_url: width: 1200 | prepend: 'https:' }}</g:image_link>
+{%- endif -%}
+<g:availability>{% if variant.available %}in_stock{% else %}out_of_stock{% endif %}</g:availability>
+{%- if b2b_access -%}
+{%- if variant.compare_at_price > variant.price -%}
+<g:price>{{ variant.compare_at_price | money_without_currency | replace: ',', '.' | remove: ' ' }} {{ cart.currency.iso_code }}</g:price>
+<g:sale_price>{{ variant.price | money_without_currency | replace: ',', '.' | remove: ' ' }} {{ cart.currency.iso_code }}</g:sale_price>
+{%- else -%}
+<g:price>{{ variant.price | money_without_currency | replace: ',', '.' | remove: ' ' }} {{ cart.currency.iso_code }}</g:price>
+{%- endif -%}
+{%- endif -%}
+{%- if variant.sku != blank -%}<g:mpn>{{ variant.sku | escape }}</g:mpn>{%- endif -%}
+{%- if variant.barcode != blank -%}<g:gtin>{{ variant.barcode | escape }}</g:gtin>{%- endif -%}
+<g:brand>{{ product.vendor | escape }}</g:brand>
+<g:condition>new</g:condition>
+{%- if product.type != blank -%}<g:product_type>{{ product.type | escape }}</g:product_type>{%- endif -%}
+{%- for option in product.options_with_values -%}
+{%- assign opt_index = forloop.index0 -%}
+{%- assign opt_name = option.name | downcase -%}
+{%- if opt_name contains 'kolor' or opt_name contains 'color' -%}<g:color>{{ variant.options[opt_index] | escape }}</g:color>{%- endif -%}
+{%- if opt_name contains 'rozmiar' or opt_name contains 'size' -%}<g:size>{{ variant.options[opt_index] | escape }}</g:size>{%- endif -%}
+{%- endfor -%}
+{%- if variant.weight > 0 -%}<g:shipping_weight>{{ variant.weight | weight_with_unit }}</g:shipping_weight>{%- endif -%}
+</item>
+{%- endfor -%}
+{%- endfor -%}
+{%- endpaginate -%}
+</channel>
+</rss>
