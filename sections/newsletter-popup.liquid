@@ -1,0 +1,237 @@
+{%- comment -%}
+  Popup newslettera. Pokazuje się po opóźnieniu, raz na X dni (localStorage), nie dla klientów,
+  którzy już zapisali się na marketing. W edytorze motywu otwiera się po zaznaczeniu sekcji.
+{%- endcomment -%}
+{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign show_popup = section.settings.enable
+  if customer and customer.accepts_marketing
+    assign show_popup = false
+  endif
+  assign popup_id = 'NewsletterPopup-' | append: section.id
+-%}
+
+{%- if show_popup -%}
+  <newsletter-popup
+    id="{{ popup_id }}"
+    class="newsletter-popup"
+    data-delay="{{ section.settings.delay_seconds | default: 4 }}"
+    data-days="{{ section.settings.days_hidden | default: 14 }}"
+    data-section-id="{{ section.id }}"
+    hidden
+  >
+    <div class="newsletter-popup__overlay" data-popup-close></div>
+    <div class="newsletter-popup__dialog color-{{ section.settings.color_scheme }} gradient" role="dialog" aria-modal="true" aria-labelledby="{{ popup_id }}-heading">
+      <button type="button" class="newsletter-popup__close" data-popup-close aria-label="{{ 'accessibility.close' | t }}">
+        {{- 'icon-close.svg' | inline_asset_content -}}
+      </button>
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="newsletter-popup__eyebrow caption-with-letter-spacing">{{ section.settings.eyebrow | escape }}</p>
+      {%- endif -%}
+      <h2 id="{{ popup_id }}-heading" class="newsletter-popup__heading h2">{{ section.settings.heading }}</h2>
+      {%- if section.settings.text != blank -%}
+        <div class="newsletter-popup__text rte">{{ section.settings.text }}</div>
+      {%- endif -%}
+
+      {%- form 'customer', id: 'NewsletterPopupForm', class: 'newsletter-form newsletter-popup__form' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        {%- if form.posted_successfully? -%}
+          <p class="newsletter-popup__success form__message" data-popup-success>
+            {{- 'icon-success.svg' | inline_asset_content -}}
+            {{ 'newsletter.success' | t }}
+          </p>
+        {%- else -%}
+          <div class="newsletter-form__field-wrapper">
+            <div class="field">
+              <input
+                id="NewsletterPopupForm-email"
+                type="email"
+                name="contact[email]"
+                class="field__input"
+                value="{{ form.email }}"
+                aria-required="true"
+                autocorrect="off"
+                autocapitalize="off"
+                autocomplete="email"
+                {% if form.errors %}
+                  autofocus
+                  aria-invalid="true"
+                  aria-describedby="NewsletterPopupForm-error"
+                {% endif %}
+                placeholder="{{ 'newsletter.label' | t }}"
+                required
+              >
+              <label class="field__label" for="NewsletterPopupForm-email">{{ 'newsletter.label' | t }}</label>
+            </div>
+            {%- if form.errors -%}
+              <small class="newsletter-form__message form__message" id="NewsletterPopupForm-error">
+                {{- 'icon-error.svg' | inline_asset_content -}}
+                {{- form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email -}}
+              </small>
+            {%- endif -%}
+          </div>
+          <button type="submit" class="button button--full-width newsletter-popup__button" name="commit">
+            {{ section.settings.button_label | default: 'Zapisz się' | escape }}
+          </button>
+        {%- endif -%}
+      {%- endform -%}
+
+      {%- if section.settings.note != blank -%}
+        <p class="newsletter-popup__note caption">
+          <span class="svg-wrapper">{{ 'icon-padlock.svg' | inline_asset_content }}</span>
+          <span>{{ section.settings.note | escape }}</span>
+        </p>
+      {%- endif -%}
+    </div>
+  </newsletter-popup>
+
+  {%- style -%}
+    .newsletter-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .newsletter-popup[hidden] { display: none; }
+    .newsletter-popup__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(28, 34, 40, 0.6);
+      backdrop-filter: blur(2px);
+      animation: newsletter-popup-fade 0.3s ease both;
+    }
+    .newsletter-popup__dialog {
+      position: relative;
+      width: min(48rem, 100%);
+      padding: 4rem 3.6rem 3.2rem;
+      border-radius: var(--popup-corner-radius);
+      box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.25);
+      text-align: center;
+      animation: newsletter-popup-rise 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+    .newsletter-popup__close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      width: 4.4rem;
+      height: 4.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      color: rgb(var(--color-foreground));
+      cursor: pointer;
+    }
+    .newsletter-popup__close:hover { background: rgba(var(--color-foreground), 0.06); }
+    .newsletter-popup__close svg { width: 2rem; height: 2rem; }
+    .newsletter-popup__eyebrow { margin: 0 0 1.2rem; opacity: 0.7; }
+    .newsletter-popup__heading { margin: 0 0 1.2rem; }
+    .newsletter-popup__text { margin: 0 auto 2.4rem; max-width: 36rem; opacity: 0.85; }
+    .newsletter-popup__form .newsletter-form__field-wrapper { max-width: 100%; }
+    .newsletter-popup__form .field { margin-bottom: 1.2rem; }
+    .newsletter-popup__button { margin-top: 0.4rem; }
+    .newsletter-popup__success {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    .newsletter-popup__success svg { width: 1.6rem; height: 1.6rem; }
+    .newsletter-popup__note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      margin: 1.8rem 0 0;
+      opacity: 0.7;
+    }
+    .newsletter-popup__note .svg-wrapper { width: 1.3rem; height: 1.3rem; }
+    @keyframes newsletter-popup-fade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes newsletter-popup-rise { from { opacity: 0; transform: translateY(1.6rem); } to { opacity: 1; transform: none; } }
+    @media screen and (max-width: 749px) {
+      .newsletter-popup { padding: 1.2rem; align-items: flex-end; }
+      .newsletter-popup__dialog { padding: 3.6rem 2.4rem 2.4rem; }
+    }
+  {%- endstyle -%}
+
+  <script>
+    (function () {
+      if (customElements.get('newsletter-popup')) return;
+      class NewsletterPopup extends HTMLElement {
+        connectedCallback() {
+          this.key = 'achti-newsletter-popup';
+          this.days = parseInt(this.dataset.days, 10) || 14;
+          this.delay = (parseInt(this.dataset.delay, 10) || 0) * 1000;
+          this.querySelectorAll('[data-popup-close]').forEach((el) => el.addEventListener('click', () => this.close(true)));
+          this.onKey = (e) => { if (e.key === 'Escape') this.close(true); };
+
+          const posted = this.querySelector('[data-popup-success]') || this.querySelector('[aria-invalid="true"]');
+          if (posted) {
+            this.open();
+            if (this.querySelector('[data-popup-success]')) this.remember(365);
+            return;
+          }
+          if (window.Shopify && window.Shopify.designMode) {
+            document.addEventListener('shopify:section:select', (e) => { if (e.detail.sectionId === this.dataset.sectionId) this.open(); });
+            document.addEventListener('shopify:section:deselect', (e) => { if (e.detail.sectionId === this.dataset.sectionId) this.close(false); });
+            return;
+          }
+          if (this.isSnoozed()) return;
+          this.timer = setTimeout(() => this.open(), this.delay);
+        }
+        isSnoozed() {
+          try {
+            const until = parseInt(localStorage.getItem(this.key), 10);
+            return until && until > Date.now();
+          } catch (e) { return false; }
+        }
+        remember(days) {
+          try { localStorage.setItem(this.key, String(Date.now() + days * 86400000)); } catch (e) {}
+        }
+        open() {
+          this.hidden = false;
+          document.body.classList.add('overflow-hidden');
+          document.addEventListener('keydown', this.onKey);
+          const input = this.querySelector('input[type="email"]');
+          if (input) setTimeout(() => input.focus(), 350);
+        }
+        close(remember) {
+          this.hidden = true;
+          document.body.classList.remove('overflow-hidden');
+          document.removeEventListener('keydown', this.onKey);
+          if (remember) this.remember(this.days);
+        }
+      }
+      customElements.define('newsletter-popup', NewsletterPopup);
+    })();
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Popup newslettera",
+  "class": "section-newsletter-popup",
+  "settings": [
+    { "type": "checkbox", "id": "enable", "default": true, "label": "Włącz popup" },
+    { "type": "range", "id": "delay_seconds", "min": 0, "max": 30, "step": 1, "unit": "s", "default": 4, "label": "Opóźnienie po wejściu" },
+    { "type": "range", "id": "days_hidden", "min": 1, "max": 90, "step": 1, "unit": "dni", "default": 14, "label": "Nie pokazuj ponownie przez" },
+    { "type": "text", "id": "eyebrow", "default": "Newsletter B2B", "label": "Nadtytuł" },
+    { "type": "inline_richtext", "id": "heading", "default": "Bądź na bieżąco z nowymi kolekcjami", "label": "Nagłówek" },
+    { "type": "richtext", "id": "text", "default": "<p>Zapisz się, aby jako pierwszy otrzymywać informacje o nowościach, kolekcjach sezonowych i ofertach dla partnerów.</p>", "label": "Tekst" },
+    { "type": "text", "id": "button_label", "default": "Zapisz się", "label": "Przycisk" },
+    { "type": "text", "id": "note", "default": "Tylko dla klientów B2B", "label": "Dopisek z kłódką" },
+    { "type": "color_scheme", "id": "color_scheme", "default": "scheme-1", "label": "t:sections.all.colors.label" }
+  ],
+  "presets": [{ "name": "Popup newslettera" }],
+  "enabled_on": { "templates": ["index"] }
+}
+{% endschema %}

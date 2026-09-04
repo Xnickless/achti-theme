@@ -340,6 +340,20 @@
         "padding_top": 44,
         "padding_bottom": 48
       }
+    },
+    "newsletter_popup": {
+      "type": "newsletter-popup",
+      "settings": {
+        "enable": true,
+        "delay_seconds": 4,
+        "days_hidden": 14,
+        "eyebrow": "Newsletter B2B",
+        "heading": "Bądź na bieżąco z nowymi kolekcjami",
+        "text": "<p>Zapisz się, aby jako pierwszy otrzymywać informacje o nowościach, kolekcjach sezonowych i ofertach dla partnerów.</p>",
+        "button_label": "Zapisz się",
+        "note": "Tylko dla klientów B2B",
+        "color_scheme": "scheme-1"
+      }
     }
   },
   "order": [
@@ -349,6 +363,7 @@
     "featured_collection1",
     "collection_list",
     "multicolumn",
-    "multicolumn2"
+    "multicolumn2",
+    "newsletter_popup"
   ]
 }

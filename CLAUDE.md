@@ -49,7 +49,8 @@ Motyw live zmienia się dopiero po publikacji tej wersji roboczej w panelu (Skle
 ## Skonfigurowane w panelu 04.09.2026
 - Strona `rejestracja` (tytuł „Rejestracja firmy”), bez szablonu — przypisać „rejestracja” po publikacji motywu.
 - Kolekcje automatyczne po tagach produktu: Damska = `damskie`, Męska = `meskie`, Dla dzieci = `dzieci`, Premium = `premium`, Nowości = `nowosc`, Wyprzedaż = cena porównawcza > 0. Ręczne (klient dodaje produkty): Bestsellery, Czapki reklamowe, Private Label. Klient przy dodawaniu produktu wpisuje tagi — bez tagu produkt nie pojawi się w żadnej kategorii menu.
-- Menu główne podpięte pod kolekcje; menu stopki: Szukaj, Kontakt, Rejestracja firmy.
+- Menu główne podpięte pod kolekcje. Stopka (wg projektu klienta z docx „PLATFORMA ACHTI B2B”): kolumny Kolekcje = `main-menu`, Informacje = menu `informacje` (O nas, Produkcja, Materiały, Jakość, Zrównoważony rozwój, Blog, Kontakt — strony `/pages/o-nas`, `/pages/produkcja`, `/pages/materialy`, `/pages/jakosc`, `/pages/zrownowazony-rozwoj` **jeszcze nie istnieją**), Obsługa klienta = menu `obsluga-klienta` (Logowanie B2B, Rejestracja firmy, Warunki współpracy `/pages/warunki-wspolpracy` (brak), Wysyłka i dostawa `/policies/shipping-policy`, Zwroty i reklamacje `/policies/refund-policy`, FAQ `/pages/faq` (brak)). Polityki (regulamin, wysyłka, zwroty) do uzupełnienia w Ustawienia → Polityki. Linki social (Instagram, Facebook, LinkedIn) do wpisania w Ustawienia motywu → Media społecznościowe.
+- Popup newslettera na stronie głównej: sections/newsletter-popup.liquid (opóźnienie, localStorage na X dni, nie dla klientów z accepts_marketing; w edytorze otwiera się po zaznaczeniu sekcji).
 - Feed XML produktów: `/collections/all?view=feed` (templates/collection.feed.liquid), ceny tylko gdy widoczne.
 - W sklepie jest zainstalowana aplikacja „SP Hide Price & Access” — dubluje ukrywanie cen z motywu; do decyzji klienta, czy zostaje.
 
