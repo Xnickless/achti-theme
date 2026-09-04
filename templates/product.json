@@ -52,7 +52,13 @@
         },
         "description": {
           "type": "description",
-          "settings": {}
+          "settings": {
+            "collapsible": true,
+            "show_intro": true,
+            "open_default": false,
+            "heading": "Opis i specyfikacja",
+            "icon": "clipboard"
+          }
         },
         "spec_size": {
           "type": "collapsible_tab",
