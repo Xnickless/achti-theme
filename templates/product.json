@@ -1,0 +1,150 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "sku": {
+          "type": "sku",
+          "settings": {
+            "text_style": "body"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "net_note": {
+          "type": "text",
+          "settings": {
+            "text": "Cena netto — VAT naliczany w koszyku",
+            "text_style": "body"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "inventory": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "spec_size": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Rozmiar",
+            "icon": "ruler",
+            "content": "{{ product.metafields.custom.rozmiar }}",
+            "page": ""
+          }
+        },
+        "spec_material": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Skład",
+            "icon": "leaf",
+            "content": "{{ product.metafields.custom.sklad }}",
+            "page": ""
+          }
+        },
+        "spec_color": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Kolor",
+            "icon": "none",
+            "content": "{{ product.metafields.custom.kolory }}",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "sku",
+        "price",
+        "net_note",
+        "variant_picker",
+        "inventory",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "spec_size",
+        "spec_material",
+        "spec_color"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "",
+        "media_size": "large",
+        "constrain_to_viewport": false,
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "quick-order-list": {
+      "type": "quick-order-list",
+      "settings": {
+        "variants_per_page": 50,
+        "show_image": true,
+        "show_sku": true,
+        "color_scheme": "scheme-2",
+        "padding_top": 36,
+        "padding_bottom": 16
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Podobne modele",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 44
+      }
+    }
+  },
+  "order": [
+    "main",
+    "quick-order-list",
+    "related-products"
+  ]
+}

@@ -1,0 +1,21 @@
+{%- comment -%}
+  B2B gate shown instead of price / buy buttons for visitors without access.
+  Params: style: 'inline' (small link) | 'box' (panel with buttons)
+{%- endcomment -%}
+{%- if style == 'box' -%}
+  <div class="b2b-gate b2b-gate--box color-{{ settings.cart_color_scheme }} gradient">
+    <p class="h4 b2b-gate__title">{{ 'b2b.gate_title' | t }}</p>
+    <p class="b2b-gate__text">{{ 'b2b.gate_text' | t }}</p>
+    <div class="b2b-gate__actions">
+      <a class="button button--primary" href="{{ routes.account_login_url }}">{{ 'b2b.login' | t }}</a>
+      {%- if settings.b2b_register_page != blank -%}
+        <a class="button button--secondary" href="{{ settings.b2b_register_page.url }}">{{ 'b2b.register' | t }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+{%- else -%}
+  <a class="b2b-gate b2b-gate--inline link" href="{{ routes.account_login_url }}">
+    <span class="svg-wrapper">{{ 'icon-padlock.svg' | inline_asset_content }}</span>
+    <span>{{ 'b2b.locked' | t }}</span>
+  </a>
+{%- endif -%}

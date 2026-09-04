@@ -1,0 +1,29 @@
+{%- liquid
+  assign b2b_access = true
+  if settings.b2b_hide_prices
+    if customer == nil
+      assign b2b_access = false
+    elsif settings.b2b_require_company and customer.b2b? != true
+      assign b2b_access = false
+    endif
+  endif
+-%}
+{{ 'quick-order-list.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
+
+{%- if b2b_access -%}
+{% render 'quick-order-list', product: product, show_image: true, show_sku: true, is_modal: true %}
+{%- else -%}
+{%- render 'b2b-gate', style: 'box' -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.quick-order-list.name",
+  "limit": 1,
+  "enabled_on": {
+    "templates": ["product"]
+  }
+}
+{% endschema %}
