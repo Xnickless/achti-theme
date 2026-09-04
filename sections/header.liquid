@@ -412,24 +412,31 @@
 
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 
+      const revealThreshold = 150;
+
       if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+        this.scrollUpDistance = 0;
         this.header.classList.add('scrolled-past-header');
         if (this.preventHide) return;
         requestAnimationFrame(this.hide.bind(this));
       } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
-        this.header.classList.add('scrolled-past-header');
-        if (!this.preventReveal) {
-          requestAnimationFrame(this.reveal.bind(this));
-        } else {
-          window.clearTimeout(this.isScrolling);
+        this.scrollUpDistance = (this.scrollUpDistance || 0) + (this.currentScrollTop - scrollTop);
+        if (this.scrollUpDistance > revealThreshold) {
+          this.header.classList.add('scrolled-past-header');
+          if (!this.preventReveal) {
+            requestAnimationFrame(this.reveal.bind(this));
+          } else {
+            window.clearTimeout(this.isScrolling);
 
-          this.isScrolling = setTimeout(() => {
-            this.preventReveal = false;
-          }, 66);
+            this.isScrolling = setTimeout(() => {
+              this.preventReveal = false;
+            }, 66);
 
-          requestAnimationFrame(this.hide.bind(this));
+            requestAnimationFrame(this.hide.bind(this));
+          }
         }
       } else if (scrollTop <= this.headerBounds.top) {
+        this.scrollUpDistance = 0;
         this.header.classList.remove('scrolled-past-header');
         requestAnimationFrame(this.reset.bind(this));
       }
