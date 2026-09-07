@@ -243,18 +243,9 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
 @media screen and (min-width: 990px) {
   .product--small .product__media-wrapper { max-width: 32%; }
   .product--small .product__info-wrapper { max-width: 68%; padding-left: 4rem; }
-  /* ramka zdjęcia skaluje się z obrazem (bez sztywnego ratio), obraz max do wysokości ekranu */
-  .product--small .product__media-item .product__media { padding-bottom: 0 !important; height: auto; }
-  .product--small .product__media-item .product__media img {
-    position: static !important;
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: calc(100vh - 30rem);
-    object-fit: contain;
-    margin: 0 auto;
-    display: block;
-  }
+  /* zdjęcie: stoi w miejscu (bez sticky), wysokość ograniczona mechanizmem motywu */
+  .product__column-sticky { position: static !important; }
+  .product-media-container.constrain-height { --viewport-offset: 330px; --constrained-min-height: 320px; }
   .product__info-container .product__title h1 { font-size: calc(var(--font-heading-scale) * 2.6rem); line-height: 1.15; margin: 0; }
   .product__info-container > * + * { margin-top: 1rem !important; }
   .product__info-container .product__title { margin-bottom: 0.4rem; }
