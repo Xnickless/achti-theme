@@ -21,7 +21,6 @@
 /* header inline search */
 @media screen and (min-width: 990px){
   .header__icons{align-items:center}
-  .header__inline-search{display:flex;align-items:center;width:32rem;height:4.2rem;margin-right:1.2rem;padding:0 .3rem 0 1.4rem;border:.1rem solid rgba(var(--color-foreground),.35);border-radius:var(--inputs-radius);background:rgb(var(--color-background))}
   .header__inline-search-input{flex:1;min-width:0;border:0;background:transparent;font-size:1.4rem;color:rgb(var(--color-foreground));padding:0}
   .header__inline-search-input:focus{outline:none;box-shadow:none}
   .header__inline-search-input::-webkit-search-cancel-button{-webkit-appearance:none}

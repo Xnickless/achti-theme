@@ -244,6 +244,14 @@
                 {%- when 'custom_liquid' -%}
                   {{ block.settings.custom_liquid }}
                 {%- when 'collapsible_tab' -%}
+                  {%- liquid
+                    assign tab_text = block.settings.content | strip_html | strip
+                    assign tab_has_content = false
+                    if tab_text != blank or block.settings.page != blank
+                      assign tab_has_content = true
+                    endif
+                  -%}
+                  {%- if tab_has_content or request.design_mode -%}
                   <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                     <details id="Details-{{ block.id }}-{{ section.id }}">
                       <summary>
@@ -261,6 +269,7 @@
                       </div>
                     </details>
                   </div>
+                  {%- endif -%}
                 {%- when 'model_colors' -%}
                   {%- assign model_colors = product.metafields.custom.inne_kolory.value -%}
                   {%- if model_colors and model_colors.size > 0 -%}

@@ -103,14 +103,18 @@
 
   @media screen and (min-width: 990px) {
     .header__icons { align-items: center; }
-    .header__inline-search { display: flex; align-items: center; width: 30rem; height: 4.8rem; margin-right: 1.2rem; padding: 0 0.6rem 0 2rem; border: 0.1rem solid rgba(38, 38, 38, 0.22); border-radius: 10rem; background: #ffffff; transition: border-color 0.18s ease, box-shadow 0.18s ease; }
-    .header__inline-search:focus-within { border-color: rgba(38, 38, 38, 0.55); box-shadow: 0 0 0 0.3rem rgba(38, 38, 38, 0.06); }
+    .header__inline-search { position: relative; display: block; }
+    .header__inline-search-form { position: relative; display: flex; align-items: center; width: 100%; height: 4.8rem; margin: 0; padding: 0 0.6rem 0 2rem; border: 0.1rem solid rgba(38, 38, 38, 0.22); border-radius: 10rem; background: #ffffff; transition: border-color 0.18s ease, box-shadow 0.18s ease; }
+    .header__inline-search-form:focus-within { border-color: rgba(38, 38, 38, 0.55); box-shadow: 0 0 0 0.3rem rgba(38, 38, 38, 0.06); }
     .header__inline-search-input { flex: 1; min-width: 0; border: 0; background: transparent; font-size: 1.5rem; letter-spacing: 0.01em; color: #262626; padding: 0; box-shadow: none; }
     .header__inline-search-input::placeholder { color: rgba(38, 38, 38, 0.5); opacity: 1; }
     .header__inline-search-input:focus { outline: none; box-shadow: none; }
     .header__inline-search-input::-webkit-search-cancel-button { -webkit-appearance: none; }
     .header__inline-search-btn { display: flex; align-items: center; justify-content: center; width: 3.6rem; height: 3.6rem; border: 0; border-radius: 50%; background: none; cursor: pointer; color: #262626; transition: background 0.15s ease; }
     .header__inline-search-btn:hover { background: rgba(38, 38, 38, 0.06); }
+    .header__inline-search-reset { display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border: 0; background: none; cursor: pointer; color: rgba(38,38,38,0.6); }
+    .header__inline-search-reset.hidden { display: none; }
+    .header__inline-search-reset .svg-wrapper { width: 1.4rem; height: 1.4rem; }
     .header__inline-search-btn .svg-wrapper { width: 1.9rem; height: 1.9rem; }
     .header__inline-search-btn svg { width: 100%; height: 100%; }
     .header--inline-search .header__icons .header__search { display: none; }
@@ -131,6 +135,7 @@
     .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-menu > .list-menu--inline { justify-content: center; flex-wrap: wrap; }
     .header--inline-search .header__inline-search { grid-area: inline-search; justify-self: center; width: 46rem; max-width: 100%; margin: 0 auto; }
     .header__menu-item { white-space: nowrap; }
+    .header__inline-search .predictive-search { top: calc(100% + 0.6rem); left: 0; right: 0; width: 100%; border-radius: 1.2rem; border-top-width: var(--popup-border-width); text-align: left; }
     /* Kompaktowy nagłówek po odsłonięciu przy scrollu w górę */
     .header__heading-logo-wrapper { transition: width 0.2s ease; }
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search .header__inline-search { display: none; }
@@ -230,11 +235,38 @@
     %}
 
     {%- if section.settings.inline_search -%}
-      <form action="{{ routes.search_url }}" method="get" role="search" class="header__inline-search small-hide medium-hide">
-        <input class="header__inline-search-input" type="search" name="q" placeholder="{{ 'general.search.search' | t }}" aria-label="{{ 'general.search.search' | t }}" autocomplete="off">
+      {%- if settings.predictive_search_enabled -%}<predictive-search class="header__inline-search small-hide medium-hide" data-loading-text="{{ 'accessibility.loading' | t }}">{%- else -%}<div class="header__inline-search small-hide medium-hide">{%- endif -%}
+      <form action="{{ routes.search_url }}" method="get" role="search" class="header__inline-search-form">
+        <input
+          class="header__inline-search-input"
+          type="search"
+          name="q"
+          placeholder="{{ 'general.search.search' | t }}"
+          aria-label="{{ 'general.search.search' | t }}"
+          {%- if settings.predictive_search_enabled -%}
+            role="combobox"
+            aria-expanded="false"
+            aria-owns="predictive-search-results"
+            aria-controls="predictive-search-results"
+            aria-haspopup="listbox"
+            aria-autocomplete="list"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+          {%- endif -%}
+          autocomplete="off"
+        >
         <input type="hidden" name="options[prefix]" value="last">
+        <button type="reset" class="header__inline-search-reset hidden" aria-label="{{ 'general.search.reset' | t }}"><span class="svg-wrapper">{{ 'icon-reset.svg' | inline_asset_content }}</span></button>
         <button type="submit" class="header__inline-search-btn" aria-label="{{ 'general.search.search' | t }}"><span class="svg-wrapper">{{ 'icon-search.svg' | inline_asset_content }}</span></button>
+        {%- if settings.predictive_search_enabled -%}
+          <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+            {%- render 'loading-spinner', class: 'predictive-search__loading-state' -%}
+          </div>
+          <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+        {%- endif -%}
       </form>
+      {%- if settings.predictive_search_enabled -%}</predictive-search>{%- else -%}</div>{%- endif -%}
     {%- endif -%}
 
     {%- if section.settings.logo_position == 'middle-center' -%}

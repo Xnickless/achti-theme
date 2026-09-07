@@ -1,7 +1,7 @@
 {{ 'b2b.css' | asset_url | stylesheet_tag }}
 <div class="page-width section-{{ section.id }}-padding">
   <div class="b2b-register">
-    <h1 class="title">{{ page.title | default: 'b2b.reg.title' | t }}</h1>
+    <h1 class="title">{% if page.title != blank %}{{ page.title }}{% else %}{{ 'b2b.reg.title' | t }}{% endif %}</h1>
     <div class="rte b2b-register__intro">{% if page.content != blank %}{{ page.content }}{% else %}<p>{{ 'b2b.reg.intro' | t }}</p>{% endif %}</div>
     {%- form 'contact', id: 'B2BRegisterForm' -%}
       <input type="hidden" name="contact[Typ zgłoszenia]" value="Rejestracja firmy B2B">
