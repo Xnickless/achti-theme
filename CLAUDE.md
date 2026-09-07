@@ -4,7 +4,7 @@ Ten folder to repozytorium `Xnickless/achti-theme` dla sklepu Shopify `ccucsr-si
 
 **Wdrażanie (stan na 04.09.2026):** integracja GitHub → Shopify **nie działa** (sprawdzone: motyw live „Trade” #201190474070 to stockowy Trade z 8 lipca, żaden motyw nie dostaje pushy z `main`). Kod wdrażamy ręcznie do wersji roboczej:
 ```
-shopify theme push --store ccucsr-si.myshopify.com --theme 206234878294   # „achti-trade-b2b-v4”, od 07.09.2026 LIVE
+shopify theme push --store ccucsr-si.myshopify.com --theme 206234878294 --allow-live   # „achti-trade-b2b-v4”, od 07.09.2026 LIVE (flaga --allow-live wymagana)
 ```
 **07.09.2026: motyw #206234878294 opublikowany jako live** (stary Trade #201190474070 został jako wersja robocza). Push do tego samego ID aktualizuje teraz motyw live. Strona /pages/rejestracja ma przypisany szablon „rejestracja”. Jeśli klient edytuje motyw w „Dostosuj”, zmiany są w Shopify, nie w repo — przed pracą `shopify theme pull --theme 206234878294 --only "templates/*.json" --only "sections/*-group.json" --only config/settings_data.json` i porównaj.
 
