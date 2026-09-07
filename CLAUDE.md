@@ -54,6 +54,14 @@ Motyw live zmienia się dopiero po publikacji tej wersji roboczej w panelu (Skle
 - Feed XML produktów: `/collections/all?view=feed` (templates/collection.feed.liquid), ceny tylko gdy widoczne.
 - W sklepie jest zainstalowana aplikacja „SP Hide Price & Access” — dubluje ukrywanie cen z motywu; do decyzji klienta, czy zostaje.
 
+## Test jako firma B2B (07.09.2026)
+Firma testowa „Firma Testowa Achti” (klient Kamil Test, e-mail Kamila) — zatwierdzona, bez katalogu. Ceny, szybkie zamawianie, koszyk i checkout z danymi firmy działają. Do decyzji/konfiguracji klienta:
+- **Podatki:** Shopify dopisuje „Z wliczonymi podatkami”, a motyw mówi „Cena netto”. Dla hurtu netto wyłączyć Ustawienia → Podatki i cła → „Uwzględnij podatek w cenach” i ustawić VAT 23% PL. Wtedy dopisek zniknie sam.
+- **Płatności:** w checkout tylko PayPal. B2B potrzebuje przelewu/faktury: Ustawienia → Płatności → Ręczne metody płatności („Przelew bankowy”) i/lub warunki płatności per firma (Klienci → Firmy → Warunki płatności).
+- **Katalog B2B:** Markets → Katalogi → katalog z cenami hurtowymi przypisany do firm; bez niego firmy widzą ceny domyślne.
+- **Panel konta klienta** (po zalogowaniu) to hostowana strona Shopify: wygląd w Ustawienia → Konta klientów → Personalizacja; menu w Treść → Menu → „Menu główne konta klienta”.
+- Sekcje z pustą kolekcją (Nowości, Bestsellery, cross-sell w koszyku) są ukryte w sklepie do czasu dodania produktów (widoczne tylko w edytorze). Zachęta do rejestracji i drugi przycisk hero są ukryte dla zalogowanych firm (ustawienia `hide_for_b2b` / `button_2_hide_b2b`).
+
 ## Do zrobienia (stan na 04.09.2026)
 1. Weryfikacja w sklepie: nagłówek, karta produktu i katalog jako gość / jako firma B2B.
 2. Konfiguracja panelu (klient/Kamil): metapola produktu, kolekcje Nowości/Bestsellery, filtry w Search & Discovery, konta firm i katalogi B2B, języki + Translate & Adapt, Klaviyo.

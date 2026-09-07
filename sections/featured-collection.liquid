@@ -1,3 +1,10 @@
+{%- liquid
+  assign fc_render = true
+  if request.design_mode == false and section.settings.collection.products.size == 0
+    assign fc_render = false
+  endif
+-%}
+{%- if fc_render -%}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
@@ -214,6 +221,7 @@
     {%- endif -%}
   </div>
 </div>
+{%- endif -%}
 
 {% schema %}
 {

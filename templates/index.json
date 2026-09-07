@@ -25,7 +25,8 @@
             "button_style_secondary_1": false,
             "button_label_2": "Załóż konto firmowe",
             "button_link_2": "shopify://pages/rejestracja",
-            "button_style_secondary_2": true
+            "button_style_secondary_2": true,
+            "button_2_hide_b2b": true
           }
         }
       },
@@ -76,7 +77,8 @@
         "color_scheme": "scheme-3",
         "full_width": true,
         "padding_top": 28,
-        "padding_bottom": 28
+        "padding_bottom": 28,
+        "hide_for_b2b": true
       }
     },
     "multicolumn": {

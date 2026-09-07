@@ -1,3 +1,13 @@
+{%- liquid
+  assign b2b_access = true
+  if settings.b2b_hide_prices
+    if customer == nil
+      assign b2b_access = false
+    elsif settings.b2b_require_company and customer.b2b? != true
+      assign b2b_access = false
+    endif
+  endif
+-%}
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
@@ -147,7 +157,7 @@
                   {{- block.settings.button_label_1 | escape -}}
                 </a>
               {%- endif -%}
-              {%- if block.settings.button_label_2 != blank -%}
+              {%- if block.settings.button_label_2 != blank and block.settings.button_2_hide_b2b != true or block.settings.button_label_2 != blank and b2b_access == false -%}
                 <a
                   {% if block.settings.button_link_2 == blank %}
                     role="link" aria-disabled="true"
@@ -483,6 +493,12 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_2_hide_b2b",
+          "default": false,
+          "label": "Ukryj drugi przycisk dla zalogowanych firm B2B"
         }
       ]
     }
