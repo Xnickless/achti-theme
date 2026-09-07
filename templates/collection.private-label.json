@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "configurator": {
+      "type": "private-label-configurator",
+      "blocks": {
+        "haft": { "type": "branding", "settings": { "name": "Haft", "description": "Haft komputerowy bezpośrednio na dzianinie, do 6 kolorów nici." } },
+        "naszywka": { "type": "branding", "settings": { "name": "Naszywka", "description": "Naszywka tkana lub skórzana z Twoim logo, przyszywana lub termo." } },
+        "wszywka": { "type": "branding", "settings": { "name": "Wszywka", "description": "Wszywka z logo w szwie wywinięcia lub z boku czapki." } },
+        "metka": { "type": "branding", "settings": { "name": "Własna metka", "description": "Czapka bez oznaczeń Achti, z Twoją metką i zawieszką." } }
+      },
+      "block_order": ["haft", "naszywka", "wszywka", "metka"],
+      "settings": {
+        "eyebrow": "Private Label",
+        "heading": "Skonfiguruj czapkę z Twoim logo",
+        "intro": "<p>Wybierz model i kolory, sposób znakowania, wgraj logo i ustaw je na podglądzie. Po wysłaniu zapytania w ciągu 2 dni roboczych odeślemy wycenę i projekt do akceptacji.</p>",
+        "max_models": 24,
+        "placements": "Przód, Bok lewy, Bok prawy, Tył",
+        "min_qty": 50,
+        "attach_preview": true,
+        "padding_top": 36,
+        "padding_bottom": 48
+      }
+    }
+  },
+  "order": ["configurator"]
+}

@@ -1,0 +1,330 @@
+{%- comment -%}
+  Konfigurator Private Label (zapytanie o wycenę). Źródło modeli: kolekcja z ustawień (domyślnie bieżąca kolekcja),
+  kolory modelu: produkt + metapole custom.inne_kolory. Zgłoszenie idzie przez formularz kontaktowy Shopify.
+{%- endcomment -%}
+<script src="{{ 'private-label.js' | asset_url }}" defer="defer"></script>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign source = section.settings.collection
+  if source == blank and collection != blank
+    assign source = collection
+  endif
+  assign placements = section.settings.placements | split: ','
+  assign min_qty = section.settings.min_qty | default: 50
+-%}
+
+{%- capture strings -%}
+{
+  "logo_loaded": {{ 'b2b.pl.logo_loaded' | t | json }},
+  "logo_no_preview": {{ 'b2b.pl.logo_no_preview' | t | json }},
+  "logo_later": {{ 'b2b.pl.logo_later' | t | json }},
+  "preview_drag": {{ 'b2b.pl.preview_drag' | t | json }},
+  "preview_empty": {{ 'b2b.pl.preview_empty' | t | json }},
+  "preview_pick": {{ 'b2b.pl.preview_pick' | t | json }},
+  "download_blocked": {{ 'b2b.pl.download_blocked' | t | json }},
+  "show_on_preview": {{ 'b2b.pl.show_on_preview' | t | json }},
+  "colors_count": {{ 'b2b.pl.colors_count' | t | json }},
+  "remove": {{ 'b2b.pl.remove' | t | json }},
+  "pcs": {{ 'b2b.pl.pcs' | t | json }},
+  "progress": {{ 'b2b.pl.progress' | t | json }},
+  "err_intro": {{ 'b2b.pl.err_intro' | t | json }},
+  "err_model": {{ 'b2b.pl.err_model' | t | json }},
+  "err_qty": {{ 'b2b.pl.err_qty' | t | json }},
+  "err_branding": {{ 'b2b.pl.err_branding' | t | json }},
+  "err_placement": {{ 'b2b.pl.err_placement' | t | json }},
+  "err_logo": {{ 'b2b.pl.err_logo' | t | json }},
+  "step_model": {{ 'b2b.pl.step_model' | t | json }},
+  "step_colors": {{ 'b2b.pl.step_colors' | t | json }},
+  "step_branding": {{ 'b2b.pl.step_branding' | t | json }},
+  "placement": {{ 'b2b.pl.placement' | t | json }},
+  "logo": {{ 'b2b.pl.logo' | t | json }},
+  "qty": {{ 'b2b.pl.qty' | t | json }},
+  "qty_total": {{ 'b2b.pl.qty_total' | t | json }},
+  "logo_pos": {{ 'b2b.pl.logo_pos' | t | json }},
+  "logo_size": {{ 'b2b.pl.logo_size' | t | json }},
+  "logo_rot": {{ 'b2b.pl.logo_rot' | t | json }}
+}
+{%- endcapture -%}
+
+{%- capture placement_presets -%}
+{
+  {%- for pl in placements -%}
+    {%- assign name = pl | strip -%}
+    {%- assign lname = name | downcase -%}
+    {%- if lname contains 'tył' or lname contains 'tyl' or lname contains 'back' -%}
+      {{ name | json }}: {"x":0.5,"y":0.62,"back":true}
+    {%- elsif lname contains 'lew' or lname contains 'left' -%}
+      {{ name | json }}: {"x":0.3,"y":0.6}
+    {%- elsif lname contains 'praw' or lname contains 'right' -%}
+      {{ name | json }}: {"x":0.7,"y":0.6}
+    {%- elsif lname contains 'pomp' -%}
+      {{ name | json }}: {"x":0.5,"y":0.18}
+    {%- else -%}
+      {{ name | json }}: {"x":0.5,"y":0.62}
+    {%- endif -%}
+    {%- unless forloop.last -%},{%- endunless -%}
+  {%- endfor -%}
+}
+{%- endcapture -%}
+
+<private-label-configurator
+  class="pl-config page-width section-{{ section.id }}-padding"
+  data-strings="{{ strings | strip | escape }}"
+  data-placements="{{ placement_presets | strip | escape }}"
+  data-min-qty="{{ min_qty }}"
+>
+  <script type="application/json" data-pl-data>
+    [
+      {%- for product in source.products limit: section.settings.max_models -%}
+        {%- assign group = product.metafields.custom.inne_kolory.value -%}
+        {
+          "handle": {{ product.handle | json }},
+          "title": {{ product.title | json }},
+          "sku": {{ product.selected_or_first_available_variant.sku | json }},
+          "image": {{ product.featured_image | image_url: width: 600 | json }},
+          "colors": [
+            {
+              "title": {{ product.title | json }},
+              "sku": {{ product.selected_or_first_available_variant.sku | json }},
+              "image": {{ product.featured_image | image_url: width: 900 | json }},
+              "url": {{ shop.url | append: product.url | json }}
+            }
+            {%- for other in group -%}
+              {%- if other.handle != product.handle -%}
+                ,{
+                  "title": {{ other.title | json }},
+                  "sku": {{ other.selected_or_first_available_variant.sku | json }},
+                  "image": {{ other.featured_image | image_url: width: 900 | json }},
+                  "url": {{ shop.url | append: other.url | json }}
+                }
+              {%- endif -%}
+            {%- endfor -%}
+          ]
+        }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    ]
+  </script>
+
+  <header class="pl-config__head">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="pl-config__eyebrow">{{ section.settings.eyebrow }}</p>
+    {%- endif -%}
+    {%- if section.settings.heading != blank -%}
+      <h1 class="pl-config__title">{{ section.settings.heading }}</h1>
+    {%- endif -%}
+    {%- if section.settings.intro != blank -%}
+      <div class="pl-config__intro rte">{{ section.settings.intro }}</div>
+    {%- endif -%}
+    <ol class="pl-progress" aria-label="{{ 'b2b.pl.steps_label' | t }}">
+      <li><button type="button" class="pl-progress__item" data-pl-goto="model">1 <span>{{ 'b2b.pl.step_model' | t }}</span></button></li>
+      <li><button type="button" class="pl-progress__item" data-pl-goto="colors">2 <span>{{ 'b2b.pl.step_colors' | t }}</span></button></li>
+      <li><button type="button" class="pl-progress__item" data-pl-goto="branding">3 <span>{{ 'b2b.pl.step_branding' | t }}</span></button></li>
+      <li><button type="button" class="pl-progress__item" data-pl-goto="logo">4 <span>{{ 'b2b.pl.step_logo' | t }}</span></button></li>
+      <li><button type="button" class="pl-progress__item" data-pl-goto="details">5 <span>{{ 'b2b.pl.step_details' | t }}</span></button></li>
+    </ol>
+  </header>
+
+  {%- form 'contact', id: 'PrivateLabelForm', class: 'pl-form' -%}
+    {%- if form.posted_successfully? -%}
+      <div class="pl-success" role="status" tabindex="-1" autofocus>
+        <span class="svg-wrapper">{{- 'icon-success.svg' | inline_asset_content -}}</span>
+        <div>
+          <p class="h3">{{ 'b2b.pl.success_title' | t }}</p>
+          <p>{{ 'b2b.pl.success_text' | t }}</p>
+        </div>
+      </div>
+    {%- elsif form.errors -%}
+      <div class="form__message pl-errors" role="alert">
+        <span class="svg-wrapper">{{- 'icon-error.svg' | inline_asset_content -}}</span>
+        {{ 'templates.contact.form.error_heading' | t }} {{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}
+      </div>
+    {%- endif -%}
+
+    <input type="hidden" name="contact[Temat]" value="Private Label – zapytanie o wycenę">
+    <textarea name="contact[Konfiguracja]" data-pl-config hidden readonly></textarea>
+    {%- if section.settings.attach_preview -%}
+      <textarea name="contact[Podgląd (obraz data URL)]" data-pl-preview-field hidden readonly></textarea>
+    {%- endif -%}
+
+    <div class="pl-layout">
+      <ol class="pl-steps">
+        <li class="pl-step" data-pl-step="model">
+          <div class="pl-step__head"><span class="pl-step__num">1</span><h2 class="pl-step__title">{{ 'b2b.pl.step_model' | t }}</h2></div>
+          <p class="pl-step__hint">{{ 'b2b.pl.step_model_hint' | t }}</p>
+          {%- if source.products.size == 0 -%}
+            <p class="pl-step__empty">{{ 'b2b.pl.no_models' | t }}</p>
+          {%- endif -%}
+          <div class="pl-models" data-pl-models></div>
+        </li>
+
+        <li class="pl-step" data-pl-step="colors" hidden>
+          <div class="pl-step__head"><span class="pl-step__num">2</span><h2 class="pl-step__title">{{ 'b2b.pl.step_colors' | t }}</h2></div>
+          <p class="pl-step__hint">{{ 'b2b.pl.step_colors_hint' | t }}</p>
+          <div class="model-colors pl-colors">
+            <ul class="model-colors__list list-unstyled" role="list" data-pl-colors></ul>
+          </div>
+          <div class="pl-qty" data-pl-qty-list></div>
+          <p class="pl-qty__total">{{ 'b2b.pl.qty_total' | t }}: <strong><span data-pl-total>0</span> {{ 'b2b.pl.pcs' | t }}</strong>
+            <span class="pl-qty__min">· {{ 'b2b.pl.min' | t: count: min_qty }}</span></p>
+          <p class="pl-qty__warn" data-pl-qty-warn hidden>{{ 'b2b.pl.err_qty' | t: count: min_qty }}</p>
+        </li>
+
+        <li class="pl-step" data-pl-step="branding" hidden>
+          <div class="pl-step__head"><span class="pl-step__num">3</span><h2 class="pl-step__title">{{ 'b2b.pl.step_branding' | t }}</h2></div>
+          <div class="pl-pills" role="group" aria-label="{{ 'b2b.pl.step_branding' | t }}">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'branding' -%}
+                <button type="button" class="pl-pill" data-pl-branding="{{ block.settings.name | escape }}" data-pl-desc="{{ block.settings.description | escape }}" aria-pressed="false" {{ block.shopify_attributes }}>
+                  {{ block.settings.name }}
+                </button>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+          <p class="pl-step__hint pl-step__hint--desc" data-pl-branding-desc></p>
+          <h3 class="pl-step__sub">{{ 'b2b.pl.placement' | t }}</h3>
+          <div class="pl-pills" role="group" aria-label="{{ 'b2b.pl.placement' | t }}">
+            {%- for pl in placements -%}
+              {%- assign name = pl | strip -%}
+              <button type="button" class="pl-pill" data-pl-placement="{{ name | escape }}" aria-pressed="false">{{ name }}</button>
+            {%- endfor -%}
+          </div>
+        </li>
+
+        <li class="pl-step" data-pl-step="logo" hidden>
+          <div class="pl-step__head"><span class="pl-step__num">4</span><h2 class="pl-step__title">{{ 'b2b.pl.step_logo' | t }}</h2></div>
+          <label class="pl-drop" data-pl-drop>
+            <input type="file" data-pl-logo accept=".png,.jpg,.jpeg,.svg,.webp,.pdf,.ai,.eps">
+            <span class="pl-drop__icon">{{ 'icon-plus.svg' | inline_asset_content }}</span>
+            <span class="pl-drop__title">{{ 'b2b.pl.logo_choose' | t }}</span>
+            <span class="pl-drop__hint">{{ 'b2b.pl.logo_hint' | t }}</span>
+          </label>
+          <p class="pl-logo__status" data-pl-logo-status></p>
+          <div class="pl-sliders">
+            <label class="pl-range"><span>{{ 'b2b.pl.logo_size' | t }}</span><input type="range" min="8" max="50" value="22" data-pl-size></label>
+            <label class="pl-range"><span>{{ 'b2b.pl.logo_rot' | t }}</span><input type="range" min="-30" max="30" value="0" data-pl-rot></label>
+            <button type="button" class="link underlined-link pl-reset" data-pl-reset>{{ 'b2b.pl.logo_reset' | t }}</button>
+          </div>
+          <label class="pl-check">
+            <input type="checkbox" data-pl-nologo>
+            <span>{{ 'b2b.pl.logo_later_check' | t }}</span>
+          </label>
+        </li>
+
+        <li class="pl-step" data-pl-step="details" hidden>
+          <div class="pl-step__head"><span class="pl-step__num">5</span><h2 class="pl-step__title">{{ 'b2b.pl.step_details' | t }}</h2></div>
+          <div class="pl-fields">
+            <div class="field">
+              <input class="field__input" type="text" id="PL-company" name="contact[Firma]" autocomplete="organization" value="{% if customer.b2b? %}{{ customer.current_company.name }}{% endif %}" placeholder="{{ 'b2b.reg.company' | t }}" required>
+              <label class="field__label" for="PL-company">{{ 'b2b.reg.company' | t }} *</label>
+            </div>
+            <div class="field">
+              <input class="field__input" type="text" id="PL-nip" name="contact[NIP]" placeholder="{{ 'b2b.reg.nip' | t }}">
+              <label class="field__label" for="PL-nip">{{ 'b2b.reg.nip' | t }}</label>
+            </div>
+            <div class="field">
+              <input class="field__input" type="text" id="PL-name" name="contact[Osoba kontaktowa]" autocomplete="name" value="{{ customer.name }}" placeholder="{{ 'b2b.reg.person' | t }}" required>
+              <label class="field__label" for="PL-name">{{ 'b2b.reg.person' | t }} *</label>
+            </div>
+            <div class="field">
+              <input class="field__input" type="email" id="PL-email" name="contact[email]" autocomplete="email" value="{{ customer.email }}" placeholder="{{ 'b2b.reg.email' | t }}" required>
+              <label class="field__label" for="PL-email">{{ 'b2b.reg.email' | t }} *</label>
+            </div>
+            <div class="field">
+              <input class="field__input" type="tel" id="PL-phone" name="contact[Telefon]" autocomplete="tel" value="{{ customer.phone }}" placeholder="{{ 'b2b.reg.phone' | t }}">
+              <label class="field__label" for="PL-phone">{{ 'b2b.reg.phone' | t }}</label>
+            </div>
+            <div class="field">
+              <input class="field__input" type="text" id="PL-deadline" name="contact[Termin]" placeholder="{{ 'b2b.pl.deadline' | t }}">
+              <label class="field__label" for="PL-deadline">{{ 'b2b.pl.deadline' | t }}</label>
+            </div>
+            <div class="field pl-fields__wide">
+              <textarea class="text-area field__input" id="PL-notes" name="contact[Uwagi]" rows="4" placeholder="{{ 'b2b.pl.notes' | t }}"></textarea>
+              <label class="field__label" for="PL-notes">{{ 'b2b.pl.notes' | t }}</label>
+            </div>
+          </div>
+          <div class="pl-errors form__message" data-pl-errors hidden role="alert"></div>
+          <div class="pl-submit">
+            <button type="submit" class="button">{{ 'b2b.pl.submit' | t }}</button>
+            <p class="pl-submit__note">{{ 'b2b.pl.submit_note' | t }}</p>
+          </div>
+        </li>
+      </ol>
+
+      <aside class="pl-panel">
+        <div class="pl-panel__inner">
+          <p class="pl-panel__progress" data-pl-progress></p>
+          <figure class="pl-preview">
+            <canvas data-pl-canvas width="600" height="750" aria-label="{{ 'b2b.pl.preview_label' | t }}"></canvas>
+            <div class="pl-preview__empty" data-pl-preview-empty>
+              <span>{{ 'b2b.pl.preview_pick' | t }}</span>
+            </div>
+            <figcaption>
+              <span data-pl-preview-hint>{{ 'b2b.pl.preview_pick' | t }}</span>
+              <span data-pl-back-note hidden> {{ 'b2b.pl.back_note' | t }}</span>
+            </figcaption>
+          </figure>
+          <a class="pl-panel__download link underlined-link" href="#" data-pl-download>{{ 'b2b.pl.download' | t }}</a>
+          <div class="pl-summary">
+            <h3 class="pl-summary__title">{{ 'b2b.pl.summary' | t }}</h3>
+            <dl data-pl-summary></dl>
+          </div>
+          <button type="button" class="button button--secondary pl-panel__cta" data-pl-goto="details">{{ 'b2b.pl.go_details' | t }}</button>
+        </div>
+      </aside>
+    </div>
+  {%- endform -%}
+</private-label-configurator>
+
+{% schema %}
+{
+  "name": "Private Label",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "default": "Private Label", "label": "Nadtytuł" },
+    { "type": "text", "id": "heading", "default": "Skonfiguruj czapkę z Twoim logo", "label": "Nagłówek" },
+    { "type": "richtext", "id": "intro", "default": "<p>Wybierz model i kolory, sposób znakowania, wgraj logo i ustaw je na podglądzie. Po wysłaniu zapytania w ciągu 2 dni roboczych odeślemy wycenę i projekt do akceptacji.</p>", "label": "Wstęp" },
+    { "type": "collection", "id": "collection", "label": "Kolekcja z modelami bazowymi", "info": "Puste = bieżąca kolekcja (na szablonie kolekcji). Kolory modelu pobierane z metapola „Inne kolory”." },
+    { "type": "range", "id": "max_models", "min": 4, "max": 48, "step": 4, "default": 24, "label": "Maksymalna liczba modeli" },
+    { "type": "text", "id": "placements", "default": "Przód, Bok lewy, Bok prawy, Tył", "label": "Miejsca znakowania (po przecinku)", "info": "Słowa „lewy”, „prawy”, „tył”, „pompon” ustawiają pozycję startową logo na podglądzie." },
+    { "type": "number", "id": "min_qty", "default": 50, "label": "Minimalna ilość sztuk (łącznie)" },
+    { "type": "checkbox", "id": "attach_preview", "default": true, "label": "Dołącz obraz podglądu do zgłoszenia", "info": "Podgląd trafia do maila jako obraz zakodowany tekstem (data URL)." },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "t:sections.all.padding.padding_top", "default": 36 },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "t:sections.all.padding.padding_bottom", "default": 48 }
+  ],
+  "blocks": [
+    {
+      "type": "branding",
+      "name": "Rodzaj znakowania",
+      "settings": [
+        { "type": "text", "id": "name", "default": "Haft", "label": "Nazwa" },
+        { "type": "text", "id": "description", "default": "Haft komputerowy bezpośrednio na dzianinie, do 6 kolorów nici.", "label": "Opis (pod wyborem)" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Private Label",
+      "blocks": [
+        { "type": "branding", "settings": { "name": "Haft", "description": "Haft komputerowy bezpośrednio na dzianinie, do 6 kolorów nici." } },
+        { "type": "branding", "settings": { "name": "Naszywka", "description": "Naszywka tkana lub skórzana z Twoim logo, przyszywana lub termo." } },
+        { "type": "branding", "settings": { "name": "Wszywka", "description": "Wszywka z logo w szwie wywinięcia lub z boku czapki." } },
+        { "type": "branding", "settings": { "name": "Własna metka", "description": "Czapka bez oznaczeń Achti, z Twoją metką i zawieszką." } }
+      ]
+    }
+  ]
+}
+{% endschema %}
