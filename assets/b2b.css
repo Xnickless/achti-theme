@@ -241,3 +241,34 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
   .header--inline-search.header--top-left:not(.drawer-menu) { row-gap: 0.8rem; }
   .header__inline-search .header__inline-search-form { min-height: 4.2rem; }
 }
+
+/* Karta produktu: kompaktowo — wszystko w pierwszym ekranie */
+@media screen and (min-width: 990px) {
+  .product--small .product__media-wrapper { max-width: 32%; }
+  .product--small .product__info-wrapper { max-width: 68%; padding-left: 4rem; }
+  .product--small .product__media-item,
+  .product--small .product__media-item .product__media,
+  .product--small .product__media-item .product__media img { max-height: calc(100vh - 30rem); }
+  .product__info-container .product__title h1 { font-size: calc(var(--font-heading-scale) * 2.6rem); line-height: 1.15; margin: 0; }
+  .product__info-container > * + * { margin-top: 1rem !important; }
+  .product__info-container .product__title { margin-bottom: 0.4rem; }
+  .product__info-container .price--large { font-size: 1.8rem; }
+  .product__info-container .product__text.inline-richtext { margin: 0.2rem 0; }
+  .product__info-container .model-colors { margin: 0.2rem 0 0.6rem; }
+  .model-colors__circle { width: 4.2rem; height: 4.2rem; }
+  .product__info-container .product-form__input,
+  .product__info-container .product-form { margin-bottom: 0.6rem; }
+  .product__info-container .product-form__quantity .form__label { margin-bottom: 0.4rem; }
+  .product__info-container .product__accordion .accordion__title { font-size: 1.5rem; }
+  .product__info-container .accordion summary { padding: 1.1rem 0; }
+  .product__info-container .b2b-gate--box { padding: 1.6rem 2rem; }
+}
+/* Dublujący się dopisek Shopify o podatkach: mamy własny „Cena netto” */
+.product__tax { display: none; }
+/* Nagłówek: niższy */
+@media screen and (min-width: 990px) {
+  .header--inline-search.header--top-left:not(.drawer-menu) { row-gap: 0.4rem; padding-top: 0.6rem; padding-bottom: 0.6rem; }
+  .header__inline-search-form { min-height: 3.8rem; }
+  .header--inline-search .header__inline-search { width: 38rem; }
+  .header__inline-menu .list-menu__item { padding-top: 0.6rem; padding-bottom: 0.6rem; }
+}
