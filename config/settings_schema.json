@@ -1489,5 +1489,38 @@
         "default": "nowosc"
       }
     ]
+  },
+  {
+    "name": "Producent (GPSR)",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Dane producenta wymagane rozporządzeniem GPSR (UE 2023/988) przy ofertach online. Pokazywane w bloku „Producent” na karcie produktu i w feedzie XML."
+      },
+      {
+        "type": "text",
+        "id": "producer_name",
+        "label": "Nazwa producenta",
+        "default": "ACHTI Sp. z o.o. Sp.k."
+      },
+      {
+        "type": "text",
+        "id": "producer_address",
+        "label": "Adres pocztowy",
+        "default": "Bieńkowice 152, 32-410 Dobczyce, Polska"
+      },
+      {
+        "type": "text",
+        "id": "producer_email",
+        "label": "E-mail kontaktowy",
+        "default": "biuro@achti.pl"
+      },
+      {
+        "type": "text",
+        "id": "producer_phone",
+        "label": "Telefon (opcjonalnie)",
+        "default": "+48 12 350 69 25"
+      }
+    ]
   }
 ]

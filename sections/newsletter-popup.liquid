@@ -72,6 +72,10 @@
               </small>
             {%- endif -%}
           </div>
+          <label class="newsletter-consent newsletter-consent--popup">
+            <input type="checkbox" name="contact[accepts_marketing]" value="true" required>
+            <span>{{ 'newsletter.consent_html' | t: privacy_url: '/policies/privacy-policy' }}</span>
+          </label>
           <button type="submit" class="button button--full-width newsletter-popup__button" name="commit">
             {{ section.settings.button_label | default: 'Zapisz się' | escape }}
           </button>

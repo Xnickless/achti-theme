@@ -61,7 +61,8 @@
   "newsletter": {
     "label": "E-Mail",
     "success": "Danke für deine Anmeldung",
-    "button_label": "Abonnieren"
+    "button_label": "Abonnieren",
+    "consent_html": "Ich möchte E-Mails von Achti über Neuheiten, Kollektionen und Angebote erhalten. Die Einwilligung kann ich jederzeit widerrufen. <a href=\"{{ privacy_url }}\">Datenschutzerklärung</a>."
   },
   "accessibility": {
     "skip_to_text": "Direkt zum Inhalt",
@@ -629,6 +630,9 @@
       "strip_title": "Vorschau auf gewählten Farben",
       "download_all": "Alle Farben herunterladen (PNG)",
       "logo_cleaned": "Wir haben den weißen Hintergrund des Logos entfernt. Falls unerwünscht, laden Sie ein transparentes PNG hoch."
+    },
+    "producer": {
+      "model": "Modell"
     }
   }
 }

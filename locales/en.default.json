@@ -61,7 +61,8 @@
   "newsletter": {
     "label": "Email",
     "success": "Thanks for subscribing",
-    "button_label": "Subscribe"
+    "button_label": "Subscribe",
+    "consent_html": "I want to receive e-mails from Achti about new products, collections and offers. I can withdraw consent at any time. <a href=\"{{ privacy_url }}\">Privacy policy</a>."
   },
   "accessibility": {
     "skip_to_text": "Skip to content",
@@ -629,6 +630,9 @@
       "strip_title": "Preview on selected colours",
       "download_all": "Download all colours (PNG)",
       "logo_cleaned": "We removed the white background from the logo. If unwanted, upload a transparent PNG."
+    },
+    "producer": {
+      "model": "Model"
     }
   }
 }

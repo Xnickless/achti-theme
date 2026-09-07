@@ -61,7 +61,8 @@
   "newsletter": {
     "label": "Twój e-mail",
     "success": "Dziękujemy za subskrypcję",
-    "button_label": "Subskrybuj"
+    "button_label": "Subskrybuj",
+    "consent_html": "Chcę otrzymywać od Achti e-maile o nowościach, kolekcjach i ofertach. Zgodę mogę wycofać w każdej chwili. <a href=\"{{ privacy_url }}\">Polityka prywatności</a>."
   },
   "accessibility": {
     "skip_to_text": "Przejdź do treści",
@@ -653,6 +654,9 @@
       "strip_title": "Podgląd na wybranych kolorach",
       "download_all": "Pobierz wszystkie kolory (PNG)",
       "logo_cleaned": "Usunęliśmy białe tło z logo. Jeśli to niepożądane, wgraj PNG z przezroczystością."
+    },
+    "producer": {
+      "model": "Model"
     }
   }
 }

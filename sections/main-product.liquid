@@ -270,6 +270,16 @@
                     </details>
                   </div>
                   {%- endif -%}
+                {%- when 'producer' -%}
+                  {%- if settings.producer_name != blank -%}
+                    <div class="product__producer" {{ block.shopify_attributes }}>
+                      <span class="product__producer-label">{{ block.settings.label | default: 'Producent' | escape }}:</span>
+                      <span class="product__producer-value">
+                        {{ settings.producer_name | escape }}{% if settings.producer_address != blank %}, {{ settings.producer_address | escape }}{% endif %}{% if settings.producer_email != blank %}, <a href="mailto:{{ settings.producer_email | escape }}">{{ settings.producer_email | escape }}</a>{% endif %}{% if block.settings.show_phone and settings.producer_phone != blank %}, {{ settings.producer_phone | escape }}{% endif %}
+                        {%- if block.settings.show_sku and product.selected_or_first_available_variant.sku != blank %} · {{ 'b2b.producer.model' | t }}: {{ product.selected_or_first_available_variant.sku | escape }}{% endif -%}
+                      </span>
+                    </div>
+                  {%- endif -%}
                 {%- when 'model_colors' -%}
                   {%- assign model_colors = product.metafields.custom.inne_kolory.value -%}
                   {%- if model_colors and model_colors.size > 0 -%}
@@ -1020,6 +1030,17 @@
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
         }
+      ]
+    },
+    {
+      "type": "producer",
+      "name": "Producent (GPSR)",
+      "limit": 1,
+      "settings": [
+        { "type": "paragraph", "content": "Dane w Ustawienia motywu → Producent (GPSR)." },
+        { "type": "text", "id": "label", "default": "Producent", "label": "Etykieta" },
+        { "type": "checkbox", "id": "show_phone", "default": false, "label": "Pokaż telefon" },
+        { "type": "checkbox", "id": "show_sku", "default": true, "label": "Dopisz kod modelu (identyfikacja produktu)" }
       ]
     },
     {

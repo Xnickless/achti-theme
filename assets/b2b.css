@@ -437,3 +437,15 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
 .pl-strip__item canvas { width: 100%; height: auto; aspect-ratio: 4 / 5; border-radius: 0.5rem; border: 0.1rem solid rgba(var(--color-foreground), 0.08); background: #fff; }
 .pl-strip__item span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pl-panel__links { display: flex; flex-wrap: wrap; gap: 0.6rem 1.6rem; }
+
+/* Zgoda marketingowa przy newsletterze */
+.newsletter-consent { display: flex; align-items: flex-start; gap: 0.8rem; margin: 0 0 1rem; font-size: 1.2rem; line-height: 1.4; color: rgba(var(--color-foreground), 0.75); cursor: pointer; text-align: left; }
+.newsletter-consent input { flex: 0 0 1.6rem; width: 1.6rem; height: 1.6rem; margin-top: 0.15rem; accent-color: rgb(var(--color-foreground)); }
+.newsletter-consent a { color: inherit; text-decoration: underline; }
+.newsletter-consent--popup { margin: 1.2rem 0; }
+.footer-block--newsletter .newsletter-consent { max-width: 36rem; }
+
+/* Producent (GPSR) na karcie produktu */
+.product__producer { margin: 1.2rem 0 0; font-size: 1.25rem; line-height: 1.5; color: rgba(var(--color-foreground), 0.65); }
+.product__producer-label { font-weight: 600; margin-right: 0.3rem; }
+.product__producer a { color: inherit; }

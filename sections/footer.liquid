@@ -189,6 +189,12 @@
               {%- endif -%}
               {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
                 <input type="hidden" name="contact[tags]" value="newsletter">
+                {%- if section.settings.newsletter_consent -%}
+                  <label class="newsletter-consent">
+                    <input type="checkbox" name="contact[accepts_marketing]" value="true" required>
+                    <span>{{ 'newsletter.consent_html' | t: privacy_url: '/policies/privacy-policy' }}</span>
+                  </label>
+                {%- endif -%}
                 <div class="newsletter-form__field-wrapper">
                   <div class="field">
                     <input
@@ -487,6 +493,13 @@
       "type": "text",
       "id": "newsletter_note",
       "label": "Dopisek z kłódką (np. „Tylko dla klientów B2B”)"
+    },
+    {
+      "type": "checkbox",
+      "id": "newsletter_consent",
+      "default": true,
+      "label": "Wymagaj zgody marketingowej (checkbox)",
+      "info": "Prawo komunikacji elektronicznej (art. 398) wymaga wyraźnej zgody na e-maile marketingowe. Treść zgody w tłumaczeniach: newsletter.consent_html."
     },
     {
       "type": "header",

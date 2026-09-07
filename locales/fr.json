@@ -61,7 +61,8 @@
   "newsletter": {
     "label": "E-mail",
     "success": "Merci de votre inscription",
-    "button_label": "S'inscrire"
+    "button_label": "S'inscrire",
+    "consent_html": "Je souhaite recevoir des e-mails d’Achti sur les nouveautés, collections et offres. Je peux retirer mon consentement à tout moment. <a href=\"{{ privacy_url }}\">Politique de confidentialité</a>."
   },
   "accessibility": {
     "skip_to_text": "Ignorer et passer au contenu",
@@ -641,6 +642,9 @@
       "strip_title": "Aperçu sur les couleurs choisies",
       "download_all": "Télécharger toutes les couleurs (PNG)",
       "logo_cleaned": "Nous avons retiré le fond blanc du logo. Si ce n’est pas souhaité, téléversez un PNG transparent."
+    },
+    "producer": {
+      "model": "Modèle"
     }
   }
 }

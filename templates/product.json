@@ -93,6 +93,14 @@
           "settings": {
             "heading": "Inne kolory tego modelu"
           }
+        },
+        "producer": {
+          "type": "producer",
+          "settings": {
+            "label": "Producent",
+            "show_phone": false,
+            "show_sku": true
+          }
         }
       },
       "block_order": [
@@ -108,7 +116,8 @@
         "description",
         "spec_size",
         "spec_material",
-        "spec_color"
+        "spec_color",
+        "producer"
       ],
       "settings": {
         "enable_sticky_info": true,

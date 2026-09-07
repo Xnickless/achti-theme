@@ -47,6 +47,7 @@
 {%- if variant.sku != blank -%}<g:mpn>{{ variant.sku | escape }}</g:mpn>{%- endif -%}
 {%- if variant.barcode != blank -%}<g:gtin>{{ variant.barcode | escape }}</g:gtin>{%- endif -%}
 <g:brand>{{ product.vendor | escape }}</g:brand>
+{%- if settings.producer_name != blank -%}<manufacturer><name>{{ settings.producer_name | escape }}</name><address>{{ settings.producer_address | escape }}</address><email>{{ settings.producer_email | escape }}</email></manufacturer>{%- endif -%}
 <g:condition>new</g:condition>
 {%- if product.type != blank -%}<g:product_type>{{ product.type | escape }}</g:product_type>{%- endif -%}
 {%- for option in product.options_with_values -%}
