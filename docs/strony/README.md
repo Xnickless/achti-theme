@@ -1,6 +1,6 @@
 # Strony prawne i obsługa klienta — instrukcja wdrożenia
 
-Stan na 07.09.2026. Teksty w tym folderze są gotowe do wklejenia do Shopify po uzupełnieniu pól oznaczonych `[…]` (decyzje Adriana). Dane firmy pobrane z KRS i achti.pl: ACHTI Sp. z o.o. Sp.k., ul. Urocza 39, 32-040 Wrząsowice, KRS 0000862860, NIP 6812081859, REGON 386412597, korespondencja/zakład: Bieńkowice 152, 32-410 Dobczyce — do potwierdzenia przez klienta.
+Stan na 07.09.2026. **Teksty są już wgrane do Shopify** (4 polityki w Ustawienia → Polityki, strony `warunki-wspolpracy`, `faq`, `polityka-cookies`; w menu stopki „Obsługa klienta” dodano „Regulamin B2B” i „Polityka cookies”). Pola `[…]` zostały w treści jako pogrubione do uzupełnienia przez Adriana — edycja bezpośrednio w panelu. Ten folder to kopia źródłowa. Dane firmy pobrane z KRS i achti.pl: ACHTI Sp. z o.o. Sp.k., ul. Urocza 39, 32-040 Wrząsowice, KRS 0000862860, NIP 6812081859, REGON 386412597, korespondencja/zakład: Bieńkowice 152, 32-410 Dobczyce — do potwierdzenia przez klienta.
 
 ## Gdzie co wkleić
 
