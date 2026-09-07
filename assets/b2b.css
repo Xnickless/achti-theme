@@ -275,3 +275,4 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
 .product__inventory .svg-wrapper { width: 1.2rem; height: 1.2rem; }
 .product__inventory-note { font-weight: 400; opacity: 0.7; }
 .product__inventory-note::before { content: '·'; margin-right: 0.6rem; }
+.model-colors-loading { opacity: 0.55; pointer-events: none; transition: opacity 0.15s; }
