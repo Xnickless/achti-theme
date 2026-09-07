@@ -261,7 +261,10 @@ function plRenderScene(target, scene) {
           const a = src[q + 3];
           if (!a) continue;
           /* cieniowanie dzianiną: mnożenie przez jasność zdjęcia (z podbiciem kontrastu) */
-          const shade = Math.min(1.15, Math.max(0.45, 0.35 + (B[p] / 255) * 0.9));
+          /* jasne nici na ciemnej dzianinie zostają jasne: im jaśniejszy piksel logo, tym słabsze cieniowanie */
+          const base = Math.min(1.15, Math.max(0.45, 0.35 + (B[p] / 255) * 0.9));
+          const srcLum = (src[q] * 0.3 + src[q + 1] * 0.59 + src[q + 2] * 0.11) / 255;
+          const shade = base + (1 - base) * srcLum * 0.75;
           out[o] = Math.min(255, src[q] * shade);
           out[o + 1] = Math.min(255, src[q + 1] * shade);
           out[o + 2] = Math.min(255, src[q + 2] * shade);
