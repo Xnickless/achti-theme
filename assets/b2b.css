@@ -276,3 +276,7 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
 .product__inventory-note { font-weight: 400; opacity: 0.7; }
 .product__inventory-note::before { content: '·'; margin-right: 0.6rem; }
 .model-colors-loading { opacity: 0.55; pointer-events: none; transition: opacity 0.15s; }
+
+/* Szybkie zamawianie: wiersze nagłówkowe produktów w grupie */
+.variant-item--group-heading td { padding: 1.6rem 0 0.4rem; font-weight: 600; border-bottom: 0; }
+.variant-item--group-heading + .variant-item td { border-top: 0; }

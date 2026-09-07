@@ -12,7 +12,24 @@
 
 {% comment %} TODO: enable theme-check once `line_items_for` is accepted as valid filter {% endcomment %}
 {% # theme-check-disable %}
-{%- assign items_in_cart = cart | line_items_for: product | sum: 'quantity' -%}
+{%- liquid
+  assign items_in_cart = cart | line_items_for: product | sum: 'quantity'
+  assign group_total = cart | line_items_for: product | sum: 'original_line_price'
+  assign group_variant_ids = cart | line_items_for: product | map: 'variant_id'
+  assign group_extra = product.metafields.custom.inne_kolory.value
+  assign group_rows = product.variants_count
+  if group_extra
+    for other in group_extra
+      assign q = cart | line_items_for: other | sum: 'quantity'
+      assign t = cart | line_items_for: other | sum: 'original_line_price'
+      assign ids = cart | line_items_for: other | map: 'variant_id'
+      assign items_in_cart = items_in_cart | plus: q
+      assign group_total = group_total | plus: t
+      assign group_variant_ids = group_variant_ids | concat: ids
+      assign group_rows = group_rows | plus: other.variants_count
+    endfor
+  endif
+-%}
 {% # theme-check-enable %}
 <div class="quick-order-list-container color-{{ section.settings.color_scheme }}{% unless is_modal %} gradient{% endunless %}">
   <quick-order-list
@@ -84,6 +101,9 @@
                   is_modal: is_modal
                 -%}
               {%- else -%}
+                {%- if group_extra -%}
+                  <tr class="variant-item variant-item--group-heading"><td colspan="5">{{ product.title | escape }}</td></tr>
+                {%- endif -%}
                 {%- for variant in product.variants -%}
                   {%- render 'quick-order-list-row',
                     item: variant,
@@ -94,6 +114,34 @@
                     show_sku: show_sku,
                     is_modal: is_modal
                   -%}
+                {%- endfor -%}
+              {%- endif -%}
+              {%- if group_extra -%}
+                {%- for other in group_extra -%}
+                  {%- if other.has_only_default_variant -%}
+                    {%- render 'quick-order-list-row',
+                      item: other,
+                      image: other.featured_media,
+                      sku: other.selected_or_first_available_variant.sku,
+                      variant: other.selected_or_first_available_variant,
+                      show_image: show_image,
+                      show_sku: show_sku,
+                      is_modal: is_modal
+                    -%}
+                  {%- else -%}
+                    <tr class="variant-item variant-item--group-heading"><td colspan="5"><a class="link" href="{{ other.url }}">{{ other.title | escape }}</a></td></tr>
+                    {%- for variant in other.variants -%}
+                      {%- render 'quick-order-list-row',
+                        item: variant,
+                        image: variant.image,
+                        sku: variant.sku,
+                        variant: variant,
+                        show_image: show_image,
+                        show_sku: show_sku,
+                        is_modal: is_modal
+                      -%}
+                    {%- endfor -%}
+                  {%- endif -%}
                 {%- endfor -%}
               {%- endif -%}
             </tbody>
@@ -121,7 +169,7 @@
       </p>
     </form>
 
-    {%- if product.has_only_default_variant or product.variants_count == 1 -%}
+    {%- if group_rows <= 1 -%}
       <span class="quick-order-list-error">
         {% comment %} Populated by JS {% endcomment %}
       </span>
@@ -177,7 +225,7 @@
               <span class="totals__subtotal-value">
                 {% comment %} TODO: enable theme-check once `line_items_for` is accepted as valid filter {% endcomment %}
                 {% # theme-check-disable %}
-                {{ cart | line_items_for: product | sum: 'original_line_price' | money }}
+                {{ group_total | money }}
                 {% # theme-check-enable %}
               </span>
               <p class="totals__subtotal h5">{{ 'sections.quick_order_list.product_total' | t }}</p>
@@ -286,7 +334,7 @@
         </div>
 
         <script type="application/json" data-cart-contents>
-          {{ cart | line_items_for: product | map: "variant_id" | json }}
+          {{ group_variant_ids | json }}
         </script>
       </div>
     {%- endif -%}
