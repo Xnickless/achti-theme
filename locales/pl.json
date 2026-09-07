@@ -644,7 +644,15 @@
       "submit_note": "Bez zobowiązań. Odpowiemy z wyceną i projektem do akceptacji w ciągu 2 dni roboczych.",
       "success_title": "Zapytanie wysłane",
       "success_text": "Dziękujemy. Przygotujemy wycenę i projekt i odezwiemy się na podany e-mail w ciągu 2 dni roboczych.",
-      "no_models": "Brak modeli bazowych. Dodaj produkty do kolekcji Private Label w panelu."
+      "no_models": "Brak modeli bazowych. Dodaj produkty do kolekcji Private Label w panelu.",
+      "variant_label": "Kolor logo na czapce",
+      "variant_original": "Oryginał",
+      "variant_white": "Biały",
+      "variant_black": "Czarny",
+      "contrast_warn": "Logo słabo widoczne na tym kolorze czapki. Spróbuj wersji białej lub czarnej.",
+      "strip_title": "Podgląd na wybranych kolorach",
+      "download_all": "Pobierz wszystkie kolory (PNG)",
+      "logo_cleaned": "Usunęliśmy białe tło z logo. Jeśli to niepożądane, wgraj PNG z przezroczystością."
     }
   }
 }

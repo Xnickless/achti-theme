@@ -55,7 +55,9 @@
   "qty_total": {{ 'b2b.pl.qty_total' | t | json }},
   "logo_pos": {{ 'b2b.pl.logo_pos' | t | json }},
   "logo_size": {{ 'b2b.pl.logo_size' | t | json }},
-  "logo_rot": {{ 'b2b.pl.logo_rot' | t | json }}
+  "logo_rot": {{ 'b2b.pl.logo_rot' | t | json }},
+  "variant_label": {{ 'b2b.pl.variant_label' | t | json }},
+  "logo_cleaned": {{ 'b2b.pl.logo_cleaned' | t | json }}
 }
 {%- endcapture -%}
 
@@ -65,15 +67,15 @@
     {%- assign name = pl | strip -%}
     {%- assign lname = name | downcase -%}
     {%- if lname contains 'tył' or lname contains 'tyl' or lname contains 'back' -%}
-      {{ name | json }}: {"x":0.5,"y":0.62,"back":true}
+      {{ name | json }}: {"x":0.5,"y":0.58,"back":true}
     {%- elsif lname contains 'lew' or lname contains 'left' -%}
-      {{ name | json }}: {"x":0.3,"y":0.6}
+      {{ name | json }}: {"x":0.27,"y":0.56}
     {%- elsif lname contains 'praw' or lname contains 'right' -%}
-      {{ name | json }}: {"x":0.7,"y":0.6}
+      {{ name | json }}: {"x":0.73,"y":0.56}
     {%- elsif lname contains 'pomp' -%}
-      {{ name | json }}: {"x":0.5,"y":0.18}
+      {{ name | json }}: {"x":0.5,"y":0.1}
     {%- else -%}
-      {{ name | json }}: {"x":0.5,"y":0.62}
+      {{ name | json }}: {"x":0.5,"y":0.58}
     {%- endif -%}
     {%- unless forloop.last -%},{%- endunless -%}
   {%- endfor -%}
@@ -212,8 +214,17 @@
             <span class="pl-drop__hint">{{ 'b2b.pl.logo_hint' | t }}</span>
           </label>
           <p class="pl-logo__status" data-pl-logo-status></p>
+          <div class="pl-variants" data-pl-variants hidden>
+            <span class="pl-variants__label">{{ 'b2b.pl.variant_label' | t }}</span>
+            <div class="pl-pills pl-pills--small" role="group" aria-label="{{ 'b2b.pl.variant_label' | t }}">
+              <button type="button" class="pl-pill" data-pl-variant="original" aria-pressed="true">{{ 'b2b.pl.variant_original' | t }}</button>
+              <button type="button" class="pl-pill" data-pl-variant="white" aria-pressed="false">{{ 'b2b.pl.variant_white' | t }}</button>
+              <button type="button" class="pl-pill" data-pl-variant="black" aria-pressed="false">{{ 'b2b.pl.variant_black' | t }}</button>
+            </div>
+            <p class="pl-contrast" data-pl-contrast hidden>{{ 'b2b.pl.contrast_warn' | t }}</p>
+          </div>
           <div class="pl-sliders">
-            <label class="pl-range"><span>{{ 'b2b.pl.logo_size' | t }}</span><input type="range" min="8" max="50" value="22" data-pl-size></label>
+            <label class="pl-range"><span>{{ 'b2b.pl.logo_size' | t }}</span><input type="range" min="10" max="70" value="34" data-pl-size></label>
             <label class="pl-range"><span>{{ 'b2b.pl.logo_rot' | t }}</span><input type="range" min="-30" max="30" value="0" data-pl-rot></label>
             <button type="button" class="link underlined-link pl-reset" data-pl-reset>{{ 'b2b.pl.logo_reset' | t }}</button>
           </div>
@@ -276,7 +287,14 @@
               <span data-pl-back-note hidden> {{ 'b2b.pl.back_note' | t }}</span>
             </figcaption>
           </figure>
-          <a class="pl-panel__download link underlined-link" href="#" data-pl-download>{{ 'b2b.pl.download' | t }}</a>
+          <div class="pl-strip" data-pl-strip hidden>
+            <p class="pl-strip__title">{{ 'b2b.pl.strip_title' | t }}</p>
+            <div class="pl-strip__list" data-pl-strip-list></div>
+          </div>
+          <div class="pl-panel__links">
+            <a class="pl-panel__download link underlined-link" href="#" data-pl-download>{{ 'b2b.pl.download' | t }}</a>
+            <a class="pl-panel__download link underlined-link" href="#" data-pl-download-all hidden>{{ 'b2b.pl.download_all' | t }}</a>
+          </div>
           <div class="pl-summary">
             <h3 class="pl-summary__title">{{ 'b2b.pl.summary' | t }}</h3>
             <dl data-pl-summary></dl>

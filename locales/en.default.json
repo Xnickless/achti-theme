@@ -620,7 +620,15 @@
       "submit_note": "No obligation. We reply with a quote and a mock-up for approval within 2 business days.",
       "success_title": "Request sent",
       "success_text": "Thank you. We will prepare a quote and mock-up and reply to your e-mail within 2 business days.",
-      "no_models": "No base models. Add products to the Private Label collection in the admin."
+      "no_models": "No base models. Add products to the Private Label collection in the admin.",
+      "variant_label": "Logo colour on the hat",
+      "variant_original": "Original",
+      "variant_white": "White",
+      "variant_black": "Black",
+      "contrast_warn": "The logo is hard to see on this hat colour. Try the white or black version.",
+      "strip_title": "Preview on selected colours",
+      "download_all": "Download all colours (PNG)",
+      "logo_cleaned": "We removed the white background from the logo. If unwanted, upload a transparent PNG."
     }
   }
 }

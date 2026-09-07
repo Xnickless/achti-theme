@@ -632,7 +632,15 @@
       "submit_note": "Sans engagement. Nous répondons avec un devis et une maquette à valider sous 2 jours ouvrés.",
       "success_title": "Demande envoyée",
       "success_text": "Merci. Nous préparons le devis et la maquette et vous répondons par e-mail sous 2 jours ouvrés.",
-      "no_models": "Aucun modèle de base. Ajoutez des produits à la collection Private Label dans l’admin."
+      "no_models": "Aucun modèle de base. Ajoutez des produits à la collection Private Label dans l’admin.",
+      "variant_label": "Couleur du logo sur le bonnet",
+      "variant_original": "Original",
+      "variant_white": "Blanc",
+      "variant_black": "Noir",
+      "contrast_warn": "Le logo est peu visible sur cette couleur de bonnet. Essayez la version blanche ou noire.",
+      "strip_title": "Aperçu sur les couleurs choisies",
+      "download_all": "Télécharger toutes les couleurs (PNG)",
+      "logo_cleaned": "Nous avons retiré le fond blanc du logo. Si ce n’est pas souhaité, téléversez un PNG transparent."
     }
   }
 }

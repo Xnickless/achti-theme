@@ -620,7 +620,15 @@
       "submit_note": "Unverbindlich. Wir antworten innerhalb von 2 Werktagen mit Angebot und Entwurf zur Freigabe.",
       "success_title": "Anfrage gesendet",
       "success_text": "Vielen Dank. Wir erstellen Angebot und Entwurf und melden uns innerhalb von 2 Werktagen per E-Mail.",
-      "no_models": "Keine Basismodelle. Fügen Sie im Admin Produkte zur Kollektion Private Label hinzu."
+      "no_models": "Keine Basismodelle. Fügen Sie im Admin Produkte zur Kollektion Private Label hinzu.",
+      "variant_label": "Logofarbe auf der Mütze",
+      "variant_original": "Original",
+      "variant_white": "Weiß",
+      "variant_black": "Schwarz",
+      "contrast_warn": "Das Logo ist auf dieser Mützenfarbe schlecht sichtbar. Versuchen Sie die weiße oder schwarze Version.",
+      "strip_title": "Vorschau auf gewählten Farben",
+      "download_all": "Alle Farben herunterladen (PNG)",
+      "logo_cleaned": "Wir haben den weißen Hintergrund des Logos entfernt. Falls unerwünscht, laden Sie ein transparentes PNG hoch."
     }
   }
 }
