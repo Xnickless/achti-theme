@@ -36,7 +36,8 @@ shopify theme push --store ccucsr-si.myshopify.com --theme 206234878294 --allow-
   -%}
   ```
   Użyty w: snippets/price.liquid, snippets/buy-buttons.liquid, snippets/card-product.liquid, sections/main-product.liquid (bloki inventory, quantity_selector, text z „VAT”), sections/quick-order-list.liquid, sections/bulk-quick-order-list.liquid.
-- `snippets/b2b-gate.liquid` — komunikat zamiast ceny (`style: 'inline'`) lub panel z przyciskami (`style: 'box'`).
+- `snippets/b2b-gate.liquid` — komunikat zamiast ceny (`style: 'inline'`) lub panel z przyciskami (`style: 'box'`). Koszyk (main-cart-items, main-cart-footer, cart-drawer) pokazuje gościom bramę zamiast pozycji i cen (07.09.2026). Filtr „Dostępność” ukryty w snippets/facets.liquid (cała oferta jest „na zamówienie”). Formularz kontaktowy ma pole „Nazwa firmy” (`templates.contact.form.company`).
+- `docs/strony/` — projekty regulaminu B2B, polityki prywatności, cookies, wysyłki, zwrotów, FAQ i warunków współpracy + README z instrukcją wklejenia i decyzjami klienta (07.09.2026). Podgląd: https://claude.ai/code/artifact/dfddfe42-5561-49c0-9abb-642afa7c33ba
 - `sections/b2b-register.liquid` + `templates/page.rejestracja.json` — formularz rejestracji firmy (contact form, walidacja NIP w JS).
 - `assets/b2b.css` — style B2B, przekreślone niedostępne swatche, „load more”. Style nagłówka są w `{% style %}` w sections/header.liquid.
 - Nagłówek: `logo_position: top-left`, pole wyszukiwania inline (`section.settings.inline_search`), klasa `header--inline-search`.
