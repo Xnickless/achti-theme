@@ -62,6 +62,11 @@ Firma testowa „Firma Testowa Achti” (klient Kamil Test, e-mail Kamila) — z
 - **Panel konta klienta** (po zalogowaniu) to hostowana strona Shopify: wygląd w Ustawienia → Konta klientów → Personalizacja; menu w Treść → Menu → „Menu główne konta klienta”.
 - Sekcje z pustą kolekcją (Nowości, Bestsellery, cross-sell w koszyku) są ukryte w sklepie do czasu dodania produktów (widoczne tylko w edytorze). Zachęta do rejestracji i drugi przycisk hero są ukryte dla zalogowanych firm (ustawienia `hide_for_b2b` / `button_2_hide_b2b`).
 
+## Katalog produktów (import 07.09.2026)
+- 362 produkty zaimportowane skryptem `tools/shopify_import.py` (Admin API, poświadczenia aplikacji „Import Katalogu” z Dev Dashboard w `~/.config/achti/client_id` + `client_secret`, poza repo). Dane: `tools/achti-produkty.json` wygenerowane przez `tools/generate_catalog.py` z arkusza `~/Downloads/achti-katalog-do-uzupelnienia.csv` (z nazw zdjęć). Zdjęcia po obróbce (białe tło, 4:5): `~/Downloads/ACHTI COLLECTION 2026-2027 - biale tlo`.
+- **Nazwy robocze** (miasta, np. „Czapka Zimowa Damska Beanie Milano”), **ceny przykładowe** wg tagu grupy: G3=39, G5=49, G7=59, G10=69, G12=79 zł (`tools/set_prices.py`), tag `cena-do-uzupelnienia` na wszystkich. Kolory wariantów puste — klient uzupełnia.
+- Skrypt importu pomija istniejące SKU, można uruchamiać ponownie; `--publish-only` publikuje nieopublikowane w Sklepie online.
+
 ## Do zrobienia (stan na 04.09.2026)
 1. Weryfikacja w sklepie: nagłówek, karta produktu i katalog jako gość / jako firma B2B.
 2. Konfiguracja panelu (klient/Kamil): metapola produktu, kolekcje Nowości/Bestsellery, filtry w Search & Discovery, konta firm i katalogi B2B, języki + Translate & Adapt, Klaviyo.
