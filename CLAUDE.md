@@ -45,6 +45,7 @@ shopify theme push --store ccucsr-si.myshopify.com --theme 206234878294 --allow-
 - Listing: 4 kolumny, ciągłe doładowywanie (skrypt na końcu sections/main-collection-product-grid.liquid).
 - Karta produktu (templates/product.json): title, sku, price, tekst „Cena netto — VAT naliczany w koszyku”, variant_picker (swatche), inventory, quantity, buy_buttons, description (blok ma ustawienia `collapsible`/`show_intro`/`heading`/`icon`: pierwszy akapit widoczny, reszta w rozwijanej sekcji „Opis i specyfikacja”), zakładki Rozmiar/Skład/Kolor z metapól `custom.rozmiar`, `custom.sklad`, `custom.kolory`.
 - Tłumaczenia B2B: klucze `b2b.*` w locales/pl.json, en.default.json, de.json, fr.json.
+- **Producent (GPSR):** ustawienia motywu `producer_name/address/email/phone` (grupa „Producent (GPSR)”), blok `producer` w main-product (w templates/product.json na końcu) i `<manufacturer>` w feedzie XML. **Zgoda marketingowa:** checkbox wymagany (`contact[accepts_marketing]`) w newsletterze stopki (ustawienie `newsletter_consent`) i w popupie, tekst `newsletter.consent_html` w 4 locales (08.09.2026).
 - Stopka bez „Powered by Shopify”. Jedna czcionka (DM Sans) w config/settings_data.json.
 
 ## Zasady pracy
