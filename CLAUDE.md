@@ -76,6 +76,13 @@ Firma testowa „Firma Testowa Achti” (klient Kamil Test, e-mail Kamila) — z
 ## Inne kolory modelu (kółka na karcie produktu, 07.09.2026)
 - Metapole `custom.inne_kolory` (list.product_reference, dostęp storefront PUBLIC_READ) = produkty tego samego modelu w innych kolorach. Blok `model_colors` w main-product renderuje bieżący + powiązane jako okrągłe miniatury (CSS `.model-colors` w b2b.css). Tabela szybkiego zamawiania (snippets/quick-order-list.liquid) pokazuje wiersze wszystkich produktów grupy z sumą dla grupy (przy produktach z wariantami dodaje wiersz nagłówkowy z nazwą). Kliknięcie w kółko podmienia produkt bez przeładowania (assets/model-colors.js: Section Rendering API dla sekcji `__main` i `__quick-order-list`, history.pushState; wstecz = reload). Klient edytuje listę w panelu przy produkcie. Demo: Milano ↔ Warmia ↔ Kujawy. Grupowanie zrobione 07.09.2026: CLIP ViT-B/32 (obrazy w skali szarości) + klasteryzacja aglomeracyjna (cosinus, próg 0.06) → 59 grup, 147 produktów; zapisane skryptem `tools/set_model_groups.py` z `tools/model-groups.json`. Podgląd dla klienta: `~/Downloads/achti-grupy-modeli.html` (+CSV). Poprawki: w panelu przy produkcie albo edycja JSON i ponowne uruchomienie skryptu (`--clear` czyści).
 
+## Audyt 07.09.2026 — otwarte rekomendacje
+- Strona główna bez produktów: sekcje Nowości/Bestsellery ukryte, bo kolekcje puste (tag `nowosc` na nowych modelach, Bestsellery ręcznie) — klient.
+- 9 linków ze stopki prowadzi do nieistniejących stron/polityk (O nas, Produkcja, Materiały, Jakość, Zrównoważony rozwój, Warunki współpracy, FAQ, Wysyłka, Zwroty) — treści klienta.
+- Zdjęcia 1024 px w źródle: na karcie produktu (kolumna ~430 px) OK, w lightboxie miękkie; przy nowych zdjęciach z aparatu przepuścić przez `tools`/obróbkę tła.
+- Animacja „reveal on scroll” (ustawienie motywu) opóźnia pokazanie sekcji przy szybkim przewijaniu — rozważyć wyłączenie.
+- Certyfikaty (multicolumn) bez tekstów alt — uzupełnić alt w Treść → Pliki.
+
 ## Do zrobienia (stan na 04.09.2026)
 1. Weryfikacja w sklepie: nagłówek, karta produktu i katalog jako gość / jako firma B2B.
 2. Konfiguracja panelu (klient/Kamil): metapola produktu, kolekcje Nowości/Bestsellery, filtry w Search & Discovery, konta firm i katalogi B2B, języki + Translate & Adapt, Klaviyo.
