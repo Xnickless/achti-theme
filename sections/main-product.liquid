@@ -277,6 +277,35 @@
                       </div>
                     </details>
                   </div>
+                {%- when 'model_colors' -%}
+                  {%- assign model_colors = product.metafields.custom.inne_kolory.value -%}
+                  {%- if model_colors and model_colors.size > 0 -%}
+                    <div class="model-colors quick-add-hidden" {{ block.shopify_attributes }}>
+                      {%- if block.settings.heading != blank -%}
+                        <p class="model-colors__label form__label">{{ block.settings.heading | escape }}</p>
+                      {%- endif -%}
+                      <ul class="model-colors__list list-unstyled" role="list">
+                        <li class="model-colors__item model-colors__item--current">
+                          <span class="model-colors__circle" aria-current="page" title="{{ product.title | escape }}">
+                            {%- if product.featured_image -%}
+                              {{ product.featured_image | image_url: width: 160 | image_tag: loading: 'lazy', width: 80, height: 80, alt: product.title }}
+                            {%- endif -%}
+                          </span>
+                        </li>
+                        {%- for other in model_colors -%}
+                          {%- if other.handle != product.handle and other.available != nil -%}
+                            <li class="model-colors__item">
+                              <a class="model-colors__circle" href="{{ other.url }}" title="{{ other.title | escape }}">
+                                {%- if other.featured_image -%}
+                                  {{ other.featured_image | image_url: width: 160 | image_tag: loading: 'lazy', width: 80, height: 80, alt: other.title }}
+                                {%- endif -%}
+                              </a>
+                            </li>
+                          {%- endif -%}
+                        {%- endfor -%}
+                      </ul>
+                    </div>
+                  {%- endif -%}
                 {%- when 'quantity_selector' -%}
                   {%- if b2b_access -%}
                   <div
@@ -991,6 +1020,23 @@
           "default": true,
           "label": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.label",
           "info": "t:sections.main-product.blocks.buy_buttons.settings.show_gift_card_recipient.info"
+        }
+      ]
+    },
+    {
+      "type": "model_colors",
+      "name": "Inne kolory modelu",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Inne kolory tego modelu",
+          "label": "Nagłówek"
+        },
+        {
+          "type": "paragraph",
+          "content": "Pokazuje produkty z metapola „Inne kolory tego modelu” (custom.inne_kolory) jako okrągłe miniatury. Listę powiązanych produktów edytujesz w panelu przy produkcie."
         }
       ]
     },

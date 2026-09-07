@@ -86,6 +86,12 @@
             "content": "{{ product.metafields.custom.kolory | metafield_tag }}",
             "page": ""
           }
+        },
+        "model_colors": {
+          "type": "model_colors",
+          "settings": {
+            "heading": "Inne kolory tego modelu"
+          }
         }
       },
       "block_order": [
@@ -94,6 +100,7 @@
         "price",
         "net_note",
         "variant_picker",
+        "model_colors",
         "inventory",
         "quantity_selector",
         "buy_buttons",

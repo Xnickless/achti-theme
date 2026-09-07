@@ -67,6 +67,9 @@ Firma testowa „Firma Testowa Achti” (klient Kamil Test, e-mail Kamila) — z
 - **Nazwy robocze** (miasta, np. „Czapka Zimowa Damska Beanie Milano”), **ceny przykładowe** wg tagu grupy: G3=39, G5=49, G7=59, G10=69, G12=79 zł (`tools/set_prices.py`), tag `cena-do-uzupelnienia` na wszystkich. Kolory wariantów puste — klient uzupełnia.
 - Skrypt importu pomija istniejące SKU, można uruchamiać ponownie; `--publish-only` publikuje nieopublikowane w Sklepie online.
 
+## Inne kolory modelu (kółka na karcie produktu, 07.09.2026)
+- Metapole `custom.inne_kolory` (list.product_reference, dostęp storefront PUBLIC_READ) = produkty tego samego modelu w innych kolorach. Blok `model_colors` w main-product renderuje bieżący + powiązane jako okrągłe miniatury (CSS `.model-colors` w b2b.css). Klient edytuje listę w panelu przy produkcie. Demo: Milano ↔ Warmia ↔ Kujawy. Grupowanie całego katalogu po podobieństwie zdjęć — do zrobienia (analiza AI + weryfikacja klienta), zapis metapól skryptem przez Admin API.
+
 ## Do zrobienia (stan na 04.09.2026)
 1. Weryfikacja w sklepie: nagłówek, karta produktu i katalog jako gość / jako firma B2B.
 2. Konfiguracja panelu (klient/Kamil): metapola produktu, kolekcje Nowości/Bestsellery, filtry w Search & Discovery, konta firm i katalogi B2B, języki + Translate & Adapt, Klaviyo.
