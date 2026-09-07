@@ -232,9 +232,6 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
 @media screen and (min-width: 990px) {
   .product--small .product__media-wrapper { max-width: 38%; }
   .product--small .product__info-wrapper { max-width: 62%; }
-  .product--small .product__media-item { max-height: calc(100vh - 32rem); }
-  .product--small .product__media-item .product__media,
-  .product--small .product__media-item .product__media img { max-height: calc(100vh - 32rem); }
 }
 /* Nagłówek: ciaśniej */
 @media screen and (min-width: 990px) {
@@ -246,9 +243,18 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
 @media screen and (min-width: 990px) {
   .product--small .product__media-wrapper { max-width: 32%; }
   .product--small .product__info-wrapper { max-width: 68%; padding-left: 4rem; }
-  .product--small .product__media-item,
-  .product--small .product__media-item .product__media,
-  .product--small .product__media-item .product__media img { max-height: calc(100vh - 30rem); }
+  /* ramka zdjęcia skaluje się z obrazem (bez sztywnego ratio), obraz max do wysokości ekranu */
+  .product--small .product__media-item .product__media { padding-bottom: 0 !important; height: auto; }
+  .product--small .product__media-item .product__media img {
+    position: static !important;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: calc(100vh - 30rem);
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+  }
   .product__info-container .product__title h1 { font-size: calc(var(--font-heading-scale) * 2.6rem); line-height: 1.15; margin: 0; }
   .product__info-container > * + * { margin-top: 1rem !important; }
   .product__info-container .product__title { margin-bottom: 0.4rem; }
