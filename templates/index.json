@@ -256,7 +256,7 @@
       "type": "featured-collection",
       "settings": {
         "collection": "nowosci",
-        "products_to_show": 8,
+        "products_to_show": 24,
         "title": "<strong>Nowości</strong>",
         "heading_size": "h2",
         "description": "<p><strong>Sprawdź ostatnio dodane modele</strong></p>",
@@ -277,7 +277,9 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 52
+        "padding_bottom": 52,
+        "marquee": true,
+        "marquee_speed": 40
       }
     },
     "multicolumn2": {

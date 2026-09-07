@@ -341,7 +341,9 @@
     },
     "featured_collection": {
       "view_all": "Wyświetl wszystkie",
-      "view_all_label": "Wyświetl wszystkie produkty w kolekcji {{ collection_name }}"
+      "view_all_label": "Wyświetl wszystkie produkty w kolekcji {{ collection_name }}",
+      "expand": "Rozwiń wszystkie ({{ count }})",
+      "collapse": "Zwiń"
     },
     "collection_list": {
       "view_all": "Wyświetl wszystkie"

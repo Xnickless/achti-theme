@@ -321,7 +321,9 @@
     },
     "featured_collection": {
       "view_all": "Alle anzeigen",
-      "view_all_label": "Alle Produkte in der Kollektion {{ collection_name }} anzeigen"
+      "view_all_label": "Alle Produkte in der Kollektion {{ collection_name }} anzeigen",
+      "expand": "Alle anzeigen ({{ count }})",
+      "collapse": "Einklappen"
     },
     "collection_list": {
       "view_all": "Alle anzeigen"
