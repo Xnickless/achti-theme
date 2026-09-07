@@ -279,7 +279,7 @@
         "padding_top": 36,
         "padding_bottom": 52,
         "marquee": true,
-        "marquee_speed": 40
+        "marquee_speed": 70
       }
     },
     "multicolumn2": {
