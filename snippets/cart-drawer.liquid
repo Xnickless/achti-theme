@@ -1,3 +1,13 @@
+{%- liquid
+  assign b2b_access = true
+  if settings.b2b_hide_prices
+    if customer == nil
+      assign b2b_access = false
+    elsif settings.b2b_require_company and customer.b2b? != true
+      assign b2b_access = false
+    endif
+  endif
+-%}
 {% comment %}
   Renders cart drawer
 
@@ -88,7 +98,9 @@
           method="post"
         >
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
-            {%- if cart != empty -%}
+            {%- if cart != empty and b2b_access == false -%}
+              {%- render 'b2b-gate', style: 'box' -%}
+            {%- elsif cart != empty -%}
               <div class="drawer__cart-items-wrapper">
                 <table class="cart-items" role="table">
                   <thead role="rowgroup">
@@ -487,6 +499,7 @@
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
       </cart-drawer-items>
+      {%- if b2b_access -%}
       <div class="drawer__footer">
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">
@@ -589,6 +602,7 @@
           </button>
         </div>
       </div>
+      {%- endif -%}
     </div>
   </div>
 </cart-drawer>

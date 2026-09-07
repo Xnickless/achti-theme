@@ -20,6 +20,16 @@
       assign b2b_access = false
     endif
   endif
+  assign visible_filters = 0
+  for filter in results.filters
+    if filter.param_name == 'filter.v.availability'
+      continue
+    endif
+    if filter.type == 'price_range' and b2b_access == false
+      continue
+    endif
+    assign visible_filters = visible_filters | plus: 1
+  endfor
 -%}
 
 {{ 'component-show-more.css' | asset_url | stylesheet_tag }}
@@ -63,7 +73,7 @@
               class="facets__wrapper"
             {% endif %}
           >
-            {%- if filter_type == 'horizontal' and results.filters != empty -%}
+            {%- if filter_type == 'horizontal' and visible_filters > 0 -%}
               <h2 class="facets__heading caption-large text-body" id="verticalTitle" tabindex="-1">
                 {{ 'products.facets.filter_by_label' | t }}
               </h2>
@@ -88,7 +98,7 @@
                   </facet-remove>
                 </div>
                 {%- for filter in results.filters -%}
-{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
+{%- if filter.param_name == 'filter.v.availability' -%}{%- continue -%}{%- endif -%}{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
                   {%- for value in filter.active_values -%}
                     <facet-remove>
                       <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -126,7 +136,7 @@
             <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
             {% comment %} Filters for both horizontal and vertical filter {% endcomment %}
             {%- for filter in results.filters -%}
-{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
+{%- if filter.param_name == 'filter.v.availability' -%}{%- continue -%}{%- endif -%}{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
               {% liquid
                 assign total_active_values = total_active_values | plus: filter.active_values.size
                 assign presentation = filter.presentation | default: default_presentation
@@ -356,7 +366,7 @@
           {%- if filter_type == 'horizontal' -%}
             <div class="active-facets active-facets-desktop">
               {%- for filter in results.filters -%}
-{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
+{%- if filter.param_name == 'filter.v.availability' -%}{%- continue -%}{%- endif -%}{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
                 {%- for value in filter.active_values -%}
                   <facet-remove>
                     <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -528,7 +538,7 @@
             >
               {%- if enable_filtering -%}
                 {%- for filter in results.filters -%}
-{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
+{%- if filter.param_name == 'filter.v.availability' -%}{%- continue -%}{%- endif -%}{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
                   {% liquid
                     assign presentation = filter.presentation | default: default_presentation
                     if presentation == 'image'
@@ -805,7 +815,7 @@
 
   <div class="active-facets active-facets-mobile medium-hide large-up-hide">
     {%- for filter in results.filters -%}
-{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
+{%- if filter.param_name == 'filter.v.availability' -%}{%- continue -%}{%- endif -%}{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
       {%- for value in filter.active_values -%}
         <facet-remove>
           <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
@@ -920,7 +930,7 @@
       <form id="FacetFiltersPillsForm" class="facets__form">
         <div class="active-facets active-facets-desktop">
           {%- for filter in results.filters -%}
-{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
+{%- if filter.param_name == 'filter.v.availability' -%}{%- continue -%}{%- endif -%}{%- if filter.type == 'price_range' and b2b_access == false -%}{%- continue -%}{%- endif -%}
             {%- for value in filter.active_values -%}
               <facet-remove>
                 <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">

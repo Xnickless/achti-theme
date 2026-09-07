@@ -99,6 +99,18 @@
           {%- endif -%}
         </div>
       </div>
+        <div class="field">
+          <input
+            class="field__input"
+            autocomplete="organization"
+            type="text"
+            id="ContactForm-company"
+            name="contact[{{ 'templates.contact.form.company' | t }}]"
+            value="{% if form.company %}{{ form.company }}{% elsif customer.b2b? %}{{ customer.current_company.name }}{% endif %}"
+            placeholder="{{ 'templates.contact.form.company' | t }}"
+          >
+          <label class="field__label" for="ContactForm-company">{{ 'templates.contact.form.company' | t }}</label>
+        </div>
       <div class="field">
         <input
           type="tel"

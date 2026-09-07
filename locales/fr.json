@@ -268,7 +268,8 @@
         "send": "Envoyer",
         "post_success": "Merci de nous avoir contactés. Nous vous répondrons dès que possible.",
         "error_heading": "Veuillez ajuster les éléments suivants :",
-        "title": "Formulaire de contact"
+        "title": "Formulaire de contact",
+        "company": "Nom de l’entreprise"
       }
     },
     "404": {

@@ -1,3 +1,13 @@
+{%- liquid
+  assign b2b_access = true
+  if settings.b2b_hide_prices
+    if customer == nil
+      assign b2b_access = false
+    elsif settings.b2b_require_company and customer.b2b? != true
+      assign b2b_access = false
+    endif
+  endif
+-%}
 {{ 'component-cart.css' | asset_url | stylesheet_tag }}
 {{ 'component-totals.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -23,7 +33,7 @@
   data-id="{{ section.id }}"
 >
   <div class="page-width">
-    <div class="cart__footer isolate section-{{ section.id }}-padding">
+    <div class="cart__footer isolate{% if b2b_access %} section-{{ section.id }}-padding{% endif %}">
       {%- if settings.show_cart_note -%}
         <cart-note class="cart__note field">
           <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
@@ -39,6 +49,7 @@
 
       <div class="cart__blocks">
         {% for block in section.blocks %}
+          {%- if b2b_access == false -%}{%- continue -%}{%- endif -%}
           {%- case block.type -%}
             {%- when '@app' -%}
               {% render block %}
