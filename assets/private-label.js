@@ -758,7 +758,9 @@ class PrivateLabelConfigurator extends HTMLElement {
   draw() {
     if (!this.ctx) return;
     if (this._raf) cancelAnimationFrame(this._raf);
-    this._raf = requestAnimationFrame(() => {
+    clearTimeout(this._rafTimer);
+    const schedule = (fn) => (document.hidden ? (this._rafTimer = setTimeout(fn, 0)) : (this._raf = requestAnimationFrame(fn)));
+    schedule(() => {
       this._raf = null;
       const url = this.state.previewColor && this.state.previewColor.image;
       const entry = url ? this.hatCache.get(url) : null;
