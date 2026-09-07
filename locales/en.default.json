@@ -560,6 +560,12 @@
       "delivery": "Delivery address (if different)"
     },
     "load_more": "Show more products",
-    "net_note": "Net price — VAT added in the cart"
+    "net_note": "Net price — VAT added in the cart",
+    "availability": {
+      "on_order": "Made to order",
+      "in_stock": "In stock",
+      "in_stock_count": "In stock: {{ quantity }} pcs",
+      "unavailable": "Temporarily unavailable"
+    }
   }
 }

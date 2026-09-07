@@ -584,6 +584,12 @@
       "delivery": "Adres dostawy (jeśli inny niż firmy)"
     },
     "load_more": "Pokaż więcej produktów",
-    "net_note": "Cena netto — VAT naliczany w koszyku"
+    "net_note": "Cena netto — VAT naliczany w koszyku",
+    "availability": {
+      "on_order": "Na zamówienie",
+      "in_stock": "Dostępny od ręki",
+      "in_stock_count": "Dostępny od ręki: {{ quantity }} szt.",
+      "unavailable": "Chwilowo niedostępny"
+    }
   }
 }

@@ -560,6 +560,12 @@
       "delivery": "Lieferadresse (falls abweichend)"
     },
     "load_more": "Mehr Produkte anzeigen",
-    "net_note": "Nettopreis — MwSt. im Warenkorb"
+    "net_note": "Nettopreis — MwSt. im Warenkorb",
+    "availability": {
+      "on_order": "Auf Bestellung",
+      "in_stock": "Sofort verfügbar",
+      "in_stock_count": "Sofort verfügbar: {{ quantity }} Stk.",
+      "unavailable": "Vorübergehend nicht verfügbar"
+    }
   }
 }

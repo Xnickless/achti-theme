@@ -12,7 +12,13 @@ shopify theme push --store ccucsr-si.myshopify.com --theme 206234878294 --allow-
 - Klient: Adrian (marka Achti, polski producent czapek, kominów, kominiarek). Platforma hurtowa B2B: ceny tylko dla zaakceptowanych firm, rejestracja po NIP/VAT UE z ręczną akceptacją.
 - Języki: PL (domyślny), EN, DE, FR. Termin startu: koniec września 2026.
 - Baza: oficjalny motyw Shopify **Trade** (architektura Dawn). Nie przepisujemy motywu — dokładamy minimalne, punktowe zmiany.
-- Odłożone decyzje klienta: sposób pokazywania dostępności, kolory jako warianty, rozmiary jako warianty, polityka cenowa per klient.
+- Decyzje klienta (dokument „PLATFORMA ACHTI B2B”, Google Docs, 07.09.2026):
+  - **Dostępność:** cała oferta „Na zamówienie” bez stanów; wybrane modele oznaczane „Dostępny od ręki” (włączone śledzenie stanów + ilość > 0). Zrobione w bloku inventory main-product (stany: on_order / in_stock / unavailable, klucze `b2b.availability.*`, dopisek czasu realizacji w ustawieniach bloku).
+  - **Kolory = warianty** z własnymi stanami; nazwy kolorów numerami lub zestawami (np. „120 - Czarny”, „SET 5”). Swatche z nazw nie zadziałają — docelowo zdjęcia wariantów jako miniatury.
+  - **Rozmiary:** One Size; dzieci 50-52 i 52-54 (jako warianty rozmiaru w dziecięcych).
+  - **Katalog PDF:** dynamiczny z cenami klienta tylko jeśli ceny per klient (Shopify: katalogi B2B per firma — możliwe); inaczej bez cen.
+  - **Polityka cenowa:** kilka progów zależnych od ilości sztuk lub kwoty (Shopify B2B: progi ilościowe w katalogu; motyw Trade pokazuje „Ceny zależne od wolumenu”).
+  - Nowe punkty z dokumentu: zdjęcia każdej czapki na modelce, waga brutto w CSV/produkcie, integracja z kurierem, Klaviyo, XML z ofertą (zrobiony: `/collections/all?view=feed`).
 
 ## Co już jest dodane (nie duplikuj)
 - Ukrywanie cen/zakupu dla gości: ustawienia `settings.b2b_hide_prices`, `settings.b2b_require_company`, `settings.b2b_register_page` (config/settings_schema.json, grupa „B2B — dostęp do cen”).

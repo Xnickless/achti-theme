@@ -572,6 +572,12 @@
       "delivery": "Adresse de livraison (si différente)"
     },
     "load_more": "Afficher plus de produits",
-    "net_note": "Prix HT — TVA ajoutée au panier"
+    "net_note": "Prix HT — TVA ajoutée au panier",
+    "availability": {
+      "on_order": "Sur commande",
+      "in_stock": "En stock",
+      "in_stock_count": "En stock : {{ quantity }} pcs",
+      "unavailable": "Temporairement indisponible"
+    }
   }
 }
