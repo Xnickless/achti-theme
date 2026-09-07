@@ -173,7 +173,7 @@
     "featured_collection1": {
       "type": "featured-collection",
       "settings": {
-        "collection": "bestsellery",
+        "collection": "najpopularniejsze",
         "products_to_show": 8,
         "title": "<strong>Bestsellery</strong>",
         "heading_size": "h2",
