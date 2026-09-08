@@ -58,7 +58,10 @@ T = {
  ),
 }
 
-RX = re.compile(r'^(Czapka Zimowa (Damska|Dziecięca|Chłopięca|Dziewczęca) Beanie|Komin Zimowy Damski) (\S+(?: \S+)*?)( z Cekinami)?( Multikolor)?$')
+VARIANT = {'Turbo': {'en': 'Turbo', 'fr': 'Turbo', 'de': 'Turbo'},
+           'bez pompona': {'en': 'without pompom', 'fr': 'sans pompon', 'de': 'ohne Bommel'}}
+F_NOPOM = {'en': 'Version without pompom', 'fr': 'Version sans pompon', 'de': 'Version ohne Bommel'}
+RX = re.compile(r'^(Czapka Zimowa (Damska|Dziecięca|Chłopięca|Dziewczęca) Beanie|Komin Zimowy Damski) (\S+(?: \S+)*?)( z Cekinami)?( Multikolor)?(?: \((Turbo|bez pompona)\))?$')
 
 def translate_product(p, loc):
     t = T[loc]
@@ -87,8 +90,11 @@ def translate_product(p, loc):
             feats[2] = t['f_size'].format(size=size)
         if m.group(5): feats.insert(1, t['f_multi'])
         if m.group(4): feats.insert(1, t['f_sequins'])
+        if m.group(6) == 'bez pompona': feats.insert(1, F_NOPOM[loc])
     if suffixes:
         title += ' ' + ' '.join(suffixes)
+    if m.group(6):
+        title += f" ({VARIANT[m.group(6)][loc]})"
     size_txt = t['one_size'] if size == 'One Size' else size
     body = (f"<p>{intro}</p><p>{t['range_'].format(city=city)}</p><p><strong>{t['features']}</strong><br>"
             + '<br>'.join('✔ ' + f for f in feats)

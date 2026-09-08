@@ -1,0 +1,6430 @@
+[
+ {
+  "kod": "AZ-1145PC",
+  "typ": "Czapka",
+  "material": "100% AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": 26.75,
+  "Płeć": "Ona",
+  "plik": "AZ-1145PC AKRYL ONE SIZE G5.JPG",
+  "nazwa_produktu": "gorce",
+  "kolory (po przecinku)": "czarny,biały,zielony",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-1356PC",
+  "typ": "Czapka",
+  "material": "85% AKRYL, 15% POLIAMID",
+  "rozmiar": "One Size",
+  "Cena netto": 38.0,
+  "Płeć": "on",
+  "plik": "AZ-1356PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "milan",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-1378PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "56-62",
+  "Cena netto": "",
+  "Płeć": "dziecko",
+  "plik": "AZ-1378PC LAMBSLOOK ROZ. 56-62 (.JPG",
+  "nazwa_produktu": "barcelona",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": null,
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-1430PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-1430PC LAMBSLOOK ONE SIZE G10.JPG",
+  "nazwa_produktu": "aneta",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-1464PC",
+  "typ": "Czapka",
+  "material": "VINCI",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-1464PC VINCI ONE SIZE G3.JPG",
+  "nazwa_produktu": "anka",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-1476PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-1476PC LAMBSLOOK ONE SIZE G5.JPG",
+  "nazwa_produktu": "ewelina",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-1531PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-1531PK AKRYL ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-1575PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-1575PK AKRYL ONE SIZE G10.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-1609PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-1609PK AKRYL ONE SIZE G10.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-1622PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-1622PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-1666PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-1666PC AKRYL ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-1708PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-1708PC LAMBSLOOK ONE SIZE G10.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-1719PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-1719PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-1748PC",
+  "typ": "Czapka",
+  "material": "VINCI + TURBO",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-1748PC VINCI TURBO VINCI ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VINCI",
+   "TURBO"
+  ]
+ },
+ {
+  "kod": "AZ-1800PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-1800PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-1820PC",
+  "typ": "Czapka",
+  "material": "VINCI + TURBO",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-1820PC VINCI TURBO VINCI ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VINCI",
+   "TURBO"
+  ]
+ },
+ {
+  "kod": "AZ-1874PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-1874PC VEZUV G7 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-1876PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-1876PC VEZUV CEKIN ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [
+   "CEKIN"
+  ],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-1909",
+  "typ": "Czapka",
+  "material": "VINCI",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-1909 VINCI ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-1918PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-1918PC VEZUV ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2018PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2018PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2033PC-TURBO",
+  "typ": "Czapka",
+  "material": "TURBO + VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2033PC TURBO VEZUV ONE SIZE G7.jpg",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "TURBO",
+   "VEZUV"
+  ],
+  "_base_code": "AZ-2033PC"
+ },
+ {
+  "kod": "AZ-2033PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2033PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2088PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2088PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2120PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2120PC AKRYL ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2194PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2194PC LAMBSLOOK ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2202PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "52-54",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2202PC LAMBSLOOK SIZE 52-54 G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2218PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2218PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2263LPC",
+  "typ": "Czapka",
+  "material": "VINCI",
+  "rozmiar": "",
+  "Cena netto": "",
+  "Płeć": "",
+  "plik": "AZ-2263LPC VINCI.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": null,
+  "_materials": [
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-2344PC",
+  "typ": "Czapka",
+  "material": "VEZUV + TURBO + VINCI",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2344PC VEZUV TURBO VINCI ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV",
+   "TURBO",
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-2349PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "52-54",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2349PC AKRYL 52-54 G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2364PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "52-54",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2364PC AKRYL 52-54 G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2371PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "52-54",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2371PC LAMBSLOOK 52-54 G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2440PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2440PC LAMBSLOOK ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2441PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2441PC LAMBSLOOK ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2466PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2466PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2469PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2469PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2490PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "52-54",
+  "Cena netto": "G3",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2490PK AKRYL ROZ.52-54 G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2501PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2501PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2504PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2504PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2515PC",
+  "typ": "Czapka",
+  "material": "AKRYL + LUREX",
+  "rozmiar": "50-52",
+  "Cena netto": "G7",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2515PC AKRYL+LUREX ROZ.50-52 G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL",
+   "LUREX"
+  ]
+ },
+ {
+  "kod": "AZ-2526D",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2526D LAMBSLOOK ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2538PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2538PK AKRYL ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2539PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2539PK AKRYL ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2541PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2541PK AKRYL ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2542PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2542PK AKRYL ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2543PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2543PK AKRYL ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2544",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2544 AKRYL ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2548PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2548PK AKRYL ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2549PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2549PK AKRYL ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2551PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2551PK AKRYL ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2553PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2553PK AKRYL ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2554PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2554PK AKRYL ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2555PK",
+  "typ": "Czapka",
+  "material": "VEZUV + LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2555PK VEZUV LAMBSLOOK ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VEZUV",
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2560PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2560PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2561PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2561PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2566PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2566PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2567PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2567PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2569PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2569PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2588PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2588PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2608PK",
+  "typ": "Czapka",
+  "material": "MOULINE + AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2608PK MOULINE AKRYL ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "MOULINE",
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2612PK",
+  "typ": "Czapka",
+  "material": "MOULINE + AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2612PK MOULINE AKRYL ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "MOULINE",
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2613",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2613 VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2613PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2613PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2636PK",
+  "typ": "Czapka",
+  "material": "MOULINE",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2636PK MOULINE ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "MOULINE"
+  ]
+ },
+ {
+  "kod": "AZ-2650PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2650PC AKRYL ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2651PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2651PC AKRYL ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2653PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2653PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2656PC",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2656PC ROMA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2657PC",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2657PC ROMA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2658PC",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2658PC ROMA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2661D",
+  "typ": "Czapka",
+  "material": "VEZUV + LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2661D VEZUV LAMBSLOOK ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV",
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2663D",
+  "typ": "Czapka",
+  "material": "VEZUV + LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2663D VEZUV LAMBSLOOK ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV",
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2665D",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2665D LAMBSLOOK ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2667D",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2667D LAMBSLOOK ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2670PC",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2670PC ROMA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2676PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2676PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2680PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2680PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2681PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2681PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2685PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2685PC AKRYL ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2687PC",
+  "typ": "Czapka",
+  "material": "VINCI + TURBO",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2687PC VINCI TURBO VINCI ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VINCI",
+   "TURBO"
+  ]
+ },
+ {
+  "kod": "AZ-2688PC",
+  "typ": "Czapka",
+  "material": "TURBO + VINCI",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2688PC TURBI VINCI ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "TURBO",
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-2694PC",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2694PC ROMA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2697PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2697PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2698PC",
+  "typ": "Czapka",
+  "material": "",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2698PC ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": []
+ },
+ {
+  "kod": "AZ-2701PC",
+  "typ": "Czapka",
+  "material": "VINCI",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2701PC VINCI ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-2703PC",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2703PC ROMA G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2704PC",
+  "typ": "Czapka",
+  "material": "TURBO + VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2704PC TURBO VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "TURBO",
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2705PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2705PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2706PC",
+  "typ": "Czapka",
+  "material": "TURBO + VINCI",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2706PC TURBO VINCI+VINCI G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "TURBO",
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-2707PC",
+  "typ": "Czapka",
+  "material": "TURBO + VINCI",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2707PC TURBO VINCI + VINCI G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "TURBO",
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-2712PC",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "50-52",
+  "Cena netto": "G5",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2712PC ROMA ROZ.50-52 G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2712PCE",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "50-52",
+  "Cena netto": "G5",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2712PCE ROMA ROZ.50-52 G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2713PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "50-52",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2713PC AKRYL 50-52 G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2716PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "50-52",
+  "Cena netto": "G5",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2716PC AKRYL ROZ.50-52 G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2716PCE",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "50-52",
+  "Cena netto": "G5",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2716PCE AKRYL ROZ.50-52 G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2718PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "52-54",
+  "Cena netto": "G7",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2718PC VERONA ROZ.52-54 G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2719PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "52-54",
+  "Cena netto": "G7",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2719PC VERONA ROZ.52-54 G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2719PCE",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "52-54",
+  "Cena netto": "G7",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2719PCE VERONA ROZ.52-54 G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2720PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "50-52",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-2720PC AKRYL 50-52 G10.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2723PC",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2723PC ROMA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2734PC",
+  "typ": "Czapka",
+  "material": "VEZUV + LUREX",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2734PC VEZUV+LUREX ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV",
+   "LUREX"
+  ]
+ },
+ {
+  "kod": "AZ-2735PC",
+  "typ": "Czapka",
+  "material": "VINCI",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2735PC VINCI G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-2737PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2737PC VERONA G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2739PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2739PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2742D",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2742D VEZUV ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2743PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2743PC VEZUV CEKIN G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [
+   "CEKIN"
+  ],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2747PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2747PC VEZUV G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2752PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2752PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2753PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2753PC VEZUV G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2762PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2762PC VERONA CEKIN G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [
+   "CEKIN"
+  ],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2768PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2768PC VEZUV G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2773D",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2773D VEZUV CEKIN G5 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [
+   "CEKIN"
+  ],
+  "_group": "G5",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2781PC",
+  "typ": "Czapka",
+  "material": "VERONA + MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2781PC VERONA+MADERA G7 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VERONA",
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2782PC",
+  "typ": "Czapka",
+  "material": "VERONA + MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2782PC VERONA+MADERA G7 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VERONA",
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2784PC",
+  "typ": "Czapka",
+  "material": "VERONA + MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2784PC VERONA+MADERA G7 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VERONA",
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2788PC",
+  "typ": "Czapka",
+  "material": "ROMA + VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2788PC ROMA VERONA G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA",
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2797PC",
+  "typ": "Czapka",
+  "material": "ROMA + VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2797PC ROMA VERONA G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA",
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2799PC",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2799PC ROMA G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2802PC",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2802PC ROMA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2805",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2805 ROMA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2806",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2806 ROMA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2808PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2808PC LAMBSLOOK G12 MULTI ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [
+   "MULTI"
+  ],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2812PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2812PC LAMBSLOOK G12 MULTI ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [
+   "MULTI"
+  ],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2813D",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2813D LAMBSLOOK G12 MULTI ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [
+   "MULTI"
+  ],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2814PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2814PC LAMBSLOOK G12 MULTI ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [
+   "MULTI"
+  ],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2816PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2816PC VEZUV G7 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2819PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2819PC VERONA G7 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2820PC",
+  "typ": "Czapka",
+  "material": "VERONA + MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2820PC VERONA+MADERA G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA",
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2827PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2827PC VERONA G5 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2829PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2829PC VERONA G7 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2830PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2830PC VERONA G7 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2831PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2831PC VERONA G7 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2833PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2833PC VERONA G5 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2834PC",
+  "typ": "Czapka",
+  "material": "VERONA + MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2834PC VERONA+MADERA G7 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VERONA",
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2835PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2835PC AKRYL ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2836PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2836PC VEZUV G7 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2837PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2837PC LAMBSLOOK G12 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2842PC-BOY",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "52-54",
+  "Cena netto": "G5",
+  "Płeć": "Dziewczęce",
+  "plik": "AZ-2842PC AKRYL G5 ROZ.52-54 BOY.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [
+   "BOY"
+  ],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ],
+  "_base_code": "AZ-2842PC"
+ },
+ {
+  "kod": "AZ-2842PC-GIRL",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "52-54",
+  "Cena netto": "G5",
+  "Płeć": "Dziewczęce",
+  "plik": "AZ-2842PC AKRYL G5 ROZ.52-54 GIRL.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [
+   "GIRL"
+  ],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ],
+  "_base_code": "AZ-2842PC"
+ },
+ {
+  "kod": "AZ-2843PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "52-54",
+  "Cena netto": "G5",
+  "Płeć": "Chłopięce",
+  "plik": "AZ-2843PC AKRYL G5 ROZ.52-54 BOY.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [
+   "BOY"
+  ],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2844PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "50-52",
+  "Cena netto": "G7",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2844PC AKRYL G7 ROZ.50-52.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2849PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "52-54",
+  "Cena netto": "G7",
+  "Płeć": "Chłopięce",
+  "plik": "AZ-2849PC AKRYL G7 ROZ.52-54 BOY.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [
+   "BOY"
+  ],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2851PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "50-52",
+  "Cena netto": "G7",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2851PC AKRYL G7 ROZ.50-52.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2852PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2852PC VERONA G7 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2853PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2853PC MADERA G7 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2854",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2854 VERONA G5 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2855PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-2855PC MADERA G10 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2856PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2856PC VERONA G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2865PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2865PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2866PC",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2866PC ROMA G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2867PC",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2867PC ROMA G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2871PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2871PC AKRYL G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2872PK",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2872PK VERONA G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2873PK",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2873PK VERONA G3 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2874PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2874PC VERONA G5 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2875PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2875PC VERONA G5 ONE SIZE.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2876PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "52-54",
+  "Cena netto": "G5",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2876PC LAMBSLOOK ROZ.52-54 G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2884PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2884PC LAMBSLOOK ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2887PCE",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "50-52",
+  "Cena netto": "G5",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2887PCE AKRYL ROZ.50-52 G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2888PCE",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "50-52",
+  "Cena netto": "G5",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2888PCE AKRYL ROZ.50-52 G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2893PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2893PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2894PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2894PC LAMBSLOOK ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2895PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2895PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2897PC",
+  "typ": "Czapka",
+  "material": "VINCI + VEZUV + TURBO",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2897PC VINCI+VEZUV+TURBO ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VINCI",
+   "VEZUV",
+   "TURBO"
+  ]
+ },
+ {
+  "kod": "AZ-2898PC",
+  "typ": "Czapka",
+  "material": "TURBO + VINCI",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2898PC TURBO VINCI ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "TURBO",
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-2899PC",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2899PC ROMA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2900PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2900PC VERONA +CEKIN ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [
+   "CEKIN"
+  ],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2902PC",
+  "typ": "Czapka",
+  "material": "VEZUV + TURBO",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2902PC VEZUV+TURBO VEZUV ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VEZUV",
+   "TURBO"
+  ]
+ },
+ {
+  "kod": "AZ-2903PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2903PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2904PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-2904PC MADERA ONE SIZE G10.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2905PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-2905PC MADERA ONE SIZE G10.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2906PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-2906PC MADERA ONE SIZE G10.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2907PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2907PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2908PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2908PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2909PK",
+  "typ": "Czapka",
+  "material": "VINCI + TURBO",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2909PK VINCI TURBO VINCI ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VINCI",
+   "TURBO"
+  ]
+ },
+ {
+  "kod": "AZ-2910PC",
+  "typ": "Czapka",
+  "material": "TURBO + VINCI",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2910PC TURBO VINCI ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "TURBO",
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-2911PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2911PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2912PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2912PC AKRYL ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2913PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2913PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2914PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2914PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2915PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2915PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2917PC",
+  "typ": "Czapka",
+  "material": "TURBO + VINCI",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2917PC TURBO VINCI ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "TURBO",
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-2920PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "50-52",
+  "Cena netto": "G12",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2920PC AKRYL ROZ.50-52 G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2921PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "50-52",
+  "Cena netto": "G7",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2921PC AKRYL ROZ.50-52 G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2922PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2922PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2923PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2923PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2925PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2925PC AKRYL ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2926PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "50-52",
+  "Cena netto": "G12",
+  "Płeć": "Dziecięce",
+  "plik": "AZ-2926PC AKRYL ROZ.50-52 G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2928",
+  "typ": "Czapka",
+  "material": "AMICOSOFT",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2928 AMICOSOFT ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AMICOSOFT"
+  ]
+ },
+ {
+  "kod": "AZ-2932D",
+  "typ": "Czapka",
+  "material": "GRASS + VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2932D GRASS VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "GRASS",
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2934",
+  "typ": "Czapka",
+  "material": "AMICOSOFT",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2934 AMICOSOFT ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AMICOSOFT"
+  ]
+ },
+ {
+  "kod": "AZ-2935",
+  "typ": "Czapka",
+  "material": "AMICOSOFT",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2935 AMICOSOFT ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AMICOSOFT"
+  ]
+ },
+ {
+  "kod": "AZ-2936",
+  "typ": "Czapka",
+  "material": "AMICOSOFT",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2936 AMICOSOFT ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AMICOSOFT"
+  ]
+ },
+ {
+  "kod": "AZ-2937",
+  "typ": "Czapka",
+  "material": "AMICOSOFT",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2937 AMIOSOFT ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AMICOSOFT"
+  ]
+ },
+ {
+  "kod": "AZ-2938",
+  "typ": "Czapka",
+  "material": "AMICOSOFT",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2938 AMICOSOFT ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AMICOSOFT"
+  ]
+ },
+ {
+  "kod": "AZ-2939",
+  "typ": "Czapka",
+  "material": "VERONA + LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2939 VERONA LAMBSLOOK ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA",
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2940",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2940 VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2941PC",
+  "typ": "Czapka",
+  "material": "VEZUV + TURBO + VINCI",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2941PC VEZUV TURBO VINCI ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV",
+   "TURBO",
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-2942",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2942 VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2943PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2943PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2947PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-2947PC LAMBSLOOK ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2949PC",
+  "typ": "Czapka",
+  "material": "GRASS + AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2949PC GRASS AKRYL ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "GRASS",
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2951PC",
+  "typ": "Czapka",
+  "material": "GRASS",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2951PC GRASS ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "GRASS"
+  ]
+ },
+ {
+  "kod": "AZ-2953",
+  "typ": "Czapka",
+  "material": "GRASS",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2953 GRASS ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "GRASS"
+  ]
+ },
+ {
+  "kod": "AZ-2954PC",
+  "typ": "Czapka",
+  "material": "GRASS + AKRYL + VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2954PC GRASS+AKRYL+VEZUV ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "GRASS",
+   "AKRYL",
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2955D",
+  "typ": "Czapka",
+  "material": "GRASS + AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2955D GRASS AKRYL ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "GRASS",
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2956D",
+  "typ": "Czapka",
+  "material": "GRASS + AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2956D GRASS AKRYL ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "GRASS",
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2957D",
+  "typ": "Czapka",
+  "material": "AKRYL + GRASS",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2957D AKRYL GRASS ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL",
+   "GRASS"
+  ]
+ },
+ {
+  "kod": "AZ-2963PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2963PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2964PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2964PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-2965PK",
+  "typ": "Czapka",
+  "material": "VINCI",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2965PK VINCI ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-2970PC",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2970PC ROMA ONE SIZE G3 (1).JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2973",
+  "typ": "Czapka",
+  "material": "ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2973 ROMA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-2977PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2977PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2980D",
+  "typ": "Czapka",
+  "material": "VEZUV + GRASS",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2980D VEZUV GRASS ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV",
+   "GRASS"
+  ]
+ },
+ {
+  "kod": "AZ-2981D",
+  "typ": "Czapka",
+  "material": "VEZUV + GRASS",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2981D VEZUV+GRASS ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VEZUV",
+   "GRASS"
+  ]
+ },
+ {
+  "kod": "AZ-2982PC",
+  "typ": "Czapka",
+  "material": "GRASS + VEZUV + LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2982PC GRASS+VEZUV+LAMBSLOOK ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "GRASS",
+   "VEZUV",
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2983PC",
+  "typ": "Czapka",
+  "material": "VEZUV + GRASS",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2983PC VEZUV+GRASS ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV",
+   "GRASS"
+  ]
+ },
+ {
+  "kod": "AZ-2984D",
+  "typ": "Czapka",
+  "material": "VEZUV + GRASS",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-2984D VEZUV+GRASS ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VEZUV",
+   "GRASS"
+  ]
+ },
+ {
+  "kod": "AZ-2985PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-2985PC LAMBSLOOK ONE SIZE G10.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2987PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-2987PC AKRYL ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-2989PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-2989PC LAMBSLOOK ONE SIZE G10.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-2990PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-2990PC MADERA ONE SIZE G10.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2991PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-2991PC MADERA ONE SIZE G10.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2992PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-2992PC MADERA ONE SIZE G10.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2993PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-2993PC MADERA ONE SIZE G10.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2995PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2995PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2996PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2996PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2997PC",
+  "typ": "Czapka",
+  "material": "GRASS + MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2997PC GRASS+MADERA ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "GRASS",
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-2998PC",
+  "typ": "Czapka",
+  "material": "GRASS + VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2998PC GRASS+VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "GRASS",
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-2999PC",
+  "typ": "Czapka",
+  "material": "GRASS + VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-2999PC GRASS+VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "GRASS",
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3000PC",
+  "typ": "Czapka",
+  "material": "GRASS + VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3000PC GRASS+VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "GRASS",
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3001PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3001PC MADERA ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-3002PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-3002PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3003PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-3003PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3005PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3005PC MADERA ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-3006PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3006PC MADERA ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-3007PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3007PC MADERA ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-3008PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3008PC MADERA ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-3009PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-3009PC MADERA ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-3010PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-3010PC MADERA ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-3011PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-3011PC MADERA ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-3012PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-3012PC MADERA ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-3013PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-3013PC MADERA ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-3014D",
+  "typ": "Czapka",
+  "material": "GRASS + VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3014D GRASS+VEZUV ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "GRASS",
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3015PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3015PC MADERA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-3016PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3016PC MADERA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-3017PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3017PC MADERA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-3018",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK 90/10",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3018 LAMBSLOOK 90.10 ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "LAMBSLOOK 90/10"
+  ]
+ },
+ {
+  "kod": "AZ-3019PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3019PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3020PC",
+  "typ": "Czapka",
+  "material": "VERONA + ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3020PC VERONA+ROMA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA",
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-3021PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-3021PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3022PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3022PC LAMBSLOOK ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-3023PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-3023PC LAMBSLOOK ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-3024PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-3024PC LAMBSLOOK ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-3025PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-3025PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3026PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3026PC LAMBSLOOK ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-3027",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK 90/10",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-3027 LAMBSLOOK 90.10 ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK 90/10"
+  ]
+ },
+ {
+  "kod": "AZ-3028PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-3028PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3029PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3029PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3030PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-3030PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3031",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK 90/10",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-3031 LAMBSLOOK 90.10 ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK 90/10"
+  ]
+ },
+ {
+  "kod": "AZ-3032PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3032PC LAMBSLOOK ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-3033PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3033PC LAMBSLOOK ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-3034PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3034PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3035PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3035PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3036PC",
+  "typ": "Czapka",
+  "material": "VERONA + ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3036PC VERONA+ROMA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA",
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-3037PC",
+  "typ": "Czapka",
+  "material": "VERONA + ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3037PC VERONA+ROMA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA",
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-3038",
+  "typ": "Czapka",
+  "material": "VERONA + ROMA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3038 VERONA+ROMA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA",
+   "ROMA"
+  ]
+ },
+ {
+  "kod": "AZ-3039PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3039PC VEZUV ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3040PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3040PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3051PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3051PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3053PC",
+  "typ": "Czapka",
+  "material": "AUSTRALIA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3053PC AUSTRALIA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AUSTRALIA"
+  ]
+ },
+ {
+  "kod": "AZ-3054",
+  "typ": "Czapka",
+  "material": "AUSTRALIA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3054 AUSTRALIA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AUSTRALIA"
+  ]
+ },
+ {
+  "kod": "AZ-3055PC",
+  "typ": "Czapka",
+  "material": "AUSTRALIA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3055PC AUSTRALIA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AUSTRALIA"
+  ]
+ },
+ {
+  "kod": "AZ-3056PC",
+  "typ": "Czapka",
+  "material": "AUSTRALIA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3056PC AUSTRALIA ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AUSTRALIA"
+  ]
+ },
+ {
+  "kod": "AZ-3057PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-3057PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3059PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3059PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3060PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3060PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3061PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3061PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3062PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3062PC AKRYL ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-3063PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-3063PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3064PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-3064PC LAMBSLOOK ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-3065PC",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3065PC AKRYL ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-3066PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-3066PC LAMBSLOOK ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-3067PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3067PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3069PC",
+  "typ": "Czapka",
+  "material": "MADERA",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3069PC MADERA ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "MADERA"
+  ]
+ },
+ {
+  "kod": "AZ-3070PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3070PK AKRYL ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-3071PK",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3071PK AKRYL ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-3072PK",
+  "typ": "Czapka",
+  "material": "",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3072PK ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": []
+ },
+ {
+  "kod": "AZ-3073PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3073PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3074PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G10",
+  "Płeć": "",
+  "plik": "AZ-3074PC LAMBSLOOK ONE SIZE G10.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G10",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-3075PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK + LUREX",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-3075PC LAMBSLOOK+LUREX ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK",
+   "LUREX"
+  ]
+ },
+ {
+  "kod": "AZ-3079PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-3079PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3080PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-3080PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3081PC",
+  "typ": "Czapka",
+  "material": "VEZUV + TURBO",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3081PC VEZUV+TURBO VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV",
+   "TURBO"
+  ]
+ },
+ {
+  "kod": "AZ-3082PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-3082PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3083PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3083PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3084PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-3084PC VEZUV ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3085PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3085PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3086PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3086PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3087D",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-3087D LAMBSLOOK ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-3091PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3091PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3092PC",
+  "typ": "Czapka",
+  "material": "VERONA + LUREX",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3092PC VERONA+LUREX ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA",
+   "LUREX"
+  ]
+ },
+ {
+  "kod": "AZ-3094PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3094PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3095",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3095 VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3096PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3096PC VEZUV ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VEZUV"
+  ]
+ },
+ {
+  "kod": "AZ-3097PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3097PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3098PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3098PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3099PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G5",
+  "Płeć": "",
+  "plik": "AZ-3099PC VERONA ONE SIZE G5.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G5",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3100PC",
+  "typ": "Czapka",
+  "material": "VEZUV + VINCI",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-3100PC VEZUV+VINCI ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV",
+   "VINCI"
+  ]
+ },
+ {
+  "kod": "AZ-3101PC",
+  "typ": "Czapka",
+  "material": "VERONA",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-3101PC VERONA ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VERONA"
+  ]
+ },
+ {
+  "kod": "AZ-3102PC",
+  "typ": "Czapka",
+  "material": "LAMBSLOOK",
+  "rozmiar": "One Size",
+  "Cena netto": "G12",
+  "Płeć": "",
+  "plik": "AZ-3102PC LAMBSLOOK ONE SIZE G12.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G12",
+  "_materials": [
+   "LAMBSLOOK"
+  ]
+ },
+ {
+  "kod": "AZ-607PCV1",
+  "typ": "Czapka",
+  "material": "AKRYL",
+  "rozmiar": "One Size",
+  "Cena netto": "G7",
+  "Płeć": "",
+  "plik": "AZ-607PCV1 AKRYL ONE SIZE G7.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G7",
+  "_materials": [
+   "AKRYL"
+  ]
+ },
+ {
+  "kod": "AZ-910PC-BP",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-910PC BEZ POM VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [
+   "BEZ POMPONA"
+  ],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ],
+  "_base_code": "AZ-910PC"
+ },
+ {
+  "kod": "AZ-910PC",
+  "typ": "Czapka",
+  "material": "VEZUV",
+  "rozmiar": "One Size",
+  "Cena netto": "G3",
+  "Płeć": "",
+  "plik": "AZ-910PC VEZUV ONE SIZE G3.JPG",
+  "nazwa_produktu": "",
+  "kolory (po przecinku)": "",
+  "cena promocyjna": "",
+  "opis": "",
+  "tagi (damskie/meskie/dzieci/premium/nowosc)": "",
+  "waga_g": "",
+  "_flags": [],
+  "_group": "G3",
+  "_materials": [
+   "VEZUV"
+  ]
+ }
+]
