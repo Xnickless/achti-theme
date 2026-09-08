@@ -298,9 +298,9 @@
         "delay_seconds": 4,
         "days_hidden": 14,
         "eyebrow": "Newsletter B2B",
-        "heading": "Bądź na bieżąco z nowymi kolekcjami",
-        "text": "<p>Zapisz się, aby jako pierwszy otrzymywać informacje o nowościach, kolekcjach sezonowych i ofertach dla partnerów.</p>",
-        "button_label": "Zapisz się",
+        "heading": "−15% na pierwsze zamówienie",
+        "text": "<p>Zapisz się, a wyślemy Ci kod rabatowy na pierwsze zamówienie hurtowe. Do tego jako pierwszy dostaniesz informacje o nowych kolekcjach i ofertach dla partnerów.</p>",
+        "button_label": "Odbieram rabat",
         "note": "Tylko dla klientów B2B",
         "color_scheme": "scheme-1"
       }

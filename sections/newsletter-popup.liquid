@@ -178,6 +178,13 @@
           this.querySelectorAll('[data-popup-close]').forEach((el) => el.addEventListener('click', () => this.close(true)));
           this.onKey = (e) => { if (e.key === 'Escape') this.close(true); };
 
+          document.addEventListener('click', (e) => {
+            const a = e.target.closest('a[href$="#newsletter"]');
+            if (!a) return;
+            e.preventDefault();
+            clearTimeout(this.timer);
+            this.open();
+          });
           const posted = this.querySelector('[data-popup-success]') || this.querySelector('[aria-invalid="true"]');
           if (posted) {
             this.open();
