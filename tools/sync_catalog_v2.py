@@ -21,6 +21,7 @@ ONLY = None
 for a in sys.argv[1:]:
     if a.startswith('--only='): ONLY = set(a.split('=', 1)[1].split(','))
     if a.startswith('--photos-dir='): PHOTOS = os.path.expanduser(a.split('=', 1)[1])
+    if a.startswith('--codes='): V2 = [r for r in V2 if r['kod'] in set(a.split('=', 1)[1].split(','))]  # tylko wybrane kody (bez usuwania!)
 def want(step): return not ONLY or step in ONLY
 
 norm = lambda f: re.sub(r'\.jpe?g$', '', f, flags=re.I).upper().strip()
@@ -202,7 +203,8 @@ def main():
             new_old.append(p)
 
     # usuwanie: produkty w sklepie bez dopasowania do v2
-    to_delete = [p for pid, p in shop.items() if pid not in matched_pids and not any(n.get('handle') and n['code'] == p['sku'] for n in new_old)]
+    CODES_ONLY = any(a.startswith('--codes=') for a in sys.argv)
+    to_delete = [] if CODES_ONLY else [p for pid, p in shop.items() if pid not in matched_pids and not any(n.get('handle') and n['code'] == p['sku'] for n in new_old)]
     print(f"\nusuwane: {len(to_delete)}")
     for p in to_delete:
         print(f"- {p['sku']} „{p['title']}”")
@@ -233,7 +235,7 @@ def main():
         print('inne_kolory zaktualizowane:', n)
 
     # zapis achti-produkty.json
-    if not DRY:
+    if not DRY and not CODES_ONLY:
         keep = [o for o in OLD if norm(os.path.basename(o['photo'] or '')) in {norm(r['plik']) for r in V2} or o.get('shop_id') in matched_pids]
         json.dump(keep + [n for n in new_old if n not in keep], open(OLD_PATH, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         print('achti-produkty.json:', len(keep) + len([n for n in new_old if n not in keep]))
