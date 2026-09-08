@@ -32,7 +32,7 @@ def register(resource_id, translations):
     if not translations: return
     for i in range(0, len(translations), 100):
         r = si.gql('''mutation($id:ID!,$t:[TranslationInput!]!){ translationsRegister(resourceId:$id, translations:$t){ userErrors{ field message } } }''',
-                   {'id': resource_id, 't': translations[{'k': i}['k']:i + 100]})
+                   {'id': resource_id, 't': translations[i:i + 100]})
         errs = r['translationsRegister']['userErrors']
         if errs: print('  błąd', resource_id, errs)
 
