@@ -63,6 +63,13 @@ shopify theme push --store ccucsr-si.myshopify.com --theme 206234878294 --allow-
 - Feed XML produktów: `/collections/all?view=feed` (templates/collection.feed.liquid), ceny tylko gdy widoczne.
 - W sklepie jest zainstalowana aplikacja „SP Hide Price & Access” — dubluje ukrywanie cen z motywu; do decyzji klienta, czy zostaje.
 
+## Sprzedaż zagraniczna — konfiguracja panelu (08.09.2026)
+- Rynki: Polska (PLN) + **Unia Europejska** (26 krajów, EUR, kurs dynamiczny, bez zaokrąglania). Selektor kraju i języka w stopce włączony.
+- Wysyłka: strefy Domestic (PL), International (27 krajów, 69 zł), **Unia Europejska** (13 krajów UE brakujących w International, „Kurier (UE)” 69 zł, 3–5 dni) — stawki tymczasowe, klient podaje cennik kuriera.
+- Podatki: Shopify Tax, VAT PL włączony (PL6812081859), „ceny zawierają podatek” **wyłączone** (ceny netto), OSS nie włączony. Checkout: nazwa firmy wymagana, numer VAT firmy opcjonalny → odwrotne obciążenie dla ważnych numerów VAT UE. Wymagane logowanie przed zakupem włączone.
+- Języki: PL (domyślny) + DE, EN, FR dodane; Translate & Adapt zainstalowany; auto-tłumaczenie DE uruchomione 08.09 (publikuje po zakończeniu), EN do uruchomienia po DE (limit 2 języków auto), FR nieopublikowany (tylko tłumaczenia motywu) — decyzja klienta.
+- Cookies: baner włączony (automatyczne regiony = rynki), dane w UE.
+
 ## Test jako firma B2B (07.09.2026)
 Firma testowa „Firma Testowa Achti” (klient Kamil Test, e-mail Kamila) — zatwierdzona, bez katalogu. Ceny, szybkie zamawianie, koszyk i checkout z danymi firmy działają. Do decyzji/konfiguracji klienta:
 - **Podatki:** Shopify dopisuje „Z wliczonymi podatkami”, a motyw mówi „Cena netto”. Dla hurtu netto wyłączyć Ustawienia → Podatki i cła → „Uwzględnij podatek w cenach” i ustawić VAT 23% PL. Wtedy dopisek zniknie sam.
