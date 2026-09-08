@@ -81,6 +81,7 @@ Firma testowa „Firma Testowa Achti” (klient Kamil Test, e-mail Kamila) — z
 ## Katalog produktów (import 07.09.2026)
 - 362 produkty zaimportowane skryptem `tools/shopify_import.py` (Admin API, poświadczenia aplikacji „Import Katalogu” z Dev Dashboard w `~/.config/achti/client_id` + `client_secret`, poza repo). Dane: `tools/achti-produkty.json` wygenerowane przez `tools/generate_catalog.py` z arkusza `~/Downloads/achti-katalog-do-uzupelnienia.csv` (z nazw zdjęć). Zdjęcia po obróbce (białe tło, 4:5): `~/Downloads/ACHTI COLLECTION 2026-2027 - biale tlo`.
 - **Nazwy robocze** (miasta, np. „Czapka Zimowa Damska Beanie Milano”), **ceny przykładowe** wg tagu grupy: G3=39, G5=49, G7=59, G10=69, G12=79 zł (`tools/set_prices.py`), tag `cena-do-uzupelnienia` na wszystkich. Kolory wariantów puste — klient uzupełnia.
+- `docs/instrukcja-katalog.md` — instrukcja dla klienta, jak uzupełnić arkusz (08.09.2026). **TODO po odesłaniu arkusza:** skrypt aktualizacji istniejących produktów z kolumn nazwa_produktu / kolory (warianty) / cena netto / cena promocyjna (compare_at) / sklad / opis / tagi / waga_g, ceny grup G3–G12, przeliczenie grup „inne kolory” po nazwie modelu, tag `wycofany` = ukryj.
 - Skrypt importu pomija istniejące SKU, można uruchamiać ponownie; `--publish-only` publikuje nieopublikowane w Sklepie online.
 
 ## Inne kolory modelu (kółka na karcie produktu, 07.09.2026)
