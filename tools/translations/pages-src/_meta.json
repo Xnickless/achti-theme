@@ -1,0 +1,44 @@
+{
+ "polityka-prywatnosci": {
+  "id": "gid://shopify/ShopPolicy/61553443158",
+  "type": "SHOP_POLICY",
+  "body_key": "body",
+  "title": null
+ },
+ "zwroty-i-reklamacje": {
+  "id": "gid://shopify/ShopPolicy/65323893078",
+  "type": "SHOP_POLICY",
+  "body_key": "body",
+  "title": null
+ },
+ "wysylka-i-dostawa": {
+  "id": "gid://shopify/ShopPolicy/65323991382",
+  "type": "SHOP_POLICY",
+  "body_key": "body",
+  "title": null
+ },
+ "regulamin-b2b": {
+  "id": "gid://shopify/ShopPolicy/65324220758",
+  "type": "SHOP_POLICY",
+  "body_key": "body",
+  "title": null
+ },
+ "warunki-wspolpracy": {
+  "id": "gid://shopify/Page/196743233878",
+  "type": "PAGE",
+  "body_key": "body_html",
+  "title": "Warunki współpracy"
+ },
+ "faq": {
+  "id": "gid://shopify/Page/196743332182",
+  "type": "PAGE",
+  "body_key": "body_html",
+  "title": "FAQ"
+ },
+ "polityka-cookies": {
+  "id": "gid://shopify/Page/196743430486",
+  "type": "PAGE",
+  "body_key": "body_html",
+  "title": "Polityka cookies"
+ }
+}
