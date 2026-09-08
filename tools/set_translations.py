@@ -102,7 +102,7 @@ def do_collections(loc, data):
 
 def do_menu(loc, data):
     n = 0
-    for rtype in ('ONLINE_STORE_MENU', 'LINK'):
+    for rtype in ('MENU', 'LINK'):
         try:
             nodes = translatable(rtype)
         except Exception as e:
@@ -116,7 +116,12 @@ def do_menu(loc, data):
     print(f'  menu: {n}')
 
 def do_theme(loc, data):
-    nodes = translatable('ONLINE_STORE_THEME')
+    nodes = []
+    for rtype in ('ONLINE_STORE_THEME_JSON_TEMPLATE', 'ONLINE_STORE_THEME_SECTION_GROUP', 'ONLINE_STORE_THEME_SETTINGS_DATA_SECTIONS'):
+        try:
+            nodes += translatable(rtype)
+        except Exception as e:
+            print('  pomijam', rtype, str(e)[:80])
     n = 0
     for node in nodes:
         cm = content_map(node); payload = []

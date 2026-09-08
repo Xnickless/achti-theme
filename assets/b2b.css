@@ -449,3 +449,5 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
 .product__producer { margin: 1.2rem 0 0; font-size: 1.25rem; line-height: 1.5; color: rgba(var(--color-foreground), 0.65); }
 .product__producer-label { font-weight: 600; margin-right: 0.3rem; }
 .product__producer a { color: inherit; }
+.collection--full-width .fc-marquee slider-component { max-width: none; padding: 0; }
+.collection--full-width .fc-marquee .fc-marquee__track { padding-left: 0; }
