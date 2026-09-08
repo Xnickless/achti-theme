@@ -553,6 +553,8 @@
     "login": "Se connecter",
     "register": "Enregistrer votre entreprise",
     "new": "Nouveau",
+    "catalog_pdf": "Catalogue PDF (sans prix)",
+    "catalog_pdf_prices": "Catalogue PDF avec prix de gros",
     "reg": {
       "title": "Enregistrement de l’entreprise",
       "intro": "Indiquez les coordonnées de votre entreprise — nous activons le compte après vérification, généralement sous un jour ouvré. Vous vous connectez ensuite avec votre e-mail (code à usage unique, sans mot de passe).",

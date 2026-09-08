@@ -1487,6 +1487,16 @@
         "id": "b2b_tag_new",
         "label": "Tag produktu oznaczający Nowość",
         "default": "nowosc"
+      },
+      {
+        "type": "url",
+        "id": "b2b_catalog_pdf",
+        "label": "Katalog PDF bez cen (link w stopce dla wszystkich)"
+      },
+      {
+        "type": "url",
+        "id": "b2b_catalog_pdf_prices",
+        "label": "Katalog PDF z cenami (link w stopce tylko dla zalogowanych firm)"
       }
     ]
   },

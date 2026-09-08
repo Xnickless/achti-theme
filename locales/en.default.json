@@ -541,6 +541,8 @@
     "login": "Sign in",
     "register": "Register your business",
     "new": "New",
+    "catalog_pdf": "PDF catalogue (no prices)",
+    "catalog_pdf_prices": "PDF catalogue with wholesale prices",
     "reg": {
       "title": "Business registration",
       "intro": "Enter your company details — we activate the account after verification, usually within one business day. You then sign in with your e-mail (one-time code, no password).",

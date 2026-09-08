@@ -565,6 +565,8 @@
     "login": "Zaloguj się",
     "register": "Zarejestruj firmę",
     "new": "Nowość",
+    "catalog_pdf": "Katalog PDF (bez cen)",
+    "catalog_pdf_prices": "Katalog PDF z cenami hurtowymi",
     "reg": {
       "title": "Rejestracja firmy",
       "intro": "Podaj dane firmy — aktywujemy konto po weryfikacji, zwykle w ciągu jednego dnia roboczego. Po aktywacji logujesz się adresem e-mail (kod jednorazowy, bez hasła).",

@@ -98,10 +98,11 @@ def mf_value(type_name, text):
         return json.dumps({'type':'root','children':[{'type':'paragraph','children':[{'type':'text','value':text}]}]},ensure_ascii=False)
     return text
 
-def staged_upload(path):
+def staged_upload(path, resource=None):
     name=os.path.basename(path); mime=mimetypes.guess_type(path)[0] or 'image/jpeg'
+    resource=resource or ('IMAGE' if mime.startswith('image/') else 'FILE')
     d=gql('''mutation($input:[StagedUploadInput!]!){ stagedUploadsCreate(input:$input){ stagedTargets{ url resourceUrl parameters{ name value } } userErrors{ message } } }''',
-        {'input':[{'resource':'IMAGE','filename':name,'mimeType':mime,'httpMethod':'POST','fileSize':str(os.path.getsize(path))}]})
+        {'input':[{'resource':resource,'filename':name,'mimeType':mime,'httpMethod':'POST','fileSize':str(os.path.getsize(path))}]})
     su=d['stagedUploadsCreate']
     if su['userErrors']: sys.exit('stagedUploads: '+str(su['userErrors']))
     t=su['stagedTargets'][0]

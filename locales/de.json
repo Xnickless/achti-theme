@@ -541,6 +541,8 @@
     "login": "Anmelden",
     "register": "Firma registrieren",
     "new": "Neu",
+    "catalog_pdf": "PDF-Katalog (ohne Preise)",
+    "catalog_pdf_prices": "PDF-Katalog mit Großhandelspreisen",
     "reg": {
       "title": "Firmenregistrierung",
       "intro": "Geben Sie Ihre Firmendaten an — wir schalten das Konto nach Prüfung frei, meist innerhalb eines Werktags. Danach melden Sie sich per E-Mail an (Einmalcode, kein Passwort).",

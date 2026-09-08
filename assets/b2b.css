@@ -461,3 +461,6 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
 /* Kafelek produktu: kod (SKU) pod nazwą, badge „Dostępny od ręki” (08.09.2026) */
 .card__sku { margin-top: 0.2rem; font-size: 1.05rem; letter-spacing: 0.08em; opacity: 0.7; }
 .badge--in-stock { border-color: transparent; }
+
+.footer__catalog-pdf { margin: 0 0 0.8rem; }
+.footer__catalog-pdf a { text-decoration: underline; text-underline-offset: 0.3rem; }
