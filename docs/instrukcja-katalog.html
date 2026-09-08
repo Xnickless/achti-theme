@@ -1,0 +1,65 @@
+<!doctype html><html lang="pl"><head><meta charset="utf-8"><title>Katalog Achti – instrukcja</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Jost:wght@400;500;600&display=swap">
+<style>
+@page { size: A4; margin: 18mm 16mm 20mm 16mm; }
+:root{--ink:#262626;--ink2:#5f5a55;--line:#ddd7d0;--bg2:#f4f1ed;--acc:#7b6f64}
+html,body{margin:0;background:#fff;color:var(--ink);font-family:Jost,"Helvetica Neue",Arial,sans-serif;font-size:10.5pt;line-height:1.5}
+main{max-width:none;margin:0;padding:0}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;font-weight:600;color:#1c2228}
+.cover{border-bottom:2px solid #1c2228;padding-bottom:6mm;margin-bottom:8mm}
+.eyebrow{font-size:8.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin:0 0 2mm}
+h1{font-size:24pt;margin:0 0 3mm}
+.lead{font-size:11.5pt;color:var(--ink2);margin:0 0 2mm;max-width:150mm}
+.meta{font-size:9pt;color:var(--ink2);margin:0}
+h2{font-size:15pt;margin:8mm 0 2.5mm;padding-top:4mm;border-top:1px solid var(--line);page-break-after:avoid;break-after:avoid}
+h3{font-size:11.5pt;margin:5mm 0 1.5mm;page-break-after:avoid;break-after:avoid}
+h3 code{font-size:1em;background:none;padding:0}
+p{margin:1.5mm 0} ul,ol{margin:1.5mm 0;padding-left:5mm} li{margin:1mm 0}
+code{font-family:"SF Mono",Menlo,monospace;font-size:.9em;background:var(--bg2);padding:.5pt 3pt;border-radius:2pt}
+pre{background:var(--bg2);padding:2.5mm 3.5mm;border-radius:2pt;font-family:"SF Mono",Menlo,monospace;font-size:9.5pt;margin:2mm 0;white-space:pre-wrap}
+.tw{margin:2mm 0} table{border-collapse:collapse;width:100%;font-size:9.5pt;page-break-inside:auto}
+tr{page-break-inside:avoid;break-inside:avoid}
+th,td{text-align:left;padding:1.8mm 2.5mm;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:8pt;letter-spacing:.06em;text-transform:uppercase;color:var(--ink2);border-bottom:1.5px solid #1c2228}
+strong{font-weight:600}
+</style></head><body><main><header class="cover"><p class="eyebrow">Achti · platforma B2B</p><h1>Jak uzupełnić katalog produktów</h1><p class="lead">Instrukcja do arkusza <code>achti-katalog-do-uzupelnienia</code>. Wypełnienie kolumn opisanych poniżej pozwala nam jednym importem ustawić w sklepie nazwy, kolory, ceny, skład i kategorie wszystkich 362 produktów.</p><p class="meta">Wersja z 8 września 2026 · przygotował Kamil Dziedzic</p></header>
+<p>Plik: <code>achti-katalog-do-uzupelnienia.csv</code> (363 wiersze, jeden wiersz = jeden kod produktu). Otwórz go w Excelu, Numbers albo Google Sheets. Separator kolumn to średnik. Po uzupełnieniu zapisz jako CSV (UTF-8, średnik) albo odeślij zwykły plik Excel. Nie zmieniaj kolejności kolumn i nie usuwaj wierszy.</p>
+<h2>Kolumny, których nie ruszamy</h2>
+<p>Są wypełnione z nazw zdjęć i służą do dopasowania wiersza do produktu w sklepie.</p>
+<div class="tw"><table><thead><tr><th>Kolumna</th><th>Co zawiera</th></tr></thead><tbody><tr><td><code>kod</code></td><td>kod produktu, np. AZ-1145PC. Klucz do wszystkiego, nie zmieniać</td></tr><tr><td><code>typ</code></td><td>Czapka / Komin</td></tr><tr><td><code>material</code></td><td>nazwa przędzy z pliku zdjęcia (AKRYL, VEZUV, VERONA…)</td></tr><tr><td><code>rozmiar</code></td><td>One Size, 50-52, 52-54, 56-62 albo wymiar komina</td></tr><tr><td><code>grupa_cenowa</code></td><td>G3, G5, G7, G10, G12 z nazwy zdjęcia</td></tr><tr><td><code>flagi</code>, <code>segment</code></td><td>dodatkowe oznaczenia z nazw zdjęć (CEKIN, MULTI, KOMIN, Dziecięce…)</td></tr><tr><td><code>plik</code></td><td>nazwa zdjęcia</td></tr></tbody></table></div>
+<p>Jeśli coś w tych kolumnach jest błędne (np. zły rozmiar), popraw wartość, ale nie zmieniaj kodu.</p>
+<h2>Kolumny do uzupełnienia</h2>
+<h3><code>nazwa_produktu</code></h3>
+<p>Docelowa nazwa handlowa. Dziś w sklepie są nazwy robocze z miastami („Czapka Zimowa Damska Beanie Milano”). Zasady:</p>
+<ul><li>Ta sama nazwa modelu dla wszystkich jego kolorów. Po nazwie łączymy kolory w grupę „inne kolory tego modelu”, więc pisownia musi być identyczna w każdym wierszu tego modelu.</li><li>Wzór: <code>Czapka zimowa damska &lt;nazwa modelu&gt;</code>, np. <code>Czapka zimowa damska Aurora</code>. Dla dzieci <code>Czapka zimowa dziecięca …</code>, dla kominów <code>Komin zimowy damski …</code>.</li><li>Bez koloru w nazwie. Kolor idzie do kolumny <code>kolory</code>.</li><li>Do 60 znaków.</li></ul>
+<p>Jeśli zostawisz puste, zostaje nazwa robocza.</p>
+<h3><code>kolory (po przecinku)</code></h3>
+<p>Kolory tego kodu, które klient ma wybrać na karcie produktu. Format numer lub zestaw, myślnik, nazwa, po przecinku:</p>
+<pre>120 - Czarny, 245 - Beż, SET 5</pre>
+<p>Jeśli kod ma jeden kolor, wpisz jeden. Jeśli kolory to osobne kody (osobne zdjęcia), zostaw puste, a wpisz tę samą nazwę modelu w <code>nazwa_produktu</code>.</p>
+<h3><code>cena netto PLN</code></h3>
+<p>Wpisuj tylko wtedy, gdy model ma cenę inną niż jego grupa cenowa. Dla reszty wystarczy tabela grup (poniżej). Cena netto, bez VAT, w złotych, z kropką lub przecinkiem, np. <code>49,90</code>.</p>
+<h3><code>cena promocyjna</code></h3>
+<p>Tylko dla modeli na wyprzedaży. Wpisz cenę obniżoną. W sklepie cena z kolumny <code>cena netto PLN</code> (lub z grupy) będzie przekreślona, a produkt trafi automatycznie do kolekcji Wyprzedaż.</p>
+<h3><code>sklad</code></h3>
+<p>Skład surowcowy w procentach i nazwach włókien, tak jak na wszywce:</p>
+<pre>80% akryl, 20% wełna
+100% akryl
+50% wełna merino, 50% akryl</pre>
+<p>To wymóg prawny (rozporządzenie UE 1007/2011) dla etykiet i ofert online. Nazwa przędzy (Vezuv, Verona) nie wystarczy. Ta kolumna jest najważniejsza obok cen.</p>
+<h3><code>opis</code></h3>
+<p>Opcjonalnie: jedno, dwa zdania o modelu (fason, ozdoby, dla kogo). Puste = zostaje opis z szablonu. Nie wklejaj składu ani rozmiaru, te są osobno.</p>
+<h3><code>tagi (damskie/meskie/dzieci/premium/nowosc)</code></h3>
+<p>Decydują, w których kategoriach menu produkt się pokaże. Wpisz jeden lub kilka po przecinku:</p>
+<div class="tw"><table><thead><tr><th>Tag</th><th>Kategoria w sklepie</th></tr></thead><tbody><tr><td><code>damskie</code></td><td>Ona</td></tr><tr><td><code>meskie</code></td><td>On</td></tr><tr><td><code>dzieci</code></td><td>Dla dzieci</td></tr><tr><td><code>premium</code></td><td>Premium Merino</td></tr><tr><td><code>nowosc</code></td><td>Nowości na stronie głównej</td></tr></tbody></table></div>
+<p>Dziś wszystkie produkty mają <code>damskie</code> (dzieci <code>dzieci</code>), a 12 najnowszych <code>nowosc</code>. Produkt bez tagu nie pokaże się w żadnej kategorii, tylko w wyszukiwarce.</p>
+<h2>Informacje poza arkuszem</h2>
+<p>Te rzeczy wystarczy podać raz, nie przy każdym produkcie.</p>
+<ol><li><strong>Ceny grup</strong>: G3, G5, G7, G10, G12, po jednej cenie netto w PLN. Osobno ceny dla 8 kodów bez grupy: AZ-1378PC, AZ-2257LPC, AZ-2258LPC, AZ-2263LPC, AZ-2270LPC, AZ-2300LPC, AZ-2930PC, AZ-2931.</li><li><strong>Ceny w euro dla UE</strong>: osobna tabela grup w EUR albo zasada przeliczenia (np. kurs stały).</li><li><strong>Progi ilościowe</strong>: np. od 100 szt. −5%, od 300 szt. −10%. Dotyczą sztuk łącznie w zamówieniu czy jednego modelu?</li><li><strong>Minimum zamówienia</strong> w złotych lub sztukach, albo brak.</li><li><strong>Waga brutto</strong> jednej czapki i jednego komina w gramach (do obliczania wysyłki). Jeśli różnią się między modelami, dodaj kolumnę <code>waga_g</code> do arkusza.</li><li><strong>Cennik kuriera</strong>: paczka w Polsce, próg darmowej dostawy, stawki do krajów UE, paleta.</li></ol>
+<h2>Zdjęcia</h2>
+<ul><li>Nowe zdjęcia: nazwa pliku zaczyna się od kodu produktu, np. <code>AZ-1145PC front.jpg</code>. Reszta nazwy dowolna.</li><li>Zdjęcia na modelce: <code>AZ-1145PC modelka.jpg</code>. Zostaną dodane jako drugie zdjęcie.</li><li>Białe tło i kadr 4:5 robimy po naszej stronie.</li></ul>
+<h2>Grupy kolorów</h2>
+<p>W sklepie kółka „inne kolory tego modelu” zostały dobrane automatycznie po podobieństwie zdjęć. Podgląd wszystkich grup jest w pliku <code>achti-grupy-modeli.html</code>. Poprawki:</p>
+<ul><li>Najprościej: ta sama <code>nazwa_produktu</code> dla wszystkich kolorów modelu. Po imporcie grupy zostaną przeliczone według nazw.</li><li>Alternatywnie: w panelu Shopify przy produkcie, pole „Inne kolory”.</li></ul>
+<h2>Czego nie trzeba robić</h2>
+<ul><li>Nie wpisuj cen z VAT. Wszystko netto, VAT liczy sklep.</li><li>Nie tłumacz nazw ani opisów. Tłumaczenia na angielski, niemiecki i francuski generujemy automatycznie z polskiego.</li><li>Nie usuwaj kolumn ani wierszy, nawet dla produktów wycofanych. Zamiast tego wpisz w <code>tagi</code> słowo <code>wycofany</code>, a my ukryjemy produkt.</li></ul></main></body></html>
