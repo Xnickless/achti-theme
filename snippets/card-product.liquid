@@ -29,6 +29,14 @@
       assign b2b_access = false
     endif
   endif
+  assign card_in_stock = false
+  for cv in card_product.variants
+    if cv.inventory_management == 'shopify' and cv.inventory_quantity > 0
+      assign card_in_stock = true
+      break
+    endif
+  endfor
+  assign card_sku = card_product.selected_or_first_available_variant.sku
 -%}
 {%- unless skip_styles -%}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
@@ -151,6 +159,8 @@
                 >
                   {{- 'products.product.on_sale' | t -}}
                 </span>
+              {%- elsif card_in_stock -%}
+                <span class="badge badge--bottom-left badge--in-stock color-scheme-3">{{ 'b2b.availability.in_stock' | t }}</span>
               {%- endif -%}
             </div>
           </div>
@@ -172,6 +182,9 @@
                 {{ card_product.title | escape }}
               </a>
             </h3>
+            {%- if card_sku != blank -%}
+              <div class="card__sku caption-with-letter-spacing light">{{ card_sku | escape }}</div>
+            {%- endif -%}
             <div class="card-information">
               {%- if show_vendor -%}
                 <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
@@ -576,6 +589,8 @@
               >
                 {{- 'products.product.on_sale' | t -}}
               </span>
+            {%- elsif card_in_stock -%}
+              <span class="badge badge--bottom-left badge--in-stock color-scheme-3">{{ 'b2b.availability.in_stock' | t }}</span>
             {%- endif -%}
           </div>
         </div>
