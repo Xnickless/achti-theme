@@ -5,7 +5,7 @@
 - nowe produkty (brak w sklepie) tworzone z szablonu; produkty spoza Full Size usuwane,
 - porządek w metapolu inne_kolory (usunięte ID, powiązania wariantów tego samego kodu),
 - aktualizacja achti-produkty.json (źródło dla tłumaczeń).
-Użycie: python3 tools/sync_catalog_v2.py [--dry-run] [--only=photos,data,create,delete,groups]"""
+Użycie: python3 tools/sync_catalog_v2.py [--dry-run] [--only=photos,data,create,delete,groups] [--all-photos] [--photos-dir=...]"""
 import sys, os, re, json, unicodedata, collections
 sys.path.insert(0, os.path.dirname(__file__)); import shopify_import as si
 
@@ -16,9 +16,11 @@ V2 = json.load(open(os.path.join(HERE, 'katalog-v2.json'), encoding='utf-8'))
 OLD_PATH = os.path.join(HERE, 'achti-produkty.json')
 OLD = json.load(open(OLD_PATH, encoding='utf-8'))
 DRY = '--dry-run' in sys.argv
+ALL_PHOTOS = '--all-photos' in sys.argv  # podmień zdjęcia także tam, gdzie już jest obraz 2000 px
 ONLY = None
 for a in sys.argv[1:]:
     if a.startswith('--only='): ONLY = set(a.split('=', 1)[1].split(','))
+    if a.startswith('--photos-dir='): PHOTOS = os.path.expanduser(a.split('=', 1)[1])
 def want(step): return not ONLY or step in ONLY
 
 norm = lambda f: re.sub(r'\.jpe?g$', '', f, flags=re.I).upper().strip()
@@ -172,7 +174,7 @@ def main():
                             {'pid': prod['id'], 'v': [{'id': prod['variant_id'], 'inventoryItem': {'sku': r['kod']}}]}, 'sku')
                     set_metafields(prod['id'], defs, {'rozmiar': size, 'sklad': ', '.join(mats_pl)})
             if want('photos'):
-                if len(prod['media']) == 1 and prod['media_w'][0] == 2000:
+                if not ALL_PHOTOS and len(prod['media']) == 1 and prod['media_w'][0] == 2000:
                     pass  # już podmienione (nowe zdjęcia mają 2000 px, stare 1024)
                 else:
                     set_photo(prod['id'], prod['media'], photo, title); photos_done += 1
