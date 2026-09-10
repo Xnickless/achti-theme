@@ -93,13 +93,18 @@ class FcMarquee extends HTMLElement {
       this.dragStartX = e.clientX;
       this.dragStartPos = this.pos;
       this.dragPointer = e.pointerId;
-      this.classList.add('fc-marquee--dragging');
-      try { this.track.setPointerCapture(e.pointerId); } catch (err) { /* stare przeglądarki */ }
+      // UWAGA: bez setPointerCapture na starcie — przechwycenie wskaźnika sprawia, że zwykłe kliknięcie
+      // trafia w taśmę zamiast w link produktu. Przechwytujemy dopiero, gdy ruch przekroczy próg (prawdziwe przeciąganie).
     });
     this.track.addEventListener('pointermove', (e) => {
       if (!this.dragging || e.pointerId !== this.dragPointer) return;
       const dx = e.clientX - this.dragStartX;
-      if (Math.abs(dx) > 6) this.moved = true;
+      if (!this.moved && Math.abs(dx) <= 6) return;
+      if (!this.moved) {
+        this.moved = true;
+        this.classList.add('fc-marquee--dragging');
+        try { this.track.setPointerCapture(e.pointerId); } catch (err) { /* stare przeglądarki */ }
+      }
       this.pos = this.dragStartPos + dx;
       this.wrap();
       this.apply();
@@ -108,8 +113,8 @@ class FcMarquee extends HTMLElement {
       if (!this.dragging || e.pointerId !== this.dragPointer) return;
       this.dragging = false;
       this.classList.remove('fc-marquee--dragging');
-      try { this.track.releasePointerCapture(e.pointerId); } catch (err) { /* ignoruj */ }
       if (this.moved) {
+        try { this.track.releasePointerCapture(e.pointerId); } catch (err) { /* ignoruj */ }
         // przeciągnięcie nie może otworzyć produktu — zjedz najbliższy klik
         const swallow = (ev) => { ev.preventDefault(); ev.stopPropagation(); };
         this.track.addEventListener('click', swallow, { capture: true, once: true });
