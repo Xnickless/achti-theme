@@ -86,6 +86,8 @@ class FcMarquee extends HTMLElement {
     this.addEventListener('focusin', () => (this.hovered = true));
     this.addEventListener('focusout', () => (this.hovered = false));
     this.track.querySelectorAll('img').forEach((img) => (img.draggable = false));
+    // linki (<a>) są natywnie „przeciągalne” — bez tego przeglądarka zaczyna drag & drop linku i przerywa pointermove
+    this.track.addEventListener('dragstart', (e) => e.preventDefault());
     this.track.addEventListener('pointerdown', (e) => {
       if (this.expanded || this.reduced || (e.pointerType === 'mouse' && e.button !== 0)) return;
       this.dragging = true;
