@@ -168,6 +168,8 @@ class PredictiveSearch extends SearchForm {
   }
 
   getSearchResults(searchTerm) {
+    // B2B: sam numer kodu („1145”) -> pełny prefiks SKU („AZ-1145”), bo Shopify dopasowuje SKU tylko od początku tokenu
+    if (window.b2bNormalizeSearch) searchTerm = window.b2bNormalizeSearch(searchTerm) || searchTerm;
     const queryKey = searchTerm.replace(' ', '-').toLowerCase();
     this.setLiveRegionLoadingState();
 
