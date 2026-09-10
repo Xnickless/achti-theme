@@ -135,10 +135,13 @@
       grid-template-areas:
         'heading navigation icons'
         'inline-search inline-search inline-search';
-      grid-template-columns: auto 1fr auto;
-      column-gap: 3rem;
+      grid-template-columns: 1fr auto 1fr; /* równe boki = menu dokładnie na środku strony, jak wyszukiwarka */
+      column-gap: 2rem;
       align-items: center;
       row-gap: 1.2rem;
+      max-width: 156rem; /* szerszy niż treść: logo bliżej lewej krawędzi, ikony prawej */
+      padding-left: 3rem;
+      padding-right: 3rem;
     }
     .header--inline-search.header--top-left:not(.drawer-menu) .header__menu-item { font-size: 1.6rem; padding-left: 1.2rem; padding-right: 1.2rem; }
     .header--inline-search .header__inline-search-input { font-size: 1.6rem; }
@@ -154,7 +157,7 @@
     /* Przyklejony nagłówek po przewinięciu (sticky „zawsze”): zostaje sam pasek z nazwami kategorii — bez logo, ikon i wyszukiwarki (10.09.2026) */
     .header__heading-logo-wrapper { transition: width 0.2s ease; }
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search .header__inline-search { display: none; }
-    .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) { grid-template-areas: 'heading navigation icons'; grid-template-columns: auto 1fr auto; column-gap: 2rem; align-items: center; row-gap: 0; padding-top: 0.4rem; padding-bottom: 0.4rem; }
+    .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) { grid-template-areas: 'heading navigation icons'; grid-template-columns: 1fr auto 1fr; column-gap: 2rem; align-items: center; row-gap: 0; padding-top: 0.4rem; padding-bottom: 0.4rem; }
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) .header__icons { justify-self: end; }
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-menu > .list-menu--inline { flex-wrap: nowrap; }
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) .header__menu-item { font-size: 1.5rem; padding-left: 1.1rem; padding-right: 1.1rem; }
