@@ -263,10 +263,9 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
 .product__tax { display: none; }
 /* Nagłówek na desktopie (10.09.2026: większe logo 220 px, równe odstępy logo → menu → wyszukiwarka; padding góra/dół z ustawień sekcji) */
 @media screen and (min-width: 990px) {
-  .header--inline-search.header--top-left:not(.drawer-menu) { row-gap: 1.6rem; }
-  .header__inline-search-form { min-height: 5rem; height: 5rem; }
-  .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-search { width: 52rem; margin: 1.6rem auto 0; }
-  .header__inline-menu .list-menu__item { padding-top: 1rem; padding-bottom: 1rem; }
+  .header__inline-search-form { min-height: 4.6rem; height: 4.6rem; }
+  .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-search { width: 52rem; margin: 0.2rem auto 0; }
+  .header__inline-menu .list-menu__item { padding-top: 0.8rem; padding-bottom: 0.8rem; }
 }
 
 /* Dostępność: Na zamówienie / Dostępny od ręki */

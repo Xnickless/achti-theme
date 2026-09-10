@@ -130,18 +130,21 @@
     .header--inline-search .header__icons .header__search { display: none; }
     .header--top-left .header__inline-menu > .list-menu--inline { justify-content: flex-end; flex-wrap: nowrap; }
     .header--top-left .header__inline-menu { margin-left: 0; margin-right: -1.2rem; }
+    /* 10.09.2026: niższy nagłówek — logo po lewej, menu pośrodku, ikony po prawej w jednym wierszu; pod spodem wyszukiwarka */
     .header--inline-search.header--top-left:not(.drawer-menu) {
       grid-template-areas:
-        '. heading icons'
-        'navigation navigation navigation'
+        'heading navigation icons'
         'inline-search inline-search inline-search';
-      grid-template-columns: 1fr auto 1fr;
-      row-gap: 2rem;
+      grid-template-columns: auto 1fr auto;
+      column-gap: 3rem;
+      align-items: center;
+      row-gap: 1.2rem;
     }
-    .header--inline-search.header--top-left:not(.drawer-menu) .header__menu-item { font-size: 1.7rem; padding-left: 1.4rem; padding-right: 1.4rem; }
+    .header--inline-search.header--top-left:not(.drawer-menu) .header__menu-item { font-size: 1.6rem; padding-left: 1.2rem; padding-right: 1.2rem; }
     .header--inline-search .header__inline-search-input { font-size: 1.6rem; }
     .header--inline-search.header--top-left:not(.drawer-menu) .header__heading,
-    .header--inline-search.header--top-left:not(.drawer-menu) .header__heading-link { justify-self: center; margin-left: 0; }
+    .header--inline-search.header--top-left:not(.drawer-menu) .header__heading-link { justify-self: start; margin-left: 0; }
+    .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-menu > .list-menu--inline { flex-wrap: nowrap; }
     .header--inline-search.header--top-left:not(.drawer-menu) .header__icons { justify-self: end; }
     .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-menu { margin: 0; justify-self: center; }
     .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-menu > .list-menu--inline { justify-content: center; flex-wrap: wrap; }
