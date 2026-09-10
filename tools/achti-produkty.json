@@ -7730,7 +7730,8 @@
    "damskie",
    "grupa-g12",
    "lambslook",
-   "meskie"
+   "meskie",
+   "nowosc"
   ],
   "size": "One Size",
   "materials": [
@@ -7755,6 +7756,7 @@
   "tags": [
    "damskie",
    "grupa-g5",
+   "nowosc",
    "verona"
   ],
   "size": "One Size",
@@ -7781,6 +7783,7 @@
    "damskie",
    "grupa-g5",
    "lurex",
+   "nowosc",
    "verona"
   ],
   "size": "One Size",
@@ -7807,6 +7810,7 @@
   "tags": [
    "damskie",
    "grupa-g5",
+   "nowosc",
    "verona"
   ],
   "size": "One Size",
@@ -7832,6 +7836,7 @@
   "tags": [
    "damskie",
    "grupa-g5",
+   "nowosc",
    "verona"
   ],
   "size": "One Size",
@@ -7857,6 +7862,7 @@
   "tags": [
    "damskie",
    "grupa-g5",
+   "nowosc",
    "vezuv"
   ],
   "size": "One Size",
@@ -7882,6 +7888,7 @@
   "tags": [
    "damskie",
    "grupa-g5",
+   "nowosc",
    "verona"
   ],
   "size": "One Size",
@@ -7907,6 +7914,7 @@
   "tags": [
    "damskie",
    "grupa-g5",
+   "nowosc",
    "verona"
   ],
   "size": "One Size",
@@ -7932,6 +7940,7 @@
   "tags": [
    "damskie",
    "grupa-g5",
+   "nowosc",
    "verona"
   ],
   "size": "One Size",
@@ -7957,6 +7966,7 @@
   "tags": [
    "damskie",
    "grupa-g3",
+   "nowosc",
    "vezuv",
    "vinci"
   ],
@@ -7984,7 +7994,8 @@
   "tags": [
    "damskie",
    "grupa-g12",
-   "lambslook"
+   "lambslook",
+   "nowosc"
   ],
   "size": "One Size",
   "materials": [
@@ -8086,6 +8097,7 @@
   "tags": [
    "damskie",
    "grupa-g3",
+   "nowosc",
    "verona"
   ],
   "size": "One Size",
