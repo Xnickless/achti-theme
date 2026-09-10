@@ -151,8 +151,11 @@
     /* Przyklejony nagłówek po przewinięciu (sticky „zawsze”): zostaje sam pasek z nazwami kategorii — bez logo, ikon i wyszukiwarki (10.09.2026) */
     .header__heading-logo-wrapper { transition: width 0.2s ease; }
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search .header__inline-search { display: none; }
-    .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) { grid-template-areas: 'heading navigation icons'; grid-template-columns: auto 1fr auto; column-gap: 3rem; align-items: center; row-gap: 0; padding-top: 0.4rem; padding-bottom: 0.4rem; }
+    .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) { grid-template-areas: 'heading navigation icons'; grid-template-columns: auto 1fr auto; column-gap: 2rem; align-items: center; row-gap: 0; padding-top: 0.4rem; padding-bottom: 0.4rem; }
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) .header__icons { justify-self: end; }
+    .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-menu > .list-menu--inline { flex-wrap: nowrap; }
+    .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) .header__menu-item { font-size: 1.5rem; padding-left: 1.1rem; padding-right: 1.1rem; }
+    .shopify-section-header-sticky.scrolled-past-header .header--inline-search .header__heading-logo-wrapper { width: 42%; }
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) .header__heading,
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) .header__heading-link { justify-self: start; }
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search .header__heading-logo-wrapper { width: 50%; }
