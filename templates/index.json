@@ -3,6 +3,13 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Czapki, kominy i kominiarki dla Twojego sklepu",
+            "heading_size": "h1"
+          }
+        },
         "button": {
           "type": "buttons",
           "settings": {
@@ -17,6 +24,7 @@
         }
       },
       "block_order": [
+        "heading",
         "button"
       ],
       "settings": {

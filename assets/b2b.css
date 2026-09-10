@@ -561,3 +561,20 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .multicolumn.color-scheme-3 .title-wrapper-with-link { justify-content: center; text-align: center; padding-bottom: 1.6rem; margin-bottom: 3.2rem; border-bottom: 1px solid rgba(var(--color-foreground), 0.18); }
 .multicolumn.color-scheme-3 .title-wrapper-with-link .title { margin: 0; }
 
+
+/* Hero na stronie głównej (10.09.2026): nagłówek w prawej części zdjęcia na tle budynku, przycisk „Sprawdź ofertę” na środku u dołu */
+@media screen and (min-width: 990px) {
+  [id$="__image_banner"] .banner__content { max-width: none; }
+  [id$="__image_banner"] .banner__box { position: static; }
+  [id$="__image_banner"] .banner__heading {
+    position: absolute;
+    right: 5rem;
+    bottom: 24%;
+    width: 46rem;
+    margin: 0;
+    text-align: left;
+    font-size: calc(var(--font-heading-scale) * 3.8rem);
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+}
