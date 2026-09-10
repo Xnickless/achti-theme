@@ -368,7 +368,8 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .fc-marquee--running .fc-marquee__track .card__heading,
 .fc-marquee--static .fc-marquee__track .card__heading { min-height: 2.6em; }
 .fc-marquee--running .fc-marquee__track {
-  /* pozycję ustawia fc-marquee.js (transform), dzięki temu taśmę da się przeciągać palcem i myszką */
+  /* pozycję ustawia fc-marquee.js (transform), dzięki temu taśmę da się przeciągać palcem i myszką;
+     will-change trzyma taśmę na warstwie GPU, więc przewijanie palcem jest płynne */
   will-change: transform;
   touch-action: pan-y;
   cursor: grab;

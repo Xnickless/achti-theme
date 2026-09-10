@@ -11,8 +11,25 @@ class FcMarquee extends HTMLElement {
     this.originals = Array.from(this.track.children);
     this.pos = 0;
     this.loop = 0;
+    this.fling = 0; // prędkość wybiegu po puszczeniu palca (px/s)
     this.toggle.addEventListener('click', () => (this.expanded ? this.collapse() : this.expand()));
     this.bindDrag();
+    this.visible = true;
+    // poza ekranem taśma stoi — telefon nie liczy klatek dla niewidocznej sekcji, reszta strony przewija się płynniej
+    if ('IntersectionObserver' in window) {
+      this.io = new IntersectionObserver(
+        (entries) => {
+          this.visible = entries[0].isIntersecting;
+          if (this.visible && !this.running && !this.reduced && this.loop) {
+            this.running = true;
+            this.last = null;
+            requestAnimationFrame((ts) => this.tick(ts));
+          }
+        },
+        { rootMargin: '200px 0px' }
+      );
+      this.io.observe(this);
+    }
     if (this.reduced) {
       this.classList.remove('fc-marquee--running');
       this.classList.add('fc-marquee--static');
@@ -25,6 +42,7 @@ class FcMarquee extends HTMLElement {
 
   disconnectedCallback() {
     this.running = false;
+    if (this.io) this.io.disconnect();
     if (this.onResize) window.removeEventListener('resize', this.onResize);
   }
 
@@ -60,10 +78,27 @@ class FcMarquee extends HTMLElement {
 
   tick(ts) {
     if (!this.running) return;
-    if (this.last != null && !this.dragging && !this.hovered && !this.expanded && this.loop) {
+    if (this.visible === false && !this.dragging) {
+      this.running = false; // wznowi IntersectionObserver, gdy sekcja wróci na ekran
+      return;
+    }
+    if (this.last != null && !this.dragging && !this.expanded && this.loop) {
       const dt = Math.min(ts - this.last, 100) / 1000; // po powrocie do karty nie przeskakuj
-      this.pos -= this.speed * dt;
-      this.wrap();
+      if (Math.abs(this.fling) > 1) {
+        // wybieg po puszczeniu palca: taśma jedzie dalej i wytraca prędkość
+        this.pos += this.fling * dt;
+        this.fling *= Math.pow(0.06, dt); // ~94% wytracenia na sekundę
+        if (Math.abs(this.fling) <= 1) this.fling = 0;
+        this.wrap();
+        this.apply();
+      } else if (!this.hovered) {
+        this.pos -= this.speed * dt;
+        this.wrap();
+        this.apply();
+      }
+    }
+    if (this.dragging && this.needsApply) {
+      this.needsApply = false;
       this.apply();
     }
     this.last = ts;
@@ -95,6 +130,10 @@ class FcMarquee extends HTMLElement {
       this.dragStartX = e.clientX;
       this.dragStartPos = this.pos;
       this.dragPointer = e.pointerId;
+      this.fling = 0;
+      this.lastX = e.clientX;
+      this.lastT = e.timeStamp || performance.now();
+      this.velocity = 0;
       // UWAGA: bez setPointerCapture na starcie — przechwycenie wskaźnika sprawia, że zwykłe kliknięcie
       // trafia w taśmę zamiast w link produktu. Przechwytujemy dopiero, gdy ruch przekroczy próg (prawdziwe przeciąganie).
     });
@@ -107,15 +146,25 @@ class FcMarquee extends HTMLElement {
         this.classList.add('fc-marquee--dragging');
         try { this.track.setPointerCapture(e.pointerId); } catch (err) { /* stare przeglądarki */ }
       }
+      const now = e.timeStamp || performance.now();
+      const dt = now - this.lastT;
+      if (dt > 0) {
+        const v = ((e.clientX - this.lastX) / dt) * 1000; // px na sekundę
+        this.velocity = this.velocity ? this.velocity * 0.7 + v * 0.3 : v; // wygładzenie
+        this.lastX = e.clientX;
+        this.lastT = now;
+      }
       this.pos = this.dragStartPos + dx;
       this.wrap();
-      this.apply();
+      this.needsApply = true; // transform ustawia klatka animacji, nie każde zdarzenie pointermove
     });
     const end = (e) => {
       if (!this.dragging || e.pointerId !== this.dragPointer) return;
       this.dragging = false;
       this.classList.remove('fc-marquee--dragging');
       if (this.moved) {
+        // wybieg: maksymalnie 4000 px/s, poniżej 60 px/s traktujemy jako zatrzymanie
+        this.fling = Math.abs(this.velocity) > 60 ? Math.max(-4000, Math.min(4000, this.velocity)) : 0;
         try { this.track.releasePointerCapture(e.pointerId); } catch (err) { /* ignoruj */ }
         // przeciągnięcie nie może otworzyć produktu — zjedz najbliższy klik
         const swallow = (ev) => { ev.preventDefault(); ev.stopPropagation(); };
