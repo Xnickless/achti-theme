@@ -205,7 +205,7 @@
         "products_to_show": 24,
         "title": "<strong>Nowości</strong>",
         "heading_size": "h2",
-        "description": "<p>Ostatnio dodane modele — kliknij, aby zobaczyć szczegóły</p>",
+        "description": "",
         "show_description": false,
         "description_style": "body",
         "columns_desktop": 4,
