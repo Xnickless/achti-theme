@@ -328,17 +328,17 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 }
 .shopify-section-header-sticky.scrolled-past-header .header-wrapper::after { height: 4.5rem; }
 
-/* Kafelki na pasie Nowości: półprzezroczysta biel zamiast pełnej, zdjęcie zmieszane z kafelkiem (biel zdjęcia = kolor kafelka) */
-.collection--marquee .card--card,
-.collection--marquee .card--card .card__inner,
-.collection--marquee .card--card .card__inner .card__media { background: transparent; }
-/* .card ma transform (animacja hover), więc jest kontekstem warstw: tło musi być na .card i kryjące (#e8e3de = beż pasa + 62% bieli),
-   wtedy multiply zamienia biel zdjęcia dokładnie w kolor kafelka */
-.collection--marquee .card--card { background: #e8e3de; border-radius: 0.8rem; }
-.collection--marquee .card--card .card__inner,
-.collection--marquee .card--card .card__inner .card__media,
-.collection--marquee .card--card .card__inner .card__media .media { z-index: auto; isolation: auto; }
-.collection--marquee .card--card .card__inner .card__media { mix-blend-mode: multiply; }
+/* Kafelki produktów wszędzie (listing, wyszukiwarka, Bestsellery, polecane, taśma Nowości): kryjący jasny beż (#e8e3de)
+   i zdjęcie w mix-blend-mode: multiply — biel zdjęcia zamienia się dokładnie w kolor kafelka, czapka „stoi” na tle.
+   .card ma transform (animacja hover), więc jest kontekstem warstw: tło musi być na .card, a kontenery zdjęcia bez z-index. */
+.product-card-wrapper .card--card,
+.product-card-wrapper .card--card .card__inner,
+.product-card-wrapper .card--card .card__inner .card__media { background: transparent; }
+.product-card-wrapper .card--card { background: #e8e3de; border-radius: 0.8rem; }
+.product-card-wrapper .card--card .card__inner,
+.product-card-wrapper .card--card .card__inner .card__media,
+.product-card-wrapper .card--card .card__inner .card__media .media { z-index: auto; isolation: auto; }
+.product-card-wrapper .card--card .card__inner .card__media { mix-blend-mode: multiply; }
 
 /* Przewijana taśma produktów (featured-collection, ustawienie „marquee”) */
 .fc-marquee { display: block; }
