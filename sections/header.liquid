@@ -579,6 +579,21 @@
   </script>
 {%- endif -%}
 
+<script>
+  // Strefa zanikania pod przyklejonym nagłówkiem tylko po przewinięciu (na górze strony tytuł ma być ostry)
+  (function () {
+    var sec = document.currentScript.closest('.shopify-section');
+    if (!sec) return;
+    var ticking = false;
+    function update() {
+      ticking = false;
+      sec.classList.toggle('header--scrolled', window.scrollY > 24);
+    }
+    window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    update();
+  })();
+</script>
+
 {% schema %}
 {
   "name": "t:sections.header.name",
