@@ -552,7 +552,10 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
   .b2b-page .rte { text-align: justify; hyphens: auto; -webkit-hyphens: auto; text-wrap: pretty; }
 }
 
-/* Multicolumn na beżowym pasie (np. „Twój Partner w Produkcji Czapek”): kafelki w jasnym beżu jak kafelki produktów */
+/* Multicolumn na beżowym pasie („Twój Partner w Produkcji Czapek”): jak pas Nowości — jasne kafelki #e8e3de, nagłówek na środku z linią.
+   Motyw nakłada na kafelki gradient (.multicolumn.background-primary .multicolumn-card), stąd mocniejszy selektor. */
 .multicolumn.color-scheme-3 .multicolumn-card,
-.color-scheme-3 .multicolumn-card { background: #e8e3de; border-radius: 0.8rem; }
-.color-scheme-3 .multicolumn-card .multicolumn-card__info { padding: 2.4rem; }
+.multicolumn.color-scheme-3.background-primary .multicolumn-card { background: #e8e3de; border-radius: 0.8rem; }
+.multicolumn.color-scheme-3 .multicolumn-card__info { padding: 2.4rem 2.4rem 2.8rem; }
+.multicolumn.color-scheme-3 .title-wrapper-with-link { justify-content: center; text-align: center; padding-bottom: 1.6rem; margin-bottom: 3.2rem; border-bottom: 1px solid rgba(var(--color-foreground), 0.18); }
+.multicolumn.color-scheme-3 .title-wrapper-with-link .title { margin: 0; }
