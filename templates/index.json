@@ -3,20 +3,6 @@
     "image_banner": {
       "type": "image-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Czapki, kominy i kominiarki dla Twojego sklepu",
-            "heading_size": "h1"
-          }
-        },
-        "tagline": {
-          "type": "text",
-          "settings": {
-            "text": "Ceny hurtowe dla firm — produkcja w Polsce, także private label.",
-            "text_style": "subtitle"
-          }
-        },
         "button": {
           "type": "buttons",
           "settings": {
@@ -31,8 +17,6 @@
         }
       },
       "block_order": [
-        "heading",
-        "tagline",
         "button"
       ],
       "settings": {

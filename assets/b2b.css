@@ -560,3 +560,4 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .multicolumn.color-scheme-3 .multicolumn-card__info { padding: 2.4rem 2.4rem 2.8rem; }
 .multicolumn.color-scheme-3 .title-wrapper-with-link { justify-content: center; text-align: center; padding-bottom: 1.6rem; margin-bottom: 3.2rem; border-bottom: 1px solid rgba(var(--color-foreground), 0.18); }
 .multicolumn.color-scheme-3 .title-wrapper-with-link .title { margin: 0; }
+
