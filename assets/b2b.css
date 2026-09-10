@@ -265,6 +265,7 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
 @media screen and (min-width: 990px) {
   .header__inline-search-form { min-height: 4.6rem; height: 4.6rem; }
   .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-search { width: 52rem; margin: 0.2rem auto 0; }
+  .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-search { margin: 0 auto; }
   .header__inline-menu .list-menu__item { padding-top: 0.8rem; padding-bottom: 0.8rem; }
 }
 
