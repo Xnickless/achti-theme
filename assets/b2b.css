@@ -566,7 +566,8 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
    Pudełko treści rozciągnięte na całą szerokość i podzielone siatką 3 kolumn: nagłówek w 3. kolumnie, przycisk w wierszu pod spodem na środku. */
 @media screen and (min-width: 990px) {
   [id$="__image_banner"] .banner__content { max-width: none; padding-left: 5rem; padding-right: 2.4rem; }
-  [id$="__image_banner"] .banner__box {
+  [id$="__image_banner"] .banner__content .banner__box,
+  [id$="__image_banner"] .banner--desktop-transparent .banner__box {
     width: 100%; max-width: none; padding-left: 0; padding-right: 0;
     display: grid; grid-template-columns: 1fr 1fr 1fr; row-gap: 3.2rem; align-items: end;
   }
