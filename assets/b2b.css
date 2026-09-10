@@ -562,19 +562,17 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .multicolumn.color-scheme-3 .title-wrapper-with-link .title { margin: 0; }
 
 
-/* Hero na stronie głównej (10.09.2026): nagłówek w prawej części zdjęcia na tle budynku, przycisk „Sprawdź ofertę” na środku u dołu */
+/* Hero na stronie głównej (10.09.2026): nagłówek w prawej trzeciej części zdjęcia (tło budynku), przycisk „Sprawdź ofertę” na środku u dołu.
+   Pudełko treści rozciągnięte na całą szerokość i podzielone siatką 3 kolumn: nagłówek w 3. kolumnie, przycisk w wierszu pod spodem na środku. */
 @media screen and (min-width: 990px) {
-  [id$="__image_banner"] .banner__content { max-width: none; }
-  [id$="__image_banner"] .banner__box { position: static; }
-  [id$="__image_banner"] .banner__heading {
-    position: absolute;
-    right: 5rem;
-    bottom: 24%;
-    width: 46rem;
-    margin: 0;
-    text-align: left;
-    font-size: calc(var(--font-heading-scale) * 3.8rem);
-    line-height: 1.15;
-    text-wrap: balance;
+  [id$="__image_banner"] .banner__content { max-width: none; padding-left: 5rem; padding-right: 2.4rem; }
+  [id$="__image_banner"] .banner__box {
+    width: 100%; max-width: none; padding-left: 0; padding-right: 0;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; row-gap: 3.2rem; align-items: end;
   }
+  [id$="__image_banner"] .banner__heading {
+    grid-column: 3; justify-self: end; width: 100%; max-width: 40rem; margin: 0; text-align: left;
+    font-size: calc(var(--font-heading-scale) * 3.6rem); line-height: 1.15; text-wrap: balance;
+  }
+  [id$="__image_banner"] .banner__buttons { grid-column: 1 / -1; justify-self: center; margin: 0; }
 }
