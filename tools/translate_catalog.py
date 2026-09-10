@@ -18,11 +18,14 @@ def mat(m, loc):
 
 SEG = {  # segword -> (title prefix, "who" phrase)
     'en': {'Damska': ("Women's Winter Beanie", 'a women’s model'), 'Dziecięca': ("Kids' Winter Beanie", 'a children’s model'),
+           'Męska': ("Men's Winter Beanie", 'a men’s model'), 'Unisex': ('Unisex Winter Beanie', 'a unisex model'),
            'Chłopięca': ("Boys' Winter Beanie", 'a boys’ model'), 'Dziewczęca': ("Girls' Winter Beanie", 'a girls’ model')},
     'fr': {'Damska': ("Bonnet d'hiver femme", 'un modèle femme'), 'Dziecięca': ("Bonnet d'hiver enfant", 'un modèle enfant'),
+           'Męska': ("Bonnet d'hiver homme", 'un modèle homme'), 'Unisex': ("Bonnet d'hiver unisexe", 'un modèle unisexe'),
            'Chłopięca': ("Bonnet d'hiver garçon", 'un modèle garçon'), 'Dziewczęca': ("Bonnet d'hiver fille", 'un modèle fille')},
-    'de': {'Damska': ('Damen-Wintermütze Beanie', 'ein Damenmodell'), 'Dziecięca': ('Kinder-Wintermütze Beanie', 'ein Kindermodell'),
-           'Chłopięca': ('Jungen-Wintermütze Beanie', 'ein Jungenmodell'), 'Dziewczęca': ('Mädchen-Wintermütze Beanie', 'ein Mädchenmodell')},
+    'de': {'Damska': ('Damen-Wintermütze', 'ein Damenmodell'), 'Dziecięca': ('Kinder-Wintermütze', 'ein Kindermodell'),
+           'Męska': ('Herren-Wintermütze', 'ein Herrenmodell'), 'Unisex': ('Unisex-Wintermütze', 'ein Unisex-Modell'),
+           'Chłopięca': ('Jungen-Wintermütze', 'ein Jungenmodell'), 'Dziewczęca': ('Mädchen-Wintermütze', 'ein Mädchenmodell')},
 }
 KOMIN = {'en': "Women's Winter Snood", 'fr': "Snood d'hiver femme", 'de': 'Damen-Winterloop'}
 SUFFIX = {'z Cekinami': {'en': 'with Sequins', 'fr': 'à sequins', 'de': 'mit Pailletten'},
@@ -39,7 +42,7 @@ T = {
     intro_headband="Winter headband {city} is a women’s model knitted from {mat}{lining} that keeps ears and forehead warm without flattening the hair. It works for walks, running and everyday wear, and its classic look goes easily with winter outfits.",
     f_headband=['Soft, stretchy knit', 'Covers the ears without flattening the hair', 'One size fits all', 'Perfect for the autumn–winter season'],
     composition='Composition', lining='Lining',
-    f_size='Size {size}', f_sequins='Sequin embellishment', f_multi='Multicolour pattern', one_size='One Size', soft='soft knit', and_=' and ',
+    f_size='Size {size}', f_sequins='Sequin embellishment', f_multi='Multicolour pattern', one_size='One Size', one_size_feat='One size fits all', soft='soft knit', and_=' and ',
  ),
  'fr': dict(
     intro_hat="Le bonnet d'hiver {city} est {who} en maille {mat}{lining}, qui allie une coupe classique au confort au quotidien. Il garde bien sa forme, il est chaud et léger, et son style intemporel s'accorde facilement aux tenues d'hiver.",
@@ -51,7 +54,7 @@ T = {
     intro_headband="Le bandeau d'hiver {city} est un modèle femme en maille {mat}{lining} qui protège les oreilles et le front du froid sans aplatir la coiffure. Il convient à la promenade, à la course et au quotidien, et son style classique s'accorde facilement aux tenues d'hiver.",
     f_headband=['Maille douce et élastique', 'Couvre les oreilles sans aplatir la coiffure', 'Taille unique', 'Idéal pour la saison automne–hiver'],
     composition='Composition', lining='Doublure',
-    f_size='Taille {size}', f_sequins='Décor à sequins', f_multi='Motif multicolore', one_size='Taille unique', soft='maille douce', and_=' et ',
+    f_size='Taille {size}', f_sequins='Décor à sequins', f_multi='Motif multicolore', one_size='Taille unique', one_size_feat='Taille unique', soft='maille douce', and_=' et ',
  ),
  'de': dict(
     intro_hat="Die Wintermütze {city} ist {who} aus {mat}-Strick{lining}, das eine klassische Form mit hohem Tragekomfort verbindet. Sie behält ihre Form, ist warm und leicht, und ihr zeitloses Aussehen lässt sich leicht mit Winteroutfits kombinieren.",
@@ -63,7 +66,7 @@ T = {
     intro_headband="Das Winterstirnband {city} ist ein Damenmodell aus {mat}-Strick{lining}, das Ohren und Stirn warm hält, ohne die Frisur plattzudrücken. Es eignet sich für Spaziergänge, zum Laufen und für den Alltag, und sein klassischer Look lässt sich leicht mit Winteroutfits kombinieren.",
     f_headband=['Weicher, elastischer Strick', 'Bedeckt die Ohren, ohne die Frisur plattzudrücken', 'Einheitsgröße', 'Ideal für die Herbst-Winter-Saison'],
     composition='Zusammensetzung', lining='Futter',
-    f_size='Größe {size}', f_sequins='Paillettenverzierung', f_multi='Mehrfarbiges Muster', one_size='Einheitsgröße', soft='weichem Strick', and_=' und ',
+    f_size='Größe {size}', f_sequins='Paillettenverzierung', f_multi='Mehrfarbiges Muster', one_size='Einheitsgröße', one_size_feat='Einheitsgröße', soft='weichem Strick', and_=' und ',
  ),
 }
 
@@ -112,55 +115,61 @@ def comp(sklad, loc):
     else: out = re.sub(r'(\d)%', r'\1 %', out)
     return out
 
+OPIS_OVERRIDES_PATH = os.path.join(OUT, 'opis-overrides.json')  # ręczne tłumaczenia własnych opisów Adriana: {kod: {en: [akapity], fr: [...], de: [...]}}
+OPIS_OVERRIDES = json.load(open(OPIS_OVERRIDES_PATH, encoding='utf-8')) if os.path.exists(OPIS_OVERRIDES_PATH) else {}
+
 def translate_product(p, loc):
     t = T[loc]
-    m = RX.match(p['title'])
-    if not m:
-        return None
-    is_snood = m.group(1).startswith('Komin')
-    is_headband = m.group(1).startswith('Opaska')
-    seg = m.group(2) or 'Damska'
-    city = m.group(3)
-    suffixes = []
-    if m.group(4): suffixes.append(SUFFIX['z Cekinami'][loc])
-    if m.group(5): suffixes.append(SUFFIX['Multikolor'][loc])
+    if p.get('name'):
+        name, seg, kind, flags = p['name'], p.get('segment', 'Damska'), p.get('product_type', 'Czapka'), set(p.get('flags') or [])
+        variant = None
+    else:  # stare wpisy z tytułem roboczym „Czapka Zimowa Damska Beanie Milano (Turbo)”
+        m = RX.match(p['title'])
+        if not m: return None
+        kind = 'Komin' if m.group(1).startswith('Komin') else 'Opaska' if m.group(1).startswith('Opaska') else 'Czapka'
+        seg = m.group(2) or 'Damska'; name = m.group(3)
+        flags = {f for f, g in (('CEKIN', 4), ('MULTI', 5)) if m.group(g)}
+        if m.group(6) == 'bez pompona': flags.add('BEZ POMPONA')
+        variant = m.group(6)
+    is_snood, is_headband = kind == 'Komin', kind == 'Opaska'
     mats = [mat(x, loc) for x in p['materials']]
     mat_txt = t['and_'].join(mats) if mats else t['soft']
     size = p['size']
     lin = LINING.get(p.get('podszycie') or '', {}).get(loc)
     lining_phrase = lin[0] if lin else ''
+    size_feat = t['one_size_feat'] if size == 'One Size' else t['f_size'].format(size=size)
     if is_snood:
-        title = f"{KOMIN[loc]} {city}"
-        intro = t['intro_snood'].format(city=city, mat=mat_txt, lining=lining_phrase)
-        feats = list(t['f_snood'])
+        title = f"{KOMIN[loc]} {name}"
+        intro = t['intro_snood'].format(city=name, mat=mat_txt, lining=lining_phrase)
+        feats = list(t['f_snood']); feats[2] = size_feat
     elif is_headband:
-        title = f"{HEADBAND[loc]} {city}"
-        intro = t['intro_headband'].format(city=city, mat=mat_txt, lining=lining_phrase)
-        feats = list(t['f_headband'])
-        if size != 'One Size': feats[2] = t['f_size'].format(size=size)
+        title = f"{HEADBAND[loc]} {name}"
+        intro = t['intro_headband'].format(city=name, mat=mat_txt, lining=lining_phrase)
+        feats = list(t['f_headband']); feats[2] = size_feat
     else:
         prefix, who = SEG[loc][seg]
-        title = f"{prefix} {city}"
-        intro = t['intro_hat'].format(city=city, who=who, mat=mat_txt, lining=lining_phrase)
-        feats = list(t['f_hat'])
-        if size != 'One Size':
-            feats[2] = t['f_size'].format(size=size)
-        if m.group(5): feats.insert(1, t['f_multi'])
-        if m.group(4): feats.insert(1, t['f_sequins'])
-        if m.group(6) == 'bez pompona': feats.insert(1, F_NOPOM[loc])
+        title = f"{prefix} {name}"
+        intro = t['intro_hat'].format(city=name, who=who, mat=mat_txt, lining=lining_phrase)
+        feats = list(t['f_hat']); feats[2] = size_feat
+        if 'MULTI' in flags: feats.insert(1, t['f_multi'])
+        if 'CEKIN' in flags: feats.insert(1, t['f_sequins'])
+        if 'BEZ POMPONA' in flags: feats.insert(1, F_NOPOM[loc])
     if lin: feats.insert(-2, lin[1])
-    if suffixes:
-        title += ' ' + ' '.join(suffixes)
-    if m.group(6):
-        title += f" ({VARIANT[m.group(6)][loc]})"
+    if variant:  # tylko stare tytuły robocze
+        sfx = [SUFFIX[k][loc] for k, f in (('z Cekinami', 'CEKIN'), ('Multikolor', 'MULTI')) if f in flags]
+        if sfx: title += ' ' + ' '.join(sfx)
+        title += f" ({VARIANT[variant][loc]})"
     size_txt = t['one_size'] if size == 'One Size' else size
     sklad = comp(p.get('sklad'), loc)
-    spec = [f"{t['model']}: {city}", f"{t['code']}: {p['code']}", f"{t['material']}: {', '.join(mats) if mats else '—'}"]
+    spec = [f"{t['model']}: {name}", f"{t['code']}: {p['code']}", f"{t['material']}: {', '.join(mats) if mats else '—'}"]
     if sklad: spec.append(f"{t['composition']}: {sklad}")
     if lin: spec.append(f"{t['lining']}: {lin[2]}")
     spec += [f"{t['size']}: {size_txt}", f"{t['season']}: {t['season_v']}"]
-    body = (f"<p>{intro}</p><p>{t['range_'].format(city=city)}</p><p><strong>{t['features']}</strong><br>"
-            + '<br>'.join('✔ ' + f for f in feats)
+    ov = OPIS_OVERRIDES.get(p['code'], {}).get(loc)
+    if p.get('opis') and not ov:
+        print(f"  UWAGA {loc}: brak tłumaczenia własnego opisu {p['code']} w {OPIS_OVERRIDES_PATH} — użyty szablon")
+    head = ''.join(f'<p>{x}</p>' for x in ov) if ov else f"<p>{intro}</p><p>{t['range_'].format(city=name)}</p>"
+    body = (head + f"<p><strong>{t['features']}</strong><br>" + '<br>'.join('✔ ' + f for f in feats)
             + f"</p><p><strong>{t['spec']}</strong></p><ul>" + ''.join(f'<li>{x}</li>' for x in spec) + "</ul>")
     return {'title': title, 'body_html': body, 'metafields': {'custom.rozmiar': size_txt, 'custom.sklad': sklad or ', '.join(mats)}}
 
