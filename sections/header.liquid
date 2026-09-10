@@ -136,8 +136,11 @@
         'navigation navigation navigation'
         'inline-search inline-search inline-search';
       grid-template-columns: 1fr auto 1fr;
-      row-gap: 1.4rem;
+      row-gap: 2rem;
     }
+    .header--inline-search.header--top-left:not(.drawer-menu) .header__menu-item { font-size: 1.7rem; padding: 1.2rem 1.4rem; }
+    .header--inline-search .header__inline-search { width: 52rem; }
+    .header--inline-search .header__inline-search-input { min-height: 5rem; font-size: 1.6rem; }
     .header--inline-search.header--top-left:not(.drawer-menu) .header__heading,
     .header--inline-search.header--top-left:not(.drawer-menu) .header__heading-link { justify-self: center; margin-left: 0; }
     .header--inline-search.header--top-left:not(.drawer-menu) .header__icons { justify-self: end; }
