@@ -299,16 +299,19 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
   .collection--marquee .collection__title { padding-bottom: 1.2rem; margin-bottom: 2.4rem; }
   .collection--marquee .collection__title .collection__description { font-size: 1.2rem; }
 }
-/* Dół hero na stronie głównej przechodzi w beż następnego pasa (scheme-3); ::before w .banner__media leży nad zdjęciem, pod treścią */
+/* Hero na stronie głównej: u góry zanika w biel nagłówka, u dołu przechodzi w beż następnego pasa (scheme-3);
+   ::before w .banner__media leży nad zdjęciem, pod treścią. Kreska pod nagłówkiem znika na stronie z hero. */
 [id$="__image_banner"] .banner__media::before {
   content: "";
   position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 22%;
-  background: linear-gradient(to bottom, rgba(194, 183, 172, 0) 0%, rgba(194, 183, 172, 0.5) 55%, #c2b7ac 100%);
+  inset: 0;
+  background:
+    linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0.85) 10%, rgba(255, 255, 255, 0.45) 22%, rgba(255, 255, 255, 0) 38%),
+    linear-gradient(to top, #c2b7ac 0%, rgba(194, 183, 172, 0.5) 10%, rgba(194, 183, 172, 0) 22%);
   pointer-events: none;
   z-index: 2;
 }
+body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 
 /* Przewijana taśma produktów (featured-collection, ustawienie „marquee”) */
 .fc-marquee { display: block; }
