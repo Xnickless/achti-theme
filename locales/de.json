@@ -635,6 +635,10 @@
     },
     "producer": {
       "model": "Modell"
+    },
+    "currency": {
+      "label": "Anzeigewährung",
+      "note": "Richtwert nach EZB-Kurs. Abgerechnet wird in {{ currency }}."
     }
   }
 }

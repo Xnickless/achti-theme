@@ -1,0 +1,25 @@
+{%- comment -%}
+  Przełącznik podglądu waluty (PLN / EUR / USD). Przeliczenie orientacyjne — koszyk i zamówienie
+  zostają w walucie sklepu. Logika w assets/b2b-currency.js.
+{%- endcomment -%}
+{%- assign shop_currency = cart.currency.iso_code | default: shop.currency -%}
+<details class="b2b-currency" data-base="{{ shop_currency }}">
+  <summary class="b2b-currency__toggle" aria-label="{{ 'b2b.currency.label' | t }}">
+    <span class="b2b-currency__value">{{ shop_currency }}</span>
+    <span class="svg-wrapper b2b-currency__caret">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+  </summary>
+  <div class="b2b-currency__panel">
+    <p class="b2b-currency__heading">{{ 'b2b.currency.label' | t }}</p>
+    <ul class="b2b-currency__list" role="list">
+      {%- assign codes = 'PLN,EUR,USD' | split: ',' -%}
+      {%- for code in codes -%}
+        <li>
+          <button type="button" class="b2b-currency__option" data-currency="{{ code }}" aria-current="false">
+            {{ code }}
+          </button>
+        </li>
+      {%- endfor -%}
+    </ul>
+    <p class="b2b-currency__note">{{ 'b2b.currency.note' | t: currency: shop_currency }}</p>
+  </div>
+</details>

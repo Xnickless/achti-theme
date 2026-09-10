@@ -647,6 +647,10 @@
     },
     "producer": {
       "model": "Modèle"
+    },
+    "currency": {
+      "label": "Devise d'affichage",
+      "note": "Taux indicatif BCE. Les commandes sont réglées en {{ currency }}."
     }
   }
 }

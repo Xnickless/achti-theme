@@ -659,6 +659,10 @@
     },
     "producer": {
       "model": "Model"
+    },
+    "currency": {
+      "label": "Waluta podglądu",
+      "note": "Kurs orientacyjny (EBC). Zamówienia rozliczamy w {{ currency }}."
     }
   }
 }

@@ -575,3 +575,123 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
   }
   [id$="__image_banner"] .banner__buttons { grid-column: 1 / -1; justify-self: center; margin: 0; }
 }
+
+/* ── Przełącznik waluty w nagłówku (podgląd PLN / EUR / USD) ─────────────── */
+.b2b-currency {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.b2b-currency__toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  color: rgb(var(--color-foreground));
+  cursor: pointer;
+  list-style: none;
+  border-radius: 0.4rem;
+  white-space: nowrap;
+}
+
+.b2b-currency__toggle::-webkit-details-marker {
+  display: none;
+}
+
+.b2b-currency__toggle:hover {
+  background: rgba(var(--color-foreground), 0.05);
+}
+
+.b2b-currency__caret svg {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.b2b-currency[open] .b2b-currency__caret svg {
+  transform: rotate(180deg);
+}
+
+.b2b-currency--converted .b2b-currency__value::after {
+  content: '≈';
+  margin-left: 0.3rem;
+  opacity: 0.6;
+}
+
+.b2b-currency__panel {
+  position: absolute;
+  top: calc(100% + 0.8rem);
+  right: 0;
+  z-index: 5;
+  min-width: 20rem;
+  padding: 1.2rem 1.4rem 1.4rem;
+  background: rgb(var(--color-background));
+  border: 0.1rem solid rgba(var(--color-foreground), 0.12);
+  border-radius: 0.6rem;
+  box-shadow: 0 1.2rem 2.4rem rgba(var(--color-foreground), 0.08);
+}
+
+.b2b-currency__heading {
+  margin: 0 0 0.8rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.b2b-currency__list {
+  display: flex;
+  gap: 0.6rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.b2b-currency__option {
+  padding: 0.6rem 1.2rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  color: rgb(var(--color-foreground));
+  background: transparent;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.15);
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.b2b-currency__option:hover {
+  border-color: rgba(var(--color-foreground), 0.4);
+}
+
+.b2b-currency__option[aria-current='true'] {
+  color: rgb(var(--color-background));
+  background: rgb(var(--color-foreground));
+  border-color: rgb(var(--color-foreground));
+}
+
+.b2b-currency__note {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  opacity: 0.65;
+}
+
+@media screen and (max-width: 749px) {
+  .b2b-currency__toggle {
+    padding: 0.4rem;
+  }
+
+  .b2b-currency__panel {
+    right: -1rem;
+  }
+}
+
+.b2b-currency-cart-note {
+  margin: 0 0 0.8rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 0.7;
+}

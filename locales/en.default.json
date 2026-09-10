@@ -635,6 +635,10 @@
     },
     "producer": {
       "model": "Model"
+    },
+    "currency": {
+      "label": "Preview currency",
+      "note": "Indicative ECB rate. Orders are settled in {{ currency }}."
     }
   }
 }
