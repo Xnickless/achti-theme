@@ -540,3 +540,12 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .collection-hero:not(.collection-hero--with-image) .collection-hero__text-wrapper { width: 100%; max-width: 78rem; margin: 0 auto; text-align: center; }
 .collection-hero:not(.collection-hero--with-image) .collection-hero__title { text-align: center; }
 .collection-hero:not(.collection-hero--with-image) .collection-hero__description { max-width: none; margin-left: auto; margin-right: auto; }
+
+/* Justowanie dłuższych tekstów (opisy kolekcji, produktów, strony informacyjne) z dzieleniem wyrazów; na wąskich ekranach lewo */
+@media screen and (min-width: 750px) {
+  .collection-hero__description,
+  .product__description,
+  .product__accordion .accordion__content,
+  .main-page-title ~ .rte, .page-width .rte.page__content, .shopify-policy__body .rte,
+  .b2b-page .rte { text-align: justify; hyphens: auto; -webkit-hyphens: auto; text-wrap: pretty; }
+}
