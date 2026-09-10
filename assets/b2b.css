@@ -570,36 +570,10 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
     display: grid; grid-template-columns: 1fr 1fr 1fr; row-gap: 3.2rem; align-items: end;
   }
   [id$="__image_banner"] .banner__heading {
-    grid-column: 3; justify-self: end; width: fit-content; max-width: 42rem; margin: 0 0 0 auto; text-align: left;
+    grid-column: 3; justify-self: end; width: 100%; max-width: 40rem; margin: 0 0 0 auto; text-align: left;
     font-size: calc(var(--font-heading-scale) * 3.6rem); line-height: 1.15; text-wrap: balance;
   }
   [id$="__image_banner"] .banner__buttons { grid-column: 1 / -1; justify-self: center; margin: 0; }
-}
-
-/* Nagłówek hero w półprzezroczystej karcie (11.09.2026): mleczne szkło z rozmyciem tła,
-   ciemny tekst — napis nie ginie na jasnym zdjęciu i nie zasłania modelek. */
-[id$="__image_banner"] .banner__heading {
-  padding: 2.6rem 2.8rem;
-  color: #2b2724;
-  background: rgba(255, 255, 255, 0.7);
-  -webkit-backdrop-filter: blur(14px) saturate(1.05);
-  backdrop-filter: blur(14px) saturate(1.05);
-  border: 0.1rem solid rgba(255, 255, 255, 0.55);
-  border-radius: 0.8rem;
-  box-shadow: 0 2rem 4.5rem rgba(43, 39, 36, 0.14);
-}
-
-@media screen and (max-width: 989px) {
-  [id$="__image_banner"] .banner__heading {
-    padding: 2rem 2.2rem;
-    font-size: calc(var(--font-heading-scale) * 2.6rem);
-    line-height: 1.2;
-  }
-}
-
-/* przy braku backdrop-filter (starsze przeglądarki) karta musi być bardziej kryjąca */
-@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
-  [id$="__image_banner"] .banner__heading { background: rgba(255, 255, 255, 0.88); }
 }
 
 /* ── Przełącznik waluty w nagłówku (podgląd PLN / EUR / USD) ─────────────── */
