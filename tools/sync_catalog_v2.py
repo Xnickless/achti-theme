@@ -32,10 +32,19 @@ def title_case_mat(m):  # 'VEZUV TURBO' -> 'Vezuv Turbo', 'LAMBSLOOK 90/10' -> '
 GROUP_PRICE = {'G3': '39.00', 'G5': '49.00', 'G7': '59.00', 'G10': '69.00', 'G12': '79.00'}  # ceny przykładowe jak w set_prices.py
 SUFFIX_LABEL = {'TURBO': 'Turbo', 'BP': 'bez pompona'}  # BOY/GIRL już w słowie Chłopięca/Dziewczęca
 
-def build_text(city, segword, is_komin, mats, size, flags, code):
-    """Polski tytuł + opis wg szablonu z generate_catalog.py."""
+LINING = {  # kolumna „podszycie” z arkusza Adriana -> (fraza w opisie, cecha w liście)
+    'Pełne podszycie polarowe 100% poliester': (' z pełnym podszyciem polarowym', 'Pełne podszycie polarowe (100% poliester)'),
+    'Opaska polarowa 100% poliester': (' z polarową opaską w środku', 'Wewnętrzna opaska polarowa (100% poliester)'),
+    'Podwójna dzianina': (' o podwójnej dzianinie', 'Podwójna dzianina — ciepła bez podszycia'),
+    'Bez podszycia': ('', 'Pojedyncza dzianina, bez podszycia'),
+}
+
+def build_text(city, segword, is_komin, mats, size, flags, code, sklad=None, podszycie=None, is_opaska=False):
+    """Polski tytuł + opis wg szablonu z generate_catalog.py (rozszerzony 10.09.2026 o skład, podszycie i opaski)."""
     if is_komin:
         title = f"Komin Zimowy Damski {city}"
+    elif is_opaska:
+        title = f"Opaska Zimowa Damska {city}"
     else:
         title = f"Czapka Zimowa {segword} Beanie {city}"
     suffix = []
@@ -43,20 +52,28 @@ def build_text(city, segword, is_komin, mats, size, flags, code):
     if 'MULTI' in flags: suffix.append('Multikolor')
     if suffix: title += ' ' + ' '.join(suffix)
     mat_txt = ' i '.join(mats) if mats else 'miękkiej dzianiny'
+    lining_phrase, lining_feat = LINING.get(podszycie or '', ('', None))
     if is_komin:
-        intro = f"Komin zimowy {city} to uniwersalny dodatek z dzianiny {mat_txt}, który zastępuje szalik i chroni szyję przed wiatrem. Klasyczna forma sprawdza się w codziennych stylizacjach i dobrze uzupełnia ofertę czapek."
+        intro = f"Komin zimowy {city} to uniwersalny dodatek z dzianiny {mat_txt}{lining_phrase}, który zastępuje szalik i chroni szyję przed wiatrem. Klasyczna forma sprawdza się w codziennych stylizacjach i dobrze uzupełnia ofertę czapek."
         feats = ['Miękka, elastyczna dzianina', 'Nie uciska i nie krępuje ruchów', 'Uniwersalny rozmiar', 'Idealny na sezon jesień–zima']
+    elif is_opaska:
+        intro = f"Opaska zimowa {city} to model damski z dzianiny {mat_txt}{lining_phrase}, który chroni uszy i czoło przed zimnem, nie spłaszczając fryzury. Sprawdza się na spacer, do biegania i na co dzień, a jej klasyczny wygląd łatwo łączy się z zimowymi stylizacjami."
+        feats = ['Miękka, elastyczna dzianina', 'Zakrywa uszy, nie spłaszcza fryzury', 'Uniwersalny rozmiar' if size == 'One Size' else f'Rozmiar {size}', 'Idealna na sezon jesień–zima']
     else:
         who = {'Dziecięca': 'dla dzieci', 'Chłopięca': 'dla chłopców', 'Dziewczęca': 'dla dziewczynek'}.get(segword, 'damska')
-        intro = f"Czapka zimowa {city} to model {who} z dzianiny {mat_txt}, łączący klasyczny fason z wygodą noszenia. Dobrze trzyma kształt, jest ciepła i lekka, a jej ponadczasowy wygląd sprawia, że łatwo komponuje się z zimowymi stylizacjami."
+        intro = f"Czapka zimowa {city} to model {who} z dzianiny {mat_txt}{lining_phrase}, łączący klasyczny fason z wygodą noszenia. Dobrze trzyma kształt, jest ciepła i lekka, a jej ponadczasowy wygląd sprawia, że łatwo komponuje się z zimowymi stylizacjami."
         feats = ['Miękka i komfortowa dzianina', 'Elastyczny fason dopasowujący się do głowy', 'Uniwersalny rozmiar' if size == 'One Size' else f'Rozmiar {size}', 'Idealna na sezon jesień–zima']
         if 'CEKIN' in flags or 'CEKINY' in flags: feats.insert(1, 'Zdobienie cekinami')
         if 'MULTI' in flags: feats.insert(1, 'Wielokolorowy wzór')
         if 'BEZ POMPONA' in flags: feats.insert(1, 'Wersja bez pompona')
+    if lining_feat: feats.insert(-2, lining_feat)
+    spec = ["Model: " + city, "Kod: " + code, "Materiał: " + (', '.join(mats) or 'do uzupełnienia')]
+    if sklad: spec.append("Skład: " + sklad)
+    if podszycie: spec.append("Podszycie: " + podszycie)
+    spec += ["Rozmiar: " + size, "Sezon: jesień / zima"]
     body = (f"<p>{intro}</p><p>Model {city} stanowi dobre uzupełnienie oferty sklepów odzieżowych, butików oraz punktów sprzedaży akcesoriów zimowych.</p><p><strong>Cechy produktu:</strong><br>"
             + "<br>".join('✔ ' + f for f in feats)
-            + "</p><p><strong>Specyfikacja:</strong></p><ul><li>Model: " + city + "</li><li>Kod: " + code + "</li><li>Materiał: " + (', '.join(mats) or 'do uzupełnienia')
-            + "</li><li>Rozmiar: " + size + "</li><li>Sezon: jesień / zima</li></ul>")
+            + "</p><p><strong>Specyfikacja:</strong></p><ul>" + ''.join(f'<li>{x}</li>' for x in spec) + "</ul>")
     return title, body
 
 def segword_for(r, old):

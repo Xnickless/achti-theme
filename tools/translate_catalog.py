@@ -30,30 +30,39 @@ SUFFIX = {'z Cekinami': {'en': 'with Sequins', 'fr': 'à sequins', 'de': 'mit Pa
 
 T = {
  'en': dict(
-    intro_hat="Winter beanie {city} is {who} knitted from {mat}, combining a classic shape with everyday comfort. It keeps its shape, is warm and light, and its timeless look goes easily with winter outfits.",
-    intro_snood="Winter snood {city} is a versatile accessory knitted from {mat} that replaces a scarf and protects the neck from wind. Its classic form works in everyday outfits and complements a beanie range well.",
+    intro_hat="Winter beanie {city} is {who} knitted from {mat}{lining}, combining a classic shape with everyday comfort. It keeps its shape, is warm and light, and its timeless look goes easily with winter outfits.",
+    intro_snood="Winter snood {city} is a versatile accessory knitted from {mat}{lining} that replaces a scarf and protects the neck from wind. Its classic form works in everyday outfits and complements a beanie range well.",
     range_="Model {city} is a good addition to the range of clothing stores, boutiques and winter accessories retailers.",
     features="Product features:", spec="Specification:", model="Model", code="Code", material="Material", size="Size", season="Season", season_v="autumn / winter",
     f_hat=['Soft, comfortable knit', 'Stretchy shape that adapts to the head', 'One size fits all', 'Perfect for the autumn–winter season'],
     f_snood=['Soft, stretchy knit', 'No pressure, no restriction of movement', 'One size fits all', 'Perfect for the autumn–winter season'],
+    intro_headband="Winter headband {city} is a women’s model knitted from {mat}{lining} that keeps ears and forehead warm without flattening the hair. It works for walks, running and everyday wear, and its classic look goes easily with winter outfits.",
+    f_headband=['Soft, stretchy knit', 'Covers the ears without flattening the hair', 'One size fits all', 'Perfect for the autumn–winter season'],
+    composition='Composition', lining='Lining',
     f_size='Size {size}', f_sequins='Sequin embellishment', f_multi='Multicolour pattern', one_size='One Size', soft='soft knit', and_=' and ',
  ),
  'fr': dict(
-    intro_hat="Le bonnet d'hiver {city} est {who} en maille {mat}, qui allie une coupe classique au confort au quotidien. Il garde bien sa forme, il est chaud et léger, et son style intemporel s'accorde facilement aux tenues d'hiver.",
-    intro_snood="Le snood d'hiver {city} est un accessoire polyvalent en maille {mat} qui remplace l'écharpe et protège le cou du vent. Sa forme classique convient aux tenues de tous les jours et complète bien une gamme de bonnets.",
+    intro_hat="Le bonnet d'hiver {city} est {who} en maille {mat}{lining}, qui allie une coupe classique au confort au quotidien. Il garde bien sa forme, il est chaud et léger, et son style intemporel s'accorde facilement aux tenues d'hiver.",
+    intro_snood="Le snood d'hiver {city} est un accessoire polyvalent en maille {mat}{lining} qui remplace l'écharpe et protège le cou du vent. Sa forme classique convient aux tenues de tous les jours et complète bien une gamme de bonnets.",
     range_="Le modèle {city} complète bien l'offre des magasins de vêtements, des boutiques et des points de vente d'accessoires d'hiver.",
     features="Caractéristiques du produit :", spec="Spécifications :", model="Modèle", code="Code", material="Matière", size="Taille", season="Saison", season_v="automne / hiver",
     f_hat=['Maille douce et confortable', 'Coupe élastique qui s\'adapte à la tête', 'Taille unique', 'Idéal pour la saison automne–hiver'],
     f_snood=['Maille douce et élastique', 'Ne serre pas et ne gêne pas les mouvements', 'Taille unique', 'Idéal pour la saison automne–hiver'],
+    intro_headband="Le bandeau d'hiver {city} est un modèle femme en maille {mat}{lining} qui protège les oreilles et le front du froid sans aplatir la coiffure. Il convient à la promenade, à la course et au quotidien, et son style classique s'accorde facilement aux tenues d'hiver.",
+    f_headband=['Maille douce et élastique', 'Couvre les oreilles sans aplatir la coiffure', 'Taille unique', 'Idéal pour la saison automne–hiver'],
+    composition='Composition', lining='Doublure',
     f_size='Taille {size}', f_sequins='Décor à sequins', f_multi='Motif multicolore', one_size='Taille unique', soft='maille douce', and_=' et ',
  ),
  'de': dict(
-    intro_hat="Die Wintermütze {city} ist {who} aus {mat}-Strick, das eine klassische Form mit hohem Tragekomfort verbindet. Sie behält ihre Form, ist warm und leicht, und ihr zeitloses Aussehen lässt sich leicht mit Winteroutfits kombinieren.",
-    intro_snood="Der Winterloop {city} ist ein vielseitiges Accessoire aus {mat}-Strick, das den Schal ersetzt und den Hals vor Wind schützt. Die klassische Form passt zu Alltagsoutfits und ergänzt ein Mützensortiment gut.",
+    intro_hat="Die Wintermütze {city} ist {who} aus {mat}-Strick{lining}, das eine klassische Form mit hohem Tragekomfort verbindet. Sie behält ihre Form, ist warm und leicht, und ihr zeitloses Aussehen lässt sich leicht mit Winteroutfits kombinieren.",
+    intro_snood="Der Winterloop {city} ist ein vielseitiges Accessoire aus {mat}-Strick{lining}, das den Schal ersetzt und den Hals vor Wind schützt. Die klassische Form passt zu Alltagsoutfits und ergänzt ein Mützensortiment gut.",
     range_="Das Modell {city} ist eine gute Ergänzung des Sortiments von Bekleidungsgeschäften, Boutiquen und Verkaufsstellen für Winteraccessoires.",
     features="Produktmerkmale:", spec="Spezifikation:", model="Modell", code="Artikelnummer", material="Material", size="Größe", season="Saison", season_v="Herbst / Winter",
     f_hat=['Weicher, angenehmer Strick', 'Elastische Form, die sich dem Kopf anpasst', 'Einheitsgröße', 'Ideal für die Herbst-Winter-Saison'],
     f_snood=['Weicher, elastischer Strick', 'Drückt nicht und schränkt die Bewegung nicht ein', 'Einheitsgröße', 'Ideal für die Herbst-Winter-Saison'],
+    intro_headband="Das Winterstirnband {city} ist ein Damenmodell aus {mat}-Strick{lining}, das Ohren und Stirn warm hält, ohne die Frisur plattzudrücken. Es eignet sich für Spaziergänge, zum Laufen und für den Alltag, und sein klassischer Look lässt sich leicht mit Winteroutfits kombinieren.",
+    f_headband=['Weicher, elastischer Strick', 'Bedeckt die Ohren, ohne die Frisur plattzudrücken', 'Einheitsgröße', 'Ideal für die Herbst-Winter-Saison'],
+    composition='Zusammensetzung', lining='Futter',
     f_size='Größe {size}', f_sequins='Paillettenverzierung', f_multi='Mehrfarbiges Muster', one_size='Einheitsgröße', soft='weichem Strick', and_=' und ',
  ),
 }
@@ -61,7 +70,47 @@ T = {
 VARIANT = {'Turbo': {'en': 'Turbo', 'fr': 'Turbo', 'de': 'Turbo'},
            'bez pompona': {'en': 'without pompom', 'fr': 'sans pompon', 'de': 'ohne Bommel'}}
 F_NOPOM = {'en': 'Version without pompom', 'fr': 'Version sans pompon', 'de': 'Version ohne Bommel'}
-RX = re.compile(r'^(Czapka Zimowa (Damska|Dziecięca|Chłopięca|Dziewczęca) Beanie|Komin Zimowy Damski) (\S+(?: \S+)*?)( z Cekinami)?( Multikolor)?(?: \((Turbo|bez pompona)\))?$')
+RX = re.compile(r'^(Czapka Zimowa (Damska|Dziecięca|Chłopięca|Dziewczęca) Beanie|Komin Zimowy Damski|Opaska Zimowa Damska) (\S+(?: \S+)*?)( z Cekinami)?( Multikolor)?(?: \((Turbo|bez pompona)\))?$')
+HEADBAND = {'en': "Women's Winter Headband", 'fr': "Bandeau d'hiver femme", 'de': 'Damen-Winterstirnband'}
+# kolumna „podszycie” z arkusza Adriana (10.09.2026) -> (fraza w intro, cecha, wiersz specyfikacji)
+LINING = {
+ 'Pełne podszycie polarowe 100% poliester': {
+    'en': (' with a full fleece lining', 'Full fleece lining (100% polyester)', 'Full fleece lining, 100% polyester'),
+    'fr': (' entièrement doublé polaire', 'Doublure polaire intégrale (100 % polyester)', 'Doublure polaire intégrale, 100 % polyester'),
+    'de': (' mit durchgehendem Fleecefutter', 'Durchgehendes Fleecefutter (100 % Polyester)', 'Durchgehendes Fleecefutter, 100 % Polyester')},
+ 'Opaska polarowa 100% poliester': {
+    'en': (' with an inner fleece band', 'Inner fleece band (100% polyester)', 'Inner fleece band, 100% polyester'),
+    'fr': (' avec bandeau intérieur en polaire', 'Bandeau intérieur en polaire (100 % polyester)', 'Bandeau intérieur en polaire, 100 % polyester'),
+    'de': (' mit Fleece-Innenband', 'Fleece-Innenband (100 % Polyester)', 'Fleece-Innenband, 100 % Polyester')},
+ 'Podwójna dzianina': {
+    'en': (' in a double-layer knit', 'Double-layer knit — warm without lining', 'Double-layer knit, unlined'),
+    'fr': (' en maille double épaisseur', 'Maille double épaisseur — chaude sans doublure', 'Maille double épaisseur, sans doublure'),
+    'de': (' in doppellagigem Strick', 'Doppellagiger Strick — warm ohne Futter', 'Doppellagiger Strick, ungefüttert')},
+ 'Bez podszycia': {
+    'en': ('', 'Single-layer knit, unlined', 'None (single-layer knit)'),
+    'fr': ('', 'Maille simple, sans doublure', 'Sans doublure (maille simple)'),
+    'de': ('', 'Einlagiger Strick, ungefüttert', 'Ohne Futter (einlagiger Strick)')},
+}
+FIBRES = {  # skład surowcowy: nazwy włókien PL -> EN/FR/DE (dłuższe frazy pierwsze)
+ 'wełna merino': {'en': 'merino wool', 'fr': 'laine mérinos', 'de': 'Merinowolle'},
+ 'wełna': {'en': 'wool', 'fr': 'laine', 'de': 'Wolle'},
+ 'akryl': {'en': 'acrylic', 'fr': 'acrylique', 'de': 'Acryl'},
+ 'poliamid': {'en': 'polyamide', 'fr': 'polyamide', 'de': 'Polyamid'},
+ 'poliester': {'en': 'polyester', 'fr': 'polyester', 'de': 'Polyester'},
+ 'wiskoza': {'en': 'viscose', 'fr': 'viscose', 'de': 'Viskose'},
+ 'nylon': {'en': 'nylon', 'fr': 'nylon', 'de': 'Nylon'},
+ 'elastan': {'en': 'elastane', 'fr': 'élasthanne', 'de': 'Elasthan'},
+ 'bawełna': {'en': 'cotton', 'fr': 'coton', 'de': 'Baumwolle'},
+}
+def comp(sklad, loc):
+    """'85% akryl, 15% poliamid' -> '85% acrylic, 15% polyamide' (FR/DE: spacja przed %, przecinek dziesiętny zostaje)."""
+    if not sklad: return ''
+    out = sklad
+    for pl, tr in FIBRES.items():
+        out = re.sub(r'\b' + pl + r'\b', tr[loc], out, flags=re.I)
+    if loc == 'en': out = re.sub(r'(\d),(\d)', r'\1.\2', out)
+    else: out = re.sub(r'(\d)%', r'\1 %', out)
+    return out
 
 def translate_product(p, loc):
     t = T[loc]
@@ -69,6 +118,7 @@ def translate_product(p, loc):
     if not m:
         return None
     is_snood = m.group(1).startswith('Komin')
+    is_headband = m.group(1).startswith('Opaska')
     seg = m.group(2) or 'Damska'
     city = m.group(3)
     suffixes = []
@@ -77,30 +127,42 @@ def translate_product(p, loc):
     mats = [mat(x, loc) for x in p['materials']]
     mat_txt = t['and_'].join(mats) if mats else t['soft']
     size = p['size']
+    lin = LINING.get(p.get('podszycie') or '', {}).get(loc)
+    lining_phrase = lin[0] if lin else ''
     if is_snood:
         title = f"{KOMIN[loc]} {city}"
-        intro = t['intro_snood'].format(city=city, mat=mat_txt)
+        intro = t['intro_snood'].format(city=city, mat=mat_txt, lining=lining_phrase)
         feats = list(t['f_snood'])
+    elif is_headband:
+        title = f"{HEADBAND[loc]} {city}"
+        intro = t['intro_headband'].format(city=city, mat=mat_txt, lining=lining_phrase)
+        feats = list(t['f_headband'])
+        if size != 'One Size': feats[2] = t['f_size'].format(size=size)
     else:
         prefix, who = SEG[loc][seg]
         title = f"{prefix} {city}"
-        intro = t['intro_hat'].format(city=city, who=who, mat=mat_txt)
+        intro = t['intro_hat'].format(city=city, who=who, mat=mat_txt, lining=lining_phrase)
         feats = list(t['f_hat'])
         if size != 'One Size':
             feats[2] = t['f_size'].format(size=size)
         if m.group(5): feats.insert(1, t['f_multi'])
         if m.group(4): feats.insert(1, t['f_sequins'])
         if m.group(6) == 'bez pompona': feats.insert(1, F_NOPOM[loc])
+    if lin: feats.insert(-2, lin[1])
     if suffixes:
         title += ' ' + ' '.join(suffixes)
     if m.group(6):
         title += f" ({VARIANT[m.group(6)][loc]})"
     size_txt = t['one_size'] if size == 'One Size' else size
+    sklad = comp(p.get('sklad'), loc)
+    spec = [f"{t['model']}: {city}", f"{t['code']}: {p['code']}", f"{t['material']}: {', '.join(mats) if mats else '—'}"]
+    if sklad: spec.append(f"{t['composition']}: {sklad}")
+    if lin: spec.append(f"{t['lining']}: {lin[2]}")
+    spec += [f"{t['size']}: {size_txt}", f"{t['season']}: {t['season_v']}"]
     body = (f"<p>{intro}</p><p>{t['range_'].format(city=city)}</p><p><strong>{t['features']}</strong><br>"
             + '<br>'.join('✔ ' + f for f in feats)
-            + f"</p><p><strong>{t['spec']}</strong></p><ul><li>{t['model']}: {city}</li><li>{t['code']}: {p['code']}</li>"
-            + f"<li>{t['material']}: {', '.join(mats) if mats else '—'}</li><li>{t['size']}: {size_txt}</li><li>{t['season']}: {t['season_v']}</li></ul>")
-    return {'title': title, 'body_html': body, 'metafields': {'custom.rozmiar': size_txt, 'custom.sklad': ', '.join(mats)}}
+            + f"</p><p><strong>{t['spec']}</strong></p><ul>" + ''.join(f'<li>{x}</li>' for x in spec) + "</ul>")
+    return {'title': title, 'body_html': body, 'metafields': {'custom.rozmiar': size_txt, 'custom.sklad': sklad or ', '.join(mats)}}
 
 COLLECTIONS = {
  'en': {'kolekcja-damska': ('Women', "Discover Achti's women's winter hats: modern design, wearing comfort and high-quality workmanship. Classic models and the newest seasonal patterns, made for women who value style and warmth on colder days."),

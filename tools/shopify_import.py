@@ -49,6 +49,9 @@ def gql(query, variables=None, _retry=0):
     except urllib.error.HTTPError as e:
         if e.code==429 and _retry<5: time.sleep(2); return gql(query,variables,_retry+1)
         sys.exit(f'HTTP {e.code}: {e.read()[:300]}')
+    except (TimeoutError, urllib.error.URLError, ConnectionError) as e:  # timeout odczytu / zerwane połączenie -> ponów
+        if _retry<3: time.sleep(3); return gql(query,variables,_retry+1)
+        raise
     if 'errors' in out: sys.exit('GraphQL errors: '+json.dumps(out['errors'],ensure_ascii=False)[:800])
     cost=out.get('extensions',{}).get('cost',{}).get('throttleStatus',{})
     if cost and cost.get('currentlyAvailable',1000)<200: time.sleep(2)

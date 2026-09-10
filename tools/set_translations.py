@@ -65,19 +65,36 @@ def do_products(loc, data):
                 payload.append({'key': key, 'value': val, 'translatableContentDigest': cm[key]['digest'], 'locale': loc})
         register(pid, payload); n_ok += 1
     print(f'  produkty: {n_ok}')
-    # metapola (custom.rozmiar / custom.sklad) jako osobne zasoby METAFIELD
+    # metapola (custom.rozmiar / custom.sklad, rich_text) jako osobne zasoby METAFIELD — tłumaczymy po wartości PL
+    # (PL -> tłumaczenie z achti-produkty.json + translations/<loc>.json, bo METAFIELD nie mówi, do którego produktu należy)
+    src = {o['code'].upper(): o for o in json.load(open(os.path.join(HERE, 'achti-produkty.json'), encoding='utf-8'))}
+    by_pl = {'One Size': {'en': 'One Size', 'fr': 'Taille unique', 'de': 'Einheitsgröße'}[loc]}
+    for code, tr in trs.items():
+        o = src.get(code.upper()); mf = tr.get('metafields') or {}
+        if not o: continue
+        if o.get('sklad') and mf.get('custom.sklad'): by_pl[o['sklad']] = mf['custom.sklad']
+        if o.get('size') and mf.get('custom.rozmiar'): by_pl[o['size']] = mf['custom.rozmiar']
+    def rt_text(v):
+        try:
+            d = json.loads(v); out = []
+            def walk(n):
+                if isinstance(n, dict):
+                    if n.get('type') == 'text': out.append(n.get('value', ''))
+                    for c in n.get('children', []): walk(c)
+            walk(d); return ''.join(out).strip()
+        except Exception: return (v or '').strip()
     mf_nodes = translatable('METAFIELD')
     n_mf = 0
     for node in mf_nodes:
         cm = content_map(node)
         if 'value' not in cm: continue
-        # nie mamy mapowania metafield->produkt bez dodatkowego zapytania; tłumaczymy po wartości PL
-        pl = cm['value']['value']
-        val = None
-        if pl == 'One Size': val = {'en': 'One Size', 'fr': 'Taille unique', 'de': 'Einheitsgröße'}[loc]
-        elif pl in ('Akryl',): val = {'en': 'Acrylic', 'fr': 'Acrylique', 'de': 'Acryl'}[loc]
-        if val:
-            register(node['resourceId'], [{'key': 'value', 'value': val, 'translatableContentDigest': cm['value']['digest'], 'locale': loc}]); n_mf += 1
+        pl_raw = cm['value']['value']; pl = rt_text(pl_raw)
+        val = by_pl.get(pl)
+        if not val or val == pl: continue
+        try:
+            json.loads(pl_raw); out = json.dumps({'type': 'root', 'children': [{'type': 'paragraph', 'children': [{'type': 'text', 'value': val}]}]}, ensure_ascii=False)
+        except Exception: out = val
+        register(node['resourceId'], [{'key': 'value', 'value': out, 'translatableContentDigest': cm['value']['digest'], 'locale': loc}]); n_mf += 1
     print(f'  metapola: {n_mf}')
 
 def do_collections(loc, data):
