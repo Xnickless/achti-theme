@@ -306,12 +306,35 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0.85) 10%, rgba(255, 255, 255, 0.45) 22%, rgba(255, 255, 255, 0) 38%),
-    linear-gradient(to top, #c2b7ac 0%, rgba(194, 183, 172, 0.5) 10%, rgba(194, 183, 172, 0) 22%);
+    linear-gradient(to bottom, rgba(255, 255, 255, 1.000) 0.0%, rgba(255, 255, 255, 0.980) 3.8%, rgba(255, 255, 255, 0.926) 7.7%, rgba(255, 255, 255, 0.844) 11.5%, rgba(255, 255, 255, 0.741) 15.3%, rgba(255, 255, 255, 0.624) 19.2%, rgba(255, 255, 255, 0.500) 23.0%, rgba(255, 255, 255, 0.376) 26.8%, rgba(255, 255, 255, 0.259) 30.7%, rgba(255, 255, 255, 0.156) 34.5%, rgba(255, 255, 255, 0.074) 38.3%, rgba(255, 255, 255, 0.020) 42.2%, rgba(255, 255, 255, 0.000) 46.0%),
+    linear-gradient(to top, rgba(194, 183, 172, 1.000) 0.0%, rgba(194, 183, 172, 0.980) 2.5%, rgba(194, 183, 172, 0.926) 5.0%, rgba(194, 183, 172, 0.844) 7.5%, rgba(194, 183, 172, 0.741) 10.0%, rgba(194, 183, 172, 0.624) 12.5%, rgba(194, 183, 172, 0.500) 15.0%, rgba(194, 183, 172, 0.376) 17.5%, rgba(194, 183, 172, 0.259) 20.0%, rgba(194, 183, 172, 0.156) 22.5%, rgba(194, 183, 172, 0.074) 25.0%, rgba(194, 183, 172, 0.020) 27.5%, rgba(194, 183, 172, 0.000) 30.0%);
   pointer-events: none;
   z-index: 2;
 }
 body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
+/* Przyklejony nagłówek: zamiast ostrej krawędzi biel rozmywa się w treść pod spodem (na białych stronach niewidoczne) */
+.shopify-section-header-sticky .header-wrapper { position: relative; }
+.shopify-section-header-sticky .header-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 100%;
+  height: 22rem;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1.000) 0.0%, rgba(255, 255, 255, 0.980) 8.3%, rgba(255, 255, 255, 0.926) 16.7%, rgba(255, 255, 255, 0.844) 25.0%, rgba(255, 255, 255, 0.741) 33.3%, rgba(255, 255, 255, 0.624) 41.7%, rgba(255, 255, 255, 0.500) 50.0%, rgba(255, 255, 255, 0.376) 58.3%, rgba(255, 255, 255, 0.259) 66.7%, rgba(255, 255, 255, 0.156) 75.0%, rgba(255, 255, 255, 0.074) 83.3%, rgba(255, 255, 255, 0.020) 91.7%, rgba(255, 255, 255, 0.000) 100.0%);
+  pointer-events: none;
+}
+.shopify-section-header-sticky.scrolled-past-header .header-wrapper::after { height: 14rem; }
+
+/* Kafelki na pasie Nowości: półprzezroczysta biel zamiast pełnej, zdjęcie zmieszane z kafelkiem (biel zdjęcia = kolor kafelka) */
+.collection--marquee .card--card,
+.collection--marquee .card--card .card__inner,
+.collection--marquee .card--card .card__inner .card__media { background: transparent; }
+/* .card ma transform (animacja hover), więc jest kontekstem warstw: tło musi być na .card i kryjące (#e8e3de = beż pasa + 62% bieli),
+   wtedy multiply zamienia biel zdjęcia dokładnie w kolor kafelka */
+.collection--marquee .card--card { background: #e8e3de; border-radius: 0.8rem; }
+.collection--marquee .card--card .card__inner,
+.collection--marquee .card--card .card__inner .card__media,
+.collection--marquee .card--card .card__inner .card__media .media { z-index: auto; isolation: auto; }
+.collection--marquee .card--card .card__inner .card__media { mix-blend-mode: multiply; }
 
 /* Przewijana taśma produktów (featured-collection, ustawienie „marquee”) */
 .fc-marquee { display: block; }
