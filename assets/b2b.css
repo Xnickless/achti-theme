@@ -299,22 +299,20 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
   width: 26rem;
 }
 .fc-marquee--running .fc-marquee__track {
-  animation: fc-marquee var(--fc-duration, 40s) linear infinite;
+  /* pozycję ustawia fc-marquee.js (transform), dzięki temu taśmę da się przeciągać palcem i myszką */
   will-change: transform;
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
 }
-.fc-marquee--running:hover .fc-marquee__track,
-.fc-marquee--running:focus-within .fc-marquee__track { animation-play-state: paused; }
-@keyframes fc-marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(var(--fc-shift, -100%)); }
-}
+.fc-marquee--running .fc-marquee__track img { -webkit-user-drag: none; pointer-events: none; }
+.fc-marquee--dragging .fc-marquee__track { cursor: grabbing; }
+.fc-marquee--dragging .fc-marquee__track a { pointer-events: none; }
 .fc-marquee--static slider-component { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .fc-marquee__actions { margin-top: 2.4rem; }
 .fc-marquee--expanded .fc-marquee__actions { margin-top: 3rem; }
 .fc-marquee__viewall { margin-top: 1.6rem; }
-@media (prefers-reduced-motion: reduce) {
-  .fc-marquee--running .fc-marquee__track { animation: none; }
-}
 
 /* ===== Konfigurator Private Label ===== */
 .pl-config { display: block; }
