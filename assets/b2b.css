@@ -551,3 +551,8 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
   .main-page-title ~ .rte, .page-width .rte.page__content, .shopify-policy__body .rte,
   .b2b-page .rte { text-align: justify; hyphens: auto; -webkit-hyphens: auto; text-wrap: pretty; }
 }
+
+/* Multicolumn na beżowym pasie (np. „Twój Partner w Produkcji Czapek”): kafelki w jasnym beżu jak kafelki produktów */
+.multicolumn.color-scheme-3 .multicolumn-card,
+.color-scheme-3 .multicolumn-card { background: #e8e3de; border-radius: 0.8rem; }
+.color-scheme-3 .multicolumn-card .multicolumn-card__info { padding: 2.4rem; }
