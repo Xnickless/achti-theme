@@ -571,7 +571,7 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
     display: grid; grid-template-columns: 1fr 1fr 1fr; row-gap: 3.2rem; align-items: end;
   }
   [id$="__image_banner"] .banner__heading {
-    grid-column: 3; justify-self: end; width: 100%; max-width: 40rem; margin: 0; text-align: left;
+    grid-column: 3; justify-self: end; width: 100%; max-width: 40rem; margin: 0 0 0 auto; text-align: left;
     font-size: calc(var(--font-heading-scale) * 3.6rem); line-height: 1.15; text-wrap: balance;
   }
   [id$="__image_banner"] .banner__buttons { grid-column: 1 / -1; justify-self: center; margin: 0; }
