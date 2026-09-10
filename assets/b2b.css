@@ -534,3 +534,9 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 
 .footer__catalog-pdf { margin: 0 0 0.8rem; }
 .footer__catalog-pdf a { text-decoration: underline; text-underline-offset: 0.3rem; }
+
+/* Nagłówek kolekcji: tytuł i opis wyśrodkowane na całej szerokości (10.09.2026) */
+.collection-hero:not(.collection-hero--with-image) .collection-hero__inner { justify-content: center; }
+.collection-hero:not(.collection-hero--with-image) .collection-hero__text-wrapper { width: 100%; max-width: 78rem; margin: 0 auto; text-align: center; }
+.collection-hero:not(.collection-hero--with-image) .collection-hero__title { text-align: center; }
+.collection-hero:not(.collection-hero--with-image) .collection-hero__description { max-width: none; margin-left: auto; margin-right: auto; }
