@@ -8,6 +8,7 @@ Modele: gemini-3-pro-image (Nano Banana Pro, najwierniejszy wzór dzianiny, ~0,1
   python3 tools/gen_model_photos.py refs [--only=kobieta-A,...]   # kandydatki/kandydaci na modelkę (tekst → obraz)
   python3 tools/gen_model_photos.py hat <ref.png> <packshot.jpg> <wyj.png> [--kind=hat|headband|snood]
   python3 tools/gen_model_photos.py batch [--codes=AZ-1,AZ-2] [--limit=20] [--persona=kobieta-A] [--force]
+  python3 tools/gen_model_photos.py styl [--code=AZ-2938] [--osoba=m2] [--styl=kanapa|mur|kawiarnia|las]
   python3 tools/gen_model_photos.py casting [--code=AZ-3101PC] [--code-dzieci=AZ-2364PC] [--only=k1-blond,...]
   python3 tools/gen_model_photos.py kandydatki [--code=AZ-3101PC] [--scena=krakow-rynek] [--only=blond-1,...]
   python3 tools/gen_model_photos.py preview                      # strona HTML do oceny (packshot | modelka)
@@ -139,6 +140,70 @@ PROMPT_CAST = (
 
 REF_NOTE = (' Image 2 shows the model: use exactly the same person, the same face, the same hair colour and length, '
             'so that both photographs clearly show one and the same model.')
+
+
+# Style zdjęć: „packshot w plenerze” (domyślny) i ujęcia edytorialne/lookbookowe jak u Barts.
+STYLE = {
+    'kanapa': dict(
+        scena='seated on a vintage dark-green buttoned leather Chesterfield sofa placed outdoors among fallen autumn leaves, '
+              'bare trees and a park path softly blurred behind',
+        poza='seated, leaning back into the sofa, relaxed, forearms resting on the knees, upper body and hands in frame, '
+             'looking straight into the camera with a calm confident expression',
+        stylizacja='a navy checked wool overshirt over a rust-coloured knitted roll-neck, a large plaid wool scarf loosely around the neck',
+        swiatlo='soft overcast autumn daylight, warm colour grading, deep but gentle contrast'),
+    'mur': dict(
+        scena='leaning against an old red brick wall in a city street, autumn leaves on the pavement, blurred background',
+        poza='standing three-quarter to the camera, one shoulder against the wall, hands in coat pockets, chin slightly lifted, '
+             'looking into the camera with a relaxed expression, upper body in frame',
+        stylizacja='a heavy charcoal wool coat over a cream chunky knit sweater',
+        swiatlo='soft directional daylight from the side, cinematic contrast'),
+    'kawiarnia': dict(
+        scena='sitting at a small marble cafe table by a window, a cup of coffee on the table, warm interior lights blurred behind',
+        poza='seated three-quarter to the camera, hands around the cup, head slightly tilted, looking into the camera with a warm calm smile, '
+             'upper body and hands in frame',
+        stylizacja='a camel wool coat over a cream knitted sweater',
+        swiatlo='soft warm window light, gentle shadows, cosy mood'),
+    'las': dict(
+        scena='walking on a forest path covered with golden autumn leaves, tall blurred trees and hazy backlight behind',
+        poza='mid-step, body turned three-quarter to the camera, head turned towards the lens, natural relaxed expression, '
+             'upper body and one arm in frame',
+        stylizacja='a quilted olive jacket over a grey knitted sweater',
+        swiatlo='warm golden backlight through the trees, soft rim light on the hair and the hat'),
+}
+
+PROMPT_STYL = (
+    'Image 1 shows the product: a knitted winter {what} photographed on white. '
+    'Image 2 shows the model: use exactly the same person, the same face, the same hair colour and length. '
+    'Create a premium fashion lookbook photograph of that person wearing exactly that product, {scena}. '
+    'Reproduce the product with absolute fidelity: identical knit structure and stitch pattern, identical colours, identical proportions '
+    'and cuff depth, the pompom at the same generous size, colour and fluffiness as in image 1 if present, and the small metal brand label '
+    'in the same position. Do not redesign, recolour or simplify the product, do not invent patterns. '
+    'Pose: {poza}. The whole {what} is inside the frame, nothing cropped, and it stays the visual hero of the photograph. '
+    'Styling: {stylizacja}. Light: {swiatlo}. '
+    'Shot on an 85mm lens at f/2, shallow depth of field, background clearly blurred, subject tack sharp. '
+    'Photorealistic editorial fashion photography, natural skin texture, no heavy retouching, 4:5 portrait, high detail.'
+)
+
+
+def cmd_styl():
+    """Ujęcia edytorialne: czapka + wybrana osoba z castingu + styl (kanapa/mur/kawiarnia/las)."""
+    import glob
+    code = ARGS.get('--code', 'AZ-2938')
+    osoba = ARGS.get('--osoba', 'm2')
+    styl = ARGS.get('--styl', 'kanapa')
+    what = ARGS.get('--kind', 'hat (beanie)')
+    pack = packshot(code)
+    refs = sorted(glob.glob(f'{ROOT}/modelki/casting/{osoba}_*.png'))
+    if not pack or not refs:
+        print('brak packshotu lub wzorca osoby', code, osoba); return
+    dest = f'{ROOT}/modelki/styl'
+    os.makedirs(dest, exist_ok=True)
+    out = f'{dest}/{code}_{osoba}_{styl}.png'
+    cfg = STYLE[styl]
+    t = time.time()
+    ok = generate([part_image(pack), part_image(refs[0]),
+                   {'text': PROMPT_STYL.format(what=what, **cfg)}], out)
+    print(('OK  ' if ok else 'BŁĄD'), os.path.basename(out), f'{time.time()-t:.0f}s')
 
 
 def cmd_casting():
@@ -369,6 +434,8 @@ if __name__ == '__main__':
         cmd_refs()
     elif cmd == 'batch':
         cmd_batch()
+    elif cmd == 'styl':
+        cmd_styl()
     elif cmd == 'casting':
         cmd_casting()
     elif cmd == 'kandydatki':
