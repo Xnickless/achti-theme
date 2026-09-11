@@ -8,6 +8,7 @@ Modele: gemini-3-pro-image (Nano Banana Pro, najwierniejszy wzór dzianiny, ~0,1
   python3 tools/gen_model_photos.py refs [--only=kobieta-A,...]   # kandydatki/kandydaci na modelkę (tekst → obraz)
   python3 tools/gen_model_photos.py hat <ref.png> <packshot.jpg> <wyj.png> [--kind=hat|headband|snood]
   python3 tools/gen_model_photos.py batch [--codes=AZ-1,AZ-2] [--limit=20] [--persona=kobieta-A] [--force]
+  python3 tools/gen_model_photos.py hero [--only=dwie-aleja,...] [--size=4K]
   python3 tools/gen_model_photos.py seria --damskie=A,B --meskie=C --dziewczece=D --chlopiece=E [--size=4K]
   python3 tools/gen_model_photos.py oldmoney [--code=] [--osoba=] [--styl=dwor|stajnia|auto|ogrod|aleja] [--size=4K]
   python3 tools/gen_model_photos.py styl [--code=AZ-2938] [--osoba=m2] [--styl=kanapa|mur|kawiarnia|las]
@@ -275,6 +276,53 @@ def cmd_metka():
 
 SERIA_OBSADA = {'damskie': 'k4-braz', 'meskie': 'm2', 'dziewczeca': 'd1', 'chlopieca': 'c1'}
 SERIA_SCENY = ['dwor', 'ogrod', 'aleja', 'stajnia', 'auto']
+
+
+# Baner na stronę główną: szeroki kadr 16:9, wolne miejsce po prawej na nagłówek i na dole na przycisk.
+HERO = {
+    'dwie-aleja': 'two young women walking side by side along an avenue of old oak trees on an English country estate, '
+                  'autumn leaves and morning mist behind them, one wears a cream cable-knit beanie with a fur pompom, '
+                  'the other a camel ribbed beanie, camel and ivory wool coats, leather gloves',
+    'dwie-dwor': 'two young women standing in front of an ivy-covered country manor, clipped hedges and gravel behind them, '
+                 'one wears a cream cable-knit beanie with a fur pompom, the other a soft pink cable beanie, '
+                 'ivory and camel cashmere coats, silk scarf, leather gloves',
+    'para': 'a young couple walking together on a gravel drive in front of a stone country house, autumn trees behind, '
+            'she wears a cream cable-knit beanie with a fur pompom and a camel coat, he wears a brown ribbed beanie and a navy overcoat',
+    'rodzina': 'a young woman and a little girl walking hand in hand through a formal garden with clipped hedges in autumn, '
+               'both in knitted beanies with fur pompoms, ivory and camel wool coats, a golden retriever walking beside them',
+}
+
+PROMPT_HERO = (
+    'Create a premium old-money, quiet-luxury banner photograph for the home page of a knitwear brand: {scena}. '
+    'COMPOSITION IS CRITICAL: place the people in the LEFT HALF of the frame, turned slightly towards the camera with calm natural expressions; '
+    'keep the RIGHT THIRD of the frame almost empty - only softly blurred background there - because a headline will be placed over it; '
+    'keep the BOTTOM CENTRE free of faces and important detail, because a button will sit there. '
+    'The knitted hats are the hero of the photograph: sharp, well lit, fully inside the frame, with visible knit texture and fluffy pompoms. '
+    'The hats have no metal plate, no label, no tag and no lettering anywhere. There is no text, no logo and no watermark in the image. '
+    'Light: soft overcast autumn daylight, muted refined colour grading, gentle contrast, film-like tonality. '
+    'Shot on a 50mm lens at f/2.2, people tack sharp, background softly blurred, wide 16:9 cinematic banner, photorealistic, natural skin texture, high detail.'
+)
+
+
+def cmd_hero():
+    """Kandydaci na baner strony głównej (16:9)."""
+    only = set(ARGS.get('--only', '').split(',')) - {''}
+    dest = f'{ROOT}/modelki/hero'
+    os.makedirs(dest, exist_ok=True)
+    jobs = [(k, v) for k, v in HERO.items() if not only or k in only]
+    print(f'{len(jobs)} banerów, {MODEL} {SIZE}')
+
+    def one(job):
+        k, scena = job
+        out = f'{dest}/hero-{k}.png'
+        if os.path.exists(out) and '--force' not in FLAGS:
+            print('jest', k); return
+        t = time.time()
+        ok = generate([{'text': PROMPT_HERO.format(scena=scena)}], out, aspect='16:9')
+        print(('OK  ' if ok else 'BŁĄD'), k, f'{time.time()-t:.0f}s')
+
+    with ThreadPoolExecutor(WORKERS) as ex:
+        list(ex.map(one, jobs))
 
 
 def cmd_seria():
@@ -589,6 +637,8 @@ if __name__ == '__main__':
         cmd_batch()
     elif cmd == 'metka':
         cmd_metka()
+    elif cmd == 'hero':
+        cmd_hero()
     elif cmd == 'seria':
         cmd_seria()
     elif cmd == 'oldmoney':
