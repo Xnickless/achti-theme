@@ -8,6 +8,7 @@ Modele: gemini-3-pro-image (Nano Banana Pro, najwierniejszy wzór dzianiny, ~0,1
   python3 tools/gen_model_photos.py refs [--only=kobieta-A,...]   # kandydatki/kandydaci na modelkę (tekst → obraz)
   python3 tools/gen_model_photos.py hat <ref.png> <packshot.jpg> <wyj.png> [--kind=hat|headband|snood]
   python3 tools/gen_model_photos.py batch [--codes=AZ-1,AZ-2] [--limit=20] [--persona=kobieta-A] [--force]
+  python3 tools/gen_model_photos.py oldmoney [--code=] [--osoba=] [--styl=dwor|stajnia|auto|ogrod|aleja] [--size=4K]
   python3 tools/gen_model_photos.py styl [--code=AZ-2938] [--osoba=m2] [--styl=kanapa|mur|kawiarnia|las]
   python3 tools/gen_model_photos.py casting [--code=AZ-3101PC] [--code-dzieci=AZ-2364PC] [--only=k1-blond,...]
   python3 tools/gen_model_photos.py kandydatki [--code=AZ-3101PC] [--scena=krakow-rynek] [--only=blond-1,...]
@@ -183,6 +184,113 @@ PROMPT_STYL = (
     'Shot on an 85mm lens at f/2, shallow depth of field, background clearly blurred, subject tack sharp. '
     'Photorealistic editorial fashion photography, natural skin texture, no heavy retouching, 4:5 portrait, high detail.'
 )
+
+
+# Old money: cicha elegancja, wieś i posiadłość, paleta camel/granat/kość słoniowa, bez logotypów.
+OLD_MONEY = {
+    'dwor': dict(
+        scena='on the stone terrace of an ivy-covered English country manor, tall sash windows and clipped box hedges blurred behind',
+        poza='standing three-quarter to the camera, one hand in the coat pocket, chin level, looking calmly into the lens, upper body and hands in frame',
+        stylizacja='a camel double-breasted cashmere coat over an ivory cable-knit sweater, brown leather gloves, a fine gold watch, no logos',
+        swiatlo='soft overcast autumn daylight, muted refined colour grading, low contrast, film-like tonality'),
+    'stajnia': dict(
+        scena='in the cobbled yard of an old equestrian stable, a bay horse and weathered stable doors softly blurred behind',
+        poza='standing three-quarter to the camera, hand resting on a leather bridle, head slightly turned to the lens, relaxed confident expression, upper body in frame',
+        stylizacja='a brown herringbone tweed hacking jacket over a navy roll-neck, tan leather gloves, no logos',
+        swiatlo='soft diffused morning light, earthy muted palette, gentle contrast'),
+    'auto': dict(
+        scena='beside a vintage dark-green Land Rover parked on a gravel driveway in front of a stone country house, autumn trees blurred behind',
+        poza='leaning lightly against the car door, arms loosely crossed, looking straight into the camera with a composed expression, upper body in frame',
+        stylizacja='a navy wool overcoat over an oatmeal cashmere roll-neck, a muted tartan scarf, no logos',
+        swiatlo='soft late-afternoon light, warm restrained colour grading, cinematic but natural'),
+    'ogrod': dict(
+        scena='in a formal garden with clipped yew hedges and a stone urn, golden autumn leaves on the gravel path blurred behind',
+        poza='seated on a weathered stone bench, back straight, hands resting in the lap, head turned towards the camera with a serene expression, upper body in frame',
+        stylizacja='an ivory cashmere coat over a cream fine-knit sweater, a silk scarf knotted at the neck, small pearl earrings, no logos',
+        swiatlo='soft overcast light, pale refined palette, delicate contrast'),
+    'aleja': dict(
+        scena='walking along an avenue of old oak trees on a country estate, a golden retriever walking alongside, mist and autumn leaves blurred behind',
+        poza='mid-step, body turned three-quarter to the camera, head turned to the lens, calm natural expression, upper body and one arm in frame',
+        stylizacja='a beige trench coat over a navy cable-knit sweater, leather gloves, no logos',
+        swiatlo='soft hazy morning backlight, muted green and beige palette, gentle rim light on the hat'),
+}
+
+PROMPT_OLDMONEY = (
+    'Image 1 shows the product: a knitted winter {what} photographed on white. '
+    'Image 2 is a close-up of the same product showing the knit texture and the small metal brand plate in detail. '
+    'Image 3 shows the model: use exactly the same person, the same face, the same hair colour and length. '
+    'Create a refined old-money, quiet-luxury fashion photograph of that person wearing exactly that product, {scena}. '
+    'PRODUCT FIDELITY IS THE TOP PRIORITY: reproduce the knit structure, stitch pattern, colours and proportions exactly as in images 1 and 2; '
+    'the pompom keeps the same generous size, colour and fluffiness if present; '
+    'the small rectangular metal brand plate sits in the same place on the cuff and must be rendered razor sharp and perfectly legible, '
+    'reading exactly ACHTI in small clean capital letters - never blurred, never smudged, never distorted, never a different word. '
+    'Do not redesign, recolour or simplify the product, do not invent patterns, do not add any other text, logo or branding anywhere in the photograph. '
+    'Pose: {poza}. The whole {what} is inside the frame, nothing cropped, sharply in focus, and it stays the hero of the photograph. '
+    'Styling: {stylizacja}. Understated, expensive, never flashy. Light: {swiatlo}. '
+    'Shot on an 85mm lens at f/2.8, the face and the {what} tack sharp, background softly blurred. '
+    'Photorealistic editorial fashion photography, natural skin texture, no heavy retouching, 4:5 portrait, maximum detail.'
+)
+
+
+def cuff_crop(pack, out):
+    """Zbliżenie na otok czapki z metką — model dostaje wyraźniejsze piksele napisu ACHTI."""
+    from PIL import Image
+    im = Image.open(pack).convert('RGB')
+    w, h = im.size
+    box = (int(w * 0.12), int(h * 0.52), int(w * 0.88), int(h * 0.88))
+    crop = im.crop(box)
+    crop = crop.resize((crop.width * 2, crop.height * 2), Image.LANCZOS)
+    crop.save(out, quality=95)
+    return out
+
+
+PROMPT_METKA = (
+    'Image 1 is a finished fashion photograph. Image 2 is a close-up of the real product showing its small metal brand plate. '
+    'Return image 1 completely unchanged except for one single detail: the small metal brand plate on the knitted hat. '
+    'Redraw that plate so it is perfectly sharp and reads exactly ACHTI in small clean capital letters, with the same brushed-metal look, '
+    'the same size, the same position and the same perspective as in image 1, matching the real plate in image 2. '
+    'Absolutely nothing else may change: identical face, identical hair, identical hat knit and colour, identical clothing, identical background, '
+    'identical framing, identical lighting and identical colour grading. Do not re-render the scene, do not crop, do not add any other text.'
+)
+
+
+def cmd_metka():
+    """Drugie przejście: poprawia wyłącznie napis ACHTI na blaszce."""
+    import glob
+    src = ARGS.get('--plik')
+    if not src or not os.path.exists(src):
+        print('podaj --plik=<sciezka do wygenerowanego zdjecia>'); return
+    code = ARGS.get('--code') or os.path.basename(src).split('_')[0]
+    pack = packshot(code)
+    if not pack:
+        print('brak packshotu', code); return
+    dest = os.path.dirname(src)
+    crop = cuff_crop(pack, f'{dest}/_crop_{code}.jpg')
+    out = ARGS.get('--out') or src.replace('.png', '-metka.png')
+    t = time.time()
+    ok = generate([part_image(src), part_image(crop), {'text': PROMPT_METKA}], out)
+    print(('OK  ' if ok else 'BŁĄD'), os.path.basename(out), f'{time.time()-t:.0f}s')
+
+
+def cmd_oldmoney():
+    """5 ujęć w stylu old money: czapka + osoba z castingu + sceneria posiadłości."""
+    import glob
+    code = ARGS.get('--code', 'AZ-2938')
+    osoba = ARGS.get('--osoba', 'm2')
+    styl = ARGS.get('--styl', 'dwor')
+    what = ARGS.get('--kind', 'hat (beanie)')
+    pack = packshot(code)
+    refs = sorted(glob.glob(f'{ROOT}/modelki/casting/{osoba}_*.png'))
+    if not pack or not refs:
+        print('brak packshotu lub wzorca osoby', code, osoba); return
+    dest = f'{ROOT}/modelki/oldmoney'
+    os.makedirs(dest, exist_ok=True)
+    crop = cuff_crop(pack, f'{dest}/_crop_{code}.jpg')
+    out = f'{dest}/{code}_{osoba}_{styl}.png'
+    t = time.time()
+    ok = generate([part_image(pack), part_image(crop), part_image(refs[0]),
+                   {'text': PROMPT_OLDMONEY.format(what=what, **OLD_MONEY[styl])}], out)
+    print(('OK  ' if ok else 'BŁĄD'), os.path.basename(out), f'{time.time()-t:.0f}s')
 
 
 def cmd_styl():
@@ -434,6 +542,10 @@ if __name__ == '__main__':
         cmd_refs()
     elif cmd == 'batch':
         cmd_batch()
+    elif cmd == 'metka':
+        cmd_metka()
+    elif cmd == 'oldmoney':
+        cmd_oldmoney()
     elif cmd == 'styl':
         cmd_styl()
     elif cmd == 'casting':
