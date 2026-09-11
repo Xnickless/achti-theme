@@ -700,3 +700,26 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
   text-align: center;
   opacity: 0.7;
 }
+
+/* ── Listing na 4 kolumny: siatka szersza niż treść (144 rem zamiast 120 rem; 156 rem było za szerokie) — bez pustych boków (11.09.2026).
+   Dotyczy paska filtrów i siatki produktów w kolekcjach oraz w wynikach wyszukiwania. Kafelki, tytuł kolekcji i opis zostają w 120 rem. */
+@media screen and (min-width: 990px) {
+  [id$="__product-grid"] .facets-wrapper.page-width,
+  [id$="__product-grid"] .facets.page-width,
+  [id$="__product-grid"] .collection.page-width,
+  [id$="__product-grid"] .facets-vertical.page-width,
+  .template-search .facets-wrapper.page-width,
+  .template-search .facets.page-width,
+  .template-search .facets-vertical.page-width,
+  .template-search .template-search__results.page-width {
+    max-width: 144rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  /* przy 4 kolumnach większy oddech między kafelkami (Trade daje 1.2 rem) */
+  [id$="__product-grid"] #product-grid,
+  .template-search .template-search__results.product-grid {
+    --grid-desktop-horizontal-spacing: 2.4rem; /* Trade liczy szerokość kafelka z tej zmiennej — sam column-gap łamie rząd do 3 sztuk */
+    --grid-desktop-vertical-spacing: 3.2rem;
+  }
+}
