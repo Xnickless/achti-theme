@@ -330,13 +330,13 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .shopify-section-header-sticky.scrolled-past-header .header-wrapper::after { height: 4.5rem; }
 .shopify-section-header-sticky.header--scrolled .header-wrapper::after { opacity: 1; }
 
-/* Kafelki produktów wszędzie (listing, wyszukiwarka, Bestsellery, polecane, taśma Nowości): kryjący jasny beż (#f8f6f5)
+/* Kafelki produktów wszędzie (listing, wyszukiwarka, Bestsellery, polecane, taśma Nowości): kryjący jasny beż (#e8e3de, wersja A od 11.09.2026; wcześniej #f8f6f5)
    i zdjęcie w mix-blend-mode: multiply — biel zdjęcia zamienia się dokładnie w kolor kafelka, czapka „stoi” na tle.
    .card ma transform (animacja hover), więc jest kontekstem warstw: tło musi być na .card, a kontenery zdjęcia bez z-index. */
 .product-card-wrapper .card--card,
 .product-card-wrapper .card--card .card__inner,
 .product-card-wrapper .card--card .card__inner .card__media { background: transparent; }
-.product-card-wrapper .card--card { background: #f8f6f5; border-radius: 0.8rem; }
+.product-card-wrapper .card--card { background: #e8e3de; border-radius: 0.8rem; }
 .product-card-wrapper .card--card .card__inner,
 .product-card-wrapper .card--card .card__inner .card__media,
 .product-card-wrapper .card--card .card__inner .card__media .media { z-index: auto; isolation: auto; }
@@ -552,10 +552,10 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
   .b2b-page .rte { text-align: justify; hyphens: auto; -webkit-hyphens: auto; text-wrap: pretty; }
 }
 
-/* Multicolumn na beżowym pasie („Twój Partner w Produkcji Czapek”): jak pas Nowości — jasne kafelki #f8f6f5, nagłówek na środku z linią.
+/* Multicolumn na beżowym pasie („Twój Partner w Produkcji Czapek”): jak pas Nowości — jasne kafelki #e8e3de, nagłówek na środku z linią.
    Motyw nakłada na kafelki gradient (.multicolumn.background-primary .multicolumn-card), stąd mocniejszy selektor. */
 .multicolumn.color-scheme-3 .multicolumn-card,
-.multicolumn.color-scheme-3.background-primary .multicolumn-card { background: #f8f6f5; border-radius: 0.8rem; }
+.multicolumn.color-scheme-3.background-primary .multicolumn-card { background: #e8e3de; border-radius: 0.8rem; }
 .multicolumn.color-scheme-3 .multicolumn-card__info { padding: 2.4rem 2.4rem 2.8rem; }
 .multicolumn.color-scheme-3 .title-wrapper-with-link { justify-content: center; text-align: center; padding-bottom: 1.6rem; margin-bottom: 3.2rem; border-bottom: 1px solid rgba(var(--color-foreground), 0.18); }
 .multicolumn.color-scheme-3 .title-wrapper-with-link .title { margin: 0; }
