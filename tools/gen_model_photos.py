@@ -8,6 +8,7 @@ Modele: gemini-3-pro-image (Nano Banana Pro, najwierniejszy wzór dzianiny, ~0,1
   python3 tools/gen_model_photos.py refs [--only=kobieta-A,...]   # kandydatki/kandydaci na modelkę (tekst → obraz)
   python3 tools/gen_model_photos.py hat <ref.png> <packshot.jpg> <wyj.png> [--kind=hat|headband|snood]
   python3 tools/gen_model_photos.py batch [--codes=AZ-1,AZ-2] [--limit=20] [--persona=kobieta-A] [--force]
+  python3 tools/gen_model_photos.py seria --damskie=A,B --meskie=C --dziewczece=D --chlopiece=E [--size=4K]
   python3 tools/gen_model_photos.py oldmoney [--code=] [--osoba=] [--styl=dwor|stajnia|auto|ogrod|aleja] [--size=4K]
   python3 tools/gen_model_photos.py styl [--code=AZ-2938] [--osoba=m2] [--styl=kanapa|mur|kawiarnia|las]
   python3 tools/gen_model_photos.py casting [--code=AZ-3101PC] [--code-dzieci=AZ-2364PC] [--only=k1-blond,...]
@@ -222,9 +223,9 @@ PROMPT_OLDMONEY = (
     'Create a refined old-money, quiet-luxury fashion photograph of that person wearing exactly that product, {scena}. '
     'PRODUCT FIDELITY IS THE TOP PRIORITY: reproduce the knit structure, stitch pattern, colours and proportions exactly as in images 1 and 2; '
     'the pompom keeps the same generous size, colour and fluffiness if present; '
-    'the small rectangular metal brand plate sits in the same place on the cuff and must be rendered razor sharp and perfectly legible, '
-    'reading exactly ACHTI in small clean capital letters - never blurred, never smudged, never distorted, never a different word. '
-    'Do not redesign, recolour or simplify the product, do not invent patterns, do not add any other text, logo or branding anywhere in the photograph. '
+    'THE HAT HAS NO METAL PLATE, NO LABEL, NO TAG AND NO LETTERING: if the reference photo shows a small metal brand plate on the cuff, '
+    'leave it out completely and show clean uninterrupted knit in its place. '
+    'Do not redesign, recolour or simplify the product, do not invent patterns, do not add any text, logo or branding anywhere in the photograph. '
     'Pose: {poza}. The whole {what} is inside the frame, nothing cropped, sharply in focus, and it stays the hero of the photograph. '
     'Styling: {stylizacja}. Understated, expensive, never flashy. Light: {swiatlo}. '
     'Shot on an 85mm lens at f/2.8, the face and the {what} tack sharp, background softly blurred. '
@@ -270,6 +271,50 @@ def cmd_metka():
     t = time.time()
     ok = generate([part_image(src), part_image(crop), {'text': PROMPT_METKA}], out)
     print(('OK  ' if ok else 'BŁĄD'), os.path.basename(out), f'{time.time()-t:.0f}s')
+
+
+SERIA_OBSADA = {'damskie': 'k4-braz', 'meskie': 'm2', 'dziewczeca': 'd1', 'chlopieca': 'c1'}
+SERIA_SCENY = ['dwor', 'ogrod', 'aleja', 'stajnia', 'auto']
+
+
+def cmd_seria():
+    """Seria old money: lista kodów po segmentach, rotacja scen, jedna twarz na segment."""
+    import glob
+    plan = []
+    for grupa, kody in (('damskie', ARGS.get('--damskie', '')), ('meskie', ARGS.get('--meskie', '')),
+                        ('dziewczeca', ARGS.get('--dziewczece', '')), ('chlopieca', ARGS.get('--chlopiece', ''))):
+        for i, code in enumerate([c for c in kody.split(',') if c]):
+            plan.append((grupa, code, SERIA_SCENY[i % len(SERIA_SCENY)]))
+    if not plan:
+        print('podaj --damskie=KOD,KOD --meskie=... --dziewczece=... --chlopiece=...'); return
+    dest = f'{ROOT}/modelki/seria'
+    os.makedirs(dest, exist_ok=True)
+    print(f'{len(plan)} zdjęć, {MODEL} {SIZE}, ~{len(plan)*(0.24 if SIZE=="4K" else 0.134):.2f} USD')
+
+    def one(job):
+        grupa, code, styl = job
+        osoba = SERIA_OBSADA[grupa]
+        pack = packshot(code)
+        refs = sorted(glob.glob(f'{ROOT}/modelki/casting/{osoba}_*.png'))
+        out = f'{dest}/{grupa}_{code}_{styl}.png'
+        if not pack or not refs:
+            print('brak materiału', code, osoba); return
+        if os.path.exists(out) and '--force' not in FLAGS:
+            print('jest', code); return
+        cfg = dict(OLD_MONEY[styl])
+        if grupa == 'dziewczeca':
+            cfg['stylizacja'] = ('a child-sized cream wool coat over a fine cable-knit sweater, simple and age-appropriate, '
+                                 'no jewellery, no scarf, no adult styling')
+        elif grupa == 'chlopieca':
+            cfg['stylizacja'] = ('a child-sized navy wool duffle coat over a cream cable-knit sweater and corduroy trousers, '
+                                 'clearly a boy, age-appropriate, no jewellery, no scarf, no adult styling')
+        t = time.time()
+        ok = generate([part_image(pack), part_image(cuff_crop(pack, f'{dest}/_crop_{code}.jpg')), part_image(refs[0]),
+                       {'text': PROMPT_OLDMONEY.format(what='hat (beanie)', **cfg)}], out)
+        print(('OK  ' if ok else 'BŁĄD'), grupa, code, styl, f'{time.time()-t:.0f}s')
+
+    with ThreadPoolExecutor(WORKERS) as ex:
+        list(ex.map(one, plan))
 
 
 def cmd_oldmoney():
@@ -544,6 +589,8 @@ if __name__ == '__main__':
         cmd_batch()
     elif cmd == 'metka':
         cmd_metka()
+    elif cmd == 'seria':
+        cmd_seria()
     elif cmd == 'oldmoney':
         cmd_oldmoney()
     elif cmd == 'styl':
