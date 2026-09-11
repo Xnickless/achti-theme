@@ -8,6 +8,8 @@ Modele: gemini-3-pro-image (Nano Banana Pro, najwierniejszy wzór dzianiny, ~0,1
   python3 tools/gen_model_photos.py refs [--only=kobieta-A,...]   # kandydatki/kandydaci na modelkę (tekst → obraz)
   python3 tools/gen_model_photos.py hat <ref.png> <packshot.jpg> <wyj.png> [--kind=hat|headband|snood]
   python3 tools/gen_model_photos.py batch [--codes=AZ-1,AZ-2] [--limit=20] [--persona=kobieta-A] [--force]
+  python3 tools/gen_model_photos.py casting [--code=AZ-3101PC] [--code-dzieci=AZ-2364PC] [--only=k1-blond,...]
+  python3 tools/gen_model_photos.py kandydatki [--code=AZ-3101PC] [--scena=krakow-rynek] [--only=blond-1,...]
   python3 tools/gen_model_photos.py preview                      # strona HTML do oceny (packshot | modelka)
 
 Wspólne flagi: --model=<id>, --size=1K|2K|4K, --workers=N, --dry-run.
@@ -43,6 +45,163 @@ PERSONAS = {
 }
 # Który segment katalogu idzie na którą personę (dzieci: patrz uwaga w README/CLAUDE.md).
 SEGMENT_PERSONA = {'damskie': 'kobieta-A', 'meskie': 'mezczyzna-A', 'unisex': 'kobieta-A'}
+
+# Kandydatki do testu plenerowego (11.09.2026, wytyczne Kamila: 22-25 lat, blond albo brąz).
+KANDYDATKI = {
+    'blond-1': 'a 23-year-old Polish woman, long straight light-blonde hair, delicate oval face, blue eyes, fresh natural makeup',
+    'blond-2': 'a 22-year-old Polish woman, shoulder-length wavy golden-blonde hair, soft round face, green eyes, barely-there makeup',
+    'blond-3': 'a 25-year-old Polish woman, long beachy ash-blonde waves, high cheekbones, grey-blue eyes, clean nordic look',
+    'blond-4': 'a 24-year-old Polish woman, platinum blonde hair in a low ponytail with loose strands, fine features, natural makeup',
+    'braz-1': 'a 23-year-old Polish woman, long straight chestnut-brown hair, warm brown eyes, light freckles, natural makeup',
+    'braz-2': 'a 22-year-old Polish woman, long wavy dark-brown hair, expressive brown eyes, soft youthful face, minimal makeup',
+    'braz-3': 'a 25-year-old Polish woman, medium-length light-brown hair with soft curls, hazel eyes, warm friendly face',
+    'braz-4': 'a 24-year-old Polish woman, long glossy dark-brown hair, defined brows, almond eyes, editorial but natural look',
+}
+
+# Plenery — tło rozmyte, czapka zostaje bohaterem kadru.
+SCENY = {
+    'krakow-rynek': 'the Main Market Square in Krakow, Poland, with the Cloth Hall arcades and the towers of St Mary\'s Basilica softly blurred in the background',
+    'krakow-kazimierz': 'a narrow old street in the Kazimierz district of Krakow with historic tenement houses and warm shop windows softly blurred in the background',
+    'krakow-planty': 'the Planty park in Krakow on a crisp winter morning, bare trees and a historic brick wall softly blurred in the background',
+    'krakow-wawel': 'the courtyard near Wawel castle in Krakow, renaissance arcades and stone walls softly blurred in the background',
+    'krakow-most': 'the Bernatka footbridge over the Vistula river in Krakow at dusk, string lights and the river softly blurred in the background',
+    'zakopane': 'a snowy street in Zakopane with wooden highlander architecture and the Tatra mountains softly blurred in the background',
+    'gory-snieg': 'a snowy mountain meadow in the Tatras on a bright winter day, snow-covered spruces softly blurred in the background',
+    'las-zima': 'a winter forest path with frost on the branches, soft morning haze blurred in the background',
+    'kawiarnia': 'a warm cafe interior seen from the street side, window reflections and soft indoor lights blurred in the background',
+    'nadmorze': 'a windy Baltic sea beach in winter, dunes and grey sea softly blurred in the background',
+    'jesien-park': 'a city park in autumn, golden and rust coloured leaves on the trees and ground, warm low sunlight, softly blurred background',
+    'jesien-las': 'an autumn forest path covered with fallen leaves, warm golden backlight through the branches, softly blurred background',
+    'jesien-krakow': 'a Krakow street in autumn, golden leaves on the pavement and historic tenement houses softly blurred in the background',
+}
+
+PROMPT_PLENER = (
+    'Image 1 shows the product: a knitted winter {what} photographed on white. '
+    'Create a premium editorial lifestyle photograph of {desc} wearing exactly that product outdoors in {scene}. '
+    'Reproduce the product with absolute fidelity: identical knit structure and stitch pattern (cables, ribs, jacquard motifs), '
+    'identical colours and colour blocks, identical proportions and depth of the cuff, and the pompom at the same generous size, '
+    'colour and fluffiness as in image 1 - never shrink or omit the pompom - plus the small metal brand label in the same position. '
+    'Do not redesign, recolour or simplify the product, do not invent patterns. '
+    'Pose: three-quarter side view, the head turned about 35 degrees away from the camera and the chin lowered slightly, '
+    'eyes looking down and away with a calm natural expression, so the top, crown and side of the {what} are clearly presented to the viewer. '
+    'The whole {what} including the pompom is inside the frame, nothing cropped. Hair falls naturally behind the shoulders and does not cover the {what}. '
+    'She wears a simple neutral winter coat in beige or grey wool, collar down, no scarf, no jewellery. '
+    'Light: soft overcast winter daylight, gentle contrast, cool natural white balance, no harsh shadows. '
+    'Shot on an 85mm lens at f/2, shallow depth of field, background clearly blurred, subject tack sharp. '
+    'Photorealistic fashion photography, natural skin texture, no heavy retouching, 4:5 portrait, high detail.'
+)
+
+
+CASTING = {
+    # kobiety 22-25, blond i brąz
+    'k1-blond':  dict(typ='kobieta', desc='a 23-year-old Polish woman with long straight honey-blonde hair, delicate features, blue-grey eyes, fresh natural makeup'),
+    'k2-blond':  dict(typ='kobieta', desc='a 22-year-old Polish woman with shoulder-length tousled light-blonde hair, round soft face, warm smile lines, no visible makeup'),
+    'k3-blond':  dict(typ='kobieta', desc='a 25-year-old Polish woman with long ash-blonde hair and a centre parting, sculpted cheekbones, calm nordic beauty'),
+    'k4-braz':   dict(typ='kobieta', desc='a 23-year-old Polish woman with long chestnut-brown hair, warm brown eyes, light freckles across the nose'),
+    'k5-braz':   dict(typ='kobieta', desc='a 22-year-old Polish woman with dark-brown hair in soft waves, expressive dark eyes, youthful round face'),
+    'k6-braz':   dict(typ='kobieta', desc='a 24-year-old Polish woman with light-brown hair and natural curls, hazel eyes, open friendly face'),
+    # mężczyźni
+    'm1': dict(typ='mezczyzna', desc='a 26-year-old Polish man with short dark-blonde hair and light stubble, friendly relaxed face'),
+    'm2': dict(typ='mezczyzna', desc='a 30-year-old Polish man with short brown hair and a neat short beard, calm confident face'),
+    'm3': dict(typ='mezczyzna', desc='a 24-year-old Polish man with dark hair, clean shaven, slim face, casual sporty look'),
+    'm4': dict(typ='mezczyzna', desc='a 34-year-old Polish man with slightly greying short hair and stubble, warm mature look'),
+    # dzieci (czapki dziecięce)
+    'd1': dict(typ='dziewczynka', desc='a cheerful 7-year-old Polish girl with long light-blonde hair and rosy cheeks'),
+    'd2': dict(typ='dziewczynka', desc='a 6-year-old Polish girl with brown hair in two braids and big brown eyes'),
+    'd3': dict(typ='dziewczynka', desc='an 8-year-old Polish girl with wavy chestnut hair and freckles, bright happy face'),
+    'c1': dict(typ='chlopiec', desc='a 7-year-old Polish boy with short blonde hair and blue eyes, cheerful face'),
+    'c2': dict(typ='chlopiec', desc='a 6-year-old Polish boy with short dark-brown hair and rosy cheeks, curious look'),
+    'c3': dict(typ='chlopiec', desc='an 8-year-old Polish boy with light-brown messy hair, friendly grin'),
+}
+
+UBRANIE = {
+    'kobieta': 'a simple neutral winter coat in beige or grey wool, collar down, no scarf, no jewellery',
+    'mezczyzna': 'a plain dark winter jacket, collar down, no scarf',
+    'dziewczynka': 'a simple padded winter jacket in a muted colour, zipped up, no scarf',
+    'chlopiec': 'a simple padded winter jacket in a muted colour, zipped up, no scarf',
+}
+
+PROMPT_CAST = (
+    'Image 1 shows the product: a knitted winter {what} photographed on white.{ref_note} '
+    'Create a premium editorial lifestyle photograph of {desc}, wearing exactly that product outdoors in {scene}. '
+    'Reproduce the product with absolute fidelity: identical knit structure and stitch pattern (cables, ribs, jacquard motifs), '
+    'identical colours and colour blocks, identical proportions and cuff depth, and the pompom at the same generous size, colour and '
+    'fluffiness as in image 1 - never shrink or omit the pompom - plus the small metal brand label in the same position. '
+    'Do not redesign, recolour or simplify the product, do not invent patterns. '
+    'Pose: three-quarter side view, head turned about 35 degrees away from the camera, chin lowered slightly, eyes looking down and away '
+    'with a calm natural expression, so the crown, side and pattern of the {what} are clearly presented. '
+    'The whole {what} including the pompom is inside the frame, nothing cropped. Hair falls naturally and does not cover the {what}. '
+    'The person wears {outfit}. '
+    'Light: soft natural daylight, gentle contrast, no harsh shadows. Shot on an 85mm lens at f/2, shallow depth of field, '
+    'background clearly blurred, subject tack sharp. Photorealistic fashion photography, natural skin texture, no heavy retouching, '
+    '4:5 portrait, high detail.'
+)
+
+REF_NOTE = (' Image 2 shows the model: use exactly the same person, the same face, the same hair colour and length, '
+            'so that both photographs clearly show one and the same model.')
+
+
+def cmd_casting():
+    """Nowe twarze do wyboru: po 2 zdjęcia na osobę w różnych sceneriach, ta sama twarz w obu."""
+    code = ARGS.get('--code', 'AZ-3101PC')
+    code_kids = ARGS.get('--code-dzieci', 'AZ-2364PC')
+    scenes = (ARGS.get('--sceny') or 'krakow-rynek,gory-snieg,jesien-park,krakow-kazimierz,zakopane,jesien-las').split(',')
+    only = set(ARGS.get('--only', '').split(',')) - {''}
+    dest = f'{ROOT}/modelki/casting'
+    os.makedirs(dest, exist_ok=True)
+    people = [(k, v) for k, v in CASTING.items() if not only or k in only]
+    print(f'{len(people)} osób x 2 zdjęcia = {len(people)*2}, model {MODEL}, ~{len(people)*2*0.1355:.2f} USD')
+
+    def one(job):
+        n, (key, info) = job
+        kid = info['typ'] in ('dziewczynka', 'chlopiec')
+        pack = packshot(code_kids if kid else code)
+        what = 'hat (beanie)'
+        outfit = UBRANIE[info['typ']]
+        s1, s2 = scenes[(n * 2) % len(scenes)], scenes[(n * 2 + 1) % len(scenes)]
+        o1, o2 = f'{dest}/{key}_1_{s1}.png', f'{dest}/{key}_2_{s2}.png'
+        t = time.time()
+        if not (os.path.exists(o1) and '--force' not in FLAGS):
+            ok = generate([part_image(pack), {'text': PROMPT_CAST.format(what=what, desc=info['desc'], scene=SCENY[s1], outfit=outfit, ref_note='')}], o1)
+            if not ok:
+                print('BŁĄD', key, '1'); return
+        # drugie ujęcie z pierwszym zdjęciem jako wzorcem twarzy
+        if not (os.path.exists(o2) and '--force' not in FLAGS):
+            generate([part_image(pack), part_image(o1),
+                      {'text': PROMPT_CAST.format(what=what, desc=info['desc'], scene=SCENY[s2], outfit=outfit, ref_note=REF_NOTE)}], o2)
+        print('OK  ', key, info['typ'], f'{s1}/{s2}', f'{time.time()-t:.0f}s')
+
+    with ThreadPoolExecutor(WORKERS) as ex:
+        list(ex.map(one, list(enumerate(people))))
+
+
+def cmd_kandydatki():
+    """Jedna czapka, wiele modelek — test plenerowy do wyboru twarzy."""
+    code = ARGS.get('--code', 'AZ-3101PC')
+    scene_key = ARGS.get('--scena', 'krakow-rynek')
+    scene = SCENY[scene_key]
+    what = 'hat (beanie)'
+    pack = packshot(code)
+    if not pack:
+        print('brak packshotu', code); return
+    only = set(ARGS.get('--only', '').split(',')) - {''}
+    dest = f'{ROOT}/modelki/kandydatki'
+    os.makedirs(dest, exist_ok=True)
+    jobs = [(k, v) for k, v in KANDYDATKI.items() if not only or k in only]
+    print(f'{len(jobs)} zdjęć, {code}, scena {scene_key}, model {MODEL}')
+
+    def one(job):
+        k, desc = job
+        out = f'{dest}/{code}_{scene_key}_{k}.png'
+        if os.path.exists(out) and '--force' not in FLAGS:
+            print('jest', k); return
+        t = time.time()
+        ok = generate([part_image(pack), {'text': PROMPT_PLENER.format(desc=desc, scene=scene, what=what)}], out)
+        print(('OK  ' if ok else 'BŁĄD'), k, f'{time.time()-t:.0f}s')
+
+    with ThreadPoolExecutor(WORKERS) as ex:
+        list(ex.map(one, jobs))
+
 
 PROMPT_REF = (
     'Professional e-commerce beauty headshot of {desc}. '
@@ -210,6 +369,10 @@ if __name__ == '__main__':
         cmd_refs()
     elif cmd == 'batch':
         cmd_batch()
+    elif cmd == 'casting':
+        cmd_casting()
+    elif cmd == 'kandydatki':
+        cmd_kandydatki()
     elif cmd == 'preview':
         cmd_preview()
     elif cmd == 'hat':
