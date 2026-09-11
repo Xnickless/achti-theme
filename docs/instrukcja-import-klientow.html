@@ -1,0 +1,184 @@
+<title>Baza mailowa Achti</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+  :root {
+    --bg: #f6f4f1;
+    --paper: #ffffff;
+    --ink: #221f1c;
+    --ink-2: #5a544e;
+    --ink-3: #8a837c;
+    --line: #e1dcd6;
+    --accent: #6a5a4b;
+    --accent-soft: #ece6df;
+    --ok: #2f6b4f;
+    --ok-soft: #e3efe8;
+    --warn: #8a5a1f;
+    --warn-soft: #f6ead8;
+    --code: #efece8;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1b1917;
+      --paper: #24211e;
+      --ink: #efeae4;
+      --ink-2: #c6bfb7;
+      --ink-3: #948c83;
+      --line: #3a3531;
+      --accent: #cbb9a5;
+      --accent-soft: #33302b;
+      --ok: #8fd0b0;
+      --ok-soft: #223a2f;
+      --warn: #e6b87a;
+      --warn-soft: #3d3020;
+      --code: #2e2a26;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1b1917; --paper: #24211e; --ink: #efeae4; --ink-2: #c6bfb7; --ink-3: #948c83; --line: #3a3531;
+    --accent: #cbb9a5; --accent-soft: #33302b; --ok: #8fd0b0; --ok-soft: #223a2f; --warn: #e6b87a; --warn-soft: #3d3020; --code: #2e2a26;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Source Sans 3", "Segoe UI", Roboto, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  main { max-width: 820px; margin: 0 auto; padding: 48px 24px 96px; }
+  h1, h2, h3 { font-family: "Tenor Sans", Georgia, serif; font-weight: 400; letter-spacing: .01em; text-wrap: balance; margin: 0; }
+  h1 { font-size: 2.2rem; line-height: 1.15; }
+  h2 { font-size: 1.45rem; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); }
+  h3 { font-size: 1.1rem; margin-top: 28px; }
+  p { margin: 12px 0 0; }
+  .eyebrow { font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
+  .lead { font-size: 1.1rem; color: var(--ink-2); max-width: 62ch; }
+  .meta { margin-top: 18px; font-size: .9rem; color: var(--ink-3); }
+  .rule { margin: 32px 0 0; padding: 18px 22px; background: var(--warn-soft); border-left: 3px solid var(--warn); border-radius: 0 6px 6px 0; }
+  .rule strong { color: var(--warn); }
+  .ok { margin: 18px 0 0; padding: 16px 20px; background: var(--ok-soft); border-left: 3px solid var(--ok); border-radius: 0 6px 6px 0; }
+  .ok strong { color: var(--ok); }
+  ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 20px 0 0; display: grid; gap: 14px; }
+  ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 44px 1fr; gap: 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px; }
+  ol.steps > li::before { content: counter(s); font-family: "Tenor Sans", Georgia, serif; font-size: 1.35rem; color: var(--accent); line-height: 1.1; }
+  ol.steps > li p { margin-top: 6px; }
+  ol.steps > li p:first-child { margin-top: 0; }
+  .path { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .92em; background: var(--code); padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+  .arrow { color: var(--ink-3); padding: 0 4px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: .95rem; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); background: var(--accent-soft); }
+  tr:last-child td { border-bottom: 0; }
+  td code, .col { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .9em; }
+  .scroll { overflow-x: auto; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-top: 18px; }
+  .card { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; }
+  .card h3 { margin-top: 0; font-size: 1rem; }
+  .card p { font-size: .95rem; color: var(--ink-2); }
+  .faq dt { font-weight: 600; margin-top: 18px; }
+  .faq dd { margin: 4px 0 0; color: var(--ink-2); }
+  .foot { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); font-size: .9rem; color: var(--ink-3); }
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.8rem; }
+    ol.steps > li { grid-template-columns: 34px 1fr; padding: 16px; }
+  }
+  @media print {
+    body { background: #fff; color: #000; }
+    main { padding: 0; max-width: none; }
+    .rule, .ok, .card, ol.steps > li, table { break-inside: avoid; }
+  }
+</style>
+
+<main>
+  <p class="eyebrow">Platforma B2B Achti · instrukcja</p>
+  <h1>Jak wgrać posiadaną bazę maili do sklepu i do Klaviyo</h1>
+  <p class="lead">Adresy klientów, które już masz w Excelu, w programie do faktur albo w skrzynce pocztowej, wgrywasz w jedno miejsce: do listy klientów w Shopify. Klaviyo pobiera je stamtąd samo. Osobny import do Klaviyo jest potrzebny tylko wtedy, gdy chcesz wysyłać newsletter do osób, których nie chcesz mieć jako klientów sklepu.</p>
+  <p class="meta">Stan na 11.09.2026. Sklep: ccucsr-si.myshopify.com. Klaviyo nie jest jeszcze zainstalowane, krok 3 opisuje pierwsze podłączenie.</p>
+
+  <div class="rule">
+    <p><strong>Najważniejsza zasada.</strong> Do newslettera trafia tylko osoba, która zgodziła się na maile marketingowe. W pliku do importu jest jedna kolumna, która o tym decyduje: <span class="col">Accepts Email Marketing</span>. Wpisujesz w niej <span class="col">yes</span> tylko przy klientach ze zgodą (mail, umowa, zapis przez formularz). Reszta dostaje <span class="col">no</span>. Tacy klienci wejdą do bazy sklepu, będą mogli się zalogować i zamawiać, ale newslettera nie dostaną. Wpisanie <span class="col">yes</span> bez zgody to wysyłka niezamówiona i ryzyko skargi do UODO.</p>
+  </div>
+
+  <h2>Krok 1. Przygotuj plik CSV</h2>
+  <p>Shopify przyjmuje plik CSV z konkretnymi nagłówkami kolumn. Najprościej: w oknie importu (krok 2) kliknij <em>Pobierz przykładowy plik CSV</em>, otwórz go w Excelu lub Numbers i wklej swoje dane pod nagłówki. Kamil może też przygotować plik z Twojej listy, wystarczy przesłać Excel z mailami.</p>
+
+  <h3>Kolumny, które mają znaczenie</h3>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Kolumna w pliku</th><th>Co wpisać</th><th>Wymagana</th></tr></thead>
+    <tbody>
+      <tr><td><code>Email</code></td><td>Adres e-mail, jeden na wiersz. To po nim Shopify rozpoznaje klienta.</td><td>tak</td></tr>
+      <tr><td><code>First Name</code>, <code>Last Name</code></td><td>Imię i nazwisko osoby kontaktowej.</td><td>zalecane</td></tr>
+      <tr><td><code>Accepts Email Marketing</code></td><td><code>yes</code> tylko przy zgodzie na newsletter, w pozostałych wierszach <code>no</code>.</td><td>tak</td></tr>
+      <tr><td><code>Default Address Company</code></td><td>Nazwa firmy klienta.</td><td>zalecane</td></tr>
+      <tr><td><code>Default Address Address1</code>, <code>Default Address City</code>, <code>Default Address Zip</code>, <code>Default Address Country Code</code></td><td>Adres firmy. Kod kraju dwuliterowy, np. <code>PL</code>, <code>DE</code>.</td><td>nie</td></tr>
+      <tr><td><code>Phone</code></td><td>Telefon w formacie międzynarodowym, np. <code>+48601234567</code>.</td><td>nie</td></tr>
+      <tr><td><code>Tags</code></td><td>Etykiety oddzielone przecinkiem, np. <code>baza-2026, hurt</code>. Po nich łatwo później odfiltrować zaimportowanych.</td><td>zalecane</td></tr>
+      <tr><td><code>Note</code></td><td>Dowolna notatka widoczna tylko w panelu, np. skąd pochodzi kontakt.</td><td>nie</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Pozostałych kolumn z przykładowego pliku nie usuwaj, po prostu zostaw je puste. Plik zapisz jako CSV w kodowaniu UTF-8 (w Excelu: <em>Zapisz jako</em> → <em>CSV UTF-8</em>), inaczej polskie znaki w nazwach firm się rozsypią.</p>
+
+  <h3>Przykład dwóch wierszy</h3>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Accepts Email Marketing</th><th>Default Address Company</th><th>Tags</th></tr></thead>
+    <tbody>
+      <tr><td>Jan</td><td>Kowalski</td><td>jan@sklep-kowalski.pl</td><td>yes</td><td>Sklep Kowalski sp. z o.o.</td><td>baza-2026, hurt</td></tr>
+      <tr><td>Anna</td><td>Nowak</td><td>anna@czapki-nowak.pl</td><td>no</td><td>Czapki Nowak</td><td>baza-2026</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Krok 2. Import w Shopify</h2>
+  <ol class="steps">
+    <li><div><p>W panelu Shopify wejdź w <span class="path">Klienci</span>. W prawym górnym rogu kliknij <span class="path">Importuj</span>.</p></div></li>
+    <li><div><p>Kliknij <span class="path">Dodaj plik</span> i wskaż swój CSV.</p><p>Jeśli część adresów już jest w sklepie (np. firmy, które same się zarejestrowały), zaznacz <em>Nadpisz istniejących klientów o tym samym adresie e-mail</em> tylko wtedy, gdy Twoje dane są lepsze niż te w sklepie. W przeciwnym razie zostaw odznaczone, duplikaty zostaną pominięte.</p></div></li>
+    <li><div><p>Kliknij <span class="path">Importuj klientów</span>. Przy kilkuset adresach trwa to minutę, przy większych plikach Shopify wyśle mail po zakończeniu.</p></div></li>
+    <li><div><p>Sprawdź wynik: lista klientów powinna urosnąć, a w kolumnie <em>Subskrypcja e-maili</em> przy osobach ze zgodą stoi <em>Zasubskrybowano</em>. Jeżeli import zgłosi błędy, najczęściej chodzi o literówkę w mailu albo o kolumnę z niewłaściwym nagłówkiem.</p></div></li>
+  </ol>
+  <div class="ok">
+    <p><strong>Pojedynczy klient bez pliku.</strong> <span class="path">Klienci</span><span class="arrow">→</span><span class="path">Dodaj klienta</span>, wpisz dane i zaznacz pole <em>Klient wyraził zgodę na otrzymywanie e-maili marketingowych</em> tylko wtedy, gdy taką zgodę masz.</p>
+  </div>
+
+  <h2>Krok 3. Klaviyo</h2>
+  <p>Klaviyo nie trzyma osobnej bazy do przepisywania. Po podłączeniu do sklepu pobiera wszystkich klientów Shopify, a osoby ze zgodą marketingową dopisuje do listy newslettera. Dlatego kolejność jest ważna: najpierw import do Shopify, potem Klaviyo.</p>
+  <ol class="steps">
+    <li><div><p>Zainstaluj aplikację: w panelu Shopify <span class="path">Aplikacje</span><span class="arrow">→</span><span class="path">Shopify App Store</span>, wyszukaj <em>Klaviyo: Email Marketing &amp; SMS</em>, kliknij <em>Zainstaluj</em> i zaloguj się na konto Klaviyo (albo załóż nowe na adres firmowy).</p></div></li>
+    <li><div><p>W kreatorze połączenia zaznacz synchronizację klientów i zamówień. Przy pytaniu o listę dla subskrybentów wybierz lub utwórz listę <em>Newsletter</em>. Tam trafią wszyscy z <span class="col">Accepts Email Marketing = yes</span> oraz każdy, kto zapisze się przez okienko i stopkę na stronie sklepu.</p></div></li>
+    <li><div><p>Po kilku minutach sprawdź w Klaviyo <span class="path">Audience</span><span class="arrow">→</span><span class="path">Lists &amp; Segments</span><span class="arrow">→</span><span class="path">Newsletter</span>. Liczba osób powinna zgadzać się z liczbą zasubskrybowanych w Shopify.</p></div></li>
+  </ol>
+
+  <h3>Kiedy wgrywać maile bezpośrednio do Klaviyo</h3>
+  <p>Tylko wtedy, gdy adresaci newslettera nie mają być klientami sklepu, np. lista z targów. Wtedy w Klaviyo: <span class="path">Audience</span><span class="arrow">→</span><span class="path">Lists &amp; Segments</span><span class="arrow">→</span> wybierz listę <span class="arrow">→</span><span class="path">Manage list</span><span class="arrow">→</span><span class="path">Import contacts</span> i wgraj CSV z kolumnami <span class="col">Email</span>, <span class="col">First Name</span>, <span class="col">Last Name</span>, <span class="col">Organization</span>. W ostatnim kroku Klaviyo zapyta, czy te osoby wyraziły zgodę na maile. Zaznacz to tylko dla listy ze zgodami, inaczej wysyłka do nich będzie zablokowana.</p>
+
+  <h2>Co dzieje się dalej</h2>
+  <div class="cards">
+    <div class="card"><h3>Nowe zapisy ze strony</h3><p>Okienko newslettera i formularz w stopce sklepu wymagają zaznaczenia zgody. Każdy taki zapis trafia do Shopify ze statusem „zasubskrybowano”, a stamtąd do listy Newsletter w Klaviyo. Nic nie trzeba przepisywać ręcznie.</p></div>
+    <div class="card"><h3>Firmy B2B</h3><p>Import klientów nie zakłada firm ani nie nadaje dostępu do cen hurtowych. Firmę i jej lokalizację zakładasz osobno w <span class="path">Klienci</span><span class="arrow">→</span><span class="path">Firmy</span> i przypisujesz do niej zaimportowanego klienta jako osobę kontaktową.</p></div>
+    <div class="card"><h3>Wypisy</h3><p>Każdy mail z Klaviyo ma link rezygnacji. Wypis w Klaviyo cofa zgodę także w Shopify, więc obie bazy pozostają spójne.</p></div>
+    <div class="card"><h3>Porządek w bazie</h3><p>Tag nadany przy imporcie (np. <span class="col">baza-2026</span>) pozwala w każdej chwili odfiltrować zaimportowanych klientów w Shopify i zbudować z nich segment w Klaviyo.</p></div>
+  </div>
+
+  <h2>Pytania, które się pojawią</h2>
+  <dl class="faq">
+    <dt>Mam tylko listę maili, bez imion i firm. Da się?</dt>
+    <dd>Tak. Wystarczą kolumny <span class="col">Email</span> i <span class="col">Accepts Email Marketing</span>. Resztę można uzupełnić później.</dd>
+    <dt>Skąd wiem, kto ma zgodę?</dt>
+    <dd>Zgoda to zapis przez formularz, zaznaczone pole w umowie lub mail, w którym klient prosi o informacje o nowościach i ofertach. Sama współpraca handlowa zgodą nie jest. Przy wątpliwościach wpisz <span class="col">no</span> i wyślij takim klientom jednorazową prośbę o zapis z linkiem do formularza.</dd>
+    <dt>Czy import wysyła klientom jakieś maile?</dt>
+    <dd>Nie. Import niczego nie wysyła i nie zakłada kont z hasłem. Klient dostanie mail dopiero wtedy, gdy Ty wyślesz kampanię z Klaviyo albo gdy sam poprosi o dostęp do konta.</dd>
+    <dt>Wgrałem plik dwa razy. Będą duplikaty?</dt>
+    <dd>Nie. Shopify rozpoznaje klienta po adresie e-mail, drugi import tylko go pomija albo nadpisuje, zależnie od zaznaczonej opcji.</dd>
+    <dt>Ile adresów mogę wgrać naraz?</dt>
+    <dd>Plik do 15 MB, w praktyce kilkadziesiąt tysięcy wierszy. Jeśli baza jest większa, podziel ją na kilka plików.</dd>
+  </dl>
+
+  <p class="foot">Przygotował Kamil Dziedzic dla Achti. W razie pytań o plik lub błędy importu prześlij zrzut ekranu z komunikatem, to najszybsza droga.</p>
+</main>
