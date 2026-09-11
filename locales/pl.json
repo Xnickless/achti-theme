@@ -663,6 +663,12 @@
     "currency": {
       "label": "Waluta podglądu",
       "note": "Kurs orientacyjny (EBC). Zamówienia rozliczamy w {{ currency }}."
+    },
+    "fibre": {
+      "wool": "Z wełną",
+      "wool_title": "Skład zawiera wełnę",
+      "merino": "Wełna merino",
+      "merino_title": "Skład zawiera wełnę merino"
     }
   }
 }

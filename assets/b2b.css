@@ -724,3 +724,35 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
     --grid-desktop-vertical-spacing: 3.2rem;
   }
 }
+
+/* ── Znaczek składu: „Z wełną” (kłębek) i „Wełna merino” (owca) — tagi welna/merino z tools/set_fibre_tags.py ─────── */
+.fibre-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.9rem 0.45rem 0.7rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #3a342f;
+  background: rgba(255, 255, 255, 0.82);
+  border: 0.1rem solid rgba(58, 52, 47, 0.18);
+  border-radius: 10rem;
+  white-space: nowrap;
+}
+.fibre-badge--merino { color: #2f2a26; border-color: rgba(58, 52, 47, 0.35); }
+.fibre-badge__icon { width: 1.6rem; height: 1.6rem; flex: none; }
+.fibre-badge--card {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+  z-index: 2;
+  pointer-events: none;
+}
+.fibre-badge--product { margin: 0.8rem 0 0; font-size: 1.15rem; padding: 0.6rem 1.1rem 0.6rem 0.9rem; }
+.fibre-badge--product .fibre-badge__icon { width: 1.9rem; height: 1.9rem; }
+@media screen and (max-width: 749px) {
+  .fibre-badge--card { top: 0.8rem; left: 0.8rem; padding: 0.35rem 0.7rem 0.35rem 0.55rem; font-size: 0.95rem; }
+  .fibre-badge--card .fibre-badge__icon { width: 1.4rem; height: 1.4rem; }
+}

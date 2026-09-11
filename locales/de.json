@@ -639,6 +639,12 @@
     "currency": {
       "label": "Anzeigewährung",
       "note": "Richtwert nach EZB-Kurs. Abgerechnet wird in {{ currency }}."
+    },
+    "fibre": {
+      "wool": "Mit Wolle",
+      "wool_title": "Enthält Wolle",
+      "merino": "Merinowolle",
+      "merino_title": "Enthält Merinowolle"
     }
   }
 }

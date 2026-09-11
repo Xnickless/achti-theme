@@ -1,0 +1,35 @@
+{%- comment -%}
+  Znaczek składu: „Wełna merino” (tag `merino`) albo „Z wełną” (tag `welna`). Tagi nadaje tools/set_fibre_tags.py
+  na podstawie metapola custom.sklad. Parametry: product, variant ('card' — na kafelku, 'product' — karta produktu).
+{%- endcomment -%}
+{%- liquid
+  assign fibre = blank
+  if product.tags contains 'merino'
+    assign fibre = 'merino'
+  elsif product.tags contains 'welna'
+    assign fibre = 'wool'
+  endif
+-%}
+{%- if fibre != blank -%}
+  {%- assign label_key = 'b2b.fibre.' | append: fibre -%}
+  {%- assign title_key = 'b2b.fibre.' | append: fibre | append: '_title' -%}
+  <span class="fibre-badge fibre-badge--{{ fibre }} fibre-badge--{{ variant | default: 'card' }}" title="{{ title_key | t }}">
+    {%- if fibre == 'merino' -%}
+      {%- comment -%} owca — merino to rasa owiec {%- endcomment -%}
+      <svg class="fibre-badge__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M7.5 9.2a2.6 2.6 0 0 1 3.3-2.9 2.7 2.7 0 0 1 5 .3 2.6 2.6 0 0 1 3 2.9 2.4 2.4 0 0 1 .4 4.3 2.5 2.5 0 0 1-3.2 2.9H9a2.6 2.6 0 0 1-3.4-2.4 2.5 2.5 0 0 1 1.9-5.1Z"/>
+        <path d="M6.2 11.1H4.4a1.9 1.9 0 1 0 .3 3.8"/>
+        <circle cx="3.9" cy="12.6" r=".4" fill="currentColor" stroke="none"/>
+        <path d="M9.5 16.7v3M14.5 16.7v3"/>
+      </svg>
+    {%- else -%}
+      {%- comment -%} kłębek wełny {%- endcomment -%}
+      <svg class="fibre-badge__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="12" r="7.5"/>
+        <path d="M4.4 9.6c3.4 1 7 .3 10.2-1.9M3.7 13.4c4.6 1.6 9.6.3 13.2-3.4M5.6 16.9c4.6 1.2 9.4-.4 12.5-4.1"/>
+        <path d="M17.6 15.2c1.6.8 2.8 2 3.4 4.3"/>
+      </svg>
+    {%- endif -%}
+    <span class="fibre-badge__label">{{ label_key | t }}</span>
+  </span>
+{%- endif -%}

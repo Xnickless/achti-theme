@@ -651,6 +651,12 @@
     "currency": {
       "label": "Devise d'affichage",
       "note": "Taux indicatif BCE. Les commandes sont réglées en {{ currency }}."
+    },
+    "fibre": {
+      "wool": "Avec laine",
+      "wool_title": "Contient de la laine",
+      "merino": "Laine mérinos",
+      "merino_title": "Contient de la laine mérinos"
     }
   }
 }

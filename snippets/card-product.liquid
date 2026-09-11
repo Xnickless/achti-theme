@@ -144,6 +144,7 @@
                 </a>
               </h3>
             </div>
+            {%- render 'b2b-fibre-badge', product: card_product, variant: 'card' -%}
             <div class="card__badge {{ settings.badge_position }}">
               {%- if card_product.available == false -%}
                 <span
@@ -574,7 +575,8 @@
               </div>
             {% endif %}
           {% endif %}
-          <div class="card__badge {{ settings.badge_position }}">
+          {%- render 'b2b-fibre-badge', product: card_product, variant: 'card' -%}
+            <div class="card__badge {{ settings.badge_position }}">
             {%- if card_product.available == false -%}
               <span
                 id="Badge-{{ section_id }}-{{ card_product.id }}"
