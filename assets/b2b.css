@@ -718,6 +718,7 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
   }
   /* przy 4 kolumnach większy oddech między kafelkami (Trade daje 1.2 rem) */
   [id$="__product-grid"] #product-grid,
+  .template-search .template-search__results .product-grid,
   .template-search .template-search__results.product-grid {
     --grid-desktop-horizontal-spacing: 2.4rem; /* Trade liczy szerokość kafelka z tej zmiennej — sam column-gap łamie rząd do 3 sztuk */
     --grid-desktop-vertical-spacing: 3.2rem;
