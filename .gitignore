@@ -1,1 +1,4 @@
 tools/import.log
+.DS_Store
+tools/__pycache__/
+.claude/
