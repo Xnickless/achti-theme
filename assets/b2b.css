@@ -263,8 +263,8 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
 .product__tax { display: none; }
 /* Nagłówek na desktopie (10.09.2026: większe logo 220 px, równe odstępy logo → menu → wyszukiwarka; padding góra/dół z ustawień sekcji) */
 @media screen and (min-width: 990px) {
-  .header__inline-search-form { min-height: 4.6rem; height: 4.6rem; }
-  .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-search { width: 52rem; margin: 0.2rem auto 0; }
+  .header__inline-search-form { min-height: 4.2rem; height: 4.2rem; }
+  .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-search { width: 52rem; margin: 0 auto; }
   .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-search { margin: 0 auto; }
   .header__inline-menu .list-menu__item { padding-top: 0.8rem; padding-bottom: 0.8rem; }
 }
@@ -299,13 +299,13 @@ a.model-colors__circle:hover { border-color: rgba(var(--color-foreground), 0.6);
   .collection--marquee .collection__title { padding-bottom: 1.2rem; margin-bottom: 2.4rem; }
   .collection--marquee .collection__title .collection__description { font-size: 1.2rem; }
 }
-/* Hero na stronie głównej: u góry zanika w biel nagłówka; dolna krawędź ostra (11.09.2026, decyzja Kamila);
+/* Hero na stronie głównej: u góry zanika w biel nagłówka (od 13.09.2026 tylko górne 10 % zamiast 18 %, żeby zdjęcie było optycznie większe); dolna krawędź ostra (11.09.2026, decyzja Kamila);
    ::before w .banner__media leży nad zdjęciem, pod treścią. Kreska pod nagłówkiem znika na stronie z hero. */
 [id$="__image_banner"] .banner__media::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 1.000) 0.0%, rgba(255, 255, 255, 0.980) 1.5%, rgba(255, 255, 255, 0.926) 3.0%, rgba(255, 255, 255, 0.844) 4.5%, rgba(255, 255, 255, 0.741) 6.0%, rgba(255, 255, 255, 0.624) 7.5%, rgba(255, 255, 255, 0.500) 9.0%, rgba(255, 255, 255, 0.376) 10.5%, rgba(255, 255, 255, 0.259) 12.0%, rgba(255, 255, 255, 0.156) 13.5%, rgba(255, 255, 255, 0.074) 15.0%, rgba(255, 255, 255, 0.020) 16.5%, rgba(255, 255, 255, 0.000) 18.0%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1.000) 0.0%, rgba(255, 255, 255, 0.980) 0.8%, rgba(255, 255, 255, 0.926) 1.7%, rgba(255, 255, 255, 0.844) 2.5%, rgba(255, 255, 255, 0.741) 3.3%, rgba(255, 255, 255, 0.624) 4.2%, rgba(255, 255, 255, 0.500) 5.0%, rgba(255, 255, 255, 0.376) 5.8%, rgba(255, 255, 255, 0.259) 6.7%, rgba(255, 255, 255, 0.156) 7.5%, rgba(255, 255, 255, 0.074) 8.3%, rgba(255, 255, 255, 0.020) 9.2%, rgba(255, 255, 255, 0.000) 10.0%);
   pointer-events: none;
   z-index: 2;
 }
