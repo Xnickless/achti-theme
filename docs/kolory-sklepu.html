@@ -43,7 +43,41 @@ figcaption{padding:10px 12px 13px;display:flex;flex-direction:column;gap:3px}
 .tile__sku{font-size:9.5px;letter-spacing:.09em;color:#6f6a66;text-transform:uppercase}
 .tile__price{font-size:12.5px;margin-top:4px}
 .stopka{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px;max-width:76ch}
-@media print{body{background:#fff;color:#000}.wrap{max-width:none;padding:0}.wariant{break-inside:avoid}.spis{display:none}}
+@media print{
+  @page{size:A4;margin:11mm 10mm 12mm}
+  html,body{background:#fff;color:#000;font-size:9.5pt}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .wrap{max-width:none;padding:0}
+  .spis{display:none}
+  h1{font-size:22pt;margin-bottom:6px}
+  .eyebrow{font-size:7.5pt;margin-bottom:8px}
+  .lead{font-size:9pt;max-width:none}
+  .jak{margin:14px 0 4px;padding:10px 14px;max-width:none}
+  .jak h3{font-size:11pt;margin-bottom:4px}
+  .jak li{margin:1px 0}
+  h2{font-size:13pt;margin:10px 0 2px;break-after:avoid;break-inside:avoid}
+  h2 + .lead{break-after:avoid;font-size:8.5pt}
+  .wariant{break-inside:avoid;page-break-inside:avoid;margin:7px 0 0;padding-top:5px}
+  .wariant__head{margin-bottom:2px;gap:2px 12px}
+  .nr{font-size:13pt}
+  .wariant__title{font-size:12pt}
+  .hex{font-size:7.5pt}
+  .swatch{width:10px;height:10px;vertical-align:-2px;margin-right:4px}
+  .hex .swatch:nth-of-type(2){margin-left:10px}
+  .note{font-size:8pt;margin-bottom:4px;max-width:none}
+  .band{padding:9px 11px 10px;border-radius:7px}
+  .band__title{font-size:10.5pt;margin:0 0 6px;padding-bottom:5px}
+  .band--caps .band__title{font-size:7.5pt;padding-bottom:7px;margin-bottom:9px}
+  .grid{grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:6px!important}
+  .tile{border-radius:5px}
+  figcaption{padding:4px 6px 5px;gap:1px}
+  .tile__name{font-size:6pt;line-height:1.25}
+  .tile__sku{font-size:5pt}
+  .tile__price{font-size:6.5pt;margin-top:2px}
+  .tile{box-shadow:none!important}
+  #w26 .tile{border:1px solid #e6e1d8}
+  .stopka{margin-top:9px;padding-top:7px;font-size:8pt;max-width:none;break-inside:avoid}
+}
 </style>
 <div class="wrap">
   <p class="eyebrow">Achti · sklep B2B · wybór kolorystyki</p>
