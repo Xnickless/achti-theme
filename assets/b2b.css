@@ -561,30 +561,22 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .multicolumn.color-scheme-3 .title-wrapper-with-link .title { margin: 0; }
 
 
-/* Hero na stronie głównej (10.09.2026): nagłówek w prawej trzeciej części zdjęcia (tło budynku); od 13.09.2026 przycisk „Sprawdź ofertę” pod nagłówkiem, w tej samej kolumnie.
-   Pudełko treści rozciągnięte na całą szerokość i podzielone siatką 3 kolumn: nagłówek w 3. kolumnie, przycisk w wierszu pod spodem na środku. */
+/* Hero na stronie głównej (13.09.2026): nagłówek w jednej linii na całą szerokość kadru, w dolnej części zdjęcia,
+   przycisk „Sprawdź ofertę” pod nim na środku. Wcześniej (10–13.09) nagłówek stał w prawej trzeciej części kadru. */
 @media screen and (min-width: 990px) {
-  [id$="__image_banner"] .banner__content { max-width: none; padding-left: 5rem; padding-right: 2.4rem; }
+  [id$="__image_banner"] .banner__content { max-width: none; padding-left: 4rem; padding-right: 4rem; padding-bottom: 5.6rem; }
   [id$="__image_banner"] .banner__content .banner__box,
   [id$="__image_banner"] .banner--desktop-transparent .banner__box {
     width: 100%; max-width: none; padding-left: 0; padding-right: 0;
-    display: grid; grid-template-columns: 1fr 1fr 1fr; row-gap: 2.4rem; align-items: end;
+    display: grid; grid-template-columns: 1fr; row-gap: 3.2rem; align-items: end; justify-items: center;
   }
   [id$="__image_banner"] .banner__heading {
-    grid-column: 3; justify-self: end; width: 100%; max-width: 40rem; margin: 0 0 0 auto; text-align: left;
-    font-size: calc(var(--font-heading-scale) * 3.8rem); line-height: 1.1; text-wrap: balance;
+    width: 100%; max-width: none; margin: 0; text-align: center; white-space: nowrap;
+    font-family: var(--font-body-family); font-weight: 400; letter-spacing: 0.02em;
+    font-size: clamp(3.2rem, 3.4vw, 6rem); line-height: 1.1;
   }
-  /* napis hero tą samą czcionką co menu i przyciski (Jost), nie nagłówkową Tenor Sans (11.09.2026) */
-  [id$="__image_banner"] .banner__heading {
-    font-family: var(--font-body-family); font-weight: 400; letter-spacing: 0.01em;
-  }
-  /* przycisk pod nagłówkiem, w tej samej kolumnie i do tej samej lewej krawędzi (13.09.2026) */
-  [id$="__image_banner"] .banner__buttons {
-    grid-column: 3; justify-self: end; width: 100%; max-width: 40rem; margin: 0;
-    justify-content: flex-start;
-  }
-  [id$="__image_banner"] .banner__buttons .button { flex: 0 0 auto; width: auto; min-width: 0; padding-left: 3.2rem; padding-right: 3.2rem; }
-  [id$="__image_banner"] .banner__content { padding-bottom: 6rem; }
+  [id$="__image_banner"] .banner__buttons { width: auto; max-width: none; margin: 0; justify-content: center; }
+  [id$="__image_banner"] .banner__buttons .button { flex: 0 0 auto; width: auto; min-width: 0; padding-left: 3.6rem; padding-right: 3.6rem; }
 }
 
 /* ── Przełącznik waluty w nagłówku (podgląd PLN / EUR / USD) ─────────────── */
