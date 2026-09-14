@@ -645,6 +645,11 @@
       "wool_title": "Enthält Wolle",
       "merino": "Merinowolle",
       "merino_title": "Enthält Merinowolle"
+    },
+    "notfound": {
+      "text": "Die Adresse hat sich möglicherweise geändert oder das Produkt wurde aus dem Sortiment genommen. Geben Sie einen Modellcode ein (z. B. AZ-1145) oder wählen Sie eine Kategorie.",
+      "categories": "Kategorien",
+      "contact": "Kontakt"
     }
   }
 }

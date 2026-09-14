@@ -118,6 +118,22 @@ def comp(sklad, loc):
 OPIS_OVERRIDES_PATH = os.path.join(OUT, 'opis-overrides.json')  # ręczne tłumaczenia własnych opisów Adriana: {kod: {en: [akapity], fr: [...], de: [...]}}
 OPIS_OVERRIDES = json.load(open(OPIS_OVERRIDES_PATH, encoding='utf-8')) if os.path.exists(OPIS_OVERRIDES_PATH) else {}
 
+SEO = {  # meta description: skład + podszycie + ogon (pełny albo krótki); ucinane do 160 znaków (tyle pokazuje Google)
+ 'en': ('Material', 'Achti — Polish maker, B2B wholesale, prices after registration.', 'Achti, B2B wholesale.'),
+ 'fr': ('Matière\u00a0', 'Achti — fabricant polonais, gros B2B, prix après inscription.', 'Achti, gros B2B.'),
+ 'de': ('Material', 'Achti — polnischer Hersteller, B2B-Großhandel, Preise nach Registrierung.', 'Achti, B2B-Großhandel.'),
+}
+def seo_description(loc, title, code, sklad, lining, limit=160):
+    label, tail, tail_short = SEO[loc]
+    head = f"{title} ({code})."
+    comp_ = f"{label}: {sklad}." if sklad else ''
+    lin_ = f"{lining}." if lining else ''
+    # od najpełniejszej wersji do najkrótszej: skład zostaje najdłużej, ogon skraca się przed wyrzuceniem składu
+    for parts in ([head, comp_, lin_, tail], [head, comp_, tail], [head, comp_, tail_short], [head, tail], [head, tail_short]):
+        out = ' '.join(x for x in parts if x)
+        if len(out) <= limit: return out
+    return out[:limit - 1].rstrip() + '…'
+
 def translate_product(p, loc):
     t = T[loc]
     if p.get('name'):
@@ -171,7 +187,8 @@ def translate_product(p, loc):
     head = ''.join(f'<p>{x}</p>' for x in ov) if ov else f"<p>{intro}</p><p>{t['range_'].format(city=name)}</p>"
     body = (head + f"<p><strong>{t['features']}</strong><br>" + '<br>'.join('✔ ' + f for f in feats)
             + f"</p><p><strong>{t['spec']}</strong></p><ul>" + ''.join(f'<li>{x}</li>' for x in spec) + "</ul>")
-    return {'title': title, 'body_html': body, 'metafields': {'custom.rozmiar': size_txt, 'custom.sklad': sklad or ', '.join(mats)}}
+    seo = {'title': f"{title} · {p['code']}", 'description': seo_description(loc, title, p['code'], sklad or ', '.join(mats), lin[2] if lin else '')}
+    return {'title': title, 'body_html': body, 'seo': seo, 'metafields': {'custom.rozmiar': size_txt, 'custom.sklad': sklad or ', '.join(mats)}}
 
 COLLECTIONS = {
  'en': {'kolekcja-damska': ('Women', "Achti women's winter hats: classic shapes, seasonal patterns, made in Poland."),

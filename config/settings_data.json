@@ -141,7 +141,7 @@
           "background_gradient": "",
           "text": "#262626",
           "button": "#b7aca2",
-          "button_label": "#f4f4f4",
+          "button_label": "#262626",
           "secondary_button_label": "#001128",
           "shadow": "#001128"
         }
@@ -196,7 +196,7 @@
           "background_gradient": "",
           "text": "#262626",
           "button": "#b7aca2",
-          "button_label": "#f4f4f4",
+          "button_label": "#262626",
           "secondary_button_label": "#ffffff",
           "shadow": "#ffffff"
         }
@@ -208,8 +208,8 @@
     "b2b_register_page": "rejestracja",
     "brand_image": "shopify://shop_images/achti_poziom_jpg.jpg",
     "social_linkedin_link": "",
-    "b2b_catalog_pdf": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b.pdf",
-    "b2b_catalog_pdf_prices": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-f5cbe4ee05b1.pdf"
+    "b2b_catalog_pdf": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b_952b8871-3e56-4388-bb98-582f73808c5a.pdf?v=1789379395",
+    "b2b_catalog_pdf_prices": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-46b623940ce2.pdf?v=1789379402"
   },
   "presets": {
     "Trade": {

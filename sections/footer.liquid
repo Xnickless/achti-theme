@@ -99,6 +99,17 @@
                     {%- if block.settings.menu != blank -%}
                       <ul class="footer-block__details-content list-unstyled">
                         {%- for link in block.settings.menu.links -%}
+                          {%- liquid
+                            # Link do /pages/… bez istniejącej strony (treści klienta jeszcze nie ma) pomijamy zamiast prowadzić na 404
+                            assign link_missing = false
+                            if link.url contains '/pages/'
+                              assign page_handle = link.url | split: '/pages/' | last | split: '?' | first | split: '#' | first
+                              if pages[page_handle].title == blank
+                                assign link_missing = true
+                              endif
+                            endif
+                          -%}
+                          {%- if link_missing -%}{%- continue -%}{%- endif -%}
                           <li>
                             <a
                               href="{{ link.url }}"

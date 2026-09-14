@@ -669,6 +669,11 @@
       "wool_title": "Skład zawiera wełnę",
       "merino": "Wełna merino",
       "merino_title": "Skład zawiera wełnę merino"
+    },
+    "notfound": {
+      "text": "Adres mógł się zmienić albo produkt został wycofany z oferty. Wpisz kod modelu (np. AZ-1145) albo wybierz kategorię.",
+      "categories": "Kategorie",
+      "contact": "Kontakt"
     }
   }
 }

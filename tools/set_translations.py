@@ -60,7 +60,9 @@ def do_products(loc, data):
             print('  brak produktu', code); continue
         cm = content_map(node)
         payload = []
-        for key, val in (('title', tr['title']), ('body_html', tr['body_html'])):
+        seo = tr.get('seo') or {}
+        for key, val in (('title', tr['title']), ('body_html', tr['body_html']), ('meta_title', seo.get('title')), ('meta_description', seo.get('description'))):
+            if not val: continue
             if key in cm:
                 payload.append({'key': key, 'value': val, 'translatableContentDigest': cm[key]['digest'], 'locale': loc})
         register(pid, payload); n_ok += 1

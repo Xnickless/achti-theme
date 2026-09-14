@@ -1,7 +1,26 @@
+{%- liquid
+  assign b2b_access = true
+  if settings.b2b_hide_prices
+    if customer == nil
+      assign b2b_access = false
+    elsif settings.b2b_require_company and customer.b2b? != true
+      assign b2b_access = false
+    endif
+  endif
+-%}
 <style type="text/css">
   .template-404 .title + * {
     margin-top: 1rem;
   }
+  .template-404__text { max-width: 56ch; margin: 0 auto; color: rgba(var(--color-foreground), 0.75); }
+  .template-404__search { display: flex; max-width: 44rem; margin: 2.4rem auto 0; border: 0.1rem solid rgba(var(--color-foreground), 0.22); border-radius: 10rem; overflow: hidden; }
+  .template-404__search input { flex: 1; min-width: 0; border: 0; padding: 0 2rem; font-size: 1.5rem; background: transparent; }
+  .template-404__search input:focus-visible { outline: none; box-shadow: none; }
+  .template-404__search button { border: 0; background: rgb(var(--color-foreground)); color: rgb(var(--color-background)); padding: 0 2.2rem; height: 4.6rem; cursor: pointer; font-size: 1.4rem; }
+  .template-404__cats { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin: 2.4rem 0 0; padding: 0; list-style: none; }
+  .template-404__cats a { display: inline-block; padding: 0.7rem 1.5rem; border: 0.1rem solid rgba(var(--color-foreground), 0.2); border-radius: 10rem; color: rgb(var(--color-foreground)); text-decoration: none; font-size: 1.4rem; }
+  .template-404__cats a:hover { border-color: rgb(var(--color-foreground)); }
+  .template-404__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem; margin-top: 3.2rem; }
 
   @media screen and (min-width: 750px) {
     .template-404 .title + * {
@@ -17,7 +36,33 @@
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
-  <a href="{{ routes.all_products_collection_url }}" class="button">
-    {{ 'general.continue_shopping' | t }}
-  </a>
+  <p class="template-404__text">{{ 'b2b.notfound.text' | t }}</p>
+
+  <form action="{{ routes.search_url }}" method="get" role="search" class="template-404__search">
+    <input type="search" name="q" placeholder="{{ 'general.search.search' | t }}" aria-label="{{ 'general.search.search' | t }}">
+    <input type="hidden" name="options[prefix]" value="last">
+    <button type="submit">{{ 'general.search.search' | t }}</button>
+  </form>
+
+  {%- if linklists.main-menu.links.size > 0 -%}
+    <ul class="template-404__cats" aria-label="{{ 'b2b.notfound.categories' | t }}">
+      {%- for link in linklists.main-menu.links -%}
+        <li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  <div class="template-404__actions">
+    <a href="{{ routes.all_products_collection_url }}" class="button">
+      {{ 'general.continue_shopping' | t }}
+    </a>
+    {%- if b2b_access == false and settings.b2b_register_page != blank -%}
+      <a href="{{ settings.b2b_register_page.url }}" class="button button--secondary">
+        {{ 'b2b.register' | t }}
+      </a>
+    {%- endif -%}
+    <a href="/pages/contact" class="button button--secondary">
+      {{ 'b2b.notfound.contact' | t }}
+    </a>
+  </div>
 </div>

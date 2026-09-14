@@ -657,6 +657,11 @@
       "wool_title": "Contient de la laine",
       "merino": "Laine mérinos",
       "merino_title": "Contient de la laine mérinos"
+    },
+    "notfound": {
+      "text": "L'adresse a peut-être changé ou le produit a été retiré de l'offre. Saisissez un code de modèle (ex. AZ-1145) ou choisissez une catégorie.",
+      "categories": "Catégories",
+      "contact": "Contact"
     }
   }
 }
