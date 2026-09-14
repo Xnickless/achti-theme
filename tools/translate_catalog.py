@@ -240,6 +240,8 @@ MENU = {  # tytuł PL -> tłumaczenie
 
 THEME = {  # teksty z ustawień motywu (klucz = tekst PL)
  'en': { 
+        "Rozwijaj swój biznes z Achti": "Grow your business with Achti",
+        "wg wyceny — podamy w odpowiedzi": "to be quoted — stated in our reply",
         "Skonfiguruj czapkę pod własną marką": "Configure a hat under your own brand",
         "Wybierz dowolny model z naszej oferty i kolory, dobierz dodatek z logo Twojej firmy — blaszkę, skórkę lub metkę — i prześlij zapytanie. Odeślemy potwierdzenie i wycenę montażu.": "Pick any model from our range and its colours, choose an add-on with your company logo — a metal plate, leather patch or label — and send the enquiry. We will reply with a confirmation and a fitting quote.",
         "Do 5000 sztuk dodatki (blaszki, skórki, metki) dostarcza klient — nie projektujemy ich. Powyżej 5000 sztuk przygotowujemy projekt dodatków dla klienta. Ceny czapek są takie same jak na platformie; montaż dodatków wyceniamy indywidualnie po złożeniu zamówienia.": "Up to 5,000 pieces the add-ons (plates, leather patches, labels) are supplied by the customer — we do not design them. Above 5,000 pieces we prepare the add-on design for you. Hat prices are the same as on the platform; fitting of add-ons is quoted individually after the order is placed.",
@@ -262,6 +264,8 @@ THEME = {  # teksty z ustawień motywu (klucz = tekst PL)
         'Tworzymy czapki z pasją od ponad 30 lat. Wysoka jakość, naturalne materiały i ponadczasowy design.': 'We have been making hats with passion for over 30 years. High quality, natural materials and timeless design.',
         'Ceny dostępne po zalogowaniu': 'Prices available after login', 'Masz pytania? Napisz do nas.': 'Questions? Write to us.', 'Producent': 'Manufacturer', 'Szybkie zamawianie': 'Quick order'},
  'fr': { 
+        "Rozwijaj swój biznes z Achti": "Développez votre activité avec Achti",
+        "wg wyceny — podamy w odpowiedzi": "sur devis — précisé dans notre réponse",
         "Skonfiguruj czapkę pod własną marką": "Configurez un bonnet à votre marque",
         "Wybierz dowolny model z naszej oferty i kolory, dobierz dodatek z logo Twojej firmy — blaszkę, skórkę lub metkę — i prześlij zapytanie. Odeślemy potwierdzenie i wycenę montażu.": "Choisissez n’importe quel modèle de notre gamme et ses couleurs, sélectionnez un accessoire à votre logo — plaquette métal, écusson cuir ou étiquette — et envoyez la demande. Nous répondrons avec une confirmation et un devis de pose.",
         "Do 5000 sztuk dodatki (blaszki, skórki, metki) dostarcza klient — nie projektujemy ich. Powyżej 5000 sztuk przygotowujemy projekt dodatków dla klienta. Ceny czapek są takie same jak na platformie; montaż dodatków wyceniamy indywidualnie po złożeniu zamówienia.": "Jusqu’à 5 000 pièces, les accessoires (plaquettes, écussons cuir, étiquettes) sont fournis par le client — nous ne les concevons pas. Au-delà de 5 000 pièces, nous préparons le design des accessoires pour vous. Les prix des bonnets sont identiques à ceux de la plateforme ; la pose des accessoires est chiffrée individuellement après la commande.",
@@ -284,6 +288,8 @@ THEME = {  # teksty z ustawień motywu (klucz = tekst PL)
         'Tworzymy czapki z pasją od ponad 30 lat. Wysoka jakość, naturalne materiały i ponadczasowy design.': 'Nous fabriquons des bonnets avec passion depuis plus de 30 ans. Haute qualité, matières naturelles et design intemporel.',
         'Ceny dostępne po zalogowaniu': 'Prix visibles après connexion', 'Masz pytania? Napisz do nas.': 'Des questions ? Écrivez-nous.', 'Producent': 'Fabricant', 'Szybkie zamawianie': 'Commande rapide'},
  'de': { 
+        "Rozwijaj swój biznes z Achti": "Lassen Sie Ihr Geschäft mit Achti wachsen",
+        "wg wyceny — podamy w odpowiedzi": "nach Angebot — in unserer Antwort genannt",
         "Skonfiguruj czapkę pod własną marką": "Konfigurieren Sie eine Mütze unter Ihrer Marke",
         "Wybierz dowolny model z naszej oferty i kolory, dobierz dodatek z logo Twojej firmy — blaszkę, skórkę lub metkę — i prześlij zapytanie. Odeślemy potwierdzenie i wycenę montażu.": "Wählen Sie ein beliebiges Modell aus unserem Sortiment und die Farben, dazu einen Zusatz mit Ihrem Firmenlogo — Metallplakette, Lederpatch oder Etikett — und senden Sie die Anfrage. Sie erhalten eine Bestätigung und ein Angebot für die Montage.",
         "Do 5000 sztuk dodatki (blaszki, skórki, metki) dostarcza klient — nie projektujemy ich. Powyżej 5000 sztuk przygotowujemy projekt dodatków dla klienta. Ceny czapek są takie same jak na platformie; montaż dodatków wyceniamy indywidualnie po złożeniu zamówienia.": "Bis 5.000 Stück liefert der Kunde die Zusätze (Plaketten, Lederpatches, Etiketten) selbst — wir gestalten sie nicht. Ab 5.000 Stück erstellen wir das Design der Zusätze für Sie. Die Mützenpreise entsprechen der Plattform; die Montage der Zusätze wird nach Bestellung individuell kalkuliert.",

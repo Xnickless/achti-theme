@@ -644,7 +644,8 @@
       "cat_kids": "Kids",
       "cat_headbands": "Headbands",
       "cat_premium": "Premium Merino",
-      "price_note": "Model prices are the same as on the platform. Fitting of add-ons is quoted individually after the order is placed."
+      "price_note": "Model prices are the same as on the platform. Fitting of add-ons is quoted individually after the order is placed.",
+      "design_fee": "Design fee"
     },
     "producer": {
       "model": "Model"

@@ -644,7 +644,8 @@
       "cat_kids": "Kinder",
       "cat_headbands": "Stirnbänder",
       "cat_premium": "Premium Merino",
-      "price_note": "Die Modellpreise entsprechen der Plattform. Die Montage der Zusätze wird nach Bestellung individuell kalkuliert."
+      "price_note": "Die Modellpreise entsprechen der Plattform. Die Montage der Zusätze wird nach Bestellung individuell kalkuliert.",
+      "design_fee": "Kosten für die Projekterstellung"
     },
     "producer": {
       "model": "Modell"

@@ -656,7 +656,8 @@
       "cat_kids": "Enfant",
       "cat_headbands": "Bandeaux",
       "cat_premium": "Premium Merino",
-      "price_note": "Les prix des modèles sont identiques à ceux de la plateforme. La pose des accessoires est chiffrée individuellement après la commande."
+      "price_note": "Les prix des modèles sont identiques à ceux de la plateforme. La pose des accessoires est chiffrée individuellement après la commande.",
+      "design_fee": "Coût de réalisation du projet"
     },
     "producer": {
       "model": "Modèle"

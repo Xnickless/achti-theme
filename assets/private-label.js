@@ -1005,6 +1005,7 @@ class PrivateLabelConfigurator extends HTMLElement {
       ...(hasModel && s.product.price ? [[this.t.price, `${s.product.price} ${this.t.price_unit || ''}`.trim()]] : []),
       [this.t.step_branding, s.branding || '—'],
       [this.t.placement, s.placement || '—'],
+      ...(this.dataset.designFee ? [[this.t.design_fee, this.dataset.designFee]] : []),
       [this.t.logo, s.logoName ? `${s.logoName}${s.logoVariant !== 'original' ? ` (${this.t.variant_label}: ${s.logoVariant})` : ''}` : s.noLogo ? this.t.logo_later : '—'],
     ];
     const list = this.$('[data-pl-summary]');

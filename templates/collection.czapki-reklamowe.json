@@ -16,38 +16,23 @@
             "name": "Naszywka",
             "description": "Naszywka tkana lub skórzana z Twoim logo, przyszywana lub termo."
           }
-        },
-        "wszywka": {
-          "type": "branding",
-          "settings": {
-            "name": "Wszywka",
-            "description": "Wszywka z logo w szwie wywinięcia lub z boku czapki."
-          }
-        },
-        "metka": {
-          "type": "branding",
-          "settings": {
-            "name": "Własna metka",
-            "description": "Czapka bez oznaczeń Achti, z Twoją metką i zawieszką."
-          }
         }
       },
       "block_order": [
         "haft",
-        "naszywka",
-        "wszywka",
-        "metka"
+        "naszywka"
       ],
       "settings": {
         "eyebrow": "Czapki reklamowe",
         "heading": "Skonfiguruj czapkę z Twoim logo",
         "intro": "<p>Wybierz model i kolory, sposób znakowania, wgraj logo i ustaw je na podglądzie. Po wysłaniu zapytania w ciągu 2 dni roboczych odeślemy wycenę i projekt do akceptacji.</p>",
         "max_models": 24,
-        "placements": "Przód, Bok lewy, Bok prawy, Tył",
-        "min_qty": 50,
+        "placements": "Przód, Bok lewy, Bok prawy",
+        "min_qty": 100,
         "attach_preview": true,
         "padding_top": 36,
-        "padding_bottom": 48
+        "padding_bottom": 48,
+        "design_fee": "wg wyceny — podamy w odpowiedzi"
       }
     }
   },
