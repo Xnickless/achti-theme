@@ -140,8 +140,32 @@ Firma testowa „Firma Testowa Achti” (klient Kamil Test, e-mail Kamila) — z
 - **Analityka (nie zrobione):** brak GA4 i Search Console — wymaga konta Google (Adriana albo Kamila): aplikacja „Google & YouTube” w Shopify + weryfikacja domeny w Search Console + zgłoszenie `/sitemap.xml`. Klaviyo też jeszcze nie zainstalowane.
 - Kontrast reszty palety OK (7,7–11,9:1), SKU na kafelku ~4,9:1.
 
-## Do zrobienia (stan na 04.09.2026)
-1. Weryfikacja w sklepie: nagłówek, karta produktu i katalog jako gość / jako firma B2B.
-2. Konfiguracja panelu (klient/Kamil): metapola produktu, kolekcje Nowości/Bestsellery, filtry w Search & Discovery, konta firm i katalogi B2B, języki + Translate & Adapt, Klaviyo.
-3. Aplikacje: ulubione, powiadomienie o dostępności, katalog PDF z cenami po zalogowaniu.
-4. Faza 2: Baselinker, feed XML, cross-sell w koszyku, szablon potwierdzenia zamówienia.
+## Do zrobienia (stan na 14.09.2026)
+
+### Kamil — panel Shopify (~15 min, blokuje start)
+1. **Search & Discovery** — aplikacja **nie jest zainstalowana** (filtry na listingu to domyślne Shopify). Zainstalować (darmowa, Shopify) i dodać filtr „Tagi produktu” → nazwa **Cechy**, tylko 6 tagów, pogrupowane: Z wełną = `welna`+`merino`, Z podszyciem = `podszycie`, Bez podszycia = `bez-podszycia`, Z pomponem = `pompon`, Bez pompona = `bez-pompona`. Tagi są już na produktach (zob. „Waga i filtry cech”). Etykiety EN/DE/FR w Translate & Adapt → Search & Discovery. Czeka na zgodę Kamila na instalację (14.09).
+2. **Sklep online → Preferencje** (strona w cross-origin iframe — Chrome-agent nie wpisze tam tekstu): tytuł strony głównej `Achti — producent czapek zimowych, hurt B2B`; opis meta `Polski producent czapek zimowych, opasek i kominów. Sprzedaż hurtowa B2B dla sklepów i firm — ceny i zamówienia po rejestracji konta firmowego.`; obraz social `~/Downloads/achti-social.jpg` (1200×630, kadr z hero); sekcja „Ochrona przed spamem” (reCAPTCHA) — sprawdzić/włączyć.
+3. **Analityka** — brak GA4 i Search Console. Decyzja: konto Google Adriana (wtedy on instaluje „Google & YouTube” i weryfikuje domenę) czy Kamila (wtedy robi to Claude w zalogowanym Chrome). Potem zgłosić `/sitemap.xml`.
+4. **Przy starcie: wyłączyć hasło sklepu** (Preferencje → Zabezpieczenie hasłem; hasło `gahfro`).
+
+### Adrian — dane i treści od klienta
+5. **Kwota za wykonanie projektu** w konfiguratorze czapek reklamowych (teraz „wg wyceny — podamy w odpowiedzi”; ustawienie sekcji `design_fee`).
+6. **Lista czapek do haftu / naszywek** (Adrian wrzuca na Drive) → dodać do kolekcji `czapki-reklamowe` (collectionAddProducts po SKU; dziś 8 modeli demo).
+7. **Wybór kolorystyki** — numer 1–62 z `docs/Achti-kolory-sklepu.pdf` → zmiana `#c2b7ac` (pas) i `#e8e3de` (kafelki).
+8. **Treści stron**: O nas, Produkcja, Materiały, Jakość, Zrównoważony rozwój (linki w stopce pojawią się same po dodaniu stron o tych uchwytach).
+9. **Pola `[…]`** w regulaminie, polityce prywatności, wysyłce, zwrotach — PL + te same pola w 3 tłumaczeniach.
+10. **Kolory jako warianty** (kolumna `kolory (po przecinku)` w arkuszu) — decyzja, czy robimy; dziś kolory to osobne produkty spięte metapolem `inne_kolory`.
+11. **Kurier**: cennik (stawki UE 69 zł są tymczasowe), konto kuriera w BaseLinkerze, moduł faktur, szablon e-mail.
+12. **Płatności**: w checkout tylko PayPal — dodać przelew bankowy (ręczna metoda) i/lub warunki płatności per firma.
+13. **Katalog B2B z cenami hurtowymi** przypisany do firm (Markets → Katalogi) — bez tego firmy widzą ceny domyślne.
+14. **Klaviyo** + import bazy maili (instrukcja: `docs/instrukcja-import-klientow.html`, szablon CSV obok).
+15. **Aplikacja „SP Hide Price & Access”** — dubluje ukrywanie cen z motywu, do odinstalowania (decyzja klienta).
+
+### Claude — bez blokad, do zrobienia od ręki
+16. **Kolekcja „Opaski”** — 36 produktów ma tag `opaski`, kolekcji nie ma (założyć przez API, ręczna albo automatyczna po tagu).
+17. **Sprawdzenie na telefonie 375 px** — headless Chrome ma minimum ~500 px, okno Chrome nie chce się zmniejszyć; najszybciej Kamil na komórce na live.
+18. **Zdjęcia na modelce (AI)** — czeka na wybór obsady z castingu i zgodę na budżet (~39 $ cała seria dorosłych na Pro); dzieci pominięte świadomie.
+19. **Test zamówienia end-to-end**: zamówienie w sklepie → BaseLinker po 10 min → statusy i tracking.
+
+### Po starcie
+20. Pomiar szybkości (17 plików JS w theme.liquid, przelicznik walut po węzłach tekstowych), alt-y zdjęć certyfikatów w multicolumn, ewentualnie wideo w hero (sekcja image-banner przyjmuje tylko obraz).
