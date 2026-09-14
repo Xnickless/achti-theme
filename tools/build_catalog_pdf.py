@@ -72,17 +72,17 @@ def build_html(prods, with_prices):
     .page { width: 210mm; height: 297mm; padding: 12mm 14mm 12mm; page-break-after: always; position: relative; overflow: hidden; }
     .cover { display: flex; flex-direction: column; justify-content: space-between; background: #fff; }
     .cover img.logo { width: 70mm; }
-    .cover h1 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 34pt; line-height: 1.1; margin: 0 0 6mm; }
+    .cover h1 { font-family: "Tenor Sans", Georgia, serif; font-weight: 400; font-size: 30pt; line-height: 1.15; margin: 0 0 6mm; }
     .cover .sub { font-size: 12pt; color: #5f5a55; max-width: 120mm; line-height: 1.5; }
     .cover .meta { font-size: 9.5pt; color: #5f5a55; line-height: 1.6; }
     .cover .note { font-size: 9pt; color: #7b6f64; border-top: 1px solid #ddd6ce; padding-top: 4mm; }
     .head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #e3ded8; padding-bottom: 2mm; margin-bottom: 4mm; }
-    .head h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 15pt; margin: 0; }
+    .head h2 { font-family: "Tenor Sans", Georgia, serif; font-weight: 400; font-size: 15pt; margin: 0; }
     .head span { font-size: 8.5pt; color: #7b6f64; letter-spacing: .08em; text-transform: uppercase; }
     .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm 5mm; }
     .item { break-inside: avoid; }
     .item .ph { width: 100%; aspect-ratio: 1/1; background: #fff; border-radius: 2mm; overflow: hidden; }
-    .item .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .item .ph img { width: 100%; height: 100%; object-fit: contain; display: block; }  /* zdjęcia 4:5 w kwadracie — całe, bez obcinania pompona */
     .item .code { font-weight: 600; font-size: 9.5pt; margin-top: 2mm; letter-spacing: .04em; }
     .item .name { font-size: 8pt; color: #3d3a37; line-height: 1.3; min-height: 2.6em; max-height: 2.6em; overflow: hidden; }
     .item .spec { font-size: 7.5pt; color: #7b6f64; line-height: 1.35; margin-top: .8mm; }
@@ -121,7 +121,7 @@ def build_html(prods, with_prices):
       <div class="meta">Platforma B2B: {SHOP_URL}<br>Rejestracja firmy (NIP / VAT UE): {SHOP_URL}/pages/rejestracja · po akceptacji konta ceny hurtowe i zamówienia online<br>Kod z katalogu wpisany w wyszukiwarkę sklepu prowadzi do produktu · Wysyłka do krajów UE · Aktualizacja: {today}</div>
       <div class="note">Cała oferta realizowana jest na zamówienie; modele oznaczone w sklepie jako „Dostępny od ręki” wysyłamy z magazynu. Zdjęcia poglądowe, kolory mogą różnić się od rzeczywistych.</div></div>''')
     pages += body_pages
-    return f'<!doctype html><html lang="pl"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Jost:wght@400;500;600&display=swap"><style>{css}</style></head><body>{"".join(pages)}</body></html>'
+    return f'<!doctype html><html lang="pl"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Jost:wght@400;500;600&display=swap"><style>{css}</style></head><body>{"".join(pages)}</body></html>'
 
 def to_pdf(html_path, pdf_path):
     subprocess.run([CHROME, '--headless=new', '--disable-gpu', '--no-pdf-header-footer', f'--print-to-pdf={pdf_path}', '--virtual-time-budget=20000', html_path], check=True, capture_output=True)

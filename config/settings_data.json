@@ -208,8 +208,8 @@
     "b2b_register_page": "rejestracja",
     "brand_image": "shopify://shop_images/achti_poziom_jpg.jpg",
     "social_linkedin_link": "",
-    "b2b_catalog_pdf": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b_952b8871-3e56-4388-bb98-582f73808c5a.pdf?v=1789379395",
-    "b2b_catalog_pdf_prices": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-46b623940ce2.pdf?v=1789379402"
+    "b2b_catalog_pdf": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b.pdf?v=1789380506",
+    "b2b_catalog_pdf_prices": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-1ce52bffcf88.pdf?v=1789380513"
   },
   "presets": {
     "Trade": {
