@@ -1497,6 +1497,36 @@
         "type": "url",
         "id": "b2b_catalog_pdf_prices",
         "label": "Katalog PDF z cenami (link w stopce tylko dla zalogowanych firm)"
+      },
+      {
+        "type": "url",
+        "id": "b2b_catalog_pdf_en",
+        "label": "Katalog PDF bez cen — angielski (gdy sklep jest w tym języku)"
+      },
+      {
+        "type": "url",
+        "id": "b2b_catalog_pdf_prices_en",
+        "label": "Katalog PDF z cenami — angielski"
+      },
+      {
+        "type": "url",
+        "id": "b2b_catalog_pdf_de",
+        "label": "Katalog PDF bez cen — niemiecki (gdy sklep jest w tym języku)"
+      },
+      {
+        "type": "url",
+        "id": "b2b_catalog_pdf_prices_de",
+        "label": "Katalog PDF z cenami — niemiecki"
+      },
+      {
+        "type": "url",
+        "id": "b2b_catalog_pdf_fr",
+        "label": "Katalog PDF bez cen — francuski (gdy sklep jest w tym języku)"
+      },
+      {
+        "type": "url",
+        "id": "b2b_catalog_pdf_prices_fr",
+        "label": "Katalog PDF z cenami — francuski"
       }
     ]
   },

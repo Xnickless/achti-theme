@@ -208,8 +208,14 @@
     "b2b_register_page": "rejestracja",
     "brand_image": "shopify://shop_images/achti_poziom_jpg.jpg",
     "social_linkedin_link": "",
-    "b2b_catalog_pdf": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b.pdf?v=1789380506",
-    "b2b_catalog_pdf_prices": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-1ce52bffcf88.pdf?v=1789380513"
+    "b2b_catalog_pdf": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b_343a84e0-3aba-44f1-b57b-04eb0ceea1e4.pdf?v=1789380900",
+    "b2b_catalog_pdf_en": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-en.pdf?v=1789380943",
+    "b2b_catalog_pdf_prices_en": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-en-a45cdc64a6c1.pdf?v=1789380951",
+    "b2b_catalog_pdf_de": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-de.pdf?v=1789380983",
+    "b2b_catalog_pdf_prices_de": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-de-6d0c239f899d.pdf?v=1789380992",
+    "b2b_catalog_pdf_fr": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-fr.pdf?v=1789381022",
+    "b2b_catalog_pdf_prices_fr": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-fr-9833aeaa2e6e.pdf?v=1789381028",
+    "b2b_catalog_pdf_prices": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-3f0842099355.pdf?v=1789380909"
   },
   "presets": {
     "Trade": {

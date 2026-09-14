@@ -312,11 +312,23 @@
       {%- endif -%}
 
       {%- liquid
+        # katalog w języku sklepu (ustawienia b2b_catalog_pdf_<en|de|fr>), inaczej wersja polska
+        assign catalog_loc = request.locale.iso_code | split: '-' | first | downcase
+        assign catalog_key = 'b2b_catalog_pdf_' | append: catalog_loc
+        assign catalog_key_prices = 'b2b_catalog_pdf_prices_' | append: catalog_loc
         assign catalog_url = settings.b2b_catalog_pdf
         assign catalog_label = 'b2b.catalog_pdf' | t
-        if b2b_access and settings.b2b_catalog_pdf_prices != blank
-          assign catalog_url = settings.b2b_catalog_pdf_prices
-          assign catalog_label = 'b2b.catalog_pdf_prices' | t
+        if catalog_loc != 'pl' and settings[catalog_key] != blank
+          assign catalog_url = settings[catalog_key]
+        endif
+        if b2b_access
+          if catalog_loc != 'pl' and settings[catalog_key_prices] != blank
+            assign catalog_url = settings[catalog_key_prices]
+            assign catalog_label = 'b2b.catalog_pdf_prices' | t
+          elsif settings.b2b_catalog_pdf_prices != blank
+            assign catalog_url = settings.b2b_catalog_pdf_prices
+            assign catalog_label = 'b2b.catalog_pdf_prices' | t
+          endif
         endif
       -%}
       {%- if catalog_url != blank -%}
