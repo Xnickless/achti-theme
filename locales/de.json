@@ -631,7 +631,20 @@
       "contrast_warn": "Das Logo ist auf dieser Mützenfarbe schlecht sichtbar. Versuchen Sie die weiße oder schwarze Version.",
       "strip_title": "Vorschau auf gewählten Farben",
       "download_all": "Alle Farben herunterladen (PNG)",
-      "logo_cleaned": "Wir haben den weißen Hintergrund des Logos entfernt. Falls unerwünscht, laden Sie ein transparentes PNG hoch."
+      "logo_cleaned": "Wir haben den weißen Hintergrund des Logos entfernt. Falls unerwünscht, laden Sie ein transparentes PNG hoch.",
+      "price": "Modellpreis",
+      "price_unit": "netto / Stk.",
+      "models_count": "{{ count }} Modelle",
+      "no_match": "Keine Modelle passen zur Suche.",
+      "search_placeholder": "Nach Name oder Code suchen (z. B. AZ-1145)",
+      "category": "Kategorie",
+      "cat_all": "Alle",
+      "cat_women": "Damen",
+      "cat_men": "Herren",
+      "cat_kids": "Kinder",
+      "cat_headbands": "Stirnbänder",
+      "cat_premium": "Premium Merino",
+      "price_note": "Die Modellpreise entsprechen der Plattform. Die Montage der Zusätze wird nach Bestellung individuell kalkuliert."
     },
     "producer": {
       "model": "Modell"

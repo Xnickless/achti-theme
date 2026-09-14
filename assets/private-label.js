@@ -354,11 +354,69 @@ class PrivateLabelConfigurator extends HTMLElement {
     this.form = this.$('form');
 
     this.renderModels();
+    this.bindToolbar();
     this.bindBranding();
     this.bindLogo();
     this.bindForm();
     this.bindNav();
     this.refresh();
+    this.loadMorePages();
+  }
+
+  /* cała oferta: Liquid renderuje pierwsze 250 modeli, resztę dociągamy stronami przez Section Rendering API */
+  async loadMorePages() {
+    const pages = Number(this.dataset.plPages) || 1;
+    if (pages < 2 || !this.dataset.sectionId) return;
+    const base = `${window.location.pathname}?section_id=${encodeURIComponent(this.dataset.sectionId)}`;
+    for (let page = 2; page <= pages; page++) {
+      try {
+        const html = await fetch(`${base}&page=${page}`).then((r) => r.text());
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const data = doc.querySelector('[data-pl-data]');
+        const more = data ? JSON.parse(data.textContent || '[]') : [];
+        const known = new Set(this.products.map((p) => p.handle));
+        more.forEach((p) => !known.has(p.handle) && this.products.push(p));
+      } catch (e) {
+        /* strona nie doszła — zostają załadowane modele */
+      }
+    }
+    this.renderModels();
+    this.applyFilter();
+  }
+
+  /* pasek: szukaj po nazwie/kodzie + kategoria z tagów */
+  bindToolbar() {
+    const bar = this.$('[data-pl-toolbar]');
+    if (!bar) return;
+    this.filter = { q: '', cat: '' };
+    const search = bar.querySelector('[data-pl-search]');
+    if (search) search.addEventListener('input', () => { this.filter.q = search.value.trim().toLowerCase(); this.applyFilter(); });
+    bar.querySelectorAll('[data-pl-cat]').forEach((btn) =>
+      btn.addEventListener('click', () => {
+        this.filter.cat = btn.dataset.plCat;
+        bar.querySelectorAll('[data-pl-cat]').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+        this.applyFilter();
+      })
+    );
+  }
+
+  applyFilter() {
+    if (!this.filter) return;
+    const { q, cat } = this.filter;
+    const norm = (v) => String(v || '').toLowerCase().replace(/[\s-]/g, '');
+    const nq = norm(q);
+    let shown = 0;
+    this.$$('.pl-tile').forEach((tile) => {
+      const p = this.products[Number(tile.dataset.index)];
+      const tags = p.tags || [];
+      const catOk = !cat || tags.includes(cat);
+      const qOk = !nq || norm(p.title).includes(nq) || norm(p.sku).includes(nq) || (p.colors || []).some((c) => norm(c.sku).includes(nq));
+      const ok = catOk && qOk;
+      tile.hidden = !ok;
+      if (ok) shown++;
+    });
+    const count = this.$('[data-pl-count]');
+    if (count) count.textContent = shown ? this.t.models_count.replace('{{ count }}', shown) : this.t.no_match;
   }
 
   get logo() {
@@ -411,14 +469,23 @@ class PrivateLabelConfigurator extends HTMLElement {
         <span class="pl-tile__media">${p.image ? `<img src="${p.image}" alt="" width="300" height="375" loading="lazy">` : ''}</span>
         <span class="pl-tile__title">${this.esc(p.title)}</span>
         <span class="pl-tile__meta">${this.esc(p.sku || '')}${p.colors.length > 1 ? ` · ${this.t.colors_count.replace('{{ count }}', p.colors.length)}` : ''}</span>
+        ${p.price ? `<span class="pl-tile__price">${this.esc(p.price)} <small>${this.esc(this.t.price_unit || '')}</small></span>` : ''}
       </button>`
       )
       .join('');
-    this.modelGrid.addEventListener('click', (e) => {
-      const tile = e.target.closest('.pl-tile');
-      if (!tile) return;
-      this.selectModel(this.products[Number(tile.dataset.index)], tile);
-    });
+    if (this.state.product) {
+      const i = this.products.indexOf(this.state.product);
+      const tile = i >= 0 && this.modelGrid.querySelector(`.pl-tile[data-index="${i}"]`);
+      if (tile) tile.setAttribute('aria-pressed', 'true');
+    }
+    if (!this._gridBound) {
+      this._gridBound = true;
+      this.modelGrid.addEventListener('click', (e) => {
+        const tile = e.target.closest('.pl-tile');
+        if (!tile) return;
+        this.selectModel(this.products[Number(tile.dataset.index)], tile);
+      });
+    }
   }
 
   selectModel(product, tile) {
@@ -935,6 +1002,7 @@ class PrivateLabelConfigurator extends HTMLElement {
       [this.t.step_model, hasModel ? `${s.product.title}${s.product.sku ? ` (${s.product.sku})` : ''}` : '—'],
       [this.t.step_colors, colorsText.length ? colorsText.join('; ') : '—'],
       [this.t.qty_total, hasModel ? `${this.totalQty()} ${this.t.pcs}` : '—'],
+      ...(hasModel && s.product.price ? [[this.t.price, `${s.product.price} ${this.t.price_unit || ''}`.trim()]] : []),
       [this.t.step_branding, s.branding || '—'],
       [this.t.placement, s.placement || '—'],
       [this.t.logo, s.logoName ? `${s.logoName}${s.logoVariant !== 'original' ? ` (${this.t.variant_label}: ${s.logoVariant})` : ''}` : s.noLogo ? this.t.logo_later : '—'],

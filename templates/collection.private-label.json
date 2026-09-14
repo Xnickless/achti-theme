@@ -1,0 +1,52 @@
+{
+  "sections": {
+    "configurator": {
+      "type": "private-label-configurator",
+      "blocks": {
+        "blaszka": {
+          "type": "branding",
+          "settings": {
+            "name": "Blaszka",
+            "description": "Metalowa blaszka z logo Twojej firmy, mocowana na wywinięciu lub z boku czapki."
+          }
+        },
+        "skorka": {
+          "type": "branding",
+          "settings": {
+            "name": "Skórka",
+            "description": "Skórzana naszywka z tłoczonym lub nadrukowanym logo, przyszywana do dzianiny."
+          }
+        },
+        "metka": {
+          "type": "branding",
+          "settings": {
+            "name": "Metka z logo firmy",
+            "description": "Czapka bez oznaczeń Achti, z Twoją metką wszywaną i zawieszką."
+          }
+        }
+      },
+      "block_order": [
+        "blaszka",
+        "skorka",
+        "metka"
+      ],
+      "settings": {
+        "eyebrow": "Private Label",
+        "heading": "Skonfiguruj czapkę pod własną marką",
+        "intro": "<p>Wybierz dowolny model z naszej oferty i kolory, dobierz dodatek z logo Twojej firmy — blaszkę, skórkę lub metkę — i prześlij zapytanie. Odeślemy potwierdzenie i wycenę montażu.</p>",
+        "all_products": true,
+        "show_prices": true,
+        "terms": "<p>Do 5000 sztuk dodatki (blaszki, skórki, metki) dostarcza klient — nie projektujemy ich. Powyżej 5000 sztuk przygotowujemy projekt dodatków dla klienta. Ceny czapek są takie same jak na platformie; montaż dodatków wyceniamy indywidualnie po złożeniu zamówienia.</p>",
+        "max_models": 24,
+        "placements": "Przód, Bok lewy, Bok prawy, Tył",
+        "min_qty": 50,
+        "attach_preview": true,
+        "padding_top": 36,
+        "padding_bottom": 48
+      }
+    }
+  },
+  "order": [
+    "configurator"
+  ]
+}

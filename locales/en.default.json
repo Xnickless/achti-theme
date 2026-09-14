@@ -631,7 +631,20 @@
       "contrast_warn": "The logo is hard to see on this hat colour. Try the white or black version.",
       "strip_title": "Preview on selected colours",
       "download_all": "Download all colours (PNG)",
-      "logo_cleaned": "We removed the white background from the logo. If unwanted, upload a transparent PNG."
+      "logo_cleaned": "We removed the white background from the logo. If unwanted, upload a transparent PNG.",
+      "price": "Model price",
+      "price_unit": "net / pc",
+      "models_count": "{{ count }} models",
+      "no_match": "No models match your search.",
+      "search_placeholder": "Search by name or code (e.g. AZ-1145)",
+      "category": "Category",
+      "cat_all": "All",
+      "cat_women": "Women",
+      "cat_men": "Men",
+      "cat_kids": "Kids",
+      "cat_headbands": "Headbands",
+      "cat_premium": "Premium Merino",
+      "price_note": "Model prices are the same as on the platform. Fitting of add-ons is quoted individually after the order is placed."
     },
     "producer": {
       "model": "Model"

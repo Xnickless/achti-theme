@@ -655,7 +655,20 @@
       "contrast_warn": "Logo słabo widoczne na tym kolorze czapki. Spróbuj wersji białej lub czarnej.",
       "strip_title": "Podgląd na wybranych kolorach",
       "download_all": "Pobierz wszystkie kolory (PNG)",
-      "logo_cleaned": "Usunęliśmy białe tło z logo. Jeśli to niepożądane, wgraj PNG z przezroczystością."
+      "logo_cleaned": "Usunęliśmy białe tło z logo. Jeśli to niepożądane, wgraj PNG z przezroczystością.",
+      "price": "Cena modelu",
+      "price_unit": "netto / szt.",
+      "models_count": "{{ count }} modeli",
+      "no_match": "Brak modeli pasujących do wyszukiwania.",
+      "search_placeholder": "Szukaj po nazwie lub kodzie (np. AZ-1145)",
+      "category": "Kategoria",
+      "cat_all": "Wszystkie",
+      "cat_women": "Ona",
+      "cat_men": "On",
+      "cat_kids": "Dla dzieci",
+      "cat_headbands": "Opaski",
+      "cat_premium": "Premium Merino",
+      "price_note": "Ceny modeli są takie same jak na platformie. Montaż dodatków wyceniamy indywidualnie po złożeniu zamówienia."
     },
     "producer": {
       "model": "Model"

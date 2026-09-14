@@ -754,3 +754,15 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
   .fibre-badge--card { top: 0.8rem; left: 0.8rem; padding: 0.35rem 0.7rem 0.35rem 0.55rem; font-size: 0.95rem; }
   .fibre-badge--card .fibre-badge__icon { width: 1.4rem; height: 1.4rem; }
 }
+
+/* ===== Konfigurator: cała oferta (Private Label) — pasek szukania/kategorii, ceny, warunki ===== */
+.pl-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.6rem; margin: 0 0 1.6rem; }
+.pl-toolbar__search { flex: 1 1 26rem; min-width: 0; height: 4.2rem; padding: 0 1.6rem; border: 0.1rem solid rgba(var(--color-foreground), 0.22); border-radius: 10rem; background: rgb(var(--color-background)); font-size: 1.4rem; }
+.pl-toolbar__search:focus-visible { outline: none; border-color: rgb(var(--color-foreground)); box-shadow: none; }
+.pl-toolbar__count { flex: 1 0 100%; margin: 0; font-size: 1.3rem; color: rgba(var(--color-foreground), 0.65); }
+.pl-tile[hidden] { display: none; }
+.pl-tile__price { display: block; margin-top: 0.4rem; font-size: 1.4rem; font-weight: 500; }
+.pl-tile__price small { font-size: 1.1rem; font-weight: 400; color: rgba(var(--color-foreground), 0.6); }
+.pl-price-note { margin-top: 1.2rem; }
+.pl-terms { margin: 1.2rem 0 2rem; padding: 1.2rem 1.6rem; border-left: 0.3rem solid rgba(var(--color-foreground), 0.25); font-size: 1.4rem; color: rgba(var(--color-foreground), 0.8); }
+.pl-terms p { margin: 0; }

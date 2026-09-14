@@ -643,7 +643,20 @@
       "contrast_warn": "Le logo est peu visible sur cette couleur de bonnet. Essayez la version blanche ou noire.",
       "strip_title": "Aperçu sur les couleurs choisies",
       "download_all": "Télécharger toutes les couleurs (PNG)",
-      "logo_cleaned": "Nous avons retiré le fond blanc du logo. Si ce n’est pas souhaité, téléversez un PNG transparent."
+      "logo_cleaned": "Nous avons retiré le fond blanc du logo. Si ce n’est pas souhaité, téléversez un PNG transparent.",
+      "price": "Prix du modèle",
+      "price_unit": "HT / pc",
+      "models_count": "{{ count }} modèles",
+      "no_match": "Aucun modèle ne correspond à la recherche.",
+      "search_placeholder": "Rechercher par nom ou code (ex. AZ-1145)",
+      "category": "Catégorie",
+      "cat_all": "Tous",
+      "cat_women": "Femme",
+      "cat_men": "Homme",
+      "cat_kids": "Enfant",
+      "cat_headbands": "Bandeaux",
+      "cat_premium": "Premium Merino",
+      "price_note": "Les prix des modèles sont identiques à ceux de la plateforme. La pose des accessoires est chiffrée individuellement après la commande."
     },
     "producer": {
       "model": "Modèle"
