@@ -33,33 +33,51 @@ veil = Image.new('RGB', (W, H), (26, 22, 19))
 im = Image.composite(veil, im, grad.resize((W, H)))
 
 d = ImageDraw.Draw(im)
-title_f = ImageFont.truetype(os.path.join(FONTS, 'TenorSans.ttf'), 62)
-sub_f = ImageFont.truetype(os.path.join(FONTS, 'Jost.ttf'), 27)
+
+def jost(size, weight=400):
+    """Jost w danej wadze — ten sam krój i grubość co nagłówek hero (--font-body-family, 400)."""
+    f = ImageFont.truetype(os.path.join(FONTS, 'Jost.ttf'), size)
+    try: f.set_variation_by_axes([weight])
+    except Exception: pass
+    return f
+
+TRACK = 0.02  # letter-spacing nagłówka hero (em)
+
+def text_w(text, font, track=0.0):
+    return d.textlength(text, font=font) + track * font.size * max(0, len(text) - 1)
+
+def draw_tracked(xy, text, font, fill, track=0.0):
+    x, y = xy
+    for ch in text:
+        d.text((x, y), ch, font=font, fill=fill)
+        x += d.textlength(ch, font=font) + track * font.size
+
+title_f = jost(62)
+sub_f = jost(27)
 
 # tytuł łamiemy na maks. 2 linie, jeśli nie mieści się w szerokości
 margin = 64
 maxw = W - 2 * margin
 def lines_for(text, font):
-    if d.textlength(text, font=font) <= maxw: return [text]
+    if text_w(text, font, TRACK) <= maxw: return [text]
     words, out, cur = text.split(), [], ''
     for w in words:
         t = (cur + ' ' + w).strip()
-        if d.textlength(t, font=font) <= maxw: cur = t
+        if text_w(t, font, TRACK) <= maxw: cur = t
         else: out.append(cur); cur = w
     out.append(cur); return out
 
 lines = lines_for(TEXT[0], title_f)
 while len(lines) > 2 and title_f.size > 40:
-    title_f = ImageFont.truetype(os.path.join(FONTS, 'TenorSans.ttf'), title_f.size - 4)
+    title_f = jost(title_f.size - 4)
     lines = lines_for(TEXT[0], title_f)
 
 lh = title_f.size * 1.18
 y = H - margin - 34 - len(lines) * lh
 for ln in lines:
-    d.text((margin + 2, y + 2), ln, font=title_f, fill=(0, 0, 0, 90))  # delikatny cień
-    d.text((margin, y), ln, font=title_f, fill=(255, 255, 255))
+    draw_tracked((margin, y), ln, title_f, (255, 255, 255), TRACK)
     y += lh
-d.text((margin, y + 6), TEXT[1], font=sub_f, fill=(236, 230, 222))
+draw_tracked((margin, y + 6), TEXT[1], sub_f, (236, 230, 222), 0.01)
 
 im.save(OUT, quality=88, optimize=True)
 print(OUT, im.size, f'{os.path.getsize(OUT) / 1024:.0f} kB')
