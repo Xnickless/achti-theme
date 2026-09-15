@@ -65,6 +65,7 @@
   ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 20px 0 0; display: grid; gap: 14px; }
   ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 44px 1fr; gap: 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px; }
   ol.steps > li::before { content: counter(s); font-family: "Tenor Sans", Georgia, serif; font-size: 1.35rem; color: var(--accent); line-height: 1.1; }
+  ol.steps > li > p { grid-column: 2; }  /* bez tego drugi akapit kroku wpada w wąską kolumnę z numerem */
   ol.steps > li p { margin-top: 6px; }
   ol.steps > li p:first-child { margin-top: 0; }
   .path { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .92em; background: var(--code); padding: 2px 8px; border-radius: 4px; white-space: nowrap; }

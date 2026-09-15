@@ -1,0 +1,197 @@
+<title>Analityka Achti</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+  :root {
+    --bg: #f6f4f1;
+    --paper: #ffffff;
+    --ink: #221f1c;
+    --ink-2: #5a544e;
+    --ink-3: #8a837c;
+    --line: #e1dcd6;
+    --accent: #6a5a4b;
+    --accent-soft: #ece6df;
+    --ok: #2f6b4f;
+    --ok-soft: #e3efe8;
+    --warn: #8a5a1f;
+    --warn-soft: #f6ead8;
+    --code: #efece8;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1b1917;
+      --paper: #24211e;
+      --ink: #efeae4;
+      --ink-2: #c6bfb7;
+      --ink-3: #948c83;
+      --line: #3a3531;
+      --accent: #cbb9a5;
+      --accent-soft: #33302b;
+      --ok: #8fd0b0;
+      --ok-soft: #223a2f;
+      --warn: #e6b87a;
+      --warn-soft: #3d3020;
+      --code: #2e2a26;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1b1917; --paper: #24211e; --ink: #efeae4; --ink-2: #c6bfb7; --ink-3: #948c83; --line: #3a3531;
+    --accent: #cbb9a5; --accent-soft: #33302b; --ok: #8fd0b0; --ok-soft: #223a2f; --warn: #e6b87a; --warn-soft: #3d3020; --code: #2e2a26;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Source Sans 3", "Segoe UI", Roboto, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  main { max-width: 820px; margin: 0 auto; padding: 48px 24px 96px; }
+  h1, h2, h3 { font-family: "Tenor Sans", Georgia, serif; font-weight: 400; letter-spacing: .01em; text-wrap: balance; margin: 0; }
+  h1 { font-size: 2.2rem; line-height: 1.15; }
+  h2 { font-size: 1.45rem; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); }
+  h3 { font-size: 1.1rem; margin-top: 28px; }
+  p { margin: 12px 0 0; }
+  .eyebrow { font-size: .78rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 14px; }
+  .lead { font-size: 1.1rem; color: var(--ink-2); max-width: 62ch; }
+  .meta { margin-top: 18px; font-size: .9rem; color: var(--ink-3); }
+  .rule { margin: 32px 0 0; padding: 18px 22px; background: var(--warn-soft); border-left: 3px solid var(--warn); border-radius: 0 6px 6px 0; }
+  .rule strong { color: var(--warn); }
+  .ok { margin: 18px 0 0; padding: 16px 20px; background: var(--ok-soft); border-left: 3px solid var(--ok); border-radius: 0 6px 6px 0; }
+  .ok strong { color: var(--ok); }
+  ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 20px 0 0; display: grid; gap: 14px; }
+  ol.steps > li { counter-increment: s; display: grid; grid-template-columns: 44px 1fr; gap: 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 18px 20px; }
+  ol.steps > li::before { content: counter(s); font-family: "Tenor Sans", Georgia, serif; font-size: 1.35rem; color: var(--accent); line-height: 1.1; }
+  ol.steps > li > p { grid-column: 2; }  /* bez tego drugi akapit kroku wpada w wąską kolumnę z numerem */
+  ol.steps > li p { margin-top: 6px; }
+  ol.steps > li p:first-child { margin-top: 0; }
+  .path { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .92em; background: var(--code); padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+  .arrow { color: var(--ink-3); padding: 0 4px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 18px; font-size: .95rem; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 600; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); background: var(--accent-soft); }
+  tr:last-child td { border-bottom: 0; }
+  td code, .col { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .9em; }
+  .scroll { overflow-x: auto; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-top: 18px; }
+  .card { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; }
+  .card h3 { margin-top: 0; font-size: 1rem; }
+  .card p { font-size: .95rem; color: var(--ink-2); }
+  .faq dt { font-weight: 600; margin-top: 18px; }
+  .faq dd { margin: 4px 0 0; color: var(--ink-2); }
+  .foot { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); font-size: .9rem; color: var(--ink-3); }
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.8rem; }
+    ol.steps > li { grid-template-columns: 34px 1fr; padding: 16px; }
+  }
+  @media print {
+    @page { size: A4; margin: 14mm 15mm; }
+    body { background: #fff; color: #000; font-size: 11pt; line-height: 1.45; }
+    main { padding: 0; max-width: none; }
+    .rule, .ok, .card, ol.steps > li, table { break-inside: avoid; }
+    h1 { font-size: 1.9rem; }
+    h2 { font-size: 1.25rem; margin-top: 24px; padding-top: 12px; break-after: avoid; }
+    h2 + p { break-before: avoid; }
+    h3 { margin-top: 16px; }
+    .lead { font-size: 1rem; }
+    .meta { margin-top: 10px; }
+    .rule, .ok { margin-top: 14px; padding: 12px 16px; }
+    ol.steps { gap: 8px; margin-top: 12px; }
+    ol.steps > li { padding: 12px 16px; grid-template-columns: 34px 1fr; }
+    ol.steps > li::before { font-size: 1.15rem; }
+    .cards { gap: 10px; margin-top: 12px; }
+    .card { padding: 12px 16px; }
+    .faq dt { margin-top: 12px; }
+    .foot { margin-top: 28px; padding-top: 12px; }
+  }
+</style>
+
+<main>
+  <p class="eyebrow">Platforma B2B Achti · instrukcja</p>
+  <h1>Analityka sklepu: co ustawić na koncie Google</h1>
+  <p class="lead">Sklep startuje bez analityki, więc dziś nie wiadomo, ile firm go odwiedza ani na którym kroku rejestracji odpadają. Poniżej dwie rzeczy do ustawienia na Twoim koncie Google. Razem zajmują około 20 minut i są darmowe.</p>
+  <p class="meta">Stan na 15.09.2026. Sklep: ccucsr-si.myshopify.com. Wszystko robisz zalogowany na swoje konto Google — Kamil nie potrzebuje do niego dostępu, wystarczy, że na końcu dodasz go jako użytkownika.</p>
+
+  <div class="ok">
+    <p><strong>Po co to jest.</strong> Bez tych narzędzi nie wiadomo, czy ktokolwiek wchodzi na sklep. Z nimi zobaczysz: ile firm odwiedziło platformę, ile zaczęło rejestrację i ile ją dokończyło, z jakich krajów przychodzą, które modele oglądają najczęściej i czy ktoś trafia z Google. To są dane potrzebne do decyzji, w co inwestować czas: w reklamę, w katalog czy w kontakt bezpośredni.</p>
+  </div>
+
+  <h2>Część 1. Google Analytics (statystyki odwiedzin)</h2>
+  <p>Najprościej zrobić to przez aplikację w Shopify — sama założy konto Analytics i podepnie je do sklepu, bez wklejania żadnych kodów.</p>
+
+  <ol class="steps">
+    <li>
+      <p><strong>Zaloguj się na konto Google, na którym ma być analityka.</strong></p>
+      <p>Najlepiej firmowe, nie prywatne — to konto będzie właścicielem danych o sklepie. Jeśli firma ma Google Workspace, użyj adresu firmowego.</p>
+    </li>
+    <li>
+      <p><strong>W panelu Shopify wejdź w <span class="path">Aplikacje</span> <span class="arrow">→</span> <span class="path">Shopify App Store</span> i wyszukaj „Google &amp; YouTube”.</strong></p>
+      <p>To oficjalna, darmowa aplikacja Google. Kliknij <em>Zainstaluj</em>.</p>
+    </li>
+    <li>
+      <p><strong>Połącz konto Google.</strong></p>
+      <p>Aplikacja poprosi o zalogowanie i o zgodę na dostęp. Wybierz to konto, na które się logowałeś w kroku 1.</p>
+    </li>
+    <li>
+      <p><strong>W sekcji Google Analytics kliknij <em>Połącz</em> i wybierz <em>Utwórz nowe konto</em>.</strong></p>
+      <p>Jako nazwę wpisz <span class="col">Achti</span>. Aplikacja sama utworzy tzw. usługę GA4 i podepnie ją do sklepu. Od tego momentu dane zaczynają się zbierać — pierwsze liczby zobaczysz po kilku godzinach.</p>
+    </li>
+  </ol>
+
+  <div class="rule">
+    <p><strong>Nie instaluj innych wtyczek do statystyk.</strong> Dwa równoległe kody analityczne liczą te same wizyty podwójnie i dane przestają się zgadzać. Jeśli w przyszłości dojdzie Klaviyo albo piksel reklamowy, powiedz o tym Kamilowi — te akurat współpracują z Analytics i wymagają osobnej konfiguracji.</p>
+  </div>
+
+  <h2>Część 2. Google Search Console (widoczność w wyszukiwarce)</h2>
+  <p>Analytics pokazuje, co robią ludzie, którzy już weszli. Search Console pokazuje coś innego: czy Google w ogóle zna sklep i na jakie hasła go pokazuje. Dla sprzedaży hurtowej to ważne, bo kupcy szukają dostawców właśnie przez wyszukiwarkę — „producent czapek zimowych hurt”, „czapki z logo firmy”.</p>
+
+  <ol class="steps">
+    <li>
+      <p><strong>Wejdź na <span class="col">search.google.com/search-console</span> i kliknij <em>Dodaj usługę</em>.</strong></p>
+      <p>Zalogowany na to samo konto Google co w części 1.</p>
+    </li>
+    <li>
+      <p><strong>Wybierz opcję <em>Prefiks adresu URL</em> (prawa kolumna) i wklej adres sklepu.</strong></p>
+      <p>Na dziś: <span class="col">https://ccucsr-si.myshopify.com</span>. Po podpięciu własnej domeny trzeba będzie dodać ją jako drugą usługę — Kamil da znać, kiedy to zrobić.</p>
+    </li>
+    <li>
+      <p><strong>Wybierz weryfikację przez <em>Tag HTML</em> i skopiuj podany kod.</strong></p>
+      <p>Kod wygląda mniej więcej tak: <span class="col">&lt;meta name="google-site-verification" content="abc123..." /&gt;</span>. Prześlij go Kamilowi — wklei go w motyw i potwierdzi, kiedy będzie gotowe. Wtedy wrócisz do Search Console i klikniesz <em>Zweryfikuj</em>.</p>
+    </li>
+    <li>
+      <p><strong>Po weryfikacji wejdź w <span class="path">Mapy witryny</span> i dodaj <span class="col">sitemap.xml</span>.</strong></p>
+      <p>Shopify generuje tę mapę sam. Dzięki niej Google szybciej znajdzie wszystkie 317 produktów zamiast czekać, aż trafi na nie przypadkiem.</p>
+    </li>
+  </ol>
+
+  <h2>Na koniec: daj Kamilowi podgląd</h2>
+  <p>Żeby Kamil mógł sprawdzać dane i reagować (np. gdy rejestracja firmy zacznie się sypać), potrzebuje dostępu do odczytu. Dodajesz go w dwóch miejscach:</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Google Analytics</h3>
+      <p>Administracja <span class="arrow">→</span> Dostęp do usługi <span class="arrow">→</span> dodaj adres Kamila z rolą <em>Przeglądający</em>.</p>
+    </div>
+    <div class="card">
+      <h3>Search Console</h3>
+      <p>Ustawienia <span class="arrow">→</span> Użytkownicy i uprawnienia <span class="arrow">→</span> dodaj adres Kamila z uprawnieniem <em>Pełne</em> lub <em>Ograniczone</em>.</p>
+    </div>
+  </div>
+
+  <h2>Częste pytania</h2>
+  <dl class="faq">
+    <dt>Czy to kosztuje?</dt>
+    <dd>Nie. Google Analytics i Search Console są darmowe bez limitów przy tej skali ruchu.</dd>
+    <dt>Czy to legalne wobec RODO?</dt>
+    <dd>Tak, przy zachowaniu zgód — a te już działają. Sklep ma baner cookies, który pyta odwiedzającego o zgodę, i Analytics uruchamia się dopiero po jej udzieleniu. Nic dodatkowego nie trzeba robić.</dd>
+    <dt>Kiedy zobaczę pierwsze dane?</dt>
+    <dd>Analytics: kilka godzin po instalacji, ale sensowne wnioski dopiero po 2–3 tygodniach. Search Console: 2–7 dni, zanim Google przetworzy mapę witryny.</dd>
+    <dt>Czy mogę to zrobić na prywatnym Gmailu?</dt>
+    <dd>Technicznie tak, ale lepiej nie. Konto firmowe zostaje w firmie niezależnie od tego, kto ją obsługuje — prywatne wiąże dane z jedną osobą.</dd>
+  </dl>
+
+  <p class="foot">Pytania: Kamil. Po wykonaniu części 1 i 2 wystarczy napisać „gotowe” plus przesłać kod weryfikacyjny z kroku 3 części 2.</p>
+</main>
