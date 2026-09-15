@@ -645,7 +645,15 @@
       "cat_headbands": "Headbands",
       "cat_premium": "Premium Merino",
       "price_note": "Model prices are the same as on the platform. Fitting of add-ons is quoted individually after the order is placed.",
-      "design_fee": "Design fee"
+      "design_fee": "Design fee",
+      "features": "Features",
+      "feat_wool": "With wool",
+      "feat_merino": "Merino wool",
+      "feat_lined": "Lined",
+      "feat_unlined": "Unlined",
+      "feat_pompom": "With pompom",
+      "feat_nopompom": "Without pompom",
+      "clear_filters": "Clear filters"
     },
     "producer": {
       "model": "Model"

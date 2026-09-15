@@ -645,7 +645,15 @@
       "cat_headbands": "Stirnbänder",
       "cat_premium": "Premium Merino",
       "price_note": "Die Modellpreise entsprechen der Plattform. Die Montage der Zusätze wird nach Bestellung individuell kalkuliert.",
-      "design_fee": "Kosten für die Projekterstellung"
+      "design_fee": "Kosten für die Projekterstellung",
+      "features": "Eigenschaften",
+      "feat_wool": "Mit Wolle",
+      "feat_merino": "Merinowolle",
+      "feat_lined": "Gefüttert",
+      "feat_unlined": "Ungefüttert",
+      "feat_pompom": "Mit Bommel",
+      "feat_nopompom": "Ohne Bommel",
+      "clear_filters": "Filter zurücksetzen"
     },
     "producer": {
       "model": "Modell"

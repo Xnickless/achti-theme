@@ -766,3 +766,6 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .pl-price-note { margin-top: 1.2rem; }
 .pl-terms { margin: 1.2rem 0 2rem; padding: 1.2rem 1.6rem; border-left: 0.3rem solid rgba(var(--color-foreground), 0.25); font-size: 1.4rem; color: rgba(var(--color-foreground), 0.8); }
 .pl-terms p { margin: 0; }
+.pl-toolbar__feats { flex: 1 0 100%; align-items: center; }
+.pl-toolbar__label { font-size: 1.3rem; color: rgba(var(--color-foreground), 0.6); margin-right: 0.2rem; }
+.pl-toolbar__clear { margin-left: 1.2rem; font-size: 1.3rem; }

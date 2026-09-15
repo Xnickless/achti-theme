@@ -669,7 +669,15 @@
       "cat_headbands": "Opaski",
       "cat_premium": "Premium Merino",
       "price_note": "Ceny modeli są takie same jak na platformie. Montaż dodatków wyceniamy indywidualnie po złożeniu zamówienia.",
-      "design_fee": "Koszt wykonania projektu"
+      "design_fee": "Koszt wykonania projektu",
+      "features": "Cechy",
+      "feat_wool": "Z wełną",
+      "feat_merino": "Wełna merino",
+      "feat_lined": "Z podszyciem",
+      "feat_unlined": "Bez podszycia",
+      "feat_pompom": "Z pomponem",
+      "feat_nopompom": "Bez pompona",
+      "clear_filters": "Wyczyść filtry"
     },
     "producer": {
       "model": "Model"

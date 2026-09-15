@@ -388,7 +388,7 @@ class PrivateLabelConfigurator extends HTMLElement {
   bindToolbar() {
     const bar = this.$('[data-pl-toolbar]');
     if (!bar) return;
-    this.filter = { q: '', cat: '' };
+    this.filter = { q: '', cat: '', feats: new Set() };
     const search = bar.querySelector('[data-pl-search]');
     if (search) search.addEventListener('input', () => { this.filter.q = search.value.trim().toLowerCase(); this.applyFilter(); });
     bar.querySelectorAll('[data-pl-cat]').forEach((btn) =>
@@ -398,11 +398,29 @@ class PrivateLabelConfigurator extends HTMLElement {
         this.applyFilter();
       })
     );
+    // cechy: wybór wielokrotny, zawężają wynik (AND) — tak jak filtr „Cechy” na listingu
+    bar.querySelectorAll('[data-pl-feat]').forEach((btn) =>
+      btn.addEventListener('click', () => {
+        const f = btn.dataset.plFeat;
+        if (this.filter.feats.has(f)) this.filter.feats.delete(f);
+        else this.filter.feats.add(f);
+        btn.setAttribute('aria-pressed', String(this.filter.feats.has(f)));
+        this.applyFilter();
+      })
+    );
+    const clear = bar.querySelector('[data-pl-clear]');
+    if (clear) clear.addEventListener('click', () => {
+      this.filter = { q: '', cat: '', feats: new Set() };
+      if (search) search.value = '';
+      bar.querySelectorAll('[data-pl-feat]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+      bar.querySelectorAll('[data-pl-cat]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.plCat === '')));
+      this.applyFilter();
+    });
   }
 
   applyFilter() {
     if (!this.filter) return;
-    const { q, cat } = this.filter;
+    const { q, cat, feats } = this.filter;
     const norm = (v) => String(v || '').toLowerCase().replace(/[\s-]/g, '');
     const nq = norm(q);
     let shown = 0;
@@ -410,13 +428,16 @@ class PrivateLabelConfigurator extends HTMLElement {
       const p = this.products[Number(tile.dataset.index)];
       const tags = p.tags || [];
       const catOk = !cat || tags.includes(cat);
+      const featOk = !feats.size || [...feats].every((f) => tags.includes(f));
       const qOk = !nq || norm(p.title).includes(nq) || norm(p.sku).includes(nq) || (p.colors || []).some((c) => norm(c.sku).includes(nq));
-      const ok = catOk && qOk;
+      const ok = catOk && qOk && featOk;
       tile.hidden = !ok;
       if (ok) shown++;
     });
-    const count = this.$('[data-pl-count]');
+    const count = this.$('[data-pl-count-text]') || this.$('[data-pl-count]');
     if (count) count.textContent = shown ? this.t.models_count.replace('{{ count }}', shown) : this.t.no_match;
+    const clear = this.$('[data-pl-clear]');
+    if (clear) clear.hidden = !q && !cat && !feats.size;
   }
 
   get logo() {

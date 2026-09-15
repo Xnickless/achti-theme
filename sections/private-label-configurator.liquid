@@ -81,6 +81,7 @@
   "price": {{ 'b2b.pl.price' | t | json }},
   "price_unit": {{ 'b2b.pl.price_unit' | t | json }},
   "models_count": {{ 'b2b.pl.models_count' | t | json }},
+  "clear_filters": {{ 'b2b.pl.clear_filters' | t | json }},
   "design_fee": {{ 'b2b.pl.design_fee' | t | json }},
   "no_match": {{ 'b2b.pl.no_match' | t | json }}
 }
@@ -213,7 +214,19 @@
                 <button type="button" class="pl-pill" data-pl-cat="opaski" aria-pressed="false">{{ 'b2b.pl.cat_headbands' | t }}</button>
                 <button type="button" class="pl-pill" data-pl-cat="premium" aria-pressed="false">{{ 'b2b.pl.cat_premium' | t }}</button>
               </div>
-              <p class="pl-toolbar__count" data-pl-count aria-live="polite"></p>
+              <div class="pl-pills pl-pills--small pl-toolbar__feats" role="group" aria-label="{{ 'b2b.pl.features' | t }}">
+                <span class="pl-toolbar__label">{{ 'b2b.pl.features' | t }}:</span>
+                <button type="button" class="pl-pill" data-pl-feat="welna" aria-pressed="false">{{ 'b2b.pl.feat_wool' | t }}</button>
+                <button type="button" class="pl-pill" data-pl-feat="merino" aria-pressed="false">{{ 'b2b.pl.feat_merino' | t }}</button>
+                <button type="button" class="pl-pill" data-pl-feat="podszycie" aria-pressed="false">{{ 'b2b.pl.feat_lined' | t }}</button>
+                <button type="button" class="pl-pill" data-pl-feat="bez-podszycia" aria-pressed="false">{{ 'b2b.pl.feat_unlined' | t }}</button>
+                <button type="button" class="pl-pill" data-pl-feat="pompon" aria-pressed="false">{{ 'b2b.pl.feat_pompom' | t }}</button>
+                <button type="button" class="pl-pill" data-pl-feat="bez-pompona" aria-pressed="false">{{ 'b2b.pl.feat_nopompom' | t }}</button>
+              </div>
+              <p class="pl-toolbar__count" data-pl-count aria-live="polite">
+                <span data-pl-count-text></span>
+                <button type="button" class="link underlined-link pl-toolbar__clear" data-pl-clear hidden>{{ 'b2b.pl.clear_filters' | t }}</button>
+              </p>
             </div>
           {%- endif -%}
           <div class="pl-models" data-pl-models></div>

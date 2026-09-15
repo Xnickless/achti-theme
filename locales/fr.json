@@ -657,7 +657,15 @@
       "cat_headbands": "Bandeaux",
       "cat_premium": "Premium Merino",
       "price_note": "Les prix des modèles sont identiques à ceux de la plateforme. La pose des accessoires est chiffrée individuellement après la commande.",
-      "design_fee": "Coût de réalisation du projet"
+      "design_fee": "Coût de réalisation du projet",
+      "features": "Caractéristiques",
+      "feat_wool": "Avec laine",
+      "feat_merino": "Laine mérinos",
+      "feat_lined": "Doublé",
+      "feat_unlined": "Non doublé",
+      "feat_pompom": "Avec pompon",
+      "feat_nopompom": "Sans pompon",
+      "clear_filters": "Effacer les filtres"
     },
     "producer": {
       "model": "Modèle"
