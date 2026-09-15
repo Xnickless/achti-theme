@@ -191,7 +191,8 @@ def translate_product(p, loc):
     return {'title': title, 'body_html': body, 'seo': seo, 'metafields': {'custom.rozmiar': size_txt, 'custom.sklad': sklad or ', '.join(mats)}}
 
 COLLECTIONS = {
- 'en': {'kolekcja-damska': ('Women', "Achti women's winter hats: classic shapes, seasonal patterns, made in Poland."),
+ 'en': {'opaski': ("Headbands", "Winter headbands: a warm finish to the range, they sell well alongside hats."),
+        'kolekcja-damska': ('Women', "Achti women's winter hats: classic shapes, seasonal patterns, made in Poland."),
         'kolekcja-meska': ('Men', "Men's winter hats: classic shapes, muted colours, durable knit."),
         'kolekcja-dla-dzieci': ('Kids', "Children's winter hats in sizes 50–52 and 52–54: warm, soft, colourful."),
         'kolekcja-premium': ('Premium Merino', 'Merino wool hats, 100% or blended with acrylic: light, breathable, warm.'),
@@ -201,7 +202,8 @@ COLLECTIONS = {
         'nowosci': ('New Arrivals', 'The newest models in the Achti range.'),
         'najpopularniejsze': ('Bestsellers', 'The most frequently ordered models.'),
         'bestsellery': ('Bestsellers', ''), 'all': ('All products', '')},
- 'fr': {'kolekcja-damska': ('Femme', "Bonnets d'hiver femme Achti : coupes classiques, motifs de saison, fabriqués en Pologne."),
+ 'fr': {'opaski': ("Bandeaux", "Bandeaux d'hiver : complément chaud de l'offre, ils se vendent bien avec les bonnets."),
+        'kolekcja-damska': ('Femme', "Bonnets d'hiver femme Achti : coupes classiques, motifs de saison, fabriqués en Pologne."),
         'kolekcja-meska': ('Homme', "Bonnets d'hiver homme : coupes classiques, couleurs sobres, maille résistante."),
         'kolekcja-dla-dzieci': ('Enfant', "Bonnets d'hiver enfant en 50–52 et 52–54 : chauds, doux, colorés."),
         'kolekcja-premium': ('Premium Mérinos', 'Bonnets en laine mérinos, 100 % ou mélangée à l’acrylique : légers, respirants, chauds.'),
@@ -211,7 +213,8 @@ COLLECTIONS = {
         'nowosci': ('Nouveautés', "Les derniers modèles de la gamme Achti."),
         'najpopularniejsze': ('Meilleures ventes', 'Les modèles les plus commandés.'),
         'bestsellery': ('Meilleures ventes', ''), 'all': ('Tous les produits', '')},
- 'de': {'kolekcja-damska': ('Damen', 'Damen-Wintermützen von Achti: klassische Formen, Saisonmuster, hergestellt in Polen.'),
+ 'de': {'opaski': ("Stirnbänder", "Winter-Stirnbänder: warme Ergänzung des Sortiments, verkaufen sich gut zur Mütze."),
+        'kolekcja-damska': ('Damen', 'Damen-Wintermützen von Achti: klassische Formen, Saisonmuster, hergestellt in Polen.'),
         'kolekcja-meska': ('Herren', 'Herren-Wintermützen: klassische Formen, gedeckte Farben, strapazierfähiger Strick.'),
         'kolekcja-dla-dzieci': ('Kinder', 'Kinder-Wintermützen in 50–52 und 52–54: warm, weich, bunt.'),
         'kolekcja-premium': ('Premium Merino', 'Mützen aus Merinowolle, 100 % oder mit Acryl gemischt: leicht, atmungsaktiv, warm.'),
