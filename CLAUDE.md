@@ -141,32 +141,30 @@ Firma testowa „Firma Testowa Achti” (klient Kamil Test, e-mail Kamila) — z
 - **Analityka (nie zrobione):** brak GA4 i Search Console — wymaga konta Google (Adriana albo Kamila): aplikacja „Google & YouTube” w Shopify + weryfikacja domeny w Search Console + zgłoszenie `/sitemap.xml`. Klaviyo też jeszcze nie zainstalowane.
 - Kontrast reszty palety OK (7,7–11,9:1), SKU na kafelku ~4,9:1.
 
-## Do zrobienia (stan na 14.09.2026)
+## Do zrobienia (stan na 15.09.2026)
 
-### Kamil — panel Shopify (~15 min, blokuje start)
-1. **Search & Discovery** — aplikacja **nie jest zainstalowana** (filtry na listingu to domyślne Shopify). Zainstalować (darmowa, Shopify) i dodać filtr „Tagi produktu” → nazwa **Cechy**, tylko 6 tagów, pogrupowane: Z wełną = `welna`+`merino`, Z podszyciem = `podszycie`, Bez podszycia = `bez-podszycia`, Z pomponem = `pompon`, Bez pompona = `bez-pompona`. Tagi są już na produktach (zob. „Waga i filtry cech”). Etykiety EN/DE/FR w Translate & Adapt → Search & Discovery. Czeka na zgodę Kamila na instalację (14.09).
-2. **Sklep online → Preferencje** (strona w cross-origin iframe — Chrome-agent nie wpisze tam tekstu): tytuł strony głównej `Achti — producent czapek zimowych, hurt B2B`; opis meta `Polski producent czapek zimowych, opasek i kominów. Sprzedaż hurtowa B2B dla sklepów i firm — ceny i zamówienia po rejestracji konta firmowego.`; obraz social `~/Downloads/achti-social.jpg` (1200×630, kadr z hero); sekcja „Ochrona przed spamem” (reCAPTCHA) — sprawdzić/włączyć.
-3. **Analityka** — brak GA4 i Search Console. Decyzja: konto Google Adriana (wtedy on instaluje „Google & YouTube” i weryfikuje domenę) czy Kamila (wtedy robi to Claude w zalogowanym Chrome). Potem zgłosić `/sitemap.xml`.
-4. **Przy starcie: wyłączyć hasło sklepu** (Preferencje → Zabezpieczenie hasłem; hasło `gahfro`).
+**Zamknięte 15.09:** metaopis + tytuł strony głównej + obraz social (Kamil w panelu), Search & Discovery zainstalowana, kolekcja „Czapki reklamowe” = 51 modeli z listy Adriana, stała opłata 200 zł za projekt, instrukcja analityki dla Adriana (`docs/Achti-instrukcja-analityka.pdf`), og:image naprawiony.
 
-### Adrian — dane i treści od klienta
-5. **Kwota za wykonanie projektu** w konfiguratorze czapek reklamowych (teraz „wg wyceny — podamy w odpowiedzi”; ustawienie sekcji `design_fee`).
-6. **Lista czapek do haftu / naszywek** (Adrian wrzuca na Drive) → dodać do kolekcji `czapki-reklamowe` (collectionAddProducts po SKU; dziś 8 modeli demo).
-7. **Wybór kolorystyki** — numer 1–62 z `docs/Achti-kolory-sklepu.pdf` → zmiana `#c2b7ac` (pas) i `#e8e3de` (kafelki).
-8. **Treści stron**: O nas, Produkcja, Materiały, Jakość, Zrównoważony rozwój (linki w stopce pojawią się same po dodaniu stron o tych uchwytach).
-9. **Pola `[…]`** w regulaminie, polityce prywatności, wysyłce, zwrotach — PL + te same pola w 3 tłumaczeniach.
-10. **Kolory jako warianty** (kolumna `kolory (po przecinku)` w arkuszu) — decyzja, czy robimy; dziś kolory to osobne produkty spięte metapolem `inne_kolory`.
-11. **Kurier**: cennik (stawki UE 69 zł są tymczasowe), konto kuriera w BaseLinkerze, moduł faktur, szablon e-mail.
-12. **Płatności**: w checkout tylko PayPal — dodać przelew bankowy (ręczna metoda) i/lub warunki płatności per firma.
-13. **Katalog B2B z cenami hurtowymi** przypisany do firm (Markets → Katalogi) — bez tego firmy widzą ceny domyślne.
-14. **Klaviyo** + import bazy maili (instrukcja: `docs/instrukcja-import-klientow.html`, szablon CSV obok).
-15. **Aplikacja „SP Hide Price & Access”** — dubluje ukrywanie cen z motywu, do odinstalowania (decyzja klienta).
+### Blokuje start
+1. **Filtr „Cechy” w Search & Discovery** (Kamil, 3 min) — aplikacja zainstalowana, tagi na produktach gotowe; zostało dodanie filtru „Tag produktu” z 6 wartościami. Konfiguracji nie da się zrobić z Chrome-agenta (cross-origin iframe).
+2. **Metody płatności** — w checkout jest tylko PayPal. B2B wymaga przelewu bankowego (Ustawienia → Płatności → ręczne metody) i/lub warunków płatności per firma.
+3. **Katalog B2B z cenami hurtowymi** przypisany do firm (Markets → Katalogi) — bez niego firmy widzą ceny domyślne, czyli te same co w katalogu PDF, ale bez progów ilościowych.
+4. **Cennik kuriera** od Adriana — strefy mają tymczasowe 69 zł.
+5. **Wyłączyć hasło sklepu** (Preferencje) — ostatnia czynność przed startem.
 
-### Claude — bez blokad, do zrobienia od ręki
-16. **Kolekcja „Opaski”** — 36 produktów ma tag `opaski`, kolekcji nie ma (założyć przez API, ręczna albo automatyczna po tagu).
-17. **Sprawdzenie na telefonie 375 px** — headless Chrome ma minimum ~500 px, okno Chrome nie chce się zmniejszyć; najszybciej Kamil na komórce na live.
-18. **Zdjęcia na modelce (AI)** — czeka na wybór obsady z castingu i zgodę na budżet (~39 $ cała seria dorosłych na Pro); dzieci pominięte świadomie.
-19. **Test zamówienia end-to-end**: zamówienie w sklepie → BaseLinker po 10 min → statusy i tracking.
+### Ważne, ale nie blokuje
+6. **Treści 5 stron** (Adrian): O nas, Produkcja, Materiały, Jakość, Zrównoważony rozwój. Linki w stopce chowają się same, dopóki stron nie ma.
+7. **Pola `[…]`** w regulaminie i politykach — PL + te same miejsca w EN/DE/FR.
+8. **Analityka** — Adrian ma instrukcję; po jego stronie GA4 i Search Console, po naszej wklejenie kodu weryfikacyjnego `google-site-verification` w motyw.
+9. **Test zamówienia end-to-end** → BaseLinker (po uruchomieniu płatności).
+10. **Kolekcja „Opaski”** — 36 produktów ma tag `opaski`, kolekcji nadal nie ma.
+
+### Decyzje klienta
+11. Kolory jako warianty (kolumna `kolory` w arkuszu) — dziś każdy kolor to osobny produkt spięty metapolem `inne_kolory`.
+12. Zdjęcia AI na modelce — wybór obsady z castingu + budżet (~39 $ cała seria dorosłych).
+13. Klaviyo i import bazy maili (`docs/instrukcja-import-klientow.html`).
+14. Odinstalowanie „SP Hide Price & Access” (dubluje ukrywanie cen z motywu).
+15. **Agent AI do szukania klientów** (PL + zagranica) — osobny projekt, do wyceny; w Niemczech cold mail zakazany (UWG §7), wejście przez LinkedIn/targi.
 
 ### Po starcie
 20. Pomiar szybkości (17 plików JS w theme.liquid, przelicznik walut po węzłach tekstowych), alt-y zdjęć certyfikatów w multicolumn, ewentualnie wideo w hero (sekcja image-banner przyjmuje tylko obraz).
