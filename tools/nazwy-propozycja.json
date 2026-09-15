@@ -1,0 +1,3172 @@
+[
+ {
+  "code": "AZ-1145PC",
+  "stara": "Adela",
+  "nowa": "Adela",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Adeli",
+  "biernik": "Adelę"
+ },
+ {
+  "code": "AZ-1356PC",
+  "stara": "Adriana",
+  "nowa": "Adria",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Adrii",
+  "biernik": "Adrię"
+ },
+ {
+  "code": "AZ-1378PC",
+  "stara": "Agatha",
+  "nowa": "Agata",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Agaty",
+  "biernik": "Agatę"
+ },
+ {
+  "code": "AZ-1430PC",
+  "stara": "Agnes",
+  "nowa": "Alba",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Alby",
+  "biernik": "Albę"
+ },
+ {
+  "code": "AZ-1464PC",
+  "stara": "Alba",
+  "nowa": "Alina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Aliny",
+  "biernik": "Alinę"
+ },
+ {
+  "code": "AZ-1476PC",
+  "stara": "Alessia",
+  "nowa": "Alma",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Almy",
+  "biernik": "Almę"
+ },
+ {
+  "code": "AZ-1531PK",
+  "stara": "Alex",
+  "nowa": "Amara",
+  "grupa": "damskie",
+  "segment": "Unisex",
+  "typ": "Czapka",
+  "dopelniacz": "Amary",
+  "biernik": "Amarę"
+ },
+ {
+  "code": "AZ-1575PK",
+  "stara": "Adam",
+  "nowa": "Agat",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Agata",
+  "biernik": "Agat"
+ },
+ {
+  "code": "AZ-1609PK",
+  "stara": "Adrian",
+  "nowa": "Ametyst",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Ametysta",
+  "biernik": "Ametyst"
+ },
+ {
+  "code": "AZ-1622PC",
+  "stara": "Alice",
+  "nowa": "Amelia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Amelii",
+  "biernik": "Amelię"
+ },
+ {
+  "code": "AZ-1666PC",
+  "stara": "Alina",
+  "nowa": "Amira",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Amiry",
+  "biernik": "Amirę"
+ },
+ {
+  "code": "AZ-1708PC",
+  "stara": "Alisa",
+  "nowa": "Aniela",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Anieli",
+  "biernik": "Anielę"
+ },
+ {
+  "code": "AZ-1719PC",
+  "stara": "Alma",
+  "nowa": "Anita",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Anity",
+  "biernik": "Anitę"
+ },
+ {
+  "code": "AZ-1748PC",
+  "stara": "Amelia",
+  "nowa": "Anna",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Anny",
+  "biernik": "Annę"
+ },
+ {
+  "code": "AZ-1800PC",
+  "stara": "Amelie",
+  "nowa": "Antonia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Antonii",
+  "biernik": "Antonię"
+ },
+ {
+  "code": "AZ-1820PC",
+  "stara": "Anastasia",
+  "nowa": "Aria",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Arii",
+  "biernik": "Arię"
+ },
+ {
+  "code": "AZ-1874PC",
+  "stara": "Andrea",
+  "nowa": "Azalea",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Azaley",
+  "biernik": "Azaleę"
+ },
+ {
+  "code": "AZ-1876PC",
+  "stara": "Angela",
+  "nowa": "Arla",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Arli",
+  "biernik": "Arlę"
+ },
+ {
+  "code": "AZ-1909",
+  "stara": "Anika",
+  "nowa": "Asta",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Asty",
+  "biernik": "Astę"
+ },
+ {
+  "code": "AZ-1918PC",
+  "stara": "Anita",
+  "nowa": "Aura",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Aury",
+  "biernik": "Aurę"
+ },
+ {
+  "code": "AZ-2018PC",
+  "stara": "Anna",
+  "nowa": "Aurora",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Aurory",
+  "biernik": "Aurorę"
+ },
+ {
+  "code": "AZ-2194PC",
+  "stara": "Barbara",
+  "nowa": "Beata",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Beaty",
+  "biernik": "Beatę"
+ },
+ {
+  "code": "AZ-2202PC",
+  "stara": "Beatrice",
+  "nowa": "Bella",
+  "grupa": "dzieciece",
+  "segment": "Dziecięca",
+  "typ": "Czapka",
+  "dopelniacz": "Belli",
+  "biernik": "Bellę"
+ },
+ {
+  "code": "AZ-2218PC",
+  "stara": "Bella",
+  "nowa": "Begonia",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Begonii",
+  "biernik": "Begonię"
+ },
+ {
+  "code": "AZ-2263LPC",
+  "stara": "Bianca",
+  "nowa": "Berta",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Berty",
+  "biernik": "Bertę"
+ },
+ {
+  "code": "AZ-2344PC",
+  "stara": "Blanca",
+  "nowa": "Bianca",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Biancy",
+  "biernik": "Biancę"
+ },
+ {
+  "code": "AZ-2349PC",
+  "stara": "Ella Mini",
+  "nowa": "Emma",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Emmy",
+  "biernik": "Emmę"
+ },
+ {
+  "code": "AZ-2364PC",
+  "stara": "Annie Mini",
+  "nowa": "Ania",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Anii",
+  "biernik": "Anię"
+ },
+ {
+  "code": "AZ-2371PC",
+  "stara": "Betsy Mini",
+  "nowa": "Bruna",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Bruny",
+  "biernik": "Brunę"
+ },
+ {
+  "code": "AZ-2440PC",
+  "stara": "Bonnie",
+  "nowa": "Blanka",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Blanki",
+  "biernik": "Blankę"
+ },
+ {
+  "code": "AZ-2441PC",
+  "stara": "Brenda",
+  "nowa": "Bona",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Bony",
+  "biernik": "Bonę"
+ },
+ {
+  "code": "AZ-2466PC",
+  "stara": "Camila",
+  "nowa": "Cala",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Cali",
+  "biernik": "Calę"
+ },
+ {
+  "code": "AZ-2469PC",
+  "stara": "Carla",
+  "nowa": "Calla",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Calli",
+  "biernik": "Callę"
+ },
+ {
+  "code": "AZ-2490PK",
+  "stara": "Bibi Mini",
+  "nowa": "Bruno",
+  "grupa": "dzieciece",
+  "segment": "Dziecięca",
+  "typ": "Czapka",
+  "dopelniacz": "Bruno",
+  "biernik": "Bruno"
+ },
+ {
+  "code": "AZ-2501PC",
+  "stara": "Carmen",
+  "nowa": "Camila",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Camili",
+  "biernik": "Camilę"
+ },
+ {
+  "code": "AZ-2504PC",
+  "stara": "Carolina",
+  "nowa": "Capella",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Capelli",
+  "biernik": "Capellę"
+ },
+ {
+  "code": "AZ-2515PC",
+  "stara": "Celia",
+  "nowa": "Cora",
+  "grupa": "dzieciece",
+  "segment": "Dziecięca",
+  "typ": "Czapka",
+  "dopelniacz": "Cory",
+  "biernik": "Corę"
+ },
+ {
+  "code": "AZ-2526D",
+  "stara": "Chiara",
+  "nowa": "Cara",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Cary",
+  "biernik": "Carę"
+ },
+ {
+  "code": "AZ-2541PK",
+  "stara": "Bruno",
+  "nowa": "Beryl",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Beryla",
+  "biernik": "Beryl"
+ },
+ {
+  "code": "AZ-2549PK",
+  "stara": "Philip",
+  "nowa": "Peryd",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Peryda",
+  "biernik": "Peryd"
+ },
+ {
+  "code": "AZ-2551PK",
+  "stara": "Finn",
+  "nowa": "Fluoryt",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Fluoryta",
+  "biernik": "Fluoryt"
+ },
+ {
+  "code": "AZ-2553PK",
+  "stara": "Gabriel",
+  "nowa": "Granat",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Granata",
+  "biernik": "Granat"
+ },
+ {
+  "code": "AZ-2554PK",
+  "stara": "Hugo",
+  "nowa": "Hematyt",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Hematyta",
+  "biernik": "Hematyt"
+ },
+ {
+  "code": "AZ-2560PC",
+  "stara": "Chloe",
+  "nowa": "Carina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Cariny",
+  "biernik": "Carinę"
+ },
+ {
+  "code": "AZ-2561PC",
+  "stara": "Clara",
+  "nowa": "Carla",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Carli",
+  "biernik": "Carlę"
+ },
+ {
+  "code": "AZ-2566PC",
+  "stara": "Claudia",
+  "nowa": "Carmela",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Carmeli",
+  "biernik": "Carmelę"
+ },
+ {
+  "code": "AZ-2567PC",
+  "stara": "Dalia",
+  "nowa": "Dalia",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Dalii",
+  "biernik": "Dalię"
+ },
+ {
+  "code": "AZ-2569PC",
+  "stara": "Daria",
+  "nowa": "Dana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Dany",
+  "biernik": "Danę"
+ },
+ {
+  "code": "AZ-2588PC",
+  "stara": "Diana",
+  "nowa": "Daniela",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Danieli",
+  "biernik": "Danielę"
+ },
+ {
+  "code": "AZ-2613",
+  "stara": "Dominica",
+  "nowa": "Daria",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Darii",
+  "biernik": "Darię"
+ },
+ {
+  "code": "AZ-2613PC",
+  "stara": "Dora",
+  "nowa": "Delia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Delii",
+  "biernik": "Delię"
+ },
+ {
+  "code": "AZ-2636PK",
+  "stara": "Casper",
+  "nowa": "Cytryn",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Cytryna",
+  "biernik": "Cytryn"
+ },
+ {
+  "code": "AZ-2650PC",
+  "stara": "Elena",
+  "nowa": "Erica",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Ericy",
+  "biernik": "Ericę"
+ },
+ {
+  "code": "AZ-2651PC",
+  "stara": "Eliza",
+  "nowa": "Edda",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Eddy",
+  "biernik": "Eddę"
+ },
+ {
+  "code": "AZ-2653PC",
+  "stara": "Elvira",
+  "nowa": "Elana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Elany",
+  "biernik": "Elanę"
+ },
+ {
+  "code": "AZ-2656PC",
+  "stara": "Emilia",
+  "nowa": "Elara",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Elary",
+  "biernik": "Elarę"
+ },
+ {
+  "code": "AZ-2657PC",
+  "stara": "Emma",
+  "nowa": "Elba",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Elby",
+  "biernik": "Elbę"
+ },
+ {
+  "code": "AZ-2658PC",
+  "stara": "Esther",
+  "nowa": "Elena",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Eleny",
+  "biernik": "Elenę"
+ },
+ {
+  "code": "AZ-2661D",
+  "stara": "Eva",
+  "nowa": "Elina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Eliny",
+  "biernik": "Elinę"
+ },
+ {
+  "code": "AZ-2663D",
+  "stara": "Eve",
+  "nowa": "Elisa",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Elisy",
+  "biernik": "Elisę"
+ },
+ {
+  "code": "AZ-2665D",
+  "stara": "Fabiana",
+  "nowa": "Fabia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Fabii",
+  "biernik": "Fabię"
+ },
+ {
+  "code": "AZ-2667D",
+  "stara": "Felicia",
+  "nowa": "Fabiana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Fabiany",
+  "biernik": "Fabianę"
+ },
+ {
+  "code": "AZ-2670PC",
+  "stara": "Flora",
+  "nowa": "Felia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Felii",
+  "biernik": "Felię"
+ },
+ {
+  "code": "AZ-2676PC",
+  "stara": "Francesca",
+  "nowa": "Felina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Feliny",
+  "biernik": "Felinę"
+ },
+ {
+  "code": "AZ-2680PC",
+  "stara": "Gabriella",
+  "nowa": "Gerbera",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Gerbery",
+  "biernik": "Gerberę"
+ },
+ {
+  "code": "AZ-2681PC",
+  "stara": "Gaia",
+  "nowa": "Gloriosa",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Gloriosy",
+  "biernik": "Gloriosę"
+ },
+ {
+  "code": "AZ-2685PC",
+  "stara": "Gloria",
+  "nowa": "Gala",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Gali",
+  "biernik": "Galę"
+ },
+ {
+  "code": "AZ-2687PC",
+  "stara": "Greta",
+  "nowa": "Gemma",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Gemmy",
+  "biernik": "Gemmę"
+ },
+ {
+  "code": "AZ-2688PC",
+  "stara": "Hannah",
+  "nowa": "Halina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Haliny",
+  "biernik": "Halinę"
+ },
+ {
+  "code": "AZ-2694PC",
+  "stara": "Helena",
+  "nowa": "Hanna",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Hanny",
+  "biernik": "Hannę"
+ },
+ {
+  "code": "AZ-2697PC",
+  "stara": "Ida",
+  "nowa": "Ida",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Idy",
+  "biernik": "Idę"
+ },
+ {
+  "code": "AZ-2698PC",
+  "stara": "Ilona",
+  "nowa": "Idalia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Idalii",
+  "biernik": "Idalię"
+ },
+ {
+  "code": "AZ-2701PC",
+  "stara": "Ines",
+  "nowa": "Ilaria",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Ilarii",
+  "biernik": "Ilarię"
+ },
+ {
+  "code": "AZ-2703PC",
+  "stara": "Inez",
+  "nowa": "Ilona",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Ilony",
+  "biernik": "Ilonę"
+ },
+ {
+  "code": "AZ-2704PC",
+  "stara": "Irina",
+  "nowa": "Inga",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Ingi",
+  "biernik": "Ingę"
+ },
+ {
+  "code": "AZ-2705PC",
+  "stara": "Iris",
+  "nowa": "Iona",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Iony",
+  "biernik": "Ionę"
+ },
+ {
+  "code": "AZ-2706PC",
+  "stara": "Isabella",
+  "nowa": "Irena",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Ireny",
+  "biernik": "Irenę"
+ },
+ {
+  "code": "AZ-2707PC",
+  "stara": "Iva",
+  "nowa": "Irina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Iriny",
+  "biernik": "Irinę"
+ },
+ {
+  "code": "AZ-2712PC",
+  "stara": "Hannah Mini",
+  "nowa": "Hela",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Heli",
+  "biernik": "Helę"
+ },
+ {
+  "code": "AZ-2712PCE",
+  "stara": "Julie Mini",
+  "nowa": "Juna",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Juny",
+  "biernik": "Junę"
+ },
+ {
+  "code": "AZ-2713PC",
+  "stara": "Adam Mini",
+  "nowa": "Aron",
+  "grupa": "chlopiece",
+  "segment": "Chłopięca",
+  "typ": "Czapka",
+  "dopelniacz": "Arona",
+  "biernik": "Aron"
+ },
+ {
+  "code": "AZ-2716PC",
+  "stara": "Julia Mini",
+  "nowa": "Jana",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Jany",
+  "biernik": "Janę"
+ },
+ {
+  "code": "AZ-2716PCE",
+  "stara": "Kaia Mini",
+  "nowa": "Kaja",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Kaji",
+  "biernik": "Kaję"
+ },
+ {
+  "code": "AZ-2718PC",
+  "stara": "Chrissy Mini",
+  "nowa": "Celia",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Celii",
+  "biernik": "Celię"
+ },
+ {
+  "code": "AZ-2719PC",
+  "stara": "Lena Mini",
+  "nowa": "Lena",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Leny",
+  "biernik": "Lenę"
+ },
+ {
+  "code": "AZ-2719PCE",
+  "stara": "Lily Mini",
+  "nowa": "Luna",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Luny",
+  "biernik": "Lunę"
+ },
+ {
+  "code": "AZ-2720PC",
+  "stara": "Maya Mini",
+  "nowa": "Mila",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Mili",
+  "biernik": "Milę"
+ },
+ {
+  "code": "AZ-2723PC",
+  "stara": "Yvonne",
+  "nowa": "Yolanda",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Yolandy",
+  "biernik": "Yolandę"
+ },
+ {
+  "code": "AZ-2734PC",
+  "stara": "Jade",
+  "nowa": "Janina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Janiny",
+  "biernik": "Janinę"
+ },
+ {
+  "code": "AZ-2735PC",
+  "stara": "Jana",
+  "nowa": "Jolena",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Joleny",
+  "biernik": "Jolenę"
+ },
+ {
+  "code": "AZ-2737PC",
+  "stara": "Janine",
+  "nowa": "Junona",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Junony",
+  "biernik": "Junonę"
+ },
+ {
+  "code": "AZ-2752PC",
+  "stara": "Calla",
+  "nowa": "Celina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Celiny",
+  "biernik": "Celinę"
+ },
+ {
+  "code": "AZ-2753PC",
+  "stara": "Camilla",
+  "nowa": "Chiara",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Chiary",
+  "biernik": "Chiarę"
+ },
+ {
+  "code": "AZ-2762PC",
+  "stara": "Karina",
+  "nowa": "Kalia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Kalii",
+  "biernik": "Kalię"
+ },
+ {
+  "code": "AZ-2768PC",
+  "stara": "Caroline",
+  "nowa": "Camelia",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Camelii",
+  "biernik": "Camelię"
+ },
+ {
+  "code": "AZ-2773D",
+  "stara": "Kate",
+  "nowa": "Kalina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Kaliny",
+  "biernik": "Kalinę"
+ },
+ {
+  "code": "AZ-2781PC",
+  "stara": "Kira",
+  "nowa": "Kamila",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Kamili",
+  "biernik": "Kamilę"
+ },
+ {
+  "code": "AZ-2782PC",
+  "stara": "Claire",
+  "nowa": "Cira",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Ciry",
+  "biernik": "Cirę"
+ },
+ {
+  "code": "AZ-2784PC",
+  "stara": "Cornelia",
+  "nowa": "Clara",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Clary",
+  "biernik": "Clarę"
+ },
+ {
+  "code": "AZ-2788PC",
+  "stara": "Laura",
+  "nowa": "Lana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Lany",
+  "biernik": "Lanę"
+ },
+ {
+  "code": "AZ-2797PC",
+  "stara": "Lea",
+  "nowa": "Lara",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Lary",
+  "biernik": "Larę"
+ },
+ {
+  "code": "AZ-2799PC",
+  "stara": "Lena",
+  "nowa": "Larisa",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Larisy",
+  "biernik": "Larisę"
+ },
+ {
+  "code": "AZ-2802PC",
+  "stara": "Lydia",
+  "nowa": "Larissa",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Larissy",
+  "biernik": "Larissę"
+ },
+ {
+  "code": "AZ-2805",
+  "stara": "Liliana",
+  "nowa": "Lantana",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Lantany",
+  "biernik": "Lantanę"
+ },
+ {
+  "code": "AZ-2806",
+  "stara": "Lilia",
+  "nowa": "Laura",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Laury",
+  "biernik": "Laurę"
+ },
+ {
+  "code": "AZ-2808PC",
+  "stara": "Livia",
+  "nowa": "Laurena",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Laureny",
+  "biernik": "Laurenę"
+ },
+ {
+  "code": "AZ-2812PC",
+  "stara": "Liv",
+  "nowa": "Lavinia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Lavinii",
+  "biernik": "Lavinię"
+ },
+ {
+  "code": "AZ-2813D",
+  "stara": "Lenaia",
+  "nowa": "Leda",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Ledy",
+  "biernik": "Ledę"
+ },
+ {
+  "code": "AZ-2814PC",
+  "stara": "Lola",
+  "nowa": "Leila",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Leili",
+  "biernik": "Leilę"
+ },
+ {
+  "code": "AZ-2816PC",
+  "stara": "Lorena",
+  "nowa": "Leona",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Leony",
+  "biernik": "Leonę"
+ },
+ {
+  "code": "AZ-2819PC",
+  "stara": "Lucia",
+  "nowa": "Liana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Liany",
+  "biernik": "Lianę"
+ },
+ {
+  "code": "AZ-2820PC",
+  "stara": "Louise",
+  "nowa": "Lavanda",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Lavandy",
+  "biernik": "Lavandę"
+ },
+ {
+  "code": "AZ-2827PC",
+  "stara": "Luna",
+  "nowa": "Lidia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Lidii",
+  "biernik": "Lidię"
+ },
+ {
+  "code": "AZ-2829PC",
+  "stara": "Lucy",
+  "nowa": "Ligia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Ligii",
+  "biernik": "Ligię"
+ },
+ {
+  "code": "AZ-2830PC",
+  "stara": "Maya",
+  "nowa": "Malena",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Maleny",
+  "biernik": "Malenę"
+ },
+ {
+  "code": "AZ-2831PC",
+  "stara": "Mallory",
+  "nowa": "Malina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Maliny",
+  "biernik": "Malinę"
+ },
+ {
+  "code": "AZ-2833PC",
+  "stara": "Manuela",
+  "nowa": "Malva",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Malvy",
+  "biernik": "Malvę"
+ },
+ {
+  "code": "AZ-2834PC",
+  "stara": "Mara",
+  "nowa": "Malwina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Malwiny",
+  "biernik": "Malwinę"
+ },
+ {
+  "code": "AZ-2835PC",
+  "stara": "Marcella",
+  "nowa": "Mimosa",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Mimosy",
+  "biernik": "Mimosę"
+ },
+ {
+  "code": "AZ-2836PC",
+  "stara": "Maria",
+  "nowa": "Manuela",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Manueli",
+  "biernik": "Manuelę"
+ },
+ {
+  "code": "AZ-2837PC",
+  "stara": "Mariella",
+  "nowa": "Mirta",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Mirty",
+  "biernik": "Mirtę"
+ },
+ {
+  "code": "AZ-2842PC-BOY",
+  "stara": "Tony Mini",
+  "nowa": "Tobia",
+  "grupa": "chlopiece",
+  "segment": "Chłopięca",
+  "typ": "Czapka",
+  "dopelniacz": "Tobii",
+  "biernik": "Tobię"
+ },
+ {
+  "code": "AZ-2842PC-GIRL",
+  "stara": "Mary Mini",
+  "nowa": "Maja",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Maji",
+  "biernik": "Maję"
+ },
+ {
+  "code": "AZ-2843PC",
+  "stara": "Frankie Mini",
+  "nowa": "Fabio",
+  "grupa": "chlopiece",
+  "segment": "Chłopięca",
+  "typ": "Czapka",
+  "dopelniacz": "Fabio",
+  "biernik": "Fabio"
+ },
+ {
+  "code": "AZ-2844PC",
+  "stara": "Nellie Mini",
+  "nowa": "Nina",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Niny",
+  "biernik": "Ninę"
+ },
+ {
+  "code": "AZ-2851PC",
+  "stara": "Nina Mini",
+  "nowa": "Nela",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Neli",
+  "biernik": "Nelę"
+ },
+ {
+  "code": "AZ-2852PC",
+  "stara": "Marina",
+  "nowa": "Melisa",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Melisy",
+  "biernik": "Melisę"
+ },
+ {
+  "code": "AZ-2853PC",
+  "stara": "Martha",
+  "nowa": "Mara",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Mary",
+  "biernik": "Marę"
+ },
+ {
+  "code": "AZ-2854",
+  "stara": "Martina",
+  "nowa": "Marcela",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Marceli",
+  "biernik": "Marcelę"
+ },
+ {
+  "code": "AZ-2855PC",
+  "stara": "Matilda",
+  "nowa": "Marena",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Mareny",
+  "biernik": "Marenę"
+ },
+ {
+  "code": "AZ-2856PC",
+  "stara": "Melanie",
+  "nowa": "Maria",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Marii",
+  "biernik": "Marię"
+ },
+ {
+  "code": "AZ-2865PC",
+  "stara": "Mia",
+  "nowa": "Mariana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Mariany",
+  "biernik": "Marianę"
+ },
+ {
+  "code": "AZ-2866PC",
+  "stara": "Mila",
+  "nowa": "Marika",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Mariki",
+  "biernik": "Marikę"
+ },
+ {
+  "code": "AZ-2867PC",
+  "stara": "Milena",
+  "nowa": "Marina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Mariny",
+  "biernik": "Marinę"
+ },
+ {
+  "code": "AZ-2871PC",
+  "stara": "Mira",
+  "nowa": "Marisa",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Marisy",
+  "biernik": "Marisę"
+ },
+ {
+  "code": "AZ-2872PK",
+  "stara": "Miriam",
+  "nowa": "Marla",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Marli",
+  "biernik": "Marlę"
+ },
+ {
+  "code": "AZ-2873PK",
+  "stara": "Nadia",
+  "nowa": "Nadia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Nadii",
+  "biernik": "Nadię"
+ },
+ {
+  "code": "AZ-2874PC",
+  "stara": "Nadine",
+  "nowa": "Nadina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Nadiny",
+  "biernik": "Nadinę"
+ },
+ {
+  "code": "AZ-2875PC",
+  "stara": "Natalia",
+  "nowa": "Nara",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Nary",
+  "biernik": "Narę"
+ },
+ {
+  "code": "AZ-2876PC",
+  "stara": "Nella",
+  "nowa": "Nora",
+  "grupa": "dzieciece",
+  "segment": "Dziecięca",
+  "typ": "Czapka",
+  "dopelniacz": "Nory",
+  "biernik": "Norę"
+ },
+ {
+  "code": "AZ-2884PC",
+  "stara": "Nicole",
+  "nowa": "Nerea",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Nerey",
+  "biernik": "Nereę"
+ },
+ {
+  "code": "AZ-2888PCE",
+  "stara": "Leo Mini",
+  "nowa": "Lukas",
+  "grupa": "chlopiece",
+  "segment": "Chłopięca",
+  "typ": "Czapka",
+  "dopelniacz": "Lukasa",
+  "biernik": "Lukas"
+ },
+ {
+  "code": "AZ-2893PC",
+  "stara": "Nina",
+  "nowa": "Nerina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Neriny",
+  "biernik": "Nerinę"
+ },
+ {
+  "code": "AZ-2894PC",
+  "stara": "Noemi",
+  "nowa": "Nicola",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Nicoli",
+  "biernik": "Nicolę"
+ },
+ {
+  "code": "AZ-2895PC",
+  "stara": "Nora",
+  "nowa": "Nika",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Niki",
+  "biernik": "Nikę"
+ },
+ {
+  "code": "AZ-2897PC",
+  "stara": "Olivia",
+  "nowa": "Oda",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Ody",
+  "biernik": "Odę"
+ },
+ {
+  "code": "AZ-2898PC",
+  "stara": "Olive",
+  "nowa": "Odalia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Odalii",
+  "biernik": "Odalię"
+ },
+ {
+  "code": "AZ-2899PC",
+  "stara": "Oriana",
+  "nowa": "Odetta",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Odetty",
+  "biernik": "Odettę"
+ },
+ {
+  "code": "AZ-2900PC",
+  "stara": "Paula",
+  "nowa": "Palmira",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Palmiry",
+  "biernik": "Palmirę"
+ },
+ {
+  "code": "AZ-2902PC",
+  "stara": "Pauline",
+  "nowa": "Paloma",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Palomy",
+  "biernik": "Palomę"
+ },
+ {
+  "code": "AZ-2903PC",
+  "stara": "Paige",
+  "nowa": "Pamela",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Pameli",
+  "biernik": "Pamelę"
+ },
+ {
+  "code": "AZ-2904PC",
+  "stara": "Rachel",
+  "nowa": "Rudbekia",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Rudbekii",
+  "biernik": "Rudbekię"
+ },
+ {
+  "code": "AZ-2905PC",
+  "stara": "Renata",
+  "nowa": "Rezeda",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Rezedy",
+  "biernik": "Rezedę"
+ },
+ {
+  "code": "AZ-2906PC",
+  "stara": "Rita",
+  "nowa": "Rafaela",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Rafaeli",
+  "biernik": "Rafaelę"
+ },
+ {
+  "code": "AZ-2907PC",
+  "stara": "Rosa",
+  "nowa": "Ramona",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Ramony",
+  "biernik": "Ramonę"
+ },
+ {
+  "code": "AZ-2908PC",
+  "stara": "Rosalia",
+  "nowa": "Rana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Rany",
+  "biernik": "Ranę"
+ },
+ {
+  "code": "AZ-2909PK",
+  "stara": "Roxana",
+  "nowa": "Rebeca",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Rebecy",
+  "biernik": "Rebecę"
+ },
+ {
+  "code": "AZ-2910PC",
+  "stara": "Sabine",
+  "nowa": "Salvia",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Salvii",
+  "biernik": "Salvię"
+ },
+ {
+  "code": "AZ-2911PC",
+  "stara": "Sandra",
+  "nowa": "Sabina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Sabiny",
+  "biernik": "Sabinę"
+ },
+ {
+  "code": "AZ-2912PC",
+  "stara": "Sarah",
+  "nowa": "Sabrina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Sabriny",
+  "biernik": "Sabrinę"
+ },
+ {
+  "code": "AZ-2913PC",
+  "stara": "Selena",
+  "nowa": "Salina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Saliny",
+  "biernik": "Salinę"
+ },
+ {
+  "code": "AZ-2914PC",
+  "stara": "Serena",
+  "nowa": "Salma",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Salmy",
+  "biernik": "Salmę"
+ },
+ {
+  "code": "AZ-2915PC",
+  "stara": "Silvia",
+  "nowa": "Samanta",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Samanty",
+  "biernik": "Samantę"
+ },
+ {
+  "code": "AZ-2917PC",
+  "stara": "Sonia",
+  "nowa": "Samira",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Samiry",
+  "biernik": "Samirę"
+ },
+ {
+  "code": "AZ-2920PC",
+  "stara": "Olivia Mini",
+  "nowa": "Ola",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Oli",
+  "biernik": "Olę"
+ },
+ {
+  "code": "AZ-2921PC",
+  "stara": "Polly Mini",
+  "nowa": "Perla",
+  "grupa": "dziewczece",
+  "segment": "Dziewczęca",
+  "typ": "Czapka",
+  "dopelniacz": "Perli",
+  "biernik": "Perlę"
+ },
+ {
+  "code": "AZ-2922PC",
+  "stara": "Stella",
+  "nowa": "Sara",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Sary",
+  "biernik": "Sarę"
+ },
+ {
+  "code": "AZ-2923PC",
+  "stara": "Tamara",
+  "nowa": "Tulipa",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Tulipy",
+  "biernik": "Tulipę"
+ },
+ {
+  "code": "AZ-2925PC",
+  "stara": "Tania",
+  "nowa": "Tala",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Tali",
+  "biernik": "Talę"
+ },
+ {
+  "code": "AZ-2926PC",
+  "stara": "Kiki Mini",
+  "nowa": "Kara",
+  "grupa": "dzieciece",
+  "segment": "Dziecięca",
+  "typ": "Czapka",
+  "dopelniacz": "Kary",
+  "biernik": "Karę"
+ },
+ {
+  "code": "AZ-2928",
+  "stara": "Tatiana",
+  "nowa": "Tamara",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Tamary",
+  "biernik": "Tamarę"
+ },
+ {
+  "code": "AZ-2932D",
+  "stara": "Theresa",
+  "nowa": "Tania",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Tanii",
+  "biernik": "Tanię"
+ },
+ {
+  "code": "AZ-2934",
+  "stara": "Tina",
+  "nowa": "Tara",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Tary",
+  "biernik": "Tarę"
+ },
+ {
+  "code": "AZ-2935",
+  "stara": "Valeria",
+  "nowa": "Vinca",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Vincy",
+  "biernik": "Vincę"
+ },
+ {
+  "code": "AZ-2936",
+  "stara": "Vanessa",
+  "nowa": "Vala",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Vali",
+  "biernik": "Valę"
+ },
+ {
+  "code": "AZ-2938",
+  "stara": "Charlie",
+  "nowa": "Corina",
+  "grupa": "damskie",
+  "segment": "Unisex",
+  "typ": "Czapka",
+  "dopelniacz": "Coriny",
+  "biernik": "Corinę"
+ },
+ {
+  "code": "AZ-2939",
+  "stara": "Vera",
+  "nowa": "Valeria",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Valerii",
+  "biernik": "Valerię"
+ },
+ {
+  "code": "AZ-2940",
+  "stara": "Veronica",
+  "nowa": "Vanda",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Vandy",
+  "biernik": "Vandę"
+ },
+ {
+  "code": "AZ-2941PC",
+  "stara": "Victoria",
+  "nowa": "Vanesa",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Vanesy",
+  "biernik": "Vanesę"
+ },
+ {
+  "code": "AZ-2942",
+  "stara": "Viola",
+  "nowa": "Vanina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Vaniny",
+  "biernik": "Vaninę"
+ },
+ {
+  "code": "AZ-2943PC",
+  "stara": "Vicky",
+  "nowa": "Vega",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Vegi",
+  "biernik": "Vegę"
+ },
+ {
+  "code": "AZ-2947PC",
+  "stara": "Sophia",
+  "nowa": "Savina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Saviny",
+  "biernik": "Savinę"
+ },
+ {
+  "code": "AZ-2949PC",
+  "stara": "Zoe",
+  "nowa": "Zaira",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Zairy",
+  "biernik": "Zairę"
+ },
+ {
+  "code": "AZ-2951PC",
+  "stara": "Susanna",
+  "nowa": "Sawa",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Sawy",
+  "biernik": "Sawę"
+ },
+ {
+  "code": "AZ-2991PC",
+  "stara": "Dahlia",
+  "nowa": "Diana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Diany",
+  "biernik": "Dianę"
+ },
+ {
+  "code": "AZ-2992PC",
+  "stara": "Dafne",
+  "nowa": "Dina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Diny",
+  "biernik": "Dinę"
+ },
+ {
+  "code": "AZ-2993PC",
+  "stara": "Delia",
+  "nowa": "Donata",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Donaty",
+  "biernik": "Donatę"
+ },
+ {
+  "code": "AZ-2995PC",
+  "stara": "Elodie",
+  "nowa": "Elma",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Elmy",
+  "biernik": "Elmę"
+ },
+ {
+  "code": "AZ-2996PC",
+  "stara": "Elisa",
+  "nowa": "Elora",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Elory",
+  "biernik": "Elorę"
+ },
+ {
+  "code": "AZ-2997PC",
+  "stara": "Elise",
+  "nowa": "Elsa",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Elsy",
+  "biernik": "Elsę"
+ },
+ {
+  "code": "AZ-2998PC",
+  "stara": "Ella",
+  "nowa": "Elvina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Elviny",
+  "biernik": "Elvinę"
+ },
+ {
+  "code": "AZ-2999PC",
+  "stara": "Elsa",
+  "nowa": "Elvira",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Elviry",
+  "biernik": "Elvirę"
+ },
+ {
+  "code": "AZ-3000PC",
+  "stara": "Esme",
+  "nowa": "Emilia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Emilii",
+  "biernik": "Emilię"
+ },
+ {
+  "code": "AZ-3001PC",
+  "stara": "Estelle",
+  "nowa": "Emira",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Emiry",
+  "biernik": "Emirę"
+ },
+ {
+  "code": "AZ-3002PC",
+  "stara": "Evelina",
+  "nowa": "Enola",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Enoli",
+  "biernik": "Enolę"
+ },
+ {
+  "code": "AZ-3003PC",
+  "stara": "Fabiola",
+  "nowa": "Fiona",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Fiony",
+  "biernik": "Fionę"
+ },
+ {
+  "code": "AZ-3005PC",
+  "stara": "Fiorella",
+  "nowa": "Fiora",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Fiory",
+  "biernik": "Fiorę"
+ },
+ {
+  "code": "AZ-3006PC",
+  "stara": "Freya",
+  "nowa": "Flora",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Flory",
+  "biernik": "Florę"
+ },
+ {
+  "code": "AZ-3007PC",
+  "stara": "Gia",
+  "nowa": "Genova",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Genovy",
+  "biernik": "Genovę"
+ },
+ {
+  "code": "AZ-3008PC",
+  "stara": "Giada",
+  "nowa": "Gianna",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Gianny",
+  "biernik": "Giannę"
+ },
+ {
+  "code": "AZ-3009PC",
+  "stara": "Ginevra",
+  "nowa": "Gilda",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Gildy",
+  "biernik": "Gildę"
+ },
+ {
+  "code": "AZ-3010PC",
+  "stara": "Giselle",
+  "nowa": "Giulia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Giulii",
+  "biernik": "Giulię"
+ },
+ {
+  "code": "AZ-3011PC",
+  "stara": "Hana",
+  "nowa": "Helia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Helii",
+  "biernik": "Helię"
+ },
+ {
+  "code": "AZ-3012PC",
+  "stara": "Hazel",
+  "nowa": "Hera",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Hery",
+  "biernik": "Herę"
+ },
+ {
+  "code": "AZ-3013PC",
+  "stara": "Ingrid",
+  "nowa": "Irma",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Irmy",
+  "biernik": "Irmę"
+ },
+ {
+  "code": "AZ-3014D",
+  "stara": "Isadora",
+  "nowa": "Isa",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Isy",
+  "biernik": "Isę"
+ },
+ {
+  "code": "AZ-3015PC",
+  "stara": "Ivette",
+  "nowa": "Isla",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Isli",
+  "biernik": "Islę"
+ },
+ {
+  "code": "AZ-3019PC",
+  "stara": "Kiara",
+  "nowa": "Karina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Kariny",
+  "biernik": "Karinę"
+ },
+ {
+  "code": "AZ-3020PC",
+  "stara": "Lara",
+  "nowa": "Lila",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Lili",
+  "biernik": "Lilę"
+ },
+ {
+  "code": "AZ-3021PC",
+  "stara": "Larisa",
+  "nowa": "Liliana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Liliany",
+  "biernik": "Lilianę"
+ },
+ {
+  "code": "AZ-3022PC",
+  "stara": "Leila",
+  "nowa": "Lina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Liny",
+  "biernik": "Linę"
+ },
+ {
+  "code": "AZ-3023PC",
+  "stara": "Leonie",
+  "nowa": "Liora",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Liory",
+  "biernik": "Liorę"
+ },
+ {
+  "code": "AZ-3024PC",
+  "stara": "Leticia",
+  "nowa": "Livia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Livii",
+  "biernik": "Livię"
+ },
+ {
+  "code": "AZ-3025PC",
+  "stara": "Liana",
+  "nowa": "Lora",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Lory",
+  "biernik": "Lorę"
+ },
+ {
+  "code": "AZ-3026PC",
+  "stara": "Liora",
+  "nowa": "Lorella",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Lorelli",
+  "biernik": "Lorellę"
+ },
+ {
+  "code": "AZ-3027",
+  "stara": "Loretta",
+  "nowa": "Lorena",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Loreny",
+  "biernik": "Lorenę"
+ },
+ {
+  "code": "AZ-3028PC",
+  "stara": "Louisa",
+  "nowa": "Luca",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Lucy",
+  "biernik": "Lucę"
+ },
+ {
+  "code": "AZ-3029PC",
+  "stara": "Luciana",
+  "nowa": "Lucia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Lucii",
+  "biernik": "Lucię"
+ },
+ {
+  "code": "AZ-3030PC",
+  "stara": "Mabel",
+  "nowa": "Marta",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Marty",
+  "biernik": "Martę"
+ },
+ {
+  "code": "AZ-3031",
+  "stara": "Madeline",
+  "nowa": "Martina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Martiny",
+  "biernik": "Martinę"
+ },
+ {
+  "code": "AZ-3032PC",
+  "stara": "Maeve",
+  "nowa": "Melania",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Melanii",
+  "biernik": "Melanię"
+ },
+ {
+  "code": "AZ-3033PC",
+  "stara": "Maia",
+  "nowa": "Melina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Meliny",
+  "biernik": "Melinę"
+ },
+ {
+  "code": "AZ-3034PC",
+  "stara": "Margot",
+  "nowa": "Milena",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Mileny",
+  "biernik": "Milenę"
+ },
+ {
+  "code": "AZ-3035PC",
+  "stara": "Marika",
+  "nowa": "Minerva",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Minervy",
+  "biernik": "Minervę"
+ },
+ {
+  "code": "AZ-3036PC",
+  "stara": "Marisa",
+  "nowa": "Mira",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Miry",
+  "biernik": "Mirę"
+ },
+ {
+  "code": "AZ-3037PC",
+  "stara": "Marlene",
+  "nowa": "Mirela",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Mireli",
+  "biernik": "Mirelę"
+ },
+ {
+  "code": "AZ-3038PC",
+  "stara": "Melina",
+  "nowa": "Mona",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Mony",
+  "biernik": "Monę"
+ },
+ {
+  "code": "AZ-3039PC",
+  "stara": "Melissa",
+  "nowa": "Monika",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Moniki",
+  "biernik": "Monikę"
+ },
+ {
+  "code": "AZ-3040PC",
+  "stara": "Melody",
+  "nowa": "Morena",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Moreny",
+  "biernik": "Morenę"
+ },
+ {
+  "code": "AZ-3054",
+  "stara": "Naomi",
+  "nowa": "Nikola",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Nikoli",
+  "biernik": "Nikolę"
+ },
+ {
+  "code": "AZ-3055PC",
+  "stara": "Nika",
+  "nowa": "Nilda",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Nildy",
+  "biernik": "Nildę"
+ },
+ {
+  "code": "AZ-3056PC",
+  "stara": "Nola",
+  "nowa": "Noelia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Noelii",
+  "biernik": "Noelię"
+ },
+ {
+  "code": "AZ-3057LPC",
+  "stara": "Odetta",
+  "nowa": "Ofelia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Ofelii",
+  "biernik": "Ofelię"
+ },
+ {
+  "code": "AZ-3059PC",
+  "stara": "Ofelia",
+  "nowa": "Oliwa",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Oliwy",
+  "biernik": "Oliwę"
+ },
+ {
+  "code": "AZ-3060PC",
+  "stara": "Paloma",
+  "nowa": "Peonia",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Peonii",
+  "biernik": "Peonię"
+ },
+ {
+  "code": "AZ-3061PC",
+  "stara": "Petra",
+  "nowa": "Petunia",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Petunii",
+  "biernik": "Petunię"
+ },
+ {
+  "code": "AZ-3062PC",
+  "stara": "Ramona",
+  "nowa": "Regina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Reginy",
+  "biernik": "Reginę"
+ },
+ {
+  "code": "AZ-3063PC",
+  "stara": "Rebecca",
+  "nowa": "Rena",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Reny",
+  "biernik": "Renę"
+ },
+ {
+  "code": "AZ-3064PC",
+  "stara": "Regina",
+  "nowa": "Renata",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Renaty",
+  "biernik": "Renatę"
+ },
+ {
+  "code": "AZ-3065PC",
+  "stara": "Rina",
+  "nowa": "Ricarda",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Ricardy",
+  "biernik": "Ricardę"
+ },
+ {
+  "code": "AZ-3066PC",
+  "stara": "Romina",
+  "nowa": "Rita",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Rity",
+  "biernik": "Ritę"
+ },
+ {
+  "code": "AZ-3067PC",
+  "stara": "Sabrina",
+  "nowa": "Scilla",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Scilli",
+  "biernik": "Scillę"
+ },
+ {
+  "code": "AZ-3069PC",
+  "stara": "Salma",
+  "nowa": "Sela",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Seli",
+  "biernik": "Selę"
+ },
+ {
+  "code": "AZ-3070PK",
+  "stara": "Leon",
+  "nowa": "Lazuryt",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Lazuryta",
+  "biernik": "Lazuryt"
+ },
+ {
+  "code": "AZ-3071PK",
+  "stara": "Liam",
+  "nowa": "Larimar",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Larimara",
+  "biernik": "Larimar"
+ },
+ {
+  "code": "AZ-3073PC",
+  "stara": "Samira",
+  "nowa": "Selena",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Seleny",
+  "biernik": "Selenę"
+ },
+ {
+  "code": "AZ-3074PC",
+  "stara": "Saskia",
+  "nowa": "Sena",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Seny",
+  "biernik": "Senę"
+ },
+ {
+  "code": "AZ-3075PC",
+  "stara": "Siena",
+  "nowa": "Sera",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Sery",
+  "biernik": "Serę"
+ },
+ {
+  "code": "AZ-3079PC",
+  "stara": "Simona",
+  "nowa": "Serena",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Sereny",
+  "biernik": "Serenę"
+ },
+ {
+  "code": "AZ-3080PC",
+  "stara": "Sofia",
+  "nowa": "Silvana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Silvany",
+  "biernik": "Silvanę"
+ },
+ {
+  "code": "AZ-3081PC",
+  "stara": "Solange",
+  "nowa": "Silvia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Silvii",
+  "biernik": "Silvię"
+ },
+ {
+  "code": "AZ-3082PC",
+  "stara": "Talia",
+  "nowa": "Tatiana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Tatiany",
+  "biernik": "Tatianę"
+ },
+ {
+  "code": "AZ-3083PC",
+  "stara": "Tessa",
+  "nowa": "Teodora",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Teodory",
+  "biernik": "Teodorę"
+ },
+ {
+  "code": "AZ-3084PC",
+  "stara": "Thea",
+  "nowa": "Tessa",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Tessy",
+  "biernik": "Tessę"
+ },
+ {
+  "code": "AZ-3085PC",
+  "stara": "Valentina",
+  "nowa": "Vela",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Veli",
+  "biernik": "Velę"
+ },
+ {
+  "code": "AZ-3086PC",
+  "stara": "Violetta",
+  "nowa": "Venera",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Venery",
+  "biernik": "Venerę"
+ },
+ {
+  "code": "AZ-3087D",
+  "stara": "Eden",
+  "nowa": "Enrica",
+  "grupa": "damskie",
+  "segment": "Unisex",
+  "typ": "Czapka",
+  "dopelniacz": "Enricy",
+  "biernik": "Enricę"
+ },
+ {
+  "code": "AZ-3091PC",
+  "stara": "Viviana",
+  "nowa": "Vera",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Very",
+  "biernik": "Verę"
+ },
+ {
+  "code": "AZ-3096PC",
+  "stara": "Zelda",
+  "nowa": "Zara",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Zary",
+  "biernik": "Zarę"
+ },
+ {
+  "code": "AZ-3100PC",
+  "stara": "Delina",
+  "nowa": "Dora",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Dory",
+  "biernik": "Dorę"
+ },
+ {
+  "code": "AZ-3101PC",
+  "stara": "Elara",
+  "nowa": "Erina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Eriny",
+  "biernik": "Erinę"
+ },
+ {
+  "code": "AZ-3102PC",
+  "stara": "Elina",
+  "nowa": "Estela",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Esteli",
+  "biernik": "Estelę"
+ },
+ {
+  "code": "AZ-607PCV1",
+  "stara": "Elora",
+  "nowa": "Europa",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Europy",
+  "biernik": "Europę"
+ },
+ {
+  "code": "AZ-910PC",
+  "stara": "Falia",
+  "nowa": "Florina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Floriny",
+  "biernik": "Florinę"
+ },
+ {
+  "code": "AZ-910PC-BP",
+  "stara": "Evara",
+  "nowa": "Eva",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Evy",
+  "biernik": "Evę"
+ },
+ {
+  "code": "AZ-2033PC",
+  "stara": "Ariadna",
+  "nowa": "Evita",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Evity",
+  "biernik": "Evitę"
+ },
+ {
+  "code": "AZ-2033PC-TURBO",
+  "stara": "Antonia",
+  "nowa": "Fortuna",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Fortuny",
+  "biernik": "Fortunę"
+ },
+ {
+  "code": "AZ-2088PC",
+  "stara": "Aurora",
+  "nowa": "Freja",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Freji",
+  "biernik": "Freję"
+ },
+ {
+  "code": "AZ-2120PC",
+  "stara": "Ava",
+  "nowa": "Greta",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Grety",
+  "biernik": "Gretę"
+ },
+ {
+  "code": "AZ-2538PK",
+  "stara": "Alan",
+  "nowa": "Opal",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Opala",
+  "biernik": "Opal"
+ },
+ {
+  "code": "AZ-2539PK",
+  "stara": "Alec",
+  "nowa": "Topaz",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Topaza",
+  "biernik": "Topaz"
+ },
+ {
+  "code": "AZ-2542PK",
+  "stara": "Daniel",
+  "nowa": "Rubin",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Rubina",
+  "biernik": "Rubin"
+ },
+ {
+  "code": "AZ-2543PK",
+  "stara": "David",
+  "nowa": "Nefryt",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Nefryta",
+  "biernik": "Nefryt"
+ },
+ {
+  "code": "AZ-2544",
+  "stara": "Emil",
+  "nowa": "Malachit",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Malachita",
+  "biernik": "Malachit"
+ },
+ {
+  "code": "AZ-2548PK",
+  "stara": "Enzo",
+  "nowa": "Cyrkon",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Cyrkona",
+  "biernik": "Cyrkon"
+ },
+ {
+  "code": "AZ-2555PK",
+  "stara": "Igor",
+  "nowa": "Morganit",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Morganita",
+  "biernik": "Morganit"
+ },
+ {
+  "code": "AZ-2608PK",
+  "stara": "Jacob",
+  "nowa": "Obsydian",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Obsydiana",
+  "biernik": "Obsydian"
+ },
+ {
+  "code": "AZ-2612PK",
+  "stara": "John",
+  "nowa": "Prehnit",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Prehnita",
+  "biernik": "Prehnit"
+ },
+ {
+  "code": "AZ-2739PC",
+  "stara": "Jasmine",
+  "nowa": "Hilda",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Hildy",
+  "biernik": "Hildę"
+ },
+ {
+  "code": "AZ-2742D",
+  "stara": "Joanne",
+  "nowa": "Isolda",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Isoldy",
+  "biernik": "Isoldę"
+ },
+ {
+  "code": "AZ-2743PC",
+  "stara": "Julia",
+  "nowa": "Ivana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Ivany",
+  "biernik": "Ivanę"
+ },
+ {
+  "code": "AZ-2747PC",
+  "stara": "Juliana",
+  "nowa": "Freesia",
+  "grupa": "opaski",
+  "segment": "Damska",
+  "typ": "Opaska",
+  "dopelniacz": "Freesii",
+  "biernik": "Freesię"
+ },
+ {
+  "code": "AZ-2849PC",
+  "stara": "Johnny Mini",
+  "nowa": "Milo",
+  "grupa": "chlopiece",
+  "segment": "Chłopięca",
+  "typ": "Czapka",
+  "dopelniacz": "Milo",
+  "biernik": "Milo"
+ },
+ {
+  "code": "AZ-2887PCE",
+  "stara": "Jake Mini",
+  "nowa": "Enzo",
+  "grupa": "chlopiece",
+  "segment": "Chłopięca",
+  "typ": "Czapka",
+  "dopelniacz": "Enzo",
+  "biernik": "Enzo"
+ },
+ {
+  "code": "AZ-2937",
+  "stara": "Ari",
+  "nowa": "Ivona",
+  "grupa": "damskie",
+  "segment": "Unisex",
+  "typ": "Czapka",
+  "dopelniacz": "Ivony",
+  "biernik": "Ivonę"
+ },
+ {
+  "code": "AZ-2953",
+  "stara": "Adele",
+  "nowa": "Iwona",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Iwony",
+  "biernik": "Iwonę"
+ },
+ {
+  "code": "AZ-2954PC",
+  "stara": "Aileen",
+  "nowa": "Karola",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Karoli",
+  "biernik": "Karolę"
+ },
+ {
+  "code": "AZ-2955D",
+  "stara": "Alena",
+  "nowa": "Kira",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Kiry",
+  "biernik": "Kirę"
+ },
+ {
+  "code": "AZ-2956D",
+  "stara": "Alessa",
+  "nowa": "Klara",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Klary",
+  "biernik": "Klarę"
+ },
+ {
+  "code": "AZ-2957D",
+  "stara": "Alora",
+  "nowa": "Kora",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Kory",
+  "biernik": "Korę"
+ },
+ {
+  "code": "AZ-2963PC",
+  "stara": "Amara",
+  "nowa": "Lucila",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Lucili",
+  "biernik": "Lucilę"
+ },
+ {
+  "code": "AZ-2964PC",
+  "stara": "Amira",
+  "nowa": "Lucina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Luciny",
+  "biernik": "Lucinę"
+ },
+ {
+  "code": "AZ-2965PK",
+  "stara": "Anais",
+  "nowa": "Luisa",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Luisy",
+  "biernik": "Luisę"
+ },
+ {
+  "code": "AZ-2970PC",
+  "stara": "Anela",
+  "nowa": "Lyra",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Lyry",
+  "biernik": "Lyrę"
+ },
+ {
+  "code": "AZ-2973",
+  "stara": "Anette",
+  "nowa": "Norna",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Norny",
+  "biernik": "Nornę"
+ },
+ {
+  "code": "AZ-2977PC",
+  "stara": "Aria",
+  "nowa": "Nova",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Novy",
+  "biernik": "Novę"
+ },
+ {
+  "code": "AZ-2980D",
+  "stara": "Ariana",
+  "nowa": "Olena",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Oleny",
+  "biernik": "Olenę"
+ },
+ {
+  "code": "AZ-2981D",
+  "stara": "Ariella",
+  "nowa": "Olga",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Olgi",
+  "biernik": "Olgę"
+ },
+ {
+  "code": "AZ-2982PC",
+  "stara": "Astrid",
+  "nowa": "Olimpia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Olimpii",
+  "biernik": "Olimpię"
+ },
+ {
+  "code": "AZ-2983PC",
+  "stara": "Athena",
+  "nowa": "Olivia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Olivii",
+  "biernik": "Olivię"
+ },
+ {
+  "code": "AZ-2984D",
+  "stara": "Aurelia",
+  "nowa": "Oria",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Orii",
+  "biernik": "Orię"
+ },
+ {
+  "code": "AZ-2985PC",
+  "stara": "Ayla",
+  "nowa": "Oriana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Oriany",
+  "biernik": "Orianę"
+ },
+ {
+  "code": "AZ-2987PC",
+  "stara": "Bruna",
+  "nowa": "Orsola",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Orsoli",
+  "biernik": "Orsolę"
+ },
+ {
+  "code": "AZ-2989PC",
+  "stara": "Celine",
+  "nowa": "Otylia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Otylii",
+  "biernik": "Otylię"
+ },
+ {
+  "code": "AZ-2990PC",
+  "stara": "Cora",
+  "nowa": "Paula",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Pauli",
+  "biernik": "Paulę"
+ },
+ {
+  "code": "AZ-3016PC",
+  "stara": "Jemma",
+  "nowa": "Paulina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Pauliny",
+  "biernik": "Paulinę"
+ },
+ {
+  "code": "AZ-3017PC",
+  "stara": "Jolie",
+  "nowa": "Pelagia",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Pelagii",
+  "biernik": "Pelagię"
+ },
+ {
+  "code": "AZ-3018",
+  "stara": "Josephine",
+  "nowa": "Perina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Periny",
+  "biernik": "Perinę"
+ },
+ {
+  "code": "AZ-3051PC",
+  "stara": "Mina",
+  "nowa": "Petra",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Petry",
+  "biernik": "Petrę"
+ },
+ {
+  "code": "AZ-3053PC",
+  "stara": "Mirella",
+  "nowa": "Polana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Polany",
+  "biernik": "Polanę"
+ },
+ {
+  "code": "AZ-3072PK",
+  "stara": "Luca",
+  "nowa": "Selenit",
+  "grupa": "meskie",
+  "segment": "Męska",
+  "typ": "Czapka",
+  "dopelniacz": "Selenita",
+  "biernik": "Selenit"
+ },
+ {
+  "code": "AZ-3092PC",
+  "stara": "Yara",
+  "nowa": "Pomona",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Pomony",
+  "biernik": "Pomonę"
+ },
+ {
+  "code": "AZ-3094PC",
+  "stara": "Yasmine",
+  "nowa": "Primula",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Primuli",
+  "biernik": "Primulę"
+ },
+ {
+  "code": "AZ-3095",
+  "stara": "Yvette",
+  "nowa": "Roma",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Romy",
+  "biernik": "Romę"
+ },
+ {
+  "code": "AZ-3097PC",
+  "stara": "Avela",
+  "nowa": "Romana",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Romany",
+  "biernik": "Romanę"
+ },
+ {
+  "code": "AZ-3098PC",
+  "stara": "Belia",
+  "nowa": "Romina",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Rominy",
+  "biernik": "Rominę"
+ },
+ {
+  "code": "AZ-3099PC",
+  "stara": "Calia",
+  "nowa": "Rosa",
+  "grupa": "damskie",
+  "segment": "Damska",
+  "typ": "Czapka",
+  "dopelniacz": "Rosy",
+  "biernik": "Rosę"
+ }
+]
