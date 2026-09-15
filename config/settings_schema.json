@@ -1489,6 +1489,31 @@
         "default": "nowosc"
       },
       {
+        "type": "header",
+        "content": "Obraz do udostępniania (Open Graph)"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_image",
+        "label": "Obraz social — polski (domyślny)",
+        "info": "1200×630. Używany, gdy strona nie ma własnego zdjęcia (strona główna, strony informacyjne)."
+      },
+      {
+        "type": "image_picker",
+        "id": "social_image_en",
+        "label": "Obraz social — angielski"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_image_de",
+        "label": "Obraz social — niemiecki"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_image_fr",
+        "label": "Obraz social — francuski"
+      },
+      {
         "type": "url",
         "id": "b2b_catalog_pdf",
         "label": "Katalog PDF bez cen (link w stopce dla wszystkich)"
