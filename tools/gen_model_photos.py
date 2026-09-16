@@ -365,6 +365,54 @@ def cmd_seria():
         list(ex.map(one, plan))
 
 
+def cmd_sesja():
+    """Sesja wg podziału Adriana (folder „SESJE SCENERIA WYBÓR NA MODELE”): każdy model dostaje scenerię ze swojej grupy.
+      --codes=AZ-1,AZ-2   tylko te kody        --sceneria=naoko   tylko ta grupa
+      --limit=N           pierwsze N modeli    --force            nadpisz istniejące
+    Sceny rotują w ramach scenerii, twarz jest stała dla grupy (SCENERIE[...]['obsada'])."""
+    import glob, json as _json
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from scenerie import SCENERIE, mapowanie
+    przypisanie = mapowanie()
+    only_codes = {c.strip().upper() for c in ARGS.get('--codes', '').split(',') if c.strip()}
+    only_scen = ARGS.get('--sceneria', '')
+    limit = int(ARGS.get('--limit', '0'))
+
+    plan = []
+    for code, grupa in sorted(przypisanie.items()):
+        if only_codes and code not in only_codes: continue
+        if only_scen and grupa != only_scen: continue
+        cfg = SCENERIE.get(grupa)
+        if not cfg: continue
+        sceny = cfg['sceny'] or OLD_MONEY          # old_money korzysta z gotowych scen
+        klucze = sorted(sceny)
+        plan.append((code, grupa, klucze[len(plan) % len(klucze)], cfg['obsada'], sceny))
+    if limit: plan = plan[:limit]
+    if not plan: print('nic do zrobienia — sprawdź --codes/--sceneria'); return
+
+    dest = f'{ROOT}/modelki/sesja'
+    os.makedirs(dest, exist_ok=True)
+    koszt = len(plan) * (0.24 if SIZE == '4K' else 0.134)
+    print(f'{len(plan)} zdjęć, {MODEL} {SIZE}, ~{koszt:.2f} USD')
+
+    def one(job):
+        code, grupa, klucz, osoba, sceny = job
+        pack = packshot(code)
+        refs = sorted(glob.glob(f'{ROOT}/modelki/casting/{osoba}_*.png'))
+        out = f'{dest}/{grupa}_{code}_{klucz}.png'
+        if not pack: print('brak packshotu', code); return
+        if not refs: print('brak twarzy', osoba, '— dogeneruj casting'); return
+        if os.path.exists(out) and '--force' not in FLAGS:
+            print('jest', code); return
+        t = time.time()
+        ok = generate([part_image(pack), part_image(cuff_crop(pack, f'{dest}/_crop_{code}.jpg')), part_image(refs[0]),
+                       {'text': PROMPT_OLDMONEY.format(what='hat (beanie)', **sceny[klucz])}], out)
+        print(('OK  ' if ok else 'BŁĄD'), grupa, code, klucz, f'{time.time()-t:.0f}s')
+
+    with ThreadPoolExecutor(WORKERS) as ex:
+        list(ex.map(one, plan))
+
+
 def cmd_oldmoney():
     """5 ujęć w stylu old money: czapka + osoba z castingu + sceneria posiadłości."""
     import glob
@@ -641,6 +689,8 @@ if __name__ == '__main__':
         cmd_hero()
     elif cmd == 'seria':
         cmd_seria()
+    elif cmd == 'sesja':
+        cmd_sesja()
     elif cmd == 'oldmoney':
         cmd_oldmoney()
     elif cmd == 'styl':
