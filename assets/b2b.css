@@ -562,9 +562,10 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 
 
 /* Hero na stronie głównej (13.09.2026): nagłówek w jednej linii na całą szerokość kadru, w dolnej części zdjęcia,
-   przycisk „Sprawdź ofertę” pod nim na środku. Wcześniej (10–13.09) nagłówek stał w prawej trzeciej części kadru. */
+   przycisk „Sprawdź ofertę” pod nim na środku. Wcześniej (10–13.09) nagłówek stał w prawej trzeciej części kadru.
+   16.09.2026: blok podniesiony (padding-bottom 11 → 17 rem) na życzenie Kamila. */
 @media screen and (min-width: 990px) {
-  [id$="__image_banner"] .banner__content { max-width: none; padding-left: 4rem; padding-right: 4rem; padding-bottom: 11rem; }
+  [id$="__image_banner"] .banner__content { max-width: none; padding-left: 4rem; padding-right: 4rem; padding-bottom: 17rem; }
   [id$="__image_banner"] .banner__content .banner__box,
   [id$="__image_banner"] .banner--desktop-transparent .banner__box {
     width: 100%; max-width: none; padding-left: 0; padding-right: 0;
