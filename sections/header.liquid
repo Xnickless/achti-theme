@@ -156,10 +156,10 @@
     .header__inline-search .predictive-search { top: calc(100% + 0.6rem); left: 0; right: 0; width: 100%; border-radius: 1.2rem; border-top-width: var(--popup-border-width); text-align: left; }
     /* Przyklejony nagłówek po przewinięciu (sticky „zawsze”): zostaje sam pasek z nazwami kategorii — bez logo, ikon i wyszukiwarki (10.09.2026) */
     /* płynne zwijanie przy przewijaniu: wyszukiwarka zanika i zwija się, logo/menu/odstępy przechodzą z animacją */
-    .header--inline-search .header__inline-search { max-height: 8rem; opacity: 1; transition: max-height 0.35s ease, opacity 0.22s ease, margin 0.35s ease; }
-    .header--inline-search.header--top-left:not(.drawer-menu) { transition: row-gap 0.35s ease, padding 0.35s ease; }
-    .header--inline-search.header--top-left:not(.drawer-menu) .header__menu-item { transition: font-size 0.3s ease, padding 0.3s ease; }
-    .header__heading-logo-wrapper { transition: width 0.35s ease; }
+    .header--inline-search .header__inline-search { max-height: 8rem; opacity: 1; transition: max-height 0.22s ease, opacity 0.16s ease, margin 0.22s ease; }
+    .header--inline-search.header--top-left:not(.drawer-menu) { transition: row-gap 0.22s ease, padding 0.22s ease; }
+    .header--inline-search.header--top-left:not(.drawer-menu) .header__menu-item { transition: font-size 0.2s ease, padding 0.2s ease; }
+    .header__heading-logo-wrapper { transition: width 0.22s ease; }
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search .header__inline-search { max-height: 0; opacity: 0; margin-top: 0; margin-bottom: 0; overflow: hidden; pointer-events: none; }
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) { grid-template-areas: 'heading navigation icons' 'inline-search inline-search inline-search'; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); column-gap: 2rem; align-items: center; row-gap: 0; padding-top: 0.4rem; padding-bottom: 0.4rem; }
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) .header__icons { justify-self: end; }
@@ -484,16 +484,18 @@
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 
       const revealThreshold = 150;
+      // Kompaktowanie nagłówka (chowanie wyszukiwarki, mniejsze logo) niezależnie od wysokości nagłówka —
+      // domyślnie Dawn czeka, aż przewiniemy go w całości (~180 px), a to za wolno.
+      const compactAt = 48;
+      this.header.classList.toggle('scrolled-past-header', scrollTop > compactAt);
 
       if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
         this.scrollUpDistance = 0;
-        this.header.classList.add('scrolled-past-header');
         if (this.preventHide) return;
         requestAnimationFrame(this.hide.bind(this));
       } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
         this.scrollUpDistance = (this.scrollUpDistance || 0) + (this.currentScrollTop - scrollTop);
         if (this.scrollUpDistance > revealThreshold) {
-          this.header.classList.add('scrolled-past-header');
           if (!this.preventReveal) {
             requestAnimationFrame(this.reveal.bind(this));
           } else {
@@ -508,7 +510,6 @@
         }
       } else if (scrollTop <= this.headerBounds.top) {
         this.scrollUpDistance = 0;
-        this.header.classList.remove('scrolled-past-header');
         requestAnimationFrame(this.reset.bind(this));
       }
 
