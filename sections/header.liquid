@@ -170,6 +170,13 @@
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) .header__heading-link { justify-self: start; }
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search .header__heading-logo-wrapper { width: 50%; }
     .shopify-section-header-sticky.scrolled-past-header .header--inline-search.header--top-left:not(.drawer-menu) .header__inline-menu { justify-self: center; }
+    /* Zwinięty nagłówek nie zmienia wysokości w układzie strony (17.09.2026): sekcja trzyma pełną wysokość,
+       zwija się tylko biały pasek w środku, a przezroczysta reszta przepuszcza kliknięcia. Bez tego Chrome
+       (scroll anchoring) cofał przewinięcie o różnicę wysokości, nagłówek rozwijał się i strona skakała w kółko. */
+    /* min-height także w stanie rozwiniętym: przy rozwijaniu biały pasek rośnie przez 0,22 s i bez tego treść pod spodem by się przesuwała */
+    .shopify-section-header-sticky { min-height: var(--achti-header-full, 0px); }
+    .shopify-section-header-sticky.scrolled-past-header { pointer-events: none; }
+    .shopify-section-header-sticky.scrolled-past-header .header-wrapper { pointer-events: auto; }
   }
 {%- endstyle -%}
 
@@ -442,6 +449,12 @@
       this.setHeaderHeight();
 
       window.matchMedia('(max-width: 990px)').addEventListener('change', this.setHeaderHeight.bind(this));
+      this.rememberFullHeight();
+      window.addEventListener('resize', () => {
+        if (this.header.classList.contains('scrolled-past-header')) return;
+        this.fullHeight = 0;
+        this.rememberFullHeight();
+      });
 
       if (this.headerIsAlwaysSticky) {
         this.header.classList.add('shopify-section-header-sticky');
@@ -458,6 +471,14 @@
       window.addEventListener('scroll', this.onScrollHandler, false);
 
       this.createObserver();
+    }
+
+    rememberFullHeight() {
+      const h = this.header.offsetHeight;
+      if (h > (this.fullHeight || 0)) {
+        this.fullHeight = h;
+        document.documentElement.style.setProperty('--achti-header-full', `${h}px`);
+      }
     }
 
     setHeaderHeight() {
@@ -486,8 +507,17 @@
       const revealThreshold = 150;
       // Kompaktowanie nagłówka (chowanie wyszukiwarki, mniejsze logo) niezależnie od wysokości nagłówka —
       // domyślnie Dawn czeka, aż przewiniemy go w całości (~180 px), a to za wolno.
+      // Pełna wysokość zapamiętana przed zwinięciem — CSS trzyma ją jako min-height sekcji, więc układ strony się nie zmienia.
+      // Histereza (zwijanie > 48 px, rozwijanie < 24 px), żeby nagłówek nie migał na samej granicy.
       const compactAt = 48;
-      this.header.classList.toggle('scrolled-past-header', scrollTop > compactAt);
+      const expandAt = 24;
+      const isCompact = this.header.classList.contains('scrolled-past-header');
+      if (!isCompact) this.rememberFullHeight();
+      if (!isCompact && scrollTop > compactAt) {
+        this.header.classList.add('scrolled-past-header');
+      } else if (isCompact && scrollTop < expandAt) {
+        this.header.classList.remove('scrolled-past-header');
+      }
 
       if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
         this.scrollUpDistance = 0;
