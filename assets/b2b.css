@@ -724,6 +724,25 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
   }
 }
 
+/* ── Sekcje z produktami na stronie głównej i karcie produktu szersze (17.09.2026, życzenie Kamila:
+   „trochę rozszerzyć, żeby były większe”) — ta sama szerokość co listing kolekcji: 144 rem + padding 4 rem.
+   Nie dotyczy taśmy „Nowości” (collection--marquee) ani sekcji ustawionych na pełną szerokość. */
+@media screen and (min-width: 990px) {
+  .collection:not(.collection--marquee):not(.collection--full-width) > .page-width,
+  .collection:not(.collection--marquee):not(.collection--full-width) > slider-component.page-width,
+  .collection:not(.collection--marquee):not(.collection--full-width) > .collection__title.page-width,
+  .collection:not(.collection--marquee):not(.collection--full-width) > slider-component.page-width-desktop {
+    max-width: 144rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .collection:not(.collection--marquee):not(.collection--full-width) .grid--4-col-desktop,
+  .collection:not(.collection--marquee):not(.collection--full-width) .grid--3-col-desktop {
+    --grid-desktop-horizontal-spacing: 2.4rem;
+    --grid-desktop-vertical-spacing: 3.2rem;
+  }
+}
+
 /* ── Znaczek składu: „Z wełną” (kłębek) i „Wełna merino” (owca) — tagi welna/merino z tools/set_fibre_tags.py ─────── */
 .fibre-badge {
   display: inline-flex;
