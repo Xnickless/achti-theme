@@ -67,7 +67,7 @@ shopify theme push --store ccucsr-si.myshopify.com --theme 206234878294 --allow-
 - Kolekcje automatyczne po tagach produktu: Damska = `damskie`, Męska = `meskie`, Dla dzieci = `dzieci`, Premium = `premium`, Nowości = `nowosc`, Wyprzedaż = cena porównawcza > 0, Najpopularniejsze (`najpopularniejsze`, cena > 0, sortowanie „najlepiej sprzedające się”). Ręczne (klient dodaje produkty): Bestsellery, Czapki reklamowe, Private Label. Kolekcje kategorii sortują od najnowszych (CREATED_DESC), tag `nowosc` ma 12 najnowszych SKU (AZ-3090…AZ-3102PC). Klient przy dodawaniu produktu wpisuje tagi — bez tagu produkt nie pojawi się w żadnej kategorii menu.
 - Menu główne podpięte pod kolekcje. Stopka (wg projektu klienta z docx „PLATFORMA ACHTI B2B”): kolumny Kolekcje = `main-menu`, Informacje = menu `informacje` (O nas, Produkcja, Materiały, Jakość, Zrównoważony rozwój, Blog, Kontakt — strony `/pages/o-nas`, `/pages/produkcja`, `/pages/materialy`, `/pages/jakosc`, `/pages/zrownowazony-rozwoj` **jeszcze nie istnieją**), Obsługa klienta = menu `obsluga-klienta` (Logowanie B2B, Rejestracja firmy, Warunki współpracy, Wysyłka i dostawa, Zwroty i reklamacje, FAQ, Regulamin B2B, Polityka cookies — wszystkie istnieją od 07.09.2026). Linki social (Instagram, Facebook, LinkedIn) do wpisania w Ustawienia motywu → Media społecznościowe.
 - Popup newslettera na stronie głównej: sections/newsletter-popup.liquid (opóźnienie, localStorage na X dni, nie dla klientów z accepts_marketing; w edytorze otwiera się po zaznaczeniu sekcji).
-- Feed XML produktów: `/collections/all?view=feed` (templates/collection.feed.liquid), ceny tylko gdy widoczne.
+- Feed XML produktów: `/collections/all?view=feed` (templates/collection.feed.liquid), ceny tylko gdy widoczne. **Od 25.09.2026 dwie strony** (Shopify daje maks. 250 produktów na stronę, `paginate by 1000` nadal zwraca 250): `…?view=feed` = 250, `…?view=feed&page=2` = reszta; każda strona ma `<atom:link rel="next">`. Adresy w XML escapowane (`| escape`) — wcześniej `&width=1200` w linkach zdjęć robił z feedu niepoprawny XML.
 - W sklepie jest zainstalowana aplikacja „SP Hide Price & Access” — dubluje ukrywanie cen z motywu; do decyzji klienta, czy zostaje.
 
 ## Sprzedaż zagraniczna — konfiguracja panelu (08.09.2026)
@@ -158,6 +158,11 @@ Firma testowa „Firma Testowa Achti” (klient Kamil Test, e-mail Kamila) — z
 - **Do zrobienia ręcznie w panelu (Sklep online → Preferencje; strona jest w cross-origin iframe, Chrome-agent nie wpisze tam tekstu):** tytuł strony głównej „Achti — producent czapek zimowych, hurt B2B”, opis meta „Polski producent czapek zimowych, opasek i kominów. Sprzedaż hurtowa B2B dla sklepów i firm — ceny i zamówienia po rejestracji konta firmowego.”, obraz social `~/Downloads/achti-social.jpg` (1200×630, kadr z hero), sekcja „Ochrona przed spamem” (reCAPTCHA na formularzach kontakt/logowanie) — sprawdzić, czy włączona. Favicon jest OK (kółko „a”, 540×518). Sklep nadal za hasłem (Preferencje → Zabezpieczenie hasłem).
 - **Analityka (nie zrobione):** brak GA4 i Search Console — wymaga konta Google (Adriana albo Kamila): aplikacja „Google & YouTube” w Shopify + weryfikacja domeny w Search Console + zgłoszenie `/sitemap.xml`. Klaviyo też jeszcze nie zainstalowane.
 - Kontrast reszty palety OK (7,7–11,9:1), SKU na kafelku ~4,9:1.
+
+## Audyt 25.09.2026 (widok gościa, desktop + mobile 500 px)
+- Live = repo (pull szablonów bez różnic poza wyrzuconym przez Shopify `enable_quick_add`). 45 podstron bez błędów Liquid i brakujących tłumaczeń, 317 produktów kompletnych (zdjęcie 2000 px, SKU, cena, opis, tagi, nazwy zgodne z `nazwy-propozycja.json`).
+- Naprawione: feed XML (escapowanie + druga strona), `/collections` (nagłówek „Kolekcje” zamiast „Collections”, bez pustych kolekcji i „Strona główna”), równe kafelki we wszystkich siatkach (`product-component` między `li` a kartą — reguła na końcu b2b.css).
+- Podgląd lokalny: `shopify theme dev` omija hasło sklepu po wybraniu konta hello@achti.com w przeglądarce; headless Chrome ma min. szerokość ~500 px (zrzuty 390 px są ucięte — artefakt), okno Chrome-agenta nie daje się zwęzić.
 
 ## Do zrobienia (stan na 15.09.2026)
 

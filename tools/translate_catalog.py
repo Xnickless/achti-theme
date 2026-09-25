@@ -243,6 +243,7 @@ MENU = {  # tytuł PL -> tłumaczenie
 
 THEME = {  # teksty z ustawień motywu (klucz = tekst PL)
  'en': { 
+        "Kolekcje": "Collections",
         "200 zł netto (jednorazowo)": "PLN 200 net (one-off)",
         "Rozwijaj swój biznes z Achti": "Grow your business with Achti",
         "wg wyceny — podamy w odpowiedzi": "to be quoted — stated in our reply",
@@ -268,6 +269,7 @@ THEME = {  # teksty z ustawień motywu (klucz = tekst PL)
         'Tworzymy czapki z pasją od ponad 30 lat. Wysoka jakość, naturalne materiały i ponadczasowy design.': 'We have been making hats with passion for over 30 years. High quality, natural materials and timeless design.',
         'Ceny dostępne po zalogowaniu': 'Prices available after login', 'Masz pytania? Napisz do nas.': 'Questions? Write to us.', 'Producent': 'Manufacturer', 'Szybkie zamawianie': 'Quick order'},
  'fr': { 
+        "Kolekcje": "Collections",
         "200 zł netto (jednorazowo)": "200 PLN HT (une seule fois)",
         "Rozwijaj swój biznes z Achti": "Développez votre activité avec Achti",
         "wg wyceny — podamy w odpowiedzi": "sur devis — précisé dans notre réponse",
@@ -293,6 +295,7 @@ THEME = {  # teksty z ustawień motywu (klucz = tekst PL)
         'Tworzymy czapki z pasją od ponad 30 lat. Wysoka jakość, naturalne materiały i ponadczasowy design.': 'Nous fabriquons des bonnets avec passion depuis plus de 30 ans. Haute qualité, matières naturelles et design intemporel.',
         'Ceny dostępne po zalogowaniu': 'Prix visibles après connexion', 'Masz pytania? Napisz do nas.': 'Des questions ? Écrivez-nous.', 'Producent': 'Fabricant', 'Szybkie zamawianie': 'Commande rapide'},
  'de': { 
+        "Kolekcje": "Kollektionen",
         "200 zł netto (jednorazowo)": "200 PLN netto (einmalig)",
         "Rozwijaj swój biznes z Achti": "Lassen Sie Ihr Geschäft mit Achti wachsen",
         "wg wyceny — podamy w odpowiedzi": "nach Angebot — in unserer Antwort genannt",

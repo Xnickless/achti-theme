@@ -29,6 +29,8 @@
       role="list"
     >
       {%- for collection in collections -%}
+        {%- comment -%} puste kolekcje (np. Wyprzedaż bez produktów) i techniczna „Strona główna” nie trafiają na listę {%- endcomment -%}
+        {%- if collection.all_products_count == 0 or collection.handle == 'frontpage' -%}{%- continue -%}{%- endif -%}
         <li
           class="collection-list__item grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}

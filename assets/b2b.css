@@ -789,3 +789,10 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .pl-toolbar__feats { flex: 1 0 100%; align-items: center; }
 .pl-toolbar__label { font-size: 1.3rem; color: rgba(var(--color-foreground), 0.6); margin-right: 0.2rem; }
 .pl-toolbar__clear { margin-left: 1.2rem; font-size: 1.3rem; }
+
+/* Równe kafelki we wszystkich siatkach produktów (25.09.2026): karta wypełnia wysokość wiersza,
+   inaczej kafelek z dwulinijkowym tytułem był o ~20 px wyższy od sąsiadów */
+.grid__item > product-component,
+.grid__item > .product-card-wrapper,
+.grid__item > product-component > .product-card-wrapper,
+.grid__item .product-card-wrapper > .card--card { height: 100%; }
