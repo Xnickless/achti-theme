@@ -8,6 +8,8 @@
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
     {%- for link in section.settings.menu.links -%}
+      {%- capture link_empty -%}{% render 'b2b-link-empty', link: link %}{%- endcapture -%}
+      {%- if link_empty == '1' -%}{%- continue -%}{%- endif -%}
       <li>
         {%- if link.links != blank -%}
           <header-menu>

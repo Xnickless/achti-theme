@@ -696,6 +696,16 @@
       "text": "Adres mógł się zmienić albo produkt został wycofany z oferty. Wpisz kod modelu (np. AZ-1145) albo wybierz kategorię.",
       "categories": "Kategorie",
       "contact": "Kontakt"
+    },
+    "contact": {
+      "company": "Firma",
+      "email": "E-mail",
+      "phone": "Telefon"
+    },
+    "policies": {
+      "terms": "Regulamin B2B",
+      "refund": "Zwroty i reklamacje",
+      "shipping": "Wysyłka i dostawa"
     }
   }
 }

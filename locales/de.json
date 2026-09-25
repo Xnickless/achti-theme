@@ -672,6 +672,16 @@
       "text": "Die Adresse hat sich möglicherweise geändert oder das Produkt wurde aus dem Sortiment genommen. Geben Sie einen Modellcode ein (z. B. AZ-1145) oder wählen Sie eine Kategorie.",
       "categories": "Kategorien",
       "contact": "Kontakt"
+    },
+    "contact": {
+      "company": "Firma",
+      "email": "E-Mail",
+      "phone": "Telefon"
+    },
+    "policies": {
+      "terms": "B2B-AGB",
+      "refund": "Rücksendungen und Reklamationen",
+      "shipping": "Versand und Lieferung"
     }
   }
 }

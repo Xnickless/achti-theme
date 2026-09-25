@@ -672,6 +672,16 @@
       "text": "The address may have changed or the product has been withdrawn from the range. Enter a model code (e.g. AZ-1145) or pick a category.",
       "categories": "Categories",
       "contact": "Contact"
+    },
+    "contact": {
+      "company": "Company",
+      "email": "Email",
+      "phone": "Phone"
+    },
+    "policies": {
+      "terms": "B2B Terms of Service",
+      "refund": "Returns & claims",
+      "shipping": "Shipping & delivery"
     }
   }
 }

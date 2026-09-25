@@ -1,0 +1,32 @@
+{%- comment -%}
+  Wypisuje „1”, gdy link z menu prowadzi donikąd i trzeba go ukryć (25.09.2026):
+  - kolekcja bez produktów (np. Wyprzedaż),
+  - blog bez wpisów,
+  - /pages/… bez istniejącej strony (treści klienta jeszcze nie ma).
+  Link sam wraca, gdy pojawią się produkty, wpis albo strona. Linki z podmenu nigdy nie są ukrywane.
+
+  Użycie:
+  {%- capture link_empty -%}{% render 'b2b-link-empty', link: link %}{%- endcapture -%}
+  {%- if link_empty == '1' -%}{%- continue -%}{%- endif -%}
+{%- endcomment -%}
+{%- liquid
+  if link.links == blank
+  case link.type
+    when 'collection_link'
+      if link.object.all_products_count == 0
+        echo '1'
+      endif
+    when 'blog_link'
+      if link.object.articles_count == 0
+        echo '1'
+      endif
+    else
+      if link.url contains '/pages/'
+        assign page_handle = link.url | split: '/pages/' | last | split: '?' | first | split: '#' | first
+        if pages[page_handle].title == blank
+          echo '1'
+        endif
+      endif
+  endcase
+  endif
+-%}

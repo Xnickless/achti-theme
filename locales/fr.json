@@ -684,6 +684,16 @@
       "text": "L'adresse a peut-être changé ou le produit a été retiré de l'offre. Saisissez un code de modèle (ex. AZ-1145) ou choisissez une catégorie.",
       "categories": "Catégories",
       "contact": "Contact"
+    },
+    "contact": {
+      "company": "Société",
+      "email": "E-mail",
+      "phone": "Téléphone"
+    },
+    "policies": {
+      "terms": "CGV B2B",
+      "refund": "Retours et réclamations",
+      "shipping": "Expédition et livraison"
     }
   }
 }

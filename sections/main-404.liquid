@@ -47,6 +47,8 @@
   {%- if linklists.main-menu.links.size > 0 -%}
     <ul class="template-404__cats" aria-label="{{ 'b2b.notfound.categories' | t }}">
       {%- for link in linklists.main-menu.links -%}
+        {%- capture link_empty -%}{% render 'b2b-link-empty', link: link %}{%- endcapture -%}
+        {%- if link_empty == '1' -%}{%- continue -%}{%- endif -%}
         <li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
       {%- endfor -%}
     </ul>

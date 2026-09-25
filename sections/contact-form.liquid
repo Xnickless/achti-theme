@@ -16,10 +16,17 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+    {%- liquid
+      # Na stronie Kontakt (sekcja „main-page” wyłączona) nagłówek formularza jest jedynym nagłówkiem strony, więc h1
+      assign heading_tag = 'h2'
+      if request.page_type == 'page'
+        assign heading_tag = 'h1'
+      endif
+    -%}
     {%- if section.settings.heading != blank -%}
-      <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+      <{{ heading_tag }} class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         {{ section.settings.heading }}
-      </h2>
+      </{{ heading_tag }}>
     {%- else -%}
       <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
     {%- endif -%}
@@ -29,6 +36,27 @@
         assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
       endif
     -%}
+    {%- if section.settings.show_contact_info and settings.producer_name != blank -%}
+      {%- comment -%} Dane kontaktowe z ustawień motywu „Producent (GPSR)” (25.09.2026) {%- endcomment -%}
+      <dl class="b2b-contact-info">
+        <div class="b2b-contact-info__row b2b-contact-info__row--company">
+          <dt>{{ 'b2b.contact.company' | t }}</dt>
+          <dd>{{ settings.producer_name | escape }}{% if settings.producer_address != blank %}<br>{{ settings.producer_address | escape }}{% endif %}</dd>
+        </div>
+        {%- if settings.producer_email != blank -%}
+          <div class="b2b-contact-info__row">
+            <dt>{{ 'b2b.contact.email' | t }}</dt>
+            <dd><a class="link" href="mailto:{{ settings.producer_email | escape }}">{{ settings.producer_email | escape }}</a></dd>
+          </div>
+        {%- endif -%}
+        {%- if settings.producer_phone != blank -%}
+          <div class="b2b-contact-info__row">
+            <dt>{{ 'b2b.contact.phone' | t }}</dt>
+            <dd><a class="link" href="tel:{{ settings.producer_phone | remove: ' ' | escape }}">{{ settings.producer_phone | escape }}</a></dd>
+          </div>
+        {%- endif -%}
+      </dl>
+    {%- endif -%}
     {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
       {%- if form.posted_successfully? -%}
         <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
@@ -156,6 +184,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_contact_info",
+      "label": "Pokaż dane kontaktowe (z ustawień „Producent”)",
+      "default": false
+    },
     {
       "type": "inline_richtext",
       "id": "heading",

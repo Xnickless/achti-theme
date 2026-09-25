@@ -162,14 +162,16 @@ Firma testowa „Firma Testowa Achti” (klient Kamil Test, e-mail Kamila) — z
 ## Audyt 25.09.2026 (widok gościa, desktop + mobile 500 px)
 - Live = repo (pull szablonów bez różnic poza wyrzuconym przez Shopify `enable_quick_add`). 45 podstron bez błędów Liquid i brakujących tłumaczeń, 317 produktów kompletnych (zdjęcie 2000 px, SKU, cena, opis, tagi, nazwy zgodne z `nazwy-propozycja.json`).
 - Naprawione: feed XML (escapowanie + druga strona), `/collections` (nagłówek „Kolekcje” zamiast „Collections”, bez pustych kolekcji i „Strona główna”), równe kafelki we wszystkich siatkach (`product-component` między `li` a kartą — reguła na końcu b2b.css).
+- 25.09 (druga tura): menu nagłówka (dropdown, mega, szuflada mobilna), stopka i 404 ukrywają linki do pustych kolekcji, blogów bez wpisów i nieistniejących stron — `snippets/b2b-link-empty.liquid` (wypisuje „1”; użycie przez `capture`). Link wraca sam. Strona Kontakt: nagłówek formularza jako h1 na stronach (`request.page_type == 'page'`) + dane firmy z ustawień „Producent” (ustawienie sekcji `show_contact_info`, klucze `b2b.contact.*`). Stopka: polityki pod nazwami z menu (`b2b.policies.*`: Regulamin B2B, Zwroty i reklamacje, Wysyłka i dostawa) — tytułów polityk w Shopify nie da się zmienić.
+- **Adresy produktów:** `tools/set_handles.py [--dry-run]` ustawia handle z tytułu (`czapka-zimowa-damska-erina`) z przekierowaniem 301 ze starego (`redirectNewHandle`). Stare handle mają nazwy robocze i często zły segment (męska „Agat” pod `…-damska-beanie-genova`).
 - Podgląd lokalny: `shopify theme dev` omija hasło sklepu po wybraniu konta hello@achti.com w przeglądarce; headless Chrome ma min. szerokość ~500 px (zrzuty 390 px są ucięte — artefakt), okno Chrome-agenta nie daje się zwęzić.
 
-## Do zrobienia (stan na 15.09.2026)
+## Do zrobienia (stan na 25.09.2026)
 
 **Zamknięte 15.09:** metaopis + tytuł strony głównej + obraz social (Kamil w panelu), Search & Discovery zainstalowana, kolekcja „Czapki reklamowe” = 51 modeli z listy Adriana, stała opłata 200 zł za projekt, instrukcja analityki dla Adriana (`docs/Achti-instrukcja-analityka.pdf`), og:image naprawiony.
 
 ### Blokuje start
-1. **Filtr „Cechy” w Search & Discovery** (Kamil, 3 min) — aplikacja zainstalowana, tagi na produktach gotowe; zostało dodanie filtru „Tag produktu” z 6 wartościami. Konfiguracji nie da się zrobić z Chrome-agenta (cross-origin iframe).
+1. ~~Filtr „Cechy”~~ — zrobione 15.09.2026 (metapole `custom.cechy`, zob. „Tagi produktów i filtr „Cechy””).
 2. **Metody płatności** — w checkout jest tylko PayPal. B2B wymaga przelewu bankowego (Ustawienia → Płatności → ręczne metody) i/lub warunków płatności per firma.
 3. **Katalog B2B z cenami hurtowymi** przypisany do firm (Markets → Katalogi) — bez niego firmy widzą ceny domyślne, czyli te same co w katalogu PDF, ale bez progów ilościowych.
 4. **Cennik kuriera** od Adriana — strefy mają tymczasowe 69 zł.
@@ -180,7 +182,8 @@ Firma testowa „Firma Testowa Achti” (klient Kamil Test, e-mail Kamila) — z
 7. **Pola `[…]`** w regulaminie i politykach — PL + te same miejsca w EN/DE/FR.
 8. **Analityka** — Adrian ma instrukcję; po jego stronie GA4 i Search Console, po naszej wklejenie kodu weryfikacyjnego `google-site-verification` w motyw.
 9. **Test zamówienia end-to-end** → BaseLinker (po uruchomieniu płatności).
-10. **Kolekcja „Opaski”** — 36 produktów ma tag `opaski`, kolekcji nadal nie ma.
+10. **„Opaski” w menu** — kolekcja `opaski` istnieje (36 produktów), brakuje jej w menu głównym (panel → Treść → Menu).
+11a. **−15% za zapis do newslettera** — popup, pasek i stopka to obiecują, ale nic nie wysyła kodu (decyzja Kamila 25.09.2026: robimy). Kod rabatowy + automatyczny e-mail powitalny: Shopify Messaging (Marketing → Automatyzacje → „Powitanie nowego subskrybenta”) albo Klaviyo. Aplikacja „Import Katalogu” nie ma scope `write_discounts` ani `write_marketing_automations`.
 
 ### Decyzje klienta
 11. Kolory jako warianty (kolumna `kolory` w arkuszu) — dziś każdy kolor to osobny produkt spięty metapolem `inne_kolory`.

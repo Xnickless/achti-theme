@@ -796,3 +796,9 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .grid__item > .product-card-wrapper,
 .grid__item > product-component > .product-card-wrapper,
 .grid__item .product-card-wrapper > .card--card { height: 100%; }
+
+/* Strona Kontakt: dane firmy nad formularzem (25.09.2026) */
+.b2b-contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1.6rem 3.2rem; margin: 0 0 3.2rem; padding: 2rem 0; border-top: 1px solid rgb(var(--color-foreground) / 0.12); border-bottom: 1px solid rgb(var(--color-foreground) / 0.12); }
+.b2b-contact-info__row { margin: 0; }
+.b2b-contact-info dt { font-size: 1.2rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(var(--color-foreground) / 0.65); margin-bottom: 0.4rem; }
+.b2b-contact-info dd { margin: 0; font-size: 1.5rem; line-height: 1.5; }

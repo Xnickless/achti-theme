@@ -99,17 +99,9 @@
                     {%- if block.settings.menu != blank -%}
                       <ul class="footer-block__details-content list-unstyled">
                         {%- for link in block.settings.menu.links -%}
-                          {%- liquid
-                            # Link do /pages/… bez istniejącej strony (treści klienta jeszcze nie ma) pomijamy zamiast prowadzić na 404
-                            assign link_missing = false
-                            if link.url contains '/pages/'
-                              assign page_handle = link.url | split: '/pages/' | last | split: '?' | first | split: '#' | first
-                              if pages[page_handle].title == blank
-                                assign link_missing = true
-                              endif
-                            endif
-                          -%}
-                          {%- if link_missing -%}{%- continue -%}{%- endif -%}
+                          {%- comment -%} pusta kolekcja, blog bez wpisów albo /pages/… bez strony — pomijamy zamiast prowadzić donikąd {%- endcomment -%}
+                          {%- capture link_empty -%}{% render 'b2b-link-empty', link: link %}{%- endcapture -%}
+                          {%- if link_empty == '1' -%}{%- continue -%}{%- endif -%}
                           <li>
                             <a
                               href="{{ link.url }}"
@@ -339,7 +331,21 @@
           {%- for policy in shop.policies -%}
             {%- if policy != blank -%}
               <li>
-                <small class="copyright__content"><a href="{{ policy.url }}">{{ policy.title | escape }}</a></small>
+                {%- liquid
+                  # Shopify nadaje politykom stałe tytuły („Warunki świadczenia usług”, „Polityka zwrotu kosztów”);
+                  # w stopce używamy nazw z menu Obsługa klienta (25.09.2026)
+                  assign policy_title = policy.title
+                  assign policy_key = policy.url | split: '/policies/' | last
+                  case policy_key
+                    when 'terms-of-service'
+                      assign policy_title = 'b2b.policies.terms' | t
+                    when 'refund-policy'
+                      assign policy_title = 'b2b.policies.refund' | t
+                    when 'shipping-policy'
+                      assign policy_title = 'b2b.policies.shipping' | t
+                  endcase
+                -%}
+                <small class="copyright__content"><a href="{{ policy.url }}">{{ policy_title | escape }}</a></small>
               </li>
             {%- endif -%}
           {%- endfor -%}
