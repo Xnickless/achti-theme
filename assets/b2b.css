@@ -340,7 +340,8 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .product-card-wrapper .card--card .card__inner,
 .product-card-wrapper .card--card .card__inner .card__media,
 .product-card-wrapper .card--card .card__inner .card__media .media { z-index: auto; isolation: auto; }
-.product-card-wrapper .card--card .card__inner .card__media { mix-blend-mode: multiply; }
+/* multiply tylko na packshocie (pierwsze zdjęcie); zdjęcie na modelce (drugie, po najechaniu) ma zostać w oryginalnych kolorach (25.09.2026) */
+.product-card-wrapper .card--card .card__inner .card__media .media > img:first-child { mix-blend-mode: multiply; }
 
 /* Przewijana taśma produktów (featured-collection, ustawienie „marquee”) */
 .fc-marquee { display: block; }
@@ -802,3 +803,17 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .b2b-contact-info__row { margin: 0; }
 .b2b-contact-info dt { font-size: 1.2rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(var(--color-foreground) / 0.65); margin-bottom: 0.4rem; }
 .b2b-contact-info dd { margin: 0; font-size: 1.5rem; line-height: 1.5; }
+
+/* Zdjęcie na modelce po najechaniu na kafelek (25.09.2026, wzór: barts.eu) — packshot znika, zdjęcie z modelką
+   pojawia się prawie od razu i lekko się przybliża. Tylko urządzenia z myszką; na dotyku zostaje packshot,
+   a zdjęcie na modelce jest drugie w galerii na karcie produktu. Źródło zdjęć: tools/upload_model_photos.py */
+@media screen and (min-width: 990px) and (hover: hover) {
+  .product-card-wrapper .media.media--hover-effect > img { transition: opacity 0.2s ease, transform 0.25s ease-out; }
+  .product-card-wrapper .media.media--hover-effect > img + img { object-fit: cover; }
+  .product-card-wrapper.card-wrapper:hover .media.media--hover-effect > img:first-child:not(:only-child) { opacity: 0; }
+  .product-card-wrapper.card-wrapper:hover .media.media--hover-effect > img + img {
+    opacity: 1;
+    transform: scale(1.015);
+    transition: opacity 0.2s ease, transform 0.25s ease-out;
+  }
+}

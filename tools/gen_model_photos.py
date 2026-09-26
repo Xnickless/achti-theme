@@ -224,7 +224,7 @@ PROMPT_OLDMONEY = (
     'Create a refined old-money, quiet-luxury fashion photograph of that person wearing exactly that product, {scena}. '
     'PRODUCT FIDELITY IS THE TOP PRIORITY: reproduce the knit structure, stitch pattern, colours and proportions exactly as in images 1 and 2; '
     'the pompom keeps the same generous size, colour and fluffiness if present; '
-    'THE HAT HAS NO METAL PLATE, NO LABEL, NO TAG AND NO LETTERING: if the reference photo shows a small metal brand plate on the cuff, '
+    'THE PRODUCT HAS NO METAL PLATE, NO LABEL, NO TAG AND NO LETTERING: if the reference photo shows a small metal brand plate on the cuff, '
     'leave it out completely and show clean uninterrupted knit in its place. '
     'Do not redesign, recolour or simplify the product, do not invent patterns, do not add any text, logo or branding anywhere in the photograph. '
     'Pose: {poza}. The whole {what} is inside the frame, nothing cropped, sharply in focus, and it stays the hero of the photograph. '
@@ -369,24 +369,43 @@ def cmd_sesja():
     """Sesja wg podziału Adriana (folder „SESJE SCENERIA WYBÓR NA MODELE”): każdy model dostaje scenerię ze swojej grupy.
       --codes=AZ-1,AZ-2   tylko te kody        --sceneria=naoko   tylko ta grupa
       --limit=N           pierwsze N modeli    --force            nadpisz istniejące
-    Sceny rotują w ramach scenerii, twarz jest stała dla grupy (SCENERIE[...]['obsada'])."""
+      --scena=dwor        wymuś scenę (np. gdy rotacja trafiła w szeroki plan)
+      --dzieci            także czapki dziecięce (domyślnie pominięte — wizerunki dzieci do decyzji Adriana)
+    Sceny rotują w ramach scenerii. Twarz: SCENERIE[...]['obsada'][kobieta|mezczyzna|...] wg segmentu produktu."""
     import glob, json as _json
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     from scenerie import SCENERIE, mapowanie
     przypisanie = mapowanie()
+    katalog = {p['code'].upper(): p for p in _json.load(open(DATA, encoding='utf-8'))}
+    POMPON = _json.load(open(os.path.join(os.path.dirname(DATA), 'pompon.json'), encoding='utf-8'))  # z detect_pompon.py
     only_codes = {c.strip().upper() for c in ARGS.get('--codes', '').split(',') if c.strip()}
     only_scen = ARGS.get('--sceneria', '')
     limit = int(ARGS.get('--limit', '0'))
 
-    plan = []
+    def osoba_dla(cfg, prod):
+        seg = (prod or {}).get('segment', 'Damska')
+        obs = cfg['obsada'] if isinstance(cfg['obsada'], dict) else {'kobieta': cfg['obsada']}
+        if seg in ('Dziewczęca', 'Dziecięca'): typ = 'dziewczynka'
+        elif seg == 'Chłopięca': typ = 'chlopiec'
+        elif seg == 'Męska': typ = 'mezczyzna'
+        elif seg == 'Unisex': typ = obs.get('unisex', 'kobieta')
+        else: typ = 'kobieta'
+        return typ, obs.get(typ) or next(iter(obs.values()))
+
+    plan, licznik = [], {}
     for code, grupa in sorted(przypisanie.items()):
         if only_codes and code not in only_codes: continue
         if only_scen and grupa != only_scen: continue
         cfg = SCENERIE.get(grupa)
-        if not cfg: continue
+        prod = katalog.get(code)
+        if not cfg or not prod: continue
+        typ, osoba = osoba_dla(cfg, prod)
+        if typ in ('dziewczynka', 'chlopiec') and '--dzieci' not in FLAGS and not only_codes: continue
         sceny = cfg['sceny'] or OLD_MONEY          # old_money korzysta z gotowych scen
         klucze = sorted(sceny)
-        plan.append((code, grupa, klucze[len(plan) % len(klucze)], cfg['obsada'], sceny))
+        n = licznik.get(grupa, 0); licznik[grupa] = n + 1
+        klucz = ARGS.get('--scena') if ARGS.get('--scena') in sceny else klucze[n % len(klucze)]
+        plan.append((code, grupa, klucz, osoba, typ, sceny, prod))
     if limit: plan = plan[:limit]
     if not plan: print('nic do zrobienia — sprawdź --codes/--sceneria'); return
 
@@ -396,7 +415,7 @@ def cmd_sesja():
     print(f'{len(plan)} zdjęć, {MODEL} {SIZE}, ~{koszt:.2f} USD')
 
     def one(job):
-        code, grupa, klucz, osoba, sceny = job
+        code, grupa, klucz, osoba, typ, sceny, prod = job
         pack = packshot(code)
         refs = sorted(glob.glob(f'{ROOT}/modelki/casting/{osoba}_*.png'))
         out = f'{dest}/{grupa}_{code}_{klucz}.png'
@@ -404,10 +423,27 @@ def cmd_sesja():
         if not refs: print('brak twarzy', osoba, '— dogeneruj casting'); return
         if os.path.exists(out) and '--force' not in FLAGS:
             print('jest', code); return
+        what = 'headband (ear warmer)' if prod.get('product_type') == 'Opaska' else 'hat (beanie)'
+        cfg = dict(sceny[klucz])
+        if typ == 'mezczyzna':
+            cfg['stylizacja'] += ('; menswear version of this look: replace any womenswear items (blouse, pearl or gold earrings, '
+                                  'jewellery, silk scarf, lipstick) with classic menswear equivalents')
+        elif typ in ('dziewczynka', 'chlopiec'):
+            cfg['stylizacja'] = ('a child-sized ' + ('cream wool coat over a fine cable-knit sweater' if typ == 'dziewczynka'
+                                 else 'navy wool duffle coat over a cream cable-knit sweater, clearly a boy') +
+                                 ', simple and age-appropriate, no jewellery, no scarf, no adult styling')
+        # kadr pod kafelek w listingu (25.09.2026): szeroki plan zmniejszał czapkę, a pompony wychodziły za małe
+        cfg['poza'] = (cfg['poza'].replace('upper body and hands in frame', 'shoulders in frame').replace('upper body and one arm in frame', 'shoulders in frame')
+                       .replace('upper body in frame', 'shoulders in frame') +
+                       f', framed as a close head-and-shoulders portrait from mid-chest up, camera at eye level, the {what} large and '
+                       'prominent in the upper part of the frame, occupying roughly a quarter of the image height, never a wide or full-body shot')
+        if POMPON.get(code) or 'pompon' in (prod.get('tags') or []):
+            cfg['poza'] += ('; the pompom is exactly as big relative to the hat as in image 1 - a large, full, fluffy fur pompom, '
+                            'roughly as wide as the hat itself, same colour and tips')
         t = time.time()
         ok = generate([part_image(pack), part_image(cuff_crop(pack, f'{dest}/_crop_{code}.jpg')), part_image(refs[0]),
-                       {'text': PROMPT_OLDMONEY.format(what='hat (beanie)', **sceny[klucz])}], out)
-        print(('OK  ' if ok else 'BŁĄD'), grupa, code, klucz, f'{time.time()-t:.0f}s')
+                       {'text': PROMPT_OLDMONEY.format(what=what, **cfg)}], out)
+        print(('OK  ' if ok else 'BŁĄD'), grupa, code, osoba, klucz, f'{time.time()-t:.0f}s')
 
     with ThreadPoolExecutor(WORKERS) as ex:
         list(ex.map(one, plan))

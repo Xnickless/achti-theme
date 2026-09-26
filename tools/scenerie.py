@@ -15,7 +15,7 @@ GRUPY = {
     AZ-2542PK AZ-2544""",
  'sport_narty': "AZ-1531PK",
  'unisex': "AZ-3087D",
- 'glamour_50': """AZ-2957D AZ-2663D AZ-2893PC AZ-2742D AZ-2956D AZ-2984D AZ-2981D AZ-2980D AZ-2665D AZ-3014D
+ 'glamour': """AZ-2957D AZ-2663D AZ-2893PC AZ-2742D AZ-2956D AZ-2984D AZ-2981D AZ-2980D AZ-2665D AZ-3014D
     AZ-2932D AZ-2667D AZ-2955D AZ-3021PC AZ-910PC-BP AZ-2661D AZ-2773D AZ-2982PC""",
  'dzieci': """AZ-2718PC AZ-2719PC AZ-2843PC-BOY AZ-2720PC AZ-2202PC AZ-2887PCE AZ-2713PC AZ-2842PC-GIRL
     AZ-2349PC AZ-2712PC AZ-2888PCE AZ-2371PC AZ-2920PC AZ-2515PC AZ-2851PC AZ-2490PK AZ-2884PC AZ-2844PC
@@ -43,9 +43,11 @@ GRUPY = {
 }
 
 # --- prompty: format zgodny z OLD_MONEY w gen_model_photos.py (scena/poza/stylizacja/swiatlo, po angielsku) ---
-# OBSADA: która twarz z castingu pasuje do scenerii (pliki ~/Claude/achti-foto/modelki/casting/<osoba>_*.png)
+# OBSADA: która twarz z castingu pasuje do scenerii (pliki ~/Claude/achti-foto/modelki/casting/<osoba>_*.png), osobno dla kobiet i mężczyzn;
+#   płeć wynika z segmentu produktu (Damska → kobieta, Męska → mężczyzna, Unisex → kobieta, chyba że sceneria ma unisex='mezczyzna').
+#   Dobór 25.09.2026 (Kamil): każda sceneria ma inną twarz, bez osób 50+ (sceneria „glamour” zamiast „glamour_50”).
 SCENERIE = {
- 'meskie_miasto': dict(nazwa='Męskie: klasyka, miasto, jesień/zima', obsada='m2', sceny={
+ 'meskie_miasto': dict(nazwa='Męskie: klasyka, miasto, jesień/zima', obsada=dict(mezczyzna='m1', kobieta='k5-braz'), sceny={
    'stare_miasto': dict(
      scena='on a cobbled old-town street at dawn, tenement facades and wet cobbles softly blurred behind',
      poza='standing three-quarter to the camera, hands in coat pockets, calm confident expression, upper body in frame',
@@ -67,7 +69,7 @@ SCENERIE = {
      stylizacja='a camel wool coat over a navy roll-neck, no logos',
      swiatlo='soft overcast light, muted autumn palette'),
  }),
- 'sport_narty': dict(nazwa='Sport i narty', obsada='m3', sceny={
+ 'sport_narty': dict(nazwa='Sport i narty', obsada=dict(mezczyzna='m3', kobieta='k6-braz', unisex='mezczyzna'), sceny={
    'stok': dict(
      scena='on a sunlit ski slope, snow-covered spruces and a chairlift softly blurred behind',
      poza='standing three-quarter to the camera, goggles pushed up on the forehead, energetic natural smile, upper body in frame',
@@ -84,7 +86,7 @@ SCENERIE = {
      stylizacja='a shell jacket in a muted colour, no logos',
      swiatlo='clear high-altitude light, deep blue sky, strong but natural contrast'),
  }),
- 'unisex': dict(nazwa='Unisex, miejski minimalizm', obsada='k6-braz', sceny={
+ 'unisex': dict(nazwa='Unisex, miejski minimalizm', obsada=dict(kobieta='k6-braz', mezczyzna='m3'), sceny={
    'beton': dict(
      scena='against a plain concrete wall in the city, nothing else in the frame',
      poza='standing straight facing the camera, neutral calm expression, upper body in frame',
@@ -101,30 +103,29 @@ SCENERIE = {
      stylizacja='a stone-coloured padded jacket, no logos',
      swiatlo='blue hour with warm lamp accents, cinematic but natural'),
  }),
- # UWAGA: twarzy 's1' (kobieta 50+) NIE MA jeszcze w castingu — trzeba ją dogenerować przed tą serią
- 'glamour_50': dict(nazwa='Dojrzała kobieta 50+, park i góry', obsada='s1', sceny={
+ 'glamour': dict(nazwa='Glamour: elegancja, park i góry', obsada=dict(kobieta='k1-blond', mezczyzna='m2'), sceny={
    'park_aleja': dict(
-     scena='on a park avenue in autumn, golden leaves and benches softly blurred behind',
-     poza='standing three-quarter to the camera, one hand holding the coat collar, warm dignified smile, upper body in frame',
-     stylizacja='an elegant camel wool coat over a cream cashmere sweater, a silk scarf, pearl earrings, no logos',
-     swiatlo='soft golden autumn light, warm refined grading'),
-   'gory_sciezka': dict(
-     scena='on a mountain path above a valley, a distant range softly blurred behind',
-     poza='standing with the body turned to the view, head turned to the lens, serene expression, upper body in frame',
-     stylizacja='a burgundy wool coat over a fine roll-neck, leather gloves, no logos',
-     swiatlo='clear cool mountain daylight, gentle contrast'),
+     scena='on a park avenue in golden autumn, tall trees and fallen leaves softly blurred behind',
+     poza='standing three-quarter to the camera, one gloved hand lightly touching the coat collar, chin slightly raised, confident subtle smile, upper body in frame',
+     stylizacja='a cream wool coat with a voluminous faux-fur collar, sleek glossy hair, soft red lipstick, small gold hoop earrings, black leather gloves, no logos',
+     swiatlo='warm golden late-afternoon light, glossy refined grading, soft glow on the skin'),
+   'gory_taras': dict(
+     scena='on the terrace of a luxury mountain hotel, snow-covered peaks and a pale blue sky softly blurred behind',
+     poza='leaning on a wooden balustrade, body turned to the view, head turned to the lens, radiant confident smile, upper body in frame',
+     stylizacja='a white quilted down coat with a faux-fur trim, tinted aviator sunglasses held in one hand, polished nails, gold jewellery, no logos',
+     swiatlo='bright alpine sunlight, crisp whites, luminous high-end grading'),
    'kawiarnia_park': dict(
-     scena='at a park cafe terrace, wicker chairs and blurred greenery behind',
-     poza='seated at a small table, hands around a cup, head turned to the camera, relaxed smile, upper body in frame',
-     stylizacja='a grey wool coat over an ivory blouse, delicate gold jewellery, no logos',
-     swiatlo='soft diffused afternoon light, warm neutral palette'),
+     scena='at an elegant cafe terrace in a park, marble table and blurred greenery behind',
+     poza='seated at a small table, a cup in one hand, body angled, looking into the lens with a composed glamorous expression, upper body in frame',
+     stylizacja='a black wool coat over a black roll-neck, red lipstick, pearl earrings, no logos',
+     swiatlo='soft diffused afternoon light, rich contrast, cinematic tone'),
    'jezioro': dict(
-     scena='on a lake shore in the morning, mist over the water blurred behind',
-     poza='standing three-quarter to the camera, arms relaxed, calm confident expression, upper body in frame',
-     stylizacja='a navy quilted coat over a cream sweater, a patterned scarf, no logos',
-     swiatlo='pale morning light, cool muted palette'),
+     scena='on a wooden jetty on a mountain lake, mist over the water and dark pines softly blurred behind',
+     poza='standing three-quarter to the camera, hands in the pockets of a belted coat, serene confident expression, upper body in frame',
+     stylizacja='a camel belted wrap coat, a silk scarf in warm tones, fine gold jewellery, no logos',
+     swiatlo='pale morning light with a soft glow, muted luxurious palette'),
  }),
- 'dzieci': dict(nazwa='Dzieci: park zabaw, las, góry', obsada='d1', sceny={
+ 'dzieci': dict(nazwa='Dzieci: park zabaw, las, góry', obsada=dict(dziewczynka='d1', chlopiec='c1'), sceny={
    'plac_zabaw': dict(
      scena='at a playground in winter, a wooden slide and snow-dusted railings softly blurred behind',
      poza='standing and looking straight into the camera with a bright natural smile, upper body in frame',
@@ -146,7 +147,7 @@ SCENERIE = {
      stylizacja='a colourful ski jacket, mittens, age-appropriate, no logos',
      swiatlo='bright mountain sunlight, crisp whites'),
  }),
- 'skandynawski': dict(nazwa='Styl skandynawski', obsada='k2-blond', sceny={
+ 'skandynawski': dict(nazwa='Styl skandynawski', obsada=dict(kobieta='k3-blond', mezczyzna='m1'), sceny={
    'wnetrze_jasne': dict(
      scena='in a bright minimal interior with a large window, a white wall and pale wooden floor behind',
      poza='standing near the window, three-quarter to the camera, quiet composed expression, upper body in frame',
@@ -168,7 +169,7 @@ SCENERIE = {
      stylizacja='an oatmeal wool coat over a white knit, no logos',
      swiatlo='soft overcast light, muted cool grading'),
  }),
- 'premium_miasto': dict(nazwa='Premium merino, miasto (Varlesca / Chicaca)', obsada='k4-braz', sceny={
+ 'premium_miasto': dict(nazwa='Premium merino, miasto (Varlesca / Chicaca)', obsada=dict(kobieta='k5-braz', mezczyzna='m4'), sceny={
    'witryna': dict(
      scena='beside a boutique window in the city centre, reflections in the glass and evening lights blurred behind',
      poza='standing three-quarter to the camera, chin level, composed confident expression, upper body in frame',
@@ -190,7 +191,7 @@ SCENERIE = {
      stylizacja='a charcoal cashmere coat over an ivory knit, a fine scarf, no logos',
      swiatlo='evening lights, warm highlights against cool shadows'),
  }),
- 'naoko': dict(nazwa='Lifestyle w stylu sklepu Naoko', obsada='k1-blond', sceny={
+ 'naoko': dict(nazwa='Lifestyle w stylu sklepu Naoko', obsada=dict(kobieta='k2-blond', mezczyzna='m1'), sceny={
    'studio_ecru': dict(
      scena='in a bright studio against a plain ecru backdrop, nothing else in the frame',
      poza='standing relaxed, slight natural smile, looking into the lens, upper body in frame',
@@ -212,7 +213,7 @@ SCENERIE = {
      stylizacja='a soft oatmeal sweater, simple and cosy, no logos',
      swiatlo='soft window light, warm inviting tone'),
  }),
- 'old_money': dict(nazwa='Old money (klimat już wypracowany)', obsada='k4-braz', sceny={}),  # sceny w OLD_MONEY w gen_model_photos.py
+ 'old_money': dict(nazwa='Old money (klimat już wypracowany)', obsada=dict(kobieta='k4-braz', mezczyzna='m2'), sceny={}),  # sceny w OLD_MONEY w gen_model_photos.py
 }
 
 # modele, których Adrian nie zdążył przypisać — reguła po segmencie
