@@ -48,7 +48,7 @@ GRUPY = {
 #   Dobór 25.09.2026 (Kamil): każda sceneria ma inną twarz, bez osób 50+ (sceneria „glamour” zamiast „glamour_50”).
 #   Lista twarzy = rotacja w obrębie scenerii. k2-blond odrzucona przez Kamila (Naoko → b6-mixed / b3-latina z castingu „beauty”).
 SCENERIE = {
- 'meskie_miasto': dict(nazwa='Męskie: klasyka, miasto, jesień/zima', obsada=dict(mezczyzna='m1', kobieta='k5-braz'), sceny={
+ 'meskie_miasto': dict(nazwa='Męskie: klasyka, miasto, jesień/zima', obsada=dict(mezczyzna=['m1', 'bm1-afro', 'bm3-euro'], kobieta='k5-braz'), sceny={
    'stare_miasto': dict(
      scena='on a cobbled old-town street at dawn, tenement facades and wet cobbles softly blurred behind',
      poza='standing three-quarter to the camera, hands in coat pockets, calm confident expression, upper body in frame',
@@ -104,7 +104,7 @@ SCENERIE = {
      stylizacja='a stone-coloured padded jacket, no logos',
      swiatlo='blue hour with warm lamp accents, cinematic but natural'),
  }),
- 'glamour': dict(nazwa='Glamour: elegancja, park i góry', obsada=dict(kobieta='k1-blond', mezczyzna='m2'), sceny={
+ 'glamour': dict(nazwa='Glamour: elegancja, park i góry', obsada=dict(kobieta=['k1-blond', 'b2-afro'], mezczyzna='m2'), sceny={
    'park_aleja': dict(
      scena='on a park avenue in golden autumn, tall trees and fallen leaves softly blurred behind',
      poza='standing three-quarter to the camera, one gloved hand lightly touching the coat collar, chin slightly raised, confident subtle smile, upper body in frame',
@@ -148,7 +148,7 @@ SCENERIE = {
      stylizacja='a colourful ski jacket, mittens, age-appropriate, no logos',
      swiatlo='bright mountain sunlight, crisp whites'),
  }),
- 'skandynawski': dict(nazwa='Styl skandynawski', obsada=dict(kobieta='k3-blond', mezczyzna='m1'), sceny={
+ 'skandynawski': dict(nazwa='Styl skandynawski', obsada=dict(kobieta=['k3-blond', 'b4-nordic'], mezczyzna='m1'), sceny={
    'wnetrze_jasne': dict(
      scena='in a bright minimal interior with a large window, a white wall and pale wooden floor behind',
      poza='standing near the window, three-quarter to the camera, quiet composed expression, upper body in frame',
@@ -170,7 +170,7 @@ SCENERIE = {
      stylizacja='an oatmeal wool coat over a white knit, no logos',
      swiatlo='soft overcast light, muted cool grading'),
  }),
- 'premium_miasto': dict(nazwa='Premium merino, miasto (Varlesca / Chicaca)', obsada=dict(kobieta='k5-braz', mezczyzna='m4'), sceny={
+ 'premium_miasto': dict(nazwa='Premium merino, miasto (Varlesca / Chicaca)', obsada=dict(kobieta=['k5-braz', 'b1-korea'], mezczyzna=['m4', 'bm2-azja']), sceny={
    'witryna': dict(
      scena='beside a boutique window in the city centre, reflections in the glass and evening lights blurred behind',
      poza='standing three-quarter to the camera, chin level, composed confident expression, upper body in frame',
@@ -192,7 +192,7 @@ SCENERIE = {
      stylizacja='a charcoal cashmere coat over an ivory knit, a fine scarf, no logos',
      swiatlo='evening lights, warm highlights against cool shadows'),
  }),
- 'naoko': dict(nazwa='Lifestyle w stylu sklepu Naoko', obsada=dict(kobieta=['b6-mixed', 'b3-latina'], mezczyzna='m1'), sceny={
+ 'naoko': dict(nazwa='Lifestyle w stylu sklepu Naoko', obsada=dict(kobieta=['b6-mixed', 'b3-latina', 'b1-korea'], mezczyzna='m1'), sceny={
    'studio_ecru': dict(
      scena='in a bright studio against a plain ecru backdrop, nothing else in the frame',
      poza='standing relaxed, slight natural smile, looking into the lens, upper body in frame',
@@ -214,7 +214,7 @@ SCENERIE = {
      stylizacja='a soft oatmeal sweater, simple and cosy, no logos',
      swiatlo='soft window light, warm inviting tone'),
  }),
- 'old_money': dict(nazwa='Old money (klimat już wypracowany)', obsada=dict(kobieta='k4-braz', mezczyzna='m2'), sceny={}),  # sceny w OLD_MONEY w gen_model_photos.py
+ 'old_money': dict(nazwa='Old money (klimat już wypracowany)', obsada=dict(kobieta=['k4-braz', 'b5-slavic', 'b4-nordic'], mezczyzna=['m2', 'bm3-euro']), sceny={}),  # sceny w OLD_MONEY w gen_model_photos.py
 }
 
 # modele, których Adrian nie zdążył przypisać — reguła po segmencie

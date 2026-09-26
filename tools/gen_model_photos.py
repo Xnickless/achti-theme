@@ -436,7 +436,8 @@ def cmd_sesja():
             osoba = osoba[k % len(osoba)]
         if typ in ('dziewczynka', 'chlopiec') and '--dzieci' not in FLAGS and not only_codes: continue
         sceny = cfg['sceny'] or OLD_MONEY          # old_money korzysta z gotowych scen
-        klucze = sorted(sceny)
+        # sceny, które zawsze wychodziły w szerokim planie (spacer z psem, pomost) — tylko na życzenie przez --scena
+        klucze = sorted(k for k in sceny if k not in ('aleja', 'jezioro')) or sorted(sceny)
         n = licznik.get(grupa, 0); licznik[grupa] = n + 1
         klucz = ARGS.get('--scena') if ARGS.get('--scena') in sceny else klucze[n % len(klucze)]
         plan.append((code, grupa, klucz, osoba, typ, sceny, prod))
@@ -470,7 +471,7 @@ def cmd_sesja():
         cfg['poza'] = (cfg['poza'].replace('upper body and hands in frame', 'shoulders in frame').replace('upper body and one arm in frame', 'shoulders in frame')
                        .replace('upper body in frame', 'shoulders in frame') +
                        f', framed as a close head-and-shoulders portrait from mid-chest up, camera at eye level, the {what} large and '
-                       'prominent in the upper part of the frame, occupying roughly a quarter of the image height, never a wide or full-body shot')
+                       'prominent in the upper part of the frame, occupying roughly a quarter of the image height; TIGHT CROP: the top edge of the image is just above the top of the ' + what + ', the bottom edge at mid-chest, never a wide, three-quarter-length or full-body shot')
         # realizm (25.09.2026, Kamil: „za bardzo AI”): bez szerokiego uśmiechu i gładkiej, świecącej skóry — zdjęcie jak z prawdziwej kampanii
         cfg['poza'] = re.sub(r'(laughing naturally|laughing at the camera|laughing|with a bright natural smile|bright natural smile|'
                              r'warm natural smile|relaxed smile|radiant confident smile|radiant smile|natural energetic smile|energetic natural smile)',
@@ -481,6 +482,8 @@ def cmd_sesja():
                            'natural slightly muted true-to-life colours, subtle film grain, no HDR, no oversharpening, natural minimal makeup')
         if ARGS.get('--uwaga'):                     # ręczna poprawka do konkretnego zdjęcia, np. kolor pompona
             cfg['poza'] += '; IMPORTANT: ' + ARGS['--uwaga']
+        if code in POMPON and not POMPON[code]:    # bez tego model dorabiał pompony (3069PC, 3071PK, 2554PK)
+            cfg['poza'] += f'; the {what} has NO pompom and NO bobble on top - do not add one, keep the crown exactly as in image 1'
         if POMPON.get(code) or 'pompon' in (prod.get('tags') or []):
             cfg['poza'] += ('; the pompom is exactly as big relative to the hat as in image 1 - a large, full, fluffy fur pompom, '
                             'roughly as wide as the hat itself, same colour and tips')
