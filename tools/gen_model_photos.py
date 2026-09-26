@@ -19,7 +19,7 @@ Modele: gemini-3-pro-image (Nano Banana Pro, najwierniejszy wzór dzianiny, ~0,1
 Wspólne flagi: --model=<id>, --size=1K|2K|4K, --workers=N, --dry-run.
 Katalogi: ~/Claude/achti-foto/modelki/{refs,out}, packshoty z ~/Claude/achti-foto/wyrownane.
 """
-import sys, os, json, base64, time, urllib.request, urllib.error
+import sys, os, re, json, base64, time, urllib.request, urllib.error
 from concurrent.futures import ThreadPoolExecutor
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -399,6 +399,7 @@ def cmd_sesja():
     """Sesja wg podziału Adriana (folder „SESJE SCENERIA WYBÓR NA MODELE”): każdy model dostaje scenerię ze swojej grupy.
       --codes=AZ-1,AZ-2   tylko te kody        --sceneria=naoko   tylko ta grupa
       --limit=N           pierwsze N modeli    --force            nadpisz istniejące
+      --uwaga="..."       dopisek do promptu (np. kolor pompona, gdy model go przekłamuje)
       --scena=dwor        wymuś scenę (np. gdy rotacja trafiła w szeroki plan)
       --dzieci            także czapki dziecięce (domyślnie pominięte — wizerunki dzieci do decyzji Adriana)
     Sceny rotują w ramach scenerii. Twarz: SCENERIE[...]['obsada'][kobieta|mezczyzna|...] wg segmentu produktu."""
@@ -470,6 +471,16 @@ def cmd_sesja():
                        .replace('upper body in frame', 'shoulders in frame') +
                        f', framed as a close head-and-shoulders portrait from mid-chest up, camera at eye level, the {what} large and '
                        'prominent in the upper part of the frame, occupying roughly a quarter of the image height, never a wide or full-body shot')
+        # realizm (25.09.2026, Kamil: „za bardzo AI”): bez szerokiego uśmiechu i gładkiej, świecącej skóry — zdjęcie jak z prawdziwej kampanii
+        cfg['poza'] = re.sub(r'(laughing naturally|laughing at the camera|laughing|with a bright natural smile|bright natural smile|'
+                             r'warm natural smile|relaxed smile|radiant confident smile|radiant smile|natural energetic smile|energetic natural smile)',
+                             'a calm, relaxed natural expression with lips closed or only a faint smile', cfg['poza'])
+        cfg['swiatlo'] += ('. REALISM: this must look like a real photograph from a premium knitwear campaign shot on Kodak Portra 400 film, '
+                           'not a digital render: real skin with visible pores, fine texture and small natural imperfections, no glow, no airbrushing, '
+                           'no plastic or waxy skin, no exaggerated smile or perfect bright teeth, a candid unposed moment, slightly off-centre composition, '
+                           'natural slightly muted true-to-life colours, subtle film grain, no HDR, no oversharpening, natural minimal makeup')
+        if ARGS.get('--uwaga'):                     # ręczna poprawka do konkretnego zdjęcia, np. kolor pompona
+            cfg['poza'] += '; IMPORTANT: ' + ARGS['--uwaga']
         if POMPON.get(code) or 'pompon' in (prod.get('tags') or []):
             cfg['poza'] += ('; the pompom is exactly as big relative to the hat as in image 1 - a large, full, fluffy fur pompom, '
                             'roughly as wide as the hat itself, same colour and tips')
