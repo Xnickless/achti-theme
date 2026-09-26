@@ -46,6 +46,7 @@ GRUPY = {
 # OBSADA: która twarz z castingu pasuje do scenerii (pliki ~/Claude/achti-foto/modelki/casting/<osoba>_*.png), osobno dla kobiet i mężczyzn;
 #   płeć wynika z segmentu produktu (Damska → kobieta, Męska → mężczyzna, Unisex → kobieta, chyba że sceneria ma unisex='mezczyzna').
 #   Dobór 25.09.2026 (Kamil): każda sceneria ma inną twarz, bez osób 50+ (sceneria „glamour” zamiast „glamour_50”).
+#   Lista twarzy = rotacja w obrębie scenerii. k2-blond odrzucona przez Kamila (Naoko → b6-mixed / b3-latina z castingu „beauty”).
 SCENERIE = {
  'meskie_miasto': dict(nazwa='Męskie: klasyka, miasto, jesień/zima', obsada=dict(mezczyzna='m1', kobieta='k5-braz'), sceny={
    'stare_miasto': dict(
@@ -191,7 +192,7 @@ SCENERIE = {
      stylizacja='a charcoal cashmere coat over an ivory knit, a fine scarf, no logos',
      swiatlo='evening lights, warm highlights against cool shadows'),
  }),
- 'naoko': dict(nazwa='Lifestyle w stylu sklepu Naoko', obsada=dict(kobieta='k2-blond', mezczyzna='m1'), sceny={
+ 'naoko': dict(nazwa='Lifestyle w stylu sklepu Naoko', obsada=dict(kobieta=['b6-mixed', 'b3-latina'], mezczyzna='m1'), sceny={
    'studio_ecru': dict(
      scena='in a bright studio against a plain ecru backdrop, nothing else in the frame',
      poza='standing relaxed, slight natural smile, looking into the lens, upper body in frame',

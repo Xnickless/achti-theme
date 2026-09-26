@@ -116,6 +116,16 @@ CASTING = {
     'c1': dict(typ='chlopiec', desc='a 7-year-old Polish boy with short blonde hair and blue eyes, cheerful face'),
     'c2': dict(typ='chlopiec', desc='a 6-year-old Polish boy with short dark-brown hair and rosy cheeks, curious look'),
     'c3': dict(typ='chlopiec', desc='an 8-year-old Polish boy with light-brown messy hair, friendly grin'),
+    # Casting „beauty” (25.09.2026, Kamil: modelki mają być piękniejsze, przyciągać, różne pochodzenie) — prompt PROMPT_CAST_BEAUTY
+    'b1-korea':   dict(typ='kobieta', styl='beauty', desc='a 24-year-old Korean female fashion model with long sleek glossy black hair, luminous porcelain skin, striking almond-shaped dark eyes and high cheekbones'),
+    'b2-afro':    dict(typ='kobieta', styl='beauty', desc='a 25-year-old Black female fashion model with rich deep-brown skin, sculpted cheekbones, full lips, radiant glowing skin and long voluminous dark curls'),
+    'b3-latina':  dict(typ='kobieta', styl='beauty', desc='a 24-year-old Latina female fashion model with long glossy dark-brown waves, warm golden-olive skin, captivating green eyes and a radiant smile'),
+    'b4-nordic':  dict(typ='kobieta', styl='beauty', desc='a 23-year-old Scandinavian female fashion model with long platinum-blonde hair, ice-blue eyes, flawless fair skin and delicate symmetrical features'),
+    'b5-slavic':  dict(typ='kobieta', styl='beauty', desc='a 24-year-old Slavic female fashion model with long silky chestnut hair, striking emerald-green eyes, full lips and sculpted cheekbones'),
+    'b6-mixed':   dict(typ='kobieta', styl='beauty', desc='a 23-year-old mixed-race female fashion model with caramel skin, honey-brown curly hair, light freckles across the nose and a dazzling smile'),
+    'bm1-afro':   dict(typ='mezczyzna', styl='beauty', desc='a 27-year-old Black male fashion model with deep-brown skin, a sharp jawline, a neatly groomed short beard and a charismatic confident look'),
+    'bm2-azja':   dict(typ='mezczyzna', styl='beauty', desc='a 26-year-old East Asian male fashion model, clean-shaven, sharp elegant features, dark eyes and a calm magnetic gaze'),
+    'bm3-euro':   dict(typ='mezczyzna', styl='beauty', desc='a 28-year-old European male fashion model with a chiselled jaw, light stubble, piercing blue eyes and tousled dark-blonde hair'),
 }
 
 UBRANIE = {
@@ -140,6 +150,26 @@ PROMPT_CAST = (
     'background clearly blurred, subject tack sharp. Photorealistic fashion photography, natural skin texture, no heavy retouching, '
     '4:5 portrait, high detail.'
 )
+
+# Wersja „beauty”: kampania luksusowej marki, piękna i charyzmatyczna osoba, spojrzenie w obiektyw (zamiast spuszczonego wzroku)
+PROMPT_CAST_BEAUTY = (
+    'Image 1 shows the product: a knitted winter {what} photographed on white.{ref_note} '
+    'Create a high-end fashion campaign photograph for a luxury knitwear brand: {desc} - an exceptionally beautiful, '
+    'charismatic top model with magazine-cover appeal - wearing exactly that product outdoors in {scene}. '
+    'Reproduce the product with absolute fidelity: identical knit structure and stitch pattern, identical colours, proportions and '
+    'cuff depth, and the pompom at the same generous size, colour and fluffiness as in image 1. No metal plate, label or lettering on the product. '
+    'Pose: body three-quarter to the camera, head turned towards the lens, looking straight into the camera with a confident, '
+    'magnetic, alluring gaze and a soft hint of a smile. Beauty: polished natural glam makeup - luminous dewy skin, defined brows, '
+    'subtle contour, softly glossy lips - and glossy, well-styled hair falling naturally without covering the {what}. '
+    'Elegant and tasteful, fully clothed, never vulgar. The person wears {outfit}. '
+    'Framing: close head-and-shoulders portrait, the whole {what} including the pompom inside the frame and prominent. '
+    'Light: flattering soft beauty light with a gentle rim light, rich but natural colour. Shot on an 85mm lens at f/2, '
+    'background softly blurred, eyes and product tack sharp. Photorealistic, real skin texture (not plastic, not airbrushed), 4:5 portrait, maximum detail.'
+)
+UBRANIE_BEAUTY = {
+    'kobieta': 'an elegant camel cashmere coat with the collar turned up over a fine cream roll-neck',
+    'mezczyzna': 'a tailored charcoal wool overcoat over a black fine-knit roll-neck',
+}
 
 REF_NOTE = (' Image 2 shows the model: use exactly the same person, the same face, the same hair colour and length, '
             'so that both photographs clearly show one and the same model.')
@@ -400,6 +430,9 @@ def cmd_sesja():
         prod = katalog.get(code)
         if not cfg or not prod: continue
         typ, osoba = osoba_dla(cfg, prod)
+        if isinstance(osoba, list):                # kilka twarzy w scenerii — na zmianę
+            k = licznik.get((grupa, typ), 0); licznik[(grupa, typ)] = k + 1
+            osoba = osoba[k % len(osoba)]
         if typ in ('dziewczynka', 'chlopiec') and '--dzieci' not in FLAGS and not only_codes: continue
         sceny = cfg['sceny'] or OLD_MONEY          # old_money korzysta z gotowych scen
         klucze = sorted(sceny)
@@ -507,18 +540,20 @@ def cmd_casting():
         kid = info['typ'] in ('dziewczynka', 'chlopiec')
         pack = packshot(code_kids if kid else code)
         what = 'hat (beanie)'
-        outfit = UBRANIE[info['typ']]
+        beauty = info.get('styl') == 'beauty'
+        prompt = PROMPT_CAST_BEAUTY if beauty else PROMPT_CAST
+        outfit = (UBRANIE_BEAUTY if beauty else UBRANIE)[info['typ']]
         s1, s2 = scenes[(n * 2) % len(scenes)], scenes[(n * 2 + 1) % len(scenes)]
         o1, o2 = f'{dest}/{key}_1_{s1}.png', f'{dest}/{key}_2_{s2}.png'
         t = time.time()
         if not (os.path.exists(o1) and '--force' not in FLAGS):
-            ok = generate([part_image(pack), {'text': PROMPT_CAST.format(what=what, desc=info['desc'], scene=SCENY[s1], outfit=outfit, ref_note='')}], o1)
+            ok = generate([part_image(pack), {'text': prompt.format(what=what, desc=info['desc'], scene=SCENY[s1], outfit=outfit, ref_note='')}], o1)
             if not ok:
                 print('BŁĄD', key, '1'); return
         # drugie ujęcie z pierwszym zdjęciem jako wzorcem twarzy
         if not (os.path.exists(o2) and '--force' not in FLAGS):
             generate([part_image(pack), part_image(o1),
-                      {'text': PROMPT_CAST.format(what=what, desc=info['desc'], scene=SCENY[s2], outfit=outfit, ref_note=REF_NOTE)}], o2)
+                      {'text': prompt.format(what=what, desc=info['desc'], scene=SCENY[s2], outfit=outfit, ref_note=REF_NOTE)}], o2)
         print('OK  ', key, info['typ'], f'{s1}/{s2}', f'{time.time()-t:.0f}s')
 
     with ThreadPoolExecutor(WORKERS) as ex:
