@@ -393,6 +393,13 @@
 
       <div class="footer__copyright caption">
         <small class="copyright__content">&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}</small>
+        {%- case request.locale.iso_code -%}
+          {%- when 'de' -%}{%- assign kade_label = 'Umsetzung' -%}
+          {%- when 'fr' -%}{%- assign kade_label = 'Réalisation' -%}
+          {%- when 'en' -%}{%- assign kade_label = 'Website by' -%}
+          {%- else -%}{%- assign kade_label = 'Wykonanie' -%}
+        {%- endcase %}
+        <small class="copyright__content"> · {{ kade_label }}: <a href="https://kadestudio.pl/">KaDeStudio</a></small>
       </div>
     </div>
   </div>
