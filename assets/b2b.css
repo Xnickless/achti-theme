@@ -805,15 +805,16 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .b2b-contact-info dd { margin: 0; font-size: 1.5rem; line-height: 1.5; }
 
 /* Zdjęcie na modelce po najechaniu na kafelek (25.09.2026, wzór: barts.eu) — packshot znika, zdjęcie z modelką
-   pojawia się prawie od razu i lekko się przybliża. Tylko urządzenia z myszką; na dotyku zostaje packshot,
+   pojawia się prawie od razu; oba zdjęcia lekko się przybliżają i po zjechaniu kursorem płynnie oddalają
+   (także kafelki bez zdjęcia na modelce). Tylko urządzenia z myszką; na dotyku zostaje packshot,
    a zdjęcie na modelce jest drugie w galerii na karcie produktu. Źródło zdjęć: tools/upload_model_photos.py */
 @media screen and (min-width: 990px) and (hover: hover) {
-  .product-card-wrapper .media.media--hover-effect > img { transition: opacity 0.2s ease, transform 0.25s ease-out; }
-  .product-card-wrapper .media.media--hover-effect > img + img { object-fit: cover; }
-  .product-card-wrapper.card-wrapper:hover .media.media--hover-effect > img:first-child:not(:only-child) { opacity: 0; }
-  .product-card-wrapper.card-wrapper:hover .media.media--hover-effect > img + img {
-    opacity: 1;
-    transform: scale(1.015);
-    transition: opacity 0.2s ease, transform 0.25s ease-out;
+  .product-card-wrapper .media.media--hover-effect > img {
+    transform: scale(1);
+    transition: opacity 0.2s ease, transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
+  .product-card-wrapper .media.media--hover-effect > img + img { object-fit: cover; }
+  .product-card-wrapper.card-wrapper:hover .media.media--hover-effect > img { transform: scale(1.04); }
+  .product-card-wrapper.card-wrapper:hover .media.media--hover-effect > img:first-child:not(:only-child) { opacity: 0; }
+  .product-card-wrapper.card-wrapper:hover .media.media--hover-effect > img + img { opacity: 1; }
 }
