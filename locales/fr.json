@@ -694,6 +694,17 @@
       "terms": "CGV B2B",
       "refund": "Retours et réclamations",
       "shipping": "Expédition et livraison"
+    },
+    "tags": {
+      "pompon": "Bonnets à pompon",
+      "bez_pompona": "Bonnets sans pompon",
+      "opaski": "Bandeaux",
+      "welna": "Avec laine",
+      "merino": "Laine mérinos",
+      "podszycie": "Doublés polaire",
+      "bez_podszycia": "Sans doublure",
+      "nowosc": "Nouveautés",
+      "premium": "Premium"
     }
   }
 }

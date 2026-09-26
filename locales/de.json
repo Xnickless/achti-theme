@@ -682,6 +682,17 @@
       "terms": "B2B-AGB",
       "refund": "Rücksendungen und Reklamationen",
       "shipping": "Versand und Lieferung"
+    },
+    "tags": {
+      "pompon": "Mützen mit Bommel",
+      "bez_pompona": "Mützen ohne Bommel",
+      "opaski": "Stirnbänder",
+      "welna": "Mit Wolle",
+      "merino": "Merinowolle",
+      "podszycie": "Mit Fleecefutter",
+      "bez_podszycia": "Ohne Futter",
+      "nowosc": "Neuheiten",
+      "premium": "Premium"
     }
   }
 }

@@ -45,17 +45,18 @@ def title_for(name, segment, kind):
 
 def body_for(name, segment, kind, mats, size, flags, code, sklad=None, podszycie=None, opis=None):
     who = SEGMENTS[segment][1]
-    mat_txt = ' i '.join(mats) if mats else 'miękkiej dzianiny'
+    # bez materiału: „z miękkiej dzianiny” (wcześniej wychodziło „z dzianiny miękkiej dzianiny”, 26.09.2026)
+    z_mat = f"z dzianiny {' i '.join(mats)}" if mats else 'z miękkiej dzianiny'
     lining_phrase, lining_feat = LINING.get(podszycie or '', ('', None))
     size_feat = 'Uniwersalny rozmiar' if size == 'One Size' else f'Rozmiar {size}'
     if kind == 'Komin':
-        intro = f"Komin zimowy {name} to uniwersalny dodatek z dzianiny {mat_txt}{lining_phrase}, który zastępuje szalik i chroni szyję przed wiatrem. Klasyczna forma sprawdza się w codziennych stylizacjach i dobrze uzupełnia ofertę czapek."
+        intro = f"Komin zimowy {name} to uniwersalny dodatek {z_mat}{lining_phrase}, który zastępuje szalik i chroni szyję przed wiatrem. Klasyczna forma sprawdza się w codziennych stylizacjach i dobrze uzupełnia ofertę czapek."
         feats = ['Miękka, elastyczna dzianina', 'Nie uciska i nie krępuje ruchów', size_feat, 'Idealny na sezon jesień–zima']
     elif kind == 'Opaska':
-        intro = f"Opaska zimowa {name} to model {who} z dzianiny {mat_txt}{lining_phrase}, który chroni uszy i czoło przed zimnem, nie spłaszczając fryzury. Sprawdza się na spacer, do biegania i na co dzień, a jej klasyczny wygląd łatwo łączy się z zimowymi stylizacjami."
+        intro = f"Opaska zimowa {name} to model {who} {z_mat}{lining_phrase}, który chroni uszy i czoło przed zimnem, nie spłaszczając fryzury. Sprawdza się na spacer, do biegania i na co dzień, a jej klasyczny wygląd łatwo łączy się z zimowymi stylizacjami."
         feats = ['Miękka, elastyczna dzianina', 'Zakrywa uszy, nie spłaszcza fryzury', size_feat, 'Idealna na sezon jesień–zima']
     else:
-        intro = f"Czapka zimowa {name} to model {who} z dzianiny {mat_txt}{lining_phrase}, łączący klasyczny fason z wygodą noszenia. Dobrze trzyma kształt, jest ciepła i lekka, a jej ponadczasowy wygląd sprawia, że łatwo komponuje się z zimowymi stylizacjami."
+        intro = f"Czapka zimowa {name} to model {who} {z_mat}{lining_phrase}, łączący klasyczny fason z wygodą noszenia. Dobrze trzyma kształt, jest ciepła i lekka, a jej ponadczasowy wygląd sprawia, że łatwo komponuje się z zimowymi stylizacjami."
         feats = ['Miękka i komfortowa dzianina', 'Elastyczny fason dopasowujący się do głowy', size_feat, 'Idealna na sezon jesień–zima']
         if 'CEKIN' in flags: feats.insert(1, 'Zdobienie cekinami')
         if 'MULTI' in flags: feats.insert(1, 'Wielokolorowy wzór')

@@ -682,6 +682,17 @@
       "terms": "B2B Terms of Service",
       "refund": "Returns & claims",
       "shipping": "Shipping & delivery"
+    },
+    "tags": {
+      "pompon": "Pompom hats",
+      "bez_pompona": "Hats without pompom",
+      "opaski": "Headbands",
+      "welna": "With wool",
+      "merino": "Merino wool",
+      "podszycie": "Fleece-lined",
+      "bez_podszycia": "Unlined",
+      "nowosc": "New in",
+      "premium": "Premium"
     }
   }
 }

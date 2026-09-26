@@ -114,8 +114,16 @@
 
         {%- if section.settings.collection.products.size > 0 -%}
           {% assign lazy_load = false %}
-          {% paginate section.settings.collection.products by section.settings.products_to_show %}
-            {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+          {%- liquid
+            # na karcie produktu („Najbardziej popularne”) pomijamy oglądany produkt; pobieramy o jeden więcej, żeby rząd był pełny (26.09.2026)
+            assign current_product_id = product.id | default: 0
+            assign fetch_count = section.settings.products_to_show | plus: 1
+            assign shown_count = 0
+          -%}
+          {% paginate section.settings.collection.products by fetch_count %}
+            {%- for product in section.settings.collection.products limit: fetch_count -%}
+              {%- if product.id == current_product_id or shown_count >= section.settings.products_to_show -%}{%- continue -%}{%- endif -%}
+              {%- assign shown_count = shown_count | plus: 1 -%}
               {% if lazy_load == false and forloop.index > max_columns_to_show %}
                 {% assign lazy_load = true %}
               {% endif %}

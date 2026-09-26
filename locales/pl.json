@@ -706,6 +706,17 @@
       "terms": "Regulamin B2B",
       "refund": "Zwroty i reklamacje",
       "shipping": "Wysyłka i dostawa"
+    },
+    "tags": {
+      "pompon": "Czapki z pomponem",
+      "bez_pompona": "Czapki bez pompona",
+      "opaski": "Opaski",
+      "welna": "Z wełną",
+      "merino": "Wełna merino",
+      "podszycie": "Z podszyciem",
+      "bez_podszycia": "Bez podszycia",
+      "nowosc": "Nowości",
+      "premium": "Premium"
     }
   }
 }

@@ -42,7 +42,7 @@ T = {
     intro_headband="Winter headband {city} is a women’s model knitted from {mat}{lining} that keeps ears and forehead warm without flattening the hair. It works for walks, running and everyday wear, and its classic look goes easily with winter outfits.",
     f_headband=['Soft, stretchy knit', 'Covers the ears without flattening the hair', 'One size fits all', 'Perfect for the autumn–winter season'],
     composition='Composition', lining='Lining',
-    f_size='Size {size}', f_sequins='Sequin embellishment', f_multi='Multicolour pattern', one_size='One Size', one_size_feat='One size fits all', soft='soft knit', and_=' and ',
+    f_size='Size {size}', f_sequins='Sequin embellishment', f_multi='Multicolour pattern', one_size='One Size', one_size_feat='One size fits all', soft='soft yarn', and_=' and ',
  ),
  'fr': dict(
     intro_hat="Le bonnet d'hiver {city} est {who} en maille {mat}{lining}, qui allie une coupe classique au confort au quotidien. Il garde bien sa forme, il est chaud et léger, et son style intemporel s'accorde facilement aux tenues d'hiver.",
@@ -54,7 +54,7 @@ T = {
     intro_headband="Le bandeau d'hiver {city} est un modèle femme en maille {mat}{lining} qui protège les oreilles et le front du froid sans aplatir la coiffure. Il convient à la promenade, à la course et au quotidien, et son style classique s'accorde facilement aux tenues d'hiver.",
     f_headband=['Maille douce et élastique', 'Couvre les oreilles sans aplatir la coiffure', 'Taille unique', 'Idéal pour la saison automne–hiver'],
     composition='Composition', lining='Doublure',
-    f_size='Taille {size}', f_sequins='Décor à sequins', f_multi='Motif multicolore', one_size='Taille unique', one_size_feat='Taille unique', soft='maille douce', and_=' et ',
+    f_size='Taille {size}', f_sequins='Décor à sequins', f_multi='Motif multicolore', one_size='Taille unique', one_size_feat='Taille unique', soft='douce', and_=' et ',
  ),
  'de': dict(
     intro_hat="Die Wintermütze {city} ist {who} aus {mat}-Strick{lining}, das eine klassische Form mit hohem Tragekomfort verbindet. Sie behält ihre Form, ist warm und leicht, und ihr zeitloses Aussehen lässt sich leicht mit Winteroutfits kombinieren.",
@@ -149,6 +149,7 @@ def translate_product(p, loc):
         variant = m.group(6)
     is_snood, is_headband = kind == 'Komin', kind == 'Opaska'
     mats = [mat(x, loc) for x in p['materials']]
+    # bez materiału (26.09.2026): EN „knitted from soft yarn”, FR „en maille douce”, DE „aus weichem Strick” (poprawka niżej)
     mat_txt = t['and_'].join(mats) if mats else t['soft']
     size = p['size']
     lin = LINING.get(p.get('podszycie') or '', {}).get(loc)
@@ -170,6 +171,7 @@ def translate_product(p, loc):
         if 'MULTI' in flags: feats.insert(1, t['f_multi'])
         if 'CEKIN' in flags: feats.insert(1, t['f_sequins'])
         if 'BEZ POMPONA' in flags: feats.insert(1, F_NOPOM[loc])
+    intro = intro.replace('weichem Strick-Strick', 'weichem Strick')
     if lin: feats.insert(-2, lin[1])
     if variant:  # tylko stare tytuły robocze
         sfx = [SUFFIX[k][loc] for k, f in (('z Cekinami', 'CEKIN'), ('Multikolor', 'MULTI')) if f in flags]
@@ -243,6 +245,8 @@ MENU = {  # tytuł PL -> tłumaczenie
 
 THEME = {  # teksty z ustawień motywu (klucz = tekst PL)
  'en': { 
+        "Wkrótce otwieramy": "Opening soon",
+        "Platforma hurtowa Achti dla sklepów i firm. Zostaw e-mail, a damy znać, gdy wystartujemy.": "Achti wholesale platform for shops and businesses. Leave your email and we will let you know when we launch.",
         "Kolekcje": "Collections",
         "200 zł netto (jednorazowo)": "PLN 200 net (one-off)",
         "Rozwijaj swój biznes z Achti": "Grow your business with Achti",
@@ -269,6 +273,8 @@ THEME = {  # teksty z ustawień motywu (klucz = tekst PL)
         'Tworzymy czapki z pasją od ponad 30 lat. Wysoka jakość, naturalne materiały i ponadczasowy design.': 'We have been making hats with passion for over 30 years. High quality, natural materials and timeless design.',
         'Ceny dostępne po zalogowaniu': 'Prices available after login', 'Masz pytania? Napisz do nas.': 'Questions? Write to us.', 'Producent': 'Manufacturer', 'Szybkie zamawianie': 'Quick order'},
  'fr': { 
+        "Wkrótce otwieramy": "Ouverture prochaine",
+        "Platforma hurtowa Achti dla sklepów i firm. Zostaw e-mail, a damy znać, gdy wystartujemy.": "La plateforme de vente en gros Achti pour les boutiques et les entreprises. Laissez votre e-mail et nous vous préviendrons du lancement.",
         "Kolekcje": "Collections",
         "200 zł netto (jednorazowo)": "200 PLN HT (une seule fois)",
         "Rozwijaj swój biznes z Achti": "Développez votre activité avec Achti",
@@ -295,6 +301,8 @@ THEME = {  # teksty z ustawień motywu (klucz = tekst PL)
         'Tworzymy czapki z pasją od ponad 30 lat. Wysoka jakość, naturalne materiały i ponadczasowy design.': 'Nous fabriquons des bonnets avec passion depuis plus de 30 ans. Haute qualité, matières naturelles et design intemporel.',
         'Ceny dostępne po zalogowaniu': 'Prix visibles après connexion', 'Masz pytania? Napisz do nas.': 'Des questions ? Écrivez-nous.', 'Producent': 'Fabricant', 'Szybkie zamawianie': 'Commande rapide'},
  'de': { 
+        "Wkrótce otwieramy": "Wir eröffnen bald",
+        "Platforma hurtowa Achti dla sklepów i firm. Zostaw e-mail, a damy znać, gdy wystartujemy.": "Die Achti-Großhandelsplattform für Geschäfte und Unternehmen. Hinterlassen Sie Ihre E-Mail-Adresse und wir informieren Sie über den Start.",
         "Kolekcje": "Kollektionen",
         "200 zł netto (jednorazowo)": "200 PLN netto (einmalig)",
         "Rozwijaj swój biznes z Achti": "Lassen Sie Ihr Geschäft mit Achti wachsen",

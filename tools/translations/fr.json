@@ -1010,7 +1010,7 @@
   },
   "AZ-2698PC": {
    "title": "Bonnet d'hiver femme Idalia",
-   "body_html": "<p>Le bonnet d'hiver Idalia est un modèle femme en maille maille douce entièrement doublé polaire, qui allie une coupe classique au confort au quotidien. Il garde bien sa forme, il est chaud et léger, et son style intemporel s'accorde facilement aux tenues d'hiver.</p><p>Le modèle Idalia complète bien l'offre des magasins de vêtements, des boutiques et des points de vente d'accessoires d'hiver.</p><p><strong>Caractéristiques du produit :</strong><br>✔ Maille douce et confortable<br>✔ Coupe élastique qui s'adapte à la tête<br>✔ Doublure polaire intégrale (100 % polyester)<br>✔ Taille unique<br>✔ Idéal pour la saison automne–hiver</p><p><strong>Spécifications :</strong></p><ul><li>Modèle: Idalia</li><li>Code: AZ-2698PC</li><li>Matière: —</li><li>Composition: 85 % acrylique, 15 % polyamide</li><li>Doublure: Doublure polaire intégrale, 100 % polyester</li><li>Taille: Taille unique</li><li>Saison: automne / hiver</li></ul>",
+   "body_html": "<p>Le bonnet d'hiver Idalia est un modèle femme en maille douce entièrement doublé polaire, qui allie une coupe classique au confort au quotidien. Il garde bien sa forme, il est chaud et léger, et son style intemporel s'accorde facilement aux tenues d'hiver.</p><p>Le modèle Idalia complète bien l'offre des magasins de vêtements, des boutiques et des points de vente d'accessoires d'hiver.</p><p><strong>Caractéristiques du produit :</strong><br>✔ Maille douce et confortable<br>✔ Coupe élastique qui s'adapte à la tête<br>✔ Doublure polaire intégrale (100 % polyester)<br>✔ Taille unique<br>✔ Idéal pour la saison automne–hiver</p><p><strong>Spécifications :</strong></p><ul><li>Modèle: Idalia</li><li>Code: AZ-2698PC</li><li>Matière: —</li><li>Composition: 85 % acrylique, 15 % polyamide</li><li>Doublure: Doublure polaire intégrale, 100 % polyester</li><li>Taille: Taille unique</li><li>Saison: automne / hiver</li></ul>",
    "seo": {
     "title": "Bonnet d'hiver femme Idalia · AZ-2698PC",
     "description": "Bonnet d'hiver femme Idalia (AZ-2698PC). Matière : 85 % acrylique, 15 % polyamide. Achti — fabricant polonais, gros B2B, prix après inscription."
@@ -3482,7 +3482,7 @@
   },
   "AZ-3072PK": {
    "title": "Bonnet d'hiver homme Selenit",
-   "body_html": "<p>Le bonnet d'hiver Selenit est un modèle homme en maille maille douce avec bandeau intérieur en polaire, qui allie une coupe classique au confort au quotidien. Il garde bien sa forme, il est chaud et léger, et son style intemporel s'accorde facilement aux tenues d'hiver.</p><p>Le modèle Selenit complète bien l'offre des magasins de vêtements, des boutiques et des points de vente d'accessoires d'hiver.</p><p><strong>Caractéristiques du produit :</strong><br>✔ Maille douce et confortable<br>✔ Coupe élastique qui s'adapte à la tête<br>✔ Bandeau intérieur en polaire (100 % polyester)<br>✔ Taille unique<br>✔ Idéal pour la saison automne–hiver</p><p><strong>Spécifications :</strong></p><ul><li>Modèle: Selenit</li><li>Code: AZ-3072PK</li><li>Matière: —</li><li>Composition: 100 % acrylique</li><li>Doublure: Bandeau intérieur en polaire, 100 % polyester</li><li>Taille: Taille unique</li><li>Saison: automne / hiver</li></ul>",
+   "body_html": "<p>Le bonnet d'hiver Selenit est un modèle homme en maille douce avec bandeau intérieur en polaire, qui allie une coupe classique au confort au quotidien. Il garde bien sa forme, il est chaud et léger, et son style intemporel s'accorde facilement aux tenues d'hiver.</p><p>Le modèle Selenit complète bien l'offre des magasins de vêtements, des boutiques et des points de vente d'accessoires d'hiver.</p><p><strong>Caractéristiques du produit :</strong><br>✔ Maille douce et confortable<br>✔ Coupe élastique qui s'adapte à la tête<br>✔ Bandeau intérieur en polaire (100 % polyester)<br>✔ Taille unique<br>✔ Idéal pour la saison automne–hiver</p><p><strong>Spécifications :</strong></p><ul><li>Modèle: Selenit</li><li>Code: AZ-3072PK</li><li>Matière: —</li><li>Composition: 100 % acrylique</li><li>Doublure: Bandeau intérieur en polaire, 100 % polyester</li><li>Taille: Taille unique</li><li>Saison: automne / hiver</li></ul>",
    "seo": {
     "title": "Bonnet d'hiver homme Selenit · AZ-3072PK",
     "description": "Bonnet d'hiver homme Selenit (AZ-3072PK). Matière : 100 % acrylique. Achti — fabricant polonais, gros B2B, prix après inscription."
@@ -3884,6 +3884,8 @@
   "Obsługa klienta": "Service client"
  },
  "theme": {
+  "Wkrótce otwieramy": "Ouverture prochaine",
+  "Platforma hurtowa Achti dla sklepów i firm. Zostaw e-mail, a damy znać, gdy wystartujemy.": "La plateforme de vente en gros Achti pour les boutiques et les entreprises. Laissez votre e-mail et nous vous préviendrons du lancement.",
   "Kolekcje": "Collections",
   "200 zł netto (jednorazowo)": "200 PLN HT (une seule fois)",
   "Rozwijaj swój biznes z Achti": "Développez votre activité avec Achti",

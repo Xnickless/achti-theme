@@ -15,6 +15,13 @@
       <h1 class="collection-hero__title">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
+        {%- comment -%} podkategoria z menu przez tag w adresie, np. /collections/kolekcja-damska/opaski (26.09.2026) {%- endcomment -%}
+        {%- for tag in current_tags -%}
+          {%- assign tag_key = 'b2b.tags.' | append: tag | replace: '-', '_' -%}
+          {%- assign tag_label = tag_key | t -%}
+          {%- if tag_label contains 'translation missing' or tag_label contains 'b2b.tags' -%}{%- assign tag_label = tag -%}{%- endif -%}
+          <span class="collection-hero__subtitle"> · {{ tag_label | escape }}</span>
+        {%- endfor -%}
       </h1>
 
       {%- if section.settings.show_collection_description -%}
