@@ -336,7 +336,7 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .product-card-wrapper .card--card,
 .product-card-wrapper .card--card .card__inner,
 .product-card-wrapper .card--card .card__inner .card__media { background: transparent; }
-.product-card-wrapper .card--card { background: #f5f3f1; border-radius: 0.8rem; }
+.product-card-wrapper .card--card { background: #f5f3f1; border-radius: 0; } /* ostre rogi od 26.09.2026 (Kamil), wcześniej 0.8rem */
 .product-card-wrapper .card--card .card__inner,
 .product-card-wrapper .card--card .card__inner .card__media,
 .product-card-wrapper .card--card .card__inner .card__media .media { z-index: auto; isolation: auto; }
@@ -720,8 +720,8 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
   [id$="__product-grid"] #product-grid,
   .template-search .template-search__results .product-grid,
   .template-search .template-search__results.product-grid {
-    --grid-desktop-horizontal-spacing: 2.4rem; /* Trade liczy szerokość kafelka z tej zmiennej — sam column-gap łamie rząd do 3 sztuk */
-    --grid-desktop-vertical-spacing: 3.2rem;
+    --grid-desktop-horizontal-spacing: 1.2rem; /* Trade liczy szerokość kafelka z tej zmiennej — sam column-gap łamie rząd do 3 sztuk; 26.09.2026: 2.4 → 1.2 (Kamil: mniejsze odstępy) */
+    --grid-desktop-vertical-spacing: 1.6rem; /* 26.09.2026: 3.2 → 1.6 */
   }
 }
 
@@ -739,8 +739,8 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
   }
   .collection:not(.collection--marquee):not(.collection--full-width) .grid--4-col-desktop,
   .collection:not(.collection--marquee):not(.collection--full-width) .grid--3-col-desktop {
-    --grid-desktop-horizontal-spacing: 2.4rem;
-    --grid-desktop-vertical-spacing: 3.2rem;
+    --grid-desktop-horizontal-spacing: 1.2rem;
+    --grid-desktop-vertical-spacing: 1.6rem;
   }
 }
 
