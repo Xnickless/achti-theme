@@ -336,7 +336,7 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .product-card-wrapper .card--card,
 .product-card-wrapper .card--card .card__inner,
 .product-card-wrapper .card--card .card__inner .card__media { background: transparent; }
-.product-card-wrapper .card--card { background: #f5f3f1; border-radius: 0; } /* ostre rogi od 26.09.2026 (Kamil), wcześniej 0.8rem */
+.product-card-wrapper .card--card { background: #f2f1ef; border-radius: 0; } /* 29.09.2026: neutralna jasna szarość jak barts.eu (wybór Kamila, opcja 1), wcześniej #f5f3f1 */ /* ostre rogi od 26.09.2026 (Kamil), wcześniej 0.8rem */
 .product-card-wrapper .card--card .card__inner,
 .product-card-wrapper .card--card .card__inner .card__media,
 .product-card-wrapper .card--card .card__inner .card__media .media { z-index: auto; isolation: auto; }
@@ -853,7 +853,7 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .b2b-tiles__list::-webkit-scrollbar { display: none; }
 .b2b-tiles__item { scroll-snap-align: start; }
 .b2b-tiles__link { display: block; text-decoration: none; color: rgb(var(--color-foreground)); }
-.b2b-tiles__media { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #f5f3f1; }
+.b2b-tiles__media { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #f2f1ef; }
 .b2b-tiles__media img, .b2b-tiles__media svg { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1); }
 .b2b-tiles__label { display: block; margin-top: 1.2rem; font-family: var(--font-heading-family); text-transform: uppercase; letter-spacing: 0.1em; font-size: calc(var(--font-heading-scale) * 1.3rem); }
 .b2b-tiles__label span { display: inline-block; transition: transform 0.25s ease; }
