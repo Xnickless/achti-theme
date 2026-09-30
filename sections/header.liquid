@@ -368,6 +368,13 @@
         {% render 'b2b-currency' %}
       {%- endif -%}
 
+      {%- comment -%} Zachęta do rejestracji przy ikonie profilu, tylko dla gości (29.09.2026 — zamiast osobnego pasa na stronie głównej) {%- endcomment -%}
+      {%- if customer == nil and settings.b2b_register_page != blank -%}
+        <a href="{{ settings.b2b_register_page.url }}" class="b2b-header-register small-hide medium-hide">
+          {{- 'b2b.header_register' | t -}}
+        </a>
+      {%- endif -%}
+
       {%- if shop.customer_accounts_enabled -%}
         <a
           href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"

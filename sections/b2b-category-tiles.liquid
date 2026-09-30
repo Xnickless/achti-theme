@@ -1,0 +1,54 @@
+{%- comment -%}
+  Kafle kategorii ze zdjęciami na modelkach (29.09.2026, wzór: barts.eu „Our collections”): duże zdjęcie 4:5,
+  pod nim nazwa kategorii ze strzałką. Na telefonie przewijane w poziomie. Zdjęcia w Treść → Pliki (achti-kafel-*.jpg).
+{%- endcomment -%}
+{%- if section.blocks.size > 0 -%}
+  <div class="b2b-tiles color-{{ section.settings.color_scheme }} gradient">
+    <div class="page-width">
+      {%- if section.settings.title != blank -%}
+        <h2 class="b2b-tiles__title h2">{{ section.settings.title | escape }}</h2>
+      {%- endif -%}
+      <ul class="b2b-tiles__list" role="list" style="--tiles: {{ section.blocks.size }};">
+        {%- for block in section.blocks -%}
+          <li class="b2b-tiles__item" {{ block.shopify_attributes }}>
+            <a href="{{ block.settings.link | default: '#' }}" class="b2b-tiles__link">
+              <span class="b2b-tiles__media">
+                {%- if block.settings.image != blank -%}
+                  {{ block.settings.image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '360, 540, 720, 900', sizes: '(min-width: 990px) 20vw, 60vw', alt: block.settings.label }}
+                {%- else -%}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {%- endif -%}
+              </span>
+              <span class="b2b-tiles__label">{{ block.settings.label | escape }} <span aria-hidden="true">→</span></span>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Kafle kategorii (B2B)",
+  "tag": "section",
+  "class": "section section--b2b-tiles",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Nagłówek (opcjonalnie)" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Schemat kolorów", "default": "scheme-1" }
+  ],
+  "blocks": [
+    {
+      "type": "tile",
+      "name": "Kafel",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Zdjęcie (najlepiej 4:5, z modelką)" },
+        { "type": "text", "id": "label", "label": "Nazwa", "default": "Ona" },
+        { "type": "url", "id": "link", "label": "Link" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [{ "name": "Kafle kategorii (B2B)", "blocks": [{ "type": "tile" }, { "type": "tile" }, { "type": "tile" }, { "type": "tile" }] }]
+}
+{% endschema %}

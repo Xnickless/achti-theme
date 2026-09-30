@@ -1,0 +1,63 @@
+{%- comment -%}
+  Pasek z konkretami pod hero (29.09.2026): kilka liczb, które kupiec B2B chce zobaczyć od razu
+  (lata produkcji, liczba modeli, czas realizacji, zasięg wysyłki). Blok z „product_count” podstawia
+  aktualną liczbę produktów w sklepie, więc nie trzeba jej aktualizować ręcznie.
+{%- endcomment -%}
+{%- if section.blocks.size > 0 -%}
+  <div class="b2b-usp color-{{ section.settings.color_scheme }} gradient">
+    <ul class="b2b-usp__list page-width" role="list">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign value = block.settings.value
+          if block.settings.product_count
+            assign value = collections.all.all_products_count | append: ' ' | append: block.settings.suffix
+          endif
+        -%}
+        <li class="b2b-usp__item" {{ block.shopify_attributes }}>
+          <span class="b2b-usp__value">{{ value | escape }}</span>
+          <span class="b2b-usp__label">{{ block.settings.label | escape }}</span>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Pasek z konkretami (B2B)",
+  "tag": "section",
+  "class": "section section--b2b-usp",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Schemat kolorów",
+      "default": "scheme-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Liczba z opisem",
+      "settings": [
+        { "type": "text", "id": "value", "label": "Liczba / wyróżnik", "default": "30+ lat" },
+        { "type": "checkbox", "id": "product_count", "label": "Wstaw aktualną liczbę produktów w sklepie", "default": false },
+        { "type": "text", "id": "suffix", "label": "Tekst po liczbie produktów (np. „modeli”)", "default": "modeli" },
+        { "type": "text", "id": "label", "label": "Opis", "default": "własnej produkcji w Polsce" }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Pasek z konkretami (B2B)",
+      "blocks": [
+        { "type": "item", "settings": { "value": "30+ lat", "label": "własnej produkcji w Polsce" } },
+        { "type": "item", "settings": { "product_count": true, "suffix": "modeli", "label": "czapek, opasek i kominiarek" } },
+        { "type": "item", "settings": { "value": "7–14 dni", "label": "od zamówienia do wysyłki" } },
+        { "type": "item", "settings": { "value": "27 krajów", "label": "dostawa w całej UE" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

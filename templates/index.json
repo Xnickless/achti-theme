@@ -71,7 +71,8 @@
         "padding_top": 28,
         "padding_bottom": 28,
         "hide_for_b2b": true
-      }
+      },
+      "disabled": true
     },
     "multicolumn": {
       "type": "multicolumn",
@@ -169,7 +170,7 @@
         "products_to_show": 8,
         "title": "<strong>Bestsellery</strong>",
         "heading_size": "h2",
-        "description": "<p>Poznaj nasze najlepsze modele</p>",
+        "description": "",
         "show_description": true,
         "description_style": "body",
         "columns_desktop": 4,
@@ -187,7 +188,9 @@
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
-        "padding_bottom": 52
+        "padding_bottom": 52,
+        "autoload": true,
+        "autoload_max": 32
       }
     },
     "featured_collection2": {
@@ -281,7 +284,8 @@
         "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 48
-      }
+      },
+      "disabled": true
     },
     "newsletter_popup": {
       "type": "newsletter-popup",
@@ -296,10 +300,111 @@
         "note": "Tylko dla klientów B2B",
         "color_scheme": "scheme-1"
       }
+    },
+    "usp_bar": {
+      "type": "b2b-usp-bar",
+      "blocks": {
+        "lata": {
+          "type": "item",
+          "settings": {
+            "value": "30+ lat",
+            "label": "własnej produkcji w Polsce"
+          }
+        },
+        "modele": {
+          "type": "item",
+          "settings": {
+            "product_count": true,
+            "suffix": "modeli",
+            "label": "czapek, opasek i kominiarek"
+          }
+        },
+        "realizacja": {
+          "type": "item",
+          "settings": {
+            "value": "7–14 dni",
+            "label": "od zamówienia do wysyłki"
+          }
+        },
+        "ue": {
+          "type": "item",
+          "settings": {
+            "value": "27 krajów",
+            "label": "dostawa w całej UE"
+          }
+        }
+      },
+      "block_order": [
+        "lata",
+        "modele",
+        "realizacja",
+        "ue"
+      ],
+      "settings": {
+        "color_scheme": "scheme-1"
+      }
+    },
+    "category_tiles": {
+      "type": "b2b-category-tiles",
+      "blocks": {
+        "ona": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/achti-kafel-ona.jpg",
+            "label": "Ona",
+            "link": "shopify://collections/kolekcja-damska"
+          }
+        },
+        "on": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/achti-kafel-on.jpg",
+            "label": "On",
+            "link": "shopify://collections/kolekcja-meska"
+          }
+        },
+        "dzieci": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/achti-kafel-dzieci.jpg",
+            "label": "Dla dzieci",
+            "link": "shopify://collections/kolekcja-dla-dzieci"
+          }
+        },
+        "opaski": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/achti-kafel-opaski.jpg",
+            "label": "Opaski",
+            "link": "shopify://collections/opaski"
+          }
+        },
+        "premium": {
+          "type": "tile",
+          "settings": {
+            "image": "shopify://shop_images/achti-kafel-premium.jpg",
+            "label": "Premium Merino",
+            "link": "shopify://collections/kolekcja-premium"
+          }
+        }
+      },
+      "block_order": [
+        "ona",
+        "on",
+        "dzieci",
+        "opaski",
+        "premium"
+      ],
+      "settings": {
+        "title": "",
+        "color_scheme": "scheme-1"
+      }
     }
   },
   "order": [
     "image_banner",
+    "usp_bar",
+    "category_tiles",
     "rich_text",
     "featured_collection2",
     "featured_collection1",

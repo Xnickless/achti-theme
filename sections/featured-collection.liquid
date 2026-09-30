@@ -106,6 +106,7 @@
       <ul
         id="Slider-{{ section.id }}"
         data-id="{{ section.id }}"
+        {% if section.settings.autoload and section.settings.marquee != true %}data-autoload="{{ section.settings.autoload_max }}" data-section-id="{{ section.id }}"{% endif %}
         class="grid product-grid contains-card contains-card--product{% if section.settings.marquee %} fc-marquee__track{% endif %}{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %} grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}{% if show_mobile_slider or show_desktop_slider %} slider{% if show_desktop_slider %} slider--desktop{% endif %}{% if show_mobile_slider %} slider--tablet grid--peek{% endif %}{% endif %}"
         role="list"
         aria-label="{{ 'general.slider.name' | t }}"
@@ -117,7 +118,10 @@
           {%- liquid
             # na karcie produktu („Najbardziej popularne”) pomijamy oglądany produkt; pobieramy o jeden więcej, żeby rząd był pełny (26.09.2026)
             assign current_product_id = product.id | default: 0
-            assign fetch_count = section.settings.products_to_show | plus: 1
+            assign fetch_count = section.settings.products_to_show
+            if current_product_id != 0
+              assign fetch_count = fetch_count | plus: 1
+            endif
             assign shown_count = 0
           -%}
           {% paginate section.settings.collection.products by fetch_count %}
@@ -227,8 +231,46 @@
       <script src="{{ 'fc-marquee.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
+    {%- liquid
+      assign autoload_on = false
+      if section.settings.autoload and section.settings.marquee != true and more_in_collection
+        assign autoload_on = true
+      endif
+    -%}
+    {%- if autoload_on -%}
+      {%- comment -%} Bestsellery: kolejne produkty doładowują się same przy przewijaniu (Section Rendering API, ?page=N) do limitu autoload_max; potem pokazuje się „Wyświetl wszystkie” (29.09.2026) {%- endcomment -%}
+      <div class="fc-autoload__sentinel" data-for="Slider-{{ section.id }}" aria-hidden="true"></div>
+      <script>
+        (function () {
+          var list = document.getElementById('Slider-{{ section.id }}');
+          var sentinel = document.querySelector('.fc-autoload__sentinel[data-for="Slider-{{ section.id }}"]');
+          var viewAll = document.querySelector('.fc-autoload__viewall[data-for="Slider-{{ section.id }}"]');
+          if (!list || !sentinel) return;
+          var max = parseInt(list.dataset.autoload, 10) || 32, page = 1, busy = false, done = false;
+          function finish() { done = true; if (io) io.disconnect(); sentinel.remove(); if (viewAll) viewAll.hidden = false; }
+          function load() {
+            if (busy || done) return;
+            if (list.children.length >= max) return finish();
+            busy = true; page += 1;
+            var url = new URL(window.location.href);
+            url.searchParams.set('section_id', list.dataset.sectionId);
+            url.searchParams.set('page', page);
+            fetch(url.toString()).then(function (r) { return r.text(); }).then(function (html) {
+              var doc = new DOMParser().parseFromString(html, 'text/html');
+              var items = doc.querySelectorAll('#Slider-{{ section.id }} > li');
+              if (!items.length) return finish();
+              items.forEach(function (li) { if (list.children.length < max) list.appendChild(document.importNode(li, true)); });
+              busy = false;
+              if (list.children.length >= max || items.length < {{ section.settings.products_to_show }}) finish();
+            }).catch(finish);
+          }
+          var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (e) { if (e[0].isIntersecting) load(); }, { rootMargin: '600px' }) : null;
+          if (io) io.observe(sentinel); else finish();
+        })();
+      </script>
+    {%- endif -%}
     {%- if section.settings.show_view_all and more_in_collection -%}
-      <div class="center collection__view-all{% if section.settings.marquee %} fc-marquee__viewall{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"{% if section.settings.marquee %} hidden{% endif %}>
+      <div class="center collection__view-all{% if section.settings.marquee %} fc-marquee__viewall{% endif %}{% if autoload_on %} fc-autoload__viewall{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"{% if section.settings.marquee or autoload_on %} hidden{% endif %}{% if autoload_on %} data-for="Slider-{{ section.id }}"{% endif %}>
         <a
           href="{{ section.settings.collection.url }}"
           class="{% if section.settings.view_all_style == 'link' %}link underlined-link{% elsif section.settings.view_all_style == 'solid' %}button{% else %}button button--secondary{% endif %}"
@@ -368,6 +410,22 @@
       "default": true,
       "label": "t:sections.featured-collection.settings.show_view_all.label",
       "info": "t:sections.featured-collection.settings.show_view_all.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoload",
+      "label": "Doładowuj produkty przy przewijaniu",
+      "info": "Bez klikania „Wyświetl wszystkie”; przycisk pojawi się po osiągnięciu limitu.",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoload_max",
+      "label": "Maks. liczba produktów po doładowaniu",
+      "min": 12,
+      "max": 60,
+      "step": 4,
+      "default": 32
     },
     {
       "type": "header",

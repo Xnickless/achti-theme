@@ -799,9 +799,9 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .grid__item .product-card-wrapper > .card--card { height: 100%; }
 
 /* Strona Kontakt: dane firmy nad formularzem (25.09.2026) */
-.b2b-contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1.6rem 3.2rem; margin: 0 0 3.2rem; padding: 2rem 0; border-top: 1px solid rgb(var(--color-foreground) / 0.12); border-bottom: 1px solid rgb(var(--color-foreground) / 0.12); }
+.b2b-contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1.6rem 3.2rem; margin: 0 0 3.2rem; padding: 2rem 0; border-top: 1px solid rgba(var(--color-foreground), 0.12); border-bottom: 1px solid rgba(var(--color-foreground), 0.12); }
 .b2b-contact-info__row { margin: 0; }
-.b2b-contact-info dt { font-size: 1.2rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(var(--color-foreground) / 0.65); margin-bottom: 0.4rem; }
+.b2b-contact-info dt { font-size: 1.2rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(var(--color-foreground), 0.65); margin-bottom: 0.4rem; }
 .b2b-contact-info dd { margin: 0; font-size: 1.5rem; line-height: 1.5; }
 
 /* Zdjęcie na modelce po najechaniu na kafelek (25.09.2026, wzór: barts.eu) — packshot znika, zdjęcie z modelką
@@ -817,4 +817,49 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
   .product-card-wrapper.card-wrapper:hover .media.media--hover-effect > img { transform: scale(1.04); }
   .product-card-wrapper.card-wrapper:hover .media.media--hover-effect > img:first-child:not(:only-child) { opacity: 0; }
   .product-card-wrapper.card-wrapper:hover .media.media--hover-effect > img + img { opacity: 1; }
+}
+
+/* Pasek z konkretami pod hero (29.09.2026, sections/b2b-usp-bar.liquid): kroje z reszty strony — liczby jak nagłówki sekcji
+   („Nowości”, „Bestsellery”: --font-heading-family, Tenor Sans), opis jak nazwy produktów na kafelkach (ten sam krój,
+   wersaliki, rozstrzelenie 0.08em); cienkie pionowe linie; na telefonie 2×2 */
+.b2b-usp { border-bottom: 1px solid rgba(var(--color-foreground), 0.08); }
+.b2b-usp__list { list-style: none; margin: 0 auto; padding-top: 3.6rem; padding-bottom: 3.6rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 3.2rem; }
+.b2b-usp__item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; padding: 0 1.6rem; }
+.b2b-usp__value { font-family: var(--font-heading-family); font-style: var(--font-heading-style); font-weight: var(--font-heading-weight);
+  letter-spacing: calc(var(--font-heading-scale) * 0.06rem); font-size: calc(var(--font-heading-scale) * 2.8rem); line-height: 1.1; color: rgb(var(--color-foreground)); white-space: nowrap; }
+.b2b-usp__label { font-family: var(--font-heading-family); font-weight: var(--font-heading-weight); text-transform: uppercase; letter-spacing: 0.08em;
+  font-size: calc(var(--font-heading-scale) * 1.15rem); line-height: 1.4; color: rgba(var(--color-foreground), 0.7); max-width: 30rem; }
+@media screen and (min-width: 750px) {
+  .b2b-usp__list { grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); grid-template-columns: none; padding-top: 4.4rem; padding-bottom: 4.4rem; }
+  .b2b-usp__item + .b2b-usp__item { border-left: 1px solid rgba(var(--color-foreground), 0.1); }
+  .b2b-usp__value { font-size: calc(var(--font-heading-scale) * 3.6rem); }
+  .b2b-usp__label { font-size: calc(var(--font-heading-scale) * 1.25rem); white-space: nowrap; max-width: none; }
+}
+
+/* Nagłówek: „Załóż konto B2B” obok ikony profilu, tylko dla gości (29.09.2026; wcześniej beżowy pas pod hero, teraz wyłączony) */
+.b2b-header-register {
+  font-family: var(--font-heading-family); font-size: 1.15rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgb(var(--color-foreground)); text-decoration: none; white-space: nowrap;
+  padding: 0.7rem 1.4rem; margin-right: 0.8rem; border: 1px solid rgba(var(--color-foreground), 0.75);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.b2b-header-register:hover { background: rgb(var(--color-foreground)); color: rgb(var(--color-background)); }
+
+/* Kafle kategorii ze zdjęciami (29.09.2026, sections/b2b-category-tiles.liquid, wzór barts.eu): zdjęcie 4:5 bez zaokrągleń,
+   lekkie przybliżenie po najechaniu jak na kafelkach produktów, podpis krojem nagłówków wersalikami; telefon: przewijanie w poziomie */
+.b2b-tiles { padding: 3.6rem 0 1.2rem; }
+.b2b-tiles__title { text-align: center; margin: 0 0 2.4rem; }
+.b2b-tiles__list { list-style: none; margin: 0; padding: 0 0 0.4rem; display: grid; grid-auto-flow: column; grid-auto-columns: 62%; gap: 1.2rem; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.b2b-tiles__list::-webkit-scrollbar { display: none; }
+.b2b-tiles__item { scroll-snap-align: start; }
+.b2b-tiles__link { display: block; text-decoration: none; color: rgb(var(--color-foreground)); }
+.b2b-tiles__media { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: #f5f3f1; }
+.b2b-tiles__media img, .b2b-tiles__media svg { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1); }
+.b2b-tiles__label { display: block; margin-top: 1.2rem; font-family: var(--font-heading-family); text-transform: uppercase; letter-spacing: 0.1em; font-size: calc(var(--font-heading-scale) * 1.3rem); }
+.b2b-tiles__label span { display: inline-block; transition: transform 0.25s ease; }
+@media screen and (min-width: 990px) {
+  .b2b-tiles .page-width { max-width: 144rem; padding-left: 4rem; padding-right: 4rem; }
+  .b2b-tiles__list { grid-auto-flow: row; grid-template-columns: repeat(var(--tiles), minmax(0, 1fr)); overflow: visible; }
+  .b2b-tiles__link:hover .b2b-tiles__media img { transform: scale(1.04); }
+  .b2b-tiles__link:hover .b2b-tiles__label span { transform: translateX(0.4rem); }
 }
