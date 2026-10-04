@@ -825,8 +825,8 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .b2b-usp { border-bottom: 1px solid rgba(var(--color-foreground), 0.08); }
 .b2b-usp__list { list-style: none; margin: 0 auto; padding-top: 3.6rem; padding-bottom: 3.6rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 3.2rem; }
 .b2b-usp__item { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem; padding: 0 1.6rem; }
-.b2b-usp__value { font-family: var(--font-heading-family); font-style: var(--font-heading-style); font-weight: var(--font-heading-weight);
-  letter-spacing: calc(var(--font-heading-scale) * 0.06rem); font-size: calc(var(--font-heading-scale) * 2.8rem); line-height: 1.1; color: rgb(var(--color-foreground)); white-space: nowrap; }
+.b2b-usp__value { /* krój z ustawienia sekcji „Krój liczb” (Jost Light), patrz {% style %} w sekcji */
+  letter-spacing: 0.01em; font-size: calc(var(--font-heading-scale) * 2.8rem); line-height: 1.1; color: rgb(var(--color-foreground)); white-space: nowrap; }
 .b2b-usp__label { font-family: var(--font-heading-family); font-weight: var(--font-heading-weight); text-transform: uppercase; letter-spacing: 0.08em;
   font-size: calc(var(--font-heading-scale) * 1.15rem); line-height: 1.4; color: rgba(var(--color-foreground), 0.7); max-width: 30rem; }
 @media screen and (min-width: 750px) {

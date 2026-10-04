@@ -4,6 +4,14 @@
   aktualną liczbę produktów w sklepie, więc nie trzeba jej aktualizować ręcznie.
 {%- endcomment -%}
 {%- if section.blocks.size > 0 -%}
+  {%- style -%}
+    {{ section.settings.value_font | font_face: font_display: 'swap' }}
+    #shopify-section-{{ section.id }} .b2b-usp__value {
+      font-family: {{ section.settings.value_font.family }}, {{ section.settings.value_font.fallback_families }};
+      font-weight: {{ section.settings.value_font.weight }};
+      font-style: {{ section.settings.value_font.style }};
+    }
+  {%- endstyle -%}
   <div class="b2b-usp color-{{ section.settings.color_scheme }} gradient">
     <ul class="b2b-usp__list page-width" role="list">
       {%- for block in section.blocks -%}
@@ -28,6 +36,13 @@
   "tag": "section",
   "class": "section section--b2b-usp",
   "settings": [
+    {
+      "type": "font_picker",
+      "id": "value_font",
+      "label": "Krój liczb",
+      "info": "03.10.2026: Jost Light (wybór Kamila z porównania Cormorant / Marcellus / Lora / Jost)",
+      "default": "jost_n3"
+    },
     {
       "type": "color_scheme",
       "id": "color_scheme",
