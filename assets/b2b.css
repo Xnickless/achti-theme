@@ -863,3 +863,13 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
   .b2b-tiles__link:hover .b2b-tiles__media img { transform: scale(1.04); }
   .b2b-tiles__link:hover .b2b-tiles__label span { transform: translateX(0.4rem); }
 }
+
+/* Wybór języka w nagłówku obok „Załóż konto B2B” (03.10.2026, Kamil: język ma być u góry; wcześniej w pasku ogłoszeń) —
+   ten sam krój i wersaliki co przycisk obok */
+.header .header__icons .localization-form__select.caption-large {
+  font-family: var(--font-heading-family); text-transform: uppercase; letter-spacing: 0.1em;
+  font-size: 1.15rem; padding: 0.7rem 2.4rem 0.7rem 0.8rem; margin-right: 0.4rem; min-height: auto;
+}
+.header__icons .localization-form__select .icon-caret { right: 0.6rem; }
+.header .header__icons .disclosure__list-wrapper,
+.header .header__icons .localization-form__select { border-radius: 0; }
