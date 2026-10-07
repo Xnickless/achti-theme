@@ -1478,6 +1478,25 @@
         "default": true
       },
       {
+        "type": "number",
+        "id": "b2b_min_order_pln",
+        "label": "Minimalna wartość zamówienia (PLN netto, 0 = brak)",
+        "default": 2000
+      },
+      {
+        "type": "number",
+        "id": "b2b_min_order_eur",
+        "label": "Minimalna wartość zamówienia (EUR netto, rynek UE)",
+        "default": 470
+      },
+      {
+        "type": "number",
+        "id": "b2b_free_shipping_pln",
+        "label": "Darmowa dostawa w Polsce od (PLN netto, 0 = brak)",
+        "info": "Tylko komunikat w koszyku — samą darmową stawkę ustaw w Ustawienia → Wysyłka i dostawa.",
+        "default": 5000
+      },
+      {
         "type": "page",
         "id": "b2b_register_page",
         "label": "Strona rejestracji firmy (link w komunikacie)"
@@ -1585,6 +1604,12 @@
         "id": "producer_phone",
         "label": "Telefon (opcjonalnie)",
         "default": "+48 12 350 69 25"
+      },
+      {
+        "type": "text",
+        "id": "sales_email",
+        "label": "E-mail działu sprzedaży (stopka)",
+        "default": "hello@achti.com"
       }
     ]
   }

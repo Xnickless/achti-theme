@@ -115,13 +115,15 @@
                 </small>
               </div>
             {%- else -%}
+              {% render 'b2b-cart-minimum' %}
+              {%- capture below_min -%}{% render 'b2b-cart-minimum', check: true %}{%- endcapture -%}
               <div class="cart__ctas" {{ block.shopify_attributes }}>
                 <button
                   type="submit"
                   id="checkout"
                   class="cart__checkout-button button"
                   name="checkout"
-                  {% if cart == empty %}
+                  {% if cart == empty or below_min == '1' %}
                     disabled
                   {% endif %}
                   form="cart"

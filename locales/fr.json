@@ -575,7 +575,12 @@
       "submit": "Envoyer la demande",
       "success": "Demande envoyée. Nous activons le compte après vérification — généralement sous un jour ouvré.",
       "have_account": "Vous avez déjà un compte ?",
-      "delivery": "Adresse de livraison (si différente)"
+      "delivery": "Adresse de livraison (si différente)",
+      "type_wholesale": "Grossiste",
+      "other_details": "Décrivez votre activité — où et à qui vous vendez",
+      "volume": "Quantités de commande prévues",
+      "volume_hint": "Par ex. 300 pièces par saison ou 50 pièces par mois — cela nous aide à adapter les conditions.",
+      "terms_html": "J’accepte les <a href=\"{{ terms_url }}\" target=\"_blank\" class=\"link\">conditions B2B</a> et la <a href=\"{{ privacy_url }}\" target=\"_blank\" class=\"link\">politique de confidentialité</a>."
     },
     "load_more": "Afficher plus de produits",
     "net_note": "Prix HT — TVA ajoutée au panier",
@@ -706,6 +711,15 @@
       "nowosc": "Nouveautés",
       "premium": "Premium"
     },
-    "header_register": "Créer un compte B2B"
+    "header_register": "Créer un compte B2B",
+    "footer": {
+      "hours": "Lun.–ven. 8h00–16h00",
+      "contact": "Contact"
+    },
+    "cart": {
+      "min_order_html": "<strong>Le montant minimum de commande est de {{ min }} HT.</strong> Il manque encore {{ missing }} — ajoutez des produits pour passer au paiement.",
+      "free_shipping_missing_html": "Encore <strong>{{ missing }}</strong> HT pour la livraison gratuite en Pologne.",
+      "free_shipping_ok": "Vous bénéficiez de la livraison gratuite en Pologne."
+    }
   }
 }

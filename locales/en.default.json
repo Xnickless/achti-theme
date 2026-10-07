@@ -563,7 +563,12 @@
       "submit": "Submit application",
       "success": "Application sent. We activate the account after verification — usually within one business day.",
       "have_account": "Already have an account?",
-      "delivery": "Delivery address (if different)"
+      "delivery": "Delivery address (if different)",
+      "type_wholesale": "Wholesaler",
+      "other_details": "Describe your business — where and to whom you sell",
+      "volume": "Expected order quantities",
+      "volume_hint": "E.g. 300 pcs per season or 50 pcs per month — this helps us tailor the terms.",
+      "terms_html": "I accept the <a href=\"{{ terms_url }}\" target=\"_blank\" class=\"link\">B2B terms</a> and the <a href=\"{{ privacy_url }}\" target=\"_blank\" class=\"link\">privacy policy</a>."
     },
     "load_more": "Show more products",
     "net_note": "Net price — VAT added in the cart",
@@ -694,6 +699,15 @@
       "nowosc": "New in",
       "premium": "Premium"
     },
-    "header_register": "Open a B2B account"
+    "header_register": "Open a B2B account",
+    "footer": {
+      "hours": "Mon–Fri 8:00–16:00",
+      "contact": "Contact"
+    },
+    "cart": {
+      "min_order_html": "<strong>The minimum order value is {{ min }} net.</strong> {{ missing }} to go — add products to proceed to checkout.",
+      "free_shipping_missing_html": "<strong>{{ missing }}</strong> net to go for free delivery in Poland.",
+      "free_shipping_ok": "You qualify for free delivery in Poland."
+    }
   }
 }

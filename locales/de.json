@@ -563,7 +563,12 @@
       "submit": "Antrag senden",
       "success": "Antrag gesendet. Wir schalten das Konto nach Prüfung frei — meist innerhalb eines Werktags.",
       "have_account": "Bereits ein Konto?",
-      "delivery": "Lieferadresse (falls abweichend)"
+      "delivery": "Lieferadresse (falls abweichend)",
+      "type_wholesale": "Großhandel",
+      "other_details": "Beschreiben Sie Ihr Geschäft — wo und an wen Sie verkaufen",
+      "volume": "Voraussichtliche Bestellmengen",
+      "volume_hint": "Z. B. 300 Stück pro Saison oder 50 Stück pro Monat — so können wir die Konditionen anpassen.",
+      "terms_html": "Ich akzeptiere die <a href=\"{{ terms_url }}\" target=\"_blank\" class=\"link\">B2B-AGB</a> und die <a href=\"{{ privacy_url }}\" target=\"_blank\" class=\"link\">Datenschutzerklärung</a>."
     },
     "load_more": "Mehr Produkte anzeigen",
     "net_note": "Nettopreis — MwSt. im Warenkorb",
@@ -694,6 +699,15 @@
       "nowosc": "Neuheiten",
       "premium": "Premium"
     },
-    "header_register": "B2B-Konto eröffnen"
+    "header_register": "B2B-Konto eröffnen",
+    "footer": {
+      "hours": "Mo.–Fr. 8:00–16:00",
+      "contact": "Kontakt"
+    },
+    "cart": {
+      "min_order_html": "<strong>Der Mindestbestellwert beträgt {{ min }} netto.</strong> Es fehlen noch {{ missing }} — fügen Sie Produkte hinzu, um zur Kasse zu gehen.",
+      "free_shipping_missing_html": "Noch <strong>{{ missing }}</strong> netto bis zur kostenlosen Lieferung in Polen.",
+      "free_shipping_ok": "Sie erhalten kostenlose Lieferung in Polen."
+    }
   }
 }

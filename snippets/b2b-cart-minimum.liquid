@@ -1,0 +1,42 @@
+{%- comment -%}
+  Minimalna wartość zamówienia i próg darmowej dostawy w koszyku (07.10.2026, „Warunki współpracy”: min. 2000 zł netto,
+  dostawa gratis w Polsce od 5000 zł netto). Ceny w sklepie są netto, więc porównujemy items_subtotal_price.
+  Progi w ustawieniach motywu (grupa B2B): b2b_min_order_pln / b2b_min_order_eur / b2b_free_shipping_pln.
+  check: true → wypisuje „1”, gdy koszyk jest poniżej minimum (do zablokowania przycisku „Realizuj zakup”);
+  bez check → komunikat dla klienta. UWAGA: samą darmową stawkę wysyłki trzeba ustawić w panelu (Wysyłka i dostawa).
+{%- endcomment -%}
+{%- liquid
+  assign min = 0
+  case cart.currency.iso_code
+    when 'PLN'
+      assign min = settings.b2b_min_order_pln | default: 0
+    when 'EUR'
+      assign min = settings.b2b_min_order_eur | default: 0
+  endcase
+  assign min_cents = min | times: 100
+  assign subtotal = cart.items_subtotal_price
+  assign below = false
+  if cart.item_count > 0 and min_cents > 0 and subtotal < min_cents
+    assign below = true
+  endif
+  assign free_cents = 0
+  if cart.currency.iso_code == 'PLN'
+    assign free_cents = settings.b2b_free_shipping_pln | default: 0 | times: 100
+  endif
+-%}
+{%- if check -%}
+  {%- if below -%}1{%- endif -%}
+{%- elsif cart.item_count > 0 -%}
+  {%- if below -%}
+    {%- assign missing = min_cents | minus: subtotal | money -%}
+    {%- assign min_fmt = min_cents | money_without_trailing_zeros -%}
+    <p class="b2b-cart-note b2b-cart-note--warn" role="status">
+      {{ 'b2b.cart.min_order_html' | t: min: min_fmt, missing: missing }}
+    </p>
+  {%- elsif free_cents > 0 and subtotal < free_cents -%}
+    {%- assign missing = free_cents | minus: subtotal | money -%}
+    <p class="b2b-cart-note" role="status">{{ 'b2b.cart.free_shipping_missing_html' | t: missing: missing }}</p>
+  {%- elsif free_cents > 0 -%}
+    <p class="b2b-cart-note b2b-cart-note--ok" role="status">{{ 'b2b.cart.free_shipping_ok' | t }}</p>
+  {%- endif -%}
+{%- endif -%}

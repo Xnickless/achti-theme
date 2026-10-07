@@ -76,6 +76,15 @@
             {% endif %}
           >
             {%- for block in section.blocks -%}
+              {%- comment -%} kolumna menu, w której zostałby 0–1 działający link (np. „Informacje” bez stron O nas, Produkcja…), znika do czasu dodania stron (07.10.2026) {%- endcomment -%}
+              {%- if block.type == 'link_list' and block.settings.menu != blank -%}
+                {%- assign visible_links = 0 -%}
+                {%- for link in block.settings.menu.links -%}
+                  {%- capture link_empty -%}{% render 'b2b-link-empty', link: link %}{%- endcapture -%}
+                  {%- unless link_empty == '1' -%}{%- assign visible_links = visible_links | plus: 1 -%}{%- endunless -%}
+                {%- endfor -%}
+                {%- if visible_links < 2 -%}{%- continue -%}{%- endif -%}
+              {%- endif -%}
               <div
                 class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
@@ -145,6 +154,20 @@
                       {%- if settings.brand_description != blank -%}
                         <div class="rte">{{ settings.brand_description }}</div>
                       {%- endif -%}
+                      {%- comment -%} Kontakt do działu sprzedaży (07.10.2026, Adrian: numer w stopce) — ustawienia motywu „Producent (GPSR)” + sales_email {%- endcomment -%}
+                      <ul class="b2b-footer-contact list-unstyled">
+                        {%- if settings.producer_phone != blank -%}
+                          <li><a class="link link--text" href="tel:{{ settings.producer_phone | remove: ' ' | escape }}">{{ settings.producer_phone | escape }}</a></li>
+                        {%- endif -%}
+                        {%- assign sales_email = settings.sales_email | default: settings.producer_email -%}
+                        {%- if sales_email != blank -%}
+                          <li><a class="link link--text" href="mailto:{{ sales_email | escape }}">{{ sales_email | escape }}</a></li>
+                        {%- endif -%}
+                        <li class="b2b-footer-contact__hours">{{ 'b2b.footer.hours' | t }}</li>
+                        {%- if pages['contact'].title != blank -%}
+                          <li><a class="link link--text underlined-link" href="{{ pages['contact'].url }}">{{ 'b2b.footer.contact' | t }} →</a></li>
+                        {%- endif -%}
+                      </ul>
                       {%- if block.settings.show_social and has_social_icons -%}
                         {%- render 'social-icons', class: 'footer__list-social' -%}
                       {%- endif -%}

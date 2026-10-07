@@ -22,11 +22,15 @@
         <div class="field"><input class="field__input" id="b2b-email" type="email" name="contact[email]" required autocomplete="email" placeholder="{{ 'b2b.reg.email' | t }}"><label class="field__label" for="b2b-email">{{ 'b2b.reg.email' | t }}</label></div>
         <div class="select">
           <select class="select__select" id="b2b-type" name="contact[Rodzaj działalności]" aria-label="{{ 'b2b.reg.type' | t }}">
-            <option>{{ 'b2b.reg.type_shop' | t }}</option><option>{{ 'b2b.reg.type_online' | t }}</option><option>{{ 'b2b.reg.type_chain' | t }}</option><option>{{ 'b2b.reg.type_other' | t }}</option>
+            <option>{{ 'b2b.reg.type_shop' | t }}</option><option>{{ 'b2b.reg.type_online' | t }}</option><option>{{ 'b2b.reg.type_wholesale' | t }}</option><option>{{ 'b2b.reg.type_chain' | t }}</option><option value="{{ 'b2b.reg.type_other' | t }}" data-other>{{ 'b2b.reg.type_other' | t }}</option>
           </select>
           <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
         </div>
-        <label class="b2b-register__consent"><input type="checkbox" required><span>{{ 'b2b.reg.terms' | t }}</span></label>
+        {%- comment -%} 07.10.2026 (Adrian): przy „Inne” opis, gdzie klient sprzedaje; przewidywane ilości zamówień {%- endcomment -%}
+        <div class="field" data-other-field hidden><textarea class="text-area field__input" id="b2b-other" name="contact[Opis działalności]" rows="3" placeholder="{{ 'b2b.reg.other_details' | t }}"></textarea><label class="field__label" for="b2b-other">{{ 'b2b.reg.other_details' | t }}</label></div>
+        <div class="field"><input class="field__input" id="b2b-volume" name="contact[Przewidywane ilości zamówień]" placeholder="{{ 'b2b.reg.volume' | t }}"><label class="field__label" for="b2b-volume">{{ 'b2b.reg.volume' | t }}</label></div>
+        <p class="b2b-register__hint">{{ 'b2b.reg.volume_hint' | t }}</p>
+        <label class="b2b-register__consent"><input type="checkbox" required><span>{{ 'b2b.reg.terms_html' | t: terms_url: shop.terms_of_service.url, privacy_url: shop.privacy_policy.url }}</span></label>
         <button type="submit" class="button button--primary">{{ 'b2b.reg.submit' | t }}</button>
       {%- endif -%}
     {%- endform -%}
@@ -34,6 +38,7 @@
   </div>
 </div>
 <script>
+  (function(){var f=document.getElementById('B2BRegisterForm');if(!f)return;var sel=f.querySelector('#b2b-type'),box=f.querySelector('[data-other-field]'),ta=box&&box.querySelector('textarea');function tog(){var on=sel&&sel.selectedOptions[0]&&sel.selectedOptions[0].hasAttribute('data-other');if(box){box.hidden=!on;ta.required=!!on;}}if(sel){sel.addEventListener('change',tog);tog();}})();
   (function(){var f=document.getElementById('B2BRegisterForm');if(!f)return;f.addEventListener('submit',function(e){var i=f.querySelector('[data-nip]');if(!i)return;var n=i.value.replace(/\D/g,'');if(n.length!==10)return;var w=[6,5,7,2,3,4,5,6,7],s=0;for(var k=0;k<9;k++)s+=w[k]*+n[k];if(s%11!==+n[9]){e.preventDefault();var er=f.querySelector('[data-nip-error]');if(er)er.hidden=false;i.focus();}});})();
 </script>
 {%- style -%}

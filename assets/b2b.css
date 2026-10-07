@@ -873,3 +873,17 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
 .header__icons .localization-form__select .icon-caret { right: 0.6rem; }
 .header .header__icons .disclosure__list-wrapper,
 .header .header__icons .localization-form__select { border-radius: 0; }
+
+/* Stopka: kontakt pod opisem marki (07.10.2026) */
+.b2b-footer-contact { margin: 1.6rem 0 0; padding: 0; display: grid; gap: 0.4rem; font-size: 1.4rem; }
+.b2b-footer-contact a { color: rgb(var(--color-foreground)); }
+.b2b-footer-contact__hours { color: rgba(var(--color-foreground), 0.65); }
+
+/* Koszyk: minimum zamówienia i próg darmowej dostawy (07.10.2026, snippets/b2b-cart-minimum.liquid) */
+.b2b-cart-note { font-size: 1.35rem; line-height: 1.5; margin: 0 0 1.2rem; padding: 1rem 1.2rem; border: 1px solid rgba(var(--color-foreground), 0.15); text-align: left; }
+.b2b-cart-note--warn { border-color: #b3261e; color: #8a1c15; background: #fdf3f2; }
+.b2b-cart-note--ok { border-color: #2e7d32; color: #1e5a22; background: #f2f8f2; }
+
+/* Czapki reklamowe: siatka modeli w konfiguratorze zawsze po 4 na komputerze (07.10.2026, Adrian: „po 3 czapki”) */
+@media screen and (min-width: 750px) { .pl-models { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media screen and (min-width: 990px) { .pl-models { grid-template-columns: repeat(4, minmax(0, 1fr)); } }

@@ -587,7 +587,12 @@
       "submit": "Wyślij zgłoszenie",
       "success": "Zgłoszenie wysłane. Aktywujemy konto po weryfikacji — zwykle w ciągu jednego dnia roboczego.",
       "have_account": "Masz już konto?",
-      "delivery": "Adres dostawy (jeśli inny niż firmy)"
+      "delivery": "Adres dostawy (jeśli inny niż firmy)",
+      "type_wholesale": "Hurtownia",
+      "other_details": "Opisz działalność — gdzie i komu sprzedajesz",
+      "volume": "Przewidywane ilości zamówień",
+      "volume_hint": "Np. 300 szt. na sezon albo 50 szt. miesięcznie — pomoże nam dobrać warunki współpracy.",
+      "terms_html": "Akceptuję <a href=\"{{ terms_url }}\" target=\"_blank\" class=\"link\">regulamin B2B</a> i <a href=\"{{ privacy_url }}\" target=\"_blank\" class=\"link\">politykę prywatności</a>."
     },
     "load_more": "Pokaż więcej produktów",
     "net_note": "Cena netto — VAT naliczany w koszyku",
@@ -718,6 +723,15 @@
       "nowosc": "Nowości",
       "premium": "Premium"
     },
-    "header_register": "Załóż konto B2B"
+    "header_register": "Załóż konto B2B",
+    "footer": {
+      "hours": "Pn.–pt. 8:00–16:00",
+      "contact": "Kontakt"
+    },
+    "cart": {
+      "min_order_html": "<strong>Minimalna wartość zamówienia to {{ min }} netto.</strong> Brakuje jeszcze {{ missing }} — dodaj produkty, aby przejść do kasy.",
+      "free_shipping_missing_html": "Do darmowej dostawy w Polsce brakuje <strong>{{ missing }}</strong> netto.",
+      "free_shipping_ok": "Masz darmową dostawę w Polsce."
+    }
   }
 }
