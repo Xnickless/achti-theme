@@ -734,6 +734,10 @@
       "min_order_html": "<strong>Minimalna wartość zamówienia to {{ min }} netto.</strong> Brakuje jeszcze {{ missing }} — dodaj produkty, aby przejść do kasy.",
       "free_shipping_missing_html": "Do darmowej dostawy w Polsce brakuje <strong>{{ missing }}</strong> netto.",
       "free_shipping_ok": "Masz darmową dostawę w Polsce."
-    }
+    },
+    "pending_title": "Konto czeka na przypisanie do firmy",
+    "pending_text": "Jesteś zalogowany jako {{ email }}, ale to konto nie jest jeszcze przypisane do zaakceptowanej firmy, dlatego ceny są ukryte. Jeśli wysłałeś zgłoszenie firmy, aktywujemy je w ciągu 1–2 dni roboczych. Nie masz zgłoszenia? Zarejestruj firmę.",
+    "locked_pending": "Ceny po akceptacji firmy",
+    "pending_footer_html": "Ceny zobaczysz po przypisaniu konta do firmy. <a href=\"{{ register_url }}\">Zarejestruj firmę</a> lub <a href=\"{{ contact_url }}\">napisz do nas</a>."
   }
 }

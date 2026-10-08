@@ -722,6 +722,10 @@
       "min_order_html": "<strong>Le montant minimum de commande est de {{ min }} HT.</strong> Il manque encore {{ missing }} — ajoutez des produits pour passer au paiement.",
       "free_shipping_missing_html": "Encore <strong>{{ missing }}</strong> HT pour la livraison gratuite en Pologne.",
       "free_shipping_ok": "Vous bénéficiez de la livraison gratuite en Pologne."
-    }
+    },
+    "pending_title": "Votre compte attend d’être rattaché à une entreprise",
+    "pending_text": "Vous êtes connecté en tant que {{ email }}, mais ce compte n’est pas encore rattaché à une entreprise validée ; les prix sont donc masqués. Si vous avez envoyé une inscription d’entreprise, nous l’activerons sous 1 à 2 jours ouvrés. Pas encore inscrit ? Inscrivez votre entreprise.",
+    "locked_pending": "Prix après validation de l’entreprise",
+    "pending_footer_html": "Vous verrez les prix une fois votre compte rattaché à une entreprise. <a href=\"{{ register_url }}\">Inscrire l’entreprise</a> ou <a href=\"{{ contact_url }}\">nous contacter</a>."
   }
 }

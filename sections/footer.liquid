@@ -341,11 +341,17 @@
         <div class="footer__b2b-note">
           <span class="svg-wrapper">{{ 'icon-padlock.svg' | inline_asset_content }}</span>
           <div>
-            {%- if section.settings.b2b_note_heading != blank -%}
-              <p class="footer__b2b-note-heading">{{ section.settings.b2b_note_heading | escape }}</p>
-            {%- endif -%}
-            {%- if section.settings.b2b_note_text != blank -%}
-              <p class="footer__b2b-note-text caption">{{ section.settings.b2b_note_text }}</p>
+            {%- if customer -%}
+              {%- comment -%} zalogowany, ale bez firmy (08.10.2026) {%- endcomment -%}
+              <p class="footer__b2b-note-heading">{{ 'b2b.pending_title' | t }}</p>
+              <p class="footer__b2b-note-text caption">{{ 'b2b.pending_footer_html' | t: register_url: settings.b2b_register_page.url, contact_url: '/pages/contact' }}</p>
+            {%- else -%}
+              {%- if section.settings.b2b_note_heading != blank -%}
+                <p class="footer__b2b-note-heading">{{ section.settings.b2b_note_heading | escape }}</p>
+              {%- endif -%}
+              {%- if section.settings.b2b_note_text != blank -%}
+                <p class="footer__b2b-note-text caption">{{ section.settings.b2b_note_text }}</p>
+              {%- endif -%}
             {%- endif -%}
           </div>
         </div>

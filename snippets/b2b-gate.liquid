@@ -1,8 +1,26 @@
 {%- comment -%}
   B2B gate shown instead of price / buy buttons for visitors without access.
   Params: style: 'inline' (small link) | 'box' (panel with buttons)
+  08.10.2026: zalogowany klient bez przypisanej firmy (customer.b2b? = false) dostaje komunikat „konto czeka na przypisanie do firmy”
+  zamiast „zaloguj się”.
 {%- endcomment -%}
-{%- if style == 'box' -%}
+{%- if customer and style == 'box' -%}
+  <div class="b2b-gate b2b-gate--box color-{{ settings.cart_color_scheme }} gradient">
+    <p class="h4 b2b-gate__title">{{ 'b2b.pending_title' | t }}</p>
+    <p class="b2b-gate__text">{{ 'b2b.pending_text' | t: email: customer.email }}</p>
+    <div class="b2b-gate__actions">
+      {%- if settings.b2b_register_page != blank -%}
+        <a class="button button--primary" href="{{ settings.b2b_register_page.url }}">{{ 'b2b.register' | t }}</a>
+      {%- endif -%}
+      <a class="button button--secondary" href="{{ pages['contact'].url | default: '/pages/contact' }}">{{ 'b2b.footer.contact' | t }}</a>
+    </div>
+  </div>
+{%- elsif customer -%}
+  <a class="b2b-gate b2b-gate--inline link" href="{{ settings.b2b_register_page.url | default: routes.account_url }}">
+    <span class="svg-wrapper">{{ 'icon-padlock.svg' | inline_asset_content }}</span>
+    <span>{{ 'b2b.locked_pending' | t }}</span>
+  </a>
+{%- elsif style == 'box' -%}
   <div class="b2b-gate b2b-gate--box color-{{ settings.cart_color_scheme }} gradient">
     <p class="h4 b2b-gate__title">{{ 'b2b.gate_title' | t }}</p>
     <p class="b2b-gate__text">{{ 'b2b.gate_text' | t }}</p>

@@ -710,6 +710,10 @@
       "min_order_html": "<strong>The minimum order value is {{ min }} net.</strong> {{ missing }} to go — add products to proceed to checkout.",
       "free_shipping_missing_html": "<strong>{{ missing }}</strong> net to go for free delivery in Poland.",
       "free_shipping_ok": "You qualify for free delivery in Poland."
-    }
+    },
+    "pending_title": "Your account is waiting to be linked to a company",
+    "pending_text": "You are signed in as {{ email }}, but this account is not yet linked to an approved company, so prices are hidden. If you have sent a company registration, we will activate it within 1–2 business days. No registration yet? Register your company.",
+    "locked_pending": "Prices after company approval",
+    "pending_footer_html": "You will see prices once your account is linked to a company. <a href=\"{{ register_url }}\">Register your company</a> or <a href=\"{{ contact_url }}\">contact us</a>."
   }
 }

@@ -710,6 +710,10 @@
       "min_order_html": "<strong>Der Mindestbestellwert beträgt {{ min }} netto.</strong> Es fehlen noch {{ missing }} — fügen Sie Produkte hinzu, um zur Kasse zu gehen.",
       "free_shipping_missing_html": "Noch <strong>{{ missing }}</strong> netto bis zur kostenlosen Lieferung in Polen.",
       "free_shipping_ok": "Sie erhalten kostenlose Lieferung in Polen."
-    }
+    },
+    "pending_title": "Ihr Konto wartet auf die Zuordnung zu einem Unternehmen",
+    "pending_text": "Sie sind als {{ email }} angemeldet, aber dieses Konto ist noch keinem freigegebenen Unternehmen zugeordnet, daher sind die Preise ausgeblendet. Wenn Sie eine Firmenregistrierung gesendet haben, schalten wir sie innerhalb von 1–2 Werktagen frei. Noch nicht registriert? Registrieren Sie Ihr Unternehmen.",
+    "locked_pending": "Preise nach Freigabe des Unternehmens",
+    "pending_footer_html": "Preise sehen Sie, sobald Ihr Konto einem Unternehmen zugeordnet ist. <a href=\"{{ register_url }}\">Unternehmen registrieren</a> oder <a href=\"{{ contact_url }}\">Kontakt aufnehmen</a>."
   }
 }
