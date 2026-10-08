@@ -686,7 +686,9 @@
     "policies": {
       "terms": "B2B Terms of Service",
       "refund": "Returns & claims",
-      "shipping": "Shipping & delivery"
+      "shipping": "Shipping & delivery",
+      "terms_short": "Terms",
+      "cookies": "Cookies"
     },
     "tags": {
       "pompon": "Pompom hats",

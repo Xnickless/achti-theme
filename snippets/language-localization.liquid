@@ -3,6 +3,7 @@
 
   Accepts:
     - localPosition: pass in the position in which the form is coming up to create specific IDs
+    - short: true → globus + kod języka (PL), stopka Achti 08.10.2026
 {%- endcomment -%}
 
 <div class="disclosure">
@@ -13,7 +14,12 @@
     aria-controls="{{ localPosition }}List"
     aria-describedby="{{ localPosition }}Label"
   >
-    <span>{{ localization.language.endonym_name | capitalize }}</span>
+    {%- if short -%}
+      <svg class="icon-globe" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.6 3.9 5.8 3.9 9.5s-1.3 6.9-3.9 9.5M12 2.5C9.4 5.1 8.1 8.3 8.1 12s1.3 6.9 3.9 9.5"/></svg>
+      <span>{{ localization.language.iso_code | split: '-' | first | upcase }}</span>
+    {%- else -%}
+      <span>{{ localization.language.endonym_name | capitalize }}</span>
+    {%- endif -%}
     {{ 'icon-caret.svg' | inline_asset_content }}
   </button>
   <div class="disclosure__list-wrapper language-selector" hidden>

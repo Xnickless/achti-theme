@@ -13,6 +13,11 @@ TITLES = {  # tytuły stron (PAGE) — polityki (SHOP_POLICY) mają tylko body
     'warunki-wspolpracy': {'en': 'Terms of cooperation', 'de': 'Kooperationsbedingungen', 'fr': 'Conditions de collaboration'},
     'faq': {'en': 'FAQ', 'de': 'FAQ', 'fr': 'FAQ'},
     'polityka-cookies': {'en': 'Cookie Policy', 'de': 'Cookie-Richtlinie', 'fr': 'Politique relative aux cookies'},
+    'o-nas': {'en': 'About us', 'de': 'Über uns', 'fr': 'À propos'},
+    'produkcja': {'en': 'Production', 'de': 'Produktion', 'fr': 'Production'},
+    'materialy': {'en': 'Materials', 'de': 'Materialien', 'fr': 'Matières'},
+    'jakosc': {'en': 'Quality', 'de': 'Qualität', 'fr': 'Qualité'},
+    'zrownowazony-rozwoj': {'en': 'Sustainability', 'de': 'Nachhaltigkeit', 'fr': 'Développement durable'},
 }
 DRY = '--dry-run' in sys.argv
 locales = [a for a in sys.argv[1:] if not a.startswith('--')] or ['en', 'de', 'fr']

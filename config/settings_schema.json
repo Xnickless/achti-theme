@@ -1610,6 +1610,12 @@
         "id": "sales_email",
         "label": "E-mail działu sprzedaży (stopka)",
         "default": "hello@achti.com"
+      },
+      {
+        "type": "text",
+        "id": "sales_phone",
+        "label": "Telefon działu sprzedaży (stopka, Kontakt)",
+        "default": "+48 784 900 094"
       }
     ]
   }

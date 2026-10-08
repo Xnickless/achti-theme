@@ -686,7 +686,9 @@
     "policies": {
       "terms": "B2B-AGB",
       "refund": "Rücksendungen und Reklamationen",
-      "shipping": "Versand und Lieferung"
+      "shipping": "Versand und Lieferung",
+      "terms_short": "AGB",
+      "cookies": "Cookies"
     },
     "tags": {
       "pompon": "Mützen mit Bommel",

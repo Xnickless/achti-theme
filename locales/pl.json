@@ -710,7 +710,9 @@
     "policies": {
       "terms": "Regulamin B2B",
       "refund": "Zwroty i reklamacje",
-      "shipping": "Wysyłka i dostawa"
+      "shipping": "Wysyłka i dostawa",
+      "terms_short": "Regulamin",
+      "cookies": "Pliki cookie"
     },
     "tags": {
       "pompon": "Czapki z pomponem",

@@ -40,5 +40,35 @@
   "type": "PAGE",
   "body_key": "body_html",
   "title": "Polityka cookies"
+ },
+ "o-nas": {
+  "id": "gid://shopify/Page/198563430742",
+  "type": "PAGE",
+  "body_key": "body_html",
+  "title": "O nas"
+ },
+ "produkcja": {
+  "id": "gid://shopify/Page/198563463510",
+  "type": "PAGE",
+  "body_key": "body_html",
+  "title": "Produkcja"
+ },
+ "materialy": {
+  "id": "gid://shopify/Page/198563496278",
+  "type": "PAGE",
+  "body_key": "body_html",
+  "title": "Materiały"
+ },
+ "jakosc": {
+  "id": "gid://shopify/Page/198563529046",
+  "type": "PAGE",
+  "body_key": "body_html",
+  "title": "Jakość"
+ },
+ "zrownowazony-rozwoj": {
+  "id": "gid://shopify/Page/198563561814",
+  "type": "PAGE",
+  "body_key": "body_html",
+  "title": "Zrównoważony rozwój"
  }
 }

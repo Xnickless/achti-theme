@@ -49,10 +49,11 @@
             <dd><a class="link" href="mailto:{{ settings.producer_email | escape }}">{{ settings.producer_email | escape }}</a></dd>
           </div>
         {%- endif -%}
-        {%- if settings.producer_phone != blank -%}
+        {%- assign sales_phone = settings.sales_phone | default: settings.producer_phone -%}
+        {%- if sales_phone != blank -%}
           <div class="b2b-contact-info__row">
             <dt>{{ 'b2b.contact.phone' | t }}</dt>
-            <dd><a class="link" href="tel:{{ settings.producer_phone | remove: ' ' | escape }}">{{ settings.producer_phone | escape }}</a></dd>
+            <dd><a class="link" href="tel:{{ sales_phone | remove: ' ' | escape }}">{{ sales_phone | escape }}</a></dd>
           </div>
         {%- endif -%}
       </dl>

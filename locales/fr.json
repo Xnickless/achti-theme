@@ -698,7 +698,9 @@
     "policies": {
       "terms": "CGV B2B",
       "refund": "Retours et réclamations",
-      "shipping": "Expédition et livraison"
+      "shipping": "Expédition et livraison",
+      "terms_short": "CGV",
+      "cookies": "Cookies"
     },
     "tags": {
       "pompon": "Bonnets à pompon",

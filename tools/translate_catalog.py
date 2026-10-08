@@ -245,6 +245,8 @@ MENU = {  # tytuł PL -> tłumaczenie
 
 THEME = {  # teksty z ustawień motywu (klucz = tekst PL)
  'en': { 
+        "Cały świat": "Worldwide",
+        "dostawa do firm na całym świecie": "delivery to businesses worldwide",
         "Ona": "Women",
         "On": "Men",
         "Dla dzieci": "Kids",
@@ -290,6 +292,8 @@ THEME = {  # teksty z ustawień motywu (klucz = tekst PL)
         'Tworzymy czapki z pasją od ponad 30 lat. Wysoka jakość, naturalne materiały i ponadczasowy design.': 'We have been making hats with passion for over 30 years. High quality, natural materials and timeless design.',
         'Ceny dostępne po zalogowaniu': 'Prices available after login', 'Masz pytania? Napisz do nas.': 'Questions? Write to us.', 'Producent': 'Manufacturer', 'Szybkie zamawianie': 'Quick order'},
  'fr': { 
+        "Cały świat": "Monde entier",
+        "dostawa do firm na całym świecie": "livraison aux entreprises du monde entier",
         "Ona": "Femme",
         "On": "Homme",
         "Dla dzieci": "Enfants",
@@ -335,6 +339,8 @@ THEME = {  # teksty z ustawień motywu (klucz = tekst PL)
         'Tworzymy czapki z pasją od ponad 30 lat. Wysoka jakość, naturalne materiały i ponadczasowy design.': 'Nous fabriquons des bonnets avec passion depuis plus de 30 ans. Haute qualité, matières naturelles et design intemporel.',
         'Ceny dostępne po zalogowaniu': 'Prix visibles après connexion', 'Masz pytania? Napisz do nas.': 'Des questions ? Écrivez-nous.', 'Producent': 'Fabricant', 'Szybkie zamawianie': 'Commande rapide'},
  'de': { 
+        "Cały świat": "Weltweit",
+        "dostawa do firm na całym świecie": "Lieferung an Unternehmen weltweit",
         "Ona": "Damen",
         "On": "Herren",
         "Dla dzieci": "Kinder",
