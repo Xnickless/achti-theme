@@ -568,13 +568,14 @@
     "catalog_pdf": "Katalog PDF (bez cen)",
     "catalog_pdf_prices": "Katalog PDF z cenami hurtowymi",
     "reg": {
+      "country_label": "Kraj firmy",
       "title": "Rejestracja firmy",
       "intro": "Podaj dane firmy — aktywujemy konto po weryfikacji, zwykle w ciągu jednego dnia roboczego. Po aktywacji logujesz się adresem e-mail (kod jednorazowy, bez hasła).",
       "nip": "NIP / VAT UE",
-      "nip_hint": "Firmy z Polski: 10 cyfr. Firmy z UE: numer VAT z prefiksem kraju (np. DE…).",
+      "nip_hint": "Firmy z Polski: 10 cyfr. Firmy z UE: numer VAT z prefiksem kraju (np. DE…). Spoza UE: numer firmy, jeśli jest (np. Business Number) — pole nieobowiązkowe.",
       "nip_error": "NIP ma nieprawidłową sumę kontrolną.",
       "company": "Nazwa firmy",
-      "address": "Adres firmy",
+      "address": "Ulica i numer",
       "person": "Osoba kontaktowa",
       "phone": "Telefon",
       "email": "E-mail",
@@ -585,14 +586,27 @@
       "type_other": "Inne",
       "terms": "Akceptuję regulamin B2B i politykę prywatności.",
       "submit": "Wyślij zgłoszenie",
-      "success": "Zgłoszenie wysłane. Aktywujemy konto po weryfikacji — zwykle w ciągu jednego dnia roboczego.",
+      "success": "Zgłoszenie przyjęte. Sprawdzimy dane firmy i aktywujemy konto — zwykle w ciągu jednego dnia roboczego. Potem zalogujesz się tym adresem e-mail (kod jednorazowy, bez hasła).",
+      "ok_title": "Dziękujemy! Zgłoszenie przyjęte",
+      "ok_lead": "Twoje konto firmowe czeka teraz na zatwierdzenie.",
+      "ok_step1_html": "<strong>Weryfikacja</strong> — sprawdzamy dane firmy, zwykle w ciągu jednego dnia roboczego.",
+      "ok_step2_html": "<strong>Aktywacja</strong> — po zatwierdzeniu konto zostaje przypisane do Twojej firmy i widzisz ceny hurtowe.",
+      "ok_step3_html": "<strong>Logowanie</strong> — logujesz się adresem e-mail podanym w formularzu. Wyślemy jednorazowy kod, bez hasła.",
+      "ok_contact_html": "Masz pytania? Napisz do nas: <a href=\"mailto:{{ email }}\">{{ email }}</a>",
+      "ok_cta": "Przeglądaj ofertę",
       "have_account": "Masz już konto?",
       "delivery": "Adres dostawy (jeśli inny niż firmy)",
       "type_wholesale": "Hurtownia",
       "other_details": "Opisz działalność — gdzie i komu sprzedajesz",
       "volume": "Przewidywane ilości zamówień",
       "volume_hint": "Np. 300 szt. na sezon albo 50 szt. miesięcznie — pomoże nam dobrać warunki współpracy.",
-      "terms_html": "Akceptuję <a href=\"{{ terms_url }}\" target=\"_blank\" class=\"link\">regulamin B2B</a> i <a href=\"{{ privacy_url }}\" target=\"_blank\" class=\"link\">politykę prywatności</a>."
+      "terms_html": "Akceptuję <a href=\"{{ terms_url }}\" target=\"_blank\" class=\"link\">regulamin B2B</a> i <a href=\"{{ privacy_url }}\" target=\"_blank\" class=\"link\">politykę prywatności</a>.",
+      "zip": "Kod pocztowy",
+      "zip_error": "Kod pocztowy w formacie 00-000 (np. 31-242).",
+      "city": "Miasto",
+      "country": "Kraj",
+      "has_company": "Ten adres e-mail jest już przypisany do firmy w naszym sklepie. Zaloguj się albo napisz do nas.",
+      "address_error": "Podaj ulicę z numerem budynku (np. Długa 12/3)."
     },
     "load_more": "Pokaż więcej produktów",
     "net_note": "Cena netto — VAT naliczany w koszyku",
@@ -730,14 +744,91 @@
       "hours": "Pn.–pt. 8:00–16:00",
       "contact": "Kontakt"
     },
+    "ship": {
+      "parcels": "paczki: {{ count }}",
+      "calc_fx": "{{ country }}: {{ parcels }} × paczka (do 50 szt.) — stawki w tabeli (zł), w kasie przeliczone na walutę rynku.",
+      "title": "Koszty dostawy",
+      "net": "netto",
+      "gross": "brutto",
+      "free": "Gratis",
+      "calc": "{{ country }}: {{ parcels }} × paczka (do 50 szt.) ≈ {{ amount }} netto. Dokładny koszt w kasie.",
+      "calc_free": "{{ country }}: dostawa gratis (zamówienie od 5000 zł netto).",
+      "zone": "Kraj / strefa",
+      "per_parcel": "Za paczkę (do 50 szt.), netto",
+      "time": "Czas",
+      "z_pl": "Polska",
+      "z_eu": "Unia Europejska",
+      "z_gb": "Wielka Brytania",
+      "z_eur": "Europa poza UE",
+      "z_na": "USA i Kanada",
+      "z_row": "Reszta świata",
+      "pl_free": "gratis od 5000 zł netto",
+      "d35": "3–5 dni rob.",
+      "d58": "5–8 dni rob.",
+      "note": "Paczka = karton do 50 szt.; każde rozpoczęte 50 szt. to kolejna paczka. Za granicą kwoty przeliczane na walutę rynku."
+    },
     "cart": {
       "min_order_html": "<strong>Minimalna wartość zamówienia to {{ min }} netto.</strong> Brakuje jeszcze {{ missing }} — dodaj produkty, aby przejść do kasy.",
       "free_shipping_missing_html": "Do darmowej dostawy w Polsce brakuje <strong>{{ missing }}</strong> netto.",
-      "free_shipping_ok": "Masz darmową dostawę w Polsce."
+      "free_shipping_ok": "Masz darmową dostawę w Polsce.",
+      "total_net": "Razem netto",
+      "total_gross": "Razem brutto",
+      "vat_note_eu": "Kwota netto. VAT doliczany przy składaniu zamówienia; firmy z UE z ważnym numerem VAT nie płacą VAT (odwrotne obciążenie).",
+      "summary": "Podsumowanie",
+      "items_count": "Produkty ({{ count }} szt.)",
+      "vat_row": "VAT 23%",
+      "secure": "Bezpieczne zakupy",
+      "encrypted": "Szyfrowane płatności",
+      "invoice": "Faktura VAT",
+      "min_per_color_html": "Minimalnie {{ min }} szt. z każdego koloru — popraw ilość przy: {{ items }}.",
+      "over_10k_html": "Zamawiasz ponad 10 000 szt. — przysługuje Ci rabat indywidualny. Złóż zamówienie, a ustalimy go z Tobą, albo napisz najpierw: <a href=\"mailto:{{ email }}\">{{ email }}</a>."
     },
     "pending_title": "Konto czeka na przypisanie do firmy",
     "pending_text": "Jesteś zalogowany jako {{ email }}, ale to konto nie jest jeszcze przypisane do zaakceptowanej firmy, dlatego ceny są ukryte. Jeśli wysłałeś zgłoszenie firmy, aktywujemy je w ciągu 1–2 dni roboczych. Nie masz zgłoszenia? Zarejestruj firmę.",
     "locked_pending": "Ceny po akceptacji firmy",
-    "pending_footer_html": "Ceny zobaczysz po przypisaniu konta do firmy. <a href=\"{{ register_url }}\">Zarejestruj firmę</a> lub <a href=\"{{ contact_url }}\">napisz do nas</a>."
+    "pending_footer_html": "Ceny zobaczysz po przypisaniu konta do firmy. <a href=\"{{ register_url }}\">Zarejestruj firmę</a> lub <a href=\"{{ contact_url }}\">napisz do nas</a>.",
+    "color_order": {
+      "heading": "Kolory ({{ count }}) — wpisz ilość przy wybranych",
+      "heading_guest": "Kolory ({{ count }})",
+      "scroll_up": "Przewiń kolory w górę",
+      "scroll_down": "Przewiń kolory w dół",
+      "quantity": "Ilość w kolorze {{ color }}",
+      "decrease": "Mniej: {{ color }}",
+      "increase": "Więcej: {{ color }}",
+      "empty": "Wpisz ilość przy co najmniej jednym kolorze",
+      "total": "Razem: {{ count }} szt. · kolory: {{ colors }}",
+      "next_tier": "Do rabatu −{{ percent }}% brakuje {{ count }} szt. (liczą się wszystkie sztuki w koszyku)",
+      "discount": "Z rabatem ilościowym −{{ percent }}%: {{ amount }} netto",
+      "value": "Wartość: {{ amount }} netto",
+      "added": "Dodano {{ count }} szt. do koszyka",
+      "error": "Nie udało się dodać do koszyka. Spróbuj ponownie.",
+      "unavailable": "chwilowo brak",
+      "min_per_color": "Minimum 2 szt. na kolor"
+    },
+    "ai_photo": "Zdjęcie wygenerowane przez AI",
+    "login_choice": {
+      "title": "Masz już konto firmowe?",
+      "have": "Logujesz się adresem e-mail podanym przy rejestracji firmy — wyślemy na niego jednorazowy kod.",
+      "no_title": "Nie masz jeszcze konta?",
+      "no": "Najpierw zarejestruj firmę. Ceny hurtowe i zamówienia są dostępne dopiero po zatwierdzeniu zgłoszenia (1–2 dni robocze).",
+      "close": "Zamknij"
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "order_summary": {
+        "subtotal_label": "Suma netto",
+        "subtotal_label_with_quantity": {
+          "one": "Suma netto · {{ count }} pozycja",
+          "other": "Suma netto · pozycje: {{ count }}",
+          "few": "Suma netto · pozycje: {{ count }}",
+          "many": "Suma netto · pozycje: {{ count }}"
+        },
+        "taxes_label": "VAT",
+        "estimated_taxes_label": "VAT",
+        "total_label": "Suma brutto",
+        "partial_total_label": "Suma brutto"
+      }
+    }
   }
 }

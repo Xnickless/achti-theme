@@ -6,6 +6,7 @@
   - name: {String} input name,
   - value: {ProductOptionValueDrop} input value
   - swatch: {SwatchDrop} the swatch drop
+  - swatch_url: {String} Achti: adres obrazka próbki zamiast swatch (optional)
   - product_form_id: {String} id of the form associted with the input
   - checked: {Boolean} default checked status
   - disabled: {Boolean} default disabled status (optional)
@@ -47,6 +48,6 @@
   title="{{ value }}"
   class="swatch-input__label{% if shape == 'square' %} swatch-input__label--square{% endif %}"
 >
-  {% render 'swatch', swatch: swatch, shape: shape %}
+  {% render 'swatch', swatch: swatch, swatch_url: swatch_url, shape: shape %}
   {{ help_text }}
 </label>

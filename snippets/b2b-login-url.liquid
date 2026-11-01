@@ -1,0 +1,10 @@
+{%- comment -%}
+  30.10.2026 (Kamil): po zalogowaniu klient wraca do sklepu, a nie do panelu konta Shopify.
+  routes.account_login_url (/customer_authentication/redirect) zawsze kończy na shopify.com/…/account i gubi return_to;
+  /customer_authentication/login loguje przez callback na naszej domenie i przyjmuje return_to.
+  Parametr: back — ścieżka powrotu (domyślnie strona główna w języku strony).
+{%- endcomment -%}
+{%- liquid
+  assign back_to = back | default: routes.root_url | url_encode
+  echo '/customer_authentication/login?return_to=' | append: back_to | append: '&amp;locale=' | append: request.locale.iso_code
+-%}

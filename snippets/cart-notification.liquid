@@ -39,15 +39,14 @@
         <a
           href="{{ routes.cart_url }}"
           id="cart-notification-button"
-          class="button button--secondary button--full-width"
+          class="button button--primary button--full-width"
         >
           {{- 'general.cart.view_empty_cart' | t -}}
         </a>
-        <form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
-          <button class="button button--primary button--full-width" name="checkout">
-            {{ 'sections.cart.checkout' | t }}
-          </button>
-        </form>
+        {%- comment -%}
+          31.10.2026 (Adrian): przycisk „Realizuj zakup” w okienku „Dodano do koszyka” omijał minimum zamówienia
+          (2000 zł netto) — pilnuje go tylko strona koszyka (snippets/b2b-cart-minimum.liquid), więc z okienka idzie się do koszyka.
+        {%- endcomment -%}
         <button type="button" class="link button-label">{{ 'general.continue_shopping' | t }}</button>
       </div>
     </div>

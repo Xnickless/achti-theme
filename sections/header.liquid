@@ -362,6 +362,19 @@
           </localization-form>
         {%- endif -%}
       </div>
+      {%- comment -%} 01.11.2026 (lista Adriana, mobile pkt 1): wybór języka w górnym pasku na telefonie i tablecie, nie tylko w szufladzie menu {%- endcomment -%}
+      {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+        {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'b2b-lang-mobile large-up-hide' -%}
+          <label class="visually-hidden" for="HeaderLanguageMobile">{{ 'localization.language_label' | t }}</label>
+          <select id="HeaderLanguageMobile" name="locale_code" onchange="this.form.submit()">
+            {%- for language in localization.available_languages -%}
+              <option value="{{ language.iso_code }}"{% if language.iso_code == localization.language.iso_code %} selected{% endif %}>
+                {{- language.iso_code | upcase -}}
+              </option>
+            {%- endfor -%}
+          </select>
+        {%- endform -%}
+      {%- endif -%}
       {% render 'header-search', input_id: 'Search-In-Modal' %}
 
       {%- if b2b_access -%}
@@ -377,9 +390,10 @@
 
       {%- if shop.customer_accounts_enabled -%}
         <a
-          href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+          href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{% render 'b2b-login-url' %}{%- endif -%}"
           class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
           rel="nofollow"
+          {% unless customer %}data-b2b-login{% endunless %}
         >
           {%- if section.settings.enable_customer_avatar -%}
             <account-icon>
@@ -432,6 +446,8 @@
     </div>
   </header>
 </{{ header_tag }}>
+
+{%- unless customer -%}{%- render 'b2b-login-choice' -%}{%- endunless -%}
 
 {%- if settings.cart_type == 'notification' -%}
   {%- render 'cart-notification',

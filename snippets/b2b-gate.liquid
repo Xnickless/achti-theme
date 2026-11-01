@@ -25,14 +25,14 @@
     <p class="h4 b2b-gate__title">{{ 'b2b.gate_title' | t }}</p>
     <p class="b2b-gate__text">{{ 'b2b.gate_text' | t }}</p>
     <div class="b2b-gate__actions">
-      <a class="button button--primary" href="{{ routes.account_login_url }}">{{ 'b2b.login' | t }}</a>
+      <a class="button button--primary" href="{% render 'b2b-login-url', back: request.path %}">{{ 'b2b.login' | t }}</a>
       {%- if settings.b2b_register_page != blank -%}
         <a class="button button--secondary" href="{{ settings.b2b_register_page.url }}">{{ 'b2b.register' | t }}</a>
       {%- endif -%}
     </div>
   </div>
 {%- else -%}
-  <a class="b2b-gate b2b-gate--inline link" href="{{ routes.account_login_url }}">
+  <a class="b2b-gate b2b-gate--inline link" href="{% render 'b2b-login-url', back: request.path %}">
     <span class="svg-wrapper">{{ 'icon-padlock.svg' | inline_asset_content }}</span>
     <span>{{ 'b2b.locked' | t }}</span>
   </a>

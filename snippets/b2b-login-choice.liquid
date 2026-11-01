@@ -1,0 +1,37 @@
+{%- comment -%}
+  31.10.2026 (Adrian): gość, który kliknie „Zaloguj się” w nagłówku, najpierw widzi wybór — logowanie (konto firmowe)
+  albo rejestracja firmy. Logowanie Shopify jest bez hasła: każdy adres e-mail dostaje kod i zakłada konto klienta,
+  ale bez zatwierdzonej firmy ceny są ukryte. Okno otwiera kliknięcie w link z [data-b2b-login]; bez JS link prowadzi prosto do logowania.
+{%- endcomment -%}
+<dialog id="B2BLoginChoice" class="b2b-login-choice color-{{ settings.cart_color_scheme }}" aria-labelledby="B2BLoginChoiceTitle">
+  <button type="button" class="b2b-login-choice__close" data-close aria-label="{{ 'b2b.login_choice.close' | t }}">&times;</button>
+  <div class="b2b-login-choice__part">
+    <p class="h4" id="B2BLoginChoiceTitle">{{ 'b2b.login_choice.title' | t }}</p>
+    <p>{{ 'b2b.login_choice.have' | t }}</p>
+    <a class="button button--primary" href="{% render 'b2b-login-url' %}" rel="nofollow">{{ 'b2b.login' | t }}</a>
+  </div>
+  {%- if settings.b2b_register_page != blank -%}
+    <div class="b2b-login-choice__part">
+      <p class="h4">{{ 'b2b.login_choice.no_title' | t }}</p>
+      <p>{{ 'b2b.login_choice.no' | t }}</p>
+      <a class="button button--secondary" href="{{ settings.b2b_register_page.url }}">{{ 'b2b.register' | t }}</a>
+    </div>
+  {%- endif -%}
+</dialog>
+<script>
+  (function () {
+    var dlg = document.getElementById('B2BLoginChoice');
+    if (!dlg || typeof dlg.showModal !== 'function') return;
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('[data-b2b-login]');
+      if (!a) return;
+      e.preventDefault();
+      var drawer = a.closest('details[open]');
+      if (drawer) drawer.querySelector('summary').click();
+      dlg.showModal();
+    });
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg || e.target.closest('[data-close]')) dlg.close();
+    });
+  })();
+</script>

@@ -148,7 +148,7 @@ def translate_product(p, loc):
         if m.group(6) == 'bez pompona': flags.add('BEZ POMPONA')
         variant = m.group(6)
     is_snood, is_headband = kind == 'Komin', kind == 'Opaska'
-    mats = [mat(x, loc) for x in p['materials']]
+    mats = []  # nazw przędzy (VEZUV, MADERA, VINCI…) nie pokazujemy klientom — decyzja Adriana 20.10.2026
     # bez materiału (26.09.2026): EN „knitted from soft yarn”, FR „en maille douce”, DE „aus weichem Strick” (poprawka niżej)
     mat_txt = t['and_'].join(mats) if mats else t['soft']
     size = p['size']
@@ -179,7 +179,7 @@ def translate_product(p, loc):
         title += f" ({VARIANT[variant][loc]})"
     size_txt = t['one_size'] if size == 'One Size' else size
     sklad = comp(p.get('sklad'), loc)
-    spec = [f"{t['model']}: {name}", f"{t['code']}: {p['code']}", f"{t['material']}: {', '.join(mats) if mats else '—'}"]
+    spec = [f"{t['model']}: {name}", f"{t['code']}: {p['code']}"]
     if sklad: spec.append(f"{t['composition']}: {sklad}")
     if lin: spec.append(f"{t['lining']}: {lin[2]}")
     spec += [f"{t['size']}: {size_txt}", f"{t['season']}: {t['season_v']}"]

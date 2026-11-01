@@ -1,0 +1,3991 @@
+{
+ "kompresja": {
+  "ATENA": [
+   {
+    "name": "AZ-2949PC GRASS AKRYL ONE SIZE G3.JPG",
+    "id": "1Kw4jMn6p66Rn0BAQHF5LbLKRUGe3duHT",
+    "size": 93114,
+    "modified": "2026-01-22T09:59:47.361Z"
+   },
+   {
+    "name": "AZ-2951PC GRASS ONE SIZE G5.JPG",
+    "id": "1JcO0n8GRqLiYqoJYik2ru8vtFkdaoRGI",
+    "size": 73519,
+    "modified": "2026-01-22T09:59:47.550Z"
+   },
+   {
+    "name": "AZ-2953 GRASS ONE SIZE G5.JPG",
+    "id": "1Pce1OpaIoO70KX1oFudOI_l7QmG7rp_b",
+    "size": 74499,
+    "modified": "2026-01-22T09:59:47.755Z"
+   },
+   {
+    "name": "AZ-2954PC GRASS+AKRYL+VEZUV ONE SIZE G5.JPG",
+    "id": "130XwCyZbgjWRUxd3VU8BYsCvkqH3hYnW",
+    "size": 82640,
+    "modified": "2026-01-22T09:59:47.967Z"
+   },
+   {
+    "name": "AZ-2955D GRASS AKRYL ONE SIZE G5.JPG",
+    "id": "1Vo0oUp7igoe35sqrF0Xw9CKakWmh5Fmn",
+    "size": 83959,
+    "modified": "2026-01-22T09:59:48.163Z"
+   },
+   {
+    "name": "AZ-2956D GRASS AKRYL ONE SIZE G5.JPG",
+    "id": "1rVEF4qAu-n-8qDu8ZPBhdEi9mZAd3kd3",
+    "size": 88851,
+    "modified": "2026-01-22T09:59:48.356Z"
+   },
+   {
+    "name": "AZ-2957D AKRYL GRASS ONE SIZE G7.JPG",
+    "id": "1tWPodj7NaK9NsTvCC-XD_IjGhE24AvZ9",
+    "size": 75851,
+    "modified": "2026-01-22T09:59:48.557Z"
+   },
+   {
+    "name": "AZ-2997PC GRASS+MADERA ONE SIZE G7.JPG",
+    "id": "1Uu27gdDziAUEK1RigHA843AQdbWPXLD9",
+    "size": 83939,
+    "modified": "2026-01-22T09:59:53.894Z"
+   }
+  ],
+  "AKRYL MOULINE": [
+   {
+    "name": "AZ-2608PK MOULINE AKRYL ONE SIZE G12.JPG",
+    "id": "1iE88WMN_N8Ar482SxuTA9EVAKRPYlBHK",
+    "size": 82776,
+    "modified": "2026-01-22T09:59:18.253Z"
+   },
+   {
+    "name": "AZ-2612PK MOULINE AKRYL ONE SIZE G12.JPG",
+    "id": "16eoUTYd7jFUOgxhesTTUCRTTiTbHRZFe",
+    "size": 95477,
+    "modified": "2026-01-22T09:59:18.418Z"
+   },
+   {
+    "name": "AZ-2636PK MOULINE ONE SIZE G7.JPG",
+    "id": "1qdqtR_gg3u75B6LguoboxFuQACEZxWTA",
+    "size": 94826,
+    "modified": "2026-01-22T09:59:19.110Z"
+   }
+  ],
+  "AUSTRALIA": [
+   {
+    "name": "AZ-3053PC AUSTRALIA ONE SIZE G5.JPG",
+    "id": "1dzFf6do8gRNxUI9jH1DC7I3vNEKi_pkB",
+    "size": 81651,
+    "modified": "2026-01-22T10:00:03.078Z"
+   },
+   {
+    "name": "AZ-3054 AUSTRALIA ONE SIZE G5.JPG",
+    "id": "1mcQ3t2Ak8yHaw9GYM8ddo4qhGQ3D9h9p",
+    "size": 79344,
+    "modified": "2026-01-22T10:00:03.305Z"
+   },
+   {
+    "name": "AZ-3055PC AUSTRALIA ONE SIZE G5.JPG",
+    "id": "1RPufoApQlQCP0kbmphffA4XYxnJttp2T",
+    "size": 78619,
+    "modified": "2026-01-22T10:00:03.488Z"
+   },
+   {
+    "name": "AZ-3056PC AUSTRALIA ONE SIZE G7.JPG",
+    "id": "1wvwTmIOv1hsVfe8J8uztLxrVX6C_QP8t",
+    "size": 103553,
+    "modified": "2026-01-22T10:00:03.675Z"
+   }
+  ],
+  "COLORCARD AZ-1748PC": [
+   {
+    "name": "AZ-1748PC VINCI TURBO VINCI ONE SIZE G3.JPG",
+    "id": "1TauwQ2Cdw7dc91MeYnqzMynqOEcrXjWx",
+    "size": 89472,
+    "modified": "2026-01-22T09:59:06.647Z"
+   }
+  ],
+  "TURBO VEZUV": [
+   {
+    "name": "AZ-2033PC TURBO VEZUV ONE SIZE G7.jpg",
+    "id": "1zH2pSdTgNd7O-dwTJ0x1JHkvJTRu_23a",
+    "size": 111022,
+    "modified": "2026-01-22T09:59:08.510Z"
+   },
+   {
+    "name": "AZ-2704PC TURBO VEZUV ONE SIZE G3.JPG",
+    "id": "1hC5n0UWfdn3vcb_34z67PJoGCpq8whay",
+    "size": 101451,
+    "modified": "2026-01-22T09:59:23.201Z"
+   }
+  ],
+  "AZ-2670PC": [
+   {
+    "name": "AZ-2670PC ROMA ONE SIZE G3.JPG",
+    "id": "10BEI0ci9Prg-nFK6vu3DS29TbwTPsIfo",
+    "size": 86038,
+    "modified": "2026-01-22T09:59:21.119Z"
+   },
+   {
+    "name": "AZ-2694PC ROMA ONE SIZE G3.JPG",
+    "id": "13_eICV1hwkllv1D2pGsfd6dfRsUQKiOm",
+    "size": 79791,
+    "modified": "2026-01-22T09:59:22.330Z"
+   },
+   {
+    "name": "AZ-2899PC ROMA ONE SIZE G3.JPG",
+    "id": "1QcmEWXgumEXTq0_aPvsA7ltGKa1Twuv-",
+    "size": 80560,
+    "modified": "2026-01-22T09:59:39.871Z"
+   }
+  ],
+  "AMICOSOFT": [
+   {
+    "name": "AZ-2928 AMICOSOFT ONE SIZE G7.JPG",
+    "id": "14TOHajwHVZbsNXe21VpmwfZjkvqNhnq2",
+    "size": 85694,
+    "modified": "2026-01-22T09:59:44.329Z"
+   },
+   {
+    "name": "AZ-2934 AMICOSOFT ONE SIZE G7.JPG",
+    "id": "1EZ4ZMR1r16kaZQgjDC2TWjwRgiOFG-ZB",
+    "size": 108342,
+    "modified": "2026-01-22T09:59:45.065Z"
+   },
+   {
+    "name": "AZ-2935 AMICOSOFT ONE SIZE G7.JPG",
+    "id": "1u-lbUNsGkEfqsPTFFEnXA4AAJi-xWPUJ",
+    "size": 98352,
+    "modified": "2026-01-22T09:59:45.272Z"
+   },
+   {
+    "name": "AZ-2936 AMICOSOFT ONE SIZE G7.JPG",
+    "id": "1q_6_uLUfganDPnR1VluEb-JQUkx2Tg7-",
+    "size": 104579,
+    "modified": "2026-01-22T09:59:45.449Z"
+   },
+   {
+    "name": "AZ-2937 AMIOSOFT ONE SIZE G5.JPG",
+    "id": "1JzmBTC7jHPJgt2bFxeE-DDqq0V3y5e94",
+    "size": 78996,
+    "modified": "2026-01-22T09:59:45.629Z"
+   },
+   {
+    "name": "AZ-2938 AMICOSOFT ONE SIZE G5.JPG",
+    "id": "1tcbhGl3AJ4OVV8Qj8wPlBxjq4axuF4h6",
+    "size": 80831,
+    "modified": "2026-01-22T09:59:45.784Z"
+   }
+  ],
+  "VEZUV": [
+   {
+    "name": "AZ-1719PC VEZUV ONE SIZE G3.JPG",
+    "id": "1ZjD6RmJ2u27VUR0lCbCgMsJ5I_Z7BR_J",
+    "size": 90117,
+    "modified": "2026-01-22T09:59:06.483Z"
+   },
+   {
+    "name": "AZ-1800PC VEZUV ONE SIZE G3.JPG",
+    "id": "1WoJhuUvWoW7rJvkuxAppiNXraFWy7Hc8",
+    "size": 90083,
+    "modified": "2026-01-22T09:59:07.187Z"
+   },
+   {
+    "name": "AZ-1874PC VEZUV G7 ONE SIZE.JPG",
+    "id": "1EM__KcOyfa9fVewQdIgC4bXCLKufcVnr",
+    "size": 96433,
+    "modified": "2026-01-22T09:59:07.537Z"
+   },
+   {
+    "name": "AZ-1918PC VEZUV ONE SIZE G5.JPG",
+    "id": "1LDSvLNdkkcrn0rhVX9RTBy07cDOWSljR",
+    "size": 105057,
+    "modified": "2026-01-22T09:59:08.242Z"
+   },
+   {
+    "name": "AZ-2033PC VEZUV ONE SIZE G7.JPG",
+    "id": "12Hhm1yQkDzYAK_GpflGUyubzbZvbU0Qd",
+    "size": 109200,
+    "modified": "2026-01-22T09:59:08.697Z"
+   },
+   {
+    "name": "AZ-2218PC VEZUV ONE SIZE G7.JPG",
+    "id": "1z0W_2LXlCGAhgpQAWzPX4IluFI3WwezX",
+    "size": 83162,
+    "modified": "2026-01-22T09:59:09.777Z"
+   },
+   {
+    "name": "AZ-2466PC VEZUV ONE SIZE G3.JPG",
+    "id": "1cL14nUWB5cIAclAM5bu537hG_ynpiUO9",
+    "size": 75741,
+    "modified": "2026-01-22T09:59:12.361Z"
+   },
+   {
+    "name": "AZ-2676PC VEZUV ONE SIZE G3.JPG",
+    "id": "11ePrbCiRt7dxvZ61JCZzKY1NfXaa7BWT",
+    "size": 95086,
+    "modified": "2026-01-22T09:59:21.292Z"
+   },
+   {
+    "name": "AZ-2697PC VEZUV ONE SIZE G3.JPG",
+    "id": "1oVf7fFXwYJj6UsQV991NwfY0UowWGopq",
+    "size": 89946,
+    "modified": "2026-01-22T09:59:22.500Z"
+   },
+   {
+    "name": "AZ-2698PC ONE SIZE G3.JPG",
+    "id": "15fcREGhSle5Zwb3v307nzutvSSRxiUMh",
+    "size": 89530,
+    "modified": "2026-01-22T09:59:22.678Z"
+   },
+   {
+    "name": "AZ-2705PC VEZUV ONE SIZE G3.JPG",
+    "id": "1IogIEy0ozXt8LqAMvrfNxxWKjX45-kiU",
+    "size": 93395,
+    "modified": "2026-01-22T09:59:23.375Z"
+   },
+   {
+    "name": "AZ-2734PC VEZUV+LUREX ONE SIZE G3.JPG",
+    "id": "1Kyhst0aU1Xj_OxE-pykqBJZIdLmnZQwO",
+    "size": 88789,
+    "modified": "2026-01-22T09:59:25.723Z"
+   },
+   {
+    "name": "AZ-2742D VEZUV ONE SIZE G5.JPG",
+    "id": "1qr69LpuAUFkdYKzHrvb4Me2d0XdW3PKd",
+    "size": 85623,
+    "modified": "2026-01-22T09:59:26.436Z"
+   },
+   {
+    "name": "AZ-2743PC VEZUV CEKIN G3 ONE SIZE.JPG",
+    "id": "1OfESmmL9P9mwF4aj5tQTSy_A348LRLbx",
+    "size": 88280,
+    "modified": "2026-01-22T09:59:26.662Z"
+   },
+   {
+    "name": "AZ-2747PC VEZUV G3 ONE SIZE.JPG",
+    "id": "14CeARHqf84uqABK6scmiVnzrhd7BzQv2",
+    "size": 69187,
+    "modified": "2026-01-22T09:59:26.842Z"
+   },
+   {
+    "name": "AZ-2752PC VEZUV ONE SIZE G3.JPG",
+    "id": "1WojhvtsAc-OQxmUZiY5UlZu5m_4GNsyl",
+    "size": 77037,
+    "modified": "2026-01-22T09:59:27.024Z"
+   },
+   {
+    "name": "AZ-2768PC VEZUV G3 ONE SIZE.JPG",
+    "id": "1uti_yQDhWGpXYM8dXMHsw0-N5PMZCYY8",
+    "size": 102646,
+    "modified": "2026-01-22T09:59:27.741Z"
+   },
+   {
+    "name": "AZ-2773D VEZUV CEKIN G5 ONE SIZE.JPG",
+    "id": "12V7QEFfKHMOZt1_CDUAjAId6RjQT3GXP",
+    "size": 76978,
+    "modified": "2026-01-22T09:59:27.902Z"
+   },
+   {
+    "name": "AZ-2995PC VEZUV ONE SIZE G7.JPG",
+    "id": "1MqCcVsuxMgrBQZST-Hf-jjKS-RyDd819",
+    "size": 103519,
+    "modified": "2026-01-22T09:59:53.435Z"
+   },
+   {
+    "name": "AZ-2996PC VEZUV ONE SIZE G7.JPG",
+    "id": "1MaImvDUTa7k61NgvfT9jGsvocTOslo-o",
+    "size": 94963,
+    "modified": "2026-01-22T09:59:53.640Z"
+   },
+   {
+    "name": "AZ-3002PC VEZUV ONE SIZE G3.JPG",
+    "id": "19W9R-oUED97SyppnjpDQDYx7hAqk_X7T",
+    "size": 91209,
+    "modified": "2026-01-22T09:59:54.923Z"
+   },
+   {
+    "name": "AZ-3021PC VEZUV ONE SIZE G3.JPG",
+    "id": "16Gj6cpaUyM9sTH5ilKT_NTqQeBUTQv8y",
+    "size": 88974,
+    "modified": "2026-01-22T09:59:58.773Z"
+   },
+   {
+    "name": "AZ-3025PC VEZUV ONE SIZE G3.JPG",
+    "id": "1pHS2wglRsh7FEWxEjKS7nJ_s_BgDWprJ",
+    "size": 92190,
+    "modified": "2026-01-22T09:59:59.538Z"
+   },
+   {
+    "name": "AZ-3028PC VEZUV ONE SIZE G3.JPG",
+    "id": "1Pa0Hng4IjTpmqCtCnxaXyZoIPEkKBVv1",
+    "size": 89482,
+    "modified": "2026-01-22T10:00:00.203Z"
+   },
+   {
+    "name": "AZ-3039PC VEZUV ONE SIZE G5.JPG",
+    "id": "1gEdRp93g5L25YM__Mge-Cu_vOlz9bqjg",
+    "size": 88624,
+    "modified": "2026-01-22T10:00:02.422Z"
+   },
+   {
+    "name": "AZ-3057PC VEZUV ONE SIZE G3.JPG",
+    "id": "1Z0njWx4Evw2om5SBQcD97_r70MzYP70T",
+    "size": 102433,
+    "modified": "2026-02-18T12:09:00.758Z"
+   },
+   {
+    "name": "AZ-3082PC VEZUV ONE SIZE G3.JPG",
+    "id": "1vtfCVdm9O6c8BJI7WFZEGDGKSu3QrPcg",
+    "size": 85838,
+    "modified": "2026-03-26T09:56:07.260Z"
+   },
+   {
+    "name": "AZ-910PC BEZ POM VEZUV ONE SIZE G3.JPG",
+    "id": "1QD_koICFulhehhqohyrDBw609XN0qWX0",
+    "size": 95558,
+    "modified": "2026-01-22T10:00:04.270Z"
+   },
+   {
+    "name": "AZ-910PC VEZUV ONE SIZE G3.JPG",
+    "id": "1ZGhp99Mz4n3DDNPvQMf9XhdjIisr8YcO",
+    "size": 83092,
+    "modified": "2026-01-22T10:00:04.480Z"
+   }
+  ],
+  "ROMA": [
+   {
+    "name": "AZ-2656PC ROMA ONE SIZE G3.JPG",
+    "id": "1ug-sCmdDhNDieh0hCH1RYJ1po0eUzfVF",
+    "size": 76152,
+    "modified": "2026-01-22T09:59:19.804Z"
+   },
+   {
+    "name": "AZ-2657PC ROMA ONE SIZE G3.JPG",
+    "id": "1XfRTkJbg1XsCJanCY9FwM5GOVRu1hL_Y",
+    "size": 81970,
+    "modified": "2026-01-22T09:59:19.975Z"
+   },
+   {
+    "name": "AZ-2658PC ROMA ONE SIZE G3.JPG",
+    "id": "1mMJ-mqcAoJ3mHM3PV49wkMX_J7rylEiG",
+    "size": 81398,
+    "modified": "2026-01-22T09:59:20.145Z"
+   },
+   {
+    "name": "AZ-2703PC ROMA G3 ONE SIZE.JPG",
+    "id": "1xvfUdSjEUdrz0mZgfshtHjNUqyJV4-nh",
+    "size": 85726,
+    "modified": "2026-01-22T09:59:23.025Z"
+   },
+   {
+    "name": "AZ-2712PC ROMA ROZ.50-52 G5.JPG",
+    "id": "1EiEgDOljjwy6H5O30EgTxVNe8l8kiFgK",
+    "size": 77880,
+    "modified": "2026-01-22T09:59:23.957Z"
+   },
+   {
+    "name": "AZ-2712PCE ROMA ROZ.50-52 G5.JPG",
+    "id": "1OWJoS3mJgTSagn5iOpBzwrLIqKRy2BAn",
+    "size": 79144,
+    "modified": "2026-01-22T09:59:24.147Z"
+   },
+   {
+    "name": "AZ-2723PC ROMA ONE SIZE G3.JPG",
+    "id": "1fnTjiuAK3XIhp20MFXCaFa41p_ASrfXx",
+    "size": 81009,
+    "modified": "2026-01-22T09:59:25.543Z"
+   },
+   {
+    "name": "AZ-2799PC ROMA G3 ONE SIZE.JPG",
+    "id": "1Tgew-PjcPOuzTgYXd49CcQyUSYOqtKL4",
+    "size": 78547,
+    "modified": "2026-01-22T09:59:30.159Z"
+   },
+   {
+    "name": "AZ-2866PC ROMA G3 ONE SIZE.JPG",
+    "id": "1t5nGhe75PzqVJMZdsWl7RPofaHA8ru5W",
+    "size": 70731,
+    "modified": "2026-01-22T09:59:36.862Z"
+   },
+   {
+    "name": "AZ-2867PC ROMA G3 ONE SIZE.JPG",
+    "id": "1nFA0s-tY_Qt7qcmDpQICfD1ky3-d6kZ-",
+    "size": 75685,
+    "modified": "2026-01-22T09:59:37.050Z"
+   }
+  ],
+  "COLORCARD 100% AKRYL": [
+   {
+    "name": "AZ-1145PC AKRYL ONE SIZE G5.JPG",
+    "id": "1AUP6C9T02S63msOAynoFmrC-DK5Surpg",
+    "size": 86075,
+    "modified": "2026-01-22T09:59:04.124Z"
+   },
+   {
+    "name": "AZ-1430PC AKRYL ONE SIZE G10.JPG",
+    "id": "1vcR_2O7myUy_qJf1KCiTU27l-XbSJGC_",
+    "size": 91352,
+    "modified": "2026-01-22T09:59:04.481Z"
+   },
+   {
+    "name": "AZ-1575PK AKRYL ONE SIZE G10.JPG",
+    "id": "1N19PBb5wt5_zkM468yvBruv60KQs4HZe",
+    "size": 62052,
+    "modified": "2026-01-22T09:59:05.189Z"
+   },
+   {
+    "name": "AZ-1609PK AKRYL ONE SIZE G10.JPG",
+    "id": "1unKp0gP81JWgcIUKedShOSaqwmW0nFVn",
+    "size": 49321,
+    "modified": "2026-01-22T09:59:05.366Z"
+   },
+   {
+    "name": "AZ-1666PC AKRYL ONE SIZE G7.JPG",
+    "id": "1FRrPnzydi8rL1MbKLt14KRSKpYYCDF8v",
+    "size": 78482,
+    "modified": "2026-01-22T09:59:05.762Z"
+   },
+   {
+    "name": "AZ-2120PC AKRYL ONE SIZE G3.JPG",
+    "id": "1agensK8Ypfi3hL6Ek8hoP6d_tO8fgdGi",
+    "size": 89296,
+    "modified": "2026-01-22T09:59:09.072Z"
+   },
+   {
+    "name": "AZ-2515PC AKRYL+LUREX ROZ.50-52 G7.JPG",
+    "id": "1_cIoi_GMDOQjkISy8oPftJ9zP-1Fd6VB",
+    "size": 94667,
+    "modified": "2026-01-22T09:59:13.912Z"
+   },
+   {
+    "name": "AZ-2544 AKRYL ONE SIZE G7.JPG",
+    "id": "1dQhuB48BPC1lAyoegXnWf7JTBEdXc_Uw",
+    "size": 59127,
+    "modified": "2026-01-22T09:59:15.661Z"
+   },
+   {
+    "name": "AZ-2549PK AKRYL ONE SIZE G5.JPG",
+    "id": "1VoBO5kQf6OgZO3gIWkKtrfkSOnRSo0KZ",
+    "size": 63143,
+    "modified": "2026-01-22T09:59:15.967Z"
+   },
+   {
+    "name": "AZ-2551PK AKRYL ONE SIZE G5.JPG",
+    "id": "1CiovaOzqoCJkL4IxsEaIcSiqW3fcn6R1",
+    "size": 55474,
+    "modified": "2026-01-22T09:59:16.113Z"
+   },
+   {
+    "name": "AZ-2685PC AKRYL ONE SIZE G5.JPG",
+    "id": "1jAw0AD6eijCmY-Ifjbwidkeur1Nl7nOf",
+    "size": 87827,
+    "modified": "2026-01-22T09:59:21.795Z"
+   },
+   {
+    "name": "AZ-2720PC AKRYL 50-52 G10.JPG",
+    "id": "1oqiOmCMm8RzT5Uxz2GuLMEp6JKAbGuTN",
+    "size": 88790,
+    "modified": "2026-01-22T09:59:25.373Z"
+   },
+   {
+    "name": "AZ-2842PC AKRYL G5 ROZ.52-54 BOY.JPG",
+    "id": "1VIErzM4Cplp15nBddU7U4tLPPpur8yFC",
+    "size": 92275,
+    "modified": "2026-01-22T09:59:34.261Z"
+   },
+   {
+    "name": "AZ-2842PC AKRYL G5 ROZ.52-54 GIRL.JPG",
+    "id": "1jJzedxSZKBXKXXttIqEoAGQmI8wXM4Je",
+    "size": 96633,
+    "modified": "2026-01-22T09:59:34.468Z"
+   },
+   {
+    "name": "AZ-2843PC AKRYL G5 ROZ.52-54 BOY.JPG",
+    "id": "1h6y4G_NdOoYtFM4x5BFXIgm76xgrz1bq",
+    "size": 81407,
+    "modified": "2026-01-22T09:59:34.636Z"
+   },
+   {
+    "name": "AZ-2844PC AKRYL G7 ROZ.50-52.JPG",
+    "id": "1eGLC4KCRT4CR_plzYIs_1MnljAKlY-ex",
+    "size": 105825,
+    "modified": "2026-01-22T09:59:34.902Z"
+   },
+   {
+    "name": "AZ-2851PC AKRYL G7 ROZ.50-52.JPG",
+    "id": "1G3luCpS6NnTJO2FjEq17Vfuf1tAjb9Dg",
+    "size": 100369,
+    "modified": "2026-01-22T09:59:35.314Z"
+   },
+   {
+    "name": "AZ-2871PC AKRYL G3 ONE SIZE.JPG",
+    "id": "1Wd-nIIKkW1NXHQ-Xzpl5j4NKXwr7L-kL",
+    "size": 72685,
+    "modified": "2026-01-22T09:59:37.225Z"
+   },
+   {
+    "name": "AZ-2920PC AKRYL ROZ.50-52 G12.JPG",
+    "id": "1KhavsBBLua4Wxj6K_A_8G54IvLq_5mUC",
+    "size": 63785,
+    "modified": "2026-01-22T09:59:43.366Z"
+   },
+   {
+    "name": "AZ-2987PC AKRYL ONE SIZE G3.JPG",
+    "id": "1nSOxB0smrTRJDwDxsVdSQ58fL3CIojCJ",
+    "size": 116841,
+    "modified": "2026-01-22T09:59:52.200Z"
+   },
+   {
+    "name": "AZ-607PCV1 AKRYL ONE SIZE G7.JPG",
+    "id": "10ER9TCHvVCrL18wD1fy39E956OSYqK0p",
+    "size": 71837,
+    "modified": "2026-01-22T10:00:04.081Z"
+   }
+  ],
+  "AZ-2349PC": [
+   {
+    "name": "AZ-2349PC AKRYL 52-54 G7.JPG",
+    "id": "119v5rs3qOT_3yLwk5nZdH5n7IutNeYrZ",
+    "size": 100095,
+    "modified": "2026-01-22T09:59:11.036Z"
+   },
+   {
+    "name": "AZ-2364PC AKRYL 52-54 G7.JPG",
+    "id": "1hYeHQh4zOtpueGtV8qEyrYBqfaxwTjRt",
+    "size": 91078,
+    "modified": "2026-01-22T09:59:11.225Z"
+   }
+  ],
+  "MADERA": [
+   {
+    "name": "AZ-2853PC MADERA G7 ONE SIZE.JPG",
+    "id": "1JRUgZ_cP94EdEgcgtsIa1PBXpbZi6DeW",
+    "size": 75181,
+    "modified": "2026-01-22T09:59:35.789Z"
+   },
+   {
+    "name": "AZ-2855PC MADERA G10 ONE SIZE.JPG",
+    "id": "1-SGHPQB6nJUj0NHVG7ZYhEI3cNjOMKyS",
+    "size": 82055,
+    "modified": "2026-01-22T09:59:36.234Z"
+   },
+   {
+    "name": "AZ-2904PC MADERA ONE SIZE G10.JPG",
+    "id": "1s0F1KcFCrroMYSBgmKSSpRHWg4rU_jVW",
+    "size": 66085,
+    "modified": "2026-01-22T09:59:40.706Z"
+   },
+   {
+    "name": "AZ-2905PC MADERA ONE SIZE G10.JPG",
+    "id": "1kbM_EwGAkqbco9lOboZb3t4rNf9laFBU",
+    "size": 81855,
+    "modified": "2026-01-22T09:59:40.917Z"
+   },
+   {
+    "name": "AZ-2906PC MADERA ONE SIZE G10.JPG",
+    "id": "1cBOAd7K3JY7182VjAW1T0XMPoAVBDIQW",
+    "size": 92098,
+    "modified": "2026-01-22T09:59:41.129Z"
+   },
+   {
+    "name": "AZ-2990PC MADERA ONE SIZE G10.JPG",
+    "id": "19m9NFtMZLTHhNAjuJV9O45t45Ev3XlDw",
+    "size": 87928,
+    "modified": "2026-01-22T09:59:52.632Z"
+   },
+   {
+    "name": "AZ-2991PC MADERA ONE SIZE G10.JPG",
+    "id": "1TIr1RizuSRn4oFFOvmXLPjYS1QXH-103",
+    "size": 89185,
+    "modified": "2026-01-22T09:59:52.825Z"
+   },
+   {
+    "name": "AZ-2992PC MADERA ONE SIZE G10.JPG",
+    "id": "1z4lGhTwGWlH04NVx9sdvTwQtEvhAS1SS",
+    "size": 89392,
+    "modified": "2026-01-22T09:59:53.013Z"
+   },
+   {
+    "name": "AZ-2993PC MADERA ONE SIZE G10.JPG",
+    "id": "15u-yrPYc-tfVRNtuHKAeBdiJHp_UeW5Z",
+    "size": 95846,
+    "modified": "2026-01-22T09:59:53.218Z"
+   },
+   {
+    "name": "AZ-3001PC MADERA ONE SIZE G7.JPG",
+    "id": "1j9VL3pqFO2-5ub6r2H7k0giy_jX6yiUc",
+    "size": 90018,
+    "modified": "2026-01-22T09:59:54.727Z"
+   },
+   {
+    "name": "AZ-3005PC MADERA ONE SIZE G7.JPG",
+    "id": "1VQ-im6qqwtE3-JAwCRBcTt295KhnDzFz",
+    "size": 91504,
+    "modified": "2026-01-22T09:59:55.319Z"
+   },
+   {
+    "name": "AZ-3007PC MADERA ONE SIZE G7.JPG",
+    "id": "1Gous197WD07y0qI1XnwbK4vsF6OQfiv6",
+    "size": 89149,
+    "modified": "2026-01-22T09:59:55.759Z"
+   },
+   {
+    "name": "AZ-3008PC MADERA ONE SIZE G7.JPG",
+    "id": "1ZrXS8W9ZUR3F3pk7AYDzktUQD6e_J576",
+    "size": 88173,
+    "modified": "2026-01-22T09:59:55.947Z"
+   },
+   {
+    "name": "AZ-3009PC MADERA ONE SIZE G12.JPG",
+    "id": "1h8U8U3b0hWB12NCqY44t3my7CuqaRhVd",
+    "size": 96421,
+    "modified": "2026-01-22T09:59:56.175Z"
+   },
+   {
+    "name": "AZ-3010PC MADERA ONE SIZE G12.JPG",
+    "id": "1zA39sUwxH00xZK5OGsl4hQT7VeMJAElM",
+    "size": 91066,
+    "modified": "2026-01-22T09:59:56.383Z"
+   },
+   {
+    "name": "AZ-3011PC MADERA ONE SIZE G12.JPG",
+    "id": "1oHc1UXy5a0p_jMREJXLtRP6xBPeLGikd",
+    "size": 88347,
+    "modified": "2026-01-22T09:59:56.628Z"
+   },
+   {
+    "name": "AZ-3012PC MADERA ONE SIZE G12.JPG",
+    "id": "1Bj5zQYVW3WxCDdby_dw7J28Er9K4ZbBt",
+    "size": 84956,
+    "modified": "2026-01-22T09:59:56.869Z"
+   },
+   {
+    "name": "AZ-3013PC MADERA ONE SIZE G12.JPG",
+    "id": "18egVT6KAdQ4TVi9P1nASVFq4EV8U2LT_",
+    "size": 86558,
+    "modified": "2026-01-22T09:59:57.110Z"
+   },
+   {
+    "name": "AZ-3015PC MADERA ONE SIZE G5.JPG",
+    "id": "1cBww7ZqQzKayQ04roTLWwWCAPP87UE4K",
+    "size": 85499,
+    "modified": "2026-01-22T09:59:57.527Z"
+   },
+   {
+    "name": "AZ-3016PC MADERA ONE SIZE G5.JPG",
+    "id": "10fP3U5OG8DWaFwSUJkszeObw4gQz8nSe",
+    "size": 93241,
+    "modified": "2026-01-22T09:59:57.718Z"
+   },
+   {
+    "name": "AZ-3017PC MADERA ONE SIZE G5.JPG",
+    "id": "1R7RN9MLjlBEDHXxDEkotVKCPH8TGnSUc",
+    "size": 85443,
+    "modified": "2026-01-22T09:59:57.959Z"
+   }
+  ],
+  "AZ-2814PC": [
+   {
+    "name": "AZ-2813D LAMBSLOOK G12 MULTI ONE SIZE.JPG",
+    "id": "1bYoAQFt3AummowLvDUZGMEOh1T6QwKYQ",
+    "size": 98452,
+    "modified": "2026-01-22T09:59:31.371Z"
+   },
+   {
+    "name": "AZ-2814PC LAMBSLOOK G12 MULTI ONE SIZE.JPG",
+    "id": "1Ajb3ycj6ndEb6thxYyiyHlV3NtAU3hR-",
+    "size": 95077,
+    "modified": "2026-01-22T09:59:31.535Z"
+   },
+   {
+    "name": "AZ-2947PC LAMBSLOOK ONE SIZE G12.JPG",
+    "id": "15Iks8L-3kn35wZctsbeBv3QIKlqWeI2W",
+    "size": 77158,
+    "modified": "2026-01-22T09:59:47.176Z"
+   }
+  ],
+  "VERONA": [
+   {
+    "name": "AZ-2501PC VERONA ONE SIZE G3.JPG",
+    "id": "1L525i7g_mHqpx-XGBz6tZ_dewoR7UvcS",
+    "size": 81467,
+    "modified": "2026-01-22T09:59:13.573Z"
+   },
+   {
+    "name": "AZ-2504PC VERONA ONE SIZE G3.JPG",
+    "id": "1szkeRCFezSnhRue8bA0CvFQiHtpWDDT5",
+    "size": 76974,
+    "modified": "2026-01-22T09:59:13.740Z"
+   },
+   {
+    "name": "AZ-2560PC VERONA ONE SIZE G5.JPG",
+    "id": "1xO2soP9uLoaCXC0FCy0CM8JCz_nRdPYy",
+    "size": 83726,
+    "modified": "2026-01-22T09:59:16.783Z"
+   },
+   {
+    "name": "AZ-2561PC VERONA ONE SIZE G5.JPG",
+    "id": "1ZEelPRycwET06T8iSTXnxqPb4GdZckKJ",
+    "size": 78734,
+    "modified": "2026-01-22T09:59:16.961Z"
+   },
+   {
+    "name": "AZ-2566PC VERONA ONE SIZE G5.JPG",
+    "id": "1uDFHeQQCBM9PTSILbDt0BhiDOZQQSeDK",
+    "size": 81234,
+    "modified": "2026-01-22T09:59:17.147Z"
+   },
+   {
+    "name": "AZ-2567PC VERONA ONE SIZE G5.JPG",
+    "id": "1ly21OtgEmZHm-hpy6AMcfcYCyjlrHeri",
+    "size": 81887,
+    "modified": "2026-01-22T09:59:17.315Z"
+   },
+   {
+    "name": "AZ-2569PC VERONA ONE SIZE G5.JPG",
+    "id": "1K5NmOFhcH4uROKTfUhZY3MtfTLk9K_gt",
+    "size": 87252,
+    "modified": "2026-01-22T09:59:17.729Z"
+   },
+   {
+    "name": "AZ-2588PC VERONA ONE SIZE G5.JPG",
+    "id": "1QTp_UDsIrO03xCmy6byQdb91E78GXgAS",
+    "size": 88150,
+    "modified": "2026-01-22T09:59:18.095Z"
+   },
+   {
+    "name": "AZ-2613 VERONA ONE SIZE G5.JPG",
+    "id": "1tMWG_RIVpKZBdpWgjGHsnzUzPKvWqI2m",
+    "size": 82074,
+    "modified": "2026-01-22T09:59:18.595Z"
+   },
+   {
+    "name": "AZ-2613PC VERONA ONE SIZE G5.JPG",
+    "id": "1qXB3bkw8DdWFi2aYLSao2DbZhLeanNYp",
+    "size": 77310,
+    "modified": "2026-01-22T09:59:18.771Z"
+   },
+   {
+    "name": "AZ-2653PC VERONA ONE SIZE G3.JPG",
+    "id": "1ow-3sOw84OunarQaXmsd2sWgQPY3T0WK",
+    "size": 76455,
+    "modified": "2026-01-22T09:59:19.634Z"
+   },
+   {
+    "name": "AZ-2737PC VERONA G3 ONE SIZE.JPG",
+    "id": "1RPWf7Hg8n3IEb1LiUtM6d_ULrx-k7DP3",
+    "size": 74552,
+    "modified": "2026-01-22T09:59:26.082Z"
+   },
+   {
+    "name": "AZ-2739PC VERONA ONE SIZE G3.JPG",
+    "id": "1YmRdpvEGskWOtxHsVFq52mo_qhnwuIAi",
+    "size": 88004,
+    "modified": "2026-01-22T09:59:26.264Z"
+   },
+   {
+    "name": "AZ-2762PC VERONA CEKIN G3 ONE SIZE.JPG",
+    "id": "13LkbEzFYhKOG7aHI8uHKTuJKWaB-j1Y3",
+    "size": 85132,
+    "modified": "2026-01-22T09:59:27.397Z"
+   },
+   {
+    "name": "AZ-2781PC VERONA+MADERA G7 ONE SIZE.JPG",
+    "id": "1eK2O50HY-ce7QVkcETVHcgJPrmZHlvBt",
+    "size": 85278,
+    "modified": "2026-01-22T09:59:28.080Z"
+   },
+   {
+    "name": "AZ-2782PC VERONA+MADERA G7 ONE SIZE.JPG",
+    "id": "1rkE0FYP9fqKQIjXqwXy4sTlM7TJSycXD",
+    "size": 87310,
+    "modified": "2026-01-22T09:59:28.258Z"
+   },
+   {
+    "name": "AZ-2784PC VERONA+MADERA G7 ONE SIZE.JPG",
+    "id": "15WDhHJmejNYNgLR95KddIgcyE6yFDesA",
+    "size": 87614,
+    "modified": "2026-01-22T09:59:28.438Z"
+   },
+   {
+    "name": "AZ-2819PC VERONA G7 ONE SIZE.JPG",
+    "id": "1xZG_OC5PFlk_jEKlKzfzVwB8Kf01gRrt",
+    "size": 84137,
+    "modified": "2026-01-22T09:59:31.888Z"
+   },
+   {
+    "name": "AZ-2820PC VERONA+MADERA G3 ONE SIZE.JPG",
+    "id": "1R3p3Aq9Qd-aLYYojzOrmT2t9PEiqeIzs",
+    "size": 68943,
+    "modified": "2026-01-22T09:59:32.053Z"
+   },
+   {
+    "name": "AZ-2834PC VERONA+MADERA G7 ONE SIZE.JPG",
+    "id": "1xFNOnRI3zC92h7H2dZ0A-kK-mCcsiHt7",
+    "size": 86781,
+    "modified": "2026-01-22T09:59:33.552Z"
+   },
+   {
+    "name": "AZ-2852PC VERONA G7 ONE SIZE.JPG",
+    "id": "1GRpBvMca4lzh6EdEBPMUl9mhi34PNNCZ",
+    "size": 68848,
+    "modified": "2026-01-22T09:59:35.538Z"
+   },
+   {
+    "name": "AZ-2854 VERONA G5 ONE SIZE.JPG",
+    "id": "1bCo95sH-fIUEE0GNM-HxzM7mlZIpfwmT",
+    "size": 52018,
+    "modified": "2026-01-22T09:59:35.996Z"
+   },
+   {
+    "name": "AZ-2856PC VERONA G3 ONE SIZE.JPG",
+    "id": "1jvEDz8dyKThivxzMY9RmgVEIPmXrogBR",
+    "size": 74786,
+    "modified": "2026-01-22T09:59:36.433Z"
+   },
+   {
+    "name": "AZ-2865PC VERONA ONE SIZE G3.JPG",
+    "id": "1Idbc86EPqcq7t0K5XeGVaixy2_umfe0V",
+    "size": 79045,
+    "modified": "2026-01-22T09:59:36.640Z"
+   },
+   {
+    "name": "AZ-2872PK VERONA G3 ONE SIZE.JPG",
+    "id": "1_F6fAeT7Q45i93YiT5AnfEENUk8oxdWg",
+    "size": 82893,
+    "modified": "2026-01-22T09:59:37.398Z"
+   },
+   {
+    "name": "AZ-2873PK VERONA G3 ONE SIZE.JPG",
+    "id": "1uJw8SSHaEZx6LofoKTvmJwS8DO7GmLbK",
+    "size": 90681,
+    "modified": "2026-01-22T09:59:37.581Z"
+   },
+   {
+    "name": "AZ-2874PC VERONA G5 ONE SIZE.JPG",
+    "id": "12S4mZiVUXqs1cGAjzB2meBYbBTjVl6km",
+    "size": 79929,
+    "modified": "2026-01-22T09:59:37.767Z"
+   },
+   {
+    "name": "AZ-2875PC VERONA G5 ONE SIZE.JPG",
+    "id": "109eqg7sksRIm6xZH_ILBfSAtLWLQqOIS",
+    "size": 59676,
+    "modified": "2026-01-22T09:59:37.955Z"
+   },
+   {
+    "name": "AZ-2893PC VERONA ONE SIZE G3.JPG",
+    "id": "1uH1KWHaS1DNRhbW90oyefRk5Fh2JYEOp",
+    "size": 73490,
+    "modified": "2026-01-22T09:59:38.953Z"
+   },
+   {
+    "name": "AZ-2900PC VERONA +CEKIN ONE SIZE G3.JPG",
+    "id": "181YxPLakEpL4xSsF6rQhhcyJhjUKYXjx",
+    "size": 82327,
+    "modified": "2026-01-22T09:59:40.055Z"
+   },
+   {
+    "name": "AZ-3003PC VERONA ONE SIZE G3.JPG",
+    "id": "1ptSrekqLt6FpxNaEJuwXXSzRZJd-jeZE",
+    "size": 78141,
+    "modified": "2026-01-22T09:59:55.105Z"
+   },
+   {
+    "name": "AZ-3029PC VERONA ONE SIZE G5.JPG",
+    "id": "188I79l_wfE7iZqzVNi_nN09iuNk_fmZ0",
+    "size": 83557,
+    "modified": "2026-01-22T10:00:00.400Z"
+   },
+   {
+    "name": "AZ-3030PC VERONA ONE SIZE G3.JPG",
+    "id": "1h_TOgDgZHwIMCyXb-ICLHsvm4v_g2FMu",
+    "size": 85583,
+    "modified": "2026-01-22T10:00:00.591Z"
+   },
+   {
+    "name": "AZ-3035PC VERONA ONE SIZE G5.JPG",
+    "id": "1J-Ss7elMsbzWJhVwFwzu_q_O21dCd6rM",
+    "size": 83977,
+    "modified": "2026-01-22T10:00:01.627Z"
+   },
+   {
+    "name": "AZ-3036PC VERONA+ROMA ONE SIZE G5.JPG",
+    "id": "13FjP-XZbe3sX9s1UXZrAK2M24Bdd89-J",
+    "size": 72332,
+    "modified": "2026-01-22T10:00:01.818Z"
+   },
+   {
+    "name": "AZ-3051PC VERONA ONE SIZE G5.JPG",
+    "id": "1Yde6BCbYWwxjIn_M9JRfMDqHk6-kQNbJ",
+    "size": 79634,
+    "modified": "2026-01-22T10:00:02.866Z"
+   }
+  ],
+  "TURBO VINCI": [
+   {
+    "name": "AZ-2688PC TURBI VINCI ONE SIZE G3.JPG",
+    "id": "114wJTJspku83XMojMM20rRIgfJfns3nK",
+    "size": 94996,
+    "modified": "2026-01-22T09:59:22.138Z"
+   },
+   {
+    "name": "AZ-2898PC TURBO VINCI ONE SIZE G3.JPG",
+    "id": "1GKq4qQqrLyqdcMyVl0IrRgTjC_Rw4sBH",
+    "size": 91291,
+    "modified": "2026-01-22T09:59:39.683Z"
+   },
+   {
+    "name": "AZ-2910PC TURBO VINCI ONE SIZE G3.JPG",
+    "id": "1DyJk2BtJEQhVdK7YW6xZo-9DzAJH7jk2",
+    "size": 82467,
+    "modified": "2026-01-22T09:59:42.024Z"
+   }
+  ],
+  "CZAPKI PO NUMERZE MODELU KOLORYSTYKA": [
+   {
+    "name": "AZ-1622PC VEZUV ONE SIZE G3.JPG",
+    "id": "1d4FHwFgO6W0Mdz5tIuzgD3ZsGkZI3S1d",
+    "size": 87730,
+    "modified": "2026-01-22T09:59:05.565Z"
+   },
+   {
+    "name": "AZ-1876PC VEZUV CEKIN ONE SIZE G3.JPG",
+    "id": "1WxyGNqheNjP7fQ7ehjFWsHGk6nALxPRa",
+    "size": 88069,
+    "modified": "2026-01-22T09:59:07.718Z"
+   },
+   {
+    "name": "AZ-2018PC VEZUV ONE SIZE G3.JPG",
+    "id": "1QJAzgtTP0WKtxkaagiBGf3L9DetDaF2z",
+    "size": 91347,
+    "modified": "2026-01-22T09:59:08.466Z"
+   },
+   {
+    "name": "AZ-2088PC VEZUV ONE SIZE G3.JPG",
+    "id": "1nn-Cp1TIm1aX6eYLaq8P5znB1FVmSnDh",
+    "size": 84973,
+    "modified": "2026-01-22T09:59:08.893Z"
+   },
+   {
+    "name": "AZ-2344PC VEZUV TURBO VINCI ONE SIZE G7.JPG",
+    "id": "1ZT50IU6dZA2xpStbjj5r3f7Wzd0bKO2I",
+    "size": 97021,
+    "modified": "2026-01-22T09:59:10.849Z"
+   },
+   {
+    "name": "AZ-2538PK AKRYL ONE SIZE G7.JPG",
+    "id": "1Yya7HRz2sF5V1nOU9IgI0PaBZ-FfwGEI",
+    "size": 119725,
+    "modified": "2026-01-22T09:59:14.850Z"
+   },
+   {
+    "name": "AZ-2539PK AKRYL ONE SIZE G7.JPG",
+    "id": "1eWh7g7z7YIvnj_WRPEA8NQSF07pLKg6B",
+    "size": 89410,
+    "modified": "2026-01-22T09:59:15.018Z"
+   },
+   {
+    "name": "AZ-2541PK AKRYL ONE SIZE G7.JPG",
+    "id": "1Cl9_I8HTRw5tuj_WLdz3JgqSZNaRlUxF",
+    "size": 79334,
+    "modified": "2026-01-22T09:59:15.172Z"
+   },
+   {
+    "name": "AZ-2542PK AKRYL ONE SIZE G7.JPG",
+    "id": "1mD3Atshbu0Th6SIXQXq9XETzx30bQVWM",
+    "size": 95207,
+    "modified": "2026-01-22T09:59:15.345Z"
+   },
+   {
+    "name": "AZ-2543PK AKRYL ONE SIZE G7.JPG",
+    "id": "13p6fTeSH4l1Xpbd-Pleoo7VBv-HoaleO",
+    "size": 91826,
+    "modified": "2026-01-22T09:59:15.509Z"
+   },
+   {
+    "name": "AZ-2548PK AKRYL ONE SIZE G5.JPG",
+    "id": "1a4fKG-z7UerGcsAMUJIlWI_p9jN1XfBr",
+    "size": 72575,
+    "modified": "2026-01-22T09:59:15.817Z"
+   },
+   {
+    "name": "AZ-2553PK AKRYL ONE SIZE G5.JPG",
+    "id": "1IUfntrbeM3PapQSgFdEZ5GoHVTGZGNsG",
+    "size": 76870,
+    "modified": "2026-01-22T09:59:16.274Z"
+   },
+   {
+    "name": "AZ-2554PK AKRYL ONE SIZE G5.JPG",
+    "id": "1Xw9EGdUjVDPxQ1DPS04SjvVAtNhnWlMh",
+    "size": 79828,
+    "modified": "2026-01-22T09:59:16.431Z"
+   },
+   {
+    "name": "AZ-2555PK VEZUV LAMBSLOOK ONE SIZE G5.JPG",
+    "id": "133-UbniQytaL2JNc5gwoxpZtwbZ2q9d1",
+    "size": 109291,
+    "modified": "2026-01-22T09:59:16.607Z"
+   },
+   {
+    "name": "AZ-2687PC VINCI TURBO VINCI ONE SIZE G3.JPG",
+    "id": "1KOczHeX_o6_1K6amlx5IvVInqMZLXcss",
+    "size": 89510,
+    "modified": "2026-01-22T09:59:21.970Z"
+   },
+   {
+    "name": "AZ-2706PC TURBO VINCI+VINCI G3 ONE SIZE.JPG",
+    "id": "104OubixgB01oC5Qb30mxUZ6cU7MVxT8l",
+    "size": 77341,
+    "modified": "2026-01-22T09:59:23.578Z"
+   },
+   {
+    "name": "AZ-2707PC TURBO VINCI + VINCI G3 ONE SIZE.JPG",
+    "id": "1RlWAXUFZXeJopggvTL1HzjjvNF4ERUiN",
+    "size": 87378,
+    "modified": "2026-01-22T09:59:23.783Z"
+   },
+   {
+    "name": "AZ-2753PC VEZUV G3 ONE SIZE.JPG",
+    "id": "1NuDrk8glHvFiC3C0WlRZAjvP1EeIqTSS",
+    "size": 77915,
+    "modified": "2026-01-22T09:59:27.214Z"
+   },
+   {
+    "name": "AZ-2808PC LAMBSLOOK G12 MULTI ONE SIZE.JPG",
+    "id": "1I0Qw1BhUc9bUZzBKp-JL91KncVUQU5eL",
+    "size": 97470,
+    "modified": "2026-01-22T09:59:30.998Z"
+   },
+   {
+    "name": "AZ-2812PC LAMBSLOOK G12 MULTI ONE SIZE.JPG",
+    "id": "1raZOrjozoqdOKFNzwsss3r0q0GGoc7vx",
+    "size": 88916,
+    "modified": "2026-01-22T09:59:31.183Z"
+   },
+   {
+    "name": "AZ-2816PC VEZUV G7 ONE SIZE.JPG",
+    "id": "1RbHT4NARDuJ-yV-g59XW8-7Oq4qJCIk8",
+    "size": 87940,
+    "modified": "2026-01-22T09:59:31.713Z"
+   },
+   {
+    "name": "AZ-2827PC VERONA G5 ONE SIZE.JPG",
+    "id": "1fOro-GS3DGpTpG89Z4lo_SdIbiPqp97w",
+    "size": 76836,
+    "modified": "2026-01-22T09:59:32.223Z"
+   },
+   {
+    "name": "AZ-2829PC VERONA G7 ONE SIZE.JPG",
+    "id": "1STDkybmm8pSiDMKklu6R5C5fGRR1V0hZ",
+    "size": 85444,
+    "modified": "2026-01-22T09:59:32.624Z"
+   },
+   {
+    "name": "AZ-2830PC VERONA G7 ONE SIZE.JPG",
+    "id": "15OhOJ8zITpK_18EVRh2VazuMIIkXK1wD",
+    "size": 96066,
+    "modified": "2026-01-22T09:59:32.827Z"
+   },
+   {
+    "name": "AZ-2831PC VERONA G7 ONE SIZE.JPG",
+    "id": "1-bXTQdj0R-Petq53GZ1mAADN_JqGvlQm",
+    "size": 80242,
+    "modified": "2026-01-22T09:59:33.004Z"
+   },
+   {
+    "name": "AZ-2833PC VERONA G5 ONE SIZE.JPG",
+    "id": "1owm6BeaHihKRURh14ezk5mnzHFBnuNPj",
+    "size": 69714,
+    "modified": "2026-01-22T09:59:33.375Z"
+   },
+   {
+    "name": "AZ-2836PC VEZUV G7 ONE SIZE.JPG",
+    "id": "1EIc0VAUodhXg8K_P5vxnfORoTUPCqxYH",
+    "size": 72265,
+    "modified": "2026-01-22T09:59:33.917Z"
+   },
+   {
+    "name": "AZ-2837PC LAMBSLOOK G12 ONE SIZE.JPG",
+    "id": "16ukHQjPOi4cBiyBNklxbfslFHkvTMshb",
+    "size": 85487,
+    "modified": "2026-01-22T09:59:34.093Z"
+   },
+   {
+    "name": "AZ-2894PC LAMBSLOOK ONE SIZE G12.JPG",
+    "id": "18_f9WVC5gfW52rrhsq6w7FWWjA1MV085",
+    "size": 88375,
+    "modified": "2026-01-22T09:59:39.136Z"
+   },
+   {
+    "name": "AZ-2895PC VERONA ONE SIZE G5.JPG",
+    "id": "19gZq7hXy1GtFmA5LTGrf3VW3PPUrX0mQ",
+    "size": 77629,
+    "modified": "2026-01-22T09:59:39.315Z"
+   },
+   {
+    "name": "AZ-2897PC VINCI+VEZUV+TURBO ONE SIZE G3.JPG",
+    "id": "1UQ8rANF2bEmQeyDtq9D_K-PbAhbjrfQC",
+    "size": 79323,
+    "modified": "2026-01-22T09:59:39.497Z"
+   },
+   {
+    "name": "AZ-2902PC VEZUV+TURBO VEZUV ONE SIZE G5.JPG",
+    "id": "1u2Xg2mkyMhg0HK2QDugLrCzcl9C7Bw-P",
+    "size": 96356,
+    "modified": "2026-01-22T09:59:40.276Z"
+   },
+   {
+    "name": "AZ-2903PC VERONA ONE SIZE G3.JPG",
+    "id": "1lumBUBOS5pCYVCv8Kyui6Tm63VdJOh16",
+    "size": 90853,
+    "modified": "2026-01-22T09:59:40.506Z"
+   },
+   {
+    "name": "AZ-2907PC VEZUV ONE SIZE G3.JPG",
+    "id": "1ZKEN65Wo_KW-4bFG15U24yav217IpIo_",
+    "size": 88979,
+    "modified": "2026-01-22T09:59:41.338Z"
+   },
+   {
+    "name": "AZ-2908PC VERONA ONE SIZE G3.JPG",
+    "id": "1JsNX16xa9rT8R7BhL7e1YShnc-4vUHpO",
+    "size": 65022,
+    "modified": "2026-01-22T09:59:41.544Z"
+   },
+   {
+    "name": "AZ-2909PK VINCI TURBO VINCI ONE SIZE G3.JPG",
+    "id": "1HYEsFQzQLSCP5x0qSuZrkYy6NS_uWZ2y",
+    "size": 77480,
+    "modified": "2026-01-22T09:59:41.815Z"
+   },
+   {
+    "name": "AZ-2911PC VEZUV ONE SIZE G7.JPG",
+    "id": "1h498t9NKB2cihaUz-NDBI3Qylwx_LImf",
+    "size": 81311,
+    "modified": "2026-01-22T09:59:42.240Z"
+   },
+   {
+    "name": "AZ-2912PC AKRYL ONE SIZE G7.JPG",
+    "id": "1BAc4KsbUCAlzB_OoROYEu-7hamNRrQId",
+    "size": 78004,
+    "modified": "2026-01-22T09:59:42.425Z"
+   },
+   {
+    "name": "AZ-2913PC VEZUV ONE SIZE G7.JPG",
+    "id": "1daz2pJolJdG-XsCie2cfthaZkbD-hYVR",
+    "size": 90935,
+    "modified": "2026-01-22T09:59:42.655Z"
+   },
+   {
+    "name": "AZ-2914PC VEZUV ONE SIZE G7.JPG",
+    "id": "1qcNzCy_E8P2uPBeAy7OP2CnKCwqB1EKN",
+    "size": 84132,
+    "modified": "2026-01-22T09:59:42.826Z"
+   },
+   {
+    "name": "AZ-2915PC VEZUV ONE SIZE G7.JPG",
+    "id": "1zFP27AgRykUIJys7nF6fEaqk84wmqsT7",
+    "size": 87568,
+    "modified": "2026-01-22T09:59:43.012Z"
+   },
+   {
+    "name": "AZ-2917PC TURBO VINCI ONE SIZE G3.JPG",
+    "id": "1Zn62HYw6SLBMr47gGQiqiZHd5aC5vaS5",
+    "size": 93904,
+    "modified": "2026-01-22T09:59:43.188Z"
+   },
+   {
+    "name": "AZ-2921PC AKRYL ROZ.50-52 G7.JPG",
+    "id": "1xCTTicM99rNlQnkRmxUSN0kAIyw7U36R",
+    "size": 79687,
+    "modified": "2026-01-22T09:59:43.527Z"
+   },
+   {
+    "name": "AZ-2932D GRASS VEZUV ONE SIZE G3.JPG",
+    "id": "1DZQa6kvMHHuZiFZ8vpMa9PbnfOBcoXBt",
+    "size": 82736,
+    "modified": "2026-01-22T09:59:44.887Z"
+   },
+   {
+    "name": "AZ-2941PC VEZUV TURBO VINCI ONE SIZE G3.JPG",
+    "id": "1DtNg3_iiaDWCfc3B0PeYLh8e0axKQegs",
+    "size": 91998,
+    "modified": "2026-01-22T09:59:46.319Z"
+   },
+   {
+    "name": "AZ-2943PC VERONA ONE SIZE G3.JPG",
+    "id": "1luVCN1321v7Ygu93zeVI9yoPJoOERosA",
+    "size": 84253,
+    "modified": "2026-01-22T09:59:46.669Z"
+   },
+   {
+    "name": "AZ-2964PC VERONA ONE SIZE G5.JPG",
+    "id": "1hCCyfT11A6bm5T3d0YGoQh3q_Sj3s0Ic",
+    "size": 85884,
+    "modified": "2026-01-22T09:59:48.982Z"
+   },
+   {
+    "name": "AZ-2977PC VEZUV ONE SIZE G7.JPG",
+    "id": "1K3nkeFXW5JDUMzJghwoDHy76hbKkO-LX",
+    "size": 97380,
+    "modified": "2026-01-22T09:59:50.241Z"
+   },
+   {
+    "name": "AZ-2985PC LAMBSLOOK ONE SIZE G10.JPG",
+    "id": "13fyQGa7xnKKCee6iE9Gz5J1oeKaXjNKB",
+    "size": 92546,
+    "modified": "2026-01-22T09:59:52.004Z"
+   },
+   {
+    "name": "AZ-2989PC LAMBSLOOK ONE SIZE G10.JPG",
+    "id": "1rLPadSngCwDHE8qzcQceclnOsFyvkdME",
+    "size": 84408,
+    "modified": "2026-01-22T09:59:52.403Z"
+   },
+   {
+    "name": "AZ-3006PC MADERA ONE SIZE G7.JPG",
+    "id": "1GW4lV1Vqs4yy93DJyXEQBvIWHh72vEue",
+    "size": 94752,
+    "modified": "2026-01-22T09:59:55.551Z"
+   },
+   {
+    "name": "AZ-3019PC VERONA ONE SIZE G5.JPG",
+    "id": "1THsTTGWRENqBrO8-pATCSumOmFxgtL7D",
+    "size": 84942,
+    "modified": "2026-01-22T09:59:58.342Z"
+   },
+   {
+    "name": "AZ-3020PC VERONA+ROMA ONE SIZE G5.JPG",
+    "id": "1lWmYxZSzUPWmFrdd8Nf94GyEegECW65t",
+    "size": 85834,
+    "modified": "2026-01-22T09:59:58.561Z"
+   },
+   {
+    "name": "AZ-3022PC LAMBSLOOK ONE SIZE G7.JPG",
+    "id": "1ryeBUYhjcro0dp6elUb42pDm_PSszG1H",
+    "size": 97108,
+    "modified": "2026-01-22T09:59:58.958Z"
+   },
+   {
+    "name": "AZ-3023PC LAMBSLOOK ONE SIZE G12.JPG",
+    "id": "1LW1tpUrt7BBNvDIAJLEob_shRYG7-dqP",
+    "size": 98195,
+    "modified": "2026-01-22T09:59:59.144Z"
+   },
+   {
+    "name": "AZ-3024PC LAMBSLOOK ONE SIZE G12.JPG",
+    "id": "1NKoF92Je1EhW-dEaqvRPrudulhP_AD5V",
+    "size": 109776,
+    "modified": "2026-01-22T09:59:59.349Z"
+   },
+   {
+    "name": "AZ-3026PC LAMBSLOOK ONE SIZE G7.JPG",
+    "id": "1RNN44bdRCyU7PivjKCn4I1vQt_ZH5kJh",
+    "size": 99661,
+    "modified": "2026-01-22T09:59:59.746Z"
+   },
+   {
+    "name": "AZ-3034PC VERONA ONE SIZE G5.JPG",
+    "id": "1AK3tWEdm467nSMh6Xs9ODuyjg6dTR3Xd",
+    "size": 82378,
+    "modified": "2026-01-22T10:00:01.420Z"
+   },
+   {
+    "name": "AZ-3037PC VERONA+ROMA ONE SIZE G5.JPG",
+    "id": "1X7W4-xXZAQL_1GDNW2110Umz147tMold",
+    "size": 82922,
+    "modified": "2026-01-22T10:00:02.009Z"
+   },
+   {
+    "name": "AZ-3038 VERONA+ROMA ONE SIZE G5.JPG",
+    "id": "1bsyx-_hQCzr87AMt_PAv_IjGk86gD9I8",
+    "size": 76423,
+    "modified": "2026-01-22T10:00:02.194Z"
+   },
+   {
+    "name": "AZ-3040PC VEZUV ONE SIZE G7.JPG",
+    "id": "15qzcKLfMmH5MjKBdt9ob4saqXuPwLMNO",
+    "size": 76946,
+    "modified": "2026-01-22T10:00:02.640Z"
+   },
+   {
+    "name": "AZ-3059PC VERONA ONE SIZE G5.JPG",
+    "id": "1CNWqoS_U93klvI8ZDMkHCHCg2srBNf4J",
+    "size": 74891,
+    "modified": "2026-02-18T12:09:00.917Z"
+   },
+   {
+    "name": "AZ-3060PC VERONA ONE SIZE G5.JPG",
+    "id": "1FybThVZYdjND-i9n8OcbdDOGlgXXO3DM",
+    "size": 89807,
+    "modified": "2026-02-18T12:09:01.088Z"
+   },
+   {
+    "name": "AZ-3061PC VEZUV ONE SIZE G7.JPG",
+    "id": "1lFTWCM9OW_dJdG46HcUktLeVwZQamcNm",
+    "size": 85934,
+    "modified": "2026-02-18T12:09:01.268Z"
+   },
+   {
+    "name": "AZ-3064PC LAMBSLOOK ONE SIZE G12.JPG",
+    "id": "1hiF574w_nkHD9jmgwBoNR3DBQtgaPyMx",
+    "size": 125383,
+    "modified": "2026-02-18T12:09:01.871Z"
+   },
+   {
+    "name": "AZ-3066PC LAMBSLOOK ONE SIZE G12.JPG",
+    "id": "1fvbj0RyRB7PLHn8-q4OPCvQXNfjIKIsr",
+    "size": 94852,
+    "modified": "2026-02-18T12:09:02.270Z"
+   },
+   {
+    "name": "AZ-3067PC VEZUV ONE SIZE G7.JPG",
+    "id": "1XFuBLUwOhdnTiisVAwJdt4ahNjEt5uIh",
+    "size": 107289,
+    "modified": "2026-02-18T12:09:00.578Z"
+   },
+   {
+    "name": "AZ-3069PC MADERA ONE SIZE G7.JPG",
+    "id": "114aoDshHPl8Gpn2PHcDUE0zk3e0n90Id",
+    "size": 75210,
+    "modified": "2026-04-17T10:48:37.496Z"
+   },
+   {
+    "name": "AZ-3070PK AKRYL ONE SIZE G5.JPG",
+    "id": "19Kd5d6je_r24DGzOuAjpZJF-jey2XuIh",
+    "size": 82276,
+    "modified": "2026-03-03T12:20:20.511Z"
+   },
+   {
+    "name": "AZ-3071PK AKRYL ONE SIZE G5.JPG",
+    "id": "19-IeTKdTtGw-6wnx2KBHsPdbCynhcR00",
+    "size": 76232,
+    "modified": "2026-03-03T12:20:20.662Z"
+   },
+   {
+    "name": "AZ-3072PK ONE SIZE G5.JPG",
+    "id": "1ZyMCmYfzlZG0GmHQcHlLkUOrc8OQE5Jw",
+    "size": 77060,
+    "modified": "2026-03-03T12:20:20.817Z"
+   },
+   {
+    "name": "AZ-3073PC VERONA ONE SIZE G5.JPG",
+    "id": "1ZpAkJR6PV_vQgP0Cj9Z9k_Ncn7dIDCy7",
+    "size": 87645,
+    "modified": "2026-03-03T12:20:20.989Z"
+   },
+   {
+    "name": "AZ-3074PC LAMBSLOOK ONE SIZE G10.JPG",
+    "id": "1KN_udn6PO06RsmBMLj4sRbXRIMRw0FU9",
+    "size": 92822,
+    "modified": "2026-03-03T12:20:21.150Z"
+   },
+   {
+    "name": "AZ-3075PC LAMBSLOOK+LUREX ONE SIZE G12.JPG",
+    "id": "14DCy3QQegpZjmS_NsAWI2JqU3guzTBP0",
+    "size": 101403,
+    "modified": "2026-03-03T12:20:21.329Z"
+   },
+   {
+    "name": "AZ-3079PC VERONA ONE SIZE G3.JPG",
+    "id": "1Ah3IZPjx2l-_iNWghyQ4-4XS_NkjL2PT",
+    "size": 80167,
+    "modified": "2026-03-17T10:58:34.585Z"
+   },
+   {
+    "name": "AZ-3080PC VERONA ONE SIZE G3.JPG",
+    "id": "1Att31oEuWwH2baOR5-OaNKVVE0GFCQon",
+    "size": 81988,
+    "modified": "2026-03-17T10:58:34.757Z"
+   },
+   {
+    "name": "AZ-3081PC VEZUV+TURBO VEZUV ONE SIZE G7.JPG",
+    "id": "1YWmGv92Uk2fmeoM_5nnhNnFOJ0IDPGRA",
+    "size": 95914,
+    "modified": "2026-03-26T09:56:07.070Z"
+   },
+   {
+    "name": "AZ-3083PC VEZUV ONE SIZE G7.JPG",
+    "id": "1vjFC5OqqyGfxqTgUWsM_XEj38eZE-0wr",
+    "size": 84777,
+    "modified": "2026-03-26T09:56:07.450Z"
+   },
+   {
+    "name": "AZ-3084PC VEZUV ONE SIZE G7.JPG",
+    "id": "1a8FFqXGTnLHeH_1N7aF8f3Ra1TZzZtTY",
+    "size": 87557,
+    "modified": "2026-03-26T09:56:07.625Z"
+   },
+   {
+    "name": "AZ-3085PC VERONA ONE SIZE G5.JPG",
+    "id": "1b8GZXwhf8tjHQzh3QowHkIGTsO2nYOg-",
+    "size": 72396,
+    "modified": "2026-04-17T10:48:37.671Z"
+   },
+   {
+    "name": "AZ-3086PC VERONA ONE SIZE G5.JPG",
+    "id": "1u2umcKhk_57U_NzOH1T6IW7EM2vG0ScE",
+    "size": 79744,
+    "modified": "2026-04-17T10:48:37.830Z"
+   },
+   {
+    "name": "AZ-3091PC VERONA ONE SIZE G5.JPG",
+    "id": "1_M1JC3OD-rhf7-bNC324QIidY3dAhYhi",
+    "size": 85660,
+    "modified": "2026-04-17T10:48:38.573Z"
+   },
+   {
+    "name": "AZ-3092PC VERONA+LUREX ONE SIZE G5.JPG",
+    "id": "1DD5jZe-16_yXD16ZPTcQ2CxZEvv5AA5p",
+    "size": 89880,
+    "modified": "2026-05-12T09:10:34.871Z"
+   },
+   {
+    "name": "AZ-3094PC VERONA ONE SIZE G5.JPG",
+    "id": "1Z1uqcvyMQivnfZ3nGhjj6dK_4NI0pN7A",
+    "size": 65095,
+    "modified": "2026-05-12T09:10:35.171Z"
+   },
+   {
+    "name": "AZ-3095 VERONA ONE SIZE G5.JPG",
+    "id": "18n-vJskO88Won9We8YdrTqNIP1JFS_q7",
+    "size": 74968,
+    "modified": "2026-05-12T09:10:35.347Z"
+   },
+   {
+    "name": "AZ-3096PC VEZUV ONE SIZE G5.JPG",
+    "id": "18HfGOq7le1fhbM4-QezweHGk0y7612zV",
+    "size": 86399,
+    "modified": "2026-05-12T09:10:35.520Z"
+   },
+   {
+    "name": "AZ-3097PC VERONA ONE SIZE G5.JPG",
+    "id": "1JmIDsBHyeRqG_tQlUb4hpefIEH15yCjy",
+    "size": 83247,
+    "modified": "2026-05-12T09:10:35.719Z"
+   },
+   {
+    "name": "AZ-3098PC VERONA ONE SIZE G5.JPG",
+    "id": "15ag0KCHCodRXAs6XuxbF9epf_6beJQFI",
+    "size": 91348,
+    "modified": "2026-05-12T09:10:35.902Z"
+   },
+   {
+    "name": "AZ-3099PC VERONA ONE SIZE G5.JPG",
+    "id": "17Xx-aT6DtUTgVhxLWRrpBdhZskZrXkLr",
+    "size": 83427,
+    "modified": "2026-05-12T09:10:36.092Z"
+   },
+   {
+    "name": "AZ-3100PC VEZUV+VINCI ONE SIZE G3.JPG",
+    "id": "18TQ3dc7S0rCSmTG3hnnNIKo1qIaBbmx-",
+    "size": 96292,
+    "modified": "2026-05-12T09:10:36.282Z"
+   },
+   {
+    "name": "AZ-3101PC VERONA ONE SIZE G3.JPG",
+    "id": "1WBnCa80DuTZI7yejm4XOOg4fuyi9BDdX",
+    "size": 74513,
+    "modified": "2026-05-12T09:10:36.456Z"
+   }
+  ],
+  "LAMBSLOOK 90.10": [
+   {
+    "name": "AZ-3018 LAMBSLOOK 90.10 ONE SIZE G5.JPG",
+    "id": "1XJFpVvSds9KuzrvqV-f0O7rJv-8znXAp",
+    "size": 101408,
+    "modified": "2026-01-22T09:59:58.154Z"
+   },
+   {
+    "name": "AZ-3027 LAMBSLOOK 90.10 ONE SIZE G12.JPG",
+    "id": "1KluZwZh1nwrIraZnEG7txCazkYxx445r",
+    "size": 100228,
+    "modified": "2026-01-22T09:59:59.972Z"
+   },
+   {
+    "name": "AZ-3031 LAMBSLOOK 90.10 ONE SIZE G12.JPG",
+    "id": "18bqCo6cxNx_n5VqVhHZZNgtUwK9wjPyi",
+    "size": 102687,
+    "modified": "2026-01-22T10:00:00.798Z"
+   }
+  ],
+  "AZ-1622PC i 2088PC": [],
+  "COLORCARD AZ-1820PC": [
+   {
+    "name": "AZ-1820PC VINCI TURBO VINCI ONE SIZE G3.JPG",
+    "id": "1GJvyrG9gKaz2dUs1Iz2fPIonq91W77-c",
+    "size": 83395,
+    "modified": "2026-01-22T09:59:07.353Z"
+   }
+  ],
+  "VINCI": [
+   {
+    "name": "AZ-1464PC VINCI ONE SIZE G3.JPG",
+    "id": "1cCHRs1hTnjXOjlTLW9kunnBwlNIpVWre",
+    "size": 88756,
+    "modified": "2026-01-22T09:59:04.648Z"
+   },
+   {
+    "name": "AZ-1909 VINCI ONE SIZE G3.JPG",
+    "id": "1p2vvlxPhxmnpnVPwTnl83ndVYDCvFNMa",
+    "size": 83050,
+    "modified": "2026-01-22T09:59:08.067Z"
+   },
+   {
+    "name": "AZ-2263LPC VINCI.JPG",
+    "id": "1M6XfzUfXfDDlL8Yr0mkbFZ4IjoGBiO-2",
+    "size": 97556,
+    "modified": "2026-01-22T09:59:10.325Z"
+   },
+   {
+    "name": "AZ-2701PC VINCI ONE SIZE G3.JPG",
+    "id": "1HVv4JosVIIGy8bJYXCfBrEQ1BIyooLjX",
+    "size": 85702,
+    "modified": "2026-01-22T09:59:22.850Z"
+   },
+   {
+    "name": "AZ-2735PC VINCI G3 ONE SIZE.JPG",
+    "id": "15niUHEMFoUNpmyy6hO9kzbOHNIHt35OJ",
+    "size": 89956,
+    "modified": "2026-01-22T09:59:25.904Z"
+   }
+  ],
+  "AZ-2788PC": [
+   {
+    "name": "AZ-2788PC ROMA VERONA G3 ONE SIZE.JPG",
+    "id": "1-FWYqL-1Bo9ABu0apeO6AlNvWNVXaHkX",
+    "size": 74074,
+    "modified": "2026-01-22T09:59:28.617Z"
+   },
+   {
+    "name": "AZ-2797PC ROMA VERONA G3 ONE SIZE.JPG",
+    "id": "12u7GiNbvEiFZHicOR5KPS2sv81e73c2M",
+    "size": 85003,
+    "modified": "2026-01-22T09:59:29.969Z"
+   }
+  ],
+  "COLORCARD AZ-2802PC": [
+   {
+    "name": "AZ-2802PC ROMA ONE SIZE G3.JPG",
+    "id": "1sewK4vG_LYapJp_VcdLG0ehSn4-3H8L3",
+    "size": 76361,
+    "modified": "2026-01-22T09:59:30.326Z"
+   },
+   {
+    "name": "AZ-2804 ROMA ONE SIZE G3.JPG",
+    "id": "13QSqMpLRjTiswHEt9Mb8bBrt2q3lafoS",
+    "size": 96634,
+    "modified": "2026-01-22T09:59:30.492Z"
+   },
+   {
+    "name": "AZ-2805 ROMA ONE SIZE G3.JPG",
+    "id": "1RVvcYuIdomHy6U5U-IIsQER7Kl9zwWEW",
+    "size": 71564,
+    "modified": "2026-01-22T09:59:30.653Z"
+   },
+   {
+    "name": "AZ-2806 ROMA ONE SIZE G3.JPG",
+    "id": "1t590zvtWGq59b0ymnfqLlRPxl8f6LXzq",
+    "size": 98602,
+    "modified": "2026-01-22T09:59:30.823Z"
+   }
+  ],
+  "COLORCARD AZ-1356PC": [
+   {
+    "name": "AZ-1356PC VEZUV ONE SIZE G3.JPG",
+    "id": "1lNnN4wONxCq6yy2W7TEz8NvYry51jubl",
+    "size": 91610,
+    "modified": "2026-01-22T09:59:04.293Z"
+   }
+  ],
+  "LAMBSLOOK": [
+   {
+    "name": "AZ-1378PC LAMBSLOOK ROZ. 56-62 (.JPG",
+    "id": "1yblcAvsEPNWCX2vPvnDejv1qXIhAyiMh",
+    "size": 123785,
+    "modified": "2026-01-22T09:59:04.316Z"
+   },
+   {
+    "name": "AZ-1476PC LAMBSLOOK ONE SIZE G5.JPG",
+    "id": "1jgKPFIK-rCFSLxWpThtA6X8-aFYOZsWS",
+    "size": 105887,
+    "modified": "2026-01-22T09:59:04.831Z"
+   },
+   {
+    "name": "AZ-1708PC LAMBSLOOK ONE SIZE G10.JPG",
+    "id": "1FgpUMYpA8xeDICsPRy7XuS2mYgoEOc-O",
+    "size": 89972,
+    "modified": "2026-01-22T09:59:06.320Z"
+   },
+   {
+    "name": "AZ-2194PC LAMBSLOOK ONE SIZE G7.JPG",
+    "id": "1uZUh4JvhXl-WtrjY3Cc4jJEB_b4_bUh2",
+    "size": 100206,
+    "modified": "2026-01-22T09:59:09.438Z"
+   },
+   {
+    "name": "AZ-2202PC LAMBSLOOK SIZE 52-54 G5.JPG",
+    "id": "1xBxsCxFAM3oxnkpa6BnK_f7agsNWiRzb",
+    "size": 107168,
+    "modified": "2026-01-22T09:59:09.610Z"
+   },
+   {
+    "name": "AZ-2371PC LAMBSLOOK 52-54 G5.JPG",
+    "id": "1jflabQJyCICSGK8fRComo30JUvy11zon",
+    "size": 103454,
+    "modified": "2026-01-22T09:59:11.633Z"
+   },
+   {
+    "name": "AZ-2440PC LAMBSLOOK ONE SIZE G12.JPG",
+    "id": "1VDnKj0Dc5A7Dpbi0jrjTUkTZ0SIt5YYj",
+    "size": 93227,
+    "modified": "2026-01-22T09:59:12.022Z"
+   },
+   {
+    "name": "AZ-2441PC LAMBSLOOK ONE SIZE G12.JPG",
+    "id": "1Tzb8QLFfejek-ngTmeWxciYuGR3WMtug",
+    "size": 63897,
+    "modified": "2026-01-22T09:59:12.181Z"
+   },
+   {
+    "name": "AZ-2526D LAMBSLOOK ONE SIZE G12.JPG",
+    "id": "1NKYu4YyBtu-hzo4EAl_ttRChofc5oJLR",
+    "size": 72887,
+    "modified": "2026-01-22T09:59:14.085Z"
+   },
+   {
+    "name": "AZ-2661D VEZUV LAMBSLOOK ONE SIZE G7.JPG",
+    "id": "1VVobFq3Nwh_DOw4XJhPdJ3WSWQCEOAue",
+    "size": 98854,
+    "modified": "2026-01-22T09:59:20.330Z"
+   },
+   {
+    "name": "AZ-2663D VEZUV LAMBSLOOK ONE SIZE G7.JPG",
+    "id": "12ydp2_vrDCW5i10jEHwItEIcwR-JFCpY",
+    "size": 102405,
+    "modified": "2026-01-22T09:59:20.560Z"
+   },
+   {
+    "name": "AZ-2665D LAMBSLOOK ONE SIZE G12.JPG",
+    "id": "1LpO4D34B9SdatnQ8sxq3J339SzoyXgXS",
+    "size": 89924,
+    "modified": "2026-01-22T09:59:20.746Z"
+   },
+   {
+    "name": "AZ-2667D LAMBSLOOK ONE SIZE G12.JPG",
+    "id": "1GaSAj3HWtGY0QFf8IXI8_HYp6G8qTa4F",
+    "size": 109268,
+    "modified": "2026-01-22T09:59:20.936Z"
+   },
+   {
+    "name": "AZ-2876PC LAMBSLOOK ROZ.52-54 G5.JPG",
+    "id": "1YUS3EaHhrLTMbk98ErJNk370pR663EuF",
+    "size": 76194,
+    "modified": "2026-01-22T09:59:38.142Z"
+   },
+   {
+    "name": "AZ-2884PC LAMBSLOOK ONE SIZE G5.JPG",
+    "id": "1DMlyA7M_DibZ1vprhbTyv6yffKtCI5PX",
+    "size": 84823,
+    "modified": "2026-01-22T09:59:38.316Z"
+   },
+   {
+    "name": "AZ-3087D LAMBSLOOK ONE SIZE G12.JPG",
+    "id": "1bQvihJaVffXKVvP_ArmsjP3DSYEeM1tS",
+    "size": 53650,
+    "modified": "2026-05-12T09:10:34.679Z"
+   }
+  ],
+  "AZ-2719PC": [
+   {
+    "name": "AZ-2718PC VERONA ROZ.52-54 G7.JPG",
+    "id": "1GmSfW3cFyFRcJ7zmPNrozbGzCjUCskKk",
+    "size": 102053,
+    "modified": "2026-01-22T09:59:24.843Z"
+   },
+   {
+    "name": "AZ-2719PC VERONA ROZ.52-54 G7.JPG",
+    "id": "1gJTyL8LVmM5maVcSLAmyQnCH46Xlpv_J",
+    "size": 65506,
+    "modified": "2026-01-22T09:59:25.019Z"
+   },
+   {
+    "name": "AZ-2719PCE VERONA ROZ.52-54 G7.JPG",
+    "id": "1NRiwdz__WbQfph92uMhc_2KuZJwJaa9w",
+    "size": 68885,
+    "modified": "2026-01-22T09:59:25.193Z"
+   }
+  ],
+  "ATENA+VEZUV+GRASS": [
+   {
+    "name": "AZ-2980D VEZUV GRASS ONE SIZE G3.JPG",
+    "id": "1LcPvHmBLbazia5tDC-QLKbjkxoBaCLTf",
+    "size": 75338,
+    "modified": "2026-01-22T09:59:50.957Z"
+   },
+   {
+    "name": "AZ-2982PC GRASS+VEZUV+LAMBSLOOK ONE SIZE G3.JPG",
+    "id": "1ZFuJ--kofvbWd-eOuvJj_qNKIjl6H6a_",
+    "size": 76347,
+    "modified": "2026-01-22T09:59:51.398Z"
+   },
+   {
+    "name": "AZ-2983PC VEZUV+GRASS ONE SIZE G3.JPG",
+    "id": "1-L5EwCn4CRN7URSQLDHKp5LS-lqT8T4W",
+    "size": 77700,
+    "modified": "2026-01-22T09:59:51.587Z"
+   },
+   {
+    "name": "AZ-2984D VEZUV+GRASS ONE SIZE G5.JPG",
+    "id": "1kX-6BtuVe15OojJuCQuHWO3kZUDBHNng",
+    "size": 76787,
+    "modified": "2026-01-22T09:59:51.816Z"
+   },
+   {
+    "name": "AZ-2998PC GRASS+VEZUV ONE SIZE G7.JPG",
+    "id": "1U6Daq0sVh7UJJ1V-4q7-llkbuG_nkAPi",
+    "size": 78054,
+    "modified": "2026-01-22T09:59:54.085Z"
+   },
+   {
+    "name": "AZ-2999PC GRASS+VEZUV ONE SIZE G7.JPG",
+    "id": "1fRBLBRpm7U0NC_jUnJrcJmeeDum0jETN",
+    "size": 87256,
+    "modified": "2026-01-22T09:59:54.290Z"
+   },
+   {
+    "name": "AZ-3000PC GRASS+VEZUV ONE SIZE G7.JPG",
+    "id": "1L0bVr6E1hBP_lcugB32LRAZUXRyJwKGO",
+    "size": 89254,
+    "modified": "2026-01-22T09:59:54.530Z"
+   }
+  ],
+  "do wygenerowania w ai": [
+   {
+    "name": "AZ-2713PC AKRYL 50-52 G5.JPG",
+    "id": "1t-kQDP4k9vCqxdmFFVN1EeZyXbfPw8Zp",
+    "size": 57920,
+    "modified": "2026-01-22T09:59:24.302Z"
+   },
+   {
+    "name": "AZ-2716PC AKRYL ROZ.50-52 G5.JPG",
+    "id": "1_P3Uk2UKqeDTLVfSBzdlRejhjGnEMq5v",
+    "size": 68620,
+    "modified": "2026-01-22T09:59:24.479Z"
+   },
+   {
+    "name": "AZ-2716PCE AKRYL ROZ.50-52 G5.JPG",
+    "id": "1aBEPCYPm7hrXBUSAgNY3XvV8y8aVLRfo",
+    "size": 68038,
+    "modified": "2026-01-22T09:59:24.652Z"
+   },
+   {
+    "name": "AZ-2849PC AKRYL G7 ROZ.52-54 BOY.JPG",
+    "id": "1RwXQhYi0HPLTTRc8M_uTCtu5uJYgOGVN",
+    "size": 84741,
+    "modified": "2026-01-22T09:59:35.096Z"
+   },
+   {
+    "name": "AZ-2887PCE AKRYL ROZ.50-52 G5.JPG",
+    "id": "1ZSPhiLxHEV1BG9Dnn1q_Ap_FMb6rNS8j",
+    "size": 84904,
+    "modified": "2026-01-22T09:59:38.520Z"
+   },
+   {
+    "name": "AZ-2888PCE AKRYL ROZ.50-52 G5.JPG",
+    "id": "1zMO7ukdDvKXIF5XItg17l9Ou48Jm0o0I",
+    "size": 70543,
+    "modified": "2026-01-22T09:59:38.778Z"
+   },
+   {
+    "name": "AZ-2922PC VERONA ONE SIZE G3.JPG",
+    "id": "1AMipyP0i01P04Vrl5FcDFEdq6LNxvOoH",
+    "size": 63565,
+    "modified": "2026-01-22T09:59:43.694Z"
+   },
+   {
+    "name": "AZ-2923PC VERONA ONE SIZE G3.JPG",
+    "id": "1RiXCxPIs0XZepMkOeCTxViimFJU7TYie",
+    "size": 69015,
+    "modified": "2026-01-22T09:59:43.872Z"
+   },
+   {
+    "name": "AZ-2940 VERONA ONE SIZE G3.JPG",
+    "id": "1O5eS98aa3ie-UOlRD2X7U4M2vAHYY-EZ",
+    "size": 70242,
+    "modified": "2026-01-22T09:59:46.156Z"
+   },
+   {
+    "name": "AZ-2942 VERONA ONE SIZE G3.JPG",
+    "id": "1F8bLXGVg5s9eUd4TzyS0_IVaTBlXXDFJ",
+    "size": 77722,
+    "modified": "2026-01-22T09:59:46.498Z"
+   },
+   {
+    "name": "AZ-2963PC VERONA ONE SIZE G3.JPG",
+    "id": "1fqN1QUyHI19V9NEtC0a9mWuydXIcJ1rE",
+    "size": 66195,
+    "modified": "2026-01-22T09:59:48.799Z"
+   },
+   {
+    "name": "AZ-2965PK VINCI ONE SIZE G3.JPG",
+    "id": "1RdM8ejVY8QI75EbYUuNZUalnjZy6Hl6m",
+    "size": 68032,
+    "modified": "2026-01-22T09:59:49.214Z"
+   },
+   {
+    "name": "AZ-2970PC ROMA ONE SIZE G3 (1).JPG",
+    "id": "1iIz3JE0voK2cxcazlpsWsgGwaqp9l0B1",
+    "size": 77985,
+    "modified": "2026-01-22T09:59:49.398Z"
+   },
+   {
+    "name": "AZ-2973 ROMA ONE SIZE G3.JPG",
+    "id": "1bvy4ikCONPN3QzVP_BvrM6jO_KCph4Ao",
+    "size": 69103,
+    "modified": "2026-01-22T09:59:50.049Z"
+   },
+   {
+    "name": "AZ-2981D VEZUV+GRASS ONE SIZE G5.JPG",
+    "id": "1YwGLcXYQlDAMhb2K3ixVOtsGtIatzOee",
+    "size": 64088,
+    "modified": "2026-01-22T09:59:51.170Z"
+   },
+   {
+    "name": "AZ-3014D GRASS+VEZUV ONE SIZE G5.JPG",
+    "id": "1VlzUGZXYkPwRpv3pjBw7PpcgzB0H9D94",
+    "size": 95136,
+    "modified": "2026-01-22T09:59:57.354Z"
+   },
+   {
+    "name": "AZ-3063PC VERONA ONE SIZE G3.JPG",
+    "id": "1Zd3Is7rONTEtwAhoInOJWjooRyzBPVZW",
+    "size": 71706,
+    "modified": "2026-02-18T12:09:01.635Z"
+   }
+  ],
+  "COLORCARD AZ-3102PC": [
+   {
+    "name": "AZ-3102PC LAMBSLOOK ONE SIZE G12.JPG",
+    "id": "1zvzIUiOIC0jzt7DUEavWOxCCT9T7PYP1",
+    "size": 97444,
+    "modified": "2026-05-12T09:10:36.653Z"
+   }
+  ],
+  "CZAPKI KTÓRE MAJĄ TYLKO JEDEN KOLOR": [
+   {
+    "name": "AZ-1531PK AKRYL ONE SIZE G3.JPG",
+    "id": "1WKZ8bbyOZiJCMCwZvYUaP75-94OlB5nE",
+    "size": 89298,
+    "modified": "2026-01-22T09:59:05.020Z"
+   },
+   {
+    "name": "AZ-2469PC VEZUV ONE SIZE G3.JPG",
+    "id": "18qzk3SR4UQSL1wDlIT7kgp18k7bE7oep",
+    "size": 88640,
+    "modified": "2026-01-22T09:59:12.873Z"
+   },
+   {
+    "name": "AZ-2490PK AKRYL ROZ.52-54 G3.JPG",
+    "id": "1OA7uxmQqNP3aOhK4rFnZy6Z8EQhNaRL8",
+    "size": 87386,
+    "modified": "2026-01-22T09:59:13.222Z"
+   },
+   {
+    "name": "AZ-2650PC AKRYL ONE SIZE G7.JPG",
+    "id": "1ZVzBEv3sWESm4aHUxSxN3LIWew5cHvNV",
+    "size": 85571,
+    "modified": "2026-01-22T09:59:19.266Z"
+   },
+   {
+    "name": "AZ-2651PC AKRYL ONE SIZE G7.JPG",
+    "id": "1MNbgrU06tNMmz2ACnBAn6a4cuLMiMXl_",
+    "size": 122448,
+    "modified": "2026-01-22T09:59:19.442Z"
+   },
+   {
+    "name": "AZ-2680PC VEZUV ONE SIZE G7.JPG",
+    "id": "1y9ha-vrBFXOzzXdb2hJixABm8OrtnQDO",
+    "size": 100914,
+    "modified": "2026-01-22T09:59:21.458Z"
+   },
+   {
+    "name": "AZ-2681PC VEZUV ONE SIZE G7.JPG",
+    "id": "18pbIAaYaRtQni2PR5rVOzhd5fV3jtVqS",
+    "size": 95930,
+    "modified": "2026-01-22T09:59:21.618Z"
+   },
+   {
+    "name": "AZ-2835PC AKRYL ONE SIZE G3.JPG",
+    "id": "1lsRy_OsDyaOK8K1n3lAhXrQvb-NzMNkC",
+    "size": 78240,
+    "modified": "2026-01-22T09:59:33.736Z"
+   },
+   {
+    "name": "AZ-2925PC AKRYL ONE SIZE G12.JPG",
+    "id": "1Z_f2tbGbnZD4aSDouoVYzp3qR7CDQfEq",
+    "size": 63003,
+    "modified": "2026-01-22T09:59:44.031Z"
+   },
+   {
+    "name": "AZ-2926PC AKRYL ROZ.50-52 G12.JPG",
+    "id": "1xDW4KV_BfCZnjAl5Mkzz18lW_uT4dvtu",
+    "size": 52602,
+    "modified": "2026-01-22T09:59:44.178Z"
+   },
+   {
+    "name": "AZ-2939 VERONA LAMBSLOOK ONE SIZE G5.JPG",
+    "id": "1SiZZcdS_IP0SaTI9AkrUyqhA4LsMviAm",
+    "size": 86384,
+    "modified": "2026-01-22T09:59:45.978Z"
+   },
+   {
+    "name": "AZ-3032PC LAMBSLOOK ONE SIZE G7.JPG",
+    "id": "1F6fX2AwLs8mtb0t_t7GXiLYsnNC-YzVG",
+    "size": 99879,
+    "modified": "2026-01-22T10:00:00.992Z"
+   },
+   {
+    "name": "AZ-3033PC LAMBSLOOK ONE SIZE G7.JPG",
+    "id": "1SWhgqXHoPIcQDcNfve2EX65E-GBfhV6a",
+    "size": 93580,
+    "modified": "2026-01-22T10:00:01.198Z"
+   },
+   {
+    "name": "AZ-3062PC AKRYL ONE SIZE G7.JPG",
+    "id": "1jSUyI4tYqY3k6_mVfOr8goI7DwSxAtYu",
+    "size": 89919,
+    "modified": "2026-02-18T12:09:01.452Z"
+   },
+   {
+    "name": "AZ-3065PC AKRYL ONE SIZE G7.JPG",
+    "id": "155A9NNNyAei6xPeI0XudRC1VpJ9JI7EJ",
+    "size": 90362,
+    "modified": "2026-02-18T12:09:02.079Z"
+   }
+  ]
+ },
+ "colorcards": {
+  "COLORCARD AZ-2608PK": [
+   {
+    "name": "IMG_5690.JPG",
+    "id": "1Gm1tIKlBjuzoEdBHtOhK16Lbvcw2dyZk",
+    "size": 6403510,
+    "modified": "2026-10-07T08:34:41.093Z"
+   },
+   {
+    "name": "IMG_5691.JPG",
+    "id": "1c6UjzYdeq4lkk0_Q-NYyVioeNAUby1yl",
+    "size": 4397784,
+    "modified": "2026-10-07T08:32:50.288Z"
+   }
+  ],
+  "COLORCARD AUSTRALIA": [
+   {
+    "name": "IMG_7019.JPG",
+    "id": "129mNClj9kq8iv_LI6aTIC3UisfOkkSPC",
+    "size": 3950419,
+    "modified": "2026-08-14T08:15:31.058Z"
+   },
+   {
+    "name": "IMG_7020.JPG",
+    "id": "10CtGyH-L38S5X0RSo9GWqF55LhSsvjre",
+    "size": 3772524,
+    "modified": "2026-08-14T08:14:53.828Z"
+   },
+   {
+    "name": "IMG_7021.JPG",
+    "id": "1p_9Lfd_Nkr-Xn4xMdG28mYJNAFxNVAkk",
+    "size": 3496752,
+    "modified": "2026-08-14T08:14:44.834Z"
+   },
+   {
+    "name": "IMG_7022.JPG",
+    "id": "13oXdgP74lkqtQ49rcosdnb4Kftu3c94W",
+    "size": 3737305,
+    "modified": "2026-08-14T08:15:26.687Z"
+   },
+   {
+    "name": "IMG_7023.JPG",
+    "id": "1bC0sXsWwR32Oia0PEMnSSxkN2ucxj7SN",
+    "size": 2659267,
+    "modified": "2026-08-14T08:15:21.649Z"
+   },
+   {
+    "name": "IMG_7024.JPG",
+    "id": "1LnslJaAkidx8AaqHWueoKmKNRTWJY1oV",
+    "size": 2630950,
+    "modified": "2026-08-14T08:15:16.711Z"
+   },
+   {
+    "name": "IMG_7025.JPG",
+    "id": "1uSVMaVgRkKkc59T_5IKaCBGJeW2C3J9N",
+    "size": 2496564,
+    "modified": "2026-08-14T08:15:05.124Z"
+   },
+   {
+    "name": "IMG_7026.JPG",
+    "id": "1plwK8jQM9T1KSTMIDkbnW1e8-heXMDXg",
+    "size": 2507778,
+    "modified": "2026-08-14T08:15:09.941Z"
+   }
+  ],
+  "COLORCARD VEZUV+ATENA": [
+   {
+    "name": "IMG_7017.JPG",
+    "id": "10TXw7yltRPwsjA-jwY9n-DzycLUkI6YS",
+    "size": 3493177,
+    "modified": "2026-08-14T08:05:00.823Z"
+   },
+   {
+    "name": "IMG_7018.JPG",
+    "id": "1Nk132_Kif9V9YLl77BsHxMTfdDzch8Lt",
+    "size": 3620100,
+    "modified": "2026-08-14T08:05:05.406Z"
+   }
+  ],
+  "COLORCARD ATENA+VEZUV": [
+   {
+    "name": "IMG_5539.JPG",
+    "id": "11j3TJ27ozamrLbKF__V59a6c2MUcjZVF",
+    "size": 3974317,
+    "modified": "2026-04-21T10:27:03.224Z"
+   }
+  ],
+  "COLORCARD AZ-1748PC": [
+   {
+    "name": "IMG_4510.JPG",
+    "id": "1t9xpjQHFu6q7ajMixuF8QcZ8FIxdGk8z",
+    "size": 6763909,
+    "modified": "2026-02-20T09:44:27.158Z"
+   },
+   {
+    "name": "IMG_4511.JPG",
+    "id": "1oYW-pbr8AJfI8XOT2fjqM5CddJCtWCA0",
+    "size": 7520531,
+    "modified": "2026-02-20T09:44:59.152Z"
+   },
+   {
+    "name": "IMG_4512.JPG",
+    "id": "1MDkhB-ri6pggzEISnuZ-4_1-Svl9MdTf",
+    "size": 6417387,
+    "modified": "2026-02-20T09:44:34.945Z"
+   },
+   {
+    "name": "IMG_4513.JPG",
+    "id": "19RY8B1GGoqjX8ym9VcOqpd3Wnr4q2uGA",
+    "size": 6798747,
+    "modified": "2026-02-20T09:44:50.954Z"
+   },
+   {
+    "name": "IMG_4514.JPG",
+    "id": "1U3sILPXDmIV-A70o8RPQhhfYuQFVIKfn",
+    "size": 6363708,
+    "modified": "2026-02-20T09:44:31.191Z"
+   },
+   {
+    "name": "IMG_4515.JPG",
+    "id": "1KgNhksP0XgtO-HZJvzyTknZh6lZW6Brn",
+    "size": 7191999,
+    "modified": "2026-02-20T09:44:55.404Z"
+   },
+   {
+    "name": "IMG_4516.JPG",
+    "id": "130Ynodx8a76BFFF8o8haTVDO64I1CkkF",
+    "size": 6784501,
+    "modified": "2026-02-20T09:44:46.947Z"
+   },
+   {
+    "name": "IMG_4517.JPG",
+    "id": "1NdxDK9Ffyb_tBalc-Y71Ahtjyt04P0DA",
+    "size": 6659837,
+    "modified": "2026-02-20T09:44:42.932Z"
+   },
+   {
+    "name": "IMG_4518.JPG",
+    "id": "1RjhxUDMWgLVRGqLPQRXNgG96i_1mk_DJ",
+    "size": 6594886,
+    "modified": "2026-02-20T09:44:38.880Z"
+   }
+  ],
+  "COLORCARD AZ-2018PC": [
+   {
+    "name": "IMG_7792.JPG",
+    "id": "1TSeHGdC2jVezxQXUyyY1AmxurZRvW-AH",
+    "size": 5327833,
+    "modified": "2026-10-07T09:35:03.027Z"
+   },
+   {
+    "name": "IMG_7793.JPG",
+    "id": "1akCAqIgmlEaWzWjO6gsA7SC0eZIL20iD",
+    "size": 4577489,
+    "modified": "2026-10-07T09:34:56.050Z"
+   },
+   {
+    "name": "IMG_7794.JPG",
+    "id": "1HbrzQbWHJWbAuhvUih9zcVTHuMPXsgPC",
+    "size": 5826391,
+    "modified": "2026-10-07T09:35:42.573Z"
+   },
+   {
+    "name": "IMG_7795.JPG",
+    "id": "1vQi8H5g8i_EFuHGs6Uszqj2VyLt3E6X5",
+    "size": 5556093,
+    "modified": "2026-10-07T09:35:16.749Z"
+   },
+   {
+    "name": "IMG_7796.JPG",
+    "id": "1-5MiYCP43L5IFdfDDHTKYcrFye3mqpMc",
+    "size": 5687514,
+    "modified": "2026-10-07T09:35:31.444Z"
+   }
+  ],
+  "COLORCARD AZ-1622PC   AZ-2088PC": [
+   {
+    "name": "IMG_7797.JPG",
+    "id": "1K2wmejYrKYBZGy37KYFGZrIgyNwL6B8v",
+    "size": 5467491,
+    "modified": "2026-10-07T09:43:15.383Z"
+   },
+   {
+    "name": "IMG_7798.JPG",
+    "id": "1sTpl9FUsYCbS9OJGloFMtt3BRduVKGSf",
+    "size": 6654469,
+    "modified": "2026-10-07T09:43:26.900Z"
+   },
+   {
+    "name": "IMG_7799.JPG",
+    "id": "1pMd-WHT3p8TL5MS0RJNwG5jhp5pxbKsm",
+    "size": 5538191,
+    "modified": "2026-10-07T09:43:31.706Z"
+   },
+   {
+    "name": "IMG_7800.JPG",
+    "id": "1L33bTK7NC4bGO4uNFM8aS1HHwqcO7IFm",
+    "size": 5759237,
+    "modified": "2026-10-07T09:43:21.528Z"
+   },
+   {
+    "name": "IMG_7801.JPG",
+    "id": "1I674WZL-CdNP87Ybsq0u784tpVCt9Yrh",
+    "size": 5381641,
+    "modified": "2026-10-07T09:43:36.814Z"
+   },
+   {
+    "name": "IMG_7802.JPG",
+    "id": "1oxuHJPOKp_GPk9adBg2FbJD4IVVSG0n1",
+    "size": 5011848,
+    "modified": "2026-10-07T09:43:43.038Z"
+   },
+   {
+    "name": "IMG_7803.JPG",
+    "id": "1OKhSRzCrnyBxrjTdrWY9O_oBu-0Qzg8w",
+    "size": 4049947,
+    "modified": "2026-10-07T09:43:51.339Z"
+   }
+  ],
+  "COLORCARD AZ-1876PC": [
+   {
+    "name": "IMG_7804.JPG",
+    "id": "1t6eZ226yg87HaznE_D4dUiTQiG_T3gZu",
+    "size": 4964572,
+    "modified": "2026-10-07T09:46:14.211Z"
+   },
+   {
+    "name": "IMG_7805.JPG",
+    "id": "13Uso1bJknNtKpHzWaklhv5fvMXgsPbw4",
+    "size": 5262185,
+    "modified": "2026-10-07T09:46:08.808Z"
+   },
+   {
+    "name": "IMG_7806.JPG",
+    "id": "1aIvwXjFXWndZyTRAxBKbWsNDOEkO5Ama",
+    "size": 5724065,
+    "modified": "2026-10-07T09:46:02.565Z"
+   },
+   {
+    "name": "IMG_7807.JPG",
+    "id": "1LAoOfNHBbSycM4__40Ftyssmfe_ILgsU",
+    "size": 5077997,
+    "modified": "2026-10-07T09:45:55.601Z"
+   },
+   {
+    "name": "IMG_7808.JPG",
+    "id": "1X-67k4kf1hnNYDcBbB5fZmQqpPev9eti",
+    "size": 5018461,
+    "modified": "2026-10-07T09:45:47.255Z"
+   },
+   {
+    "name": "IMG_7809.JPG",
+    "id": "1e5rPQFCshJBJXBl-0Drbj4nQraZZnGKI",
+    "size": 5172479,
+    "modified": "2026-10-07T09:45:39.908Z"
+   },
+   {
+    "name": "IMG_7810.JPG",
+    "id": "1AFv4MYSu81BR1zs1rXJ9Y9oijBBbqkvl",
+    "size": 4395704,
+    "modified": "2026-10-07T09:46:20.034Z"
+   }
+  ],
+  "COLORCARD AZ-2543PK": [
+   {
+    "name": "IMG_5694.JPG",
+    "id": "1Nd-UR9KbzA-_cx_dPYiW2O38dnrULReD",
+    "size": 5524943,
+    "modified": "2026-10-07T08:34:04.223Z"
+   },
+   {
+    "name": "IMG_5695.JPG",
+    "id": "1rFiEWwuTqYIlHJV-A0dCRgYrp7nCQJXA",
+    "size": 4087173,
+    "modified": "2026-10-07T08:32:45.799Z"
+   }
+  ],
+  "COLORCARD AZ-2548PK": [
+   {
+    "name": "IMG_5692.JPG",
+    "id": "12wbRKHmORQnGKuPsthAuMm2DVcEvo7y3",
+    "size": 5344164,
+    "modified": "2026-10-07T08:33:55.240Z"
+   },
+   {
+    "name": "IMG_5693.JPG",
+    "id": "1sbe5xeMRu6MLXGOPLzEc87GWRZgn_2ja",
+    "size": 4731913,
+    "modified": "2026-10-07T08:32:54.722Z"
+   }
+  ],
+  "COLORCARD AZ-2555PK": [
+   {
+    "name": "IMG_5685.JPG",
+    "id": "19zllhJ7z4ZAmQS6WzECiv8ewLf56nAWj",
+    "size": 5264105,
+    "modified": "2026-10-07T08:26:05.233Z"
+   },
+   {
+    "name": "IMG_5686.JPG",
+    "id": "1-QvCKx7i37xORYtBGqTxKRJb1JfB0SnP",
+    "size": 5396452,
+    "modified": "2026-10-07T08:24:19.397Z"
+   }
+  ],
+  "COLORCARD AZ-2553PK": [
+   {
+    "name": "IMG_5679.JPG",
+    "id": "1vDDal16hWmSuUw09wC5vaJfih1jzAQ0l",
+    "size": 5342618,
+    "modified": "2026-10-07T08:33:49.374Z"
+   },
+   {
+    "name": "IMG_5680.JPG",
+    "id": "1qmx5lEqLcUWeTlWtSxcipoch-axTCx27",
+    "size": 4965076,
+    "modified": "2026-10-07T08:32:58.901Z"
+   }
+  ],
+  "COLORCARD AZ-2539PK": [
+   {
+    "name": "IMG_5671.JPG",
+    "id": "1Q8FOq-Gu-KVL1LB03ekr-g6F2EP-MJH5",
+    "size": 6737795,
+    "modified": "2026-10-07T08:34:45.597Z"
+   },
+   {
+    "name": "IMG_5672.JPG",
+    "id": "1hQV9Yuy7B07knMmzP2tbd2FyKHEEYyyR",
+    "size": 5115283,
+    "modified": "2026-10-07T08:33:20.259Z"
+   }
+  ],
+  "COLORCARD AZ-2540PK": [
+   {
+    "name": "IMG_5669.JPG",
+    "id": "1QpdQRm7TE9kSMb1tERhvk_wJ0Xk9lD4W",
+    "size": 6072249,
+    "modified": "2026-10-07T08:34:23.222Z"
+   },
+   {
+    "name": "IMG_5670.JPG",
+    "id": "195ElE41eBq7tT4qKuW5zYZAvK_89XIFV",
+    "size": 5341940,
+    "modified": "2026-10-07T08:33:41.874Z"
+   }
+  ],
+  "COLORCARD AZ-2542PK": [
+   {
+    "name": "IMG_5697.JPG",
+    "id": "11M4D28Y72aOODP7qHwd6LWYkywzddfA7",
+    "size": 5541757,
+    "modified": "2026-10-07T08:02:42.345Z"
+   },
+   {
+    "name": "IMG_5698.JPG",
+    "id": "1uzjxi9eLhPEA-982ptma4OAd3IgYcmcO",
+    "size": 5568717,
+    "modified": "2026-10-07T08:34:13.148Z"
+   }
+  ],
+  "COLORCARD AZ-2554PK (1)": [
+   {
+    "name": "IMG_5689.JPG",
+    "id": "1MMeK72FnvO2xWXQKXTLHfCjbfxjl1UvP",
+    "size": 5996730,
+    "modified": "2026-10-07T08:34:18.244Z"
+   }
+  ],
+  "COLORCARD AZ-2537PK": [
+   {
+    "name": "IMG_5674.JPG",
+    "id": "1zoNgNpQVRnvaK7MddCcdZtBcVE3mreiF",
+    "size": 5430648,
+    "modified": "2026-10-07T08:33:59.206Z"
+   }
+  ],
+  "COLORCARD AZ-2977PC": [
+   {
+    "name": "IMG_5662.JPG",
+    "id": "1A1Ymck6qeIuDlTJQeRuRKjouMvfKxKsf",
+    "size": 3048988,
+    "modified": "2026-10-07T08:00:37.400Z"
+   },
+   {
+    "name": "IMG_5663.JPG",
+    "id": "1_eQ1YNhGpSFjmsA05NHMQ-SrxG3rkxWV",
+    "size": 4450400,
+    "modified": "2026-10-07T08:00:49.145Z"
+   },
+   {
+    "name": "IMG_5664.JPG",
+    "id": "1HX86qhG9hkIlhhs9fhkYSChEwLfSNCsl",
+    "size": 4772105,
+    "modified": "2026-10-07T08:01:01.530Z"
+   },
+   {
+    "name": "IMG_5665.JPG",
+    "id": "1NUx7KXggyRx0mn5O4D6Y4xBdMX1yOfe7",
+    "size": 3683474,
+    "modified": "2026-10-07T08:00:43.791Z"
+   },
+   {
+    "name": "IMG_5666.JPG",
+    "id": "19qkIf-XV47CVEVWxo9oyYbVNp6wkL4zh",
+    "size": 4608285,
+    "modified": "2026-10-07T08:00:56.206Z"
+   }
+  ],
+  "COLORCARD AZ-2541PK": [
+   {
+    "name": "IMG_5681.JPG",
+    "id": "1pg-ofE16G-rbUcyn_TH7EMM6TuZZW60C",
+    "size": 5067474,
+    "modified": "2026-10-07T08:33:15.997Z"
+   },
+   {
+    "name": "IMG_5682.JPG",
+    "id": "1zQwLOJQo8Tiz-JpskJShRXxpSpUNG81E",
+    "size": 4985630,
+    "modified": "2026-10-07T08:33:07.483Z"
+   },
+   {
+    "name": "IMG_5684.JPG",
+    "id": "1jzDhqS3g7Kh2XLPfG8fM4x4RyQws9rRh",
+    "size": 3300511,
+    "modified": "2026-10-07T08:32:34.792Z"
+   }
+  ],
+  "COLORCARD AZ-2554PK": [
+   {
+    "name": "IMG_5688.JPG",
+    "id": "1dKPwWNjzUp0iWzkGKHb06JNnfFdWJaj2",
+    "size": 5298875,
+    "modified": "2026-10-07T08:33:33.445Z"
+   }
+  ],
+  "COLORCARD AZ-2612PK": [
+   {
+    "name": "IMG_5667.JPG",
+    "id": "11Hp9NRAbCUlATLm7-Jg3jJrDhy1T9Kfa",
+    "size": 7232253,
+    "modified": "2026-10-07T08:34:50.505Z"
+   },
+   {
+    "name": "IMG_5668.JPG",
+    "id": "1QwwQJ90XCcd7Q3jQGEvGgEgZsBamZqkk",
+    "size": 6268049,
+    "modified": "2026-10-07T08:34:31.324Z"
+   }
+  ],
+  "COLORCARD AZ-2550PK": [
+   {
+    "name": "IMG_5677.JPG",
+    "id": "1w402EtreXnOo_ekBVRVPW69dbp2hfbB-",
+    "size": 6336363,
+    "modified": "2026-10-07T08:34:36.578Z"
+   },
+   {
+    "name": "IMG_5678.JPG",
+    "id": "1ZwDAK12qbgKurSN7fh0RjVElie7Ecvc9",
+    "size": 5178089,
+    "modified": "2026-10-07T08:33:27.195Z"
+   }
+  ],
+  "COLORCARD AZ-2556PK": [
+   {
+    "name": "IMG_5687.JPG",
+    "id": "1MTHPMBNgDSElORHkdpQJ4gfotSqa26-H",
+    "size": 4024528,
+    "modified": "2026-10-07T08:32:40.549Z"
+   }
+  ],
+  "COLORCARD AZ-1356PC   AZ-1538PC   AZ-1505PC   AZ-1483PC": [
+   {
+    "name": "IMG_7074.JPG",
+    "id": "1Sb2nkaPmdZCWukm8agsEnuHmuoCdowgk",
+    "size": 3932608,
+    "modified": "2026-08-17T08:57:41.549Z"
+   },
+   {
+    "name": "IMG_7075.JPG",
+    "id": "1e7LzmtGrgHAKMMJyoLMTE99q9cPpIer0",
+    "size": 3802353,
+    "modified": "2026-08-17T08:57:23.387Z"
+   },
+   {
+    "name": "IMG_7076.JPG",
+    "id": "1CEyGIPYVsl_dYUc6yYusB7uBTC4Vk1tj",
+    "size": 3882547,
+    "modified": "2026-08-17T08:57:36.027Z"
+   },
+   {
+    "name": "IMG_7077.JPG",
+    "id": "1zEoFlmUvje9Q5WBadtL9e-r8p4NZFMCd",
+    "size": 4339374,
+    "modified": "2026-08-17T08:57:55.794Z"
+   },
+   {
+    "name": "IMG_7078.JPG",
+    "id": "1QrTK2ZJ00pHkWAQhpjFHZGeVMu5NCQQy",
+    "size": 4041399,
+    "modified": "2026-08-17T08:57:45.460Z"
+   },
+   {
+    "name": "IMG_7079.JPG",
+    "id": "1po1SBdPIpnPXSkHK6BMQbQ7vRauBZcoy",
+    "size": 3705175,
+    "modified": "2026-08-17T08:57:18.207Z"
+   },
+   {
+    "name": "IMG_7080.JPG",
+    "id": "1QG1yuxYeOQp17XQH0TLzu_Ay6SsBFDRB",
+    "size": 4088929,
+    "modified": "2026-08-17T08:57:50.111Z"
+   },
+   {
+    "name": "IMG_7081.JPG",
+    "id": "1dPTFC7Z0CPJiDkE3WlliNP4sC3HwbWcV",
+    "size": 3584978,
+    "modified": "2026-08-17T08:57:13.859Z"
+   },
+   {
+    "name": "IMG_7082.JPG",
+    "id": "1nDKEL75jlKf5b50qXh5cljMfCzsn187t",
+    "size": 3562482,
+    "modified": "2026-08-17T08:57:09.004Z"
+   },
+   {
+    "name": "IMG_7083.JPG",
+    "id": "1lA4a1GPiAEa5LfltdPrwOlFvcG6A-Hrw",
+    "size": 3868132,
+    "modified": "2026-08-17T08:57:27.595Z"
+   },
+   {
+    "name": "IMG_7084.JPG",
+    "id": "1-xd1pApXQv8js_WVNrdrvr_zDMBErO_z",
+    "size": 2388469,
+    "modified": "2026-08-17T08:57:03.729Z"
+   }
+  ],
+  "COLORCARD AZ-1820PC": [
+   {
+    "name": "IMG_7087.JPG",
+    "id": "1kwdnQ52HzdvNVwg8pbOKL_CCscsSXqJa",
+    "size": 4824903,
+    "modified": "2026-08-17T10:25:48.004Z"
+   },
+   {
+    "name": "IMG_7088.JPG",
+    "id": "1t7Dm1ZvGSYaSZmGBZbmpwiYLYDVAGcud",
+    "size": 4839315,
+    "modified": "2026-08-17T10:25:52.944Z"
+   },
+   {
+    "name": "IMG_7089.JPG",
+    "id": "1umuEcER9ZEoIa8QOF006LEKOlzz5pH0m",
+    "size": 5206840,
+    "modified": "2026-08-17T10:26:14.749Z"
+   },
+   {
+    "name": "IMG_7090.JPG",
+    "id": "1W1Ma4ZtMPLGY__ync-7ha416p-m-YOcU",
+    "size": 3700247,
+    "modified": "2026-08-17T10:24:34.875Z"
+   },
+   {
+    "name": "IMG_7091.JPG",
+    "id": "1DJkj9phrWvrkwb7RFJs7NSQFpNoAEmiH",
+    "size": 4807059,
+    "modified": "2026-08-17T10:25:42.246Z"
+   },
+   {
+    "name": "IMG_7092.JPG",
+    "id": "1HlNA2MOfHVkUgNHOPD_GdkrzYtkHpPXb",
+    "size": 4438568,
+    "modified": "2026-08-17T10:25:14.725Z"
+   },
+   {
+    "name": "IMG_7093.JPG",
+    "id": "1XHvhIslPIeiTqoBrIV7prkZDJNlaVv8x",
+    "size": 4248801,
+    "modified": "2026-08-17T10:24:56.738Z"
+   },
+   {
+    "name": "IMG_7094.JPG",
+    "id": "1SN99VU8EXHbr-WgP9MOhvpgntUgH77EB",
+    "size": 4080278,
+    "modified": "2026-08-17T10:24:45.783Z"
+   },
+   {
+    "name": "IMG_7095.JPG",
+    "id": "1B_Vcuxhs-TKFeRRTwtd2ghO8RnPdbtvF",
+    "size": 4543543,
+    "modified": "2026-08-17T10:25:19.157Z"
+   },
+   {
+    "name": "IMG_7096.JPG",
+    "id": "1zlX-xleesU4d2sO7U4UBEZY3Bxj9CrJ2",
+    "size": 4724592,
+    "modified": "2026-08-17T10:25:36.063Z"
+   },
+   {
+    "name": "IMG_7097.JPG",
+    "id": "1N-Ivaila07nCGf_E30cpTHFJvy0uAo8E",
+    "size": 4623064,
+    "modified": "2026-08-17T10:25:29.127Z"
+   },
+   {
+    "name": "IMG_7098.JPG",
+    "id": "10TL1CiBUYHPmQgg20tAdqOrPx1Ei5QQr",
+    "size": 3597665,
+    "modified": "2026-08-17T10:24:27.960Z"
+   },
+   {
+    "name": "IMG_7099.JPG",
+    "id": "1bOA7WdL_Ube5jRFI6MVwHZOWONP_00sm",
+    "size": 4920977,
+    "modified": "2026-08-17T10:25:59.212Z"
+   },
+   {
+    "name": "IMG_7100.JPG",
+    "id": "1f32HCZPrVENg2NzFKU13h1Wl0iyHs5RT",
+    "size": 4592862,
+    "modified": "2026-08-17T10:25:24.039Z"
+   },
+   {
+    "name": "IMG_7101.JPG",
+    "id": "1DXuJKLL7vTkzL1yLEmYUO-C4CpaQV-Id",
+    "size": 4971615,
+    "modified": "2026-08-17T10:26:04.877Z"
+   },
+   {
+    "name": "IMG_7102.JPG",
+    "id": "1uVyzZKEGXChSkeilgH9DLq5u3yLz6dD2",
+    "size": 3859030,
+    "modified": "2026-08-17T10:24:40.297Z"
+   },
+   {
+    "name": "IMG_7103.JPG",
+    "id": "1kYk7LWFoIqLC4xVfaclaxzZ5ooc3RYkO",
+    "size": 4437702,
+    "modified": "2026-08-17T10:25:08.436Z"
+   },
+   {
+    "name": "IMG_7104.JPG",
+    "id": "1eI2aZSHu1C7MfLI62_0b0fh4vlf-6n8A",
+    "size": 4275323,
+    "modified": "2026-08-17T10:25:04.031Z"
+   },
+   {
+    "name": "IMG_7105.JPG",
+    "id": "1qpfpczXAnZ2e_I1B8rLhxzPf-duxcnmo",
+    "size": 4184411,
+    "modified": "2026-08-17T10:24:52.725Z"
+   }
+  ],
+  "COLORCARD LAMBSLOOK": [
+   {
+    "name": "IMG_7085.JPG",
+    "id": "1zPPlqFCvFoyukMxSLLkV8eB3FAT_fS_M",
+    "size": 2716325,
+    "modified": "2026-08-17T10:27:16.198Z"
+   },
+   {
+    "name": "IMG_7086.JPG",
+    "id": "1mGYBETshiVr4llMD7ZFrXw64w95xlteX",
+    "size": 2767331,
+    "modified": "2026-08-17T10:27:22.716Z"
+   }
+  ],
+  "COLORCARD AZ-2753PC": [
+   {
+    "name": "IMG_6593.JPG",
+    "id": "1U1-9fChGyNZ-dsSsyW6t7zQi5DuwIzw7",
+    "size": 5592143,
+    "modified": "2026-07-02T08:21:16.362Z"
+   },
+   {
+    "name": "IMG_6594.JPG",
+    "id": "1yKU0ilMbvi2OT9B0iSO3Jt-NDP4XzTLv",
+    "size": 5185944,
+    "modified": "2026-07-02T08:21:08.986Z"
+   }
+  ],
+  "COLORCARD AZ-2985PC   AZ-3074PC": [
+   {
+    "name": "IMG_4281.JPG",
+    "id": "1ScYqK_h118jrLUaVGPQYn9AwXNKCaQss",
+    "size": 5323338,
+    "modified": "2026-02-10T13:21:36.967Z"
+   },
+   {
+    "name": "IMG_4282.JPG",
+    "id": "1OhASPdTkoGdDKb_8-6Mye21DTN3oRIoR",
+    "size": 5610896,
+    "modified": "2026-02-10T13:21:32.377Z"
+   },
+   {
+    "name": "IMG_4283.JPG",
+    "id": "1BepIuFi_9KjwzGR-rfJfQkGX7fQVWIGw",
+    "size": 5803323,
+    "modified": "2026-02-10T13:21:28.309Z"
+   },
+   {
+    "name": "IMG_4284.JPG",
+    "id": "1_dB-JoTjO9ZuAFHdsRvOMJuSVVrQHS0_",
+    "size": 5587216,
+    "modified": "2026-02-10T13:21:21.916Z"
+   },
+   {
+    "name": "IMG_4285.JPG",
+    "id": "1dBcRTKB-C07-vwHt233YAaWX3q8dotTm",
+    "size": 5263291,
+    "modified": "2026-02-10T13:21:17.261Z"
+   },
+   {
+    "name": "IMG_4682.JPG",
+    "id": "1wFvbRiQkJwfr6_7ih6IOUg8PiuIZPsNB",
+    "size": 5334024,
+    "modified": "2026-03-03T11:01:36.380Z"
+   }
+  ],
+  "COLORCARD AZ-3102PC": [
+   {
+    "name": "IMG_6263.JPG",
+    "id": "1TeYgQ0y0rJAquGPKYV7vpCMav1TkvqPw",
+    "size": 6388194,
+    "modified": "2026-05-29T07:42:06.500Z"
+   },
+   {
+    "name": "IMG_6264.JPG",
+    "id": "19guxYQxORG_lDVprX90kYtbfIIf3TvCN",
+    "size": 6452600,
+    "modified": "2026-05-29T07:42:12.319Z"
+   },
+   {
+    "name": "IMG_6265.JPG",
+    "id": "13uHbm04ncufFVW4va3ZjquQkiyjJ1xYd",
+    "size": 6069559,
+    "modified": "2026-05-29T07:41:59.686Z"
+   }
+  ],
+  "COLORCARD AZ-3101PC": [
+   {
+    "name": "IMG_6260.JPG",
+    "id": "1rDOU2SpFFbbQS2P2EvsGZx9ih5drfOaJ",
+    "size": 4998672,
+    "modified": "2026-05-29T07:34:55.016Z"
+   },
+   {
+    "name": "IMG_6261.JPG",
+    "id": "19jbX9iAGFBlEe5AA6f2kCaSQx4D9f6zy",
+    "size": 5211872,
+    "modified": "2026-05-29T07:34:51.047Z"
+   },
+   {
+    "name": "IMG_6262.JPG",
+    "id": "1ETYvu0nZN0Mg1W8AQeObf_Y3Ly33Sq2a",
+    "size": 5049120,
+    "modified": "2026-05-29T07:34:47.138Z"
+   }
+  ],
+  "COLORCARD AZ-3100PC": [
+   {
+    "name": "IMG_6255.JPG",
+    "id": "1Az-vPnqaOTEsx75Fy8d4JRfe3sMYxWf4",
+    "size": 4852494,
+    "modified": "2026-05-29T07:25:38.380Z"
+   },
+   {
+    "name": "IMG_6257.JPG",
+    "id": "1-LG2h98Gmbf3S2n5aEkjvStbD2_v-Ok3",
+    "size": 5588019,
+    "modified": "2026-05-29T07:25:30.737Z"
+   },
+   {
+    "name": "IMG_6258.JPG",
+    "id": "17u58L9w_jryIS8Sb2z1dVTq6PyoSbJki",
+    "size": 6275218,
+    "modified": "2026-05-29T07:25:26.205Z"
+   },
+   {
+    "name": "IMG_6259.JPG",
+    "id": "1bPExem-sAC_gdAsk0B3gDmjpVwE_A9d_",
+    "size": 4652461,
+    "modified": "2026-05-29T07:25:21.604Z"
+   }
+  ],
+  "COLORCARD AZ-3097PC": [
+   {
+    "name": "IMG_5815.JPG",
+    "id": "1G5w7FsccKgSNOrRdInHK6qmk9J3MlF5B",
+    "size": 5452237,
+    "modified": "2026-05-14T11:17:25.023Z"
+   },
+   {
+    "name": "IMG_5816.JPG",
+    "id": "1Ocm85FR8-0wavS7YOfDXzoHDx36LpXJ3",
+    "size": 5819460,
+    "modified": "2026-05-14T11:17:29.878Z"
+   },
+   {
+    "name": "IMG_5817.JPG",
+    "id": "1sJm-R6CfjspqRwrE8dk0h_moKd30SSGO",
+    "size": 5407609,
+    "modified": "2026-05-14T11:17:19.537Z"
+   }
+  ],
+  "COLORCARD AZ-3096PC": [
+   {
+    "name": "IMG_5812.JPG",
+    "id": "1VfakoK1revpIWUhlttQK_ICvmvpOd7Sm",
+    "size": 6431074,
+    "modified": "2026-05-14T11:13:01.904Z"
+   },
+   {
+    "name": "IMG_5813.JPG",
+    "id": "1kBhc4AIycxtB0HoiMP95PFdmDmK8DiHJ",
+    "size": 6565713,
+    "modified": "2026-05-14T11:13:18.784Z"
+   },
+   {
+    "name": "IMG_5814.JPG",
+    "id": "1nn6ruw1ElkIh-1lwG3nMRxUbmXzHWn7D",
+    "size": 6967230,
+    "modified": "2026-05-14T11:13:49.308Z"
+   }
+  ],
+  "COLORCARD AZ-3094PC   AZ-3095": [
+   {
+    "name": "IMG_5782.JPG",
+    "id": "1HZMTw6hZOLeE-_RpoWVuHXoDieHFPueu",
+    "size": 5600986,
+    "modified": "2026-05-12T10:03:30.341Z"
+   },
+   {
+    "name": "IMG_5783.JPG",
+    "id": "1YYn893tMpujH4TTo4Us8c1VSEJrO_tcV",
+    "size": 5097790,
+    "modified": "2026-05-12T10:03:26.193Z"
+   },
+   {
+    "name": "IMG_5784.JPG",
+    "id": "17j76wPauKRVfeSODN5frlBHAJqUPLZgk",
+    "size": 4339023,
+    "modified": "2026-05-12T10:03:35.265Z"
+   }
+  ],
+  "COLORCARD AZ-3098PC": [
+   {
+    "name": "IMG_5818.JPG",
+    "id": "1R47uLh1EX5gQm9BaQD2eDs8h-uzBj4Ds",
+    "size": 6087121,
+    "modified": "2026-05-14T11:22:40.207Z"
+   },
+   {
+    "name": "IMG_5819.JPG",
+    "id": "1hycn7fnNhCR8rAm5tA2TvPHbV0WtKBzR",
+    "size": 6463700,
+    "modified": "2026-05-14T11:22:48.013Z"
+   },
+   {
+    "name": "IMG_5820.JPG",
+    "id": "1P0fraOkItmSeKz6EsM6611OpyJJJldvi",
+    "size": 6181883,
+    "modified": "2026-05-14T11:22:43.755Z"
+   }
+  ],
+  "COLORCARD AZ-3092PC": [
+   {
+    "name": "IMG_5821.JPG",
+    "id": "1I_d82_wk_s5ar1zYmmeNyf_p_QrP133W",
+    "size": 4869584,
+    "modified": "2026-05-14T11:26:21.256Z"
+   },
+   {
+    "name": "IMG_5822.JPG",
+    "id": "1bQCIqdLim6OUfxRlZfnio1IXXWJkTfT2",
+    "size": 5977395,
+    "modified": "2026-05-14T11:26:26.385Z"
+   }
+  ],
+  "COLORCARD AZ-3099PC": [
+   {
+    "name": "IMG_5823.JPG",
+    "id": "1W2GKwIwfOkQ68CoGPDQh9SVL8Zlaf7Nr",
+    "size": 6356724,
+    "modified": "2026-05-14T11:29:33.900Z"
+   },
+   {
+    "name": "IMG_5824.JPG",
+    "id": "1iksgI6KnjWP3znlc_DN-ub97OVwWuENq",
+    "size": 5833157,
+    "modified": "2026-05-14T11:29:45.892Z"
+   },
+   {
+    "name": "IMG_5825.JPG",
+    "id": "1vn0feCUIRgkbxDbsX_M2HiuY5aFgKlUN",
+    "size": 5499924,
+    "modified": "2026-05-14T11:29:39.710Z"
+   }
+  ],
+  "COLORCARD AZ-2932D (1)": [
+   {
+    "name": "IMG_5535.JPG",
+    "id": "10PwGe94ZkioHBqHTFfVPP2EyYjtc6Nug",
+    "size": 6862523,
+    "modified": "2026-04-21T09:41:38.582Z"
+   },
+   {
+    "name": "IMG_5536.JPG",
+    "id": "1fQpmK-4354mVUTxPKAKs04YKaIYsxvqW",
+    "size": 5788514,
+    "modified": "2026-04-21T09:41:31.782Z"
+   }
+  ],
+  "COLORCARD AZ-3085PC   AZ-3086PC": [
+   {
+    "name": "IMG_5537.JPG",
+    "id": "1fCuSQxsY9GvUA3OaSmDwxx_ralDXBDjj",
+    "size": 4917357,
+    "modified": "2026-04-21T09:44:16.763Z"
+   }
+  ],
+  "COLORCARD AZ-3080PC": [
+   {
+    "name": "IMG_5310.JPG",
+    "id": "12_e-aHMqaGwp54q5GotIuO6vlZXg8qez",
+    "size": 4724753,
+    "modified": "2026-04-10T11:41:38.917Z"
+   },
+   {
+    "name": "IMG_5311.JPG",
+    "id": "1AjJb24G78pA7LN2gdReDm8ORWMlP2QqX",
+    "size": 4806708,
+    "modified": "2026-04-10T11:41:35.574Z"
+   }
+  ],
+  "COLORCARD AZ-3079PC": [
+   {
+    "name": "IMG_5312.JPG",
+    "id": "1qURo0-bDn-_wOBxfy4Jd4hydzcOE68Uc",
+    "size": 4791450,
+    "modified": "2026-04-10T11:44:17.562Z"
+   },
+   {
+    "name": "IMG_5313.JPG",
+    "id": "1wn4C4lrBClrxmFv4Le1snA2j5u9Uu1wO",
+    "size": 4537826,
+    "modified": "2026-04-10T11:44:12.867Z"
+   }
+  ],
+  "COLORCARD AZ-3081PC": [
+   {
+    "name": "IMG_5305.JPG",
+    "id": "1hpea2_3XUhw0UBNPH4GnDxnIrFFQufS5",
+    "size": 6533283,
+    "modified": "2026-04-10T11:27:04.786Z"
+   },
+   {
+    "name": "IMG_5306.JPG",
+    "id": "1nIWJOToBMs7GpVKmll7swUUesswBzxM0",
+    "size": 6300413,
+    "modified": "2026-04-10T11:27:01.144Z"
+   }
+  ],
+  "COLORCARD AZ-3083PC": [
+   {
+    "name": "IMG_5302.JPG",
+    "id": "1NSJRqv9QgeXur8vA9dYQV4JAkufVCxsF",
+    "size": 6532934,
+    "modified": "2026-04-10T11:18:31.429Z"
+   },
+   {
+    "name": "IMG_5303.JPG",
+    "id": "1M81oW058IHE9CdxIcnqjkG4atMWfabtW",
+    "size": 6834387,
+    "modified": "2026-04-10T11:18:27.988Z"
+   }
+  ],
+  "COLORCARD AZ-2922PC": [
+   {
+    "name": "IMG_5299.JPG",
+    "id": "1BuwYkqT_Guob289YzLmVG66eJHyFkqCX",
+    "size": 4717726,
+    "modified": "2026-04-10T11:09:56.505Z"
+   },
+   {
+    "name": "IMG_5300.JPG",
+    "id": "1XGbnGir673HEeno8nQLhIDBm-kq-2w2U",
+    "size": 5349138,
+    "modified": "2026-04-10T11:10:00.793Z"
+   }
+  ],
+  "COLORCARD AZ-3084PC": [
+   {
+    "name": "IMG_5296.JPG",
+    "id": "1dNthT2E0rLzmE_kyh-CuMlU3f8uq70Se",
+    "size": 7153183,
+    "modified": "2026-04-10T11:06:20.400Z"
+   },
+   {
+    "name": "IMG_5297.JPG",
+    "id": "1hwNLyWHywJdoern7nWTmVziIOQ7FaVbI",
+    "size": 7140950,
+    "modified": "2026-04-10T11:06:13.455Z"
+   },
+   {
+    "name": "IMG_5298.JPG",
+    "id": "1KP6vVQiY45hjbGoz3rBvHTbvedIMSEJc",
+    "size": 7013481,
+    "modified": "2026-04-10T11:06:09.114Z"
+   }
+  ],
+  "COLORCARD AZ-3065PC": [
+   {
+    "name": "IMG_5301.JPG",
+    "id": "1QxY3jRbxRD6aGyigExVN64cHTioMfZft",
+    "size": 5769361,
+    "modified": "2026-04-10T11:12:32.442Z"
+   }
+  ],
+  "COLORCARD AZ-3071PK": [
+   {
+    "name": "IMG_4689.JPG",
+    "id": "1pufFPDTQoeNYVDcc-vojyJdPagRdg4ZI",
+    "size": 7767573,
+    "modified": "2026-03-03T11:36:18.325Z"
+   }
+  ],
+  "COLORCARD AZ-3070PK": [
+   {
+    "name": "IMG_4688.JPG",
+    "id": "1wP2h3kMfiOlRIIeLLAazoJ-R6ljsFukJ",
+    "size": 7741356,
+    "modified": "2026-03-03T11:33:24.213Z"
+   }
+  ],
+  "COLORCARD AZ-3072PK": [
+   {
+    "name": "IMG_4687.JPG",
+    "id": "1QG-pcbh_lL0NkTnoDBKSZmO0Nt5eG0dq",
+    "size": 7867703,
+    "modified": "2026-03-03T11:29:12.812Z"
+   }
+  ],
+  "COLORCARD AZ-3019PC   AZ-3020PC   AZ-3034PC": [
+   {
+    "name": "IMG_4508.JPG",
+    "id": "1EJJ3PrqA75hOpiBIXaESWiycJ8SE-ng5",
+    "size": 5978970,
+    "modified": "2026-02-20T09:34:51.214Z"
+   },
+   {
+    "name": "IMG_4509.JPG",
+    "id": "1wzCHx1rQBBt5QWoBeXe9tjUqN9RHPYEK",
+    "size": 4371604,
+    "modified": "2026-02-20T09:34:47.199Z"
+   },
+   {
+    "name": "IMG_4684.JPG",
+    "id": "1icA2ulQOc5NmM-acUxsyT16m6A_JVzJn",
+    "size": 5578049,
+    "modified": "2026-03-03T11:13:46.762Z"
+   },
+   {
+    "name": "IMG_4685.JPG",
+    "id": "17CzigRMQjMx5diRdAgdLLEE0KPThEwuw",
+    "size": 5685002,
+    "modified": "2026-03-03T11:13:42.085Z"
+   }
+  ],
+  "COLORCARD AZ-2349PC": [
+   {
+    "name": "IMG_4538.JPG",
+    "id": "1bIPxKFETKsIZSsAr8eYIWpiwGMYHkmWM",
+    "size": 5029450,
+    "modified": "2026-02-20T10:31:49.291Z"
+   },
+   {
+    "name": "IMG_4539.JPG",
+    "id": "1C7WnvEBzjbaptasgrgH-_uY9h8IebtoB",
+    "size": 5833046,
+    "modified": "2026-02-20T10:32:20.240Z"
+   },
+   {
+    "name": "IMG_4540.JPG",
+    "id": "1Vn9JDJf1hUchDe4o0xEAo0ziMQf2t_R7",
+    "size": 5413634,
+    "modified": "2026-02-20T10:32:05.287Z"
+   },
+   {
+    "name": "IMG_4541.JPG",
+    "id": "1Jse-zMqsQepQlKBV_v-C_Di1J9Cxey6r",
+    "size": 5486687,
+    "modified": "2026-02-20T10:32:09.166Z"
+   },
+   {
+    "name": "IMG_4542.JPG",
+    "id": "172vlnLP4oUQFqglgWEDxnvfyR0zWL2Yn",
+    "size": 4733929,
+    "modified": "2026-02-20T10:31:53.092Z"
+   },
+   {
+    "name": "IMG_4543.JPG",
+    "id": "1rwsVtCJIR2z1gSFQdQCex4f8hPv_x-G1",
+    "size": 4905048,
+    "modified": "2026-02-20T10:31:57.737Z"
+   },
+   {
+    "name": "IMG_4544.JPG",
+    "id": "1K1LDgeBDCmGMmCEUEMTUXhKyNLgdRrEq",
+    "size": 5367249,
+    "modified": "2026-02-20T10:32:01.178Z"
+   },
+   {
+    "name": "IMG_4545.JPG",
+    "id": "1DFYWh1W_kdixG_3Svz7vNoMY5JHX3fZW",
+    "size": 5640925,
+    "modified": "2026-02-20T10:32:16.534Z"
+   },
+   {
+    "name": "IMG_4546.JPG",
+    "id": "1uux_1hdh3aoDCFtWHtu-ow7uz-IC-ARP",
+    "size": 5624252,
+    "modified": "2026-02-20T10:32:12.886Z"
+   }
+  ],
+  "COLORCARD AZ-2719PC": [
+   {
+    "name": "IMG_4547.JPG",
+    "id": "11dvvirfZxndsrPo6H25sHJIDR9OJ8xTi",
+    "size": 4198650,
+    "modified": "2026-02-20T10:34:36.567Z"
+   }
+  ],
+  "COLORCARD AZ-2669PC": [
+   {
+    "name": "IMG_4519.JPG",
+    "id": "1doTscPZZHuXTg9noT_Hn_Aff-9JwOMWP",
+    "size": 5020452,
+    "modified": "2026-02-20T09:50:15.855Z"
+   },
+   {
+    "name": "IMG_4520.JPG",
+    "id": "1u9LNIc6a77OKTGVeyc4SKBO5AhMGOzoV",
+    "size": 5404117,
+    "modified": "2026-02-20T09:50:12.121Z"
+   },
+   {
+    "name": "IMG_4521.JPG",
+    "id": "1SjXohOVqYsOmnJSr9zuP_iXFyUEonD9N",
+    "size": 4643372,
+    "modified": "2026-02-20T09:50:08.211Z"
+   },
+   {
+    "name": "IMG_4522.JPG",
+    "id": "1Cb-Km28JbHXEabf3O-vNxcGDAB5ADfv1",
+    "size": 5088051,
+    "modified": "2026-02-20T09:50:04.462Z"
+   }
+  ],
+  "COLORCARD AZ-2909PK": [
+   {
+    "name": "IMG_4531.JPG",
+    "id": "19rM99Okwx4iGuWa-UiYxPzxFzTBGPc23",
+    "size": 6478785,
+    "modified": "2026-02-20T10:12:11.265Z"
+   },
+   {
+    "name": "IMG_4532.JPG",
+    "id": "1uAXA2UFk9bbzJ3mRZfZsPPphkbCUcNfg",
+    "size": 6426845,
+    "modified": "2026-02-20T10:12:07.185Z"
+   }
+  ],
+  "COLORCARD AZ-2815PC": [
+   {
+    "name": "IMG_4533.JPG",
+    "id": "10gr9rWar20fyWcTOMNVEJvsBx3lCnuNS",
+    "size": 6082725,
+    "modified": "2026-02-20T10:16:00.016Z"
+   },
+   {
+    "name": "IMG_4534.JPG",
+    "id": "1-0QS_HyPKE9_eUwbEEu1psCMX56dqmmt",
+    "size": 4964712,
+    "modified": "2026-02-20T10:15:56.281Z"
+   }
+  ],
+  "COLORCARD AZ-2344PC": [
+   {
+    "name": "IMG_4535.JPG",
+    "id": "12U3vFNZ-uErQqI7_fYNA__rO8ybQorvM",
+    "size": 5914387,
+    "modified": "2026-02-20T10:23:49.985Z"
+   },
+   {
+    "name": "IMG_4536.JPG",
+    "id": "1iomXOWuzna56rRMkVCh4IkZJgk4952Yc",
+    "size": 6405932,
+    "modified": "2026-02-20T10:23:45.792Z"
+   },
+   {
+    "name": "IMG_4537.JPG",
+    "id": "1EkN5T9BUppqvSazwJdks2xSqRm7K45YK",
+    "size": 6636942,
+    "modified": "2026-02-20T10:23:41.942Z"
+   }
+  ],
+  "COLORCARD AZ-2814PC": [
+   {
+    "name": "IMG_4523.JPG",
+    "id": "1Q6D6BwFsWZBfdP5zp56L5UJSbxvcJ7kq",
+    "size": 6637462,
+    "modified": "2026-02-20T10:00:56.584Z"
+   },
+   {
+    "name": "IMG_4524.JPG",
+    "id": "1ziSi7AM8TsJTXnWnw27M_krew70ii0u-",
+    "size": 6824874,
+    "modified": "2026-02-20T10:01:04.813Z"
+   },
+   {
+    "name": "IMG_4525.JPG",
+    "id": "1VM0vF5UL3h9SoWQLewwNFX4Ksy3n_RQJ",
+    "size": 7241513,
+    "modified": "2026-02-20T10:00:51.701Z"
+   },
+   {
+    "name": "IMG_4526.JPG",
+    "id": "1NOWAGGcSlJEP0VXKO58LiHD6AzS1vUI_",
+    "size": 6802763,
+    "modified": "2026-02-20T10:01:00.778Z"
+   },
+   {
+    "name": "IMG_4528.JPG",
+    "id": "1zQLaw_35Kr4hE9R9SDbo9wUHd4r_QIM7",
+    "size": 7273285,
+    "modified": "2026-02-20T10:00:47.062Z"
+   }
+  ],
+  "COLORCARD AZ-2989PC": [
+   {
+    "name": "IMG_4529.JPG",
+    "id": "1-5QY5qrfX31izy66tWtpnfmHqyT1mgaI",
+    "size": 6298040,
+    "modified": "2026-02-20T10:08:37.687Z"
+   },
+   {
+    "name": "IMG_4530.JPG",
+    "id": "1VNiQ9eAf3b2Ef3il0HgwupUUg8puUNKz",
+    "size": 6275513,
+    "modified": "2026-02-20T10:08:33.460Z"
+   }
+  ],
+  "COLORCARD AZ-2829PC   AZ-2830PC": [
+   {
+    "name": "IMG_4505.JPG",
+    "id": "1n-sLH91GDSrwC0jfN015gQ59QIJNZOWs",
+    "size": 5915525,
+    "modified": "2026-02-20T09:28:59.044Z"
+   },
+   {
+    "name": "IMG_4506.JPG",
+    "id": "16Fuhz3CsqTLkBI_xoEfFChYU0YGPzSWi",
+    "size": 6096533,
+    "modified": "2026-02-20T09:29:02.930Z"
+   },
+   {
+    "name": "IMG_4507.JPG",
+    "id": "1GM9Epn6th9_lqCqvR-flvarRSTlN4YX9",
+    "size": 4997192,
+    "modified": "2026-02-20T09:28:55.336Z"
+   }
+  ],
+  "COLORCARD AZ-2670PC": [
+   {
+    "name": "IMG_4501.JPG",
+    "id": "1wan1SdowUrddeQrtzKmCcvLr3gqFS7uo",
+    "size": 5827902,
+    "modified": "2026-02-20T09:24:32.088Z"
+   },
+   {
+    "name": "IMG_4502.JPG",
+    "id": "1fxF0XNnhQIY4DsW61rawzDJ6z98wIos1",
+    "size": 6112871,
+    "modified": "2026-02-20T09:24:27.766Z"
+   },
+   {
+    "name": "IMG_4503.JPG",
+    "id": "1BxrBonj1DaMJHdwehsBDr8uKxL5AhVWc",
+    "size": 6030530,
+    "modified": "2026-02-20T09:24:36.346Z"
+   },
+   {
+    "name": "IMG_4504.JPG",
+    "id": "1AG2YxPFKS1e7l1E9EpeGES-SsakzqYNk",
+    "size": 4778132,
+    "modified": "2026-02-20T09:24:24.021Z"
+   }
+  ],
+  "COLORCARD AZ-2913PC   AZ-3067PC": [
+   {
+    "name": "IMG_4256.JPG",
+    "id": "1Ys1-1sFlLnzxHm5UPBHa1hgVycSEuHoO",
+    "size": 5752464,
+    "modified": "2026-02-10T12:22:41.909Z"
+   },
+   {
+    "name": "IMG_4257.JPG",
+    "id": "1KA9uBShUG0Ht1mrR0HkaED6oRmuZBXow",
+    "size": 5943549,
+    "modified": "2026-02-10T12:22:49.070Z"
+   },
+   {
+    "name": "IMG_4258.JPG",
+    "id": "15dGOgqz-ChsmqBw1pyiRhHI-2xdlcvqw",
+    "size": 6077328,
+    "modified": "2026-02-10T12:22:54.491Z"
+   },
+   {
+    "name": "IMG_4259.JPG",
+    "id": "1cewMQ4i61LDiaVmALa4-EVuGA7tBRzT8",
+    "size": 5486000,
+    "modified": "2026-02-10T12:22:36.847Z"
+   },
+   {
+    "name": "IMG_4686.JPG",
+    "id": "11WfHERqYAMd3NESYzPhLJmxkeq1aqgmy",
+    "size": 4411037,
+    "modified": "2026-03-03T11:21:26.762Z"
+   }
+  ],
+  "COLORCARD AZ-2907PC": [
+   {
+    "name": "IMG_4469.JPG",
+    "id": "1F4FrCHoWCR340IsXopmitlJlju07pFsA",
+    "size": 6090994,
+    "modified": "2026-02-19T12:00:31.829Z"
+   },
+   {
+    "name": "IMG_4470.JPG",
+    "id": "1dBW1YQPwI87DSUoonzQa4o6eO86QiU5V",
+    "size": 4852120,
+    "modified": "2026-02-19T12:00:28.149Z"
+   }
+  ],
+  "COLORCARD AZ-3040PC   AZ-3061PC": [
+   {
+    "name": "IMG_4414.JPG",
+    "id": "1tY4mw5ijhvgdj43m3TmUs5y8_qFG8cnb",
+    "size": 5788054,
+    "modified": "2026-02-18T12:42:50.951Z"
+   },
+   {
+    "name": "IMG_4415.JPG",
+    "id": "1GKH1yOSkXlyLVNoGCQ3R_RHcy3f5R8Sx",
+    "size": 6317620,
+    "modified": "2026-02-18T12:42:47.029Z"
+   },
+   {
+    "name": "IMG_4416.JPG",
+    "id": "16wI-d10xLPbpRXhRy2yXeWSk-eEQc7FZ",
+    "size": 5684098,
+    "modified": "2026-02-18T12:42:43.481Z"
+   }
+  ],
+  "COLORCARD AZ-2941PC": [
+   {
+    "name": "IMG_4464.JPG",
+    "id": "1S4nQoma3WrrPHhewI0oWM37U9JmtzGG7",
+    "size": 6352028,
+    "modified": "2026-02-19T11:29:14.429Z"
+   },
+   {
+    "name": "IMG_4465.JPG",
+    "id": "13jV-fSJxsHfp_QylBKF6wIwZ5xj5wY5o",
+    "size": 6183117,
+    "modified": "2026-02-19T11:29:25.407Z"
+   },
+   {
+    "name": "IMG_4466.JPG",
+    "id": "1lsIFIfE1gTKHR7HrbZcoeP5GVmdemd2H",
+    "size": 6703913,
+    "modified": "2026-02-19T11:29:21.387Z"
+   },
+   {
+    "name": "IMG_4467.JPG",
+    "id": "1nTNH6VyNadXgTQk0PeOE4cAe1N5mBmc5",
+    "size": 5857756,
+    "modified": "2026-02-19T11:29:05.744Z"
+   },
+   {
+    "name": "IMG_4468.JPG",
+    "id": "1AvThovDx_1xHWDzJfWz0dE3DSD4zK__e",
+    "size": 5296581,
+    "modified": "2026-02-19T11:50:04.312Z"
+   }
+  ],
+  "COLORCARD AZ-2836PC": [
+   {
+    "name": "IMG_4455.JPG",
+    "id": "1lhRdKKy01QHG2ufYfhERN8ZIsmH13dvT",
+    "size": 5639790,
+    "modified": "2026-02-19T11:01:48.446Z"
+   },
+   {
+    "name": "IMG_4456.JPG",
+    "id": "1QWXKtl1UUvXVTkSLPofh6BkZ11JOuJdp",
+    "size": 5437071,
+    "modified": "2026-02-19T11:01:57.207Z"
+   },
+   {
+    "name": "IMG_4457.JPG",
+    "id": "1w88wF4wgtHxULTu7DLTV5ZF4Q0MZV4fE",
+    "size": 5418125,
+    "modified": "2026-02-19T11:01:52.590Z"
+   },
+   {
+    "name": "IMG_4458.JPG",
+    "id": "15exkIBIp7441j3ODfY2cEnor9IutxaYK",
+    "size": 4173520,
+    "modified": "2026-02-19T11:01:43.337Z"
+   }
+  ],
+  "COLORCARD AZ-2917PC": [
+   {
+    "name": "IMG_4462.JPG",
+    "id": "1R8S46cgJqI0HizqaR-W7S370r-VaC_FH",
+    "size": 6629210,
+    "modified": "2026-02-19T11:22:34.530Z"
+   },
+   {
+    "name": "IMG_4463.JPG",
+    "id": "1HLmQtTuyN-_huwyD1NE3OGctGk_CEVMI",
+    "size": 7263116,
+    "modified": "2026-02-19T11:22:30.312Z"
+   }
+  ],
+  "COLORCARD AZ-2802PC   AZ-2804   AZ-2806": [
+   {
+    "name": "IMG_4459.JPG",
+    "id": "1hlADaxSDx1DHinaFzKF1I8eYk2tySsiV",
+    "size": 4936189,
+    "modified": "2026-02-19T11:16:34.991Z"
+   },
+   {
+    "name": "IMG_4460.JPG",
+    "id": "1nDML69peDCUzl2bYe5-QasBCg6pkd6p5",
+    "size": 4316559,
+    "modified": "2026-02-19T11:16:30.957Z"
+   }
+  ],
+  "COLORCARD AZ-2911PC": [
+   {
+    "name": "IMG_4449.JPG",
+    "id": "1jIVFzluUMDvKKDgWuWgCeH6UDSM6cX0W",
+    "size": 5660739,
+    "modified": "2026-02-19T09:35:44.585Z"
+   },
+   {
+    "name": "IMG_4450.JPG",
+    "id": "1mT1TvLCefm3iqbMOGT84sWUHNOKUm06g",
+    "size": 5668212,
+    "modified": "2026-02-19T09:35:40.211Z"
+   },
+   {
+    "name": "IMG_4451.JPG",
+    "id": "1Xx_V9noLpGi_Jbs3uZdbePeJSD91_-lT",
+    "size": 5738964,
+    "modified": "2026-02-19T09:35:36.323Z"
+   }
+  ],
+  "COLORCARD AZ-2903PC": [
+   {
+    "name": "IMG_4444.JPG",
+    "id": "1ddcuY8iTl0zvswo4zokeWLMdCteQwTlE",
+    "size": 4899273,
+    "modified": "2026-02-19T08:57:31.394Z"
+   },
+   {
+    "name": "IMG_4445.JPG",
+    "id": "12QDk3Zicxed6KF25zxX1MgInrF3JfDyB",
+    "size": 5334863,
+    "modified": "2026-02-19T08:57:39.021Z"
+   },
+   {
+    "name": "IMG_4446.JPG",
+    "id": "1szN5qJeanN2R9e7iLTsW_lX_FtH1nf8m",
+    "size": 5122563,
+    "modified": "2026-02-19T08:57:35.199Z"
+   }
+  ],
+  "COLORCARD AZ-2808PC": [
+   {
+    "name": "IMG_4250.JPG",
+    "id": "1upyUmpJ6wwFIVcblYeq-TxSy71EHz2Dj",
+    "size": 2828864,
+    "modified": "2026-02-10T12:11:24.547Z"
+   },
+   {
+    "name": "IMG_4251.JPG",
+    "id": "1Y834SKygoR4saiRInDDAmbniYTWQE1pK",
+    "size": 2591369,
+    "modified": "2026-02-10T12:11:20.801Z"
+   },
+   {
+    "name": "IMG_4252.JPG",
+    "id": "1kdMpQfmNB-B1oITi7yq0SRgoZC4aaPJ-",
+    "size": 2744183,
+    "modified": "2026-02-10T12:11:17.138Z"
+   },
+   {
+    "name": "IMG_4253.JPG",
+    "id": "1OnAuNB5-ZdzTl6FY0RjF8Bh62X581o4_",
+    "size": 6267825,
+    "modified": "2026-02-10T12:11:13.189Z"
+   },
+   {
+    "name": "IMG_4254.JPG",
+    "id": "1GMhsPXzCD5-V6A0QNupPKh7y4iFBu1PM",
+    "size": 6159630,
+    "modified": "2026-02-10T12:11:28.486Z"
+   },
+   {
+    "name": "IMG_4255.JPG",
+    "id": "103Y1eL7ef28BiD64K-NZX9lu8ttwELDG",
+    "size": 5357319,
+    "modified": "2026-02-10T12:11:07.627Z"
+   }
+  ],
+  "COLORCARD AZ-3022PC": [
+   {
+    "name": "IMG_4439.JPG",
+    "id": "1j5zP8IYFn1B4MFjDWtzG-hRY4h0I4VLs",
+    "size": 6358224,
+    "modified": "2026-02-19T08:52:11.279Z"
+   },
+   {
+    "name": "IMG_4440.JPG",
+    "id": "1TYuIxZkQF5ezEwV3lIjjnVFoPlJpF_Ij",
+    "size": 7046892,
+    "modified": "2026-02-19T08:52:07.251Z"
+   },
+   {
+    "name": "IMG_4441.JPG",
+    "id": "1ep2nDgELf-Lnu0McykjlrUb1H0fnZuFS",
+    "size": 7846917,
+    "modified": "2026-02-19T08:52:03.173Z"
+   },
+   {
+    "name": "IMG_4442.JPG",
+    "id": "1jTFAiEO7kpaz4idq0CNxM_9ZciCvYUSc",
+    "size": 7611153,
+    "modified": "2026-02-19T08:52:18.996Z"
+   },
+   {
+    "name": "IMG_4443.JPG",
+    "id": "17fmW9soibPCGvOVn2YKViBmbsOBVzX-a",
+    "size": 6523609,
+    "modified": "2026-02-19T08:52:15.119Z"
+   }
+  ],
+  "COLORCARD AZ-2827PC": [
+   {
+    "name": "IMG_4237.JPG",
+    "id": "18D-aFIPLhuXueM_cL_F4wDlCNNU_0MXB",
+    "size": 4551158,
+    "modified": "2026-02-10T11:49:02.411Z"
+   },
+   {
+    "name": "IMG_4238.JPG",
+    "id": "1bl05nhNRMUQbK6KPASgYEWFcNqDF0GLU",
+    "size": 4605338,
+    "modified": "2026-02-10T11:49:06.180Z"
+   }
+  ],
+  "COLORCARD AZ-2707PC   AZ-2706PC   AZ-2738PC": [
+   {
+    "name": "IMG_4447.JPG",
+    "id": "1XwkfnRPBEOx4QkAZEvC1YC5-H3tqrnbf",
+    "size": 6067479,
+    "modified": "2026-02-19T09:03:43.038Z"
+   },
+   {
+    "name": "IMG_4448.JPG",
+    "id": "1Cg6QBUDhIaHmLY8_SQ3i6hx1N8g6xbKx",
+    "size": 5317774,
+    "modified": "2026-02-19T09:03:46.694Z"
+   }
+  ],
+  "COLORCARD AZ-2912PC": [
+   {
+    "name": "IMG_4436.JPG",
+    "id": "1F0zUzeql0vbzaLT6LQwhY-8eFN5GZn-k",
+    "size": 6573635,
+    "modified": "2026-02-19T08:47:47.024Z"
+   },
+   {
+    "name": "IMG_4437.JPG",
+    "id": "1nar9JZ4hnFMsWgAWdxsB1sdLg-k-iBvm",
+    "size": 5190186,
+    "modified": "2026-02-19T08:47:43.251Z"
+   },
+   {
+    "name": "IMG_4438.JPG",
+    "id": "19hjt14-7Ks9kY9pIJp8O7QI9HQfevftA",
+    "size": 5576887,
+    "modified": "2026-02-19T08:47:38.574Z"
+   }
+  ],
+  "COLORCARD AZ-2902PC": [
+   {
+    "name": "IMG_4260.JPG",
+    "id": "1-UfytMNwFb4tBHkdipe6D7kA_05074aC",
+    "size": 5186018,
+    "modified": "2026-02-10T12:30:52.965Z"
+   },
+   {
+    "name": "IMG_4261.JPG",
+    "id": "1mZFTofRbjXF_uXK1la8iU7h5tXfrgFb2",
+    "size": 5222774,
+    "modified": "2026-02-10T12:30:46.466Z"
+   },
+   {
+    "name": "IMG_4262.JPG",
+    "id": "1DpxyWfkw8eHIvK_nab5aNDfJialrq_MP",
+    "size": 5721132,
+    "modified": "2026-02-10T12:30:41.134Z"
+   },
+   {
+    "name": "IMG_4263.JPG",
+    "id": "1TvK27seQGTgBsAxNRUbw6XCZ813DIP-p",
+    "size": 6166406,
+    "modified": "2026-02-10T12:30:58.186Z"
+   }
+  ],
+  "COLORCARD AZ-2812PC": [
+   {
+    "name": "IMG_4431.JPG",
+    "id": "1_Hy92RVD4i-k9niYJQGCfSb5GeD4lvCM",
+    "size": 6967748,
+    "modified": "2026-02-19T08:34:57.743Z"
+   },
+   {
+    "name": "IMG_4432.JPG",
+    "id": "1FZYvW-aAwq7QLzqN_jEWtBVf0Y1yhINL",
+    "size": 6737299,
+    "modified": "2026-02-19T08:35:05.894Z"
+   },
+   {
+    "name": "IMG_4433.JPG",
+    "id": "1dXJGS6z467fXkH4_2YdFCvB-f2OlUSo8",
+    "size": 7328357,
+    "modified": "2026-02-19T08:35:02.076Z"
+   },
+   {
+    "name": "IMG_4434.JPG",
+    "id": "1mQNSgY6kxEIqtaRfVbLFe_PZNGSIs0Xm",
+    "size": 6262528,
+    "modified": "2026-02-19T08:35:15.253Z"
+   },
+   {
+    "name": "IMG_4435.JPG",
+    "id": "11Yuy-5ZON1y8x7aBWEgck1j94-WJpJD7",
+    "size": 6038984,
+    "modified": "2026-02-19T08:35:10.421Z"
+   }
+  ],
+  "COLORCARD AZ-2915PC": [
+   {
+    "name": "IMG_4428.JPG",
+    "id": "1bubTr3rN1p-G5LpEBHDiNsH9KPp5RwKq",
+    "size": 5933405,
+    "modified": "2026-02-19T08:29:01.988Z"
+   },
+   {
+    "name": "IMG_4429.JPG",
+    "id": "1Q7n_rTaz2odBSLeVU5T54bYF2y0jiO4o",
+    "size": 5275721,
+    "modified": "2026-02-19T08:28:58.197Z"
+   },
+   {
+    "name": "IMG_4430.JPG",
+    "id": "1OOJUAjveCECBCPJ_PDfm69ge5OgZAiO8",
+    "size": 5392778,
+    "modified": "2026-02-19T08:28:53.701Z"
+   }
+  ],
+  "COLORCARD AZ-3038PC": [
+   {
+    "name": "IMG_4417.JPG",
+    "id": "1viKr-0Bda5dDS2Shv6GyuaA_g_oACpn2",
+    "size": 5468463,
+    "modified": "2026-02-18T12:51:27.365Z"
+   },
+   {
+    "name": "IMG_4418.JPG",
+    "id": "1RKhI2RTccHcMyziFhG3_E-FocFv5RCYK",
+    "size": 5576714,
+    "modified": "2026-02-18T12:51:23.517Z"
+   }
+  ],
+  "COLORCARD AZ-2964PC": [
+   {
+    "name": "IMG_4580.JPG",
+    "id": "19UYUzkQSxFruhYrIGvGdQm225NqLPQhY",
+    "size": 5114755,
+    "modified": "2026-02-24T11:26:21.923Z"
+   },
+   {
+    "name": "IMG_4581.JPG",
+    "id": "1W98YWzEputPfXRj5I0F_hS8hkvUJgaP1",
+    "size": 4851140,
+    "modified": "2026-02-24T11:26:04.900Z"
+   },
+   {
+    "name": "IMG_4582.JPG",
+    "id": "13j3zS41Hhf1IHO5ua6ZhEWEIamhyWLYx",
+    "size": 4304405,
+    "modified": "2026-02-24T11:26:11.575Z"
+   }
+  ],
+  "COLORCARD AZ-3037PC": [
+   {
+    "name": "IMG_4419.JPG",
+    "id": "1rMEunB3jx1EhBwhIVI-eDJIhldLrIkGS",
+    "size": 6501343,
+    "modified": "2026-02-18T13:03:59.484Z"
+   },
+   {
+    "name": "IMG_4420.JPG",
+    "id": "1ZS095__eg1AU6aNKVC_uJRlrIee106Bq",
+    "size": 5651895,
+    "modified": "2026-02-18T13:03:54.925Z"
+   },
+   {
+    "name": "IMG_4421.JPG",
+    "id": "1Wj2cbq6pl4LJ5N10aDTOVGS11739K1wO",
+    "size": 4647365,
+    "modified": "2026-02-18T13:03:50.845Z"
+   }
+  ],
+  "COLORCARD AZ-2833PC": [
+   {
+    "name": "IMG_4274.JPG",
+    "id": "1naYFf6pcac0T0EvmCWBb5hdphh8cz4dS",
+    "size": 4659488,
+    "modified": "2026-02-10T13:08:22.316Z"
+   },
+   {
+    "name": "IMG_4275.JPG",
+    "id": "1mPp32NrQHI3ujV_Q21ojozXh8dRq5Vxm",
+    "size": 5235501,
+    "modified": "2026-02-10T13:08:26.833Z"
+   }
+  ],
+  "COLORCARD AZ-2908PC": [
+   {
+    "name": "IMG_4270.JPG",
+    "id": "1c4VcKzveYQtFxuQJwogoH680x8hN7HH8",
+    "size": 5033103,
+    "modified": "2026-02-10T12:54:46.120Z"
+   },
+   {
+    "name": "IMG_4271.JPG",
+    "id": "1ccOXp89GoSub7H3e9z_7e3_6f5P1Cnkb",
+    "size": 5069160,
+    "modified": "2026-02-10T12:54:42.228Z"
+   },
+   {
+    "name": "IMG_4683.JPG",
+    "id": "10zZ4Z4PAwjMG3AiC9Isdog8G59KUTUM2",
+    "size": 5544116,
+    "modified": "2026-03-03T11:05:59.864Z"
+   }
+  ],
+  "COLORCARD AZ-2831PC": [
+   {
+    "name": "IMG_4272.JPG",
+    "id": "1-z5ba8SPiZGi_4-J492mxJAIcSH2PRUK",
+    "size": 5007450,
+    "modified": "2026-02-10T13:03:59.585Z"
+   },
+   {
+    "name": "IMG_4273.JPG",
+    "id": "1d7uLA8JlCnQ5tqglQR5DHgtRjerrGVaN",
+    "size": 6016003,
+    "modified": "2026-02-10T13:04:09.310Z"
+   }
+  ],
+  "COLORCARD ROMA": [
+   {
+    "name": "IMG_4286.JPG",
+    "id": "17tOzKvesDaVEUjXITijbm--Xwv_7l45b",
+    "size": 3156384,
+    "modified": "2026-02-10T13:24:36.588Z"
+   },
+   {
+    "name": "IMG_4287.JPG",
+    "id": "15iqg1VOzrDadNt7SXqZB0jgPXeQBXitY",
+    "size": 3733976,
+    "modified": "2026-02-10T13:24:43.788Z"
+   }
+  ],
+  "COLORCARD AZ-2943PC": [
+   {
+    "name": "IMG_4264.JPG",
+    "id": "1rzvjI4bHTcKTYZpEFIlXaTa4ufNufRF8",
+    "size": 4749286,
+    "modified": "2026-02-10T12:50:09.323Z"
+   },
+   {
+    "name": "IMG_4265.JPG",
+    "id": "1awuCq9ADRaclRqXsvTO3jLYRxczBnru5",
+    "size": 4703061,
+    "modified": "2026-02-10T12:50:05.561Z"
+   },
+   {
+    "name": "IMG_4266.JPG",
+    "id": "1Zc86T-G6Dr3MxaOWP7Hv6UIUiCUi6s01",
+    "size": 4474013,
+    "modified": "2026-02-10T12:50:01.008Z"
+   },
+   {
+    "name": "IMG_4267.JPG",
+    "id": "11ZcjfxiZYtS6qN5CDR7OKPLZtUSFPd1j",
+    "size": 4444867,
+    "modified": "2026-02-10T12:49:56.800Z"
+   },
+   {
+    "name": "IMG_4268.JPG",
+    "id": "1WR6eeqTijKzAsPlMZ3ik3ALwKbyLdPin",
+    "size": 4807994,
+    "modified": "2026-02-10T12:50:13.432Z"
+   },
+   {
+    "name": "IMG_4269.JPG",
+    "id": "1DEBs5hcVS9WCJpIhMvlbHnzH-hZWM78k",
+    "size": 3868739,
+    "modified": "2026-02-10T12:49:52.698Z"
+   }
+  ],
+  "COLORCARD MADERA": [
+   {
+    "name": "IMG_4276.JPG",
+    "id": "1Cb5AinVdX9ZdMhb2aBO9x93cbPvGRt-j",
+    "size": 3512076,
+    "modified": "2026-02-10T13:13:27.120Z"
+   },
+   {
+    "name": "IMG_4277.JPG",
+    "id": "1u5hs8-Ug651c_lnD9GDZd9QcJIAEmPOM",
+    "size": 3347258,
+    "modified": "2026-02-10T13:13:23.631Z"
+   }
+  ],
+  "COLORCARD AZ-3006PC": [
+   {
+    "name": "IMG_4278.JPG",
+    "id": "1-a1glYC0VEHkGOvzTpA1k3d8UeIiaqdZ",
+    "size": 5717845,
+    "modified": "2026-02-10T13:17:25.738Z"
+   },
+   {
+    "name": "IMG_4279.JPG",
+    "id": "1nUBdbMrdbw68LdItx30_eo4MtLuxIyQU",
+    "size": 5630296,
+    "modified": "2026-02-10T13:17:34.720Z"
+   },
+   {
+    "name": "IMG_4280.JPG",
+    "id": "1_ExrZpq2yp3py3fPSxs8CIC16OIUvx7c",
+    "size": 5643426,
+    "modified": "2026-02-10T13:17:46.248Z"
+   }
+  ],
+  "COLORCARD VINCI": [
+   {
+    "name": "IMG_4239.JPG",
+    "id": "1jKwdBg2zJDps75t-DrvSIoCWYf3F00y5",
+    "size": 4612166,
+    "modified": "2026-02-10T11:53:50.124Z"
+   },
+   {
+    "name": "IMG_4240.JPG",
+    "id": "1uFh8y3-S7cpiKQ_nmX0rcDBVv77lmhBJ",
+    "size": 1671884,
+    "modified": "2026-02-10T11:53:46.591Z"
+   }
+  ],
+  "COLORCARD AZ-2788PC   AZ-2800PC PLEASE USE FULL COLOR NAME WITH MODEL": [
+   {
+    "name": "IMG_4246.JPG",
+    "id": "1iB8yO4OS0naNzFJ6akz7yMR7Ji9Eua7X",
+    "size": 3955484,
+    "modified": "2026-02-10T12:05:49.458Z"
+   },
+   {
+    "name": "IMG_4247.JPG",
+    "id": "1woKixe-cOnhN44FDbTBs2s5idlNC_Pl4",
+    "size": 4889426,
+    "modified": "2026-02-10T12:05:42.192Z"
+   },
+   {
+    "name": "IMG_4248.JPG",
+    "id": "1ulXJsvdYsUUVsEoGWzznmCiQ60DEJnnp",
+    "size": 4411105,
+    "modified": "2026-02-10T12:05:29.719Z"
+   },
+   {
+    "name": "IMG_4249.JPG",
+    "id": "1BpE9eQ5Sbj2DAJJUR1m_TbWFwDF9rsQE",
+    "size": 4982259,
+    "modified": "2026-02-10T12:05:23.646Z"
+   }
+  ],
+  "COLORCARD TURBO VINCI": [
+   {
+    "name": "IMG_4241.JPG",
+    "id": "1C_wtwMVv5t_2U1Ym3DYbbEK_kqzFKpdi",
+    "size": 3349638,
+    "modified": "2026-02-10T11:58:32.606Z"
+   },
+   {
+    "name": "IMG_4242.JPG",
+    "id": "1bzuj4Sd0_dlnDqMS2b11tYnaPXBIXfz9",
+    "size": 6624491,
+    "modified": "2026-02-10T11:58:46.330Z"
+   },
+   {
+    "name": "IMG_4243.JPG",
+    "id": "1vT4n0ZZFKFLEzOk0p3oG0_HMSpcIv-0t",
+    "size": 3300721,
+    "modified": "2026-02-10T11:58:26.610Z"
+   },
+   {
+    "name": "IMG_4244.JPG",
+    "id": "1lcfw89N5zzulsdmx1ZKMsk6nza1zOYck",
+    "size": 4416873,
+    "modified": "2026-02-10T11:58:37.629Z"
+   },
+   {
+    "name": "IMG_4245.JPG",
+    "id": "1H2-wCtqTJ5h23YQ0uFEim-CtalOVNj3U",
+    "size": 4710882,
+    "modified": "2026-02-10T11:58:41.690Z"
+   }
+  ],
+  "ACRYLIC MOULINE 100%": [
+   {
+    "name": "IMG_4236.JPG",
+    "id": "1qAQLh1NNae4DU9e0n6f_fuhDH2Vb10to",
+    "size": 1103613,
+    "modified": "2026-02-10T11:34:06.129Z"
+   }
+  ],
+  "ACRYLIC 100%": [
+   {
+    "name": "IMG_4233.JPG",
+    "id": "18JebD-Krxm9NnH3nKWst5bNLNpueEBv-",
+    "size": 3838058,
+    "modified": "2026-02-10T11:34:09.622Z"
+   },
+   {
+    "name": "IMG_4234.JPG",
+    "id": "1wBdEYAsEnd8-YQ4kGf8Gmf3z5SVn3RQ0",
+    "size": 4115597,
+    "modified": "2026-02-10T11:34:38.523Z"
+   },
+   {
+    "name": "IMG_4235.JPG",
+    "id": "1ly77SzP1FI2UT0VpLeC8JtH61R05lycw",
+    "size": 4428004,
+    "modified": "2026-02-10T11:34:50.174Z"
+   }
+  ],
+  "COLORCARD VERONA": [
+   {
+    "name": "IMG_4222.JPG",
+    "id": "1EKPnkUnPAATiv_j27Ay9zj1W_yNyyM_P",
+    "size": 2436635,
+    "modified": "2026-02-10T11:19:51.791Z"
+   },
+   {
+    "name": "IMG_4223.JPG",
+    "id": "1y_BYdKSCWRG_jLseMe-BaGupqh7m4Bgd",
+    "size": 2473323,
+    "modified": "2026-02-10T11:19:55.392Z"
+   },
+   {
+    "name": "IMG_4224.JPG",
+    "id": "1Wtp7OzAI-f2Vgug9o4uWRLqDQcKPMLTm",
+    "size": 2363385,
+    "modified": "2026-02-10T11:19:47.748Z"
+   }
+  ],
+  "COLORCARD VEZUV": [
+   {
+    "name": "IMG_4225.JPG",
+    "id": "1aO_GWyoqYGLzad2vwGXUyCEuHdPHIetJ",
+    "size": 4111272,
+    "modified": "2026-02-10T11:24:46.371Z"
+   },
+   {
+    "name": "IMG_4226.JPG",
+    "id": "1WrbhkMNWPaDU0LGxHdsGCFXmrUMhyHVa",
+    "size": 4597026,
+    "modified": "2026-02-10T11:24:42.667Z"
+   }
+  ],
+  "COLORCARD VEZUV TURBO": [
+   {
+    "name": "IMG_4227.JPG",
+    "id": "1bNLSITKvrl0BIGzO5NyFinKSDmdaX9Tr",
+    "size": 2716143,
+    "modified": "2026-02-10T11:24:38.190Z"
+   }
+  ]
+ }
+}

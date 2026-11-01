@@ -1491,6 +1491,12 @@
       },
       {
         "type": "number",
+        "id": "b2b_min_order_usd",
+        "label": "Minimalna wartość zamówienia (USD, rynek „Reszta świata”)",
+        "default": 550
+      },
+      {
+        "type": "number",
         "id": "b2b_free_shipping_pln",
         "label": "Darmowa dostawa w Polsce od (PLN netto, 0 = brak)",
         "info": "Tylko komunikat w koszyku — samą darmową stawkę ustaw w Ustawienia → Wysyłka i dostawa.",

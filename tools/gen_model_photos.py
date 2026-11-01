@@ -395,6 +395,13 @@ def cmd_seria():
         list(ex.map(one, plan))
 
 
+PROMPT_BEZ_METKI = ('THE PRODUCT HAS NO METAL PLATE, NO LABEL, NO TAG AND NO LETTERING: if the reference photo shows a small metal brand plate on the cuff, '
+                    'leave it out completely and show clean uninterrupted knit in its place. ')
+PROMPT_NASZYWKA = ('THE PATCH ON THE CUFF IS PART OF THE DESIGN: reproduce the sewn-on patch from images 1 and 2 at the same position, size, '
+                   'shape and colour, with the same print or lettering on it (copy it as faithfully as possible, never leave it out or replace it). ')
+assert PROMPT_BEZ_METKI in PROMPT_OLDMONEY
+
+
 def cmd_sesja():
     """Sesja wg podziału Adriana (folder „SESJE SCENERIA WYBÓR NA MODELE”): każdy model dostaje scenerię ze swojej grupy.
       --codes=AZ-1,AZ-2   tylko te kody        --sceneria=naoko   tylko ta grupa
@@ -402,6 +409,8 @@ def cmd_sesja():
       --uwaga="..."       dopisek do promptu (np. kolor pompona, gdy model go przekłamuje)
       --scena=dwor        wymuś scenę (np. gdy rotacja trafiła w szeroki plan)
       --dzieci            także czapki dziecięce (domyślnie pominięte — wizerunki dzieci do decyzji Adriana)
+      --naszywka          zachowaj naszywkę z nadrukiem z packshotu (dziecięce „MINI BOSS”, łapka, miś — to część wzoru,
+                          a wersje PC/PCE różnią się tylko nią); bez flagi prompt każe usunąć każdą metkę
     Sceny rotują w ramach scenerii. Twarz: SCENERIE[...]['obsada'][kobieta|mezczyzna|...] wg segmentu produktu."""
     import glob, json as _json
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -488,8 +497,12 @@ def cmd_sesja():
             cfg['poza'] += ('; the pompom is exactly as big relative to the hat as in image 1 - a large, full, fluffy fur pompom, '
                             'roughly as wide as the hat itself, same colour and tips')
         t = time.time()
+        prompt = PROMPT_OLDMONEY.format(what=what, **cfg)
+        if '--naszywka' in FLAGS:
+            prompt = prompt.replace(PROMPT_BEZ_METKI, PROMPT_NASZYWKA).replace(
+                'do not add any text, logo or branding anywhere in the photograph', 'do not add any other text, logo or branding')
         ok = generate([part_image(pack), part_image(cuff_crop(pack, f'{dest}/_crop_{code}.jpg')), part_image(refs[0]),
-                       {'text': PROMPT_OLDMONEY.format(what=what, **cfg)}], out)
+                       {'text': prompt}], out)
         print(('OK  ' if ok else 'BŁĄD'), grupa, code, osoba, klucz, f'{time.time()-t:.0f}s')
 
     with ThreadPoolExecutor(WORKERS) as ex:

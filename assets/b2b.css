@@ -899,3 +899,207 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
   .footer .footer__content-bottom-wrapper--achti { flex-wrap: nowrap; }
   .footer .footer__content-bottom-wrapper--achti .policies { flex: 1 1 auto; justify-content: center; }
 }
+
+/* Kolory z kolorników (warianty „Kolor”, kółka z Shopify → Pliki): ukryte natywne pola wyboru, większe kółka */
+.product-form__input--swatch .swatch-input__input{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;clip:rect(0 0 0 0);margin:0}
+fieldset.product-form__input--swatch .swatch-input__input + .swatch-input__label{--swatch-input--size:4.4rem;margin:.6rem 1rem .2rem 0}
+.product-form__input--swatch .swatch-input__input:focus-visible + .swatch-input__label{outline:.2rem solid rgb(var(--color-foreground));outline-offset:.2rem}
+
+/* Zamówienie wielu kolorów (snippets/b2b-color-order.liquid): kółko, pod nim numer i ilość */
+.b2b-co{display:block;margin:1.2rem 0 .4rem}
+.b2b-co__heading{margin:0 0 1rem}
+.b2b-co__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(8.4rem,1fr));gap:1.6rem 1rem}
+.b2b-co__item{display:grid;justify-items:center;gap:.5rem;min-width:0}
+.b2b-co__swatch{display:grid;justify-items:center;gap:.4rem;cursor:pointer}
+.b2b-co__circle{display:block;width:5.6rem;height:5.6rem;border-radius:50%;background:#f2f1ef center/cover no-repeat;box-shadow:0 0 0 .1rem rgba(var(--color-foreground),.15);transition:box-shadow var(--duration-short) ease}
+.b2b-co__item.is-set .b2b-co__circle{box-shadow:0 0 0 .2rem rgb(var(--color-background)),0 0 0 .35rem rgb(var(--color-foreground))}
+.b2b-co__name{font-size:1.2rem;letter-spacing:.02em;color:rgba(var(--color-foreground),.75);text-align:center;overflow-wrap:anywhere}
+.b2b-co__qty{display:flex;align-items:center;border:.1rem solid rgba(var(--color-foreground),.25);height:3.2rem}
+.b2b-co__step{width:2.4rem;height:100%;border:0;background:none;color:rgb(var(--color-foreground));font-size:1.6rem;cursor:pointer;padding:0}
+.b2b-co__step:hover{background:rgba(var(--color-foreground),.06)}
+.b2b-co__input{width:3.6rem;height:100%;border:0;text-align:center;font:inherit;font-size:1.4rem;background:none;color:rgb(var(--color-foreground));-moz-appearance:textfield;padding:0}
+.b2b-co__input::-webkit-outer-spin-button,.b2b-co__input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.b2b-co__input:focus-visible{outline:.2rem solid rgb(var(--color-foreground));outline-offset:-.2rem}
+.b2b-co__item.is-set .b2b-co__qty{border-color:rgb(var(--color-foreground))}
+.b2b-co__footer{display:grid;gap:.8rem;margin-top:2rem;max-width:44rem}
+.b2b-co__total{margin:0;font-size:1.4rem}
+.b2b-co__msg{margin:0;font-size:1.3rem}
+.b2b-co__item.is-off .b2b-co__circle{opacity:.35;filter:grayscale(.6)}
+.b2b-co__item.is-off .b2b-co__swatch{cursor:default}
+.b2b-co__swatch{position:relative}
+.b2b-co__zoom{position:absolute;left:50%;bottom:calc(100% - 5.6rem - .8rem);width:16rem;height:16rem;border-radius:50%;background:#f2f1ef center/cover no-repeat;box-shadow:0 .6rem 2.4rem rgba(0,0,0,.22),0 0 0 .3rem rgb(var(--color-background));transform:translateX(calc(-50% + var(--dx, 0px))) scale(.35);transform-origin:50% 100%;opacity:0;visibility:hidden;pointer-events:none;z-index:6;transition:opacity .18s ease,transform .22s ease,visibility 0s linear .22s}
+@media (hover:hover){.b2b-co__item:not(.is-off) .b2b-co__circle:hover + .b2b-co__zoom{opacity:1;visibility:visible;transform:translateX(calc(-50% + var(--dx, 0px))) scale(1);transition:opacity .18s ease,transform .22s ease}}
+.b2b-co__item.is-zoom .b2b-co__zoom{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(calc(-50% + var(--dx, 0px))) scale(1);transition:opacity .18s ease,transform .22s ease}
+.b2b-co__off{font-size:1.1rem;line-height:3.2rem;color:rgba(var(--color-foreground),.6);text-align:center}
+
+/* Oznaczenie zdjęć „na modelce” wygenerowanych przez AI (AI Act art. 50): okrągłe „AI”, pełny opis w title/aria-label */
+.product-media-container{position:relative}
+.b2b-ai-label{position:absolute;left:1rem;bottom:1rem;z-index:2;display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:50%;font-size:1.1rem;font-weight:600;letter-spacing:.04em;line-height:1;color:rgb(var(--color-foreground));background:rgba(var(--color-background),.88);box-shadow:0 0 0 .1rem rgba(var(--color-foreground),.35);pointer-events:auto;cursor:help}
+.card__media .media > .b2b-ai-label--card,.b2b-ai-label--card{opacity:0;transition:opacity .2s ease;width:2.2rem !important;height:2.2rem !important;top:auto !important;right:auto !important;left:.8rem !important;bottom:.8rem !important;display:flex !important;align-items:center;justify-content:center;line-height:1 !important;font-size:.9rem;pointer-events:none}
+.card-wrapper:hover .b2b-ai-label--card{opacity:1}
+
+/* Kolory jako tabela z przewijaniem (Kamil 20.10.2026: przy 61 kolorach siatka była za długa) — wiersz: kółko, numer, ilość;
+   okienko ma stałą wysokość i własny pasek przewijania; podgląd kółka wyskakuje obok (position: fixed, JS ustawia --zx/--zy) */
+.b2b-co--list .b2b-co__grid{display:block;max-height:46rem;overflow-y:auto;overscroll-behavior:contain;border:.1rem solid rgba(var(--color-foreground),.15)}
+.b2b-co--list .b2b-co__item{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;padding:.6rem 1.2rem;border-bottom:.1rem solid rgba(var(--color-foreground),.08)}
+.b2b-co--list .b2b-co__item:last-child{border-bottom:0}
+.b2b-co--list .b2b-co__item.is-set{background:rgba(var(--color-foreground),.04)}
+.b2b-co--list .b2b-co__swatch{display:flex;align-items:center;gap:1.4rem;min-width:0}
+.b2b-co--list .b2b-co__circle{flex:0 0 auto;width:4.4rem;height:4.4rem}
+.b2b-co--list .b2b-co__name{font-size:1.4rem;text-align:left;color:rgb(var(--color-foreground))}
+.b2b-co--list .b2b-co__off{line-height:1.4}
+.b2b-co--list .b2b-co__zoom{position:fixed;left:var(--zx,-999px);top:var(--zy,0);bottom:auto;transform:translateY(-50%) scale(.35);transform-origin:0 50%;z-index:30}
+@media (hover:hover){.b2b-co--list .b2b-co__item:not(.is-off) .b2b-co__circle:hover + .b2b-co__zoom{transform:translateY(-50%) scale(1)}}
+.b2b-co--list .b2b-co__item.is-zoom .b2b-co__zoom{transform:translateY(-50%) scale(1)}
+/* Tabela kolorów: pasek przewijania zawsze widoczny (Kamil 20.10.2026; macOS domyślnie chowa paski) */
+.b2b-co--list .b2b-co__grid{scrollbar-width:auto;scrollbar-color:rgba(var(--color-foreground),.55) rgba(var(--color-foreground),.08);scrollbar-gutter:stable}
+.b2b-co--list .b2b-co__grid::-webkit-scrollbar{width:1rem;-webkit-appearance:none}
+.b2b-co--list .b2b-co__grid::-webkit-scrollbar-track{background:rgba(var(--color-foreground),.08)}
+.b2b-co--list .b2b-co__grid::-webkit-scrollbar-thumb{background:rgba(var(--color-foreground),.55);border-radius:.5rem;border:.2rem solid transparent;background-clip:padding-box;min-height:4rem}
+.b2b-co--list .b2b-co__grid::-webkit-scrollbar-thumb:hover{background-color:rgba(var(--color-foreground),.8)}
+
+/* Własny suwak obok tabeli kolorów: ▲, tor z uchwytem, ▼ — zawsze widoczny (natywny pasek ukryty, żeby nie było dwóch) */
+.b2b-co__listwrap{display:flex;align-items:stretch;gap:.6rem}
+.b2b-co__listwrap .b2b-co__grid{flex:1 1 auto;min-width:0}
+.b2b-co.has-bar .b2b-co__grid{scrollbar-width:none}
+.b2b-co.has-bar .b2b-co__grid::-webkit-scrollbar{display:none}
+.b2b-co__bar{flex:0 0 3.2rem;display:flex;flex-direction:column;gap:.4rem;max-height:46rem}
+.b2b-co__bar[hidden]{display:none}
+.b2b-co__bar-btn{flex:0 0 3.2rem;border:.1rem solid rgba(var(--color-foreground),.25);background:rgb(var(--color-background));color:rgb(var(--color-foreground));font-size:1.1rem;cursor:pointer;padding:0;line-height:1}
+.b2b-co__bar-btn:hover{background:rgba(var(--color-foreground),.08)}
+.b2b-co__bar-track{position:relative;flex:1 1 auto;background:rgba(var(--color-foreground),.08);border-radius:1.6rem;cursor:pointer;touch-action:none;min-height:6rem}
+.b2b-co__bar-thumb{position:absolute;left:.4rem;right:.4rem;top:0;border-radius:1.2rem;background:rgba(var(--color-foreground),.6);cursor:grab}
+.b2b-co__bar-thumb:hover{background:rgba(var(--color-foreground),.85)}
+/* Suwak cieńszy (Kamil 20.10.2026) */
+.b2b-co__bar{flex-basis:1.8rem;gap:.3rem}
+.b2b-co__bar-btn{flex-basis:1.8rem;font-size:.8rem;border:0;background:none;color:rgba(var(--color-foreground),.6)}
+.b2b-co__bar-btn:hover{background:none;color:rgb(var(--color-foreground))}
+.b2b-co__bar-track{width:.6rem;margin:0 auto;border-radius:.3rem}
+.b2b-co__bar-thumb{left:0;right:0;border-radius:.3rem}
+
+/* Karty modeli: cała próbka na białym tle (wytnij_probki.py) — kwadrat bez przycinania zamiast kółka, 23.10.2026 */
+.b2b-co--probka .b2b-co__circle,.b2b-co--probka .b2b-co__zoom{border-radius:.4rem;background-color:#fff;background-size:contain}
+
+/* Rejestracja: panel po wysłaniu zgłoszenia (30.10.2026) */
+.b2b-register:has(.b2b-reg-ok) .b2b-register__intro,.b2b-register:has(.b2b-reg-ok)>p:last-child{display:none}
+.b2b-reg-ok{background:#f2f1ef;padding:3.2rem 3.2rem 3.6rem;margin-top:1rem}
+.b2b-reg-ok__icon{display:inline-flex;align-items:center;justify-content:center;width:5.2rem;height:5.2rem;border-radius:50%;background:rgb(var(--color-foreground));color:#fff;margin-bottom:1.6rem}
+.b2b-reg-ok__title{margin:0 0 .8rem;font-size:clamp(2.4rem,3vw,3rem)}
+.b2b-reg-ok__lead{font-size:1.8rem;font-weight:500;margin:0 0 2.4rem;color:rgb(var(--color-foreground))}
+.b2b-reg-ok__steps{list-style:none;counter-reset:krok;padding:0;margin:0 0 2.4rem;display:grid;gap:1.6rem}
+.b2b-reg-ok__steps li{counter-increment:krok;position:relative;padding-left:4.4rem;font-size:1.6rem;line-height:1.5;color:rgb(var(--color-foreground))}
+.b2b-reg-ok__steps li::before{content:counter(krok);position:absolute;left:0;top:-.1rem;width:3rem;height:3rem;border-radius:50%;border:1px solid rgb(var(--color-foreground));display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:500}
+.b2b-reg-ok__steps strong{font-weight:600}
+.b2b-reg-ok__contact{font-size:1.4rem;margin:0 0 2.4rem}
+.b2b-reg-ok__contact a{color:inherit;text-decoration:underline}
+@media (max-width:749px){.b2b-reg-ok{padding:2.4rem 1.6rem 2.8rem}}
+
+/* Koszyk: netto + brutto (30.10.2026) */
+.b2b-totals--gross{margin-top:.4rem}
+.b2b-totals--gross .totals__total,.b2b-totals--gross .totals__total-value{font-size:1.5rem;color:rgba(var(--color-foreground),.75)}
+.b2b-totals__note{font-size:1.3rem;color:rgba(var(--color-foreground),.75);margin:.6rem 0 0}
+
+/* Siatka kolorów: wartość netto i rabat ilościowy (30.10.2026) */
+.b2b-co__value{display:flex;flex-direction:column;gap:.2rem;margin:-.4rem 0 1.2rem;font-size:1.4rem}
+.b2b-co__value span:first-child{font-weight:600}
+.b2b-co__disc{color:#1f7a3a;font-weight:600}
+.b2b-co__next{font-size:1.25rem;color:rgba(var(--color-foreground),.7)}
+
+/* Koszyk: rozwijane koszty dostawy (30.10.2026) */
+.b2b-ship{margin:1.2rem 0 0;border-top:1px solid rgba(var(--color-foreground),.12);border-bottom:1px solid rgba(var(--color-foreground),.12);text-align:left}
+.b2b-ship__summary{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 0;cursor:pointer;list-style:none;font-size:1.4rem}
+.b2b-ship__summary::-webkit-details-marker{display:none}
+.b2b-ship__summary::after{content:'+';font-size:1.8rem;line-height:1;margin-left:.6rem}
+.b2b-ship[open] .b2b-ship__summary::after{content:'−'}
+.b2b-ship__summary span:first-child{flex:1}
+.b2b-ship__est{color:rgba(var(--color-foreground),.75)}
+.b2b-ship__body{padding:0 0 1.2rem;font-size:1.3rem}
+.b2b-ship__calc{margin:0 0 .8rem;font-weight:600}
+.b2b-ship__table{width:100%;border-collapse:collapse}
+.b2b-ship__table th,.b2b-ship__table td{padding:.5rem .4rem;border-bottom:1px solid rgba(var(--color-foreground),.08);vertical-align:top;text-align:left}
+.b2b-ship__table th{font-weight:500;color:rgba(var(--color-foreground),.7)}
+.b2b-ship__table tr.is-current td{background:rgba(var(--color-foreground),.05);font-weight:600}
+.b2b-ship__table small{font-weight:400;color:rgba(var(--color-foreground),.7)}
+.b2b-ship__note{margin:.8rem 0 0;color:rgba(var(--color-foreground),.7)}
+
+/* Rejestracja: kraj firmy na początku (30.10.2026) */
+.b2b-register__label{margin:0 0 .4rem;font-size:1.3rem;color:rgba(var(--color-foreground),.75)}
+.b2b-register__country{margin-bottom:1.6rem}
+.b2b-register__country .select__select{font-size:1.6rem;height:4.5rem;padding:0 4rem 0 1.5rem;letter-spacing:.04rem}
+
+/* Wybór „Zaloguj się / Zarejestruj firmę” dla gości (31.10.2026, snippets/b2b-login-choice.liquid) + rejestracja w menu mobilnym */
+.b2b-login-choice { border: 0; padding: 3.2rem 2.8rem 2.8rem; width: min(52rem, calc(100vw - 3.2rem)); background: rgb(var(--color-background)); color: rgb(var(--color-foreground)); box-shadow: 0 1.2rem 4rem rgba(0, 0, 0, 0.18); }
+.b2b-login-choice::backdrop { background: rgba(0, 0, 0, 0.45); }
+.b2b-login-choice__part + .b2b-login-choice__part { margin-top: 2.4rem; padding-top: 2.4rem; border-top: 1px solid rgba(var(--color-foreground), 0.15); }
+.b2b-login-choice__part .h4 { margin: 0 0 0.8rem; }
+.b2b-login-choice__part p:not(.h4) { margin: 0 0 1.6rem; font-size: 1.5rem; line-height: 1.55; }
+.b2b-login-choice__part .button { width: 100%; }
+.b2b-login-choice__close { position: absolute; top: 0.8rem; right: 1rem; background: none; border: 0; font-size: 2.8rem; line-height: 1; cursor: pointer; color: inherit; padding: 0.4rem 0.8rem; }
+.b2b-drawer-register { margin: 0.4rem 3rem 1.6rem; width: calc(100% - 6rem); }
+
+/* Koszyk wg makiety Adriana (31.10.2026): na desktopie pozycje po lewej, karta „Podsumowanie” po prawej (przyklejona),
+   na telefonie karta pod pozycjami. Dwie sekcje (main-cart-items, main-cart-footer) zostają osobno, bo cart.js
+   odświeża je po zmianie ilości — układ w dwóch kolumnach robi grid na <main>. */
+.b2b-sum { text-align: left; }
+.b2b-sum__title { margin: 0 0 1.4rem; }
+.b2b-sum__rows { margin: 0; }
+.b2b-sum__row { display: flex; justify-content: space-between; align-items: baseline; gap: 1.6rem; padding: 0.5rem 0; font-size: 1.45rem; }
+.b2b-sum__row dt { color: rgba(var(--color-foreground), 0.8); display: flex; align-items: center; gap: 0.6rem; line-height: 1.35; }
+.b2b-sum__row dd { margin: 0; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.b2b-sum__row--discount dt, .b2b-sum__row--discount dd { color: #1e5a22; }
+.b2b-sum__row--discount svg { width: 1.3rem; height: 1.3rem; flex: none; }
+.b2b-sum__row--net { margin-top: 0.8rem; padding-top: 1.2rem; border-top: 1px solid rgba(var(--color-foreground), 0.12); }
+.b2b-sum__row--net dt, .b2b-sum__row--net dd { color: rgb(var(--color-foreground)); font-weight: 500; }
+.b2b-sum__row--gross { padding-top: 0.8rem; }
+.b2b-sum__row--gross dt { color: rgb(var(--color-foreground)); font-size: 1.7rem; font-weight: 600; }
+.b2b-sum__row--gross dd { font-size: 2.2rem; font-weight: 600; }
+.b2b-sum .b2b-ship { margin-top: 1.4rem; }
+.cart__footer .cart__blocks { background: rgb(var(--color-background)); border: 1px solid rgba(var(--color-foreground), 0.12); padding: 2.4rem 2.2rem; }
+.cart__footer .js-contents > div { width: 100%; }
+.cart__footer .cart__checkout-button { display: flex; align-items: center; justify-content: center; gap: 1rem; width: 100%; min-height: 5.4rem; border-radius: 0; background: rgb(var(--color-foreground)); color: rgb(var(--color-background)); font-size: 1.6rem; letter-spacing: 0.04em; }
+.cart__footer .cart__checkout-button:disabled { opacity: 0.45; }
+.b2b-sum__arrow { font-size: 1.8rem; line-height: 1; transition: transform 0.2s ease; }
+.cart__checkout-button:not(:disabled):hover .b2b-sum__arrow { transform: translateX(0.4rem); }
+.b2b-sum__trust { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.6rem 2rem; margin: 1.4rem 0 0; font-size: 1.25rem; color: rgba(var(--color-foreground), 0.7); }
+.b2b-sum__trust li { display: flex; align-items: center; gap: 0.6rem; }
+.b2b-sum__trust .svg-wrapper, .b2b-sum__trust svg { width: 1.4rem; height: 1.4rem; }
+.cart__footer .b2b-cart-note { margin-top: 1.6rem; }
+.cart-item__totals .price { white-space: nowrap; }
+@media screen and (max-width: 749px) {
+  .cart__footer .cart__blocks { padding: 2rem 1.6rem; }
+  .cart__footer { padding-top: 1.6rem; }
+}
+@media screen and (min-width: 990px) {
+  #MainContent:has(.b2b-sum) {
+    display: grid; grid-template-columns: minmax(0, 1fr) 40rem; column-gap: 4rem; align-items: start;
+    max-width: var(--page-width); margin: 0 auto; padding: 0 5rem; box-sizing: border-box;
+  }
+  #MainContent:has(.b2b-sum) > .shopify-section { grid-column: 1 / -1; }
+  #MainContent:has(.b2b-sum) > .shopify-section:has(cart-items) { grid-column: 1; grid-row: 1; }
+  #MainContent:has(.b2b-sum) > .cart__footer-wrapper { grid-column: 2; grid-row: 1; position: sticky; top: 9rem; }
+  #MainContent:has(.b2b-sum) > .shopify-section:has(cart-items) .page-width,
+  #MainContent:has(.b2b-sum) > .cart__footer-wrapper .page-width { padding: 0; max-width: none; }
+  #MainContent:has(.b2b-sum) .cart__footer { display: block; padding-top: 3.6rem; }
+  #MainContent:has(.b2b-sum) .cart__footer .cart__blocks { width: 100%; }
+  #MainContent:has(.b2b-sum) .cart__footer-wrapper:last-child { margin-bottom: 0; }
+  #MainContent:has(.b2b-sum) { max-width: 140rem; grid-template-columns: minmax(0, 1fr) 42rem; column-gap: 5.6rem; }
+  #MainContent:has(.b2b-sum) .cart-item__media { width: 11rem; min-width: 11rem; }
+  #MainContent:has(.b2b-sum) .cart-item__image-container { width: 100%; }
+  #MainContent:has(.b2b-sum) .cart-item__quantity { width: 1%; white-space: nowrap; padding-left: 2.4rem; }
+  #MainContent:has(.b2b-sum) .cart-item__totals { white-space: nowrap; padding-left: 2.4rem; }
+}
+.b2b-co__min { margin: 0.2rem 0 0; font-size: 1.25rem; color: rgba(var(--color-foreground), 0.7); }
+
+/* Wybór języka w nagłówku na telefonie/tablecie (01.11.2026) — mała lista „PL ▾” obok ikon */
+.b2b-lang-mobile { display: flex; align-items: center; }
+.b2b-lang-mobile select {
+  appearance: none; -webkit-appearance: none; border: 0; background: transparent; cursor: pointer;
+  font-family: var(--font-heading-family); font-size: 1.3rem; letter-spacing: 0.08em; color: rgb(var(--color-foreground));
+  padding: 0.6rem 1.6rem 0.6rem 0.6rem; min-height: 4.4rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23262626' stroke-width='1.3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 0.3rem center;
+}
+@media screen and (min-width: 990px) { .b2b-lang-mobile { display: none; } }
+/* Rejestracja: błędnie wypełnione pola na czerwono (01.11.2026, lista Adriana pkt 2) */
+.b2b-register .field__input:user-invalid, .b2b-register .field__input.is-invalid, .b2b-register select:user-invalid { box-shadow: 0 0 0 0.15rem #b3261e; }
+.b2b-register .field__input:user-invalid + .field__label, .b2b-register .field__input.is-invalid + .field__label { color: #b3261e; }

@@ -1,0 +1,14 @@
+{
+ "_opis": "Dodatkowy obrót gotowej próbki (stopnie w prawo) po głosowaniu prążków — ustalone z packshotami 23.10.2026 (ściągacz = dół czapki, także wywinięty pas ze wzorem jak w 3099/3100)",
+ "COLORCARD AZ-1748PC": {"*": 180},
+ "COLORCARD AZ-2543PK": {"*": 180},
+ "COLORCARD AZ-2719PC": {"*": 180},
+ "COLORCARD AZ-2836PC": {"*": 180},
+ "COLORCARD AZ-2903PC": {"SET 1": 180},
+ "COLORCARD AZ-2909PK": {"*": 180},
+ "COLORCARD AZ-2912PC": {"*": 180},
+ "COLORCARD AZ-3040PC   AZ-3061PC": {"*": 180},
+ "COLORCARD AZ-3071PK": {"*": 180},
+ "COLORCARD AZ-3099PC": {"*": 180},
+ "COLORCARD AZ-3100PC": {"*": 180}
+}

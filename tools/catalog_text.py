@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Polskie tytuły i opisy produktów z danych arkusza Adriana (od 10.09.2026, arkusz „achti-katalog-v2 (2).xlsx”).
 Tytuł: „Czapka zimowa damska Adela”, „Czapka zimowa męska Adam”, „Czapka zimowa dziewczęca Annie Mini”, „Opaska zimowa damska Sabine”.
-Opis: własny tekst Adriana (kolumna opis) albo szablon; zawsze z listą cech i specyfikacją (kod, materiał, skład, podszycie, rozmiar)."""
+Opis: własny tekst Adriana (kolumna opis) albo szablon; zawsze z listą cech i specyfikacją (kod, skład, podszycie, rozmiar)."""
 import re
 
 SEGMENTS = {  # segment -> (przymiotnik w tytule, fraza „model …” w opisie, tagi płci)
@@ -46,7 +46,8 @@ def title_for(name, segment, kind):
 def body_for(name, segment, kind, mats, size, flags, code, sklad=None, podszycie=None, opis=None):
     who = SEGMENTS[segment][1]
     # bez materiału: „z miękkiej dzianiny” (wcześniej wychodziło „z dzianiny miękkiej dzianiny”, 26.09.2026)
-    z_mat = f"z dzianiny {' i '.join(mats)}" if mats else 'z miękkiej dzianiny'
+    # nazw przędzy (VEZUV, MADERA, VINCI…) nie pokazujemy klientom — decyzja Adriana 20.10.2026
+    z_mat = 'z miękkiej dzianiny'
     lining_phrase, lining_feat = LINING.get(podszycie or '', ('', None))
     size_feat = 'Uniwersalny rozmiar' if size == 'One Size' else f'Rozmiar {size}'
     if kind == 'Komin':
@@ -62,7 +63,10 @@ def body_for(name, segment, kind, mats, size, flags, code, sklad=None, podszycie
         if 'MULTI' in flags: feats.insert(1, 'Wielokolorowy wzór')
         if 'BEZ POMPONA' in flags: feats.insert(1, 'Wersja bez pompona')
     if lining_feat: feats.insert(-2, lining_feat)
-    if opis:
+    if isinstance(opis, list):
+        # gotowe akapity (opisy_ai.py: pogrubione zdanie wstępne + 2 akapity)
+        head = ''.join(f'<p>{x}</p>' for x in opis)
+    elif opis:
         # własny opis Adriana: pierwsze zdanie jako akapit wstępny (motyw pokazuje pierwszy akapit nad „Opis i specyfikacja”)
         txt = ' '.join(str(opis).split())
         m = re.match(r'(.+?[.!?])\s+(.+)$', txt)
@@ -70,7 +74,7 @@ def body_for(name, segment, kind, mats, size, flags, code, sklad=None, podszycie
         head = ''.join(f'<p>{x}</p>' for x in paras)
     else:
         head = f"<p>{intro}</p><p>Model {name} stanowi dobre uzupełnienie oferty sklepów odzieżowych, butików oraz punktów sprzedaży akcesoriów zimowych.</p>"
-    spec = [f"Model: {name}", f"Kod: {code}", "Materiał: " + (', '.join(mats) or 'do uzupełnienia')]
+    spec = [f"Model: {name}", f"Kod: {code}"]
     if sklad: spec.append("Skład: " + sklad)
     if podszycie: spec.append("Podszycie: " + podszycie)
     spec += ["Rozmiar: " + size, "Sezon: jesień / zima"]

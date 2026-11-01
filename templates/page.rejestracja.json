@@ -3,6 +3,7 @@
     "main": {
       "type": "b2b-register",
       "settings": {
+        "auto_url": "https://achti-rejestracja.achti.workers.dev/",
         "padding_top": 36,
         "padding_bottom": 36
       }

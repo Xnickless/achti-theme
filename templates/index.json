@@ -291,7 +291,7 @@
       "type": "newsletter-popup",
       "settings": {
         "enable": true,
-        "delay_seconds": 4,
+        "delay_seconds": 60,
         "days_hidden": 14,
         "eyebrow": "Newsletter B2B",
         "heading": "−15% na pierwsze zamówienie",

@@ -1,0 +1,412 @@
+{
+ "COLORCARD AZ-1356PC   AZ-1538PC   AZ-1505PC   AZ-1483PC": {
+  "SET 12": 180,
+  "SET 39": 180,
+  "SET 11": 180,
+  "SET 14": 180,
+  "SET 29": 270,
+  "SET 7": 180,
+  "SET 4": 270,
+  "SET 5": 180,
+  "SET 62": 180,
+  "SET 60": 180,
+  "SET 2": 180,
+  "SET 49": 180,
+  "SET 61": 180,
+  "SET 50": 180,
+  "SET 51": 90,
+  "SET 47": 270,
+  "SET 53": 180,
+  "SET 46": 270,
+  "SET 56": 180,
+  "SET 9": 270,
+  "SET 43": 180,
+  "SET 40": 180,
+  "SET 54": 180,
+  "SET 27": 180,
+  "SET 26": 180,
+  "SET 32": 270,
+  "SET 18": 180,
+  "SET 24": 270,
+  "SET 30": 180,
+  "SET 31": 180,
+  "SET 25": 180,
+  "SET 19": 270,
+  "SET 21": 270,
+  "SET 35": 180,
+  "SET 20": 180,
+  "SET 36": 180,
+  "SET 22": 270,
+  "SET 23": 180,
+  "SET 37": 270
+ },
+ "COLORCARD AZ-1622PC   AZ-2088PC": {
+  "SET 12": 90,
+  "SET 13": 270,
+  "SET 11": 90,
+  "SET 10": 270,
+  "SET 14": 270,
+  "SET 17": 90,
+  "SET 16": 270,
+  "SET 6": 90,
+  "SET 4": 90,
+  "SET 8": 90,
+  "SET 9": 90,
+  "SET 26": 90,
+  "SET 18": 270,
+  "SET 25": 90,
+  "SET 21": 90,
+  "SET 20": 90,
+  "SET 23": 90
+ },
+ "COLORCARD AZ-1748PC": {
+  "SET 12": 180,
+  "SET 13": 180,
+  "SET 11": 180,
+  "SET 14": 180,
+  "SET 15": 180,
+  "SET 16": 180
+ },
+ "COLORCARD AZ-1820PC": {
+  "SET 10": 180,
+  "SET 14": 180,
+  "SET 17": 180,
+  "SET 18": 180,
+  "SET 19": 180
+ },
+ "COLORCARD AZ-1876PC": {
+  "SET 13": 180,
+  "SET 10": 180,
+  "SET 15": 180,
+  "SET 7": 90,
+  "SET 6": 270,
+  "SET 5": 180,
+  "SET 2": 180,
+  "SET 8": 90,
+  "SET 25": 270,
+  "SET 20": 270,
+  "SET 23": 270
+ },
+ "COLORCARD AZ-2018PC": {
+  "SET 12": 270,
+  "SET 13": 270,
+  "SET 15": 270,
+  "SET 16": 270,
+  "SET 7": 180,
+  "SET 4": 90,
+  "SET 5": 270,
+  "SET 1": 270,
+  "SET 2": 90,
+  "SET 3": 180,
+  "SET 8": 90,
+  "SET 9": 270,
+  "SET 19": 90,
+  "SET 20": 90
+ },
+ "COLORCARD AZ-2344PC": {
+  "SET 5": 180,
+  "SET 2": 180,
+  "SET 26": 180,
+  "SET 20": 180,
+  "SET 22": 180
+ },
+ "COLORCARD AZ-2541PK": {
+  "SET 11": 180,
+  "SET 10": 270,
+  "SET 15": 90,
+  "SET 6": 180,
+  "SET 2": 90
+ },
+ "COLORCARD AZ-2542PK": {
+  "SET 7": 180
+ },
+ "COLORCARD AZ-2554PK (1)": {
+  "SET 7": 180
+ },
+ "COLORCARD AZ-2555PK": {
+  "SET 11": 270,
+  "SET 14": 270,
+  "SET 2": 90,
+  "SET 3": 90
+ },
+ "COLORCARD AZ-2669PC": {
+  "SET 8": 90
+ },
+ "COLORCARD AZ-2670PC": {
+  "SET 17": 180,
+  "SET 4": 90,
+  "SET 8": 90,
+  "SET 24": 90,
+  "SET 23": 180
+ },
+ "COLORCARD AZ-2707PC   AZ-2706PC   AZ-2738PC": {
+  "SET 12": 180,
+  "SET 13": 90,
+  "SET 7": 90,
+  "SET 4": 90,
+  "SET 5": 90,
+  "SET 3": 90
+ },
+ "COLORCARD AZ-2753PC": {
+  "SET 13": 270,
+  "SET 15": 270,
+  "SET 6": 270,
+  "SET 4": 90,
+  "SET 5": 180
+ },
+ "COLORCARD AZ-2808PC": {
+  "SET 11": 270,
+  "SET 3": 270,
+  "SET 9": 270
+ },
+ "COLORCARD AZ-2812PC": {
+  "SET 12": 180,
+  "SET 13": 180,
+  "SET 11": 270,
+  "SET 28": 180,
+  "SET 17": 180,
+  "SET 6": 270,
+  "SET 4": 90,
+  "SET 5": 270,
+  "SET 1": 180,
+  "SET 2": 180,
+  "SET 3": 180,
+  "SET 8": 270,
+  "SET 9": 270,
+  "SET 27": 90,
+  "SET 26": 180,
+  "SET 18": 270,
+  "SET 24": 270,
+  "SET 25": 180,
+  "SET 21": 180,
+  "SET 20": 270,
+  "SET 22": 180,
+  "SET 23": 270
+ },
+ "COLORCARD AZ-2814PC": {
+  "SET 13": 270,
+  "SET 11": 270,
+  "SET 10": 270,
+  "SET 14": 270,
+  "SET 28": 180,
+  "SET 29": 90,
+  "SET 15": 270,
+  "SET 6": 180,
+  "SET 5": 180,
+  "SET 3": 180,
+  "SET 26": 270,
+  "SET 18": 270,
+  "SET 24": 90,
+  "SET 19": 270,
+  "SET 22": 180,
+  "SET 23": 180
+ },
+ "COLORCARD AZ-2827PC": {
+  "SET 7": 180,
+  "SET 5": 180,
+  "SET 1": 180,
+  "SET 2": 180,
+  "SET 3": 180,
+  "SET 8": 180
+ },
+ "COLORCARD AZ-2829PC   AZ-2830PC": {
+  "SET 12": 90,
+  "SET 13": 270,
+  "SET 11": 270,
+  "SET 10": 90,
+  "SET 16": 90
+ },
+ "COLORCARD AZ-2831PC": {
+  "SET 12": 270,
+  "SET 13": 270,
+  "SET 11": 270,
+  "SET 10": 270,
+  "SET 4": 90
+ },
+ "COLORCARD AZ-2836PC": {
+  "SET 12": 180,
+  "SET 13": 180,
+  "SET 14": 180,
+  "SET 7": 180,
+  "SET 4": 180,
+  "SET 1": 180,
+  "SET 2": 180,
+  "SET 3": 180,
+  "SET 8": 180,
+  "SET 9": 180
+ },
+ "COLORCARD AZ-2902PC": {
+  "SET 12": 180,
+  "SET 11": 180,
+  "SET 1": 180,
+  "SET 2": 180
+ },
+ "COLORCARD AZ-2903PC": {
+  "SET 7": 90,
+  "SET 6": 90,
+  "SET 4": 180
+ },
+ "COLORCARD AZ-2907PC": {
+  "SET 10": 180,
+  "SET 6": 180,
+  "SET 1": 90,
+  "SET 3": 180,
+  "SET 8": 180
+ },
+ "COLORCARD AZ-2908PC": {
+  "SET 11": 180,
+  "SET 10": 270,
+  "SET 7": 180,
+  "SET 6": 180,
+  "SET 4": 180,
+  "SET 5": 180,
+  "SET 1": 180,
+  "SET 2": 180,
+  "SET 3": 180,
+  "SET 8": 180,
+  "SET 9": 180
+ },
+ "COLORCARD AZ-2912PC": {
+  "SET 2": 270
+ },
+ "COLORCARD AZ-2913PC   AZ-3067PC": {
+  "SET 17": 180
+ },
+ "COLORCARD AZ-2915PC": {
+  "SET 12": 180,
+  "SET 13": 180,
+  "SET 11": 180,
+  "SET 15": 180,
+  "SET 17": 180,
+  "SET 16": 180,
+  "SET 6": 180,
+  "SET 1": 180,
+  "SET 2": 180,
+  "SET 3": 180
+ },
+ "COLORCARD AZ-2917PC": {
+  "SET 7": 180
+ },
+ "COLORCARD AZ-2932D (1)": {
+  "SET 7": 90
+ },
+ "COLORCARD AZ-2941PC": {
+  "SET 13": 180,
+  "SET 15": 180,
+  "SET 7": 180,
+  "SET 6": 90,
+  "SET 4": 180,
+  "SET 2": 180,
+  "SET 3": 180
+ },
+ "COLORCARD AZ-2964PC": {
+  "SET 12": 180,
+  "SET 1": 180,
+  "SET 2": 180,
+  "SET 3": 180
+ },
+ "COLORCARD AZ-2977PC": {
+  "SET 7": 180,
+  "SET 6": 180,
+  "SET 4": 180,
+  "SET 5": 180,
+  "SET 1": 180
+ },
+ "COLORCARD AZ-2985PC   AZ-3074PC": {
+  "SET 13": 180,
+  "SET 16": 270,
+  "SET 6": 90,
+  "SET 4": 270,
+  "SET 9": 180
+ },
+ "COLORCARD AZ-3006PC": {
+  "SET 6": 270,
+  "SET 4": 180,
+  "SET 2": 90
+ },
+ "COLORCARD AZ-3019PC   AZ-3020PC   AZ-3034PC": {
+  "SET 6": 180,
+  "SET 5": 180,
+  "SET 3": 180,
+  "SET 8": 180
+ },
+ "COLORCARD AZ-3022PC": {
+  "SET 6": 180
+ },
+ "COLORCARD AZ-3037PC": {
+  "SET 17": 180,
+  "SET 7": 180,
+  "SET 6": 180,
+  "SET 4": 270,
+  "SET 5": 270,
+  "SET 3": 90,
+  "SET 9": 180
+ },
+ "COLORCARD AZ-3038PC": {
+  "SET 12": 180,
+  "SET 11": 270,
+  "SET 10": 270,
+  "SET 7": 270,
+  "SET 6": 180,
+  "SET 4": 270,
+  "SET 5": 270,
+  "SET 1": 270,
+  "SET 2": 270,
+  "SET 3": 270,
+  "SET 9": 180
+ },
+ "COLORCARD AZ-3040PC   AZ-3061PC": {
+  "SET 12": 270,
+  "SET 13": 180,
+  "SET 11": 180,
+  "SET 10": 180,
+  "SET 14": 90,
+  "SET 7": 180,
+  "SET 6": 180,
+  "SET 4": 180,
+  "SET 5": 180,
+  "SET 1": 180,
+  "SET 2": 180,
+  "SET 3": 180,
+  "SET 9": 180
+ },
+ "COLORCARD AZ-3071PK": {
+  "SET 7": 180,
+  "SET 5": 180
+ },
+ "COLORCARD AZ-3072PK": {
+  "SET 5": 180,
+  "SET 2": 90,
+  "SET 3": 270
+ },
+ "COLORCARD AZ-3079PC": {
+  "SET 9": 90
+ },
+ "COLORCARD AZ-3083PC": {
+  "SET 11": 90,
+  "SET 16": 90,
+  "SET 6": 90
+ },
+ "COLORCARD AZ-3084PC": {
+  "SET 17": 180,
+  "SET 16": 180
+ },
+ "COLORCARD AZ-3092PC": {
+  "SET 2": 180
+ },
+ "COLORCARD AZ-3096PC": {
+  "SET 1": 90,
+  "SET 8": 180
+ },
+ "COLORCARD AZ-3098PC": {
+  "SET 3": 180
+ },
+ "COLORCARD AZ-3099PC": {
+  "SET 12": 270
+ },
+ "COLORCARD AZ-3100PC": {
+  "SET 7": 270,
+  "SET 8": 270,
+  "SET 9": 270
+ }
+}

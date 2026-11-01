@@ -227,8 +227,12 @@ def mapowanie(uzupelnij=True):
     for g, kody in GRUPY.items():
         for k in kody.split():
             out.setdefault(k.upper(), g)
-    if not uzupelnij: return out
     prods = json.load(open(os.path.join(HERE, 'achti-produkty.json'), encoding='utf-8'))
+    # 12.10.2026: produkty dla dorosłych z folderu „dzieci” Adriana (np. AZ-2884PC, AZ-1476PC) — bez wizerunków dzieci
+    dorosle = {p['code'].upper() for p in prods if p.get('segment') not in ('Dziecięca', 'Dziewczęca', 'Chłopięca')}
+    for k in [k for k, g in out.items() if g == 'dzieci' and k in dorosle]:
+        out[k] = 'old_money'
+    if not uzupelnij: return out
     znane = {k: g for k, g in out.items()}
     for p in prods:
         kod = p['code'].upper()

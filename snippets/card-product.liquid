@@ -37,6 +37,11 @@
     endif
   endfor
   assign card_sku = card_product.selected_or_first_available_variant.sku
+  # Achti: produkt z kolornikiem — na kafelku kod modelu bez sufiksu koloru (SKU wariantu = <kod>-<kolor>)
+  if card_product.metafields.custom.kolornik != blank and card_sku != blank
+    assign card_color_suffix = '-' | append: card_product.selected_or_first_available_variant.option1 | remove: ' '
+    assign card_sku = card_sku | remove_last: card_color_suffix
+  endif
 -%}
 {%- unless skip_styles -%}
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
@@ -122,6 +127,9 @@
                     width="{{ card_product.media[1].width }}"
                     height="{{ card_product.media[1].height }}"
                   >
+                  {%- if card_product.media[1].alt contains 'na modelce' -%}
+                    <span class="b2b-ai-label b2b-ai-label--card" title="{{ 'b2b.ai_photo' | t | escape }}" role="img" aria-label="{{ 'b2b.ai_photo' | t | escape }}">AI</span>
+                  {%- endif -%}
                 {%- endif -%}
               </div>
             </div>

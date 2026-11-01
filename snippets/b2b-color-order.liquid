@@ -1,0 +1,107 @@
+{% doc %}
+  Zamówienie wielu kolorów naraz (produkty z kolornikiem, metapole custom.kolornik):
+  siatka kółek z kart kolorów Adriana, pod każdym pole ilości, na dole suma i jeden przycisk „Dodaj do koszyka”.
+  Kółko = plik kolor-<kolornik>-<kolor>.jpg z Shopify → Pliki (wgrywa tools/colorcards/set_warianty.py).
+  Karty modeli (kolornik az-…) od 23.10.2026 = cała próbka wycięta z tła → kwadrat z całą próbką zamiast kółka.
+  Goście bez dostępu do cen widzą same kółka i bramę B2B. Kolor z metapolem wariantu custom.niedostepny = true
+  (albo niedostępny w Shopify) jest wyszarzony, bez pola ilości.
+
+  @param {object} product - produkt
+  @param {string} section_id - id sekcji main-product
+  @param {boolean} b2b_access - czy klient widzi ceny i może zamawiać
+
+  @example
+  {% render 'b2b-color-order', product: product, section_id: section.id, b2b_access: b2b_access %}
+{% enddoc %}
+{%- liquid
+  assign kolornik = product.metafields.custom.kolornik.value | handleize
+  assign colors_count = product.variants.size
+-%}
+<script src="{{ 'b2b-color-order.js' | asset_url }}" defer="defer"></script>
+<b2b-color-order class="b2b-co b2b-co--list{% if kolornik contains 'az-' %} b2b-co--probka{% endif %}" data-section-id="{{ section_id }}">
+  <p class="b2b-co__heading form__label">
+    {%- if b2b_access -%}
+      {{- 'b2b.color_order.heading' | t: count: colors_count -}}
+    {%- else -%}
+      {{- 'b2b.color_order.heading_guest' | t: count: colors_count -}}
+    {%- endif -%}
+  </p>
+  <div class="b2b-co__listwrap">
+  <ul class="b2b-co__grid" role="list">
+    {%- for variant in product.variants -%}
+      {%- liquid
+        assign swatch_file = 'kolor-' | append: kolornik | append: '-' | append: variant.option1 | handleize | append: '.jpg'
+        assign swatch_url = swatch_file | file_url
+        assign input_id = 'b2b-co-' | append: section_id | append: '-' | append: variant.id
+        # kolor wyłączony ręcznie (metapole wariantu custom.niedostepny, np. brak przędzy) albo brak stanu w Shopify
+        assign color_off = false
+        if variant.available == false or variant.metafields.custom.niedostepny.value == true
+          assign color_off = true
+        endif
+      -%}
+      <li class="b2b-co__item{% if color_off %} is-off{% endif %}">
+        <label class="b2b-co__swatch" for="{{ input_id }}" title="{{ variant.option1 | escape }}">
+          <span class="b2b-co__circle" style="background-image: url('{{ swatch_url }}');"></span>
+          <span class="b2b-co__zoom" style="background-image: url('{{ swatch_url }}');" aria-hidden="true"></span>
+          <span class="b2b-co__name">{{ variant.option1 | escape }}</span>
+        </label>
+        {%- if color_off -%}
+          <span class="b2b-co__off">{{ 'b2b.color_order.unavailable' | t }}</span>
+        {%- elsif b2b_access -%}
+          <div class="b2b-co__qty">
+            <button type="button" class="b2b-co__step" data-step="-1" aria-label="{{ 'b2b.color_order.decrease' | t: color: variant.option1 | escape }}" tabindex="-1">−</button>
+            <input
+              id="{{ input_id }}"
+              class="b2b-co__input"
+              type="number"
+              inputmode="numeric"
+              min="0"
+              data-min="2"
+              step="1"
+              value="0"
+              data-variant-id="{{ variant.id }}"
+              data-price="{{ variant.price }}"
+              aria-label="{{ 'b2b.color_order.quantity' | t: color: variant.option1 | escape }}"
+            >
+            <button type="button" class="b2b-co__step" data-step="1" aria-label="{{ 'b2b.color_order.increase' | t: color: variant.option1 | escape }}" tabindex="-1">+</button>
+          </div>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+  <div class="b2b-co__bar" data-bar hidden>
+    <button type="button" class="b2b-co__bar-btn" data-bar-step="-1" aria-label="{{ 'b2b.color_order.scroll_up' | t }}">▲</button>
+    <div class="b2b-co__bar-track" data-bar-track><span class="b2b-co__bar-thumb" data-bar-thumb></span></div>
+    <button type="button" class="b2b-co__bar-btn" data-bar-step="1" aria-label="{{ 'b2b.color_order.scroll_down' | t }}">▼</button>
+  </div>
+  </div>
+  {%- if b2b_access -%}
+    <div class="b2b-co__footer">
+      <p class="b2b-co__total" data-total aria-live="polite">{{ 'b2b.color_order.empty' | t }}</p>
+      <p class="b2b-co__min">{{ 'b2b.color_order.min_per_color' | t }}</p>
+      <p class="b2b-co__value" data-value hidden></p>
+      <button type="button" class="button button--full-width b2b-co__add" data-add disabled>
+        {{- 'products.product.add_to_cart' | t -}}
+      </button>
+      <p class="b2b-co__msg" data-msg role="status" hidden></p>
+    </div>
+    <script type="application/json" data-b2b-co-i18n>
+      {
+        "empty": {{ 'b2b.color_order.empty' | t | json }},
+        "total": {{ 'b2b.color_order.total' | t: count: '__N__', colors: '__C__' | json }},
+        "added": {{ 'b2b.color_order.added' | t: count: '__N__' | json }},
+        "error": {{ 'b2b.color_order.error' | t | json }},
+        "value": {{ 'b2b.color_order.value' | t: amount: '__A__' | json }},
+        "discount": {{ 'b2b.color_order.discount' | t: percent: '__P__', amount: '__A__' | json }},
+        "next": {{ 'b2b.color_order.next_tier' | t: count: '__N__', percent: '__P__' | json }},
+        "currency": {{ cart.currency.iso_code | json }},
+        "locale": {{ request.locale.iso_code | json }},
+        "cartCount": {{ cart.item_count | json }},
+        {%- comment -%} 30.10.2026: progi = rabaty automatyczne w Shopify (Rabaty → „Rabat ilościowy −X%”); przy zmianie progów poprawić też tutaj {%- endcomment -%}
+        "tiers": [[500,1],[1000,2],[2000,3],[3000,4],[5000,6],[6000,7],[7000,8],[8000,9],[9000,10]]
+      }
+    </script>
+  {%- else -%}
+    {%- render 'b2b-gate', style: 'box' -%}
+  {%- endif -%}
+</b2b-color-order>

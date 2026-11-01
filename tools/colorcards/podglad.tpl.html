@@ -1,0 +1,79 @@
+<title>Kolory z kolorników Achti</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Jost:wght@400;500&display=swap">
+<style>
+/* układ: wąski nagłówek ze stanem prac, wyszukiwarka, potem karta po karcie — siatka kółek jak na karcie produktu */
+:root {
+  --bg: #fbfaf9; --surface: #f2f1ef; --fg: #262626; --muted: #6f6a64; --line: #e3dfda; --accent: #8a7766; --warn: #9a5b1e;
+  --display: "Tenor Sans", Georgia, serif; --body: "Jost", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #1b1a19; --surface: #252321; --fg: #ece8e3; --muted: #a59e96; --line: #36332f; --accent: #c9b29c; --warn: #e0a463; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #1b1a19; --surface: #252321; --fg: #ece8e3; --muted: #a59e96; --line: #36332f; --accent: #c9b29c; --warn: #e0a463; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 400 15px/1.5 var(--body); }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 32px 20px 64px; }
+h1 { font: 400 clamp(26px, 4vw, 38px)/1.15 var(--display); margin: 0 0 8px; letter-spacing: .01em; text-wrap: balance; }
+.lead { color: var(--muted); max-width: 68ch; margin: 0 0 20px; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 0 0 24px; padding: 14px 0; border-block: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.stats div { display: grid; }
+.stats b { font: 400 24px/1.1 var(--display); }
+.stats span { color: var(--muted); font-size: 13px; }
+.note { color: var(--muted); font-size: 14px; margin: 0 0 20px; }
+.tools { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; background: var(--bg); padding: 10px 0; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.tools input { flex: 1 1 260px; min-width: 0; font: inherit; padding: 9px 12px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 0; }
+.tools input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.tools button { font: 500 13px var(--body); letter-spacing: .04em; text-transform: uppercase; padding: 9px 12px; border: 1px solid var(--line); background: transparent; color: var(--fg); cursor: pointer; }
+.tools button[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.tools button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+section { padding: 26px 0; border-bottom: 1px solid var(--line); }
+section header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
+h2 { font: 400 20px/1.2 var(--display); margin: 0; letter-spacing: .02em; }
+.n { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
+.who { margin: 6px 0 14px; font-size: 14px; color: var(--muted); max-width: 90ch; }
+.who b { color: var(--fg); font-weight: 500; }
+.warn { margin: -6px 0 14px; font-size: 14px; color: var(--warn); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(76px, 1fr)); gap: 14px 10px; }
+figure { margin: 0; display: grid; justify-items: center; gap: 4px; min-width: 0; }
+figure img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); background: var(--surface); }
+figcaption { font-size: 12px; color: var(--muted); text-align: center; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.empty { color: var(--muted); padding: 24px 0; }
+</style>
+
+<div class="wrap">
+  <h1>Kolory z kolorników</h1>
+  <p class="lead">Każde kółko to wycinek ze zdjęcia karty kolorów Adriana. W sklepie staną się wariantami „Kolor” przy czapkach przypisanych do danej karty. Klient wybiera kolor i ilość, a w koszyku widać, ile sztuk którego koloru zamówił.</p>
+  <div class="stats">
+    <div><b>{{TOTAL}}</b><span>kolorów wyciętych</span></div>
+    <div><b>{{CARDS}}</b><span>kart</span></div>
+    <div><b>{{WITH}}</b><span>czapek z przypisaną kartą</span></div>
+    <div><b>{{ASK}}</b><span>czapek do wyjaśnienia</span></div>
+    <div><b>{{ONE}}</b><span>czapek w jednym kolorze</span></div>
+  </div>
+  <p class="note">Brakuje jeszcze kart (są na Drive, czekają na pobranie): {{MISSING}}.</p>
+  <div class="tools" role="search">
+    <label for="q" class="visually-hidden" hidden>Szukaj</label>
+    <input id="q" type="search" placeholder="Szukaj karty albo kodu czapki, np. AZ-3102 lub VEZUV" autocomplete="off">
+    <button type="button" data-f="all" aria-pressed="true">Wszystkie</button>
+    <button type="button" data-f="karta" aria-pressed="false">Karty modeli</button>
+    <button type="button" data-f="paleta" aria-pressed="false">Palety przędzy</button>
+  </div>
+  <div id="list">
+{{SECTIONS}}
+  </div>
+  <p class="empty" id="empty" hidden>Nic nie pasuje do wyszukiwania.</p>
+</div>
+
+<script>
+(() => {
+  const q = document.getElementById('q'), secs = [...document.querySelectorAll('#list section')], empty = document.getElementById('empty');
+  let f = 'all';
+  function run() {
+    const t = q.value.trim().toLowerCase(); let shown = 0;
+    secs.forEach(s => { const ok = (f === 'all' || s.classList.contains(f)) && (!t || s.dataset.q.includes(t)); s.hidden = !ok; shown += ok; });
+    empty.hidden = shown > 0;
+  }
+  q.addEventListener('input', run);
+  document.querySelectorAll('[data-f]').forEach(b => b.addEventListener('click', () => {
+    f = b.dataset.f; document.querySelectorAll('[data-f]').forEach(x => x.setAttribute('aria-pressed', x === b)); run();
+  }));
+})();
+</script>

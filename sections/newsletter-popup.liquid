@@ -16,7 +16,7 @@
   <newsletter-popup
     id="{{ popup_id }}"
     class="newsletter-popup"
-    data-delay="{{ section.settings.delay_seconds | default: 4 }}"
+    data-delay="{{ section.settings.delay_seconds | default: 60 }}"
     data-days="{{ section.settings.days_hidden | default: 14 }}"
     data-section-id="{{ section.id }}"
     hidden
@@ -233,7 +233,7 @@
   "class": "section-newsletter-popup",
   "settings": [
     { "type": "checkbox", "id": "enable", "default": true, "label": "Włącz popup" },
-    { "type": "range", "id": "delay_seconds", "min": 0, "max": 30, "step": 1, "unit": "s", "default": 4, "label": "Opóźnienie po wejściu" },
+    { "type": "range", "id": "delay_seconds", "min": 0, "max": 180, "step": 5, "unit": "s", "default": 60, "label": "Opóźnienie po wejściu" },
     { "type": "range", "id": "days_hidden", "min": 1, "max": 90, "step": 1, "unit": "dni", "default": 14, "label": "Nie pokazuj ponownie przez" },
     { "type": "text", "id": "eyebrow", "default": "Newsletter B2B", "label": "Nadtytuł" },
     { "type": "inline_richtext", "id": "heading", "default": "Bądź na bieżąco z nowymi kolekcjami", "label": "Nagłówek" },

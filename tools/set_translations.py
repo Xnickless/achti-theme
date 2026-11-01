@@ -51,6 +51,12 @@ def do_products(loc, data):
             if s: sku_to_id[s] = p['id']
         if not r['products']['pageInfo']['hasNextPage']: break
         cursor = r['products']['pageInfo']['endCursor']
+    # warianty kolorów mają SKU <kod>-<kolor> (AZ-3102PC-SET1) — dopasowanie do najdłuższego kodu modelu
+    codes = sorted((c.upper() for c in trs), key=len, reverse=True)
+    for s, pid in list(sku_to_id.items()):
+        base = next((c for c in codes if s.startswith(c + '-')), None)
+        if base and base not in sku_to_id:
+            sku_to_id[base] = pid
     nodes = {n['resourceId']: n for n in translatable('PRODUCT')}
     n_ok = 0
     for code, tr in trs.items():

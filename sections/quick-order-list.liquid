@@ -30,7 +30,8 @@
   }
 {%- endstyle -%}
 
-{%- if b2b_access -%}
+{%- comment -%} Achti: produkty z kolornikiem mają siatkę kolorów z ilościami w main-product (b2b-color-order) {%- endcomment -%}
+{%- if b2b_access and product.metafields.custom.kolornik == blank -%}
 {% render 'quick-order-list',
   product: product,
   show_image: section.settings.show_image,

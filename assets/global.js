@@ -254,6 +254,9 @@ class QuantityInput extends HTMLElement {
       }
     } else {
       this.input.stepDown();
+      // 01.11.2026 (Achti, min. 2 szt. na kolor): poniżej minimum minus zeruje (= usuń), zamiast błędu „minimum 2”
+      const v = parseInt(this.input.value);
+      if (v > 0 && v < parseInt(this.input.dataset.min)) this.input.value = 0;
     }
 
     if (previousValue !== this.input.value) this.input.dispatchEvent(this.changeEvent);
@@ -1386,7 +1389,7 @@ class BulkAdd extends HTMLElement {
     const inputValue = parseInt(event.target.value);
     const index = event.target.dataset.index;
 
-    if (inputValue < event.target.dataset.min) {
+    if (inputValue > 0 && inputValue < event.target.dataset.min) {
       this.setValidity(event, index, window.quickOrderListStrings.min_error.replace('[min]', event.target.dataset.min));
     } else if (inputValue > parseInt(event.target.max)) {
       this.setValidity(event, index, window.quickOrderListStrings.max_error.replace('[max]', event.target.max));

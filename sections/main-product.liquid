@@ -240,7 +240,15 @@
                     {{ block.shopify_attributes }}
                   >
                     <span class="visually-hidden">{{ 'products.product.sku' | t }}:</span>
-                    {{- product.selected_or_first_available_variant.sku -}}
+                    {%- liquid
+                      # Achti: produkt z kolornikiem = kod modelu bez sufiksu koloru (SKU wariantu = <kod>-<kolor>)
+                      assign shown_sku = product.selected_or_first_available_variant.sku
+                      if product.metafields.custom.kolornik != blank
+                        assign color_suffix = '-' | append: product.selected_or_first_available_variant.option1 | remove: ' '
+                        assign shown_sku = shown_sku | remove_last: color_suffix
+                      endif
+                    -%}
+                    {{- shown_sku -}}
                   </p>
                 {%- when 'custom_liquid' -%}
                   {{ block.settings.custom_liquid }}
@@ -277,13 +285,24 @@
                       <span class="product__producer-label">{{ block.settings.label | default: 'Producent' | escape }}:</span>
                       <span class="product__producer-value">
                         {{ settings.producer_name | escape }}{% if settings.producer_address != blank %}, {{ settings.producer_address | escape }}{% endif %}{% if settings.producer_email != blank %}, <a href="mailto:{{ settings.producer_email | escape }}">{{ settings.producer_email | escape }}</a>{% endif %}{% if block.settings.show_phone and settings.producer_phone != blank %}, {{ settings.producer_phone | escape }}{% endif %}
-                        {%- if block.settings.show_sku and product.selected_or_first_available_variant.sku != blank %} · {{ 'b2b.producer.model' | t }}: {{ product.selected_or_first_available_variant.sku | escape }}{% endif -%}
+                        {%- if block.settings.show_sku and product.selected_or_first_available_variant.sku != blank -%}
+                          {%- liquid
+                            # Achti: przy kolorach z kolornika SKU wariantu = <kod>-<kolor>; model to sam kod
+                            assign model_sku = product.selected_or_first_available_variant.sku
+                            if product.metafields.custom.kolornik != blank
+                              assign color_suffix = '-' | append: product.selected_or_first_available_variant.option1 | remove: ' '
+                              assign model_sku = model_sku | remove_last: color_suffix
+                            endif
+                          -%}
+                          {{ ' · ' }}{{ 'b2b.producer.model' | t }}: {{ model_sku | escape }}
+                        {%- endif -%}
                       </span>
                     </div>
                   {%- endif -%}
                 {%- when 'model_colors' -%}
                   {%- assign model_colors = product.metafields.custom.inne_kolory.value -%}
-                  {%- if model_colors and model_colors.size > 0 -%}
+                  {%- comment -%} Achti: przy kolorach z kolornika stare kółka „Inne kolory tego modelu” znikają {%- endcomment -%}
+                  {%- if model_colors and model_colors.size > 0 and product.metafields.custom.kolornik == blank -%}
                     <div class="model-colors quick-add-hidden" {{ block.shopify_attributes }}>
                       {%- if block.settings.heading != blank -%}
                         <p class="model-colors__label form__label">{{ block.settings.heading | escape }}</p>
@@ -311,7 +330,7 @@
                     </div>
                   {%- endif -%}
                 {%- when 'quantity_selector' -%}
-                  {%- if b2b_access -%}
+                  {%- if b2b_access and product.metafields.custom.kolornik == blank or b2b_access and product.has_only_default_variant -%}
                   <div
                     id="Quantity-Form-{{ section.id }}"
                     class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
@@ -361,14 +380,14 @@
                           name="quantity"
                           id="Quantity-{{ section.id }}"
                           data-cart-quantity="{{ cart_qty }}"
-                          data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                          min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                          data-min="{{ product.selected_or_first_available_variant.quantity_rule.min | at_least: 2 }}"
+                          min="{{ product.selected_or_first_available_variant.quantity_rule.min | at_least: 2 }}"
                           {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
                             data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
                             max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
                           {% endif %}
                           step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
-                          value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                          value="{{ product.selected_or_first_available_variant.quantity_rule.min | at_least: 2 }}"
                           form="{{ product_form_id }}"
                         >
                         <button class="quantity__button" name="plus" type="button">
@@ -570,19 +589,37 @@
                     surface: 'product_page'
                   -%}
                 {%- when 'variant_picker' -%}
-                  {% render 'product-variant-picker',
-                    product: product,
-                    block: block,
-                    product_form_id: product_form_id
-                  %}
+                  {%- if product.metafields.custom.kolornik != blank and product.has_only_default_variant == false -%}
+                    {%- comment -%} Achti: kolory z kolornika — ilości przy każdym kółku, jeden przycisk {%- endcomment -%}
+                    {% render 'b2b-color-order', product: product, section_id: section.id, b2b_access: b2b_access %}
+                  {%- else -%}
+                    {% render 'product-variant-picker',
+                      product: product,
+                      block: block,
+                      product_form_id: product_form_id
+                    %}
+                  {%- endif -%}
                 {%- when 'buy_buttons' -%}
-                  {%- render 'buy-buttons',
-                    block: block,
-                    product: product,
-                    product_form_id: product_form_id,
-                    section_id: section.id,
-                    show_pickup_availability: true
-                  -%}
+                  {%- if product.metafields.custom.kolornik == blank or product.has_only_default_variant -%}
+                    {%- render 'buy-buttons',
+                      block: block,
+                      product: product,
+                      product_form_id: product_form_id,
+                      section_id: section.id,
+                      show_pickup_availability: true
+                    -%}
+                  {%- else -%}
+                    {%- comment -%} formularz Trade zostaje ukryty: wariant i id potrzebne skryptom strony {%- endcomment -%}
+                    <div hidden>
+                      {%- render 'buy-buttons',
+                        block: block,
+                        product: product,
+                        product_form_id: product_form_id,
+                        section_id: section.id,
+                        show_pickup_availability: false
+                      -%}
+                    </div>
+                  {%- endif -%}
                 {%- when 'rating' -%}
                   {%- if product.metafields.reviews.rating.value != blank -%}
                     <div class="rating-wrapper">

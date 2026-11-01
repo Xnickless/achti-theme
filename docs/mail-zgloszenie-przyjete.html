@@ -1,0 +1,74 @@
+{% comment %}
+  Achti B2B — mail „zgłoszenie przyjęte, konto czeka na zatwierdzenie” (30.10.2026).
+  Wklej CAŁOŚĆ w: Ustawienia → Powiadomienia → Powiadomienia dla klientów → „Zaproszenie do konta klienta” → Edytuj kod.
+  Temat (pole „Temat e-maila”): Achti B2B — zgłoszenie przyjęte
+  Wysyła go automat rejestracji (tools/rejestracja-worker) z tematem i treścią w języku formularza (custom_message).
+  Bez custom_message (np. ręczne zaproszenie z panelu) pokazuje się polski tekst domyślny.
+{% endcomment %}
+{%- comment -%}Shopify wymaga zmiennej poniżej w kodzie; treść i tak wyświetla pętla niżej.{%- endcomment -%}{%- if false -%}{{ custom_message }}{%- endif -%}
+{%- if custom_message != blank -%}
+  {%- assign lines = custom_message | newline_to_br | replace: '<br />', '¶' | replace: '<br/>', '¶' | replace: '<br>', '¶' | split: '¶' -%}
+{%- else -%}
+  {%- capture fallback -%}Dziękujemy za rejestrację firmy!
+Twoje konto firmowe czeka teraz na zatwierdzenie.
+
+1. Weryfikacja — sprawdzamy dane firmy, zwykle w ciągu jednego dnia roboczego.
+2. Aktywacja — po zatwierdzeniu konto zostaje przypisane do Twojej firmy i widzisz ceny hurtowe.
+3. Logowanie — logujesz się tym adresem e-mail. Wyślemy jednorazowy kod, bez hasła.
+
+Masz pytania? Napisz do nas: hello@achti.com{%- endcapture -%}
+  {%- assign lines = fallback | newline_to_br | replace: '<br />', '¶' | split: '¶' -%}
+{%- endif -%}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ shop.name }}</title>
+</head>
+<body style="margin:0;padding:0;background:#f2f1ef;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#262626;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f2f1ef;">
+  <tr><td align="center" style="padding:32px 16px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;">
+      <tr><td style="padding:32px 32px 8px;">
+        {%- if shop.email_logo_url -%}
+          <img src="{{ shop.email_logo_url }}" alt="{{ shop.name }}" width="{{ shop.email_logo_width | default: 120 }}" style="display:block;height:auto;border:0;">
+        {%- else -%}
+          <div style="font-size:26px;letter-spacing:.04em;">achti</div>
+        {%- endif -%}
+      </td></tr>
+      <tr><td style="padding:24px 32px 8px;">
+        <div style="width:48px;height:48px;border-radius:50%;background:#262626;color:#ffffff;font-size:26px;line-height:48px;text-align:center;">&#10003;</div>
+      </td></tr>
+      <tr><td style="padding:8px 32px 32px;">
+        {%- assign n = 0 -%}
+        {%- for line in lines -%}
+          {%- assign t = line | strip -%}
+          {%- if t != blank -%}{%- assign n = n | plus: 1 -%}{%- endif -%}
+          {%- if t == blank -%}
+          {%- elsif n == 1 -%}
+            <h1 style="margin:8px 0 6px;font-size:24px;font-weight:600;line-height:1.3;">{{ t }}</h1>
+          {%- elsif n == 2 -%}
+            <p style="margin:0 0 22px;font-size:17px;font-weight:600;line-height:1.5;">{{ t }}</p>
+          {%- elsif t contains '@' -%}
+            <p style="margin:22px 0 0;font-size:14px;line-height:1.5;color:#555555;">{{ t | replace: 'hello@achti.com', '<a href="mailto:hello@achti.com" style="color:#262626;">hello@achti.com</a>' }}</p>
+          {%- else -%}
+            {%- assign num = t | slice: 0, 1 -%}
+            {%- assign rest = t | slice: 3, 500 -%}
+            {%- assign parts = rest | split: ' — ' -%}
+            <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 0 14px;"><tr>
+              <td valign="top" style="width:40px;"><div style="width:28px;height:28px;border:1px solid #262626;border-radius:50%;font-size:13px;line-height:28px;text-align:center;font-weight:600;">{{ num }}</div></td>
+              <td valign="top" style="font-size:15px;line-height:1.55;padding-top:3px;"><strong>{{ parts[0] }}</strong>{% if parts.size > 1 %} — {{ parts | slice: 1, 9 | join: ' — ' }}{% endif %}</td>
+            </tr></table>
+          {%- endif -%}
+        {%- endfor -%}
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:28px;"><tr>
+          <td style="background:#b5aca3;border-radius:999px;"><a href="{{ shop.url }}" style="display:inline-block;padding:14px 30px;font-size:15px;color:#262626;text-decoration:none;">b2b.achti.com</a></td>
+        </tr></table>
+      </td></tr>
+    </table>
+    <p style="max-width:560px;margin:16px auto 0;font-size:12px;color:#888888;line-height:1.5;">{{ shop.name }} · {{ shop.address.address1 }}{% if shop.address.city %}, {{ shop.address.zip }} {{ shop.address.city }}{% endif %}</p>
+  </td></tr>
+</table>
+</body>
+</html>

@@ -16,7 +16,7 @@ TAIL = 'Achti — polski producent, hurt B2B, ceny po rejestracji.'
 
 def description(p, limit=160):
     parts = [f"{p['title']} ({p['code']})."]
-    sklad = p.get('sklad') or ', '.join(p.get('materials') or [])
+    sklad = p.get('sklad') or ''  # bez nazw przędzy (decyzja Adriana 20.10.2026)
     if sklad: parts.append(f"Skład: {sklad}.")
     lin = LINING_SHORT.get(p.get('podszycie') or '')
     if lin: parts.append(f"{lin}.")

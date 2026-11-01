@@ -55,67 +55,18 @@
               {% render block %}
             {%- when 'subtotal' -%}
               <div class="js-contents" {{ block.shopify_attributes }}>
-                <div>
-                  {%- if cart.cart_level_discount_applications.size > 0 -%}
-                    <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
-                      {%- for discount in cart.cart_level_discount_applications -%}
-                        <li class="discounts__discount discounts__discount--position">
-                          {{- 'icon-discount.svg' | inline_asset_content -}}
-                          {{ discount.title | escape }}
-                          (-{{ discount.total_allocated_amount | money }})
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  {%- endif -%}
-                </div>
+                {% render 'b2b-cart-totals' %}
+                {%- comment -%}
+                  01.11.2026: minimum (2000 zł, 2 szt. na kolor) w .js-contents, bo cart.js po zmianie ilości odświeża tylko ten fragment —
+                  wcześniej komunikat i zablokowany przycisk zostawały w starym stanie do przeładowania strony. Znacznik data-b2b-below
+                  czyta skrypt na dole sekcji i blokuje „Realizuj zakup”.
+                {%- endcomment -%}
+                {% render 'b2b-cart-minimum' %}
+                {%- capture below_min -%}{% render 'b2b-cart-minimum', check: true %}{%- endcapture -%}
+                {%- if below_min == '1' -%}<span data-b2b-below hidden></span>{%- endif -%}
 
-                <div class="totals">
-                  <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
-                  <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
-                </div>
-
-                <small class="tax-note caption-large rte">
-                  {%- if cart.duties_included and cart.taxes_included -%}
-                    {%- if shop.shipping_policy.body == blank -%}
-                      {{ 'sections.cart.duties_and_taxes_included_shipping_at_checkout_without_policy' | t }}
-                    {%- else -%}
-                      {{
-                        'sections.cart.duties_and_taxes_included_shipping_at_checkout_with_policy_html'
-                        | t: link: shop.shipping_policy.url
-                      }}
-                    {%- endif -%}
-                  {%- elsif cart.duties_included == false and cart.taxes_included -%}
-                    {%- if shop.shipping_policy.body == blank -%}
-                      {{ 'sections.cart.taxes_included_shipping_at_checkout_without_policy' | t }}
-                    {%- else -%}
-                      {{
-                        'sections.cart.taxes_included_shipping_at_checkout_with_policy_html'
-                        | t: link: shop.shipping_policy.url
-                      }}
-                    {%- endif -%}
-                  {%- elsif cart.duties_included and cart.taxes_included == false -%}
-                    {%- if shop.shipping_policy.body == blank -%}
-                      {{ 'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
-                    {%- else -%}
-                      {{
-                        'sections.cart.duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html'
-                        | t: link: shop.shipping_policy.url
-                      }}
-                    {%- endif -%}
-                  {%- elsif cart.duties_included == false and cart.taxes_included == false -%}
-                    {%- if shop.shipping_policy.body == blank -%}
-                      {{ 'sections.cart.taxes_at_checkout_shipping_at_checkout_without_policy' | t }}
-                    {%- else -%}
-                      {{
-                        'sections.cart.taxes_at_checkout_shipping_at_checkout_with_policy_html'
-                        | t: link: shop.shipping_policy.url
-                      }}
-                    {%- endif -%}
-                  {%- endif -%}
-                </small>
               </div>
             {%- else -%}
-              {% render 'b2b-cart-minimum' %}
               {%- capture below_min -%}{% render 'b2b-cart-minimum', check: true %}{%- endcapture -%}
               <div class="cart__ctas" {{ block.shopify_attributes }}>
                 <button
@@ -129,8 +80,13 @@
                   form="cart"
                 >
                   {{ 'sections.cart.checkout' | t }}
+                  <span class="b2b-sum__arrow" aria-hidden="true">→</span>
                 </button>
               </div>
+              <ul class="b2b-sum__trust list-unstyled" role="list">
+                <li><span class="svg-wrapper">{{ 'icon-padlock.svg' | inline_asset_content }}</span>{{ 'b2b.cart.secure' | t }}</li>
+                <li><span class="svg-wrapper">{{ 'icon-checkmark.svg' | inline_asset_content }}</span>{{ 'b2b.cart.invoice' | t }}</li>
+              </ul>
 
               {%- if additional_checkout_buttons -%}
                 <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
@@ -145,6 +101,21 @@
     </div>
   </div>
 </div>
+
+<script>
+  (function () {
+    var footer = document.getElementById('main-cart-footer');
+    if (!footer) return;
+    var sync = function () {
+      var btn = document.getElementById('checkout');
+      if (btn) btn.disabled = !!footer.querySelector('[data-b2b-below]') || !document.querySelector('.cart-item');
+    };
+    new MutationObserver(sync).observe(footer, { childList: true, subtree: true });
+    document.addEventListener('submit', function (e) {
+      if (e.submitter && e.submitter.name === 'checkout' && footer.querySelector('[data-b2b-below]')) e.preventDefault();
+    }, true);
+  })();
+</script>
 
 {% schema %}
 {

@@ -13,7 +13,7 @@ TITLES = {  # tytuły stron (PAGE) — polityki (SHOP_POLICY) mają tylko body
     'warunki-wspolpracy': {'en': 'Terms of cooperation', 'de': 'Kooperationsbedingungen', 'fr': 'Conditions de collaboration'},
     'faq': {'en': 'FAQ', 'de': 'FAQ', 'fr': 'FAQ'},
     'polityka-cookies': {'en': 'Cookie Policy', 'de': 'Cookie-Richtlinie', 'fr': 'Politique relative aux cookies'},
-    'o-nas': {'en': 'About us', 'de': 'Über uns', 'fr': 'À propos'},
+    'o-nas': {'en': 'About us – meet ACHTI', 'de': 'Über uns – lernen Sie ACHTI kennen', 'fr': 'À propos – découvrez ACHTI'},
     'produkcja': {'en': 'Production', 'de': 'Produktion', 'fr': 'Production'},
     'materialy': {'en': 'Materials', 'de': 'Materialien', 'fr': 'Matières'},
     'jakosc': {'en': 'Quality', 'de': 'Qualität', 'fr': 'Qualité'},

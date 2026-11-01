@@ -1,0 +1,9 @@
+name = "achti-rejestracja"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+# Sekrety: npx wrangler secret put SHOPIFY_CLIENT_ID / SHOPIFY_CLIENT_SECRET (wartości z ~/.config/achti/)
+
+# Logi błędów (console.error) w panelu Cloudflare → Workers → achti-rejestracja → Logs
+[observability]
+enabled = true

@@ -6,14 +6,42 @@
     {%- form 'contact', id: 'B2BRegisterForm' -%}
       <input type="hidden" name="contact[Typ zgłoszenia]" value="Rejestracja firmy B2B">
       {%- if form.posted_successfully? -%}
-        <p class="form-status form-status-list form__message" role="status">{{ 'b2b.reg.success' | t }}</p>
+        {%- comment -%} 30.10.2026 (Kamil): czytelny panel po wysłaniu zamiast jednej linijki; wstęp i „Masz już konto?” chowa CSS (:has) {%- endcomment -%}
+        <div class="b2b-reg-ok" role="status">
+          <span class="b2b-reg-ok__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+          <h2 class="b2b-reg-ok__title">{{ 'b2b.reg.ok_title' | t }}</h2>
+          <p class="b2b-reg-ok__lead">{{ 'b2b.reg.ok_lead' | t }}</p>
+          <ol class="b2b-reg-ok__steps">
+            <li>{{ 'b2b.reg.ok_step1_html' | t }}</li>
+            <li>{{ 'b2b.reg.ok_step2_html' | t }}</li>
+            <li>{{ 'b2b.reg.ok_step3_html' | t }}</li>
+          </ol>
+          {%- assign ok_email = settings.sales_email | default: shop.email -%}
+          <p class="b2b-reg-ok__contact">{{ 'b2b.reg.ok_contact_html' | t: email: ok_email }}</p>
+          <a class="button button--primary" href="{{ routes.all_products_collection_url }}">{{ 'b2b.reg.ok_cta' | t }}</a>
+        </div>
       {%- else -%}
         {%- if form.errors -%}<div class="b2b-register__error" role="alert">{{ form.errors | default_errors }}</div>{%- endif -%}
-        <div class="field"><input class="field__input" id="b2b-nip" name="contact[NIP]" required inputmode="numeric" placeholder="{{ 'b2b.reg.nip' | t }}" data-nip><label class="field__label" for="b2b-nip">{{ 'b2b.reg.nip' | t }}</label></div>
+        {%- comment -%} 30.10.2026 (Kamil): kraj na początku — od niego zależy NIP (obowiązkowy w UE) i format kodu pocztowego {%- endcomment -%}
+        <p class="b2b-register__label">{{ 'b2b.reg.country_label' | t }}</p>
+        <div class="select b2b-register__country">
+          <select class="select__select" id="b2b-country" name="contact[Kraj]" aria-label="{{ 'b2b.reg.country' | t }}" autocomplete="country">
+            {%- assign countries = localization.available_countries | sort: 'name' -%}
+            <option value="PL" selected>Polska</option>
+            {%- for c in countries -%}{%- unless c.iso_code == 'PL' -%}<option value="{{ c.iso_code }}">{{ c.name }}</option>{%- endunless -%}{%- endfor -%}
+          </select>
+          <span class="svg-wrapper">{{ 'icon-caret.svg' | inline_asset_content }}</span>
+        </div>
+        <div class="field"><input class="field__input" id="b2b-nip" name="contact[NIP]" required placeholder="{{ 'b2b.reg.nip' | t }}" data-nip><label class="field__label" for="b2b-nip">{{ 'b2b.reg.nip' | t }}</label></div>
         <p class="b2b-register__hint">{{ 'b2b.reg.nip_hint' | t }}</p>
         <p class="b2b-register__error" data-nip-error hidden>{{ 'b2b.reg.nip_error' | t }}</p>
         <div class="field"><input class="field__input" id="b2b-company" name="contact[Firma]" required autocomplete="organization" placeholder="{{ 'b2b.reg.company' | t }}"><label class="field__label" for="b2b-company">{{ 'b2b.reg.company' | t }}</label></div>
-        <div class="field"><input class="field__input" id="b2b-address" name="contact[Adres]" required autocomplete="street-address" placeholder="{{ 'b2b.reg.address' | t }}"><label class="field__label" for="b2b-address">{{ 'b2b.reg.address' | t }}</label></div>
+        <div class="field"><input class="field__input" id="b2b-address" name="contact[Adres]" required autocomplete="address-line1" placeholder="{{ 'b2b.reg.address' | t }}"><label class="field__label" for="b2b-address">{{ 'b2b.reg.address' | t }}</label></div><p class="b2b-register__error" data-addr-error hidden>{{ 'b2b.reg.address_error' | t }}</p>
+        {%- comment -%} 27.10.2026: osobno kod, miasto i kraj — z nich automat zakłada lokalizację firmy w Shopify {%- endcomment -%}
+        <div class="b2b-register__grid">
+          <div class="field"><input class="field__input" id="b2b-zip" name="contact[Kod pocztowy]" required autocomplete="postal-code" placeholder="{{ 'b2b.reg.zip' | t }}"><label class="field__label" for="b2b-zip">{{ 'b2b.reg.zip' | t }}</label></div><p class="b2b-register__error" data-zip-error hidden>{{ 'b2b.reg.zip_error' | t }}</p>
+          <div class="field"><input class="field__input" id="b2b-city" name="contact[Miasto]" required autocomplete="address-level2" placeholder="{{ 'b2b.reg.city' | t }}"><label class="field__label" for="b2b-city">{{ 'b2b.reg.city' | t }}</label></div>
+        </div>
         <div class="field"><input class="field__input" id="b2b-delivery" name="contact[Adres dostawy]" autocomplete="shipping street-address" placeholder="{{ 'b2b.reg.delivery' | t }}"><label class="field__label" for="b2b-delivery">{{ 'b2b.reg.delivery' | t }}</label></div>
         <div class="b2b-register__grid">
           <div class="field"><input class="field__input" id="b2b-person" name="contact[Osoba kontaktowa]" required autocomplete="name" placeholder="{{ 'b2b.reg.person' | t }}"><label class="field__label" for="b2b-person">{{ 'b2b.reg.person' | t }}</label></div>
@@ -31,15 +59,56 @@
         <div class="field"><input class="field__input" id="b2b-volume" name="contact[Przewidywane ilości zamówień]" placeholder="{{ 'b2b.reg.volume' | t }}"><label class="field__label" for="b2b-volume">{{ 'b2b.reg.volume' | t }}</label></div>
         <p class="b2b-register__hint">{{ 'b2b.reg.volume_hint' | t }}</p>
         <label class="b2b-register__consent"><input type="checkbox" required><span>{{ 'b2b.reg.terms_html' | t: terms_url: shop.terms_of_service.url, privacy_url: shop.privacy_policy.url }}</span></label>
+        <input type="text" name="b2b_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" data-hp>
+        <p class="b2b-register__error" data-auto-error hidden>{{ 'b2b.reg.has_company' | t }}</p>
         <button type="submit" class="button button--primary">{{ 'b2b.reg.submit' | t }}</button>
       {%- endif -%}
     {%- endform -%}
-    <p style="margin-top:2rem">{{ 'b2b.reg.have_account' | t }} <a class="link" href="{{ routes.account_login_url }}">{{ 'b2b.login' | t }}</a></p>
+    <p style="margin-top:2rem">{{ 'b2b.reg.have_account' | t }} <a class="link" href="{% render 'b2b-login-url' %}">{{ 'b2b.login' | t }}</a></p>
   </div>
 </div>
 <script>
+  /* 30.10.2026: po wysłaniu Shopify wraca z kotwicą #B2BRegisterForm i przeglądarka przewija na dół strony — wracamy na górę do panelu „Dziękujemy”. */
+  (function(){if(!document.querySelector('.b2b-reg-ok'))return;if(location.hash)history.replaceState(null,'',location.pathname+location.search);
+    function top(){window.scrollTo(0,0);}top();window.addEventListener('load',function(){top();setTimeout(top,50);});})();
   (function(){var f=document.getElementById('B2BRegisterForm');if(!f)return;var sel=f.querySelector('#b2b-type'),box=f.querySelector('[data-other-field]'),ta=box&&box.querySelector('textarea');function tog(){var on=sel&&sel.selectedOptions[0]&&sel.selectedOptions[0].hasAttribute('data-other');if(box){box.hidden=!on;ta.required=!!on;}}if(sel){sel.addEventListener('change',tog);tog();}})();
-  (function(){var f=document.getElementById('B2BRegisterForm');if(!f)return;f.addEventListener('submit',function(e){var i=f.querySelector('[data-nip]');if(!i)return;var n=i.value.replace(/\D/g,'');if(n.length!==10)return;var w=[6,5,7,2,3,4,5,6,7],s=0;for(var k=0;k<9;k++)s+=w[k]*+n[k];if(s%11!==+n[9]){e.preventDefault();var er=f.querySelector('[data-nip-error]');if(er)er.hidden=false;i.focus();}});})();
+  (function(){var f=document.getElementById('B2BRegisterForm');if(!f)return;var url={{ section.settings.auto_url | json }},busy=false;
+    function v(sel){var e=f.querySelector(sel);return e?e.value.trim():'';}
+    /* 27.10.2026: NIP/VAT wymagany tylko w UE — firmy spoza UE (np. Kanada) często nie mają numeru VAT. */
+    /* 28.10.2026: lista krajów = cały świat (Intl.DisplayNames w języku strony), nie tylko rynki sklepu — Adrian: brakowało Kanady. Bez JS zostają kraje rynków z Liquid. */
+    (function(){var cs=f.querySelector('#b2b-country');if(!cs||!window.Intl||!Intl.DisplayNames)return;var dn;try{dn=new Intl.DisplayNames([document.documentElement.lang||'pl'],{type:'region'});}catch(_){return;}
+      var cur=cs.value,l='AD AE AF AG AI AL AM AO AR AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IM IN IQ IR IS IT JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MK ML MM MN MO MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG US UY UZ VA VC VE VG VN VU WF WS XK YE YT ZA ZM ZW'.split(' ').map(function(c){return{c:c,n:dn.of(c)||c};}).filter(function(x){return x.c!=='PL';});
+      l.sort(function(a,b){return a.n.localeCompare(b.n,document.documentElement.lang||'pl');});
+      cs.innerHTML='';[{c:'PL',n:dn.of('PL')}].concat(l).forEach(function(x){var o=document.createElement('option');o.value=x.c;o.textContent=x.n;if(x.c===cur)o.selected=true;cs.appendChild(o);});})();
+    var EU='AT BE BG CY CZ DE DK EE ES FI FR GR HR HU IE IT LT LU LV MT NL PL PT RO SE SI SK'.split(' '),ni=f.querySelector('[data-nip]'),cs=f.querySelector('#b2b-country');
+    function nipReq(){if(ni)ni.required=EU.indexOf(v('#b2b-country')||'PL')>-1;}
+    if(cs){cs.addEventListener('change',nipReq);nipReq();}
+    if(ni)ni.addEventListener('input',function(){var er=f.querySelector('[data-nip-error]');if(er)er.hidden=true;ni.classList.remove('is-invalid');});
+    /* 30.10.2026: polski kod pocztowy NN-NNN — Shopify odrzuca inny format i firma powstawała bez adresu (np. „312424”). 5 cyfr formatujemy sami. */
+    var zp=f.querySelector('#b2b-zip');function zipOk(){var c=v('#b2b-country')||'PL';if(c!=='PL'||!zp)return true;var d=zp.value.replace(/\D/g,'');if(d.length===5)zp.value=d.slice(0,2)+'-'+d.slice(2);return /^\d{2}-\d{3}$/.test(zp.value.trim());}
+    var ad0=f.querySelector('#b2b-address');if(ad0)ad0.addEventListener('input',function(){var ae=f.querySelector('[data-addr-error]');if(ae)ae.hidden=true;ad0.classList.remove('is-invalid');});
+    if(zp){zp.addEventListener('blur',zipOk);zp.addEventListener('input',function(){var er=f.querySelector('[data-zip-error]');if(er)er.hidden=true;zp.classList.remove('is-invalid');});}
+    /* 30.10.2026: nasłuch w fazie capture na window — przed skryptem CAPTCHA Shopify (ochrona przed spamem). Najpierw automat, potem requestSubmit(),
+       który przepuszcza zdarzenie do CAPTCHA; HTMLFormElement.submit() omijał CAPTCHA i Shopify zwracał „Missing CAPTCHA token”. */
+    var done=false;
+    window.addEventListener('submit',function(e){
+      if(e.target!==f||done)return;
+      var i=f.querySelector('[data-nip]'),c=v('#b2b-country')||'PL';
+      if(i&&c==='PL'){var n=i.value.replace(/\D/g,'');if(n.length===10){var w=[6,5,7,2,3,4,5,6,7],s=0;for(var k=0;k<9;k++)s+=w[k]*+n[k];if(s%11!==+n[9]){e.preventDefault();e.stopImmediatePropagation();var er=f.querySelector('[data-nip-error]');if(er)er.hidden=false;i.classList.add('is-invalid');i.focus();return;}}}
+      /* 27.10.2026: automat zakłada firmę w Shopify (tools/rejestracja-worker), potem zwykły mail na hello@. Błąd automatu = sam mail, jak wcześniej. */
+      /* 01.11.2026 (Adrian): adres bez numeru budynku nie przechodzi */
+      var ad=f.querySelector('#b2b-address');if(ad&&!/\d/.test(ad.value)){e.preventDefault();e.stopImmediatePropagation();var ae=f.querySelector('[data-addr-error]');if(ae)ae.hidden=false;ad.classList.add('is-invalid');ad.focus();return;}
+      if(!zipOk()){e.preventDefault();e.stopImmediatePropagation();var ze=f.querySelector('[data-zip-error]');if(ze)ze.hidden=false;zp.classList.add('is-invalid');zp.focus();return;}
+      if(!url)return;e.preventDefault();e.stopImmediatePropagation();if(busy)return;busy=true;var btn=f.querySelector('button[type=submit]');if(btn)btn.setAttribute('aria-busy','true');
+      var body={nip:v('#b2b-nip'),firma:v('#b2b-company'),ulica:v('#b2b-address'),kod:v('#b2b-zip'),miasto:v('#b2b-city'),kraj:c,dostawa:v('#b2b-delivery'),osoba:v('#b2b-person'),telefon:v('#b2b-phone'),email:v('#b2b-email'),rodzaj:v('#b2b-type'),opis:v('#b2b-other'),ilosci:v('#b2b-volume'),locale:document.documentElement.lang,hp:v('[data-hp]')};
+      function send(note){if(note){var h=document.createElement('input');h.type='hidden';h.name='contact[Firma w Shopify]';h.value=note;f.appendChild(h);}var hp=f.querySelector('[data-hp]');if(hp)hp.remove();done=true;if(f.requestSubmit)f.requestSubmit();else if(btn)btn.click();else HTMLFormElement.prototype.submit.call(f);}
+      fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(function(r){return r.json();}).then(function(d){
+        if(d.status==='has_company'){busy=false;if(btn)btn.removeAttribute('aria-busy');var er=f.querySelector('[data-auto-error]');if(er)er.hidden=false;return;}
+        if(d.status==='created')send('Założona automatycznie, czeka na akceptację: '+d.adminUrl);
+        else if(d.status==='exists')send('Firma z tym NIP już jest w sklepie: '+d.adminUrl);
+        else send('Automat nie założył firmy ('+d.status+') — załóż ręcznie');
+      }).catch(function(){send('Automat niedostępny — załóż firmę ręcznie');});
+    },true);})();
 </script>
 {%- style -%}
   .section-{{ section.id }}-padding{padding-top:{{ section.settings.padding_top | times: 0.75 | round: 0 }}px;padding-bottom:{{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px}
@@ -51,6 +120,7 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    { "type": "text", "id": "auto_url", "label": "Adres automatu zakładającego firmy", "info": "Funkcja Cloudflare (tools/rejestracja-worker). Puste = tylko e-mail na adres sklepu." },
     { "type": "range", "id": "padding_top", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "t:sections.all.padding.padding_top", "default": 36 },
     { "type": "range", "id": "padding_bottom", "min": 0, "max": 100, "step": 4, "unit": "px", "label": "t:sections.all.padding.padding_bottom", "default": 36 }
   ],

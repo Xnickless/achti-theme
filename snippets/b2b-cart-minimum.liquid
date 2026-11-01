@@ -1,7 +1,7 @@
 {%- comment -%}
   Minimalna wartość zamówienia i próg darmowej dostawy w koszyku (07.10.2026, „Warunki współpracy”: min. 2000 zł netto,
   dostawa gratis w Polsce od 5000 zł netto). Ceny w sklepie są netto, więc porównujemy items_subtotal_price.
-  Progi w ustawieniach motywu (grupa B2B): b2b_min_order_pln / b2b_min_order_eur / b2b_free_shipping_pln.
+  Progi w ustawieniach motywu (grupa B2B): b2b_min_order_pln / b2b_min_order_eur / b2b_min_order_usd (28.10.2026, rynek spoza Europy) / b2b_free_shipping_pln.
   check: true → wypisuje „1”, gdy koszyk jest poniżej minimum (do zablokowania przycisku „Realizuj zakup”);
   bez check → komunikat dla klienta. UWAGA: samą darmową stawkę wysyłki trzeba ustawić w panelu (Wysyłka i dostawa).
 {%- endcomment -%}
@@ -12,11 +12,28 @@
       assign min = settings.b2b_min_order_pln | default: 0
     when 'EUR'
       assign min = settings.b2b_min_order_eur | default: 0
+    when 'USD'
+      assign min = settings.b2b_min_order_usd | default: 0
   endcase
   assign min_cents = min | times: 100
   assign subtotal = cart.items_subtotal_price
   assign below = false
   if cart.item_count > 0 and min_cents > 0 and subtotal < min_cents
+    assign below = true
+  endif
+  comment
+    01.11.2026 (Adrian): maszyna robi minimum 2 szt. jednego koloru — pozycja z 1 szt. blokuje zamówienie jak brak minimum
+  endcomment
+  assign few = ''
+  for item in cart.items
+    if item.quantity < 2
+      assign few_t = item.product.title | escape
+      assign few_v = item.variant.title | escape
+      assign few = few | append: few_t | append: ' (' | append: few_v | append: ')|'
+    endif
+  endfor
+  assign few_list = few | split: '|' | join: ', '
+  if few != ''
     assign below = true
   endif
   assign free_cents = 0
@@ -27,12 +44,18 @@
 {%- if check -%}
   {%- if below -%}1{%- endif -%}
 {%- elsif cart.item_count > 0 -%}
-  {%- if below -%}
+  {%- if few != '' -%}
+    <p class="b2b-cart-note b2b-cart-note--warn" role="status">
+      {{ 'b2b.cart.min_per_color_html' | t: min: 2, items: few_list }}
+    </p>
+  {%- endif -%}
+  {%- if below and subtotal < min_cents -%}
     {%- assign missing = min_cents | minus: subtotal | money -%}
     {%- assign min_fmt = min_cents | money_without_trailing_zeros -%}
     <p class="b2b-cart-note b2b-cart-note--warn" role="status">
       {{ 'b2b.cart.min_order_html' | t: min: min_fmt, missing: missing }}
     </p>
+  {%- elsif below -%}
   {%- elsif free_cents > 0 and subtotal < free_cents -%}
     {%- assign missing = free_cents | minus: subtotal | money -%}
     <p class="b2b-cart-note" role="status">{{ 'b2b.cart.free_shipping_missing_html' | t: missing: missing }}</p>

@@ -1,0 +1,45 @@
+{%- comment -%}
+  Podsumowanie koszyka (31.10.2026, makieta Adriana „Proces zamówienia”): Produkty (N szt.) → rabaty ilościowe → Razem netto
+  → VAT 23% → Razem brutto, pod spodem rozwijane koszty dostawy. Wcześniej (30.10.2026) same wiersze netto/brutto.
+  Brutto liczone stawką 23% tylko dla rynku Polska (PLN); w innych walutach (rynek UE, reszta świata) VAT zależy od kraju
+  i numeru VAT firmy (odwrotne obciążenie), więc zamiast kwoty brutto jest dopisek. Dostawa nie jest wliczona.
+{%- endcomment -%}
+<div class="b2b-sum" role="status">
+  <p class="b2b-sum__title h4">{{ 'b2b.cart.summary' | t }}</p>
+  <dl class="b2b-sum__rows">
+    <div class="b2b-sum__row">
+      <dt>{{ 'b2b.cart.items_count' | t: count: cart.item_count }}</dt>
+      <dd>{{ cart.items_subtotal_price | money }}</dd>
+    </div>
+    {%- for discount in cart.cart_level_discount_applications -%}
+      <div class="b2b-sum__row b2b-sum__row--discount">
+        <dt>{{ 'icon-discount.svg' | inline_asset_content }}{{ discount.title | escape }}</dt>
+        <dd>−{{ discount.total_allocated_amount | money }}</dd>
+      </div>
+    {%- endfor -%}
+    <div class="b2b-sum__row b2b-sum__row--net">
+      <dt>{{ 'b2b.cart.total_net' | t }}</dt>
+      <dd>{{ cart.total_price | money_with_currency }}</dd>
+    </div>
+    {%- if cart.currency.iso_code == 'PLN' -%}
+      {%- assign b2b_gross = cart.total_price | times: 1.23 | round -%}
+      {%- assign b2b_vat = b2b_gross | minus: cart.total_price -%}
+      <div class="b2b-sum__row">
+        <dt>{{ 'b2b.cart.vat_row' | t }}</dt>
+        <dd>{{ b2b_vat | money }}</dd>
+      </div>
+      <div class="b2b-sum__row b2b-sum__row--gross">
+        <dt>{{ 'b2b.cart.total_gross' | t }}</dt>
+        <dd>{{ b2b_gross | money_with_currency }}</dd>
+      </div>
+    {%- endif -%}
+  </dl>
+  {%- unless cart.currency.iso_code == 'PLN' -%}
+    <p class="b2b-totals__note">{{ 'b2b.cart.vat_note_eu' | t }}</p>
+  {%- endunless -%}
+  {%- comment -%} 01.11.2026: powyżej 10 000 szt. rabat ustala Adrian indywidualnie (automatyczne progi kończą się na −10%) {%- endcomment -%}
+  {%- if cart.item_count > 10000 -%}
+    <p class="b2b-cart-note b2b-cart-note--ok">{{ 'b2b.cart.over_10k_html' | t: email: settings.sales_email | default: 'hello@achti.com' }}</p>
+  {%- endif -%}
+  {%- render 'b2b-cart-shipping' -%}
+</div>

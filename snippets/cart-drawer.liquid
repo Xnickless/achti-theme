@@ -59,7 +59,8 @@
               {%- if shop.customer_accounts_enabled and customer == null -%}
                 <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
                 <p class="cart__login-paragraph">
-                  {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
+                  {%- capture b2b_login -%}{% render 'b2b-login-url', back: routes.cart_url %}{%- endcapture -%}
+          {{ 'sections.cart.login.paragraph_html' | t: link: b2b_login }}
                 </p>
               {%- endif -%}
             </div>
@@ -539,10 +540,7 @@
             {%- endif -%}
           </div>
 
-          <div class="totals" role="status">
-            <h2 class="totals__total">{{ 'sections.cart.estimated_total' | t }}</h2>
-            <p class="totals__total-value">{{ cart.total_price | money_with_currency }}</p>
-          </div>
+          {% render 'b2b-cart-totals' %}
 
           <small class="tax-note caption-large rte">
             {%- if cart.duties_included and cart.taxes_included -%}

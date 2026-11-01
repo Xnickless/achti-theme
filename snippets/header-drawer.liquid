@@ -140,9 +140,10 @@
           <div class="menu-drawer__utility-links">
             {%- if shop.customer_accounts_enabled -%}
               <a
-                href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+                href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{% render 'b2b-login-url' %}{%- endif -%}"
                 class="menu-drawer__account link focus-inset h5 medium-hide large-up-hide"
                 rel="nofollow"
+                {% unless customer %}data-b2b-login{% endunless %}
               >
                 {%- if section.settings.enable_customer_avatar -%}
                   <account-icon>
@@ -167,6 +168,12 @@
                   endif
                 -%}
               </a>
+              {%- comment -%} 31.10.2026 (Adrian): na telefonie nie było rejestracji w menu {%- endcomment -%}
+              {%- if customer == nil and settings.b2b_register_page != blank -%}
+                <a href="{{ settings.b2b_register_page.url }}" class="b2b-drawer-register button button--secondary medium-hide large-up-hide">
+                  {{- 'b2b.header_register' | t -}}
+                </a>
+              {%- endif -%}
             {%- endif -%}
             {%- if localization.available_countries or localization.available_languages -%}
               <div class="menu-drawer__localization header-localization">

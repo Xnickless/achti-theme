@@ -29,9 +29,16 @@ log = json.load(open(LOG)) if os.path.exists(LOG) else {}
 tmp = tempfile.mkdtemp()
 for code, path in files.items():
     # sku:AZ-910PC dopasowuje też AZ-910PC-BP (wyszukiwanie po prefiksie) — bierzemy produkt z dokładnie tym kodem
-    r = si.gql('''query($q:String){ products(first:10, query:$q){ nodes{ id title variants(first:1){ nodes{ sku } }
-                  media(first:20){ nodes{ id alt } } } } }''', {'q': f'sku:{code}'})
-    nodes = [n for n in r['products']['nodes'] if n['variants']['nodes'] and n['variants']['nodes'][0]['sku'] == code]
+    # przy kolorach z kolornika SKU wariantu = <kod>-<kolor> (AZ-3102PC-SET1) — porównujemy kod bez sufiksu koloru
+    r = si.gql('''query($q:String){ products(first:10, query:$q){ nodes{ id title
+                  variants(first:1){ nodes{ sku selectedOptions{ name value } } }
+                  media(first:20){ nodes{ id alt } } } } }''', {'q': f'sku:{code}*'})
+
+    def base_sku(v):
+        opt = next((o['value'] for o in v['selectedOptions'] if o['name'] == 'Kolor'), None)
+        suf = '-' + opt.replace(' ', '') if opt else ''
+        return v['sku'][:-len(suf)] if suf and v['sku'].endswith(suf) else v['sku']
+    nodes = [n for n in r['products']['nodes'] if n['variants']['nodes'] and base_sku(n['variants']['nodes'][0]) == code]
     if not nodes: print('  brak produktu', code); continue
     p = nodes[0]
     mine = [m['id'] for m in p['media']['nodes'] if ALT_MARK in (m['alt'] or '')]

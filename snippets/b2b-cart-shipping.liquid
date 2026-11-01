@@ -1,0 +1,79 @@
+{%- comment -%}
+  30.10.2026 (Kamil): rozwijane „Koszty dostawy” w koszyku (strona koszyka i panel). Stawki = profil wysyłki w Shopify
+  (Ustawienia → Wysyłka, typ „Waga paczki”: za każde rozpoczęte 50 szt.). Przy zmianie stawek w Shopify poprawić też tutaj.
+  Kwoty netto; Polska podana też brutto (VAT 23% od dostawy). Wyliczenie dla koszyka według kraju z localization.
+{%- endcomment -%}
+{%- liquid
+  assign eu = 'AT BE BG CY CZ DE DK EE ES FI FR GR HR HU IE IT LT LU LV MT NL PT RO SE SI SK' | split: ' '
+  assign eur = 'CH NO IS LI RS BA ME MK AL UA MD TR AD MC SM VA GI FO XK GG JE IM GE AM AZ' | split: ' '
+  assign cc = localization.country.iso_code
+  if cc == 'PL'
+    assign zone = 'pl'
+    assign rate = 1626
+  elsif eu contains cc
+    assign zone = 'eu'
+    assign rate = 4900
+  elsif cc == 'GB'
+    assign zone = 'gb'
+    assign rate = 11500
+  elsif eur contains cc
+    assign zone = 'eur'
+    assign rate = 27900
+  elsif cc == 'US' or cc == 'CA'
+    assign zone = 'na'
+    assign rate = 36500
+  else
+    assign zone = 'row'
+    assign rate = 52000
+  endif
+  assign parcels = cart.item_count | plus: 49 | divided_by: 50
+  if parcels > 8
+    assign parcels_cost = 8
+  else
+    assign parcels_cost = parcels
+  endif
+  assign est = rate | times: parcels_cost
+  assign free = false
+  if zone == 'pl' and cart.total_price >= 500000
+    assign free = true
+  endif
+  assign pln = false
+  if cart.currency.iso_code == 'PLN'
+    assign pln = true
+  endif
+-%}
+<details class="b2b-ship">
+  <summary class="b2b-ship__summary">
+    <span>{{ 'b2b.ship.title' | t }}</span>
+    {%- if cart.item_count > 0 -%}
+      <span class="b2b-ship__est">
+        {%- if free -%}{{ 'b2b.ship.free' | t }}{%- elsif pln -%}≈ {{ est | money_without_trailing_zeros }} {{ 'b2b.ship.net' | t }}{%- else -%}{{ 'b2b.ship.parcels' | t: count: parcels }}{%- endif -%}
+      </span>
+    {%- endif -%}
+  </summary>
+  <div class="b2b-ship__body">
+    {%- if cart.item_count > 0 -%}
+      <p class="b2b-ship__calc">
+        {%- if free -%}
+          {{ 'b2b.ship.calc_free' | t: country: localization.country.name }}
+        {%- elsif pln -%}
+          {{ 'b2b.ship.calc' | t: country: localization.country.name, parcels: parcels, amount: est | money_without_trailing_zeros }}
+        {%- else -%}
+          {{ 'b2b.ship.calc_fx' | t: country: localization.country.name, parcels: parcels }}
+        {%- endif -%}
+      </p>
+    {%- endif -%}
+    <table class="b2b-ship__table">
+      <thead><tr><th>{{ 'b2b.ship.zone' | t }}</th><th>{{ 'b2b.ship.per_parcel' | t }}</th><th>{{ 'b2b.ship.time' | t }}</th></tr></thead>
+      <tbody>
+        <tr{% if zone == 'pl' %} class="is-current"{% endif %}><td>{{ 'b2b.ship.z_pl' | t }}</td><td>16,26 zł <small>(20 zł {{ 'b2b.ship.gross' | t }})</small><br><small>{{ 'b2b.ship.pl_free' | t }}</small></td><td>{{ 'b2b.ship.d35' | t }}</td></tr>
+        <tr{% if zone == 'eu' %} class="is-current"{% endif %}><td>{{ 'b2b.ship.z_eu' | t }}</td><td>49 zł</td><td>{{ 'b2b.ship.d35' | t }}</td></tr>
+        <tr{% if zone == 'gb' %} class="is-current"{% endif %}><td>{{ 'b2b.ship.z_gb' | t }}</td><td>115 zł</td><td>{{ 'b2b.ship.d35' | t }}</td></tr>
+        <tr{% if zone == 'eur' %} class="is-current"{% endif %}><td>{{ 'b2b.ship.z_eur' | t }}</td><td>279 zł</td><td>{{ 'b2b.ship.d58' | t }}</td></tr>
+        <tr{% if zone == 'na' %} class="is-current"{% endif %}><td>{{ 'b2b.ship.z_na' | t }}</td><td>365 zł</td><td>{{ 'b2b.ship.d58' | t }}</td></tr>
+        <tr{% if zone == 'row' %} class="is-current"{% endif %}><td>{{ 'b2b.ship.z_row' | t }}</td><td>520 zł</td><td>{{ 'b2b.ship.d58' | t }}</td></tr>
+      </tbody>
+    </table>
+    <p class="b2b-ship__note">{{ 'b2b.ship.note' | t }}</p>
+  </div>
+</details>

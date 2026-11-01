@@ -56,7 +56,8 @@
       {%- if shop.customer_accounts_enabled and customer == null -%}
         <h2 class="cart__login-title">{{ 'sections.cart.login.title' | t }}</h2>
         <p class="cart__login-paragraph">
-          {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
+          {%- capture b2b_login -%}{% render 'b2b-login-url', back: routes.cart_url %}{%- endcapture -%}
+          {{ 'sections.cart.login.paragraph_html' | t: link: b2b_login }}
         </p>
       {%- endif -%}
     </div>
@@ -284,7 +285,7 @@
                                 {% # theme-check-disable %}
                                 data-cart-quantity="{{ cart | item_count_for_variant: item.variant.id }}"
                                 min="0"
-                                data-min="{{ item.variant.quantity_rule.min }}"
+                                data-min="{{ item.variant.quantity_rule.min | at_least: 2 }}"
                                 {% if item.variant.quantity_rule.max != null %}
                                   max="{{ item.variant.quantity_rule.max }}"
                                 {% endif %}

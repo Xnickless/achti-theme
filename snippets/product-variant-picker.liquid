@@ -25,6 +25,10 @@
       {%- liquid
         assign swatch_count = option.values | map: 'swatch' | compact | size
         assign picker_type = block.settings.picker_type
+        # Achti: kolory z kolornika (custom.kolornik) = kółka ze zdjęć próbek z Shopify → Pliki
+        if product.metafields.custom.kolornik != blank and option.position == 1
+          assign swatch_count = 1
+        endif
 
         if swatch_count > 0 and block.settings.swatch_shape != 'none'
           if block.settings.picker_type == 'dropdown'

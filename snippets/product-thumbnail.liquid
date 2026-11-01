@@ -53,6 +53,10 @@
   class="product-media-container media-type-{{ media.media_type }} media-fit-{{ media_fit }} global-media-settings gradient{% if constrain_to_viewport %} constrain-height{% endif %}"
   style="--ratio: {{ media.aspect_ratio | default: 1.0 }}; --preview-ratio: {{ media.preview_image.aspect_ratio | default: 1.0 }};"
 >
+  {%- comment -%} Achti: zdjęcia „na modelce” są generowane przez AI (alt kończy się na „— na modelce”, tools/set_alts.py) {%- endcomment -%}
+  {%- if media.alt contains 'na modelce' -%}
+    <span class="b2b-ai-label" title="{{ 'b2b.ai_photo' | t | escape }}" role="img" aria-label="{{ 'b2b.ai_photo' | t | escape }}">AI</span>
+  {%- endif -%}
   <modal-opener
     class="product__modal-opener product__modal-opener--{{ media.media_type }}"
     data-modal="#ProductModal-{{ modal_id }}"

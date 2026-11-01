@@ -18,6 +18,10 @@
 {% endcomment %}
 {%- liquid
   assign product_form_id = 'product-form-' | append: section.id
+  assign kolornik = null
+  if option.position == 1
+    assign kolornik = product.metafields.custom.kolornik.value | handleize
+  endif
 -%}
 
 {%- for value in option.values -%}
@@ -31,6 +35,14 @@
       assign swatch_value = 'rgb(' | append: value.swatch.color.rgb | append: ')'
     else
       assign swatch_value = null
+    endif
+
+    # Achti: próbka koloru z kolornika, plik kolor-<kolornik>-<wartość>.jpg w Shopify → Pliki
+    assign swatch_url = null
+    if kolornik != blank
+      assign swatch_file = 'kolor-' | append: kolornik | append: '-' | append: value.name | handleize | append: '.jpg'
+      assign swatch_url = swatch_file | file_url
+      assign swatch_value = 'url(' | append: swatch_url | append: ')'
     endif
 
     assign option_disabled = true
@@ -73,6 +85,7 @@
       name: input_name,
       value: escaped_value,
       swatch: value.swatch,
+      swatch_url: swatch_url,
       product_form_id: product_form_id,
       checked: value.selected,
       visually_disabled: option_disabled,
