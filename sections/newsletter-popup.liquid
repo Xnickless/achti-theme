@@ -41,6 +41,8 @@
             {{- 'icon-success.svg' | inline_asset_content -}}
             {{ 'newsletter.success' | t }}
           </p>
+          {%- comment -%} 02.11.2026: kod WITAJ15 od razu po zapisie (mail powitalny z kodem wysyła Shopify Messaging) {%- endcomment -%}
+          <p class="b2b-nl-code">{{ 'b2b.newsletter_code_html' | t }}</p>
         {%- else -%}
           <div class="newsletter-form__field-wrapper">
             <div class="field">

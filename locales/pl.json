@@ -812,7 +812,8 @@
       "no_title": "Nie masz jeszcze konta?",
       "no": "Najpierw zarejestruj firmę. Ceny hurtowe i zamówienia są dostępne dopiero po zatwierdzeniu zgłoszenia (1–2 dni robocze).",
       "close": "Zamknij"
-    }
+    },
+    "newsletter_code_html": "Twój kod −15% na pierwsze zamówienie: <strong>WITAJ15</strong>. Wysłaliśmy go też na Twój e-mail."
   },
   "shopify": {
     "checkout": {

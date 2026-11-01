@@ -800,6 +800,7 @@
       "no_title": "Pas encore de compte ?",
       "no": "Inscrivez d’abord votre entreprise. Les prix de gros et les commandes sont disponibles après validation de l’inscription (1 à 2 jours ouvrés).",
       "close": "Fermer"
-    }
+    },
+    "newsletter_code_html": "Votre code −15 % pour votre première commande : <strong>WITAJ15</strong>. Nous vous l’avons aussi envoyé par e-mail."
   }
 }

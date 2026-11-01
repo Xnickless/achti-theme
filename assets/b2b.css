@@ -1103,3 +1103,6 @@ fieldset.product-form__input--swatch .swatch-input__input + .swatch-input__label
 /* Rejestracja: błędnie wypełnione pola na czerwono (01.11.2026, lista Adriana pkt 2) */
 .b2b-register .field__input:user-invalid, .b2b-register .field__input.is-invalid, .b2b-register select:user-invalid { box-shadow: 0 0 0 0.15rem #b3261e; }
 .b2b-register .field__input:user-invalid + .field__label, .b2b-register .field__input.is-invalid + .field__label { color: #b3261e; }
+/* Kod WITAJ15 po zapisie do newslettera (02.11.2026) */
+.b2b-nl-code { margin: 1rem 0 0; padding: 1rem 1.2rem; border: 1px dashed rgba(var(--color-foreground), 0.6); font-size: 1.45rem; line-height: 1.5; }
+.b2b-nl-code strong { letter-spacing: 0.12em; font-size: 1.7rem; }
