@@ -134,6 +134,13 @@ async function register(env, f) {
     })).customer;
   }
 
+  // 03.11.2026: zaznaczona zgoda na newsletter = subskrybent (kampanie Shopify Messaging idą tylko do subskrybentów)
+  if (f.newsletter === true) {
+    await gql(env, `mutation($i:CustomerEmailMarketingConsentUpdateInput!){customerEmailMarketingConsentUpdate(input:$i){userErrors{message}}}`, {
+      i: { customerId: customer.id, emailMarketingConsent: { marketingState: 'SUBSCRIBED', marketingOptInLevel: 'SINGLE_OPT_IN', consentUpdatedAt: new Date().toISOString() } },
+    });
+  }
+
   // 30.10.2026: polski kod pocztowy NN-NNN (inaczej Shopify odrzuca adres i firma powstaje bez adresu)
   const zipDigits = f.kod.replace(/\D/g, '');
   const zip = country === 'PL' && zipDigits.length === 5 ? `${zipDigits.slice(0, 2)}-${zipDigits.slice(2)}` : f.kod;

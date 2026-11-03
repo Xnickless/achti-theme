@@ -1,0 +1,13 @@
+{
+ "_opis": "Uwagi Adriana 03.11.2026 (UWAGI DO KOLORYSTYK): obrót gotowych kółek w Plikach, stopnie przeciwnie do wskazówek zegara (PIL rotate).",
+ "az-2753pc": {"*": 180},
+ "az-2917pc": {"*": 180},
+ "az-2903pc": {"SET 7": 180, "SET 9": 180, "SET 10": 180, "SET 11": 180, "SET 18": 180},
+ "az-2907pc": {"SET 3": 180, "SET 5": 180, "SET 8": 180, "SET 9": 180, "SET 10": 180},
+ "az-3040pc-az-3061pc": {"SET 8": 180},
+ "az-2985pc-az-3074pc": {"SET 15": 180},
+ "az-2349pc": {"SET 1": 180},
+ "az-2814pc": {"SET 1": 90, "SET 2": 90, "SET 3": 90, "SET 4": 90, "SET 5": 90, "SET 6": 90, "SET 7": 90, "SET 8": 90,
+               "SET 9": 90, "SET 13": 90, "SET 14": 90, "SET 15": 90, "SET 17": 90, "SET 18": 90, "SET 19": 90,
+               "SET 20": 90, "SET 22": 90, "SET 23": 90, "SET 25": 90, "SET 28": 90, "SET 29": 90, "SET 31": 90}
+}

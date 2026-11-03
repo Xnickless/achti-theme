@@ -601,6 +601,7 @@
       "volume": "Przewidywane ilości zamówień",
       "volume_hint": "Np. 300 szt. na sezon albo 50 szt. miesięcznie — pomoże nam dobrać warunki współpracy.",
       "terms_html": "Akceptuję <a href=\"{{ terms_url }}\" target=\"_blank\" class=\"link\">regulamin B2B</a> i <a href=\"{{ privacy_url }}\" target=\"_blank\" class=\"link\">politykę prywatności</a>.",
+      "marketing": "Chcę otrzymywać e-maile o nowościach, promocjach i kodach rabatowych Achti (rezygnacja w każdej chwili).",
       "zip": "Kod pocztowy",
       "zip_error": "Kod pocztowy w formacie 00-000 (np. 31-242).",
       "city": "Miasto",

@@ -577,6 +577,7 @@
       "volume": "Expected order quantities",
       "volume_hint": "E.g. 300 pcs per season or 50 pcs per month — this helps us tailor the terms.",
       "terms_html": "I accept the <a href=\"{{ terms_url }}\" target=\"_blank\" class=\"link\">B2B terms</a> and the <a href=\"{{ privacy_url }}\" target=\"_blank\" class=\"link\">privacy policy</a>.",
+      "marketing": "I want to receive emails about Achti new arrivals, promotions and discount codes (unsubscribe at any time).",
       "zip": "Postal code",
       "zip_error": "Postal code in the format 00-000 (e.g. 31-242).",
       "city": "City",
