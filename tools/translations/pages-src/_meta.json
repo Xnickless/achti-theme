@@ -70,5 +70,11 @@
   "type": "PAGE",
   "body_key": "body_html",
   "title": "Zrównoważony rozwój"
+ },
+ "polityka-cenowa": {
+  "id": "gid://shopify/Page/200676442454",
+  "type": "PAGE",
+  "body_key": "body_html",
+  "title": "Polityka cenowa"
  }
 }

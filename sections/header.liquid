@@ -362,19 +362,6 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {%- comment -%} 01.11.2026 (lista Adriana, mobile pkt 1): wybór języka w górnym pasku na telefonie i tablecie, nie tylko w szufladzie menu {%- endcomment -%}
-      {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
-        {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'b2b-lang-mobile large-up-hide' -%}
-          <label class="visually-hidden" for="HeaderLanguageMobile">{{ 'localization.language_label' | t }}</label>
-          <select id="HeaderLanguageMobile" name="locale_code" onchange="this.form.submit()">
-            {%- for language in localization.available_languages -%}
-              <option value="{{ language.iso_code }}"{% if language.iso_code == localization.language.iso_code %} selected{% endif %}>
-                {{- language.iso_code | upcase -}}
-              </option>
-            {%- endfor -%}
-          </select>
-        {%- endform -%}
-      {%- endif -%}
       {% render 'header-search', input_id: 'Search-In-Modal' %}
 
       {%- if b2b_access -%}

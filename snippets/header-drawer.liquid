@@ -301,4 +301,17 @@
       </div>
     </div>
   </details>
+      {%- comment -%} 01.11.2026 (lista Adriana, mobile pkt 1): wybór języka w górnym pasku na telefonie i tablecie; 03.11.2026 (Kamil): po lewej obok menu, nie przy walucie {%- endcomment -%}
+      {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+        {%- form 'localization', id: 'HeaderLanguageTopForm', class: 'b2b-lang-mobile large-up-hide' -%}
+          <label class="visually-hidden" for="HeaderLanguageTop">{{ 'localization.language_label' | t }}</label>
+          <select id="HeaderLanguageTop" name="locale_code" onchange="this.form.submit()">
+            {%- for language in localization.available_languages -%}
+              <option value="{{ language.iso_code }}"{% if language.iso_code == localization.language.iso_code %} selected{% endif %}>
+                {{- language.iso_code | upcase -}}
+              </option>
+            {%- endfor -%}
+          </select>
+        {%- endform -%}
+      {%- endif -%}
 </header-drawer>

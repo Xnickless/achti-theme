@@ -1092,6 +1092,7 @@ fieldset.product-form__input--swatch .swatch-input__input + .swatch-input__label
 
 /* Wybór języka w nagłówku na telefonie/tablecie (01.11.2026) — mała lista „PL ▾” obok ikon */
 .b2b-lang-mobile { display: flex; align-items: center; }
+@media screen and (max-width: 989px) { header-drawer { display: flex; align-items: center; } .b2b-lang-mobile select { padding-left: 0.2rem; } }
 .b2b-lang-mobile select {
   appearance: none; -webkit-appearance: none; border: 0; background: transparent; cursor: pointer;
   font-family: var(--font-heading-family); font-size: 1.3rem; letter-spacing: 0.08em; color: rgb(var(--color-foreground));
