@@ -1,0 +1,15 @@
+{%- comment -%}
+  Gwiazdki z metapól Judge.me (reviews.rating, reviews.rating_count). Nic nie renderuje, dopóki produkt nie ma opinii.
+  Usage: {% render 'b2b-rating', product: product, class: 'b2b-rating--product' %}  (link: true = odnośnik do #judgeme_product_reviews)
+{%- endcomment -%}
+{%- assign count = product.metafields.reviews.rating_count.value | default: 0 -%}
+{%- if count > 0 -%}
+  {%- assign rating = product.metafields.reviews.rating.value.rating | default: 0 -%}
+  {%- assign max = product.metafields.reviews.rating.value.scale_max | default: 5 -%}
+  {%- assign pct = rating | times: 100.0 | divided_by: max | round: 1 -%}
+  {%- if link -%}<a href="#judgeme_product_reviews" class="b2b-rating {{ class }}">{%- else -%}<span class="b2b-rating {{ class }}">{%- endif -%}
+    <span class="b2b-rating__stars" aria-hidden="true">★★★★★<span style="width:{{ pct }}%">★★★★★</span></span>
+    <span class="visually-hidden">{{ rating | round: 1 }} / {{ max }}</span>
+    <span>({{ count }})</span>
+  {%- if link -%}</a>{%- else -%}</span>{%- endif -%}
+{%- endif -%}

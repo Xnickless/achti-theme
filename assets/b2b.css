@@ -1107,3 +1107,27 @@ fieldset.product-form__input--swatch .swatch-input__input + .swatch-input__label
 /* Kod WITAJ15 po zapisie do newslettera (02.11.2026) */
 .b2b-nl-code { margin: 1rem 0 0; padding: 1rem 1.2rem; border: 1px dashed rgba(var(--color-foreground), 0.6); font-size: 1.45rem; line-height: 1.5; }
 .b2b-nl-code strong { letter-spacing: 0.12em; font-size: 1.7rem; }
+/* Judge.me — opinie w stylu Achti (04.11.2026) */
+.jm-review-widget-minimal-header__title { font-family: var(--font-heading-family) !important; font-size: calc(var(--font-heading-scale) * 2.4rem) !important; letter-spacing: 0.02em; color: rgb(var(--color-foreground)) !important; }
+[class*="jdgm"], [class*="jm-"] { font-family: var(--font-body-family) !important; }
+.jdgm-tab { font-family: var(--font-body-family) !important; letter-spacing: 0.04em; }
+.jdgm-tab--active { color: rgb(var(--color-foreground)) !important; border-color: rgb(var(--color-foreground)) !important; }
+.jm-button--primary, .jdgm-write-rev-link, .jdgm-submit-rev { background: #262626 !important; border-color: #262626 !important; color: #fff !important; border-radius: 0 !important; text-transform: uppercase; letter-spacing: 0.1em; font-size: 1.3rem !important; padding: 1.2rem 2.8rem !important; }
+.jm-button--primary:hover, .jdgm-write-rev-link:hover { background: #000 !important; }
+.jm-button--secondary { border-radius: 0 !important; border-color: #262626 !important; color: #262626 !important; }
+.jdgm-star, .jm-star, [class*="jm-star"] { color: #262626 !important; }
+.jm-no-reviews-state__text { color: rgba(var(--color-foreground), 0.75) !important; }
+/* Gwiazdki z metapól reviews.rating (Judge.me) — tylko gdy są opinie */
+.b2b-rating { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 1.3rem; color: rgba(var(--color-foreground), 0.75); text-decoration: none; }
+.b2b-rating__stars { position: relative; display: inline-block; letter-spacing: 0.12em; color: rgba(var(--color-foreground), 0.2); line-height: 1; }
+.b2b-rating__stars span { position: absolute; inset: 0 auto 0 0; overflow: hidden; white-space: nowrap; color: #262626; }
+.card-information .b2b-rating { margin-top: 0.4rem; font-size: 1.2rem; }
+.product__title + .b2b-rating, .b2b-rating--product { margin: 0.4rem 0 1rem; }
+/* Tabele w treści stron (polityka cenowa, 04.11.2026) */
+.rte table.b2b-table { width: 100%; max-width: 56rem; border-collapse: collapse; margin: 1.6rem 0 2rem; font-size: 1.5rem; table-layout: auto; }
+.rte table.b2b-table th, .rte table.b2b-table td { border: 0; border-bottom: 1px solid rgba(var(--color-foreground), 0.12); padding: 1rem 1.4rem; text-align: left; }
+.rte table.b2b-table thead th { background: #262626; color: #fff; font-family: var(--font-heading-family); font-weight: 400; text-transform: uppercase; letter-spacing: 0.08em; font-size: 1.2rem; }
+.rte table.b2b-table td:last-child, .rte table.b2b-table th:last-child { text-align: right; white-space: nowrap; }
+.rte table.b2b-table tbody tr:nth-child(even) td { background: #f5f4f2; }
+.rte table.b2b-table tbody tr:last-child td { font-weight: 600; }
+@media screen and (max-width: 749px) { .rte table.b2b-table th, .rte table.b2b-table td { padding: 0.8rem 1rem; font-size: 1.35rem; } .rte table.b2b-table td:last-child { white-space: normal; } }

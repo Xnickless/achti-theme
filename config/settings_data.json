@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "logo": "shopify://shop_images/achti_poziom_jpg.jpg",
@@ -100,9 +109,11 @@
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
     "brand_description": "<p>Tworzymy czapki z pasją od ponad 30 lat. Wysoka jakość, naturalne materiały i ponadczasowy design.</p>",
+    "brand_image": "shopify://shop_images/achti_poziom_jpg.jpg",
     "brand_image_width": 170,
     "social_facebook_link": "",
     "social_instagram_link": "",
+    "social_linkedin_link": "",
     "social_youtube_link": "",
     "social_tiktok_link": "",
     "social_twitter_link": "",
@@ -119,6 +130,19 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
+    "b2b_hide_prices": true,
+    "b2b_require_company": true,
+    "b2b_register_page": "rejestracja",
+    "b2b_tag_new": "nowosc",
+    "social_image": "shopify://shop_images/achti-social-en.jpg",
+    "b2b_catalog_pdf": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b_b6f47a8f-3145-43fe-bd11-7ede4afd4881.pdf?v=1793101168",
+    "b2b_catalog_pdf_prices": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-acb75e57b4cb.pdf?v=1793101174",
+    "b2b_catalog_pdf_en": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-en.pdf?v=1793101217",
+    "b2b_catalog_pdf_prices_en": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-en-86f613559997.pdf?v=1793101224",
+    "b2b_catalog_pdf_de": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-de.pdf?v=1793101267",
+    "b2b_catalog_pdf_prices_de": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-de-b95e0447fee4.pdf?v=1793101273",
+    "b2b_catalog_pdf_fr": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-fr.pdf?v=1793101316",
+    "b2b_catalog_pdf_prices_fr": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-fr-7e3c69c80ca6.pdf?v=1793101324",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -134,6 +158,13 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
@@ -201,22 +232,7 @@
           "shadow": "#ffffff"
         }
       }
-    },
-    "b2b_hide_prices": true,
-    "b2b_require_company": true,
-    "b2b_tag_new": "nowosc",
-    "b2b_register_page": "rejestracja",
-    "brand_image": "shopify://shop_images/achti_poziom_jpg.jpg",
-    "social_linkedin_link": "",
-    "social_image": "shopify://shop_images/achti-social-en.jpg",
-    "b2b_catalog_pdf": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b_b6f47a8f-3145-43fe-bd11-7ede4afd4881.pdf?v=1793101168",
-    "b2b_catalog_pdf_en": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-en.pdf?v=1793101217",
-    "b2b_catalog_pdf_prices_en": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-en-86f613559997.pdf?v=1793101224",
-    "b2b_catalog_pdf_de": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-de.pdf?v=1793101267",
-    "b2b_catalog_pdf_prices_de": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-de-b95e0447fee4.pdf?v=1793101273",
-    "b2b_catalog_pdf_fr": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-fr.pdf?v=1793101316",
-    "b2b_catalog_pdf_prices_fr": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-fr-7e3c69c80ca6.pdf?v=1793101324",
-    "b2b_catalog_pdf_prices": "https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti-katalog-b2b-cennik-acb75e57b4cb.pdf?v=1793101174"
+    }
   },
   "presets": {
     "Trade": {
