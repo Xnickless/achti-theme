@@ -231,15 +231,15 @@ COLLECTIONS = {
 MENU = {  # tytuł PL -> tłumaczenie
  'en': {'Ona': 'Women', 'On': 'Men', 'Dla dzieci': 'Kids', 'Premium Merino': 'Premium Merino', 'Private Label': 'Private Label', 'Czapki Reklamowe': 'Promotional Hats', 'Wyprzedaż': 'Sale',
         'O nas': 'About us', 'Produkcja': 'Production', 'Materiały': 'Materials', 'Jakość': 'Quality', 'Zrównoważony rozwój': 'Sustainability', 'Blog': 'Blog', 'Kontakt': 'Contact',
-        'Logowanie B2B': 'B2B login', 'Rejestracja firmy': 'Company registration', 'Warunki współpracy': 'Terms of cooperation', 'Wysyłka i dostawa': 'Shipping & delivery', 'Zwroty i reklamacje': 'Returns & claims', 'FAQ': 'FAQ', 'Regulamin B2B': 'B2B Terms of Service', 'Polityka cookies': 'Cookie policy',
+        'Logowanie B2B': 'B2B login', 'Rejestracja firmy': 'Company registration', 'Warunki współpracy': 'Terms of cooperation', 'Wysyłka i dostawa': 'Shipping & delivery', 'Zwroty i reklamacje': 'Returns & claims', 'FAQ': 'FAQ', 'Regulamin B2B': 'B2B Terms of Service', 'Polityka cookies': 'Cookie policy', 'Polityka cenowa': 'Pricing policy',
         'Szukaj': 'Search', 'Kolekcje': 'Collections', 'Informacje': 'Information', 'Obsługa klienta': 'Customer service'},
  'fr': {'Ona': 'Femme', 'On': 'Homme', 'Dla dzieci': 'Enfant', 'Premium Merino': 'Premium Mérinos', 'Private Label': 'Private Label', 'Czapki Reklamowe': 'Bonnets publicitaires', 'Wyprzedaż': 'Soldes',
         'O nas': 'À propos', 'Produkcja': 'Production', 'Materiały': 'Matières', 'Jakość': 'Qualité', 'Zrównoważony rozwój': 'Développement durable', 'Blog': 'Blog', 'Kontakt': 'Contact',
-        'Logowanie B2B': 'Connexion B2B', 'Rejestracja firmy': "Inscription de l'entreprise", 'Warunki współpracy': 'Conditions de coopération', 'Wysyłka i dostawa': 'Expédition et livraison', 'Zwroty i reklamacje': 'Retours et réclamations', 'FAQ': 'FAQ', 'Regulamin B2B': 'CGV B2B', 'Polityka cookies': 'Politique de cookies',
+        'Logowanie B2B': 'Connexion B2B', 'Rejestracja firmy': "Inscription de l'entreprise", 'Warunki współpracy': 'Conditions de coopération', 'Wysyłka i dostawa': 'Expédition et livraison', 'Zwroty i reklamacje': 'Retours et réclamations', 'FAQ': 'FAQ', 'Regulamin B2B': 'CGV B2B', 'Polityka cookies': 'Politique de cookies', 'Polityka cenowa': 'Politique tarifaire',
         'Szukaj': 'Rechercher', 'Kolekcje': 'Collections', 'Informacje': 'Informations', 'Obsługa klienta': 'Service client'},
  'de': {'Ona': 'Damen', 'On': 'Herren', 'Dla dzieci': 'Kinder', 'Premium Merino': 'Premium Merino', 'Private Label': 'Private Label', 'Czapki Reklamowe': 'Werbemützen', 'Wyprzedaż': 'Sale',
         'O nas': 'Über uns', 'Produkcja': 'Produktion', 'Materiały': 'Materialien', 'Jakość': 'Qualität', 'Zrównoważony rozwój': 'Nachhaltigkeit', 'Blog': 'Blog', 'Kontakt': 'Kontakt',
-        'Logowanie B2B': 'B2B-Login', 'Rejestracja firmy': 'Firmenregistrierung', 'Warunki współpracy': 'Kooperationsbedingungen', 'Wysyłka i dostawa': 'Versand und Lieferung', 'Zwroty i reklamacje': 'Rücksendungen und Reklamationen', 'FAQ': 'FAQ', 'Regulamin B2B': 'B2B-AGB', 'Polityka cookies': 'Cookie-Richtlinie',
+        'Logowanie B2B': 'B2B-Login', 'Rejestracja firmy': 'Firmenregistrierung', 'Warunki współpracy': 'Kooperationsbedingungen', 'Wysyłka i dostawa': 'Versand und Lieferung', 'Zwroty i reklamacje': 'Rücksendungen und Reklamationen', 'FAQ': 'FAQ', 'Regulamin B2B': 'B2B-AGB', 'Polityka cookies': 'Cookie-Richtlinie', 'Polityka cenowa': 'Preispolitik',
         'Szukaj': 'Suchen', 'Kolekcje': 'Kollektionen', 'Informacje': 'Informationen', 'Obsługa klienta': 'Kundenservice'},
 }
 
