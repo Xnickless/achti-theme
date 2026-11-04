@@ -833,7 +833,7 @@ body:has([id$="__image_banner"]) .header-wrapper { border-bottom: 0; }
   .b2b-usp__list { grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); grid-template-columns: none; padding-top: 4.4rem; padding-bottom: 4.4rem; }
   .b2b-usp__item + .b2b-usp__item { border-left: 1px solid rgba(var(--color-foreground), 0.1); }
   .b2b-usp__value { font-size: calc(var(--font-heading-scale) * 3.6rem); }
-  .b2b-usp__label { font-size: calc(var(--font-heading-scale) * 1.25rem); white-space: nowrap; max-width: none; }
+  .b2b-usp__label { font-size: calc(var(--font-heading-scale) * 1.25rem); white-space: normal; text-wrap: balance; max-width: 26rem; } /* 04.11.2026: nowrap zlewał podpisy przy ~1500 px */
 }
 
 /* Nagłówek: „Załóż konto B2B” obok ikony profilu, tylko dla gości (29.09.2026; wcześniej beżowy pas pod hero, teraz wyłączony) */
