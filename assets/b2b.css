@@ -1147,3 +1147,6 @@ html.b2b-lb-open{overflow:hidden}
 .b2b-lb__nav{top:50%;transform:translateY(-50%);width:5.2rem;height:8rem;font-size:4.4rem;line-height:1}
 .b2b-lb__nav--prev{left:1.2rem}.b2b-lb__nav--next{right:1.2rem}
 @media screen and (max-width:749px){.b2b-lb{padding:5.6rem 1.2rem}.b2b-lb__img{width:min(92vw,70vh);height:min(92vw,70vh)}.b2b-lb__nav{top:auto;bottom:1.6rem;transform:none;width:5.6rem;height:5.6rem}.b2b-lb__nav--prev{left:calc(50% - 6.4rem)}.b2b-lb__nav--next{right:calc(50% - 6.4rem)}}
+/* Palety przędzy w lightboxie mniejsze (05.11.2026, Kamil): zdjęcia kart mają ~300 px na motek — pełny ekran je rozmywał */
+.b2b-lb:not(.b2b-lb--probka) .b2b-lb__img{width:min(44vmin,34rem);height:min(44vmin,34rem)}
+@media screen and (max-width:749px){.b2b-lb:not(.b2b-lb--probka) .b2b-lb__img{width:min(78vw,34rem);height:min(78vw,34rem)}}
