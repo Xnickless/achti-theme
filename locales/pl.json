@@ -789,6 +789,9 @@
     "locked_pending": "Ceny po akceptacji firmy",
     "pending_footer_html": "Ceny zobaczysz po przypisaniu konta do firmy. <a href=\"{{ register_url }}\">Zarejestruj firmę</a> lub <a href=\"{{ contact_url }}\">napisz do nas</a>.",
     "color_order": {
+      "lb_close": "Zamknij powiększenie",
+      "lb_prev": "Poprzedni kolor",
+      "lb_next": "Następny kolor",
       "heading": "Kolory ({{ count }}) — wpisz ilość przy wybranych",
       "heading_guest": "Kolory ({{ count }})",
       "scroll_up": "Przewiń kolory w górę",

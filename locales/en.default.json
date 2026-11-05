@@ -765,6 +765,9 @@
     "locked_pending": "Prices after company approval",
     "pending_footer_html": "You will see prices once your account is linked to a company. <a href=\"{{ register_url }}\">Register your company</a> or <a href=\"{{ contact_url }}\">contact us</a>.",
     "color_order": {
+      "lb_close": "Close zoom",
+      "lb_prev": "Previous colour",
+      "lb_next": "Next colour",
       "heading": "Colours ({{ count }}) — enter quantities for the ones you want",
       "heading_guest": "Colours ({{ count }})",
       "scroll_up": "Scroll colours up",

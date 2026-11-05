@@ -18,7 +18,7 @@
   assign colors_count = product.variants.size
 -%}
 <script src="{{ 'b2b-color-order.js' | asset_url }}" defer="defer"></script>
-<b2b-color-order class="b2b-co b2b-co--list{% if kolornik contains 'az-' %} b2b-co--probka{% endif %}" data-section-id="{{ section_id }}">
+<b2b-color-order class="b2b-co b2b-co--list{% if kolornik contains 'az-' %} b2b-co--probka{% endif %}" data-section-id="{{ section_id }}" data-lb-close="{{ 'b2b.color_order.lb_close' | t | escape }}" data-lb-prev="{{ 'b2b.color_order.lb_prev' | t | escape }}" data-lb-next="{{ 'b2b.color_order.lb_next' | t | escape }}">
   <p class="b2b-co__heading form__label">
     {%- if b2b_access -%}
       {{- 'b2b.color_order.heading' | t: count: colors_count -}}
@@ -41,7 +41,7 @@
       -%}
       <li class="b2b-co__item{% if color_off %} is-off{% endif %}">
         <label class="b2b-co__swatch" for="{{ input_id }}" title="{{ variant.option1 | escape }}">
-          <span class="b2b-co__circle" style="background-image: url('{{ swatch_url }}');"></span>
+          <span class="b2b-co__circle" style="background-image: url('{{ swatch_url }}');" data-full="{{ swatch_url }}" data-name="{{ variant.option1 | escape }}"></span>
           <span class="b2b-co__zoom" style="background-image: url('{{ swatch_url }}');" aria-hidden="true"></span>
           <span class="b2b-co__name">{{ variant.option1 | escape }}</span>
         </label>

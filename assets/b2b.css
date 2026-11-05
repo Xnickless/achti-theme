@@ -1131,3 +1131,19 @@ fieldset.product-form__input--swatch .swatch-input__input + .swatch-input__label
 .rte table.b2b-table tbody tr:nth-child(even) td { background: #f5f4f2; }
 .rte table.b2b-table tbody tr:last-child td { font-weight: 600; }
 @media screen and (max-width: 749px) { .rte table.b2b-table th, .rte table.b2b-table td { padding: 0.8rem 1rem; font-size: 1.35rem; } .rte table.b2b-table td:last-child { white-space: normal; } }
+
+/* Lightbox kolorów (05.11.2026, Adrian: „kolorystyka w większym powiększeniu jak fotki produktów”) */
+.b2b-co__circle{cursor:zoom-in}
+html.b2b-lb-open{overflow:hidden}
+.b2b-lb{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;background:rgba(20,20,20,.88);padding:6rem 7rem}
+.b2b-lb__fig{margin:0;display:flex;flex-direction:column;align-items:center;gap:1.4rem;max-width:100%}
+.b2b-lb__img{display:block;width:min(80vmin,90rem);height:min(80vmin,90rem);object-fit:cover;border-radius:50%;background:#f2f1ef;box-shadow:0 1.2rem 4rem rgba(0,0,0,.4)}
+.b2b-lb--probka .b2b-lb__img{object-fit:contain;border-radius:.4rem;background:#fff}
+.b2b-lb__name{color:#fff;font-family:var(--font-heading-family);font-size:2rem;letter-spacing:.08em;text-transform:uppercase}
+.b2b-lb__count{position:absolute;top:2rem;left:50%;transform:translateX(-50%);margin:0;color:rgba(255,255,255,.7);font-size:1.3rem;letter-spacing:.1em}
+.b2b-lb__close,.b2b-lb__nav{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s}
+.b2b-lb__close:hover,.b2b-lb__nav:hover{background:rgba(255,255,255,.25)}
+.b2b-lb__close{top:1.6rem;right:1.6rem;width:4.4rem;height:4.4rem;font-size:3rem;line-height:1}
+.b2b-lb__nav{top:50%;transform:translateY(-50%);width:5.2rem;height:8rem;font-size:4.4rem;line-height:1}
+.b2b-lb__nav--prev{left:1.2rem}.b2b-lb__nav--next{right:1.2rem}
+@media screen and (max-width:749px){.b2b-lb{padding:5.6rem 1.2rem}.b2b-lb__img{width:min(92vw,70vh);height:min(92vw,70vh)}.b2b-lb__nav{top:auto;bottom:1.6rem;transform:none;width:5.6rem;height:5.6rem}.b2b-lb__nav--prev{left:calc(50% - 6.4rem)}.b2b-lb__nav--next{right:calc(50% - 6.4rem)}}

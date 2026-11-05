@@ -777,6 +777,9 @@
     "locked_pending": "Prix après validation de l’entreprise",
     "pending_footer_html": "Vous verrez les prix une fois votre compte rattaché à une entreprise. <a href=\"{{ register_url }}\">Inscrire l’entreprise</a> ou <a href=\"{{ contact_url }}\">nous contacter</a>.",
     "color_order": {
+      "lb_close": "Fermer l’agrandissement",
+      "lb_prev": "Coloris précédent",
+      "lb_next": "Coloris suivant",
       "heading": "Coloris ({{ count }}) — indiquez la quantité pour ceux choisis",
       "heading_guest": "Coloris ({{ count }})",
       "scroll_up": "Faire défiler les couleurs vers le haut",

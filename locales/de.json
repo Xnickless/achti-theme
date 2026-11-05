@@ -765,6 +765,9 @@
     "locked_pending": "Preise nach Freigabe des Unternehmens",
     "pending_footer_html": "Preise sehen Sie, sobald Ihr Konto einem Unternehmen zugeordnet ist. <a href=\"{{ register_url }}\">Unternehmen registrieren</a> oder <a href=\"{{ contact_url }}\">Kontakt aufnehmen</a>.",
     "color_order": {
+      "lb_close": "Vergrößerung schließen",
+      "lb_prev": "Vorherige Farbe",
+      "lb_next": "Nächste Farbe",
       "heading": "Farben ({{ count }}) — Menge bei den gewünschten eingeben",
       "heading_guest": "Farben ({{ count }})",
       "scroll_up": "Farben nach oben blättern",

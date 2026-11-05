@@ -49,26 +49,69 @@ if (!customElements.get('b2b-color-order')) {
         });
       }
 
+      openLightbox(start) {
+        const items = [...this.querySelectorAll('.b2b-co__circle[data-full]')];
+        if (start < 0 || !items.length) return;
+        let i = start;
+        const d = this.dataset;
+        const box = document.createElement('div');
+        box.className = 'b2b-lb' + (this.classList.contains('b2b-co--probka') ? ' b2b-lb--probka' : '');
+        box.setAttribute('role', 'dialog');
+        box.setAttribute('aria-modal', 'true');
+        box.innerHTML = `<button type="button" class="b2b-lb__close" aria-label="${d.lbClose || 'Zamknij'}">×</button>
+          <button type="button" class="b2b-lb__nav b2b-lb__nav--prev" aria-label="${d.lbPrev || ''}">‹</button>
+          <figure class="b2b-lb__fig"><img class="b2b-lb__img" alt=""><figcaption class="b2b-lb__name"></figcaption></figure>
+          <button type="button" class="b2b-lb__nav b2b-lb__nav--next" aria-label="${d.lbNext || ''}">›</button>
+          <p class="b2b-lb__count"></p>`;
+        const img = box.querySelector('.b2b-lb__img');
+        const show = () => {
+          const c = items[i];
+          img.src = c.dataset.full;
+          img.alt = c.dataset.name;
+          box.querySelector('.b2b-lb__name').textContent = c.dataset.name;
+          box.querySelector('.b2b-lb__count').textContent = `${i + 1} / ${items.length}`;
+        };
+        const go = (step) => { i = (i + step + items.length) % items.length; show(); };
+        const close = () => {
+          box.remove();
+          document.removeEventListener('keydown', onKey);
+          document.documentElement.classList.remove('b2b-lb-open');
+          items[i].closest('.b2b-co__item').querySelector('.b2b-co__input')?.focus({ preventScroll: true });
+        };
+        const onKey = (e) => {
+          if (e.key === 'Escape') close();
+          else if (e.key === 'ArrowRight') go(1);
+          else if (e.key === 'ArrowLeft') go(-1);
+        };
+        box.addEventListener('click', (e) => {
+          if (e.target.closest('.b2b-lb__nav--prev')) go(-1);
+          else if (e.target.closest('.b2b-lb__nav--next')) go(1);
+          else if (e.target.closest('.b2b-lb__close') || !e.target.closest('.b2b-lb__fig')) close();
+        });
+        let x0 = null;
+        box.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+        box.addEventListener('touchend', (e) => {
+          if (x0 === null) return;
+          const dx = e.changedTouches[0].clientX - x0;
+          if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+          x0 = null;
+        });
+        document.addEventListener('keydown', onKey);
+        document.documentElement.classList.add('b2b-lb-open');
+        document.body.appendChild(box);
+        show();
+        box.querySelector('.b2b-lb__close').focus();
+      }
+
       connectedCallback() {
-        // powiększenie kółka (Adrian 13.10.2026): na komputerze po najechaniu (CSS), na telefonie po dotknięciu
+        // powiększenie koloru (Adrian 13.10.2026; 05.11.2026 klienci: „jak fotki produktów”): na komputerze podgląd po najechaniu (CSS),
+        // kliknięcie/dotknięcie otwiera lightbox z dużym zdjęciem próbki i strzałkami do kolejnych kolorów
         this.addEventListener('click', (e) => {
           const circle = e.target.closest('.b2b-co__circle, .b2b-co__zoom');
-          if (!circle || !window.matchMedia('(hover: none)').matches) return;
+          if (!circle) return;
           e.preventDefault(); // bez fokusu na polu ilości (nie wyskakuje klawiatura)
-          const item = circle.closest('.b2b-co__item');
-          const open = !item.classList.contains('is-zoom');
-          this.querySelectorAll('.b2b-co__item.is-zoom').forEach((i) => i.classList.remove('is-zoom'));
-          item.classList.toggle('is-zoom', open);
-          const zoom = item.querySelector('.b2b-co__zoom');
-          zoom.style.removeProperty('--dx');
-          if (open && !this.classList.contains('b2b-co--list')) {
-            // przy krawędzi ekranu (pierwsza/ostatnia kolumna na telefonie) przesuń podgląd do środka
-            const c = item.querySelector('.b2b-co__circle').getBoundingClientRect();
-            const w = zoom.offsetWidth; // szerokość bez transformacji
-            const left = c.left + c.width / 2 - w / 2;
-            const dx = Math.max(8 - left, 0) - Math.max(left + w - (document.documentElement.clientWidth - 8), 0);
-            if (dx) zoom.style.setProperty('--dx', `${Math.round(dx)}px`);
-          }
+          const c = circle.closest('.b2b-co__item').querySelector('.b2b-co__circle');
+          this.openLightbox([...this.querySelectorAll('.b2b-co__circle[data-full]')].indexOf(c));
         });
         // tabela z przewijaniem (Kamil 20.10.2026): podgląd jest position: fixed obok kółka, żeby okienko go nie przycinało
         const placeZoom = (circle) => {
