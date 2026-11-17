@@ -56,6 +56,9 @@ def main():
         own = lambda c: max((k for k in en if any(v['sku'] == k or v['sku'].startswith(k + '-')
                                                   for v in c['variants']['nodes'][:1])), key=len, default='')
         p = next((c for c in cand if own(c) == code), None)
+        if not p:  # wyszukiwarka Admin API bywa chwilowo niepełna — druga próba
+            cand = si.gql(Q, {'q': f'sku:{code}*'})['products']['nodes']
+            p = next((c for c in cand if own(c) == code), None)
         if not p:
             print('brak produktu', code); continue
         t, loc = en.get(code) or {}, local.get(code) or {}
@@ -93,7 +96,7 @@ def main():
                 'Product page': SITE + p['handle'],
             })
     os.makedirs(OUT, exist_ok=True)
-    name = os.path.join(OUT, f'ankorstore-{len(codes)}')
+    name = os.path.join(OUT, 'ankorstore-cala-oferta' if len(codes) > 100 else f'ankorstore-{len(codes)}')
     cols = list(rows[0])
     with open(name + '.csv', 'w', newline='', encoding='utf-8-sig') as f:
         w = csv.DictWriter(f, cols); w.writeheader(); w.writerows(rows)
