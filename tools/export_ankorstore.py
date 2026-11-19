@@ -85,8 +85,9 @@ def main():
                 'Composition': meta.get('custom.sklad', ''),
                 'Lining': LINING.get(loc.get('podszycie', ''), ''),
                 'Size': meta.get('custom.rozmiar', 'One Size'),
-                'Made in': 'Poland',
-                'HS code': '6117 80' if headband else '6505 00',
+                'VAT rate %': 23,
+                'Made in': 'PL',  # Ankorstore: kod kraju ISO (2 znaki)
+                'HS code': '61178080' if headband else '65050090',  # CN, same cyfry (spacja = błąd formatu)
                 'Unit weight (g)': 110,
                 'Minimum per colour (pcs)': 2,
                 'Lead time': '7-14 working days (made to order)',
