@@ -90,6 +90,7 @@ def main():
                 'HS code': '61178080' if headband else '65050090',  # CN, same cyfry (spacja = błąd formatu)
                 'Unit weight (g)': 110,
                 'Minimum per colour (pcs)': 2,
+                'Stock': 1000,  # na zamówienie — Ankorstore przy 0 pokazuje „Out of stock” i blokuje zamówienia
                 'Lead time': '7-14 working days (made to order)',
                 'Main image URL': imgs[0] if imgs else '',
                 'Lifestyle image URL': imgs[1] if len(imgs) > 1 else '',
