@@ -15,6 +15,7 @@
 {% enddoc %}
 {%- liquid
   assign kolornik = product.metafields.custom.kolornik.value | handleize
+  assign min_per_color = settings.b2b_min_per_color | default: 10
   assign colors_count = product.variants.size
 -%}
 <script src="{{ 'b2b-color-order.js' | asset_url }}" defer="defer"></script>
@@ -56,7 +57,7 @@
               type="number"
               inputmode="numeric"
               min="0"
-              data-min="2"
+              data-min="{{ settings.b2b_min_per_color | default: 10 }}"
               step="1"
               value="0"
               data-variant-id="{{ variant.id }}"
@@ -78,7 +79,7 @@
   {%- if b2b_access -%}
     <div class="b2b-co__footer">
       <p class="b2b-co__total" data-total aria-live="polite">{{ 'b2b.color_order.empty' | t }}</p>
-      <p class="b2b-co__min">{{ 'b2b.color_order.min_per_color' | t }}</p>
+      <p class="b2b-co__min">{{ 'b2b.color_order.min_per_color' | t: min: min_per_color }}</p>
       <p class="b2b-co__value" data-value hidden></p>
       <button type="button" class="button button--full-width b2b-co__add" data-add disabled>
         {{- 'products.product.add_to_cart' | t -}}

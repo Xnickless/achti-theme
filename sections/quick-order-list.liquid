@@ -30,8 +30,12 @@
   }
 {%- endstyle -%}
 
-{%- comment -%} Achti: produkty z kolornikiem mają siatkę kolorów z ilościami w main-product (b2b-color-order) {%- endcomment -%}
-{%- if b2b_access and product.metafields.custom.kolornik == blank -%}
+{%- comment -%}
+  Achti: produkty z kolornikiem mają siatkę kolorów z ilościami w main-product (b2b-color-order).
+  20.11.2026 (Adrian: „nie rozumiem o co chodzi”): tabela pod kartą produktu dublowała pole ilości i przycisk z góry
+  na produktach bez kolornika — domyślnie wyłączona, ustawienie sekcji show_table.
+{%- endcomment -%}
+{%- if section.settings.show_table and b2b_access and product.metafields.custom.kolornik == blank -%}
 {% render 'quick-order-list',
   product: product,
   show_image: section.settings.show_image,
@@ -47,6 +51,12 @@
     "templates": ["product"]
   },
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_table",
+      "label": "Pokaż tabelę szybkiego zamawiania (produkty bez kolornika)",
+      "default": false
+    },
     {
       "type": "range",
       "id": "variants_per_page",

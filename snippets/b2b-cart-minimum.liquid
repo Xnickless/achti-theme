@@ -22,11 +22,13 @@
     assign below = true
   endif
   comment
-    01.11.2026 (Adrian): maszyna robi minimum 2 szt. jednego koloru — pozycja z 1 szt. blokuje zamówienie jak brak minimum
+    01.11.2026 (Adrian): maszyna robi minimum 2 szt. jednego koloru — pozycja poniżej blokuje zamówienie jak brak minimum.
+    20.11.2026 (Adrian): minimum 10 szt. — próg w ustawieniu b2b_min_per_color.
   endcomment
+  assign min_color = settings.b2b_min_per_color | default: 10
   assign few = ''
   for item in cart.items
-    if item.quantity < 2
+    if item.quantity < min_color
       assign few_t = item.product.title | escape
       assign few_v = item.variant.title | escape
       assign few = few | append: few_t | append: ' (' | append: few_v | append: ')|'
@@ -46,7 +48,7 @@
 {%- elsif cart.item_count > 0 -%}
   {%- if few != '' -%}
     <p class="b2b-cart-note b2b-cart-note--warn" role="status">
-      {{ 'b2b.cart.min_per_color_html' | t: min: 2, items: few_list }}
+      {{ 'b2b.cart.min_per_color_html' | t: min: min_color, items: few_list }}
     </p>
   {%- endif -%}
   {%- if below and subtotal < min_cents -%}

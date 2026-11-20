@@ -89,7 +89,7 @@ def main():
                 'Made in': 'PL',  # Ankorstore: kod kraju ISO (2 znaki)
                 'HS code': '61178080' if headband else '65050090',  # CN, same cyfry (spacja = błąd formatu)
                 'Unit weight (g)': 110,
-                'Minimum per colour (pcs)': 2,
+                'Minimum per colour (pcs)': 10,  # 20.11.2026 (Adrian): produkcja min. 10 szt. koloru
                 'Stock': 1000,  # na zamówienie — Ankorstore przy 0 pokazuje „Out of stock” i blokuje zamówienia
                 'Lead time': '7-14 working days (made to order)',
                 'Main image URL': imgs[0] if imgs else '',

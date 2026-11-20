@@ -783,7 +783,7 @@
       "added": "{{ count }} Stk. in den Warenkorb gelegt",
       "error": "Hinzufügen fehlgeschlagen. Bitte erneut versuchen.",
       "unavailable": "vorübergehend nicht verfügbar",
-      "min_per_color": "Mindestens 2 Stk. pro Farbe"
+      "min_per_color": "Mindestens {{ min }} Stk. pro Farbe"
     },
     "ai_photo": "KI-generiertes Bild",
     "login_choice": {

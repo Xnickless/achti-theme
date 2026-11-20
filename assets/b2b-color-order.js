@@ -1,5 +1,6 @@
 // Zamówienie wielu kolorów naraz (snippets/b2b-color-order.liquid): ilości przy kółkach → jedno /cart/add.js z listą wariantów.
-const MIN_PER_COLOR = 2; // minimum sztuk jednego koloru (01.11.2026, Adrian)
+// minimum sztuk jednego koloru: data-min pól (ustawienie motywu b2b_min_per_color; 01.11.2026 = 2, 20.11.2026 = 10)
+let MIN_PER_COLOR = 10;
 
 if (!customElements.get('b2b-color-order')) {
   customElements.define(
@@ -146,6 +147,8 @@ if (!customElements.get('b2b-color-order')) {
         if (!this.inputs.length) return;
         const i18n = this.querySelector('[data-b2b-co-i18n]');
         this.t = i18n ? JSON.parse(i18n.textContent) : {};
+        const minEl = this.querySelector('.b2b-co__input[data-min]');
+        if (minEl) MIN_PER_COLOR = parseInt(minEl.dataset.min, 10) || MIN_PER_COLOR;
         this.totalEl = this.querySelector('[data-total]');
         this.addBtn = this.querySelector('[data-add]');
         this.msg = this.querySelector('[data-msg]');
@@ -156,7 +159,7 @@ if (!customElements.get('b2b-color-order')) {
           const input = step.parentElement.querySelector('.b2b-co__input');
           const cur = parseInt(input.value, 10) || 0;
           const d = parseInt(step.dataset.step, 10);
-          // 01.11.2026 (Adrian): maszyna robi minimum 2 szt. — z 0 skok na 2, z 2 w dół na 0
+          // Adrian: produkcja ma minimum na kolor — z 0 skok na minimum, z minimum w dół na 0
           let v = Math.max(0, cur + d);
           if (d > 0 && v < MIN_PER_COLOR) v = MIN_PER_COLOR;
           if (d < 0 && v < MIN_PER_COLOR) v = 0;

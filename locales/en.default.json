@@ -783,7 +783,7 @@
       "added": "Added {{ count }} pcs to cart",
       "error": "Could not add to cart. Please try again.",
       "unavailable": "temporarily unavailable",
-      "min_per_color": "Minimum 2 pcs per colour"
+      "min_per_color": "Minimum {{ min }} pcs per colour"
     },
     "ai_photo": "AI-generated image",
     "login_choice": {

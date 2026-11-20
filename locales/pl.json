@@ -807,7 +807,7 @@
       "added": "Dodano {{ count }} szt. do koszyka",
       "error": "Nie udało się dodać do koszyka. Spróbuj ponownie.",
       "unavailable": "chwilowo brak",
-      "min_per_color": "Minimum 2 szt. na kolor"
+      "min_per_color": "Minimum {{ min }} szt. na kolor"
     },
     "ai_photo": "Zdjęcie wygenerowane przez AI",
     "login_choice": {

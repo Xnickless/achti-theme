@@ -795,7 +795,7 @@
       "added": "{{ count }} pcs ajoutées au panier",
       "error": "Impossible d’ajouter au panier. Veuillez réessayer.",
       "unavailable": "momentanément indisponible",
-      "min_per_color": "Minimum 2 pcs par coloris"
+      "min_per_color": "Minimum {{ min }} pcs par coloris"
     },
     "ai_photo": "Image générée par IA",
     "login_choice": {

@@ -381,14 +381,14 @@
                           name="quantity"
                           id="Quantity-{{ section.id }}"
                           data-cart-quantity="{{ cart_qty }}"
-                          data-min="{{ product.selected_or_first_available_variant.quantity_rule.min | at_least: 2 }}"
-                          min="{{ product.selected_or_first_available_variant.quantity_rule.min | at_least: 2 }}"
+                          data-min="{{ product.selected_or_first_available_variant.quantity_rule.min | at_least: settings.b2b_min_per_color }}"
+                          min="{{ product.selected_or_first_available_variant.quantity_rule.min | at_least: settings.b2b_min_per_color }}"
                           {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
                             data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
                             max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
                           {% endif %}
                           step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
-                          value="{{ product.selected_or_first_available_variant.quantity_rule.min | at_least: 2 }}"
+                          value="{{ product.selected_or_first_available_variant.quantity_rule.min | at_least: settings.b2b_min_per_color }}"
                           form="{{ product_form_id }}"
                         >
                         <button class="quantity__button" name="plus" type="button">
