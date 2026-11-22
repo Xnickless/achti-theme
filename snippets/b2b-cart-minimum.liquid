@@ -64,4 +64,42 @@
   {%- elsif free_cents > 0 -%}
     <p class="b2b-cart-note b2b-cart-note--ok" role="status">{{ 'b2b.cart.free_shipping_ok' | t }}</p>
   {%- endif -%}
+  {%- comment -%}
+    Black Week 23.11 00:00 – 27.11 23:59 (Europe/Warsaw): ile brakuje do kolejnego progu rabatu kwotowego.
+    Progi PLN netto od wartości produktów przed rabatem (rabaty automatyczne w panelu). Tylko koszyk w PLN — w EUR/USD Shopify przelicza progi kursem.
+  {%- endcomment -%}
+  {%- assign now_s = 'now' | date: '%s' | plus: 0 -%}
+  {%- if cart.currency.iso_code == 'PLN' and now_s >= 1795388400 and now_s <= 1795820399 -%}
+    {%- liquid
+      assign bw_tiers = '5000:100,10000:200,15000:500,25000:1000,35000:1500,50000:2500' | split: ','
+      assign bw_has = 0
+      assign bw_next = 0
+      assign bw_next_min = 0
+      for t in bw_tiers
+        assign tp = t | split: ':'
+        assign t_min = tp[0] | times: 100
+        assign t_bonus = tp[1] | times: 100
+        if subtotal >= t_min
+          assign bw_has = t_bonus
+        elsif bw_next == 0
+          assign bw_next = t_bonus
+          assign bw_next_min = t_min
+        endif
+      endfor
+    -%}
+    {%- assign bw_has_fmt = bw_has | money_without_trailing_zeros -%}
+    <p class="b2b-cart-note b2b-cart-note--campaign" role="status">
+      {%- if bw_next == 0 -%}
+        {{ 'b2b.campaign.cart_max_html' | t: bonus: bw_has_fmt }}
+      {%- else -%}
+        {%- assign bw_missing = bw_next_min | minus: subtotal | money -%}
+        {%- assign bw_next_fmt = bw_next | money_without_trailing_zeros -%}
+        {%- if bw_has == 0 -%}
+          {{ 'b2b.campaign.cart_missing_html' | t: bonus: bw_next_fmt, missing: bw_missing }}
+        {%- else -%}
+          {{ 'b2b.campaign.cart_has_html' | t: bonus: bw_has_fmt, next: bw_next_fmt, missing: bw_missing }}
+        {%- endif -%}
+      {%- endif -%}
+    </p>
+  {%- endif -%}
 {%- endif -%}

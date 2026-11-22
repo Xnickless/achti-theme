@@ -1,0 +1,43 @@
+{%- comment -%}
+  Pasek kampanii (Black Week 23–27.11.2026, plan Adriana): zastępuje zwykły komunikat w pasku ogłoszeń tylko w czasie akcji.
+  Tekst zmienia się codziennie o północy czasu polskiego (JS liczy datę w strefie Europe/Warsaw), po końcu akcji pasek znika sam.
+  Fazy = lista „data|klucz tłumaczenia” w `phases`; kolejne akcje (np. last call 1–4.12) = nowe wiersze.
+  Link: strona /pages/black-week w języku sklepu.
+{%- endcomment -%}
+{%- liquid
+  assign root = routes.root_url
+  if root == '/'
+    assign root = ''
+  endif
+  assign bw_url = root | append: '/pages/black-week'
+  assign phases = '2026-11-23|b2b.campaign.bw_1,2026-11-24|b2b.campaign.bw_2,2026-11-25|b2b.campaign.bw_3,2026-11-26|b2b.campaign.bw_4,2026-11-27|b2b.campaign.bw_5' | split: ','
+-%}
+<a class="b2b-campaign announcement-bar__link link link--text focus-inset animate-arrow" href="{{ bw_url }}" hidden>
+  <p class="announcement-bar__message h5">
+    <span data-b2b-campaign-text></span>
+    {{- 'icon-arrow.svg' | inline_asset_content -}}
+  </p>
+</a>
+<script type="application/json" data-b2b-campaign>
+  {
+    {%- for p in phases -%}
+      {%- assign parts = p | split: '|' -%}
+      {{ parts[0] | json }}: {{ parts[1] | t | json }}{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  }
+</script>
+<script>
+  (function () {
+    var data = document.currentScript.previousElementSibling;
+    var link = data.previousElementSibling;
+    try {
+      var today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Warsaw', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+      var text = JSON.parse(data.textContent)[today];
+      if (!text) return;
+      link.querySelector('[data-b2b-campaign-text]').textContent = text;
+      link.hidden = false;
+      var bar = link.closest('.utility-bar');
+      if (bar) bar.classList.add('b2b-campaign-on');
+    } catch (e) {}
+  })();
+</script>

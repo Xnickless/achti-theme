@@ -559,6 +559,16 @@
     }
   },
   "b2b": {
+    "campaign": {
+      "bw_1": "🔥 BLACK WEEK START! ACHTI dokłada nawet 2 500 zł do zamówienia",
+      "bw_2": "🎁 Zamów za 15 000 zł netto i odbierz 500 zł rabatu",
+      "bw_3": "🛍️ Dobierz produkty i zgarnij nawet 2 500 zł bonusu",
+      "bw_4": "⏳ BLACK WEEK kończy się jutro! Bonusy do 2 500 zł",
+      "bw_5": "🚨 OSTATNI DZIEŃ! Rabaty ACHTI do 2 500 zł kończą się o 23:59",
+      "cart_missing_html": "<strong>Black Week:</strong> do rabatu {{ bonus }} brakuje jeszcze {{ missing }} netto.",
+      "cart_has_html": "<strong>Black Week:</strong> masz rabat {{ bonus }}. Do rabatu {{ next }} brakuje {{ missing }} netto.",
+      "cart_max_html": "<strong>Black Week:</strong> masz najwyższy rabat — {{ bonus }}."
+    },
     "locked": "Zaloguj się, aby zobaczyć cenę",
     "gate_title": "Ceny hurtowe tylko dla firm",
     "gate_text": "Zaloguj się na konto firmowe lub zarejestruj firmę, aby zobaczyć cennik, stany magazynowe i zamawiać.",

@@ -535,6 +535,16 @@
     }
   },
   "b2b": {
+    "campaign": {
+      "bw_1": "🔥 BLACK WEEK START! ACHTI gibt Ihnen bis zu 2.500 PLN Rabatt auf Ihre Bestellung",
+      "bw_2": "🎁 Ab 15.000 PLN netto erhalten Sie 500 PLN Rabatt",
+      "bw_3": "🛍️ Sortiment ergänzen und bis zu 2.500 PLN Rabatt sichern",
+      "bw_4": "⏳ BLACK WEEK endet morgen! Bis zu 2.500 PLN Rabatt",
+      "bw_5": "🚨 LETZTER TAG! ACHTI-Rabatte bis 2.500 PLN enden heute um 23:59 Uhr",
+      "cart_missing_html": "<strong>Black Week:</strong> Noch {{ missing }} netto bis zu {{ bonus }} Rabatt.",
+      "cart_has_html": "<strong>Black Week:</strong> Sie erhalten {{ bonus }} Rabatt. Noch {{ missing }} netto bis zu {{ next }} Rabatt.",
+      "cart_max_html": "<strong>Black Week:</strong> Sie erhalten den höchsten Rabatt — {{ bonus }}."
+    },
     "locked": "Anmelden, um Preise zu sehen",
     "gate_title": "Großhandelspreise nur für Firmen",
     "gate_text": "Melden Sie sich mit Ihrem Firmenkonto an oder registrieren Sie Ihre Firma, um Preise, Bestände und Bestellung freizuschalten.",

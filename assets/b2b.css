@@ -1150,3 +1150,11 @@ html.b2b-lb-open{overflow:hidden}
 /* Palety przędzy w lightboxie mniejsze (05.11.2026, Kamil): zdjęcia kart mają ~300 px na motek — pełny ekran je rozmywał */
 .b2b-lb:not(.b2b-lb--probka) .b2b-lb__img{width:min(44vmin,34rem);height:min(44vmin,34rem)}
 @media screen and (max-width:749px){.b2b-lb:not(.b2b-lb--probka) .b2b-lb__img{width:min(78vw,34rem);height:min(78vw,34rem)}}
+
+/* Pasek kampanii (Black Week 23–27.11.2026): snippets/b2b-campaign-bar.liquid, czarne tło na czas akcji */
+.utility-bar .b2b-campaign { grid-area: announcements; display: flex; justify-content: center; text-align: center; }
+.utility-bar .b2b-campaign[hidden] { display: none; }
+.utility-bar.b2b-campaign-on .announcement-bar { display: none; }
+.utility-bar.b2b-campaign-on { --color-foreground: 255, 255, 255; --color-background: 17, 17, 17; --gradient-background: #111; background: #111; color: #fff; }
+.utility-bar.b2b-campaign-on .b2b-campaign .announcement-bar__message { color: #fff; font-weight: 500; letter-spacing: 0.04em; }
+.b2b-cart-note--campaign { border-color: #111; color: #111; background: #f2f1ef; }

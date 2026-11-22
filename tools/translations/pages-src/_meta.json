@@ -1,80 +1,86 @@
 {
- "polityka-prywatnosci": {
-  "id": "gid://shopify/ShopPolicy/61553443158",
-  "type": "SHOP_POLICY",
-  "body_key": "body",
-  "title": null
- },
- "zwroty-i-reklamacje": {
-  "id": "gid://shopify/ShopPolicy/65323893078",
-  "type": "SHOP_POLICY",
-  "body_key": "body",
-  "title": null
- },
- "wysylka-i-dostawa": {
-  "id": "gid://shopify/ShopPolicy/65323991382",
-  "type": "SHOP_POLICY",
-  "body_key": "body",
-  "title": null
- },
- "regulamin-b2b": {
-  "id": "gid://shopify/ShopPolicy/65324220758",
-  "type": "SHOP_POLICY",
-  "body_key": "body",
-  "title": null
- },
- "warunki-wspolpracy": {
-  "id": "gid://shopify/Page/196743233878",
-  "type": "PAGE",
-  "body_key": "body_html",
-  "title": "Warunki współpracy"
- },
- "faq": {
-  "id": "gid://shopify/Page/196743332182",
-  "type": "PAGE",
-  "body_key": "body_html",
-  "title": "FAQ"
- },
- "polityka-cookies": {
-  "id": "gid://shopify/Page/196743430486",
-  "type": "PAGE",
-  "body_key": "body_html",
-  "title": "Polityka cookies"
- },
- "o-nas": {
-  "id": "gid://shopify/Page/198563430742",
-  "type": "PAGE",
-  "body_key": "body_html",
-  "title": "O nas – poznaj ACHTI"
- },
- "produkcja": {
-  "id": "gid://shopify/Page/198563463510",
-  "type": "PAGE",
-  "body_key": "body_html",
-  "title": "Produkcja"
- },
- "materialy": {
-  "id": "gid://shopify/Page/198563496278",
-  "type": "PAGE",
-  "body_key": "body_html",
-  "title": "Materiały"
- },
- "jakosc": {
-  "id": "gid://shopify/Page/198563529046",
-  "type": "PAGE",
-  "body_key": "body_html",
-  "title": "Jakość"
- },
- "zrownowazony-rozwoj": {
-  "id": "gid://shopify/Page/198563561814",
-  "type": "PAGE",
-  "body_key": "body_html",
-  "title": "Zrównoważony rozwój"
- },
- "polityka-cenowa": {
-  "id": "gid://shopify/Page/200676442454",
-  "type": "PAGE",
-  "body_key": "body_html",
-  "title": "Polityka cenowa"
- }
+  "polityka-prywatnosci": {
+    "id": "gid://shopify/ShopPolicy/61553443158",
+    "type": "SHOP_POLICY",
+    "body_key": "body",
+    "title": null
+  },
+  "zwroty-i-reklamacje": {
+    "id": "gid://shopify/ShopPolicy/65323893078",
+    "type": "SHOP_POLICY",
+    "body_key": "body",
+    "title": null
+  },
+  "wysylka-i-dostawa": {
+    "id": "gid://shopify/ShopPolicy/65323991382",
+    "type": "SHOP_POLICY",
+    "body_key": "body",
+    "title": null
+  },
+  "regulamin-b2b": {
+    "id": "gid://shopify/ShopPolicy/65324220758",
+    "type": "SHOP_POLICY",
+    "body_key": "body",
+    "title": null
+  },
+  "warunki-wspolpracy": {
+    "id": "gid://shopify/Page/196743233878",
+    "type": "PAGE",
+    "body_key": "body_html",
+    "title": "Warunki współpracy"
+  },
+  "faq": {
+    "id": "gid://shopify/Page/196743332182",
+    "type": "PAGE",
+    "body_key": "body_html",
+    "title": "FAQ"
+  },
+  "polityka-cookies": {
+    "id": "gid://shopify/Page/196743430486",
+    "type": "PAGE",
+    "body_key": "body_html",
+    "title": "Polityka cookies"
+  },
+  "o-nas": {
+    "id": "gid://shopify/Page/198563430742",
+    "type": "PAGE",
+    "body_key": "body_html",
+    "title": "O nas – poznaj ACHTI"
+  },
+  "produkcja": {
+    "id": "gid://shopify/Page/198563463510",
+    "type": "PAGE",
+    "body_key": "body_html",
+    "title": "Produkcja"
+  },
+  "materialy": {
+    "id": "gid://shopify/Page/198563496278",
+    "type": "PAGE",
+    "body_key": "body_html",
+    "title": "Materiały"
+  },
+  "jakosc": {
+    "id": "gid://shopify/Page/198563529046",
+    "type": "PAGE",
+    "body_key": "body_html",
+    "title": "Jakość"
+  },
+  "zrownowazony-rozwoj": {
+    "id": "gid://shopify/Page/198563561814",
+    "type": "PAGE",
+    "body_key": "body_html",
+    "title": "Zrównoważony rozwój"
+  },
+  "polityka-cenowa": {
+    "id": "gid://shopify/Page/200676442454",
+    "type": "PAGE",
+    "body_key": "body_html",
+    "title": "Polityka cenowa"
+  },
+  "black-week": {
+    "id": "gid://shopify/Page/201815261526",
+    "type": "PAGE",
+    "body_key": "body_html",
+    "title": "Black Week ACHTI B2B"
+  }
 }

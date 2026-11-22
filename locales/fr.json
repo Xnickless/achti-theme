@@ -547,6 +547,16 @@
     }
   },
   "b2b": {
+    "campaign": {
+      "bw_1": "🔥 C’EST LA BLACK WEEK ! ACHTI vous offre jusqu’à 2 500 PLN sur votre commande",
+      "bw_2": "🎁 Commandez pour 15 000 PLN HT et recevez 500 PLN de remise",
+      "bw_3": "🛍️ Complétez votre assortiment et obtenez jusqu’à 2 500 PLN de remise",
+      "bw_4": "⏳ La BLACK WEEK se termine demain ! Jusqu’à 2 500 PLN de remise",
+      "bw_5": "🚨 DERNIER JOUR ! Les remises ACHTI jusqu’à 2 500 PLN se terminent ce soir à 23h59",
+      "cart_missing_html": "<strong>Black Week :</strong> plus que {{ missing }} HT pour obtenir {{ bonus }} de remise.",
+      "cart_has_html": "<strong>Black Week :</strong> vous bénéficiez de {{ bonus }} de remise. Plus que {{ missing }} HT pour obtenir {{ next }}.",
+      "cart_max_html": "<strong>Black Week :</strong> vous bénéficiez de la remise maximale — {{ bonus }}."
+    },
     "locked": "Connectez-vous pour voir les prix",
     "gate_title": "Prix de gros réservés aux professionnels",
     "gate_text": "Connectez-vous à votre compte professionnel ou enregistrez votre entreprise pour voir les prix, les stocks et commander.",

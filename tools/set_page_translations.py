@@ -19,6 +19,7 @@ TITLES = {  # tytuły stron (PAGE) — polityki (SHOP_POLICY) mają tylko body
     'jakosc': {'en': 'Quality', 'de': 'Qualität', 'fr': 'Qualité'},
     'zrownowazony-rozwoj': {'en': 'Sustainability', 'de': 'Nachhaltigkeit', 'fr': 'Développement durable'},
     'polityka-cenowa': {'en': 'Pricing policy', 'de': 'Preispolitik', 'fr': 'Politique tarifaire'},
+    'black-week': {'en': 'Black Week ACHTI B2B', 'de': 'Black Week ACHTI B2B', 'fr': 'Black Week ACHTI B2B'},
 }
 DRY = '--dry-run' in sys.argv
 locales = [a for a in sys.argv[1:] if not a.startswith('--')] or ['en', 'de', 'fr']
