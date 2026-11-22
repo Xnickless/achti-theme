@@ -59,7 +59,7 @@ def page(n, subject, pre, pl, en):
 <meta name="x-apple-disable-message-reformatting">
 <meta name="format-detection" content="telephone=no, address=no, email=no">
 <title>{html.escape(subject[0])}</title>
-<!-- Black Week ACHTI B2B, mail {n}/5 (tools/build_bw_mails.py). Shopify Messaging → „Napisz własny kod”, odbiorcy: Wszyscy subskrybenci.
+<!-- Black Week ACHTI B2B, mail {n}/6 (tools/build_bw_mails.py). Shopify Messaging → „Napisz własny kod”, odbiorcy: Wszyscy subskrybenci.
      Temat: {subject[0]}
      Preheader: {pre[1]} / {pre[0]}  (22.11.2026, Adrian: najpierw EN, potem PL) -->
 <!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
@@ -159,6 +159,15 @@ MAILS = [
       en=('Black Week · last day', 'It is the last day of Black Week ACHTI',
           p('Tonight at 23:59 (Polish time) our B2B promotion ends. Last chance to get an extra discount on your current order:') + tiers_table([TIERS[0], TIERS[2], TIERS[3], TIERS[5]], True) +
           p('<br>Place your order before the promotion ends.'), 'Get your Black Week bonus', 'The promotion ends on 27.11.2026 at 23:59 Polish time (CET). <a href="' + URL_EN + '" style="color:#6b6b6b;text-decoration:underline;">Terms</a>')),
+ # 22.11.2026 (Adrian): w piątek wieczorem jeszcze krótkie przypomnienie — 27.11 18:00
+ dict(subject=('LAST HOURS: Black Week ends at 23:59 | OSTATNIE GODZINY: Black Week do 23:59', ''),
+      pre=('Dziś do 23:59 nawet 2 500 zł rabatu, bez kodu.', 'Tonight until 23:59: up to €560 off, no code needed.'),
+      pl=('Black Week · ostatnie godziny', 'Zostało tylko kilka godzin',
+          p('Dziś o 23:59 kończymy Black Week ACHTI.') + big(['Nawet <strong>2&nbsp;500&nbsp;zł</strong> rabatu na zamówienie']) +
+          p('<br><strong>Bez kodu</strong> — rabat nalicza się sam w koszyku. Jeśli planujesz zamówienie, to ostatni moment.'), 'Zamów przed 23:59', 'Promocja kończy się 27.11.2026 o godz. 23:59 czasu polskiego. <a href="' + URL_PL + '" style="color:#6b6b6b;text-decoration:underline;">Regulamin akcji</a>'),
+      en=('Black Week · last hours', 'Only a few hours left',
+          p('Black Week ACHTI ends tonight at 23:59 (Polish time).') + big(['Up to <strong>≈&nbsp;€560</strong> off your order']) +
+          p('<br><strong>No code needed</strong> — the discount is applied automatically in the cart. If you were planning an order, now is the moment.'), 'Order before 23:59', 'The promotion ends on 27.11.2026 at 23:59 Polish time (CET). <a href="' + URL_EN + '" style="color:#6b6b6b;text-decoration:underline;">Terms</a>')),
 ]
 os.makedirs(OUT, exist_ok=True)
 for i, m in enumerate(MAILS, 1):
