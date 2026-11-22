@@ -36,9 +36,10 @@ def button(url, label):
 
 def section(lang, eyebrow, title, body, btn, small):
     url = URL_EN if lang == 'en' else URL_PL
-    top = 'border-top:1px solid #ececec;' if lang == 'en' else ''
-    anchor = '<div id="en"></div>' if lang == 'en' else ''
-    tag = 'h2' if lang == 'en' else 'h1'
+    # 22.11.2026 (Adrian): treść na odwrót — najpierw EN, pod spodem PL
+    top = 'border-top:1px solid #ececec;' if lang == 'pl' else ''
+    anchor = '<div id="pl"></div>' if lang == 'pl' else ''
+    tag = 'h2' if lang == 'pl' else 'h1'
     return f'''
   <tr><td class="px" style="padding:44px 48px 8px;{top}{F}color:#1a1a1a;">
     {anchor}<p style="margin:0 0 14px;font-size:11px;line-height:16px;letter-spacing:2px;text-transform:uppercase;color:#8a8a8a;">{eyebrow}</p>
@@ -50,7 +51,7 @@ def section(lang, eyebrow, title, body, btn, small):
 
 def page(n, subject, pre, pl, en):
     return f'''<!DOCTYPE html>
-<html lang="pl" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,13 +84,13 @@ def page(n, subject, pre, pl, en):
 <table role="presentation" class="wrap" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;background-color:#ffffff;">
   <tr><td align="center" style="padding:14px 48px;background-color:#111111;{F}font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#ffffff;">Black Week · 23–27.11.2026</td></tr>
   <tr><td align="right" class="px" style="padding:14px 48px 0;{F}font-size:11px;letter-spacing:1px;text-transform:uppercase;">
-    <a href="#en" style="color:#8a8a8a;text-decoration:none;">English below&nbsp;&darr;</a>
+    <a href="#pl" style="color:#8a8a8a;text-decoration:none;">Wersja polska niżej&nbsp;&darr;</a>
   </td></tr>
   <tr><td align="center" style="padding:20px 48px 28px;border-bottom:1px solid #ececec;">
     <a href="https://b2b.achti.com" target="_blank"><img src="https://cdn.shopify.com/s/files/1/1032/7841/2118/files/achti_poziom_jpg.jpg?v=1780476571&amp;width=360" width="140" alt="Achti" style="display:block;width:140px;height:auto;"></a>
   </td></tr>
-{section('pl', *pl)}
 {section('en', *en)}
+{section('pl', *pl)}
   <tr><td align="center" class="px" style="padding:28px 48px;background-color:#111111;{F}font-size:13px;line-height:22px;color:#bdbdbd;">
     <a href="mailto:hello@achti.com" style="color:#ffffff;text-decoration:none;">hello@achti.com</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="tel:+48784900094" style="color:#ffffff;text-decoration:none;">+48&nbsp;784&nbsp;900&nbsp;094</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://b2b.achti.com" style="color:#ffffff;text-decoration:none;">b2b.achti.com</a>
   </td></tr>
