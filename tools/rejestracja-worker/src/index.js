@@ -114,6 +114,7 @@ async function register(env, f) {
     `Adres: ${f.ulica}, ${f.kod} ${f.miasto}, ${country}`,
     f.dostawa && `Adres dostawy: ${f.dostawa}`,
     `Osoba: ${f.osoba}, tel. ${f.telefon}, ${f.email}`,
+    `Zgody: newsletter e-mail ${f.newsletter ? 'TAK' : 'nie'}, WhatsApp/SMS ${f.whatsapp ? 'TAK' : 'nie'}`,
   ].filter(Boolean).join('\n');
 
   // Ten sam NIP drugi raz = nie zakładamy duplikatu (externalId jest unikalny w sklepie).
@@ -139,6 +140,11 @@ async function register(env, f) {
     await gql(env, `mutation($i:CustomerEmailMarketingConsentUpdateInput!){customerEmailMarketingConsentUpdate(input:$i){userErrors{message}}}`, {
       i: { customerId: customer.id, emailMarketingConsent: { marketingState: 'SUBSCRIBED', marketingOptInLevel: 'SINGLE_OPT_IN', consentUpdatedAt: new Date().toISOString() } },
     });
+  }
+
+  // 22.11.2026: zgoda na oferty przez WhatsApp/SMS — tag do segmentu w Messaging (osobne pole zgody Shopify wymaga numeru w formacie E.164)
+  if (f.whatsapp === true) {
+    await gql(env, `mutation($id:ID!,$tags:[String!]!){tagsAdd(id:$id,tags:$tags){userErrors{message}}}`, { id: customer.id, tags: ['zgoda-whatsapp-sms'] });
   }
 
   // 30.10.2026: polski kod pocztowy NN-NNN (inaczej Shopify odrzuca adres i firma powstaje bez adresu)
@@ -240,6 +246,8 @@ export default {
       kraj: clean(b.kraj, 2).toUpperCase(), dostawa: clean(b.dostawa), osoba: clean(b.osoba, 120), telefon: clean(b.telefon, 30),
       email: clean(b.email, 120).toLowerCase().replace(/"/g, ''), rodzaj: clean(b.rodzaj, 80), opis: clean(b.opis, 1000), ilosci: clean(b.ilosci, 200),
       locale: clean(b.locale, 5),
+      // 22.11.2026: zgody z formularza (newsletter wcześniej nie był przepisywany do f, więc zgoda e-mail nie działała)
+      newsletter: b.newsletter === true, whatsapp: b.whatsapp === true,
     };
     const missing = ['firma', 'ulica', 'kod', 'miasto', 'osoba', 'telefon', 'email'].filter((k) => !f[k]);
     if (missing.length || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.email) || !nipOk(f.nip, f.kraj || 'PL')) {

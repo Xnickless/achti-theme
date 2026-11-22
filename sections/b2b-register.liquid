@@ -58,9 +58,27 @@
         <div class="field" data-other-field hidden><textarea class="text-area field__input" id="b2b-other" name="contact[Opis działalności]" rows="3" placeholder="{{ 'b2b.reg.other_details' | t }}"></textarea><label class="field__label" for="b2b-other">{{ 'b2b.reg.other_details' | t }}</label></div>
         <div class="field"><input class="field__input" id="b2b-volume" name="contact[Przewidywane ilości zamówień]" placeholder="{{ 'b2b.reg.volume' | t }}"><label class="field__label" for="b2b-volume">{{ 'b2b.reg.volume' | t }}</label></div>
         <p class="b2b-register__hint">{{ 'b2b.reg.volume_hint' | t }}</p>
-        <label class="b2b-register__consent"><input type="checkbox" required><span>{{ 'b2b.reg.terms_html' | t: terms_url: shop.terms_of_service.url, privacy_url: shop.privacy_policy.url }}</span></label>
+        {%- comment -%} 22.11.2026 (Adrian: „zgoda na wszystko jednym przyciskiem”): „Zaznacz wszystkie” zaznacza poniższe zgody, które zostają osobne (RODO: zgoda marketingowa osobna i dobrowolna) {%- endcomment -%}
+        <label class="b2b-register__consent b2b-register__consent--all"><input type="checkbox" id="b2b-consent-all"><span>{{ 'b2b.reg.consent_all' | t }}</span></label>
+        <label class="b2b-register__consent"><input type="checkbox" required data-consent><span>{{ 'b2b.reg.terms_html' | t: terms_url: shop.terms_of_service.url, privacy_url: shop.privacy_policy.url }}</span></label>
         {%- comment -%} 03.11.2026: nieobowiązkowa zgoda marketingowa — automat zapisuje klienta jako subskrybenta (kampanie Messaging idą tylko do subskrybentów) {%- endcomment -%}
-        <label class="b2b-register__consent"><input type="checkbox" id="b2b-marketing" name="contact[Zgoda na newsletter]" value="Tak"><span>{{ 'b2b.reg.marketing' | t }}</span></label>
+        <label class="b2b-register__consent"><input type="checkbox" id="b2b-marketing" name="contact[Zgoda na newsletter]" value="Tak" data-consent><span>{{ 'b2b.reg.marketing' | t }}</span></label>
+        {%- comment -%} 22.11.2026: zgoda na oferty przez WhatsApp/SMS — automat dodaje klientowi tag zgoda-whatsapp-sms {%- endcomment -%}
+        <label class="b2b-register__consent"><input type="checkbox" id="b2b-whatsapp" name="contact[Zgoda WhatsApp/SMS]" value="Tak" data-consent><span>{{ 'b2b.reg.whatsapp' | t }}</span></label>
+        <script>
+          (function () {
+            var all = document.getElementById('b2b-consent-all');
+            if (!all) return;
+            var boxes = Array.prototype.slice.call(all.form.querySelectorAll('input[data-consent]'));
+            function sync() {
+              var n = boxes.filter(function (b) { return b.checked; }).length;
+              all.checked = n === boxes.length;
+              all.indeterminate = n > 0 && n < boxes.length;
+            }
+            all.addEventListener('change', function () { boxes.forEach(function (b) { b.checked = all.checked; }); sync(); });
+            boxes.forEach(function (b) { b.addEventListener('change', sync); });
+          })();
+        </script>
         <input type="text" name="b2b_hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px" data-hp>
         <p class="b2b-register__error" data-auto-error hidden>{{ 'b2b.reg.has_company' | t }}</p>
         <button type="submit" class="button button--primary">{{ 'b2b.reg.submit' | t }}</button>
@@ -102,7 +120,7 @@
       var ad=f.querySelector('#b2b-address');if(ad&&!/\d/.test(ad.value)){e.preventDefault();e.stopImmediatePropagation();var ae=f.querySelector('[data-addr-error]');if(ae)ae.hidden=false;ad.classList.add('is-invalid');ad.focus();return;}
       if(!zipOk()){e.preventDefault();e.stopImmediatePropagation();var ze=f.querySelector('[data-zip-error]');if(ze)ze.hidden=false;zp.classList.add('is-invalid');zp.focus();return;}
       if(!url)return;e.preventDefault();e.stopImmediatePropagation();if(busy)return;busy=true;var btn=f.querySelector('button[type=submit]');if(btn)btn.setAttribute('aria-busy','true');
-      var body={nip:v('#b2b-nip'),firma:v('#b2b-company'),ulica:v('#b2b-address'),kod:v('#b2b-zip'),miasto:v('#b2b-city'),kraj:c,dostawa:v('#b2b-delivery'),osoba:v('#b2b-person'),telefon:v('#b2b-phone'),email:v('#b2b-email'),rodzaj:v('#b2b-type'),opis:v('#b2b-other'),ilosci:v('#b2b-volume'),locale:document.documentElement.lang,newsletter:!!(f.querySelector('#b2b-marketing')||{}).checked,hp:v('[data-hp]')};
+      var body={nip:v('#b2b-nip'),firma:v('#b2b-company'),ulica:v('#b2b-address'),kod:v('#b2b-zip'),miasto:v('#b2b-city'),kraj:c,dostawa:v('#b2b-delivery'),osoba:v('#b2b-person'),telefon:v('#b2b-phone'),email:v('#b2b-email'),rodzaj:v('#b2b-type'),opis:v('#b2b-other'),ilosci:v('#b2b-volume'),locale:document.documentElement.lang,newsletter:!!(f.querySelector('#b2b-marketing')||{}).checked,whatsapp:!!(f.querySelector('#b2b-whatsapp')||{}).checked,hp:v('[data-hp]')};
       function send(note){if(note){var h=document.createElement('input');h.type='hidden';h.name='contact[Firma w Shopify]';h.value=note;f.appendChild(h);}var hp=f.querySelector('[data-hp]');if(hp)hp.remove();done=true;if(f.requestSubmit)f.requestSubmit();else if(btn)btn.click();else HTMLFormElement.prototype.submit.call(f);}
       fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(function(r){return r.json();}).then(function(d){
         if(d.status==='has_company'){busy=false;if(btn)btn.removeAttribute('aria-busy');var er=f.querySelector('[data-auto-error]');if(er)er.hidden=false;return;}

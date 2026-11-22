@@ -15,6 +15,7 @@
 .b2b-register .select{margin-bottom:1.2rem}
 .b2b-register__consent{display:flex;gap:1rem;align-items:flex-start;font-size:1.3rem;margin:1rem 0 2rem}
 .b2b-register__consent input{margin-top:.3rem}
+.b2b-register__consent--all{font-weight:600;font-size:1.4rem;padding-bottom:1.2rem;border-bottom:1px solid rgba(var(--color-foreground),.12)}
 .b2b-register__hint{font-size:1.2rem;opacity:.7;margin:-.6rem 0 1.2rem}
 .b2b-register__error{color:rgb(var(--color-foreground));background:rgba(var(--color-foreground),.06);padding:1rem;border-radius:var(--inputs-radius);margin-bottom:1.2rem;font-size:1.3rem}
 

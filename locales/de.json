@@ -588,6 +588,8 @@
       "volume_hint": "Z. B. 300 Stück pro Saison oder 50 Stück pro Monat — so können wir die Konditionen anpassen.",
       "terms_html": "Ich akzeptiere die <a href=\"{{ terms_url }}\" target=\"_blank\" class=\"link\">B2B-AGB</a> und die <a href=\"{{ privacy_url }}\" target=\"_blank\" class=\"link\">Datenschutzerklärung</a>.",
       "marketing": "Ich möchte E-Mails über Neuheiten, Aktionen und Rabattcodes von Achti erhalten (Abmeldung jederzeit möglich).",
+      "consent_all": "Alle Einwilligungen auswählen",
+      "whatsapp": "Ich möchte Angebote und Aktionen von Achti per WhatsApp oder SMS an die angegebene Telefonnummer erhalten (Abmeldung jederzeit möglich).",
       "zip": "Postleitzahl",
       "zip_error": "Postleitzahl im Format 00-000 (z. B. 31-242).",
       "city": "Stadt",
