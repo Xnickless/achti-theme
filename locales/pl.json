@@ -560,14 +560,14 @@
   },
   "b2b": {
     "campaign": {
-      "bw_1": "🔥 BLACK WEEK START! ACHTI dokłada nawet 2 500 zł do zamówienia",
-      "bw_2": "🎁 Zamów za 15 000 zł netto i odbierz 500 zł rabatu",
-      "bw_3": "🛍️ Dobierz produkty i zgarnij nawet 2 500 zł bonusu",
-      "bw_4": "⏳ BLACK WEEK kończy się jutro! Bonusy do 2 500 zł",
-      "bw_5": "🚨 OSTATNI DZIEŃ! Rabaty ACHTI do 2 500 zł kończą się o 23:59",
-      "cart_missing_html": "<strong>Black Week:</strong> do rabatu {{ bonus }} brakuje jeszcze {{ missing }} netto.",
-      "cart_has_html": "<strong>Black Week:</strong> masz rabat {{ bonus }}. Do rabatu {{ next }} brakuje {{ missing }} netto.",
-      "cart_max_html": "<strong>Black Week:</strong> masz najwyższy rabat — {{ bonus }}."
+      "bw_1": "🔥 BLACK WEEK START! Do −15% na całe zamówienie",
+      "bw_2": "🎁 Od 500 szt. aż −15% na całe zamówienie",
+      "bw_3": "🛍️ Dobierz modele i zgarnij do −15% rabatu",
+      "bw_4": "⏳ BLACK WEEK kończy się jutro! Do −15% na zamówienie",
+      "bw_5": "🚨 OSTATNI DZIEŃ! Rabaty do −15% kończą się o 23:59",
+      "cart_missing_html": "<strong>Black Week:</strong> dodaj jeszcze {{ missing }} szt., a dostaniesz −{{ next }}% na całe zamówienie.",
+      "cart_has_html": "<strong>Black Week:</strong> masz −{{ bonus }}%. Dodaj jeszcze {{ missing }} szt., a rabat wzrośnie do −{{ next }}%.",
+      "cart_max_html": "<strong>Black Week:</strong> masz najwyższy rabat — −{{ bonus }}% na całe zamówienie."
     },
     "locked": "Zaloguj się, aby zobaczyć cenę",
     "gate_title": "Ceny hurtowe tylko dla firm",

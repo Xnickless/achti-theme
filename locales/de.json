@@ -536,14 +536,14 @@
   },
   "b2b": {
     "campaign": {
-      "bw_1": "🔥 BLACK WEEK START! ACHTI gibt Ihnen bis zu 560 € Rabatt auf Ihre Bestellung",
-      "bw_2": "🎁 Ab ≈3.370 € netto erhalten Sie ≈112 € Rabatt",
-      "bw_3": "🛍️ Sortiment ergänzen und bis zu 560 € Rabatt sichern",
-      "bw_4": "⏳ BLACK WEEK endet morgen! Bis zu 560 € Rabatt",
-      "bw_5": "🚨 LETZTER TAG! ACHTI-Rabatte bis 560 € enden heute um 23:59 Uhr",
-      "cart_missing_html": "<strong>Black Week:</strong> Noch {{ missing }} netto bis zu {{ bonus }} Rabatt.",
-      "cart_has_html": "<strong>Black Week:</strong> Sie erhalten {{ bonus }} Rabatt. Noch {{ missing }} netto bis zu {{ next }} Rabatt.",
-      "cart_max_html": "<strong>Black Week:</strong> Sie erhalten den höchsten Rabatt — {{ bonus }}."
+      "bw_1": "🔥 BLACK WEEK START! Bis zu 15 % Rabatt auf die gesamte Bestellung",
+      "bw_2": "🎁 Ab 500 Stück: 15 % Rabatt auf die gesamte Bestellung",
+      "bw_3": "🛍️ Sortiment ergänzen und bis zu 15 % Rabatt sichern",
+      "bw_4": "⏳ BLACK WEEK endet morgen! Bis zu 15 % Rabatt",
+      "bw_5": "🚨 LETZTER TAG! Bis zu 15 % Rabatt nur noch bis 23:59 Uhr",
+      "cart_missing_html": "<strong>Black Week:</strong> Noch {{ missing }} Stück bis zu {{ next }} % Rabatt auf die gesamte Bestellung.",
+      "cart_has_html": "<strong>Black Week:</strong> Sie erhalten {{ bonus }} % Rabatt. Noch {{ missing }} Stück bis zu {{ next }} %.",
+      "cart_max_html": "<strong>Black Week:</strong> Sie erhalten den höchsten Rabatt — {{ bonus }} % auf die gesamte Bestellung."
     },
     "locked": "Anmelden, um Preise zu sehen",
     "gate_title": "Großhandelspreise nur für Firmen",

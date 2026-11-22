@@ -548,14 +548,14 @@
   },
   "b2b": {
     "campaign": {
-      "bw_1": "🔥 C’EST LA BLACK WEEK ! ACHTI vous offre jusqu’à 560 € sur votre commande",
-      "bw_2": "🎁 Commandez pour ≈3 370 € HT et recevez ≈112 € de remise",
-      "bw_3": "🛍️ Complétez votre assortiment et obtenez jusqu’à 560 € de remise",
-      "bw_4": "⏳ La BLACK WEEK se termine demain ! Jusqu’à 560 € de remise",
-      "bw_5": "🚨 DERNIER JOUR ! Les remises ACHTI jusqu’à 560 € se terminent ce soir à 23h59",
-      "cart_missing_html": "<strong>Black Week :</strong> plus que {{ missing }} HT pour obtenir {{ bonus }} de remise.",
-      "cart_has_html": "<strong>Black Week :</strong> vous bénéficiez de {{ bonus }} de remise. Plus que {{ missing }} HT pour obtenir {{ next }}.",
-      "cart_max_html": "<strong>Black Week :</strong> vous bénéficiez de la remise maximale — {{ bonus }}."
+      "bw_1": "🔥 C’EST LA BLACK WEEK ! Jusqu’à −15 % sur toute la commande",
+      "bw_2": "🎁 Dès 500 pièces : −15 % sur toute la commande",
+      "bw_3": "🛍️ Complétez votre assortiment et obtenez jusqu’à −15 %",
+      "bw_4": "⏳ La BLACK WEEK se termine demain ! Jusqu’à −15 %",
+      "bw_5": "🚨 DERNIER JOUR ! Jusqu’à −15 % jusqu’à 23h59 ce soir",
+      "cart_missing_html": "<strong>Black Week :</strong> plus que {{ missing }} pièces pour obtenir −{{ next }} % sur toute la commande.",
+      "cart_has_html": "<strong>Black Week :</strong> vous bénéficiez de −{{ bonus }} %. Plus que {{ missing }} pièces pour −{{ next }} %.",
+      "cart_max_html": "<strong>Black Week :</strong> vous bénéficiez de la remise maximale — −{{ bonus }} % sur toute la commande."
     },
     "locked": "Connectez-vous pour voir les prix",
     "gate_title": "Prix de gros réservés aux professionnels",

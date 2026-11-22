@@ -536,14 +536,14 @@
   },
   "b2b": {
     "campaign": {
-      "bw_1": "🔥 BLACK WEEK IS ON! ACHTI takes up to €560 off your order",
-      "bw_2": "🎁 Order ≈€3,370 net and get ≈€112 off",
-      "bw_3": "🛍️ Add a few more models and get up to €560 off",
-      "bw_4": "⏳ BLACK WEEK ends tomorrow! Up to €560 off",
-      "bw_5": "🚨 LAST DAY! ACHTI discounts of up to €560 end tonight at 23:59 CET",
-      "cart_missing_html": "<strong>Black Week:</strong> add {{ missing }} net to get {{ bonus }} off.",
-      "cart_has_html": "<strong>Black Week:</strong> you get {{ bonus }} off. Add {{ missing }} net to get {{ next }} off.",
-      "cart_max_html": "<strong>Black Week:</strong> you get the top discount — {{ bonus }} off."
+      "bw_1": "🔥 BLACK WEEK IS ON! Up to 15% off your whole order",
+      "bw_2": "🎁 From 500 pcs: 15% off your whole order",
+      "bw_3": "🛍️ Add a few more models and get up to 15% off",
+      "bw_4": "⏳ BLACK WEEK ends tomorrow! Up to 15% off",
+      "bw_5": "🚨 LAST DAY! Up to 15% off ends tonight at 23:59 CET",
+      "cart_missing_html": "<strong>Black Week:</strong> add {{ missing }} more pcs to get {{ next }}% off your whole order.",
+      "cart_has_html": "<strong>Black Week:</strong> you get {{ bonus }}% off. Add {{ missing }} more pcs to get {{ next }}% off.",
+      "cart_max_html": "<strong>Black Week:</strong> you get the top discount — {{ bonus }}% off your whole order."
     },
     "locked": "Sign in to see prices",
     "gate_title": "Wholesale prices for businesses only",

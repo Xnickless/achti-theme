@@ -6,19 +6,22 @@ import os, html
 OUT = os.path.join(os.path.dirname(__file__), '..', 'docs', 'black-week')
 URL_PL, URL_EN = 'https://b2b.achti.com/pages/black-week', 'https://b2b.achti.com/en/pages/black-week'
 F = "font-family:Helvetica,Arial,sans-serif;"
-TIERS = [('5 000', '100'), ('10 000', '200'), ('15 000', '500'), ('25 000', '1 000'), ('35 000', '1 500'), ('50 000', '2 500')]
-# 22.11.2026 (Adrian): w wersji EN kwoty w EUR. Kurs EBC 20.11: 1 PLN = 0,2243 EUR; progi w górę do 10 €, rabaty w dół (Shopify przelicza po swoim kursie)
-EUR = {'5 000': '1,130', '10 000': '2,250', '15 000': '3,370', '25 000': '5,610', '35 000': '7,860', '50 000': '11,220',
-       '100': '22', '200': '44', '500': '112', '1 000': '224', '1 500': '336', '2 500': '560'}
+# 22.11.2026 (Adrian, ostatecznie): rabat procentowy od liczby sztuk, maks. 15%
+TIERS = [(100, 4), (200, 7), (350, 10), (500, 15)]
 
-def tiers_table(rows, en=False):
+def tiers_table(rows=TIERS, en=False):
     tr = []
-    for a, b in rows:
-        left = f"from ≈&nbsp;€{EUR[a]}" if en else f"od {a}&nbsp;zł"
-        right = f"≈&nbsp;€{EUR[b]} off" if en else f"{b}&nbsp;zł rabatu"
+    for i, (n, pct) in enumerate(rows):
+        nxt = rows[i + 1][0] if i + 1 < len(rows) else None
+        if en:
+            left = f"from {n} pcs" if nxt is None else f"{n}–{nxt - 1} pcs"
+            right = f"{pct}% off"
+        else:
+            left = f"od {n}&nbsp;szt." if nxt is None else f"{n}–{nxt - 1}&nbsp;szt."
+            right = f"−{pct}%"
         tr.append(f'<tr><td style="padding:10px 16px;border-bottom:1px solid #ececec;{F}font-size:15px;color:#444444;">{left}</td>'
                   f'<td align="right" style="padding:10px 16px;border-bottom:1px solid #ececec;{F}font-size:15px;font-weight:bold;color:#111111;">{right}</td></tr>')
-    head = ('Order value (net)', 'Your bonus') if en else ('Wartość zamówienia netto', 'Twój bonus')
+    head = ('Pieces in your order', 'Discount on the whole order') if en else ('Liczba sztuk w zamówieniu', 'Rabat na całe zamówienie')
     return (f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:8px 0 8px;">'
             f'<tr><td style="padding:10px 16px;background-color:#111111;{F}font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#ffffff;">{head[0]}</td>'
             f'<td align="right" style="padding:10px 16px;background-color:#111111;{F}font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#ffffff;">{head[1]}</td></tr>'
@@ -112,62 +115,61 @@ def page(n, subject, pre, pl, en):
 '''
 
 PL_RULES = 'Promocja trwa do 27.11.2026, godz. 23:59. Bez kodu — rabat nalicza się automatycznie w&nbsp;koszyku. Rabaty nie łączą się. <a href="' + URL_PL + '" style="color:#6b6b6b;text-decoration:underline;">Regulamin akcji</a>'
-EN_RULES = 'Valid until 27.11.2026, 23:59 (Polish time). No code needed — the discount is applied automatically in the cart. Discounts cannot be combined. EUR amounts are approximate: thresholds are set in PLN and converted at the current rate, the exact amount is shown in your cart. <a href="' + URL_EN + '" style="color:#6b6b6b;text-decoration:underline;">Terms</a>'
+EN_RULES = 'Valid until 27.11.2026, 23:59 (Polish time). No code needed — the discount is applied automatically in the cart. Discounts cannot be combined. <a href="' + URL_EN + '" style="color:#6b6b6b;text-decoration:underline;">Terms</a>'
+def link(url, txt): return f'<a href="{url}" style="color:#6b6b6b;text-decoration:underline;">{txt}</a>'
 
 MAILS = [
- dict(subject=('BLACK WEEK ACHTI: up to €560 off your order | nawet 2 500 zł rabatu', ''),
-      pre=('Tylko 5 dni. Odbierz dodatkowy bonus na zamówienie B2B.', 'Only 5 days: up to €560 off your B2B order, no code needed.'),
-      pl=('Black Week ACHTI B2B wystartował', 'Dokładamy nawet 2&nbsp;500&nbsp;zł do Twojego zamówienia',
-          p('Od 23 do 27 listopada dokładamy do Twojego zamówienia nawet <strong>2&nbsp;500&nbsp;zł netto</strong>.') + p('Im większe zamówienie, tym większy bonus:') + tiers_table(TIERS) +
-          p('<br>Wybierz produkty, osiągnij próg — <strong>bez kodu</strong>, rabat naliczy się sam na aktualne zamówienie.'), 'Zamów i odbierz bonus', PL_RULES),
-      en=('Black Week ACHTI B2B is on', 'Up to ≈&nbsp;€560 off your order',
-          p('From 23 to 27 November we take up to <strong>≈&nbsp;€560 net</strong> off your order.') + p('The bigger the order, the bigger the bonus:') + tiers_table(TIERS, True) +
-          p('<br>Choose your products and reach a threshold — <strong>no code needed</strong>, the discount is applied automatically to your current order.'), 'Order and get your bonus', EN_RULES)),
- dict(subject=('Reach €3,370, get €112 off | Brakuje Ci do 15 000 zł? ACHTI dołoży 500 zł', ''),
-      pre=('Przy 15 000 zł netto otrzymasz 500 zł rabatu zamiast 200 zł.', 'At ≈€3,370 net you get ≈€112 off instead of ≈€44.'),
-      pl=('Black Week · dzień 2', 'Większe zamówienie = większy bonus',
-          p('W Black Week warto sprawdzić, czy nie opłaca Ci się dobrać jeszcze kilku modeli.') + big(['10&nbsp;000&nbsp;zł netto → 200&nbsp;zł rabatu', '15&nbsp;000&nbsp;zł netto → <strong>500&nbsp;zł rabatu</strong>']) +
-          p('<br>To aż 300&nbsp;zł więcej rabatu na aktualne zamówienie. Koszyk pokazuje, ile brakuje do kolejnego progu.'), 'Sprawdź ofertę Black Week', 'Promocja trwa do piątku 27 listopada. Jeden rabat na zamówienie. <a href="' + URL_PL + '" style="color:#6b6b6b;text-decoration:underline;">Regulamin akcji</a>'),
-      en=('Black Week · day 2', 'A bigger order = a bigger bonus',
-          p('During Black Week it is worth checking whether a few more models pay off.') + big(['≈&nbsp;€2,250 net → ≈&nbsp;€44 off', '≈&nbsp;€3,370 net → <strong>≈&nbsp;€112 off</strong>']) +
-          p('<br>That is ≈&nbsp;€68 more off your current order. The cart shows how much is missing to the next threshold.'), 'See the Black Week offer', 'Valid until Friday, 27 November. One discount per order. <a href="' + URL_EN + '" style="color:#6b6b6b;text-decoration:underline;">Terms</a>')),
- dict(subject=('Restock and get a bonus from ACHTI | Uzupełnij asortyment i odbierz bonus', ''),
-      pre=('Dobierz modele i warianty, żeby osiągnąć wyższy próg rabatowy.', 'Add models and colours to reach a higher discount threshold.'),
+ dict(subject=('BLACK WEEK ACHTI: up to 15% off your whole order | do −15% na całe zamówienie', ''),
+      pre=('Tylko 5 dni, bez kodu.', 'Only 5 days: up to 15% off your B2B order, no code needed.'),
+      pl=('Black Week ACHTI B2B wystartował', 'Do −15% na całe zamówienie',
+          p('Od 23 do 27 listopada dajemy rabat na <strong>całe zamówienie</strong> — tym większy, im więcej sztuk zamawiasz:') + tiers_table() +
+          p('<br>Wybierz produkty, osiągnij próg — <strong>bez kodu</strong>, rabat naliczy się sam w koszyku.'), 'Zamów i odbierz rabat', PL_RULES),
+      en=('Black Week ACHTI B2B is on', 'Up to 15% off your whole order',
+          p('From 23 to 27 November you get a discount on your <strong>whole order</strong> — the more pieces, the bigger it gets:') + tiers_table(en=True) +
+          p('<br>Choose your products and reach a threshold — <strong>no code needed</strong>, the discount is applied automatically in the cart.'), 'Order and get your discount', EN_RULES)),
+ dict(subject=('From 500 pcs: 15% off your whole order | Od 500 szt. aż −15%', ''),
+      pre=('Przy 500 szt. rabat rośnie z −10% do −15%.', 'At 500 pcs your discount goes up from 10% to 15%.'),
+      pl=('Black Week · dzień 2', 'Większe zamówienie = większy rabat',
+          p('W Black Week warto sprawdzić, czy nie opłaca Ci się dobrać jeszcze kilku modeli.') + big(['350 szt. → −10% na całe zamówienie', '500 szt. → <strong>−15% na całe zamówienie</strong>']) +
+          p('<br>Koszyk pokazuje, ile sztuk brakuje do kolejnego progu.'), 'Sprawdź ofertę Black Week', 'Promocja trwa do piątku 27 listopada. Jeden rabat na zamówienie. ' + link(URL_PL, 'Regulamin akcji')),
+      en=('Black Week · day 2', 'A bigger order = a bigger discount',
+          p('During Black Week it is worth checking whether a few more models pay off.') + big(['350 pcs → 10% off your whole order', '500 pcs → <strong>15% off your whole order</strong>']) +
+          p('<br>The cart shows how many pieces are missing to the next threshold.'), 'See the Black Week offer', 'Valid until Friday, 27 November. One discount per order. ' + link(URL_EN, 'Terms'))),
+ dict(subject=('Restock and get up to 15% off | Uzupełnij asortyment — do −15%', ''),
+      pre=('Dobierz modele i kolory, żeby osiągnąć wyższy próg rabatowy.', 'Restock and reach a higher discount threshold.'),
       pl=('Black Week · półmetek', 'Czas na uzupełnienie zamówienia',
-          p('Planujesz kolejne zatowarowanie? Sprawdź, czy masz już w koszyku wszystkie potrzebne modele i kolory.') + p('Podczas Black Week dodatkowy rabat zależy od łącznej wartości zamówienia:') +
-          big(['15&nbsp;000&nbsp;zł netto = 500&nbsp;zł bonusu', '25&nbsp;000&nbsp;zł netto = 1&nbsp;000&nbsp;zł bonusu', '50&nbsp;000&nbsp;zł netto = 2&nbsp;500&nbsp;zł bonusu']) +
-          p('<br>Dobierz asortyment odpowiedni dla swoich klientów i skorzystaj z progu, który osiągnie Twoje zamówienie.'), 'Uzupełnij zamówienie', 'Promocja obowiązuje do 27 listopada. Rabaty nie sumują się. <a href="' + URL_PL + '" style="color:#6b6b6b;text-decoration:underline;">Regulamin akcji</a>'),
+          p('Planujesz kolejne zatowarowanie? Sprawdź, czy masz już w koszyku wszystkie potrzebne modele i kolory.') + p('Podczas Black Week rabat zależy od łącznej liczby sztuk w zamówieniu:') + tiers_table() +
+          p('<br>Dobierz asortyment odpowiedni dla swoich klientów i skorzystaj z progu, który osiągnie Twoje zamówienie.'), 'Uzupełnij zamówienie', 'Promocja obowiązuje do 27 listopada. Rabaty nie sumują się. ' + link(URL_PL, 'Regulamin akcji')),
       en=('Black Week · halfway', 'Time to complete your order',
-          p('Planning your next restock? Check whether your cart already has all the models and colours you need.') + p('During Black Week the extra discount depends on the total order value:') +
-          big(['≈&nbsp;€3,370 net = ≈&nbsp;€112 bonus', '≈&nbsp;€5,610 net = ≈&nbsp;€224 bonus', '≈&nbsp;€11,220 net = ≈&nbsp;€560 bonus']) +
-          p('<br>Pick the range that suits your customers and get the threshold your order reaches.'), 'Complete your order', 'Valid until 27 November. Discounts do not add up. <a href="' + URL_EN + '" style="color:#6b6b6b;text-decoration:underline;">Terms</a>')),
+          p('Planning your next restock? Check whether your cart already has all the models and colours you need.') + p('During Black Week the discount depends on the total number of pieces in your order:') + tiers_table(en=True) +
+          p('<br>Pick the range that suits your customers and get the threshold your order reaches.'), 'Complete your order', 'Valid until 27 November. Discounts do not add up. ' + link(URL_EN, 'Terms'))),
  dict(subject=('Black Week ACHTI ends tomorrow | Black Week kończy się jutro', ''),
       pre=('Masz czas tylko do piątku, do 23:59.', 'You have until Friday, 23:59.'),
       pl=('Black Week · zostały 2 dni', 'Zostały tylko 2 dni Black Week ACHTI',
           p('Jeżeli planujesz zamówienie B2B, warto złożyć je jeszcze podczas naszej akcji.') + p('Do końca piątku możesz otrzymać:') +
-          big(['100, 200, 500, 1&nbsp;000, 1&nbsp;500 lub nawet <strong>2&nbsp;500&nbsp;zł</strong> rabatu netto']) +
-          p('<br>W zależności od wartości zamówienia. Rabat naliczamy na aktualne zamówienie, a nie dopiero przy kolejnych zakupach.'), 'Skorzystaj z Black Week', 'Promocja kończy się 27.11.2026 o godz. 23:59. <a href="' + URL_PL + '" style="color:#6b6b6b;text-decoration:underline;">Regulamin akcji</a>'),
+          big(['−4%, −7%, −10% lub nawet <strong>−15%</strong> na całe zamówienie']) +
+          p('<br>W zależności od liczby sztuk. Rabat naliczamy na aktualne zamówienie, a nie dopiero przy kolejnych zakupach.'), 'Skorzystaj z Black Week', 'Promocja kończy się 27.11.2026 o godz. 23:59. ' + link(URL_PL, 'Regulamin akcji')),
       en=('Black Week · 2 days left', 'Only 2 days of Black Week ACHTI left',
           p('If you are planning a B2B order, place it while the promotion is still on.') + p('Until Friday you can get:') +
-          big(['≈&nbsp;€22, 44, 112, 224, 336 or even <strong>≈&nbsp;€560</strong> off (net)']) +
-          p('<br>Depending on the order value. The discount applies to your current order, not to future purchases.'), 'Use Black Week', 'The promotion ends on 27.11.2026 at 23:59 (Polish time). <a href="' + URL_EN + '" style="color:#6b6b6b;text-decoration:underline;">Terms</a>')),
- dict(subject=('LAST DAY: up to €560 off | OSTATNI DZIEŃ: nawet 2 500 zł rabatu', ''),
-      pre=('Ostatnie godziny na bonus do 2 500 zł netto.', 'Last hours for up to ≈€560 off (net).'),
+          big(['4%, 7%, 10% or even <strong>15%</strong> off your whole order']) +
+          p('<br>Depending on the number of pieces. The discount applies to your current order, not to future purchases.'), 'Use Black Week', 'The promotion ends on 27.11.2026 at 23:59 (Polish time). ' + link(URL_EN, 'Terms'))),
+ dict(subject=('LAST DAY: up to 15% off | OSTATNI DZIEŃ: do −15% rabatu', ''),
+      pre=('Ostatni dzień: do −15% na całe zamówienie.', 'Last day: up to 15% off your whole order.'),
       pl=('Black Week · ostatni dzień', 'To już ostatni dzień Black Week ACHTI',
-          p('Dzisiaj o 23:59 kończymy promocję B2B. To ostatnia okazja, aby otrzymać dodatkowy rabat na bieżące zamówienie:') + tiers_table([TIERS[0], TIERS[2], TIERS[3], TIERS[5]]) +
-          p('<br>Złóż zamówienie przed zakończeniem promocji.'), 'Odbierz bonus Black Week', 'Promocja kończy się 27.11.2026 o godz. 23:59 czasu polskiego. <a href="' + URL_PL + '" style="color:#6b6b6b;text-decoration:underline;">Regulamin akcji</a>'),
+          p('Dzisiaj o 23:59 kończymy promocję B2B. To ostatnia okazja, aby otrzymać rabat na bieżące zamówienie:') + tiers_table() +
+          p('<br>Złóż zamówienie przed zakończeniem promocji.'), 'Odbierz rabat Black Week', 'Promocja kończy się 27.11.2026 o godz. 23:59 czasu polskiego. ' + link(URL_PL, 'Regulamin akcji')),
       en=('Black Week · last day', 'It is the last day of Black Week ACHTI',
-          p('Tonight at 23:59 (Polish time) our B2B promotion ends. Last chance to get an extra discount on your current order:') + tiers_table([TIERS[0], TIERS[2], TIERS[3], TIERS[5]], True) +
-          p('<br>Place your order before the promotion ends.'), 'Get your Black Week bonus', 'The promotion ends on 27.11.2026 at 23:59 Polish time (CET). <a href="' + URL_EN + '" style="color:#6b6b6b;text-decoration:underline;">Terms</a>')),
+          p('Tonight at 23:59 (Polish time) our B2B promotion ends. Last chance to get a discount on your current order:') + tiers_table(en=True) +
+          p('<br>Place your order before the promotion ends.'), 'Get your Black Week discount', 'The promotion ends on 27.11.2026 at 23:59 Polish time (CET). ' + link(URL_EN, 'Terms'))),
  # 22.11.2026 (Adrian): w piątek wieczorem jeszcze krótkie przypomnienie — 27.11 18:00
  dict(subject=('LAST HOURS: Black Week ends at 23:59 | OSTATNIE GODZINY: Black Week do 23:59', ''),
-      pre=('Dziś do 23:59 nawet 2 500 zł rabatu, bez kodu.', 'Tonight until 23:59: up to €560 off, no code needed.'),
+      pre=('Dziś do 23:59 do −15% na całe zamówienie, bez kodu.', 'Tonight until 23:59: up to 15% off, no code needed.'),
       pl=('Black Week · ostatnie godziny', 'Zostało tylko kilka godzin',
-          p('Dziś o 23:59 kończymy Black Week ACHTI.') + big(['Nawet <strong>2&nbsp;500&nbsp;zł</strong> rabatu na zamówienie']) +
-          p('<br><strong>Bez kodu</strong> — rabat nalicza się sam w koszyku. Jeśli planujesz zamówienie, to ostatni moment.'), 'Zamów przed 23:59', 'Promocja kończy się 27.11.2026 o godz. 23:59 czasu polskiego. <a href="' + URL_PL + '" style="color:#6b6b6b;text-decoration:underline;">Regulamin akcji</a>'),
+          p('Dziś o 23:59 kończymy Black Week ACHTI.') + big(['Do <strong>−15%</strong> na całe zamówienie']) +
+          p('<br><strong>Bez kodu</strong> — rabat nalicza się sam w koszyku. Jeśli planujesz zamówienie, to ostatni moment.'), 'Zamów przed 23:59', 'Promocja kończy się 27.11.2026 o godz. 23:59 czasu polskiego. ' + link(URL_PL, 'Regulamin akcji')),
       en=('Black Week · last hours', 'Only a few hours left',
-          p('Black Week ACHTI ends tonight at 23:59 (Polish time).') + big(['Up to <strong>≈&nbsp;€560</strong> off your order']) +
-          p('<br><strong>No code needed</strong> — the discount is applied automatically in the cart. If you were planning an order, now is the moment.'), 'Order before 23:59', 'The promotion ends on 27.11.2026 at 23:59 Polish time (CET). <a href="' + URL_EN + '" style="color:#6b6b6b;text-decoration:underline;">Terms</a>')),
+          p('Black Week ACHTI ends tonight at 23:59 (Polish time).') + big(['Up to <strong>15%</strong> off your whole order']) +
+          p('<br><strong>No code needed</strong> — the discount is applied automatically in the cart. If you were planning an order, now is the moment.'), 'Order before 23:59', 'The promotion ends on 27.11.2026 at 23:59 Polish time (CET). ' + link(URL_EN, 'Terms'))),
 ]
 os.makedirs(OUT, exist_ok=True)
 for i, m in enumerate(MAILS, 1):

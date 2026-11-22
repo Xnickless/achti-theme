@@ -65,40 +65,38 @@
     <p class="b2b-cart-note b2b-cart-note--ok" role="status">{{ 'b2b.cart.free_shipping_ok' | t }}</p>
   {%- endif -%}
   {%- comment -%}
-    Black Week 23.11 00:00 – 27.11 23:59 (Europe/Warsaw): ile brakuje do kolejnego progu rabatu kwotowego.
-    Progi PLN netto od wartości produktów przed rabatem (rabaty automatyczne w panelu). Tylko koszyk w PLN — w EUR/USD Shopify przelicza progi kursem.
+    Black Week 23.11 00:00 – 27.11 23:59 (Europe/Warsaw), 22.11.2026 (Adrian): rabat procentowy od liczby sztuk
+    (−4% od 100, −7% od 200, −10% od 350, −15% od 500 szt.; rabaty automatyczne w panelu, nie łączą się z rabatem ilościowym).
+    Licznik pokazuje, ile sztuk brakuje do kolejnego progu — działa w każdej walucie.
   {%- endcomment -%}
   {%- assign now_s = 'now' | date: '%s' | plus: 0 -%}
-  {%- if cart.currency.iso_code == 'PLN' and now_s >= 1795388400 and now_s <= 1795820399 -%}
+  {%- if now_s >= 1795388400 and now_s <= 1795820399 -%}
     {%- liquid
-      assign bw_tiers = '5000:100,10000:200,15000:500,25000:1000,35000:1500,50000:2500' | split: ','
+      assign bw_tiers = '100:4,200:7,350:10,500:15' | split: ','
+      assign bw_pcs = cart.item_count
       assign bw_has = 0
       assign bw_next = 0
       assign bw_next_min = 0
       for t in bw_tiers
         assign tp = t | split: ':'
-        assign t_min = tp[0] | times: 100
-        assign t_bonus = tp[1] | times: 100
-        if subtotal >= t_min
-          assign bw_has = t_bonus
+        assign t_min = tp[0] | plus: 0
+        assign t_pct = tp[1] | plus: 0
+        if bw_pcs >= t_min
+          assign bw_has = t_pct
         elsif bw_next == 0
-          assign bw_next = t_bonus
+          assign bw_next = t_pct
           assign bw_next_min = t_min
         endif
       endfor
+      assign bw_missing = bw_next_min | minus: bw_pcs
     -%}
-    {%- assign bw_has_fmt = bw_has | money_without_trailing_zeros -%}
     <p class="b2b-cart-note b2b-cart-note--campaign" role="status">
       {%- if bw_next == 0 -%}
-        {{ 'b2b.campaign.cart_max_html' | t: bonus: bw_has_fmt }}
+        {{ 'b2b.campaign.cart_max_html' | t: bonus: bw_has }}
+      {%- elsif bw_has == 0 -%}
+        {{ 'b2b.campaign.cart_missing_html' | t: next: bw_next, missing: bw_missing }}
       {%- else -%}
-        {%- assign bw_missing = bw_next_min | minus: subtotal | money -%}
-        {%- assign bw_next_fmt = bw_next | money_without_trailing_zeros -%}
-        {%- if bw_has == 0 -%}
-          {{ 'b2b.campaign.cart_missing_html' | t: bonus: bw_next_fmt, missing: bw_missing }}
-        {%- else -%}
-          {{ 'b2b.campaign.cart_has_html' | t: bonus: bw_has_fmt, next: bw_next_fmt, missing: bw_missing }}
-        {%- endif -%}
+        {{ 'b2b.campaign.cart_has_html' | t: bonus: bw_has, next: bw_next, missing: bw_missing }}
       {%- endif -%}
     </p>
   {%- endif -%}
