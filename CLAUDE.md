@@ -288,7 +288,7 @@ Przypomnienie −15% na pierwsze zamówienie (prośba Adriana), wysłane 03.11.2
 - **Pasek:** `snippets/b2b-campaign-bar.liquid` (render w sections/announcement-bar.liquid) — lista faz „data|klucz”, JS wybiera tekst wg daty w Europe/Warsaw, czarne tło (`.b2b-campaign-on` w b2b.css), poza datami ukryty; teksty `b2b.campaign.bw_1…5` w 4 locales. Kolejna akcja = nowe wiersze w `phases`.
 - **Koszyk:** `b2b-cart-minimum.liquid` w oknie 23.11–27.11 (epoch 1795388400–1795820399) pokazuje, ile brakuje do kolejnego progu (tylko PLN), klucze `b2b.campaign.cart_*`.
 - **Strona:** /pages/black-week (Page 201815261526) z tabelą i regulaminem, PL `tools/translations/pages-src/black-week.html`, EN/DE/FR `pages/<loc>/black-week.html` (set_page_translations.py). Po akcji ukryć stronę.
-- **Maile:** `tools/build_bw_mails.py` → `docs/black-week/mail-1…5.html` (PL + EN, temat i preheader w komentarzu), Messaging → „Napisz własny kod”, 23–27.11 ok. 8:00.
+- **Maile:** `tools/build_bw_mails.py` → `docs/black-week/mail-1…5.html` (PL + EN, temat i preheader w komentarzu), Messaging → „Napisz własny kod”. **Zaplanowane 22.11** do „Wszyscy subskrybenci” (928): 23.11 8:00, 24.11 8:30, 25.11 8:30, 26.11 8:30, 27.11 8:00 (bez wykluczania kupujących). Dowód, że rabaty automatyczne działają w zamówieniach firm: #1004 Kaubapall OÜ (UE, 505 szt.) dostał −1%.
 - **Last call 1–4.12:** Adrian chce licznik „wolnych mocy produkcyjnych”, „nawet fikcyjny” — odradzone (reklama wprowadzająca w błąd); czeka na prawdziwy termin zamknięcia sezonu i realną liczbę sztuk.
 
 ### Marketplace'y — decyzja Adriana (16.11.2026, WhatsApp)
